@@ -1,4 +1,8 @@
 <html>
+  <!-- 
+      Formatted using
+      marpa_r2_html_fmt --no-added-tag-comment --no-ws-ok-after-start-tag
+  -->
   <head>
     <style type="text/css">
       body { font: 16px Helvetica, Sans-Serif; line-height: 24px; background: }
@@ -6,27 +10,38 @@
   </head>
   <body><h1>Jeffrey Kegler</h1><p>
       I'm a computer programmer who lives in Northern California.  I've been using UNIX and C since 1977, before UNIX's first commercial release, and Perl since it's first release in 1987.  I'm a published mathematician, if just barely, and I've written a novel based on some of Kurt Gödel's work.  I have a BA and an MSCS from Yale and was a Lecturer at the Yale Medical School.
-      <p>For the past decade,
+    </p><p>For the past decade,
       I've been writing an open-source Perl module that does general BNF parsing.
       For many years before that,
       I had an independent practice as Algorists, Inc.  More recently I've worked at Applied Materials and Sun.  For more,
-      see my CV.
+      <a href="http://jeffreykegler.github.io/Curriculum-vitae/">see my CV</a>.
     </p><h2>Marpa, a Context-free Parser</h2><p>
-      My major interest at the moment is Marpa, a parsing algorithm I have developed based on the work of Jay Earley and others.  There is much more about Marpa on its own page.
+      My major interest at the moment is Marpa, a parsing algorithm I have developed based on the work of Jay Earley and others.
+      There is much more about Marpa
+      <a href="https://jeffreykegler.github.io/Marpa-web-site/">on its own page</a>.
     </p><h2>Perl Parsing is Undecidable</h2><p>
-      <p>I am credited with the proof that Perl parsing is undecidable in, among other places, the Wikipedia article on programming languages.  While not completely unexpected, this discovery did surprise a lot of people initially.
-      <p>For most computer languages, although the run-phase behavior might be undecidable, it is always possible to determine if the source code is well-formed.  If so, it is always possible to produce a unique parse from that source code.  Perl is unusual in that not only is its run phase behavior undecidable, so is its compile phase behavior.
-      <p>But if you're not used to the Larry Wall language design philosophy, you may be wondering.  Why create a language that is not, in general, parseable?  The answer is that Perl in the compile phase allows the programmer its full range of programming capabilities.  These allow Perl a lot of flexibility in setting itself up.  But whenever you have all the capabilities of a Turing-complete language, you have undecidability.
-      <p>I lay out the details of the proof in three articles in The Perl Review.  The articles assume no math background.
+    </p><p>I am credited with the proof that Perl parsing is undecidable in, among other places,
+      <a href="http://en.wikipedia.org/wiki/Programming_language">the Wikipedia article on programming languages</a>.
+      While not completely unexpected, this discovery did surprise a lot of people initially.
+    </p><p>For most computer languages, although the run-phase behavior might be undecidable, it is always possible to determine if the source code is well-formed.  If so, it is always possible to produce a unique parse from that source code.  Perl is unusual in that not only is its run phase behavior undecidable, so is its compile phase behavior.
+    </p><p>But if you're not used to the Larry Wall language design philosophy, you may be wondering.  Why create a language that is not, in general, parseable?  The answer is that Perl in the compile phase allows the programmer its full range of programming capabilities.  These allow Perl a lot of flexibility in setting itself up.  But whenever you have all the capabilities of a Turing-complete language, you have undecidability.
+    </p><p>I lay out the details of the proof in
+      <a href="http://www.jeffreykegler.com/Home/perl-and-undecidability>three articles in The Perl Review<a>.
+      The articles assume no math background.
     </p><h2>My Novel, The God Proof</h2><p>
-      <p>I've written a novel about Kurt Gödel.  Those of you into software probably know Gödel for his mathematical work.  Gödel also discovered a new proof of God's existence.  A sketch of Gödel's "Ontological Proof", as it is usually called, is in his Collected Works (Vol. III, p. 403-404), but two of Gödel's notebooks have disappeared.  Based on their dates and titles, they likely contained more about the God Proof than we now have.  The God Proof begins with the reappearance of the Lost Gödel Notebooks in Pacific Grove, California.  You can download the novel for free from this site.  You can also buy it at from Amazon.com.  There's more about The God Proof here.
-      <p>I've never heard of anyone being persuaded by a proof of God's existence, whether by Kurt Gödel or anyone else.  A proof that can change someone's mind is called "coercive".  There are lots of coercive proofs out there.  For example, if you doubt the facts of arithmetic, there are convincing arguments, backed up by the fact that you'd be wise to accept their force if you want correct change.  Similarly for a lot of the basic facts of geometry.
-      <p>Could a coercive proof be made for God's existence?  A reasonable person can certainly have her doubts.  But you'd also be forced to admit that if any mathematician could come up with an unexpected results, it would be Gödel, who made a career out of them.
+      <p>I've written a novel about Kurt Gödel.  Those of you into software probably know Gödel for his mathematical work.  Gödel also discovered a new proof of God's existence.  A sketch of Gödel's "Ontological Proof", as it is usually called, is in his Collected Works (Vol. III, p. 403-404), but two of Gödel's notebooks have disappeared.  Based on their dates and titles, they likely contained more about the God Proof than we now have.  The God Proof begins with the reappearance of the Lost Gödel Notebooks in Pacific Grove, California.  You can download the novel
+      <a href="http://www.jeffreykegler.com/Home/files/God_Proof.pdf?attredirects=0">for free from this site</a>.
+      You can also buy it at
+      <a href="http://www.amazon.com/God-Proof-Jeffrey-Kegler/dp/1434807355">Amazon.com</a>.
+      There's
+      <a href="http://www.jeffreykegler.com/Home/god-proof">more about The God Proof here</a>.
+    </p><p>I've never heard of anyone being persuaded by a proof of God's existence, whether by Kurt Gödel or anyone else.  A proof that can change someone's mind is called "coercive".  There are lots of coercive proofs out there.  For example, if you doubt the facts of arithmetic, there are convincing arguments, backed up by the fact that you'd be wise to accept their force if you want correct change.  Similarly for a lot of the basic facts of geometry.
+    </p><p>Could a coercive proof be made for God's existence?  A reasonable person can certainly have her doubts.  But you'd also be forced to admit that if any mathematician could come up with an unexpected results, it would be Gödel, who made a career out of them.
     </p><h2>Kurt Gödel's Citizenship Hearing</h2><p>
-      <p>The most famous incident in Kurt Gödel's life is his citizenship hearing.  There are many versions of this story.  Most agreed on the following:  Studying for the hearing, Kurt Gödel became obsessive.  He looked very closely at the U.S. Constitution.  He decided it contained a contradiction, one which would allow the United States to be turned, quite legally, into a dictatorship.  Gödel decided that his discovery needed to be shared. Albert Einstein and Oskar Morgenstern, Gödel's two best friends and his witnesses at the hearing, teamed up to distract Gödel.  But the hearing was barely underway when the judge observed that Gödel's native Austria had become a dictatorship, and that we should be grateful this cannot happen in the U.S.  To his friends’ horror, Gödel quickly started to correct the judge.
-      <p>There was a problem with this story as history -- every version of it was hearsay.  And they all had the sound of tales "improved" in the telling.  Of the four people at the hearing, only one, Oskar Morgenstern, was thought to have left a first-hand account.  He was said to have written the story up for publication. But if the Lost Morgenstern Document had ever existed, three decades ago it went missing.  And it stayed missing until I found it in November 2008.
-      <p>I admit it.  I'm a sucker for the "lost document" trope.  That's why I plotted a whole novel around two lost Gödel documents.  So for me to find an important lost Gödel document sounds a lot like the premise of "Murder She Wrote" -- a TV series where every week a mystery writer supposedly solves a real life murder.  It's an amusing idea, but it doesn't seem very probable.
-      <p>But strange or not, it happened.  I put the Lost Morgenstern Document on the web, and I blogged the story of how I found it.
+    </p><p>The most famous incident in Kurt Gödel's life is his citizenship hearing.  There are many versions of this story.  Most agreed on the following:  Studying for the hearing, Kurt Gödel became obsessive.  He looked very closely at the U.S. Constitution.  He decided it contained a contradiction, one which would allow the United States to be turned, quite legally, into a dictatorship.  Gödel decided that his discovery needed to be shared. Albert Einstein and Oskar Morgenstern, Gödel's two best friends and his witnesses at the hearing, teamed up to distract Gödel.  But the hearing was barely underway when the judge observed that Gödel's native Austria had become a dictatorship, and that we should be grateful this cannot happen in the U.S.  To his friends’ horror, Gödel quickly started to correct the judge.
+    </p><p>There was a problem with this story as history -- every version of it was hearsay.  And they all had the sound of tales "improved" in the telling.  Of the four people at the hearing, only one, Oskar Morgenstern, was thought to have left a first-hand account.  He was said to have written the story up for publication. But if the Lost Morgenstern Document had ever existed, three decades ago it went missing.  And it stayed missing until I found it in November 2008.
+    </p><p>I admit it.  I'm a sucker for the "lost document" trope.  That's why I plotted a whole novel around two lost Gödel documents.  So for me to find an important lost Gödel document sounds a lot like the premise of "Murder She Wrote" -- a TV series where every week a mystery writer supposedly solves a real life murder.  It's an amusing idea, but it doesn't seem very probable.
+    </p><p>But strange or not, it happened.  I put the Lost Morgenstern Document on the web, and I blogged the story of how I found it.
     </p><h2>Publications</h2>
     <ul>
       <li>
