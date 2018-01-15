@@ -1,0 +1,101 @@
+<html>
+  <!-- 
+      Formatted using
+      marpa_r2_html_fmt --no-added-tag-comment --no-ws-ok-after-start-tag
+  -->
+  <head>
+    <style type="text/css">
+      body { font: 16px Helvetica, Sans-Serif; line-height: 20px; background: }
+      h1 { text-align:center }
+    </style>
+  </head>
+  <body>
+    <h1>Revisions to "Perl and Undecidability", Part 1, TPR Spring 2008</h1>
+    <h2>Running Perl Versus Analyzing It</h2>
+    <p>bryan d foy  (the TPR editor) and I hacked on the first paragraph
+      of this article right up to the deadline, and I'm not 100% happy with
+      one aspect of the result. You could read the first paragraph to imply
+      there is one way you can always figure out what Perl code is going
+      to do:
+      Simply run it and see what happens. As the series goes on to
+      make clear, that is false.
+      It's false because Perl doesn't necessarily
+      halt, either in the parse phase or the run phase.
+      And because you
+      can't solve the Halting Problem, you also can't analyze Perl to
+      decide if it will halt.
+    </p>
+    <p>If a Perl program is taking a very
+      long time, in the general case there is no way you can know whether
+      it will ever finish.
+      So running a Perl program does not tell you
+      what a program will do, just what it has done done so far.
+      This is
+      not just a theoretical quibble.
+      Not knowing when and if you'll ever
+      get your answer is a huge obstacle in practice.
+    </p>
+    <p>In practice,
+      static analysis of Perl is a very different beast from running the
+      program.
+      But from the point of view of theoretically impossible or
+      possible, there is no hard and fast difference between analyzing
+      code and running it.
+      If you think about it, you'll realize that as
+      you analyze code more and more, you reach the point where you're
+      simulating the code, and execution of code is execution of code,
+      whether you are simulating or not.
+      Everything which is impossible to
+      discover by running code is impossible to discover by analyzing code
+      and vice versa.
+    </p>
+    <h2>Turing did not Formulate the Halting Problem</h2>
+    <p>On page 25, column 1, paragraph 2, the article states what had
+      been repeated even by the most authoritative sources for years:
+      that Alan Turing formulated the Halting Problem.
+      It's become
+      clear since this article came out that Turing did not formulate
+      the Halting problem.
+      Jack Copeland seems to be responsible for
+      pointing this out (see his <cite>The Essential Turing</cite>,
+      Oxford 2004,
+      p. 40).
+      According to Copeland, Martin Davis was probably the
+      first person to restate Turing's results as the Halting Problem.
+    </p>
+    <p>Before Copeland, it was standard even for scholarly sources
+      to misattribute the Halting Problem to Turing.
+      (As one example,
+      see John Stillwell's highly praised <cite>Mathematics and Its History</cite>,
+      Second Edition. Springer 2002, p. 469.)
+      This is one case of a
+      general problem -- mathematicians are surprisingly poor historians.
+      It's not at all unusual to find a book which presents the math with
+      excruciating care for two hundred pages, but which in its "historical"
+      section trades largely in hearsay and rumor.
+    </p>
+    <p>This makes
+      things very dangerous for those of us writing about math.  Now, I've
+      never even seen Cantor's original paper with his Diagonal Proof, not
+      even in translation.
+      But I feel entitled to attribute it to him,
+      relying on the fact that the Diagonal Proof has repeatedly been
+      attributed to Cantor by any number of highly expert mathematical
+      writers.
+      Unfortunately, given the current state of affairs in
+      mathematical history, it would not surprise me in the least to
+      discover some day the Diagonal Proof is not, in fact, Cantor's.
+    </p>
+    <h2>Typos</h2>
+    <p><b>Page 23, column 1, the first line in the text</b>:  "If" should be "if".
+    </p>
+    <p><b>Page 25, column 2, last sentence in the first paragraph of the "About the Author" section</b>:
+    "the author the of" should be "the author of".
+    </p>
+    <div style="width:100%; height:1px; background-color:black"></div>
+    <p>These pages are licensed under a
+      <a href="https://creativecommons.org/licenses/by-nd/4.0/">Creative
+        Commons Attribution-NoDerivatives 4.0 International
+        License</a>
+    </p></body>
+</html>
