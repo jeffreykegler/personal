@@ -1,4 +1,12 @@
-<div style="margin:1.5em; text-align:center">Parsing: an expanding timeline</div>
+<head>
+        <style type="text/css">
+                body { font: 16px Helvetica, Sans-Serif; line-height: 20px; background: }
+                mytitle { line-height:1.6; font-size:3em; text-align:center }
+                comment { display: none }
+        </style>
+</head>
+<comment>pandoc -f markdown_github -t html -o timeline.html timeline.md</comment>
+<mytitle>Parsing: an expanding timeline</mytitle>
 
 #The fourth century BCE
 
