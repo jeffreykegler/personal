@@ -30,9 +30,8 @@ Andrey Markov's finite state processes are used heavily.
 #1952
 
 Grace Hopper writes a linker-loader and
-<a href="https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers">
-describes it
-as a "compiler"</a>.
+[describes it as a
+"compiler"](https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers").
 She seems to be the first person to use this term for a computer program.
 Hopper uses the term
 "compiler" in its original sense:
@@ -65,13 +64,11 @@ Chomsky publishes the paper which
 is usually considered the foundation of Western formal language theory.
 The paper advocates a natural language approach that involves
 
-<ul>
-      <li>a bottom layer, using Markov's finite state processes;
-      </li><li>a middle, syntactic layer, using context-free grammars and
-        context-sensitive grammars; and
-      </li><li>a top layer, which involves mappings or "transformations"
-        of the output of the syntactic layer.
-      </li></ul>
+* a bottom layer, using Markov's finite state processes;
+* a middle, syntactic layer, using context-free grammars and
+context-sensitive grammars; and
+* a top layer, which involves mappings or "transformations"
+of the output of the syntactic layer.
 
 These layers resemble, and will inspire,
 the lexical, syntactic and AST transformation phases
@@ -245,26 +242,18 @@ writing parsers by hand.
 Hand-coded approaches became more popular
 in the 1960's due to three factors:
 
-<ul>
-<li>
-Memory and CPU were both extremely limited.
+* Memory and CPU were both extremely limited.
 Hand-coding paid off, even when the gains were small.
-</li>
-<li>
-Non-hand coded top-down parsing,
+* Non-hand coded top-down parsing,
 of the kind Lucas's syntax-driven
 approach allowed, is a very weak parsing technique.
 It was (and still is) often necessary
 to go beyond its limits.
-</li>
-<li>
-Top-down parsing is intuitive -- it essentially means calling
+* Top-down parsing is intuitive -- it essentially means calling
 subroutines.
 It therefore requires little or
 no knowledge of parsing theory.
 This makes it a good fit for hand-coding.
-</li>
-</ul>
 
 #1963
 L. Schmidt, Howard Metcalf, and Val Schorre present papers
@@ -309,15 +298,10 @@ Earley's approach makes a lot of sense
 and looks very promising indeed,
 but there are three serious issues:
 
-<ul>
-<li>First, there is a bug in the handling of zero-length rules.
-</li>
-<li>Second, it is quadratic for right recursions.
-</li>
-<li>Third, the bookkeeping required to set up the tables is,
+* First, there is a bug in the handling of zero-length rules.
+* Second, it is quadratic for right recursions.
+* Third, the bookkeeping required to set up the tables is,
 by the standards of 1968 hardware, daunting.
-</li>
-</ul>
 
 #1969
 Frank DeRemer describes a new variant of Knuth's LR
@@ -510,8 +494,8 @@ Ford fills this gap by repackaging the nearly-forgotten GTDPL.
 Ford adds packratting, so that PEG is always linear,
 and provides PEG with an attractive new syntax.
 But nothing has been done to change
-<a href="http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2015/03/peg.html">
-the problematic behaviors</a>
+[the problematic
+behaviors](http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2015/03/peg.html)
 of GTDPL.
 
 #2006
