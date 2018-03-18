@@ -91,7 +91,7 @@ neural nets.
 
 #1957
 Noam Chomsky publishes
-<b>Syntactic Structures</b>,
+*Syntactic Structures*,
 one of the most influential books of all time.
 The orthodoxy in 1957 is structural linguistics
 which argues, with Sherlock Holmes, that
@@ -162,15 +162,15 @@ Glennie credits both Chomsky and Backus, and observes that the two
 notations are "related".
 He also mentions Post's productions.
 Glennie may have been the first to use BNF as a description of a
-<b>procedure</b>
+*procedure*
 instead of as the description of a
-<b>Chomsky grammar</b>.
+*Chomsky grammar*.
 Glennie points out that the distinction is "important".
 
 #Chomskyan BNF and procedural BNF
 BNF, when used as a Chomsky grammar, describes a set of strings,
 and does
-<b>not</b>
+*not*
 describe how to parse strings according to the grammar.
 BNF notation, if used to describe a procedure, is a set of instructions, to be
 tried in some order, and used to process a string.
@@ -178,7 +178,7 @@ Procedural BNF describes a procedure first, and a language only indirectly.
 
 Both procedural and Chomskyan BNF describe languages,
 but usually
-<b>not the same</b>
+*not the same*
 language.
 This is an important point, and one which will be overlooked
 many times in the years to come.
@@ -340,12 +340,12 @@ part of the working programmer's toolkit.
 In comparing algorithms, it can be important to keep in mind whether
 they are recognizers or parsers.
 A
-<b>recognizer</b>
+*recognizer*
 is a program which takes a string and produces a "yes"
 or "no" according to whether a string is in part of a language.
 Regular expressions are typically used as recognizers.
 A
-<b>parser</b>
+*parser*
 is a program which takes a string and produces a tree reflecting
 its structure according to a grammar.
 The algorithm for a compiler clearly must be a parser, not a recognizer.
@@ -554,16 +554,10 @@ and it was something I returned to on and off.
 The original vision of the 1960's was a parser that
 was
 
-<ul>
-<li>efficient,
-</li>
-<li>practical,
-</li>
-<li>general, and
-</li>
-<li>syntax-driven.
-</li>
-</ul>
+* efficient,
+* practical,
+* general, and
+* syntax-driven.
 
 By 2010 this vision
 seemed to have gone the same way as many other 1960's dreams.
