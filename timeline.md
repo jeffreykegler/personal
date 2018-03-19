@@ -16,18 +16,18 @@ Pannini is the object of serious study today.
 But in the 1940's and 1950's Pannini is almost unknown in the West.
 His work has no direct effect on the other events in this timeline.
 
-#1943
+# 1943
 
 Emil Post defines and studies a formal rewriting system using
 productions.
 With this, the process of reinventing Pannini in the West begins.
 
-#1948
+# 1948
 
 Claude Shannon publishes the foundation paper of information theory.
 Andrey Markov's finite state processes are used heavily.
 
-#1952
+# 1952
 
 Grace Hopper writes a linker-loader and
 [describes it as a
@@ -37,7 +37,7 @@ Hopper uses the term
 "compiler" in its original sense:
 "something or someone that brings other things together".
 
-#1954
+# 1954
 At IBM, a team under John Backus begins working
 on the language which will be called FORTRAN.
 The term "compiler" is still being used in Hopper's looser sense,
@@ -51,13 +51,13 @@ The output of one 1954 "compiler",
 for example, produces relative addresses,
 which need to be translated by hand before a machine can execute them.
 
-#1955
+# 1955
 Noam Chomsky is awarded a Ph.D. in linguistics and accepts a teaching post at MIT.
 MIT does not have a linguistics department and
 Chomsky, in his linguistics course, is free to teach his own approach,
 highly original and very mathematical.
 
-#1956
+# 1956
 <!-- "Three models" -->
 
 Chomsky publishes the paper which
@@ -77,7 +77,7 @@ For finite state processes, Chomsky acknowledges Markov.
 The other layers seem to be Chomsky's own formulations --
 Chomsky does not cite Post's work.
 
-#1957
+# 1957
 Steven Kleene discovers regular expressions,
 a very handy notation for Markov's processes.
 Regular expressions turn out to describe exactly the mathematical
@@ -86,7 +86,7 @@ finite state automata,
 as well as some of the objects being studied as
 neural nets.
 
-#1957
+# 1957
 Noam Chomsky publishes
 *Syntactic Structures*,
 one of the most influential books of all time.
@@ -102,7 +102,7 @@ The Chomskyan approach is to start with a grammar, and use the corpus of
 the language to check its accuracy.
 Chomsky's approach will soon come to dominate linguistics.
 
-#1957
+# 1957
 Backus's team makes the first FORTRAN compiler
 available to IBM customers.
 FORTRAN is the first high-level language
@@ -112,7 +112,7 @@ it is the oldest language that survives in practical use.
 FORTRAN is a line-by-line language
 and its parsing is primitive.
 
-#1958
+# 1958
 John McCarthy's LISP appears.
 LISP goes beyond the line-by-line syntax --
 it is recursively structured.
@@ -122,7 +122,7 @@ the programmer must explicitly
 indicate the structure herself,
 using parentheses.
 
-#1959
+# 1959
 Backus invents a new notation to describe
 the IAL language (aka ALGOL).
 Backus's notation is influenced by his study of Post --
@@ -130,13 +130,13 @@ he seems not to have read Chomsky until later.
 <!-- http://archive.computerhistory.org/resources/text/Oral_History/Backus_John/Backus_John_1.oral_history.2006.102657970.pdf
 p. 25 -->
 
-#1960
+# 1960
 Peter Naur
 improves the Backus notation
 and uses it to describe ALGOL 60.
 The improved notation will become known as Backus-Naur Form (BNF).
 
-#1960
+# 1960
 The ALGOL 60 report
 specifies, for the first time, a block structured
 language.
@@ -150,7 +150,7 @@ algorithm capable
 of handling ALGOL 60 does not yet exist.
 But the risk they are taking will soon pay off.
 
-#1960
+# 1960
 A.E. Gleenie publishes his description of a compiler-compiler.
 <!-- http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm -->
 Glennie's "universal compiler" is more of a methodology than
@@ -164,7 +164,7 @@ instead of as the description of a
 *Chomsky grammar*.
 Glennie points out that the distinction is "important".
 
-#Chomskyan BNF and procedural BNF
+# Chomskyan BNF and procedural BNF
 BNF, when used as a Chomsky grammar, describes a set of strings,
 and does
 *not*
@@ -213,7 +213,7 @@ This is a testimony to Chomsky's influence at the time.
 We will also see that Chomskyan parsers
 have been dominant ever since.
 
-#1961
+# 1961
 In January,
 Ned Irons publishes a paper describing his ALGOL 60
 parser.
@@ -229,7 +229,7 @@ actually created from the BNF --
 the parser does not need
 to be hand-written.
 
-#1961
+# 1961
 Peter Lucas publishes the first
 description of a purely top-down parser.
 This can be considered to be recursive descent,
@@ -255,12 +255,12 @@ It therefore requires little or
 no knowledge of parsing theory.
 This makes it a good fit for hand-coding.
 
-#1963
+# 1963
 L. Schmidt, Howard Metcalf, and Val Schorre present papers
 on syntax-directed compilers at a Denver conference.
 <!-- Schorre 1964, p. D1.3-1 -->
 
-#1964
+# 1964
 Schorre publishes a paper on the Meta II
 "compiler writing language",
 summarizing the papers of the 1963 conference.
@@ -278,7 +278,7 @@ into a fully automated compiler-compiler.
 http://ibm-1401.info/Meta-II-schorre.pdf
 -->
 
-#1965
+# 1965
 Don Knuth invents LR parsing.
 The LR algorithm is deterministic,
 Chomskyan and bottom-up,
@@ -286,7 +286,7 @@ but it is not thought to be practical.
 Knuth is primarily interested
 in the mathematics.
 
-#1968
+# 1968
 Jay Earley invents the algorithm named after him.
 Like the Irons algorithm,
 Earley's algorithm is Chomskyan, syntax-driven and fully general.
@@ -303,7 +303,7 @@ but there are three serious issues:
 * Third, the bookkeeping required to set up the tables is,
 by the standards of 1968 hardware, daunting.
 
-#1969
+# 1969
 Frank DeRemer describes a new variant of Knuth's LR
 parsing.
 DeRemer's LALR algorithm requires only
@@ -311,7 +311,7 @@ a stack and a state table of quite
 manageable size.
 LALR looks practical.
 
-#1969
+# 1969
 Ken Thompson writes the "ed" editor as one of the first components
 of UNIX.
 At this point, regular expressions are an esoteric mathematical formalism.
@@ -320,7 +320,7 @@ regular expressions will become
 an everyday
 part of the working programmer's toolkit.
 
-#Recognizers
+# Recognizers
 In comparing algorithms, it can be important to keep in mind whether
 they are recognizers or parsers.
 A
@@ -336,7 +336,7 @@ The algorithm for a compiler clearly must be a parser, not a recognizer.
 Recognizers can be, to some extent,
 used as parsers by introducing captures.
 
-#1972
+# 1972
 Alfred Aho and Jeffrey Ullman
 publish a two volume textbook summarizing the theory
 of parsing.
@@ -348,7 +348,7 @@ Aho and Ullman describe
 a straightforward fix to the zero-length rule bug in Earley's original algorithm.
 Unfortunately, this fix involves adding even more bookkeeping to Earley's.
 
-#1972
+# 1972
 Under the names TDPL and GTDPL,
 Aho and Ullman investigate
 the non-Chomksyan parsers in
@@ -391,11 +391,11 @@ For some government contractors,
 GTDPL parsing provides steady work for years to come.
 Public interest in GTDPL fades.
 
-#1975
+# 1975
 Bell Labs converts its C compiler from hand-written recursive
 descent to DeRemer's LALR algorithm.
 
-#1977
+# 1977
 The first "Dragon book" comes out.
 This soon-to-be classic textbook is nicknamed after
 the drawing on the front cover,
@@ -405,13 +405,13 @@ From here on out,
 to speak lightly of LALR will be to besmirch the escutcheon
 of parsing theory.
 
-#1979
+# 1979
 Bell Laboratories releases Version 7 UNIX.
 V7 includes what is, by far,
 the most comprehensive, useable and easily available
 compiler writing toolkit yet developed.
 
-#1979
+# 1979
 Part of the V7 toolkit is Yet Another Compiler Compiler (YACC).
 YACC is LALR-powered.
 Despite its name, YACC is the first compiler-compiler
@@ -427,14 +427,14 @@ Nonetheless,
 after two decades of research,
 it seems that the parsing problem is solved.
 
-#1987
+# 1987
 Larry Wall introduces Perl 1.
 Perl embraces complexity like no previous language.
 Larry uses YACC and LALR very aggressively --
 to my knowledge more aggressively than anyone before
 or since.
 
-#1991
+# 1991
 Joop Leo discovers a way of speeding up right
 recursions in Earley's algorithm.
 Leo's algorithm
@@ -453,7 +453,7 @@ Twenty years will pass
 before anyone writes a practical
 implementation of Leo's algorithm.
 
-#1990's
+# 1990's
 Earley's is forgotten.
 So everyone in LALR-land is content, right?
 Wrong. Far from it, in fact.
@@ -468,12 +468,12 @@ But almost all they tell the users about incorrect inputs
 is that they are incorrect.
 In Larry's words, LALR is "fast but stupid".
 
-#2000
+# 2000
 Larry Wall decides on a radical reimplementation
 of Perl -- Perl 6.
 Larry does not even consider using LALR again.
 
-#2002
+# 2002
 John Aycock and R. Nigel Horspool
 publish their attempt at a fast, practical Earley's parser.
 Missing from it is Joop Leo's improvement --
@@ -484,7 +484,7 @@ can be counter-productive at evaluation time.
 But buried in their paper is a solution to the zero-length rule bug.
 And this time the solution requires no additional bookkeeping.
 
-#2004
+# 2004
 Bryan Ford publishes his paper on PEG.
 Implementers by now are avoiding YACC,
 and it seems
@@ -498,7 +498,7 @@ But nothing has been done to change
 behaviors](http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2015/03/peg.html)
 of GTDPL.
 
-#2006
+# 2006
 GNU announces that the GCC compiler's parser has been rewritten.
 For three decades,
 the industry's flagship C compilers have used
@@ -510,7 +510,7 @@ LALR with the technology that
 it replaced a quarter century earlier:
 recursive descent.
 
-#Today
+# Today
 After five decades of parsing theory,
 the state of the art seems to be back
 where it started.
@@ -524,7 +524,7 @@ ALGOL into something more fashionable, say Haskell.
 But with that change,
 it might look like a breath of fresh air.
 
-#Marpa: an afterword
+# Marpa: an afterword
 
 The recollections of my teachers cover most of
 this timeline.
