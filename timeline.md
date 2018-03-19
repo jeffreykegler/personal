@@ -1,6 +1,8 @@
 <div style="display:none">pandoc -f markdown -t html -o timeline.html timeline.md</div>
 <div style="line-height:1.6; font-size:3em; text-align:center">
 Parsing: an expanding timeline</div>
+<div style="line-height:1.6; font-size:2em; text-align:center">
+Jeffrey Kegler</div>
 
 # The fourth century BCE
 
