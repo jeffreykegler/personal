@@ -222,7 +222,13 @@ Ned Irons publishes a paper describing his ALGOL 60
 parser.
 It is the first paper to fully describe any parser.
 The Irons algorithm is Chomskyan and top-down
-with a "left corner" element.
+with a "left corner" element --
+it is what now would be called a "left corner" parser.
+<!--
+Among those who state that Irons 1961 parser is what
+is now called "left-corner" is Knuth ("Top-down syntax analysis", p. 109).
+-->
+
 The Irons algorithm
 is general,
 meaning that it can parse anything written in BNF.
@@ -284,12 +290,53 @@ http://ibm-1401.info/Meta-II-schorre.pdf
 # 1965
 Don Knuth invents LR parsing.
 The LR algorithm is deterministic,
-Chomskyan and bottom-up,
-but it is not thought to be practical.
+Chomskyan and bottom-up.
 Knuth is primarily interested
-in the mathematics.
+in the mathematics,
+and
+the parsing algorithm he gives
+is not practical.
+He leaves development of practical LR parsing
+algorithms as an "open question"
+for "future research".
+<!--
+P. 637
+-->
 
 # 1968
+
+When Knuth discovered the LR grammars,
+he announced them to the world
+with a full-blown mathematical description.
+The top-down grammars, which arose historically,
+lack such a description.
+In 1968,
+Lewis and Stearns fill that gap
+by defining the LL(k) grammars.
+<!--
+They are credited in Rosencrantz and Stearns (1970)
+and Aho and Ullman, p. 368.
+-->
+
+With this, the meaning of "LR" shifts slightly.
+In 1965 Knuth meant LR to mean
+"translatable from left to right".
+<!--
+Knuth 1965, p. 610.
+See on p. 611
+"corresponds with the intuitive notion of translation
+from left to right looking k characters ahead".
+-->
+LL means
+"scan from the left, using left reductions"
+and LR acquires its current meaning of
+scan from the left, using right reductions".
+<!--
+Knuth, "Top-down syntax analysis", p. 102.
+-->
+
+# 1968
+
 Jay Earley invents the algorithm named after him.
 Like the Irons algorithm,
 Earley's algorithm is Chomskyan, syntax-driven and fully general.
