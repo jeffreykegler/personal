@@ -41,15 +41,15 @@ With this, the process of reinventing Pannini in the West begins.
 # 1948: Shannon repurposes Markov's chains
 
 Claude Shannon publishes the foundation paper of information theory.
+<!--
+"A Mathematical Theory of Communication"
+-->
 Andrey Markov's finite state processes are used heavily.
 In this paper,
-Shannon uses Markov chains to generate sentences, where each letter
-generated is based on the previous ones.
-The more "look back" Shannon allows, the more the sentences
-look like English.
-It's a very primitive start to sentence generation,
-but Chomsky will build on it.
-
+Shannon makes an attempt to model English using Markov chains.
+<!--
+pp. 4-6.
+-->
 # 1952: Grace Hopper use the term "compiler"
 
 Grace Hopper writes a linker-loader.
@@ -100,10 +100,16 @@ highly original and very mathematical.
 
 # 1956
 
-<!-- "Three models" -->
 Chomsky publishes the paper which
 is usually considered the foundation of Western formal language theory.
-The paper advocates a natural language approach that involves
+<!--
+"Three models for the description of language"
+-->
+Chomsky demolishes the idea that natural language grammar
+can be modeled using Markov chains.
+
+Instead,
+the paper advocates a natural language approach that involves
 
 * a bottom layer, using Markov's finite state processes;
 * a middle, syntactic layer, using context-free grammars and
@@ -122,7 +128,7 @@ Chomsky does not cite Post's work.
 
 Steven Kleene discovers regular expressions,
 a very handy notation for Markov's processes.
-Regular expressions turn out to describe exactly the mathematical
+Regular expressions will also turn out to describe exactly the mathematical
 objects being studied as
 finite state automata,
 as well as some of the objects being studied as
