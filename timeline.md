@@ -238,6 +238,26 @@ actually created from the BNF --
 the parser does not need
 to be hand-written.
 
+# Terms: "Synthetic attribute"
+
+Irons 1961 also introduces synthetic attributes:
+the parse creates a tree,
+which is evaluated bottom-up.
+Each node is evaluated using attributes
+"synthesized" from its child nodes.
+<!--
+Irons is credited with the discovery of synthetic attributes
+by Knuth ("Genesis of Attibute Grammars").
+-->
+
+Pedantically, synthetic attributes are not a parsing concept --
+they are way of doing semantics.
+But almost nobody parses without intending to
+apply some kind of semantics,
+and feedback from new semantic concepts has had major effects
+on the development of parsing.
+Synthetic attributes will be important.
+
 # 1961
 Peter Lucas publishes the first
 description of a purely top-down parser.
@@ -318,7 +338,11 @@ They are credited in Rosencrantz and Stearns (1970)
 and Aho and Ullman, p. 368.
 -->
 
-With this, the meaning of "LR" shifts slightly.
+
+# Terms: LL and LR
+
+When LL is added to the vocabulary of parsing,
+the meaning of "LR" shifts slightly.
 In 1965 Knuth meant LR to mean
 "translatable from left to right".
 <!--
@@ -352,6 +376,35 @@ but there are three serious issues:
 * Second, it is quadratic for right recursions.
 * Third, the bookkeeping required to set up the tables is,
 by the standards of 1968 hardware, daunting.
+
+# 1968
+
+Knuth publishes a paper on a concept he had been working
+for the previous few years:
+attribute grammars.
+<!--
+Knuth, "Semantics of context-free languages", 1968.
+-->
+Irons' synthetic attributes had always been inadequate for
+many problems, and had been supplemented by side effects
+or state variables.
+Knuth adds inherited attributes,
+and discovers attribute grammars.
+
+# Term: "Inherited attributes"
+
+Recall that a node in parse gets its synthetic attributes
+from its parents.
+Inherited attributes are attibutes a node gets from its
+parents.
+Of course, this creates potential circularities,
+but inherited attributes are powerful and,
+with care, the circularities can be dealt with.
+
+# Term: "Attribute grammar"
+
+An attribute grammar is a grammar whose node may have
+both inherited and synthetic attributes.
 
 # 1969
 Frank DeRemer describes a new variant of Knuth's LR
@@ -503,7 +556,7 @@ Twenty years will pass
 before anyone writes a practical
 implementation of Leo's algorithm.
 
-# 1990's
+# The 1990's
 Earley's is forgotten.
 So everyone in LALR-land is content, right?
 Wrong. Far from it, in fact.
@@ -517,6 +570,24 @@ Once debugged, their LALR parsers are fast for correct inputs.
 But almost all they tell the users about incorrect inputs
 is that they are incorrect.
 In Larry's words, LALR is "fast but stupid".
+
+# 1992
+
+Two papers introduce combinators.
+<!--
+Frost, "Constructing programs as executable attribute grammars".
+-->
+The one by Hutton focuses on combinator parsing
+<!--
+Hutton, "Higher order parsing".
+-->
+Combinator parsing is not actually a parsing innovation --
+it's the decades-old recursive descent
+wrapped up in an attribute grammar.
+But it is an exciting new development in semantics:
+developments in functional programming are showing the
+potential value of
+attribute grammars.
 
 # 2000
 Larry Wall decides on a radical reimplementation
