@@ -5,7 +5,7 @@ Parsing: an expanding timeline</div>
 <div style="line-height:1.6; font-size:2em; text-align:center">
 Jeffrey Kegler</div>
 
-# The fourth century BCE
+# The fourth century BCE: Pannini's description of Sanskrit
 
 In India, Pannini creates
 a sophisticated description of the Sanskrit language,
@@ -17,52 +17,90 @@ Even today, nothing like it exists for any other natural language
 of comparable size or corpus.
 Pannini is the object of serious study today.
 But in the 1940's and 1950's Pannini is almost unknown in the West.
-His work has no direct effect on the other events in this timeline.
+Pannini's work remains under-studied.
+It will have no direct effect on the other events in this timeline.
 
-# 1943
+# 1960: Markov's chains
+
+Andrei Markov introduces his "chains" --
+a set of states with transitions
+between them.
+Markov uses his chains, not for parsing,
+but for solving problems in probability.
+<!--
+"Extension of the law of large numbers to dependent quantities"
+(in Russian).
+-->
+
+# 1943: Post's rewriting system
 
 Emil Post defines and studies a formal rewriting system using
 productions.
 With this, the process of reinventing Pannini in the West begins.
 
-# 1948
+# 1948: Shannon repurposes Markov's chains
 
 Claude Shannon publishes the foundation paper of information theory.
 Andrey Markov's finite state processes are used heavily.
+In this paper,
+Shannon uses Markov chains to generate sentences, where each letter
+generated is based on the previous ones.
+The more "look back" Shannon allows, the more the sentences
+look like English.
+It's a very primitive start to sentence generation,
+but Chomsky will build on it.
 
-# 1952
+# 1952: Grace Hopper use the term "compiler"
 
-Grace Hopper writes a linker-loader and
-[describes it as a
+Grace Hopper writes a linker-loader.
+[She calls it a
 "compiler"](https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers").
-She seems to be the first person to use this term for a computer program.
-Hopper uses the term
-"compiler" in its original sense:
-"something or someone that brings other things together".
+Hopper seems to be the first person to use this term for a computer program.
 
-# 1954
+# Term: "compiler"
+
+Hopper used the term
+"compiler" in the meaning it had at the time:
+"something or someone that brings other things together".
+Since Hopper the term has acquired a very specialized meaning
+in the computer field, so that we would not call Hopper's program
+a "compiler" today.
+
+As an aside,
+whatever it is called,
+Hopper's program was a major achievement,
+both in terms of insight and execution.
+Hopper's reputation is well-deserved.
+
+# 1954: The FORTRAN project begins
+
 At IBM, a team under John Backus begins working
 on the language which will be called FORTRAN.
-The term "compiler" is still being used in Hopper's looser sense,
-instead of its modern one.
-In particular, there is no implication that the output of a "compiler"
+
+# Term: "compiler"
+
+As of 1954,
+the term "compiler" was still being used in Hopper's looser sense,
+instead of its modern, specialized, one.
+In particular, there was no implication that the output of a "compiler"
 is ready for execution by a computer.
 <!-- "http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf
 pp. 133-134
 -->
 The output of one 1954 "compiler",
-for example, produces relative addresses,
-which need to be translated by hand before a machine can execute them.
+for example, produced relative addresses,
+which needed to be translated by hand before a machine can execute them.
 
-# 1955
+# 1955: Noam Chomsky starts teaching at MIT
+
 Noam Chomsky is awarded a Ph.D. in linguistics and accepts a teaching post at MIT.
 MIT does not have a linguistics department and
 Chomsky, in his linguistics course, is free to teach his own approach,
 highly original and very mathematical.
 
 # 1956
-<!-- "Three models" -->
 
+<!-- "Three models" -->
 Chomsky publishes the paper which
 is usually considered the foundation of Western formal language theory.
 The paper advocates a natural language approach that involves
@@ -80,7 +118,8 @@ For finite state processes, Chomsky acknowledges Markov.
 The other layers seem to be Chomsky's own formulations --
 Chomsky does not cite Post's work.
 
-# 1957
+# 1957: Kleene's regular expressions
+
 Steven Kleene discovers regular expressions,
 a very handy notation for Markov's processes.
 Regular expressions turn out to describe exactly the mathematical
@@ -89,7 +128,8 @@ finite state automata,
 as well as some of the objects being studied as
 neural nets.
 
-# 1957
+# 1957: Chomsky publishes "Syntactic Structures"
+
 Noam Chomsky publishes
 *Syntactic Structures*,
 one of the most influential books of all time.
