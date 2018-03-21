@@ -20,7 +20,7 @@ But in the 1940's and 1950's Pannini is almost unknown in the West.
 Pannini's work remains under-studied.
 It will have no direct effect on the other events in this timeline.
 
-# 1960: Markov's chains
+# 1906: Markov's chains
 
 Andrei Markov introduces his "chains" --
 a set of states with transitions
