@@ -106,20 +106,27 @@ is usually considered the foundation of Western formal language theory.
 "Three models for the description of language"
 -->
 Chomsky demolishes the idea that natural language grammar
-can be modeled using Markov chains.
+can be modeled using only Markov chains.
 
 Instead,
-the paper advocates a natural language approach that involves
+the paper advocates a natural language approach that uses
+three layers:
 
-* a bottom layer, using Markov's finite state processes;
-* a middle, syntactic layer, using context-free grammars and
+* a bottom layer, using Markov chains;
+* a middle layer, using context-free grammars and
 context-sensitive grammars; and
-* a top layer, which involves mappings or "transformations"
-of the output of the syntactic layer.
+* a top layer, which maps or "transforms"
+the output of the middle layer.
 
-These layers resemble, and will inspire,
-the lexical, syntactic and AST transformation phases
-of modern parsers.
+Chomsky's approach will inspire
+the structure of modern parsers.
+Chomsky's bottom layer becomes the modern compiler's
+lexical phase.
+His middle layer becomes the syntactic phase of
+modern compilers.
+And his top layer inspires the
+AST transformation phase of modern parsers.
+
 For finite state processes, Chomsky acknowledges Markov.
 The other layers seem to be Chomsky's own formulations --
 Chomsky does not cite Post's work.
