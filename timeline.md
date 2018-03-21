@@ -38,6 +38,18 @@ Emil Post defines and studies a formal rewriting system using
 productions.
 With this, the process of rediscovering Pannini in the West begins.
 
+# 1945: Turing discovers stacks
+
+Alan Turing discovers the stack as part of his design of
+the ACE machine.
+This is important in parsing
+because recursive parsing requires stacks.
+The importance of Turing's discovery is not noticed at the time
+and stacks will be re-discovered many times over the next two decades.
+<!--
+Carpenter, B. E.; Doran, R. W. (January 1977). "The other Turing machine". The Computer Journal. 20 (3): 269–279.
+-->
+
 # 1948: Shannon repurposes Markov's chains
 
 Claude Shannon publishes the foundation paper of information theory.
