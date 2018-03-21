@@ -36,7 +36,7 @@ but for solving problems in probability.
 
 Emil Post defines and studies a formal rewriting system using
 productions.
-With this, the process of reinventing Pannini in the West begins.
+With this, the process of rediscovering Pannini in the West begins.
 
 # 1948: Shannon repurposes Markov's chains
 
@@ -131,15 +131,28 @@ For finite state processes, Chomsky acknowledges Markov.
 The other layers seem to be Chomsky's own formulations --
 Chomsky does not cite Post's work.
 
+# Term: "Parsing"
+
+Chomsky is a turning point, so much so that
+it settles the meaning of many of the terms we
+are using.
+"Parsing", for our purposes,
+is transforming a string of symbols into
+a structure.
+Typically this structure is a parse tree.
+
 # 1957: Kleene's regular expressions
 
 Steven Kleene discovers regular expressions,
-a very handy notation for Markov's processes.
-Regular expressions will also turn out to describe exactly the mathematical
+a very handy notation for Markov chains.
+It will turn out that the mathematical
 objects being studied as
-finite state automata,
-as well as some of the objects being studied as
+finite state automata
+are equivalent to Markov chains.
+Also equivalent are some of the objects being studied as
 neural nets.
+And therefore regular expressions are equivalent
+to all of them.
 
 # 1957: Chomsky publishes "Syntactic Structures"
 
@@ -158,7 +171,8 @@ The Chomskyan approach is to start with a grammar, and use the corpus of
 the language to check its accuracy.
 Chomsky's approach will soon come to dominate linguistics.
 
-# 1957
+# 1957: FORTRAN released
+
 Backus's team makes the first FORTRAN compiler
 available to IBM customers.
 FORTRAN is the first high-level language
@@ -166,9 +180,10 @@ that will find widespread implementation.
 As of this writing,
 it is the oldest language that survives in practical use.
 FORTRAN is a line-by-line language
-and its parsing is primitive.
+and its parsing is pre-Chomskyan and hackish.
 
-# 1958
+# 1958: LISP released
+
 John McCarthy's LISP appears.
 LISP goes beyond the line-by-line syntax --
 it is recursively structured.
@@ -178,21 +193,24 @@ the programmer must explicitly
 indicate the structure herself,
 using parentheses.
 
-# 1959
-Backus invents a new notation to describe
+# 1959: Backus's notation
+
+Backus discovers a new notation to describe
 the IAL language (aka ALGOL).
 Backus's notation is influenced by his study of Post --
 he seems not to have read Chomsky until later.
 <!-- http://archive.computerhistory.org/resources/text/Oral_History/Backus_John/Backus_John_1.oral_history.2006.102657970.pdf
 p. 25 -->
 
-# 1960
+# 1960: BNF
+
 Peter Naur
 improves the Backus notation
 and uses it to describe ALGOL 60.
 The improved notation will become known as Backus-Naur Form (BNF).
 
-# 1960
+# 1960: The ALGOL report
+
 The ALGOL 60 report
 specifies, for the first time, a block structured
 language.
@@ -205,6 +223,17 @@ As the ALGOL committee is well aware, a parsing
 algorithm capable
 of handling ALGOL 60 does not yet exist.
 But the risk they are taking will soon pay off.
+
+# The Quest
+
+With the ALGOL 60 report, 
+a quest begins which continues to this day:
+the search for a parser that is
+
+* efficient,
+* practical,
+* general, and
+* syntax-driven.
 
 # 1960
 A.E. Gleenie publishes his description of a compiler-compiler.
@@ -221,6 +250,7 @@ instead of as the description of a
 Glennie points out that the distinction is "important".
 
 # Chomskyan BNF and procedural BNF
+
 BNF, when used as a Chomsky grammar, describes a set of strings,
 and does
 *not*
@@ -270,12 +300,13 @@ We will also see that Chomskyan parsers
 have been dominant ever since.
 
 # 1961
+
 In January,
 Ned Irons publishes a paper describing his ALGOL 60
 parser.
 It is the first paper to fully describe any parser.
 The Irons algorithm is Chomskyan and top-down
-with a "left corner" element --
+with a bottom-up "left corner" element --
 it is what now would be called a "left corner" parser.
 <!--
 Among those who state that Irons 1961 parser is what
@@ -338,11 +369,13 @@ no knowledge of parsing theory.
 This makes it a good fit for hand-coding.
 
 # 1963
+
 L. Schmidt, Howard Metcalf, and Val Schorre present papers
 on syntax-directed compilers at a Denver conference.
 <!-- Schorre 1964, p. D1.3-1 -->
 
 # 1964
+
 Schorre publishes a paper on the Meta II
 "compiler writing language",
 summarizing the papers of the 1963 conference.
@@ -361,7 +394,8 @@ http://ibm-1401.info/Meta-II-schorre.pdf
 -->
 
 # 1965
-Don Knuth invents LR parsing.
+
+Don Knuth discovers LR parsing.
 The LR algorithm is deterministic,
 Chomskyan and bottom-up.
 Knuth is primarily interested
@@ -414,7 +448,7 @@ Knuth, "Top-down syntax analysis", p. 102.
 
 # 1968
 
-Jay Earley invents the algorithm named after him.
+Jay Earley discovers the algorithm named after him.
 Like the Irons algorithm,
 Earley's algorithm is Chomskyan, syntax-driven and fully general.
 Unlike the Irons algorithm, it does not backtrack.
@@ -643,11 +677,13 @@ potential value of
 attribute grammars.
 
 # 2000
+
 Larry Wall decides on a radical reimplementation
 of Perl -- Perl 6.
 Larry does not even consider using LALR again.
 
 # 2002
+
 John Aycock and R. Nigel Horspool
 publish their attempt at a fast, practical Earley's parser.
 Missing from it is Joop Leo's improvement --
@@ -659,15 +695,18 @@ But buried in their paper is a solution to the zero-length rule bug.
 And this time the solution requires no additional bookkeeping.
 
 # 2004
+
 Bryan Ford publishes his paper on PEG.
-Implementers by now are avoiding YACC,
-and it seems
-as if there might soon be no syntax-driven algorithms in practical
-use.
 Ford fills this gap by repackaging the nearly-forgotten GTDPL.
 Ford adds packratting, so that PEG is always linear,
 and provides PEG with an attractive new syntax.
-But nothing has been done to change
+
+Implementers by now are avoiding YACC,
+but the demand for syntax-driven parsers remains.
+PEG is not, in fact, syntax-driven,
+but it uses the same BNF notation,
+and many users don't know the difference.
+And nothing has been done to change
 [the problematic
 behaviors](http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2015/03/peg.html)
 of GTDPL.
@@ -709,13 +748,10 @@ the field was developing.
 Earley's algorithm looked interesting,
 and it was something I returned to on and off.
 
-The original vision of the 1960's was a parser that
-was
-
-* efficient,
-* practical,
-* general, and
-* syntax-driven.
+Recall that
+the original vision of the 1960's was a parser that
+was efficient, practical, general, and
+syntax-driven.
 
 By 2010 this vision
 seemed to have gone the same way as many other 1960's dreams.
