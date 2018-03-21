@@ -232,10 +232,32 @@ the search for a parser that is
 
 * efficient,
 * practical,
-* general, and
-* syntax-driven.
+* syntax-driven, and
+* general.
 
-# 1960
+# Term: "syntax-driven"
+
+For our purposes,
+a parser is "syntax-driven" if it will parse
+from grammars written in BNF.
+You would certainly *hope* that
+you could adequately specify
+a parser by specifying its syntax.
+
+# Term: "general"
+
+A general parser is a parser that will parse
+*any* grammar that can be written in BNF.
+This is a very useful property -- it makes it
+easy for a grammar-writer to know that her grammar
+will parse.
+It also makes it easy to auto-generate grammars,
+knowing that they will successfully parse.
+This opens the way to second-order languages --
+languages which specify other languages.
+
+# 1960: Gleenie's compiler-compiler
+
 A.E. Gleenie publishes his description of a compiler-compiler.
 <!-- http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm -->
 Glennie's "universal compiler" is more of a methodology than
@@ -322,6 +344,36 @@ actually created from the BNF --
 the parser does not need
 to be hand-written.
 
+# Terms: "Top-down"
+
+A top-down parser, starts from the top BNF production
+and works down.
+It derives child productions, starting with their parent,
+and eventually reaching input tokens.
+
+# Terms: "Bottom-up"
+
+A bottom-up parser, starts from the input and
+and works up, finding productions based on input
+tokens, then finding other production based on their
+children.
+
+# Misconception: "Top-down" vs. "bottom-up"
+
+A common, and important, misconception is that every
+parser is either top-down or bottom-up.
+A related misconception is that even parsers that are
+not clearly one or the other can always be usefully described
+in terms of their top-down and bottom-up components.
+
+As we saw, the Irons 1961 parser is not simply top-down or
+bottom-up, though arguably describing it in terms of
+top-down and bottom-up components is helpful.
+But for other parsing algorithms, top-down vs. bottom-up
+classification is a pointless pedantry --
+the classification can be done, but tells you nothing about the actual
+behavior of the parser.
+
 # Terms: "Synthetic attribute"
 
 Irons 1961 also introduces synthetic attributes:
@@ -342,7 +394,8 @@ and feedback from new semantic concepts has had major effects
 on the development of parsing.
 Synthetic attributes will be important.
 
-# 1961
+# 1961: Lucas discovers recursive descent
+
 Peter Lucas publishes the first
 description of a purely top-down parser.
 This can be considered to be recursive descent,
