@@ -192,7 +192,21 @@ that will find widespread implementation.
 As of this writing,
 it is the oldest language that survives in practical use.
 FORTRAN is a line-by-line language
-and its parsing is pre-Chomskyan and hackish.
+and its parsing is pre-Chomskyan and ad hoc.
+But it includes one important discovery.
+
+# 1957: Operator precedence
+
+FORTRAN I was line-by-line, but it allowed expressions.
+Respecting precedence in this
+required something like parsing.
+The designers of FORTRAN discovered a strange trick --
+they subsituted fixed sets parentheses between operators
+to enforce precedence.
+Remarkably this worked.
+In fact, while the theoretical understanding of operator precedence is yet to come,
+the FORTRAN I implementation is actually a hackish and inefficient way
+of implementing precedence.
 
 # 1958: LISP released
 
@@ -333,7 +347,17 @@ This is a testimony to Chomsky's influence at the time.
 We will also see that Chomskyan parsers
 have been dominant ever since.
 
-# 1961
+# 1960: Operator precedence and stacks
+
+<!--
+Samelson, K. and Bauer, F. L. Sequential formula translation. Commun. ACM,
+3(2):76–83, Feb. 1960.
+-->
+Since FORTRAN I, many people have refined its operator precedence implementation.
+A Feb 1960 paper by Samuelson and Bauer implements operator precedence using stacks
+proves particularly influential.
+
+# 1961: The first parsing paper
 
 In January,
 Ned Irons publishes a paper describing his ALGOL 60
