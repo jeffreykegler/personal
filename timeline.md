@@ -5,7 +5,7 @@ Parsing: an expanding timeline</div>
 <div style="line-height:1.6; font-size:2em; text-align:center">
 Jeffrey Kegler</div>
 
-# The fourth century BCE: Pannini's description of Sanskrit
+# 4th BCE: Pannini's description of Sanskrit
 
 In India, Pannini creates
 a sophisticated description of the Sanskrit language,
@@ -140,10 +140,13 @@ and documentation needed to make a significant
 impact in the use of machines."
 
 The IT language had arithmetic expressions, of a sort --
-all operators left associate and there is no
+parentheses are honored,
+but otherwise
+evaluation is always right-to-left --
+there is no
 operator precedence.
 IT did honor parentheses, but
-nonetheless its way of doing arithemetic expressions
+nonetheless its way of doing arithmetic expressions
 proves very unpopular:
 Donald Knuth reports that
 "The lack of operator
