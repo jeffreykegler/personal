@@ -8,8 +8,8 @@ Jeffrey Kegler</div>
 # 4th BCE: Pannini's description of Sanskrit
 
 In India, Pannini creates
-a sophisticated description of the Sanskrit language,
-exact and complete, and including pronunciation.
+an exact and complete description of the Sanskrit language,
+including pronunciation.
 Sanskrit
 could be recreated using nothing but Pannini's grammar.
 Pannini's grammar is probably the first formal system of any kind, predating Euclid.
@@ -17,7 +17,6 @@ Even today, nothing like it exists for any other natural language
 of comparable size or corpus.
 Pannini is the object of serious study today.
 But in the 1940's and 1950's Pannini is almost unknown in the West.
-Pannini's work remains under-studied.
 It will have no direct effect on the other events in this timeline.
 
 # 1906: Markov's chains
@@ -62,14 +61,14 @@ Shannon makes an attempt to model English using Markov chains.
 <!--
 pp. 4-6.
 -->
-# 1952: Grace Hopper use the term "compiler"
+# 1952: Grace Hopper uses the term "compiler"
 
 Grace Hopper writes a linker-loader.
 [She calls it a
 "compiler"](https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers").
 Hopper seems to be the first person to use this term for a computer program.
 
-# Term: "compiler"
+# Term: "compiler" 1
 
 Hopper used the term
 "compiler" in the meaning it had at the time:
@@ -89,7 +88,7 @@ Hopper's reputation is well-deserved.
 At IBM, a team under John Backus begins working
 on the language which will be called FORTRAN.
 
-# Term: "compiler"
+# Term: "compiler" 2
 
 As of 1954,
 the term "compiler" was still being used in Hopper's looser sense,
@@ -113,7 +112,7 @@ highly original and very mathematical.
 # 1955: Work begins on the IT compiler
 
 At Purdue,
-A team including Alan Perlis
+a team including Alan Perlis
 and Joseph Smith
 begins work on the IT compiler.
 <!--
@@ -150,6 +149,13 @@ April 18, 1958
 pp 1.17-1.22
 -->
 
+# The Operator Issue
+
+With the IT compiler the "operator issue" comes to the fore --
+how to handle expression with operators which are expected to
+honor associativity and precedence.
+Both mathematicians and ordinary users expect this in a language.
+
 The IT language had arithmetic expressions, of a sort --
 parentheses are honored,
 but otherwise
@@ -175,16 +181,27 @@ in
 Computing in Science & Engineering 2, pp. 70-75 (2000); https://doi.org/10.1109/5992.814661
 -->
 
-# Term: "compiler"
+Since when
+the IT compiler is written before there is a single published parsing algorithm,
+it is not surprising this proves an issue.
+More surprising is the persistance of this issue --
+in fact, after more than more six decades of stunning progress in other areas
+of computer,
+the Operator Issue is still very much a live issue.
+
+# Term: "compiler" 3
 
 <!--
 J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S, "A mathematical language compiler",
 in (1956) _Proceedings of the 1956 11th ACM national meeting_
 -->
 In the 1956 document describing the IT compiler,
-IT team is careful to define the term,
-and this may be the first use of the word "compiler"
-in something close to its modern sense.
+IT team is careful to define the term.
+Their definition makes clear that they are using of the word "compiler"
+in something like its modern sense,
+perhaps for the first time.
+From this time on, when used as a technical term within computing,
+"compiler" will usually mean what we currently understand it to mean.
 
 # 1956
 
@@ -195,29 +212,34 @@ is usually considered the foundation of Western formal language theory.
 -->
 Chomsky demolishes the idea that natural language grammar
 can be modeled using only Markov chains.
-
 Instead,
 the paper advocates a natural language approach that uses
 three layers:
 
-* a bottom layer, using Markov chains;
-* a middle layer, using context-free grammars and
-context-sensitive grammars; and
-* a top layer, which maps or "transforms"
-the output of the middle layer.
-
-Chomsky's approach will inspire
-the structure of modern parsers.
-Chomsky's bottom layer becomes the modern compiler's
+<b>Bottom layer</b>:
+For his
+bottom layer,
+Chomsky does use Markov's chains.
+This becomes the modern compiler's
 lexical phase.
-His middle layer becomes the syntactic phase of
+
+<b>Middle layer</b>:
+Chomsky's middle layer uses context-free grammars and
+context-sensitive grammars.
+These are his own discoveries.
+This middle layer becomes the syntactic phase of
 modern compilers.
-And his top layer inspires the
+
+<b>Top layer</b>:
+Chomsky's top layer, again his own discovery,
+maps or "transforms"
+the output of the middle layer.
+Chomsky's top layer is the inspiration for
 AST transformation phase of modern parsers.
 
-For finite state processes, Chomsky acknowledges Markov.
-The other layers seem to be Chomsky's own formulations --
-Chomsky does not cite Post's work.
+For finite state processes, Chomsky cites Markov.
+Chomsky seems to have been unaware of Post's work --
+he does not cite it.
 
 # Term: "Parsing"
 
@@ -233,20 +255,17 @@ Typically this structure is a parse tree.
 
 Steven Kleene discovers regular expressions,
 a very handy notation for Markov chains.
-It will turn out that the mathematical
-objects being studied as
-finite state automata
-are equivalent to Markov chains.
-Also equivalent are some of the objects being studied as
+It will turn out that other mathematical
+objects being studied are equivalent to regular expressions:
+the various finite state automata;
+and some of the objects being studied as
 neural nets.
-And therefore regular expressions are equivalent
-to all of them.
 
 # 1957: Chomsky publishes "Syntactic Structures"
 
 Noam Chomsky publishes
 *Syntactic Structures*,
-one of the most influential books of all time.
+one of the most important books of all time.
 The orthodoxy in 1957 is structural linguistics
 which argues, with Sherlock Holmes, that
 "it is a capital mistake to theorize in advance of the facts".
@@ -259,6 +278,19 @@ The Chomskyan approach is to start with a grammar, and use the corpus of
 the language to check its accuracy.
 Chomsky's approach will soon come to dominate linguistics.
 
+# Term: "Chomskyan parsing"
+
+In computing, parsing theory mainly follows Chomsky's work
+in linguistics.
+Parsing is "Chomksyan" if it is guided
+by a BNF grammar.
+From this point on, most parsers and most
+parsing theory will be Chomskyan;
+and this timeline will focus on Chomskyan parsing.
+But, as we shall see,
+non-Chomskyan parsing does survive and has
+its users today.
+
 # 1957: FORTRAN released
 
 Backus's team makes the first FORTRAN compiler
@@ -267,22 +299,34 @@ FORTRAN is the first high-level language
 that will find widespread implementation.
 As of this writing,
 it is the oldest language that survives in practical use.
-FORTRAN is a line-by-line language
-and its parsing is pre-Chomskyan and ad hoc.
-But it includes one important discovery.
 
 # 1957: Operator precedence
 
+FORTRAN is a line-by-line language
+and its parsing is pre-Chomskyan and ad hoc.
+But it includes one important discovery.
 FORTRAN I was line-by-line, but it allowed expressions.
-Respecting precedence in this
-required something like parsing.
+And, learning from the dissatisfaction with the compiler,
+FORTRAN honors associativity and precedence.
+
 The designers of FORTRAN discovered a strange trick --
-they subsituted fixed sets parentheses between operators
-to enforce precedence.
-Remarkably this worked.
-In fact, while the theoretical understanding of operator precedence is yet to come,
+they hacked the expressions by adding parentheses around each
+operator.
+Surprisingly, this works.
+In fact, once the theoretical understanding of operator precedence comes about,
 the FORTRAN I implementation is actually a hackish and inefficient way
 of implementing precedence.
+
+# The Operator Issue
+
+FORTRAN used an ad hoc method to address the parsing issue.
+Again, this is unsurprising since there are no parsing algorithms
+when FORTRAN was designed.
+FORTRAN's approach, over the years, was refined
+into various operator precedence algorithms which are
+more efficient and better understood mathematically.
+Nonetheless, the ad hoc nature of operator parsing proves hard
+to eliminate.
 
 # 1958: LISP released
 
@@ -294,6 +338,8 @@ recursive structure:
 the programmer must explicitly
 indicate the structure herself,
 using parentheses.
+Because of this reliance on parentheses,
+the Operator Issue does not arise with LISP.
 
 # 1959: Backus's notation
 
