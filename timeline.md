@@ -110,7 +110,7 @@ MIT does not have a linguistics department and
 Chomsky, in his linguistics course, is free to teach his own approach,
 highly original and very mathematical.
 
-# 1955
+# 1955: Work begins on the IT compiler
 
 At Purdue,
 A team including Alan Perlis
@@ -131,13 +131,24 @@ Don Knuth calls this
 "the first really *useful* compiler.
 IT and IT's derivatives were used successfully
 and frequently in hundreds of computer installations
-until the [its target, the IBM] 650 became obsolete.
+until [its target,] the [IBM] 650 became obsolete.
 [...  P]previous systems
 were important steps along the way,
 but none of them had the combination of powerful
 language and adequate implementation
 and documentation needed to make a significant
 impact in the use of machines."
+
+<!--
+RL(2) with backtracking.
+A.J. Perlis, J.W. Smith and H.R. vanZoeren,
+"Internal Translator (IT)
+A Compiler for the 650",
+Computation Center,
+Carnegie Institute of Technology,
+April 18, 1958
+pp 1.17-1.22
+-->
 
 The IT language had arithmetic expressions, of a sort --
 parentheses are honored,
@@ -163,6 +174,17 @@ pp. 8-10.
 in
 Computing in Science & Engineering 2, pp. 70-75 (2000); https://doi.org/10.1109/5992.814661
 -->
+
+# Term: "compiler"
+
+<!--
+J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S, "A mathematical language compiler",
+in (1956) _Proceedings of the 1956 11th ACM national meeting_
+-->
+In the 1956 document describing the IT compiler,
+IT team is careful to define the term,
+and this may be the first use of the word "compiler"
+in something close to its modern sense.
 
 # 1956
 
