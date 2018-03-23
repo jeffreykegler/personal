@@ -110,6 +110,57 @@ MIT does not have a linguistics department and
 Chomsky, in his linguistics course, is free to teach his own approach,
 highly original and very mathematical.
 
+# 1955
+
+At Purdue,
+A team including Alan Perlis
+and Joseph Smith
+begins work on the IT compiler.
+<!--
+Knuth and Pardo,
+"The Early Development of Programming Languages",
+pp. 83-86.
+-->
+
+# 1956
+
+Perlis and Smith,
+now at the Carnegie Institute of Technology,
+finish the IT compiler.
+Don Knuth calls this
+"the first really *useful* compiler.
+IT and IT's derivatives were used successfully
+and frequently in hundreds of computer installations
+until the [its target, the IBM] 650 became obsolete.
+[...  P]previous systems
+were important steps along the way,
+but none of them had the combination of powerful
+language and adequate implementation
+and documentation needed to make a significant
+impact in the use of machines."
+
+The IT language had arithmetic expressions, of a sort --
+all operators left associate and there is no
+operator precedence.
+IT did honor parentheses, but
+nonetheless its way of doing arithemetic expressions
+proves very unpopular:
+Donald Knuth reports that
+"The lack of operator
+priority (often called precedence or hierarchy) in
+the IT language was the most frequent single
+cause of errors by the users of that compiler."
+<!--
+D.E. Knuth, “A History of Writing Compilers,”
+in
+_COMPUTERS and AUTOMATION_, December, 1962,
+pp. 8-10.
+1956 date is from
+"The FORTRAN I Compiler", David Padua,
+in
+Computing in Science & Engineering 2, pp. 70-75 (2000); https://doi.org/10.1109/5992.814661
+-->
+
 # 1956
 
 Chomsky publishes the paper which
@@ -252,7 +303,7 @@ But the risk they are taking will soon pay off.
 
 # The Quest
 
-With the ALGOL 60 report, 
+With the ALGOL 60 report,
 a quest begins which continues to this day:
 the search for a parser that is
 
