@@ -673,6 +673,22 @@ It therefore requires little or
 no knowledge of parsing theory.
 This makes it a good fit for hand-coding.
 
+<!--
+TODO:
+Revise
+-->
+
+# 1961: Dijkstra's shunting yard algorithm
+
+In November 1961, Dijkstra publishes yet another algorithm
+for operator precedence: the "shunting yard" algorithm.
+<!--
+TODO:
+Edsger W. Dijkstra, "Algol 60 translation : An Algol 60 translator
+for the x1 and Making a translator for Algol 60", Research Report 35,
+Mathematisch Centrum, Amsterdam, 1961,
+-->
+
 # 1963
 
 L. Schmidt, Howard Metcalf, and Val Schorre present papers
@@ -886,11 +902,22 @@ For some government contractors,
 GTDPL parsing provides steady work for years to come.
 Public interest in GTDPL fades.
 
+# 1973: Pratt parsing
+
+<!--
+TODO:
+Pratt, Vaughan R. Top down operator precedence. In First ACM Symposium on Prin-
+ciples of Programming Languages, pages 41–51. ACM, Oct. 1973.
+-->
+
+
 # 1975
+
 Bell Labs converts its C compiler from hand-written recursive
 descent to DeRemer's LALR algorithm.
 
 # 1977
+
 The first "Dragon book" comes out.
 This soon-to-be classic textbook is nicknamed after
 the drawing on the front cover,
@@ -967,11 +994,14 @@ In Larry's words, LALR is "fast but stupid".
 
 Two papers introduce combinators.
 <!--
+TODO:
 Frost, "Constructing programs as executable attribute grammars".
 -->
 The one by Hutton focuses on combinator parsing
 <!--
-Hutton, "Higher order parsing".
+TODO:
+Hutton, "Higher order functions for parsing",
+Journal of Functional Programming 2(3):323-343, July 1992.
 -->
 Combinator parsing is not actually a parsing innovation --
 it's the decades-old recursive descent
@@ -980,6 +1010,32 @@ But it is an exciting new development in semantics:
 developments in functional programming are showing the
 potential value of
 attribute grammars.
+
+# 1995
+
+<!--
+TODO:
+Philip Wadler,
+"Monads for Functional programming".
+1995
+-->
+
+# 1996
+
+<!--
+Hutton and Meijer,
+"Monadic Parser Combinators",
+1996
+-->
+
+# 1999
+
+<!--
+TODO:
+Hudak, Peterson and Fasel,
+"A Gentle Introduction to Haskell 98",
+1999.
+-->
 
 # 2000
 
