@@ -498,6 +498,13 @@ knowing that they will successfully parse.
 This opens the way to second-order languages --
 languages which specify other languages.
 
+As a pedantic point,
+a general parser need only parse "proper" grammars.
+A BNF grammar is "proper" if it has no useless rules
+and no infinite loops.
+Neither of these have any practical use,
+so that the restriction to proper grammars is unproblematic.
+
 # 1960: Gleenie's compiler-compiler
 
 A.E. Gleenie publishes his description of a compiler-compiler.
@@ -660,13 +667,27 @@ can be considered to be recursive descent.
 Certainly the Lucas algorithm more closely resembles modern
 implementations of recursive descent.
 
-Except to say that his parser deals properly with them,
-Lucas does not say ...
+Except to say that he deals properly with them,
+Lucas does not say how he parses operator expressions.
+But it is easy to believe Lucas' claim --
+by this time there are several specialized techniques
+for parsing operator expressions.
+Eventually there will be a botanical profusion of
+them.
 
-<!--
-TODO:
-Revise
--->
+For our purposes, it is sufficient to note that
+while recursive descent cannot parse arithmetic expressions
+directly,
+it can deal with them in two ways:
+
+* Recursive descent can switch to another algorithm when it encounters
+an operator expression.
+This is easy to do in a hand-written implementation.
+
+* It can parse the operands and operands into a list,
+and the list can be reparsed in post-processing.
+This is essentially a delayed-action form of the first
+method.
 
 # 1960's: Hand-coded recursive descent
 
@@ -678,10 +699,12 @@ in the 1960's due to three factors:
 * Memory and CPU were both extremely limited.
 Hand-coding paid off, even when the gains were small.
 
-* Top-down parsing is, in fact,
+* Pure recursive descent is, in fact,
 a very weak parsing technique.
-It was (and still is) often necessary
-to go beyond its limit, and that is easier
+As we have seen in the case of operator expressions,
+it is often necessary
+to go beyond its limits,
+and that is easier
 to do if you are coding the parser by hand.
 
 * Top-down parsing is intuitive -- it essentially means calling
@@ -690,15 +713,14 @@ It therefore requires little or
 no knowledge of parsing theory.
 This makes it a good fit for hand-coding.
 
-<!--
-TODO:
-Revise
--->
-
 # 1961: Dijkstra's shunting yard algorithm
 
-In November 1961, Dijkstra publishes yet another algorithm
-for operator precedence: the "shunting yard" algorithm.
+While there are a number of algorithms for parsing
+operator expressions before November 1961,
+they all fall into what Norvell calls the "classic approach".
+In November 1961, Dijkstra publishes an operator expression algorithm
+with a non-classic approach:
+the "shunting yard" algorithm.
 <!--
 TODO:
 Edsger W. Dijkstra, "Algol 60 translation : An Algol 60 translator
@@ -709,8 +731,14 @@ Mathematisch Centrum, Amsterdam, 1961,
 # 1963
 
 L. Schmidt, Howard Metcalf, and Val Schorre present papers
-on syntax-directed compilers at a Denver conference.
+on compilers at a Denver conference.
 <!-- Schorre 1964, p. D1.3-1 -->
+At the time, they call their approach syntax-directed,
+but it will turn out to be non-Chomskyan:
+BNF is used as a procedural notation,
+and does not necessarily describe the syntax parsed.
+This timeline will call
+parsers of this kind "pseudo-syntax-directed".
 
 # 1964
 
@@ -722,7 +750,7 @@ for Meta II's notation.
 Schorre notes
 that his parser
 is "entirely different" from that of Irons 1961 --
-in fact it is pre-Chomskyan.
+as noted, it is pre-Chomskyan.
 Meta II is a template, rather
 than something that readers can use,
 but in principle it can be turned
@@ -764,7 +792,7 @@ and Aho and Ullman, p. 368.
 -->
 
 
-# Terms: LL and LR
+# Terms: "LL", "LR", "RL" and "RR"
 
 When LL is added to the vocabulary of parsing,
 the meaning of "LR" shifts slightly.
@@ -782,6 +810,36 @@ and LR acquires its current meaning of
 scan from the left, using right reductions".
 <!--
 Knuth, "Top-down syntax analysis", p. 102.
+-->
+
+LL and LR have mirror images:
+RL means
+"scan from the right, using left reductions"
+and RR acquires its current meaning of
+scan from the right, using right reductions".
+Use of these mirror images is rare,
+but does occur --
+operator expression parsing in the IT
+compiler seems to have been RL(2).
+
+If there is
+a number after the parentheses in
+this notation for parsing algorithms,
+it usually indicates the number of tokens
+of lookahead.
+RL(2) above, meant that the algorithm looked
+2 tokens ahead.
+
+LL(1) -- 
+"scan from the left, using left reductions
+with one character of lookahead"
+is extremely important.
+
+# LL(1) and the Operator Issue
+
+<!--
+TODO:
+write
 -->
 
 # 1968
