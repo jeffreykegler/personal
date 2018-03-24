@@ -61,6 +61,49 @@ Shannon makes an attempt to model English using Markov chains.
 <!--
 pp. 4-6.
 -->
+
+# 1949: Rutishauser's compiler
+
+From 1949 to 1951 at the ETH Zurich,
+Heinz Rutishauser worked on the design
+of what we would now call a compiler.
+<!--
+Knuth and Pardo,
+"The Early Development of Programming Languages",
+pp 29-35, 40.
+-->
+Rutishauser's language is line-by-line and parsed
+as hoc, but it does parse arithmetic expressions.
+Rutishauser's expression parser did not honor precedence
+but did allow nested parentheses.
+It is perhaps the first algorithm which can really be
+considered a parsing method.
+Rutishauser's compiler was never implemented.
+
+# 1950: Boehm's compiler
+
+During 1950, Corrado Boehm, also at the ETH Zurich develops
+his own compiler.
+They are
+working at the same institution
+at the same time, but Boehm is unaware of Rutishauser's
+work until his own is complete.
+Like Rutishauser, Boehm's language is line-by-line
+and parsed ad hoc,
+except for expressions.
+Boehm expression parser *does* honor precedence,
+making it perhaps the first operator precedence parser.
+Boehm's compiler also allows parentheses, but the two cannot
+be mixed -- an expression can either be parsed using precedence
+or have parentheses, but not both.
+Like Rutishauser's,
+Boehm's compiler was never implemented.
+<!--
+Knuth and Pardo,
+"The Early Development of Programming Languages",
+pp 35-42.
+-->
+
 # 1952: Grace Hopper uses the term "compiler"
 
 Grace Hopper writes a linker-loader.
@@ -71,17 +114,65 @@ Hopper seems to be the first person to use this term for a computer program.
 # Term: "compiler" 1
 
 Hopper used the term
-"compiler" in the meaning it had at the time:
-"something or someone that brings other things together".
-Since Hopper the term has acquired a very specialized meaning
-in the computer field, so that we would not call Hopper's program
-a "compiler" today.
+"compiler" in a meaning it had at the time:
+"to compose out of materials from other documents".
+<!--
+Quoted definition is from Nora B. Moser,
+"Compiler method of automatic programming",
+Symposium on Automatic Programming for Digital Computer,
+ONR, p. 15.,
+as cited in
+Knuth and Pardo,
+"The Early Development of Programming Languages",
+p 51.
+-->
+Specifically, before Hopper,
+the task we now see as "compiling" was then
+seen putting together a set of pre-existing assembler subroutines and
+calling them.
+Hopper's new program went one step further --
+instead of calling the subroutines it expanded them
+(or in other words "compiled" them)
+into a single program.
+Since Hopper the term has acquired a different
+and very specialized meaning
+in the computer field.
+Today we would not call Hopper's program
+a "compiler".
 
 As an aside,
 whatever it is called,
 Hopper's program was a major achievement,
 both in terms of insight and execution.
 Hopper's reputation is well-deserved.
+
+# 1952: Glennie's AUTOCODE
+
+Knuth
+<!--
+Knuth and Pardo,
+"The Early Development of Programming Languages",
+p 42.
+-->
+calls Glennie's the first "real" compiler in that it
+was actually implemented and used by someone to translate
+algebraic statements into
+machine language.
+Glennie's AUTOCODE was very low-level and hard-to-use,
+and had little impact on other users of
+its target --
+the Manchester Mark I.
+And because Glennie worked for the British atomic
+weapons projects his papers were routinely classified,
+so that the influence of AUTOCODE was slow to spread.
+Nonetheless, many other "compilers" afterward were named
+AUTOCODE, and this probably indicates some awareness
+of Glennie's effort.
+<!--
+Knuth and Pardo,
+"The Early Development of Programming Languages",
+pp. 42-49.
+-->
 
 # 1954: The FORTRAN project begins
 
