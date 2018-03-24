@@ -650,23 +650,40 @@ Synthetic attributes will be important.
 
 Peter Lucas publishes the first
 description of a purely top-down parser.
-This can be considered to be recursive descent,
-though in Lucas's
-paper the algorithm has a
-syntax-driven implementation, useable only for
-a restricted class of grammars.
-Today we think of recursive descent as a methodology for
-writing parsers by hand.
+<!--
+Lucas, P. Die Strukturanalyse von Formelnübersetzern / analysis of
+the structure of formula translators. Elektronische Rechenanlagen,
+3(11.4):159–167, 1961, (in German).
+-->
+Either Irons paper or this one
+can be considered to be recursive descent.
+Certainly the Lucas algorithm more closely resembles modern
+implementations of recursive descent.
+
+Except to say that his parser deals properly with them,
+Lucas does not say ...
+
+<!--
+TODO:
+Revise
+-->
+
+# 1960's: Hand-coded recursive descent
+
+Lucas' writeup most likely describes a hand-written parser.
 Hand-coded approaches became more popular
+than syntax-driven ones
 in the 1960's due to three factors:
 
 * Memory and CPU were both extremely limited.
 Hand-coding paid off, even when the gains were small.
-* Non-hand coded top-down parsing,
-of the kind Lucas's syntax-driven
-approach allowed, is a very weak parsing technique.
+
+* Top-down parsing is, in fact,
+a very weak parsing technique.
 It was (and still is) often necessary
-to go beyond its limits.
+to go beyond its limit, and that is easier
+to do if you are coding the parser by hand.
+
 * Top-down parsing is intuitive -- it essentially means calling
 subroutines.
 It therefore requires little or
