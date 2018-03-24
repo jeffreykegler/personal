@@ -718,7 +718,6 @@ This makes it a good fit for hand-coding.
 In November 1961, Dijkstra publishes
 the "shunting yard" algorithm.
 <!--
-TODO:
 Edsger W. Dijkstra, "Algol 60 translation : An Algol 60 translator
 for the x1 and Making a translator for Algol 60", Research Report 35,
 Mathematisch Centrum, Amsterdam, 1961,
@@ -987,12 +986,46 @@ Public interest in GTDPL fades.
 
 # 1973: Pratt parsing
 
+One approach to the Operator Issue has not been mentioned.
+We have noted that LL(1) cannot parse operator expressions.
+What about making the entire grammar an operator grammar?
+That way you don't have to mix algorithms.
+
+There are many reasons not to do this.
+The resulting grammar will be non-Chomskyan --
+the BNF no longer accurately describes the grammar --
+it  becomes part
+of a combined notation, to be considered together with
+with precedence and (in the Pratt case) semantics.
+And operator grammars are restricted --
+most practical languages are not operator grammars.
+
+But many practical grammars are almost operator grammars.
+And the Chomskyan approach has always had its dissenter.
+Vaughn Pratt was one of these,
+and discovered a new approach
+(the third and last in
+<a href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
+Norvell's taxonomy</a>)
+to operator expression parsing,
+one which some have adopted as an overall solution to
+their parsing problems.
 <!--
 TODO:
 Pratt, Vaughan R. Top down operator precedence. In First ACM Symposium on Prin-
 ciples of Programming Languages, pages 41–51. ACM, Oct. 1973.
 -->
 
+As an overall strategy,
+the Pratt approach is not popular.
+It is most often used as
+the operator expression subparser within a recursive descent
+strategy.
+All operator expression subparsers breaks the Chomskyan paradigm
+so the non-Chomskyan nature of Pratt's parser is not a problem
+in this context.
+But with respect to the Operator Issue, like Dijkstra's alternative, it
+is an implementation choice, not a game-changer.
 
 # 1975
 
@@ -1106,6 +1139,7 @@ Philip Wadler,
 # 1996
 
 <!--
+TODO:
 Hutton and Meijer,
 "Monadic Parser Combinators",
 1996
