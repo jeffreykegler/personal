@@ -96,6 +96,9 @@ making it perhaps the first operator precedence parser.
 Boehm's compiler also allows parentheses, but the two cannot
 be mixed -- an expression can either be parsed using precedence
 or have parentheses, but not both.
+
+Boehm's is the first self-compiling compiler --
+it is written in its own language.
 Like Rutishauser's,
 Boehm's compiler was never implemented.
 <!--
