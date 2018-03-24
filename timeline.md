@@ -715,11 +715,7 @@ This makes it a good fit for hand-coding.
 
 # 1961: Dijkstra's shunting yard algorithm
 
-While there are a number of algorithms for parsing
-operator expressions before November 1961,
-they all fall into what Norvell calls the "classic approach".
-In November 1961, Dijkstra publishes an operator expression algorithm
-with a non-classic approach:
+In November 1961, Dijkstra publishes
 the "shunting yard" algorithm.
 <!--
 TODO:
@@ -727,6 +723,18 @@ Edsger W. Dijkstra, "Algol 60 translation : An Algol 60 translator
 for the x1 and Making a translator for Algol 60", Research Report 35,
 Mathematisch Centrum, Amsterdam, 1961,
 -->
+<a
+href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
+Norvell has made an attempt at classification</a>
+of the
+botanical profusion of operator expression parsers.
+All earlier parsers are subspecies of what he calls
+"the classic algorithm",
+so that Dijkstra's approach is new.
+Dijkstra's algorithm is not a game-changer --
+it has no major impact on the Operator Issue --
+but it offers
+a genuinely different implementation alternative.
 
 # 1963
 
