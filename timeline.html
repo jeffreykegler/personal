@@ -21,7 +21,17 @@ h1 { font-size: x-large }
     <mytitle>Parsing: an expanding timeline</mytitle>
     <author>Jeffrey Kegler</author>
     <h1 id="th-bce-panninis-description-of-sanskrit">4th BCE: Pannini's description of Sanskrit</h1>
-    <p>In India, Pannini creates an exact and complete description of the Sanskrit language, including pronunciation. Sanskrit could be recreated using nothing but Pannini's grammar. Pannini's grammar is probably the first formal system of any kind, predating Euclid. Even today, nothing like it exists for any other natural language of comparable size or corpus. Pannini is the object of serious study today. But in the 1940's and 1950's Pannini is almost unknown in the West. It will have no direct effect on the other events in this timeline.</p>
+    <p>In India, Pannini creates an exact and complete description of
+    the Sanskrit language, including pronunciation. Sanskrit could be
+    recreated using nothing but Pannini's grammar.
+	Pannini's grammar is
+    probably the first formal system of any kind, predating Euclid. Even
+    today, nothing like it exists for any other natural language of
+    comparable size or corpus. Pannini is the object of serious study
+    today. But in the 1940's and 1950's Pannini is almost unknown in
+    the West. It will have no direct effect on the other events in
+    this timeline.
+</p>
     <h1 id="markovs-chains">1906: Markov's chains</h1>
     <p>Andrei Markov introduces his &quot;chains&quot; -- a set of
     states with transitions between them. Markov uses his chains, not
@@ -201,11 +211,7 @@ implements operator precedence using stacks proves particularly influential.
     </p>
     <p>Pedantically, synthetic attributes are not a parsing concept -- they are way of doing semantics. But almost nobody parses without intending to apply some kind of semantics, and feedback from new semantic concepts has had major effects on the development of parsing. Synthetic attributes will be important.</p>
     <h1 id="lucas-discovers-recursive-descent">1961: Lucas discovers recursive descent</h1>
-    <p>Peter Lucas publishes the first description of a purely top-down parser.</footnote>
-Lucas, P. Die Strukturanalyse von Formelnübersetzern / analysis of
-the structure of formula translators. Elektronische Rechenanlagen,
-3(11.4):159–167, 1961, (in German).
-<footnoe>
+    <p>Peter Lucas publishes the first description of a purely top-down parser<a id="footnote-21-ref" href="#footnote-21">[21]</a>
       Either Irons paper or this one can be considered to be recursive descent. Certainly the Lucas algorithm more closely resembles modern implementations of recursive descent.</p>
     <p>Except to say that he deals properly with them, Lucas does not say how he parses operator expressions. But it is easy to believe Lucas' claim -- by this time there are several specialized techniques for parsing operator expressions. Eventually there will be a botanical profusion of them.</p>
     <p>For our purposes, it is sufficient to note that while recursive descent cannot parse arithmetic expressions directly, it can deal with them in two ways:</p>
@@ -221,12 +227,12 @@ the structure of formula translators. Elektronische Rechenanlagen,
       <li><p>Top-down parsing is intuitive -- it essentially means calling subroutines. It therefore requires little or no knowledge of parsing theory. This makes it a good fit for hand-coding.</p></li>
     </ul>
     <h1 id="dijkstras-shunting-yard-algorithm">1961: Dijkstra's shunting yard algorithm</h1>
-    <p>In November 1961, Dijkstra publishes the &quot;shunting yard&quot; algorithm.<a id="footnote-21-ref" href="#footnote-21">[21]</a>
+    <p>In November 1961, Dijkstra publishes the &quot;shunting yard&quot; algorithm.<a id="footnote-22-ref" href="#footnote-22">[22]</a>
       <a
 href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has made an attempt at classification</a>
       of the botanical profusion of operator expression parsers. All earlier parsers are subspecies of what he calls &quot;the classic algorithm&quot;, so that Dijkstra's approach is new. The number of level of precedence is not &quot;built in&quot; into the shunting-yard algorithm. And the shunting-yard algorithm is more efficient than the classic approaches: Code size does not grow, and the algorithm's speed does not decrease, with the number of precedence levels. Dijkstra's algorithm is not a game-changer -- it has no major impact on the Operator Issue -- but it offers a genuinely different implementation alternative.</p>
     <h1 id="section-2">1963</h1>
-    <p>L. Schmidt, Howard Metcalf, and Val Schorre present papers on compilers at a Denver conference.<a id="footnote-22-ref" href="#footnote-22">[22]</a>
+    <p>L. Schmidt, Howard Metcalf, and Val Schorre present papers on compilers at a Denver conference.<a id="footnote-23-ref" href="#footnote-23">[23]</a>
       At the time, they call their approach syntax-directed, but it will turn out to be non-Chomskyan: BNF is used as a procedural notation, and does not necessarily describe the syntax parsed. This timeline will call parsers of this kind &quot;pseudo-syntax-directed&quot;.</p>
     <h1 id="section-3">1964</h1>
     <p>Schorre publishes a paper on the Meta II &quot;compiler
@@ -236,28 +242,28 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     different&quot; from that of Irons 1961 -- as noted, it is
     pre-Chomskyan. Meta II is a template, rather than something that
     readers can use, but in principle it can be turned into a fully
-    automated compiler-compiler.<a id="footnote-23-ref" href="#footnote-23">[23]</a>
+    automated compiler-compiler.<a id="footnote-24-ref" href="#footnote-24">[24]</a>
     </p>
     <h1 id="section-4">1965</h1>
     <p>Don Knuth discovers LR parsing. The LR algorithm is deterministic,
     Chomskyan and bottom-up. Knuth is primarily interested in the
     mathematics, and the parsing algorithm he gives is not practical. He
     leaves development of practical LR parsing algorithms as an &quot;open
-    question&quot; for &quot;future research&quot;.<a id="footnote-24-ref" href="#footnote-24">[24]</a>
+    question&quot; for &quot;future research&quot;.<a id="footnote-25-ref" href="#footnote-25">[25]</a>
     </p>
     <h1 id="section-5">1968</h1>
     <p>When Knuth discovered the LR grammars, he announced them to
     the world with a full-blown mathematical description. The top-down
     grammars, which arose historically, lack such a description. In 1968,
-    Lewis and Stearns fill that gap by defining the LL(k) grammars.<a id="footnote-25-ref" href="#footnote-25">[25]</a>
+    Lewis and Stearns fill that gap by defining the LL(k) grammars.<a id="footnote-26-ref" href="#footnote-26">[26]</a>
     </p>
     <h1 id="terms-ll-lr-rl-and-rr">Terms: &quot;LL&quot;, &quot;LR&quot;, &quot;RL&quot; and &quot;RR&quot;</h1>
     <p>When LL is added to the vocabulary of parsing, the meaning of
     &quot;LR&quot; shifts slightly. In 1965 Knuth meant LR to mean
-    &quot;translatable from left to right&quot;.<a id="footnote-26-ref" href="#footnote-26">[26]</a>
+    &quot;translatable from left to right&quot;.<a id="footnote-27-ref" href="#footnote-27">[27]</a>
       LL means &quot;scan from the left, using left reductions&quot;
       and LR acquires its current meaning of scan from the left, using
-      right reductions&quot;.<a id="footnote-27-ref" href="#footnote-27">[27]</a>
+      right reductions&quot;.<a id="footnote-28-ref" href="#footnote-28">[28]</a>
     </p>
     <p>LL and LR have mirror images: RL means &quot;scan from the right, using left reductions&quot; and RR acquires its current meaning of scan from the right, using right reductions&quot;. Use of these mirror images is rare, but does occur -- operator expression parsing in the IT compiler seems to have been RL(2) with backtracking.</p>
     <p>If there is a number after the parentheses in this notation for parsing algorithms, it usually indicates the number of tokens of lookahead. RL(2) above, meant that the algorithm looked 2 tokens ahead.</p>
@@ -275,7 +281,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     </ul>
     <h1 id="section-7">1968</h1>
     <p>Knuth publishes a paper on a concept he had been working for the
-    previous few years: attribute grammars.<a id="footnote-28-ref" href="#footnote-28">[28]</a>
+    previous few years: attribute grammars.<a id="footnote-29-ref" href="#footnote-29">[29]</a>
       Irons' synthetic attributes had always been inadequate for many problems, and had been supplemented by side effects or state variables. Knuth adds inherited attributes, and discovers attribute grammars.</p>
     <h1 id="term-inherited-attributes">Term: &quot;Inherited attributes&quot;</h1>
     <p>Recall that a node in parse gets its synthetic attributes from its parents. Inherited attributes are attibutes a node gets from its parents. Of course, this creates potential circularities, but inherited attributes are powerful and, with care, the circularities can be dealt with.</p>
@@ -296,7 +302,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     <h1 id="section-11">1972</h1>
     <p>Under the names TDPL and GTDPL, Aho and Ullman investigate the non-Chomksyan parsers in the Schorre lineage. They note that &quot;it can be quite difficult to determine what language is defined by a TDPL parser&quot;. That is, GTDPL parsers do whatever they do, and that whatever is something the programmer in general will not be able to describe. The best a programmer can usually do is to create a test suite and fiddle with the GTDPL description until it passes. Correctness cannot be established in any stronger sense. GTDPL is an extreme form of the old joke that &quot;the code is the documentation&quot; -- with GTDPL nothing documents the language of the parser, not even the code.</p>
     <p>GTDPL's obscurity buys nothing in the way of additional parsing power. Like all non-Chomskyan parsers, GTDPL is basically a extremely powerful recognizer. Pressed into service as a parser, it is comparatively weak. As a parser, GTDPL is essentially equivalent to Lucas's 1961 syntax-driven algorithm, which was in turn a restricted form of recursive descent.</p>
-    <p>At or around this time, rumor has it that the main line of development for GTDPL parsers is classified secret by the US government.<a id="footnote-29-ref" href="#footnote-29">[29]</a>
+    <p>At or around this time, rumor has it that the main line of development for GTDPL parsers is classified secret by the US government.<a id="footnote-30-ref" href="#footnote-30">[30]</a>
       GTDPL parsers have the property that even small changes in GTDPL parsers can be very labor-intensive. For some government contractors, GTDPL parsing provides steady work for years to come. Public interest in GTDPL fades.</p>
     <h1 id="pratt-parsing">1973: Pratt parsing</h1>
     <p>One approach to the Operator Issue has not been mentioned. We have noted that LL(1) cannot parse operator expressions. What about making the entire grammar an operator grammar? That way you don't have to mix algorithms.</p>
@@ -306,7 +312,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     of these, and discovered a new approach (the third and last in <a
     href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     Norvell's taxonomy</a>) to operator expression parsing, one which
-    some have adopted as an overall solution to their parsing problems.<a id="footnote-30-ref" href="#footnote-30">[30]</a>
+    some have adopted as an overall solution to their parsing problems.<a id="footnote-31-ref" href="#footnote-31">[31]</a>
     </p>
     <p>The Pratt approach, and its descendant, precedence climbing, is not popular as an overall strategy. It is most often used as the operator expression subparser within a recursive descent strategy. All operator expression subparsers breaks the Chomskyan paradigm so the non-Chomskyan nature of Pratt's parser is not a problem in this context. But with respect to the Operator Issue, like Dijkstra's alternative, it is an implementation choice, not a game-changer.</p>
     <h1 id="section-12">1975</h1>
@@ -326,19 +332,19 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     <p>Earley's is forgotten. So everyone in LALR-land is content, right? Wrong. Far from it, in fact. Users of LALR are making unpleasant discoveries. While LALR automatically generates their parsers, debugging them is so hard they could just as easily write the parser by hand. Once debugged, their LALR parsers are fast for correct inputs. But almost all they tell the users about incorrect inputs is that they are incorrect. In Larry's words, LALR is &quot;fast but stupid&quot;.</p>
     <h1 id="section-18">1992</h1>
     <p>Combinators were introduced In two 1992 papers. Of more interest
-    to us is the one by Hutton, which focuses on combinator parsing.<a id="footnote-31-ref" href="#footnote-31">[31]</a>
+    to us is the one by Hutton, which focuses on combinator parsing.<a id="footnote-32-ref" href="#footnote-32">[32]</a>
       Combinators will become important in programming languages and
       semantics. But in terms of parsing algorithms, Hutton introduces
       nothing new -- wrapped up in an attribute grammar; underlying the
       exciting new mathematics is the decades-old recursive descent,
-      unchanged.<a id="footnote-32-ref" href="#footnote-32">[32]</a>
+      unchanged.<a id="footnote-33-ref" href="#footnote-33">[33]</a>
     </p>
     <h1 id="section-19">1995</h1>
-    <a id="footnote-33-ref" href="#footnote-33">[33]</a>
-    <h1 id="section-20">1996</h1>
     <a id="footnote-34-ref" href="#footnote-34">[34]</a>
-    <h1 id="section-21">1999</h1>
+    <h1 id="section-20">1996</h1>
     <a id="footnote-35-ref" href="#footnote-35">[35]</a>
+    <h1 id="section-21">1999</h1>
+    <a id="footnote-36-ref" href="#footnote-36">[36]</a>
     <h1 id="section-22">2000</h1>
     <p>Larry Wall decides on a radical reimplementation of Perl -- Perl 6. Larry does not even consider using LALR again.</p>
     <h1 id="section-23">2002</h1>
@@ -372,8 +378,8 @@ Springer.
 In matters of priority, I often defer to the judgement of Grune and Jacobs.
   <h1>Footnotes</h1>
 <p id="footnote-1">1.
-"Extension of the law of large numbers to dependent quantities"
-(in Russian).
+Markov, A.A.. "Extension of the law of large numbers to quantities, depending on each other (1906).
+(original in Russian).
  <a href="#footnote-1-ref">&#8617;</a></p>
 <p id="footnote-2">2.
 Carpenter, B. E.; Doran, R. W. (January 1977). "The other Turing machine". The Computer Journal. 20 (3): 269–279.
@@ -463,44 +469,49 @@ Irons is credited with the discovery of synthetic attributes
 by Knuth ("Genesis of Attibute Grammars").
  <a href="#footnote-20-ref">&#8617;</a></p>
 <p id="footnote-21">21.
+Lucas, P. Die Strukturanalyse von Formelnübersetzern / analysis of
+the structure of formula translators. Elektronische Rechenanlagen,
+3(11.4):159–167, 1961, (in German).
+ <a href="#footnote-21-ref">&#8617;</a></p>
+<p id="footnote-22">22.
 Edsger W. Dijkstra, "Algol 60 translation : An Algol 60 translator
 for the x1 and Making a translator for Algol 60", Research Report 35,
 Mathematisch Centrum, Amsterdam, 1961,
- <a href="#footnote-21-ref">&#8617;</a></p>
-<p id="footnote-22">22.
-      Schorre 1964, p. D1.3-1
  <a href="#footnote-22-ref">&#8617;</a></p>
 <p id="footnote-23">23.
       Schorre 1964, p. D1.3-1
-http://ibm-1401.info/Meta-II-schorre.pdf
  <a href="#footnote-23-ref">&#8617;</a></p>
 <p id="footnote-24">24.
-P. 637
+      Schorre 1964, p. D1.3-1
+http://ibm-1401.info/Meta-II-schorre.pdf
  <a href="#footnote-24-ref">&#8617;</a></p>
 <p id="footnote-25">25.
-They are credited in Rosencrantz and Stearns (1970)
-and Aho and Ullman, p. 368.
+P. 637
  <a href="#footnote-25-ref">&#8617;</a></p>
 <p id="footnote-26">26.
+They are credited in Rosencrantz and Stearns (1970)
+and Aho and Ullman, p. 368.
+ <a href="#footnote-26-ref">&#8617;</a></p>
+<p id="footnote-27">27.
 Knuth 1965, p. 610.
 See on p. 611
 "corresponds with the intuitive notion of translation
 from left to right looking k characters ahead".
- <a href="#footnote-26-ref">&#8617;</a></p>
-<p id="footnote-27">27.
-Knuth, "Top-down syntax analysis", p. 102.
  <a href="#footnote-27-ref">&#8617;</a></p>
 <p id="footnote-28">28.
-Knuth, "Semantics of context-free languages", 1968.
+Knuth, "Top-down syntax analysis", p. 102.
  <a href="#footnote-28-ref">&#8617;</a></p>
 <p id="footnote-29">29.
-      http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2
+Knuth, "Semantics of context-free languages", 1968.
  <a href="#footnote-29-ref">&#8617;</a></p>
 <p id="footnote-30">30.
-Pratt, Vaughan R. Top down operator precedence. In First ACM Symposium on Prin-
-ciples of Programming Languages, pages 41–51. ACM, Oct. 1973.
+      http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2
  <a href="#footnote-30-ref">&#8617;</a></p>
 <p id="footnote-31">31.
+Pratt, Vaughan R. Top down operator precedence. In First ACM Symposium on Prin-
+ciples of Programming Languages, pages 41–51. ACM, Oct. 1973.
+ <a href="#footnote-31-ref">&#8617;</a></p>
+<p id="footnote-32">32.
 The paper which is devoted to parsing is
 Hutton, "Higher order functions for parsing",
 Journal of Functional Programming 2(3):323-343, July 1992.
@@ -508,29 +519,29 @@ The other paper, which centers on combinators as a programming
 paradigm, is
 Frost, Richard A. Constructing programs as executable attribute
 grammars. Computer J., 35(4):376–389, 1992.
- <a href="#footnote-31-ref">&#8617;</a></p>
-<p id="footnote-32">32.
+ <a href="#footnote-32-ref">&#8617;</a></p>
+<p id="footnote-33">33.
 TODO:
 Revise --
 tie attributes to combinators.
- <a href="#footnote-32-ref">&#8617;</a></p>
-<p id="footnote-33">33.
+ <a href="#footnote-33-ref">&#8617;</a></p>
+<p id="footnote-34">34.
 TODO:
 Philip Wadler,
 "Monads for Functional programming".
 1995
- <a href="#footnote-33-ref">&#8617;</a></p>
-<p id="footnote-34">34.
+ <a href="#footnote-34-ref">&#8617;</a></p>
+<p id="footnote-35">35.
 TODO:
 Hutton and Meijer,
 "Monadic Parser Combinators",
 1996
- <a href="#footnote-34-ref">&#8617;</a></p>
-<p id="footnote-35">35.
+ <a href="#footnote-35-ref">&#8617;</a></p>
+<p id="footnote-36">36.
 TODO:
 Hudak, Peterson and Fasel,
 "A Gentle Introduction to Haskell 98",
 1999.
- <a href="#footnote-35-ref">&#8617;</a></p>
+ <a href="#footnote-36-ref">&#8617;</a></p>
 </body>
 </html>

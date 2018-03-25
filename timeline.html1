@@ -21,13 +21,23 @@ h1 { font-size: x-large }
     <mytitle>Parsing: an expanding timeline</mytitle>
     <author>Jeffrey Kegler</author>
     <h1 id="th-bce-panninis-description-of-sanskrit">4th BCE: Pannini's description of Sanskrit</h1>
-    <p>In India, Pannini creates an exact and complete description of the Sanskrit language, including pronunciation. Sanskrit could be recreated using nothing but Pannini's grammar. Pannini's grammar is probably the first formal system of any kind, predating Euclid. Even today, nothing like it exists for any other natural language of comparable size or corpus. Pannini is the object of serious study today. But in the 1940's and 1950's Pannini is almost unknown in the West. It will have no direct effect on the other events in this timeline.</p>
+    <p>In India, Pannini creates an exact and complete description of
+    the Sanskrit language, including pronunciation. Sanskrit could be
+    recreated using nothing but Pannini's grammar.
+	Pannini's grammar is
+    probably the first formal system of any kind, predating Euclid. Even
+    today, nothing like it exists for any other natural language of
+    comparable size or corpus. Pannini is the object of serious study
+    today. But in the 1940's and 1950's Pannini is almost unknown in
+    the West. It will have no direct effect on the other events in
+    this timeline.
+</p>
     <h1 id="markovs-chains">1906: Markov's chains</h1>
     <p>Andrei Markov introduces his &quot;chains&quot; -- a set of
     states with transitions between them. Markov uses his chains, not
     for parsing, but for solving problems in probability.<footnote>
-"Extension of the law of large numbers to dependent quantities"
-(in Russian).
+Markov, A.A.. "Extension of the law of large numbers to quantities, depending on each other (1906).
+(original in Russian).
     </footnote>
     </p>
     <h1 id="posts-rewriting-system">1943: Post's rewriting system</h1>
@@ -270,11 +280,11 @@ by Knuth ("Genesis of Attibute Grammars").
     </p>
     <p>Pedantically, synthetic attributes are not a parsing concept -- they are way of doing semantics. But almost nobody parses without intending to apply some kind of semantics, and feedback from new semantic concepts has had major effects on the development of parsing. Synthetic attributes will be important.</p>
     <h1 id="lucas-discovers-recursive-descent">1961: Lucas discovers recursive descent</h1>
-    <p>Peter Lucas publishes the first description of a purely top-down parser.</footnote>
+    <p>Peter Lucas publishes the first description of a purely top-down parser<footnote>
 Lucas, P. Die Strukturanalyse von Formelnübersetzern / analysis of
 the structure of formula translators. Elektronische Rechenanlagen,
 3(11.4):159–167, 1961, (in German).
-<footnoe>
+</footnote>.
       Either Irons paper or this one can be considered to be recursive descent. Certainly the Lucas algorithm more closely resembles modern implementations of recursive descent.</p>
     <p>Except to say that he deals properly with them, Lucas does not say how he parses operator expressions. But it is easy to believe Lucas' claim -- by this time there are several specialized techniques for parsing operator expressions. Eventually there will be a botanical profusion of them.</p>
     <p>For our purposes, it is sufficient to note that while recursive descent cannot parse arithmetic expressions directly, it can deal with them in two ways:</p>
