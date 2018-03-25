@@ -7,15 +7,15 @@ use English qw( -no_match_vars );
 use autodie;
 
 sub usage {
-	 my ($message) = @_;
+	my ($message) = @_;
 	die $message, "\nusage: $PROGRAM_NAME input fn_out > html_out\n";
 }
 
-my ($input, $footnotes) = @ARGV;
-open my $fh_in, '<', $input;
-open my $fh_fn_out, '>', $footnotes;
+my $fn_number = 0;
+my @fn_lines = ();
+my @lines = ();
 
-while ( my $line = <$fh_in> ) {
+while ( my $line = <> ) {
     chomp $line;
     if ( $line =~ /<footnote>/ ) {
         do_footnote($line);
@@ -23,24 +23,28 @@ while ( my $line = <$fh_in> ) {
     if ( $line =~ /<biblio>/ ) {
         do_biblio($line);
     }
-    say $line;
+    push @lines, $line;
 }
 
-my $fn_number = 0;
+my $output = join "\n", @lines;
+my $footnotes = join "\n", '<h1>Footnotes</h1>', @fn_lines, '</body>';
+$output =~ s[</body>][$footnotes];
+
+say $output;
 
 sub do_footnote {
     my ($line) = @_;
     my $pre_footnote = $line;
     $pre_footnote =~ s/<footnote>.*$//;
-    say $pre_footnote if $pre_footnote =~ m/\S/;
+    push @lines, $pre_footnote if $pre_footnote =~ m/\S/;
     $fn_number++;
     my $fn_ref = join '-', 'footnote', $fn_number, 'ref';
     my $fn_href = join '-', '#footnote', $fn_number;
-    say qq{<a id="$fn_ref" href="$fn_href">[$fn_number]</a>};
-    my @fn_lines = (qq{<p id="$fn_ref">});
+    push @lines, qq{<a id="$fn_ref" href="$fn_href">[$fn_number]</a>};
+    push @fn_lines, qq{<p id="$fn_ref">};
     $line =~ s/^.*<footnote>//;
     push @fn_lines, $line if $line =~ m/\S/;
-  FN_LINE: while ( my $line = <$fh_in> ) {
+  FN_LINE: while ( my $line = <> ) {
         chomp $line;
         if ( $line =~ m[<\/footnote>] ) {
 	    my $post_footnote = $line;
@@ -52,7 +56,6 @@ sub do_footnote {
         }
 	push @fn_lines, $line;
     }
-    say $fh_fn_out join "\n", @fn_lines;
 }
 
 sub do_bibio { die 'NYI' }
