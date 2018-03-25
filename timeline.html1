@@ -58,19 +58,19 @@ pp 29-35, 40.
     <p>During 1950, Corrado Boehm, also at the ETH Zurich develops his own compiler. They are working at the same institution at the same time, but Boehm is unaware of Rutishauser's work until his own is complete. Like Rutishauser, Boehm's language is line-by-line and parsed ad hoc, except for expressions. Boehm expression parser
       <em>does</em>
       honor precedence, making it perhaps the first operator precedence parser. Boehm's compiler also allows parentheses, but the two cannot be mixed -- an expression can either be parsed using precedence or have parentheses, but not both.</p>
-    <p>Boehm's is the first self-compiling compiler -- it is written in its own language. Like Rutishauser's, Boehm's compiler was never implemented.
-      <!--
+    <p>Boehm's is the first self-compiling compiler -- it is written in its own language. Like Rutishauser's, Boehm's compiler was never implemented.<footnote>
 Knuth and Pardo,
 "The Early Development of Programming Languages",
 pp 35-42.
--->
+</footnote>
     </p>
     <h1 id="grace-hopper-uses-the-term-compiler">1952: Grace Hopper uses the term &quot;compiler&quot;</h1>
     <p>Grace Hopper writes a linker-loader.
       <a href="https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers%22">She calls it a &quot;compiler&quot;</a>. Hopper seems to be the first person to use this term for a computer program.</p>
     <h1 id="term-compiler-1">Term: &quot;compiler&quot; 1</h1>
-    <p>Hopper used the term &quot;compiler&quot; in a meaning it had at the time: &quot;to compose out of materials from other documents&quot;.
-      <!--
+    <p>Hopper used the term &quot;compiler&quot; in a meaning it
+    had at the time: &quot;to compose out of materials from other
+    documents&quot;.<footnote>
 Quoted definition is from Nora B. Moser,
 "Compiler method of automatic programming",
 Symposium on Automatic Programming for Digital Computer,
@@ -79,46 +79,53 @@ as cited in
 Knuth and Pardo,
 "The Early Development of Programming Languages",
 p 51.
--->
+</footnote>
       Specifically, before Hopper, the task we now see as &quot;compiling&quot; was then seen putting together a set of pre-existing assembler subroutines and calling them. Hopper's new program went one step further -- instead of calling the subroutines it expanded them (or in other words &quot;compiled&quot; them) into a single program. Since Hopper the term has acquired a different and very specialized meaning in the computer field. Today we would not call Hopper's program a &quot;compiler&quot;.</p>
     <p>As an aside, whatever it is called, Hopper's program was a major achievement, both in terms of insight and execution. Hopper's reputation is well-deserved.</p>
     <h1 id="glennies-autocode">1952: Glennie's AUTOCODE</h1>
-    <p>Knuth
-      <!--
+    <p>Knuth<footnote>
 Knuth and Pardo,
 "The Early Development of Programming Languages",
 p 42.
--->
-      calls Glennie's the first &quot;real&quot; compiler in that it was actually implemented and used by someone to translate algebraic statements into machine language. Glennie's AUTOCODE was very low-level and hard-to-use, and had little impact on other users of its target -- the Manchester Mark I. And because Glennie worked for the British atomic weapons projects his papers were routinely classified, so that the influence of AUTOCODE was slow to spread. Nonetheless, many other &quot;compilers&quot; afterward were named AUTOCODE, and this probably indicates some awareness of Glennie's effort.
-      <!--
+</footnote>
+      calls Glennie's the first &quot;real&quot; compiler in that it was actually implemented and used by someone to translate algebraic statements into machine language. Glennie's AUTOCODE was very low-level and hard-to-use, and had little impact on other users of its target -- the Manchester Mark I. And because Glennie worked for the British atomic weapons projects his papers were routinely classified, so that the influence of AUTOCODE was slow to spread. Nonetheless, many other &quot;compilers&quot; afterward were named AUTOCODE, and this probably indicates some awareness of Glennie's effort.<footnote>
 Knuth and Pardo,
 "The Early Development of Programming Languages",
 pp. 42-49.
--->
+</footnote>
     </p>
     <h1 id="the-fortran-project-begins">1954: The FORTRAN project begins</h1>
     <p>At IBM, a team under John Backus begins working on the language which will be called FORTRAN.</p>
     <h1 id="term-compiler-2">Term: &quot;compiler&quot; 2</h1>
-    <p>As of 1954, the term &quot;compiler&quot; was still being used in Hopper's looser sense, instead of its modern, specialized, one. In particular, there was no implication that the output of a &quot;compiler&quot; is ready for execution by a computer.
-      <!-- "http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf
+    <p>As of 1954, the term &quot;compiler&quot; was still being used
+    in Hopper's looser sense, instead of its modern, specialized,
+    one. In particular, there was no implication that the output of a
+    &quot;compiler&quot; is ready for execution by a computer.<footnote>
+"http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf
 pp. 133-134
--->
+</footnote>
       The output of one 1954 &quot;compiler&quot;, for example, produced relative addresses, which needed to be translated by hand before a machine can execute them.</p>
     <h1 id="noam-chomsky-starts-teaching-at-mit">1955: Noam Chomsky starts teaching at MIT</h1>
     <p>Noam Chomsky is awarded a Ph.D. in linguistics and accepts a teaching post at MIT. MIT does not have a linguistics department and Chomsky, in his linguistics course, is free to teach his own approach, highly original and very mathematical.</p>
     <h1 id="work-begins-on-the-it-compiler">1955: Work begins on the IT compiler</h1>
     <p>At Purdue, a team including Alan Perlis and Joseph Smith begins work on the IT compiler.
-      <!--
+      <footnote>
 Knuth and Pardo,
 "The Early Development of Programming Languages",
 pp. 83-86.
--->
+</footnote>
     </p>
     <h1 id="section">1956</h1>
     <p>Perlis and Smith, now at the Carnegie Institute of Technology, finish the IT compiler. Don Knuth calls this &quot;the first really
       <em>useful</em>
-      compiler. IT and IT's derivatives were used successfully and frequently in hundreds of computer installations until [its target,] the [IBM] 650 became obsolete. [... P]previous systems were important steps along the way, but none of them had the combination of powerful language and adequate implementation and documentation needed to make a significant impact in the use of machines.&quot;</p>
-    <!--
+      compiler. IT and IT's derivatives were used successfully and
+      frequently in hundreds of computer installations until [its
+      target,] the [IBM] 650 became obsolete. [... P]previous systems
+      were important steps along the way, but none of them had the
+      combination of powerful language and adequate implementation and
+      documentation needed to make a significant impact in the use of
+      machines.&quot;
+    <footnote>
 RL(2) with backtracking.
 A.J. Perlis, J.W. Smith and H.R. vanZoeren,
 "Internal Translator (IT)
@@ -127,7 +134,8 @@ Computation Center,
 Carnegie Institute of Technology,
 April 18, 1958
 pp 1.17-1.22
--->
+</footnote>
+</p>
     <h1 id="the-operator-issue">The Operator Issue</h1>
     <p>With the IT compiler the &quot;operator issue&quot; comes to the fore -- how to handle expression with operators which are expected to honor associativity and precedence. Both mathematicians and ordinary users expect this in a language.</p>
     <p>The IT language had arithmetic expressions, of a sort -- parentheses are honored, but otherwise evaluation is always right-to-left -- there is no operator precedence. IT did honor parentheses, but nonetheless its way of doing arithmetic expressions proves very unpopular: Donald Knuth reports that &quot;The lack of operator priority (often called precedence or hierarchy) in the IT language was the most frequent single cause of errors by the users of that compiler.&quot;
