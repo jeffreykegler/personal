@@ -15,13 +15,11 @@ my $fn_number = 0;
 my @fn_lines = ();
 my @lines = ();
 
-while ( my $line = <> ) {
+LINE: while ( my $line = <> ) {
     chomp $line;
     if ( $line =~ /<footnote>/ ) {
         do_footnote($line);
-    }
-    if ( $line =~ /<biblio>/ ) {
-        do_biblio($line);
+	next LINE;
     }
     push @lines, $line;
 }
@@ -58,4 +56,3 @@ sub do_footnote {
     }
 }
 
-sub do_bibio { die 'NYI' }
