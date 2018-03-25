@@ -39,9 +39,9 @@ sub do_footnote {
     push @lines, $pre_footnote if $pre_footnote =~ m/\S/;
     $fn_number++;
     my $fn_ref = join '-', 'footnote', $fn_number, 'ref';
-    my $fn_href = join '-', '#footnote', $fn_number;
-    push @lines, qq{<a id="$fn_ref" href="$fn_href">[$fn_number]</a>};
-    push @fn_lines, qq{<p id="$fn_ref">};
+    my $fn_href = join '-', 'footnote', $fn_number;
+    push @lines, qq{<a id="$fn_ref" href="#$fn_href">[$fn_number]</a>};
+    push @fn_lines, qq{<p id="$fn_href">$fn_number.};
     $line =~ s/^.*<footnote>//;
     push @fn_lines, $line if $line =~ m/\S/;
   FN_LINE: while ( my $line = <> ) {
@@ -51,7 +51,7 @@ sub do_footnote {
 	    $post_footnote =~ s[^.*<\/footnote>][];
 	    $line =~ s[</footnote>.*$][];
 	    push @fn_lines, $line if $line =~ m/\S/;
-	    push @fn_lines, qq{ <a href="$fn_href">&#8617;</a></p>};
+	    push @fn_lines, qq{ <a href="#$fn_ref">&#8617;</a></p>};
 	    last FN_LINE;
         }
 	push @fn_lines, $line;
