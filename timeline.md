@@ -845,17 +845,28 @@ of lookahead.
 RL(2) above, meant that the algorithm looked
 2 tokens ahead.
 
-LL(1) -- 
-"scan from the left, using left reductions
-with one character of lookahead"
-is extremely important.
 
 # LL(1) and the Operator Issue
 
-<!--
-TODO:
-write
--->
+Of the algorithms in our new notation,
+LL(1) -- 
+"scan from the left, using left reductions
+with one character of lookahead" --
+is one of the more important ones.
+Before the introduction of this notation, and the
+mathematics behind it, the Operator Issue
+could not be described in precise terms.
+
+Now we can speak about the Operator Issue in precise
+terms:
+Recursive Descent, in its pure form, is LL(1).
+Arithmetic operator grammars are not LL(1).
+Something has to give as long as you
+are using recursive descent.
+And this is a major reason why truly syntax-driven versions
+of LL(1) are not used.
+A pure syntax-driven LL(1) parser generator *could* be written,
+but it would not be able to parse arithmetic expressions properly.
 
 # 1968
 
