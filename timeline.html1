@@ -393,18 +393,21 @@ Knuth, "Semantics of context-free languages", 1968.
     <h1 id="section-11">1972</h1>
     <p>Under the names TDPL and GTDPL, Aho and Ullman investigate the non-Chomksyan parsers in the Schorre lineage. They note that &quot;it can be quite difficult to determine what language is defined by a TDPL parser&quot;. That is, GTDPL parsers do whatever they do, and that whatever is something the programmer in general will not be able to describe. The best a programmer can usually do is to create a test suite and fiddle with the GTDPL description until it passes. Correctness cannot be established in any stronger sense. GTDPL is an extreme form of the old joke that &quot;the code is the documentation&quot; -- with GTDPL nothing documents the language of the parser, not even the code.</p>
     <p>GTDPL's obscurity buys nothing in the way of additional parsing power. Like all non-Chomskyan parsers, GTDPL is basically a extremely powerful recognizer. Pressed into service as a parser, it is comparatively weak. As a parser, GTDPL is essentially equivalent to Lucas's 1961 syntax-driven algorithm, which was in turn a restricted form of recursive descent.</p>
-    <p>At or around this time, rumor has it that the main line of development for GTDPL parsers is classified secret by the US government.
-      <!-- http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2 -->
+    <p>At or around this time, rumor has it that the main line of development for GTDPL parsers is classified secret by the US government.<footnote>
+      http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2</footnote>
       GTDPL parsers have the property that even small changes in GTDPL parsers can be very labor-intensive. For some government contractors, GTDPL parsing provides steady work for years to come. Public interest in GTDPL fades.</p>
     <h1 id="pratt-parsing">1973: Pratt parsing</h1>
     <p>One approach to the Operator Issue has not been mentioned. We have noted that LL(1) cannot parse operator expressions. What about making the entire grammar an operator grammar? That way you don't have to mix algorithms.</p>
     <p>There are many problems with switching to operator grammars. Operator grammar are non-Chomskyan -- the BNF no longer accurately describes the grammar. Instead the BNF becomes part of a combined notation, and the actual grammar parsed depends also on precedence and semantics. And operator grammars have a restricted form -- most practical languages are not operator grammars.</p>
-    <p>But many practical grammars are almost operator grammars. And the Chomskyan approach has always had its dissenter. Vaughn Pratt was one of these, and discovered a new approach (the third and last in
-      <a href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell's taxonomy</a>) to operator expression parsing, one which some have adopted as an overall solution to their parsing problems.
-      <!--
+    <p>But many practical grammars are almost operator grammars. And the
+    Chomskyan approach has always had its dissenter. Vaughn Pratt was one
+    of these, and discovered a new approach (the third and last in <a
+    href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
+    Norvell's taxonomy</a>) to operator expression parsing, one which
+    some have adopted as an overall solution to their parsing problems.<footnote>
 Pratt, Vaughan R. Top down operator precedence. In First ACM Symposium on Prin-
 ciples of Programming Languages, pages 41–51. ACM, Oct. 1973.
--->
+</footnote>
     </p>
     <p>The Pratt approach, and its descendant, precedence climbing, is not popular as an overall strategy. It is most often used as the operator expression subparser within a recursive descent strategy. All operator expression subparsers breaks the Chomskyan paradigm so the non-Chomskyan nature of Pratt's parser is not a problem in this context. But with respect to the Operator Issue, like Dijkstra's alternative, it is an implementation choice, not a game-changer.</p>
     <h1 id="section-12">1975</h1>
@@ -423,8 +426,8 @@ ciples of Programming Languages, pages 41–51. ACM, Oct. 1973.
     <h1 id="the-1990s">The 1990's</h1>
     <p>Earley's is forgotten. So everyone in LALR-land is content, right? Wrong. Far from it, in fact. Users of LALR are making unpleasant discoveries. While LALR automatically generates their parsers, debugging them is so hard they could just as easily write the parser by hand. Once debugged, their LALR parsers are fast for correct inputs. But almost all they tell the users about incorrect inputs is that they are incorrect. In Larry's words, LALR is &quot;fast but stupid&quot;.</p>
     <h1 id="section-18">1992</h1>
-    <p>Combinators were introduced In two 1992 papers. Of more interest to us is the one by Hutton, which focuses on combinator parsing.
-      <!--
+    <p>Combinators were introduced In two 1992 papers. Of more interest
+    to us is the one by Hutton, which focuses on combinator parsing.<footnote>
 The paper which is devoted to parsing is
 Hutton, "Higher order functions for parsing",
 Journal of Functional Programming 2(3):323-343, July 1992.
@@ -432,35 +435,38 @@ The other paper, which centers on combinators as a programming
 paradigm, is
 Frost, Richard A. Constructing programs as executable attribute
 grammars. Computer J., 35(4):376–389, 1992.
--->
-      Combinators will become important in programming languages and semantics. But in terms of parsing algorithms, Hutton introduces nothing new -- wrapped up in an attribute grammar; underlying the exciting new mathematics is the decades-old recursive descent, unchanged.
-      <!--
+</footnote>
+      Combinators will become important in programming languages and
+      semantics. But in terms of parsing algorithms, Hutton introduces
+      nothing new -- wrapped up in an attribute grammar; underlying the
+      exciting new mathematics is the decades-old recursive descent,
+      unchanged.<footnote>
 TODO:
-Revise.
+Revise --
 tie attributes to combinators.
--->
+</footnote>
     </p>
     <h1 id="section-19">1995</h1>
-    <!--
+    <footnote>
 TODO:
 Philip Wadler,
 "Monads for Functional programming".
 1995
--->
+</footnote>
     <h1 id="section-20">1996</h1>
-    <!--
+    <footnote>
 TODO:
 Hutton and Meijer,
 "Monadic Parser Combinators",
 1996
--->
+</footnote>
     <h1 id="section-21">1999</h1>
-    <!--
+    <footnote>
 TODO:
 Hudak, Peterson and Fasel,
 "A Gentle Introduction to Haskell 98",
 1999.
--->
+</footnote>
     <h1 id="section-22">2000</h1>
     <p>Larry Wall decides on a radical reimplementation of Perl -- Perl 6. Larry does not even consider using LALR again.</p>
     <h1 id="section-23">2002</h1>
