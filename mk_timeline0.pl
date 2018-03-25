@@ -32,13 +32,13 @@ say $output;
 
 sub do_footnote {
     my ($line) = @_;
-    my $pre_footnote = $line;
-    $pre_footnote =~ s/<footnote>.*$//;
-    push @lines, $pre_footnote if $pre_footnote =~ m/\S/;
     $fn_number++;
     my $fn_ref = join '-', 'footnote', $fn_number, 'ref';
     my $fn_href = join '-', 'footnote', $fn_number;
-    push @lines, qq{<a id="$fn_ref" href="#$fn_href">[$fn_number]</a>};
+    my $footnoted_line = $line;
+    $footnoted_line =~ s/<footnote>.*$//;
+    $footnoted_line .= qq{<a id="$fn_ref" href="#$fn_href">[$fn_number]</a>};
+    push @lines, $footnoted_line if $footnoted_line =~ m/\S/;
     push @fn_lines, qq{<p id="$fn_href">$fn_number.};
     $line =~ s/^.*<footnote>//;
     push @fn_lines, $line if $line =~ m/\S/;
