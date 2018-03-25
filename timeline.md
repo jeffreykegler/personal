@@ -857,7 +857,7 @@ Before the introduction of this notation, and the
 mathematics behind it, the Operator Issue
 could not be described in precise terms.
 
-Now we can speak about the Operator Issue in precise
+Now we can state one form of the Operator Issue in more exact
 terms:
 Recursive Descent, in its pure form, is LL(1).
 Arithmetic operator grammars are not LL(1).
@@ -1129,24 +1129,31 @@ In Larry's words, LALR is "fast but stupid".
 
 # 1992
 
-Two papers introduce combinators.
+Combinators were introduced In two 1992 papers.
+Of more interest to us is the one by Hutton,
+which focuses on combinator parsing.
 <!--
-TODO:
-Frost, "Constructing programs as executable attribute grammars".
--->
-The one by Hutton focuses on combinator parsing
-<!--
-TODO:
+The paper which is devoted to parsing is
 Hutton, "Higher order functions for parsing",
 Journal of Functional Programming 2(3):323-343, July 1992.
+The other paper, which centers on combinators as a programming
+paradigm, is
+Frost, Richard A. Constructing programs as executable attribute
+grammars. Computer J., 35(4):376–389, 1992.
 -->
-Combinator parsing is not actually a parsing innovation --
-it's the decades-old recursive descent
-wrapped up in an attribute grammar.
-But it is an exciting new development in semantics:
-developments in functional programming are showing the
-potential value of
-attribute grammars.
+Combinators will become important in programming languages
+and semantics.
+But in terms of parsing algorithms,
+Hutton introduces nothing new --
+wrapped up in an attribute grammar;
+underlying the exciting new mathematics
+is the decades-old recursive descent,
+unchanged.
+<!--
+TODO:
+Revise.
+tie attributes to combinators.
+-->
 
 # 1995
 
