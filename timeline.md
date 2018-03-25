@@ -730,6 +730,14 @@ botanical profusion of operator expression parsers.
 All earlier parsers are subspecies of what he calls
 "the classic algorithm",
 so that Dijkstra's approach is new.
+The number of level of precedence is not
+"built in" into the shunting-yard algorithm.
+And the shunting-yard algorithm is more efficient than
+the classic approaches:
+Code size does not grow,
+and the algorithm's speed does not decrease,
+with the number of
+precedence levels.
 Dijkstra's algorithm is not a game-changer --
 it has no major impact on the Operator Issue --
 but it offers
@@ -991,13 +999,15 @@ We have noted that LL(1) cannot parse operator expressions.
 What about making the entire grammar an operator grammar?
 That way you don't have to mix algorithms.
 
-There are many reasons not to do this.
-The resulting grammar will be non-Chomskyan --
-the BNF no longer accurately describes the grammar --
-it  becomes part
-of a combined notation, to be considered together with
-with precedence and (in the Pratt case) semantics.
-And operator grammars are restricted --
+There are many problems with switching to
+operator grammars.
+Operator grammar are non-Chomskyan --
+the BNF no longer accurately describes the grammar.
+Instead the BNF becomes part
+of a combined notation,
+and the actual grammar parsed depends also
+on precedence and semantics.
+And operator grammars have a restricted form --
 most practical languages are not operator grammars.
 
 But many practical grammars are almost operator grammars.
@@ -1011,13 +1021,13 @@ to operator expression parsing,
 one which some have adopted as an overall solution to
 their parsing problems.
 <!--
-TODO:
 Pratt, Vaughan R. Top down operator precedence. In First ACM Symposium on Prin-
 ciples of Programming Languages, pages 41–51. ACM, Oct. 1973.
 -->
 
-As an overall strategy,
-the Pratt approach is not popular.
+The Pratt approach,
+and its descendant, precedence climbing,
+is not popular as an overall strategy.
 It is most often used as
 the operator expression subparser within a recursive descent
 strategy.
