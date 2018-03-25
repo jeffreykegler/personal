@@ -126,7 +126,6 @@ pp. 83-86.
       documentation needed to make a significant impact in the use of
       machines.&quot;
     <footnote>
-RL(2) with backtracking.
 A.J. Perlis, J.W. Smith and H.R. vanZoeren,
 "Internal Translator (IT)
 A Compiler for the 650",
@@ -138,8 +137,14 @@ pp 1.17-1.22
 </p>
     <h1 id="the-operator-issue">The Operator Issue</h1>
     <p>With the IT compiler the &quot;operator issue&quot; comes to the fore -- how to handle expression with operators which are expected to honor associativity and precedence. Both mathematicians and ordinary users expect this in a language.</p>
-    <p>The IT language had arithmetic expressions, of a sort -- parentheses are honored, but otherwise evaluation is always right-to-left -- there is no operator precedence. IT did honor parentheses, but nonetheless its way of doing arithmetic expressions proves very unpopular: Donald Knuth reports that &quot;The lack of operator priority (often called precedence or hierarchy) in the IT language was the most frequent single cause of errors by the users of that compiler.&quot;
-      <!--
+    <p>The IT language had arithmetic expressions, of a sort --
+    parentheses are honored, but otherwise evaluation is always
+    right-to-left -- there is no operator precedence. IT did honor
+    parentheses, but nonetheless its way of doing arithmetic expressions
+    proves very unpopular: Donald Knuth reports that &quot;The lack of
+    operator priority (often called precedence or hierarchy) in the IT
+    language was the most frequent single cause of errors by the users
+    of that compiler.&quot;<footnote>
 D.E. Knuth, “A History of Writing Compilers,”
 in
 _COMPUTERS and AUTOMATION_, December, 1962,
@@ -148,20 +153,24 @@ pp. 8-10.
 "The FORTRAN I Compiler", David Padua,
 in
 Computing in Science & Engineering 2, pp. 70-75 (2000); https://doi.org/10.1109/5992.814661
--->
+</footnote>
     </p>
     <p>Since when the IT compiler is written before there is a single published parsing algorithm, it is not surprising this proves an issue. More surprising is the persistance of this issue -- in fact, after more than more six decades of stunning progress in other areas of computer, the Operator Issue is still very much a live issue.</p>
     <h1 id="term-compiler-3">Term: &quot;compiler&quot; 3</h1>
-    <!--
+    <p>In the 1956 document describing the IT compiler,<footnote>
 J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S, "A mathematical language compiler",
 in (1956) _Proceedings of the 1956 11th ACM national meeting_
--->
-    <p>In the 1956 document describing the IT compiler, IT team is careful to define the term. Their definition makes clear that they are using of the word &quot;compiler&quot; in something like its modern sense, perhaps for the first time. From this time on, when used as a technical term within computing, &quot;compiler&quot; will usually mean what we currently understand it to mean.</p>
+</footnote>
+IT team is careful to define the term. Their definition makes clear that
+they are using of the word &quot;compiler&quot; in something like its
+modern sense, perhaps for the first time. From this time on, when used
+as a technical term within computing, &quot;compiler&quot; will usually
+mean what we currently understand it to mean.</p>
     <h1 id="section-1">1956</h1>
-    <p>Chomsky publishes the paper which is usually considered the foundation of Western formal language theory.
-      <!--
-"Three models for the description of language"
--->
+    <p>Chomsky publishes the paper which is usually considered the foundation of Western formal language theory.<footnote>
+Chomsky, Noam. "Three models for the description of language", IEEE Trans. Inform.
+Theory, 2(3):113–124, 1956.
+</footnote>
       Chomsky demolishes the idea that natural language grammar can be modeled using only Markov chains. Instead, the paper advocates a natural language approach that uses three layers:</p>
     <p><b>Bottom layer</b>: For his bottom layer, Chomsky does use Markov's chains. This becomes the modern compiler's lexical phase.</p>
     <p><b>Middle layer</b>: Chomsky's middle layer uses context-free grammars and context-sensitive grammars. These are his own discoveries. This middle layer becomes the syntactic phase of modern compilers.</p>
@@ -187,9 +196,11 @@ in (1956) _Proceedings of the 1956 11th ACM national meeting_
     <h1 id="lisp-released">1958: LISP released</h1>
     <p>John McCarthy's LISP appears. LISP goes beyond the line-by-line syntax -- it is recursively structured. But the LISP interpreter does not find the recursive structure: the programmer must explicitly indicate the structure herself, using parentheses. Because of this reliance on parentheses, the Operator Issue does not arise with LISP.</p>
     <h1 id="backuss-notation">1959: Backus's notation</h1>
-    <p>Backus discovers a new notation to describe the IAL language (aka ALGOL). Backus's notation is influenced by his study of Post -- he seems not to have read Chomsky until later.
-      <!-- http://archive.computerhistory.org/resources/text/Oral_History/Backus_John/Backus_John_1.oral_history.2006.102657970.pdf
-p. 25 -->
+    <p>Backus discovers a new notation to describe the IAL language
+    (aka ALGOL). Backus's notation is influenced by his study of Post --
+    he seems not to have read Chomsky until later.<footnote>
+      http://archive.computerhistory.org/resources/text/Oral_History/Backus_John/Backus_John_1.oral_history.2006.102657970.pdf, p. 25
+</footnote>
     </p>
     <h1 id="bnf">1960: BNF</h1>
     <p>Peter Naur improves the Backus notation and uses it to describe ALGOL 60. The improved notation will become known as Backus-Naur Form (BNF).</p>
@@ -213,8 +224,9 @@ p. 25 -->
       grammar that can be written in BNF. This is a very useful property -- it makes it easy for a grammar-writer to know that her grammar will parse. It also makes it easy to auto-generate grammars, knowing that they will successfully parse. This opens the way to second-order languages -- languages which specify other languages.</p>
     <p>As a pedantic point, a general parser need only parse &quot;proper&quot; grammars. A BNF grammar is &quot;proper&quot; if it has no useless rules and no infinite loops. Neither of these have any practical use, so that the restriction to proper grammars is unproblematic.</p>
     <h1 id="gleenies-compiler-compiler">1960: Gleenie's compiler-compiler</h1>
-    <p>A.E. Gleenie publishes his description of a compiler-compiler.
-      <!-- http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm -->
+    <p>A.E. Gleenie publishes his description of a compiler-compiler.<footnote>
+http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm
+</footnote>
       Glennie's &quot;universal compiler&quot; is more of a methodology than an implementation -- the compilers must be written by hand. Glennie credits both Chomsky and Backus, and observes that the two notations are &quot;related&quot;. He also mentions Post's productions. Glennie may have been the first to use BNF as a description of a
       <em>procedure</em>
       instead of as the description of a
@@ -230,17 +242,21 @@ p. 25 -->
     <p>Even when the Chomskyan approach is pointed out, it does not at first seem very attractive. With the pre-Chomskyan approach, the examples of the language more or less naturally lead to a parser. In the Chomskyan approach the programmer has to search for an algorithm to parse strings according to his grammar -- and the search for good algorithms to parse Chomskyan grammars has proved surprisingly long and difficult. Handling semantics is more natural with a Chomksyan approach. But, using captures, semantics can be added to a pre-Chomskyan parser and, with practice, this seems natural enough.</p>
     <p>Despite the naturalness of the pre-Chomskyan approach to parsing, we will find that the first fully-described automated parsers are Chomskyan. This is a testimony to Chomsky's influence at the time. We will also see that Chomskyan parsers have been dominant ever since.</p>
     <h1 id="operator-precedence-and-stacks">1960: Operator precedence and stacks</h1>
-    <!--
+    <p>Since FORTRAN I, many people have refined its operator precedence implementation.
+A Feb 1960 paper by Samuelson and Bauer<footnote>
 Samelson, K. and Bauer, F. L. Sequential formula translation. Commun. ACM,
-3(2):76–83, Feb. 1960.
--->
-    <p>Since FORTRAN I, many people have refined its operator precedence implementation. A Feb 1960 paper by Samuelson and Bauer implements operator precedence using stacks proves particularly influential.</p>
+3(2):76–83, Feb. 1960.</footnote>
+implements operator precedence using stacks proves particularly influential.
+</p>
     <h1 id="the-first-parsing-paper">1961: The first parsing paper</h1>
-    <p>In January, Ned Irons publishes a paper describing his ALGOL 60 parser. It is the first paper to fully describe any parser. The Irons algorithm is Chomskyan and top-down with a bottom-up &quot;left corner&quot; element -- it is what now would be called a &quot;left corner&quot; parser.
-      <!--
+    <p>In January, Ned Irons publishes a paper describing his ALGOL
+    60 parser. It is the first paper to fully describe any parser. The
+    Irons algorithm is Chomskyan and top-down with a bottom-up &quot;left
+    corner&quot; element -- it is what now would be called a &quot;left
+    corner&quot; parser.<footnote>
 Among those who state that Irons 1961 parser is what
 is now called "left-corner" is Knuth ("Top-down syntax analysis", p. 109).
--->
+</footnote>
     </p>
     <p>The Irons algorithm is general, meaning that it can parse anything written in BNF. It is syntax-driven (aka declarative), meaning that the parser is actually created from the BNF -- the parser does not need to be hand-written.</p>
     <h1 id="terms-top-down">Terms: &quot;Top-down&quot;</h1>
@@ -325,7 +341,7 @@ from left to right looking k characters ahead".
 Knuth, "Top-down syntax analysis", p. 102.
 -->
     </p>
-    <p>LL and LR have mirror images: RL means &quot;scan from the right, using left reductions&quot; and RR acquires its current meaning of scan from the right, using right reductions&quot;. Use of these mirror images is rare, but does occur -- operator expression parsing in the IT compiler seems to have been RL(2).</p>
+    <p>LL and LR have mirror images: RL means &quot;scan from the right, using left reductions&quot; and RR acquires its current meaning of scan from the right, using right reductions&quot;. Use of these mirror images is rare, but does occur -- operator expression parsing in the IT compiler seems to have been RL(2) with backtracking.</p>
     <p>If there is a number after the parentheses in this notation for parsing algorithms, it usually indicates the number of tokens of lookahead. RL(2) above, meant that the algorithm looked 2 tokens ahead.</p>
     <h1 id="ll1-and-the-operator-issue">LL(1) and the Operator Issue</h1>
     <p>Of the algorithms in our new notation, LL(1) -- &quot;scan from the left, using left reductions with one character of lookahead&quot; -- is one of the more important ones. Before the introduction of this notation, and the mathematics behind it, the Operator Issue could not be described in precise terms.</p>
