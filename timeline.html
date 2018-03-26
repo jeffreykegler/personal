@@ -58,7 +58,7 @@
     <h1 id="grace-hopper-uses-the-term-compiler">1952: Grace Hopper uses the term &quot;compiler&quot;</h1>
     <p>Grace Hopper writes a linker-loader.
       <a href="https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers%22">She calls it a &quot;compiler&quot;</a>. Hopper seems to be the first person to use this term for a computer program.</p>
-    <h1 id="term-compiler-1">Term: &quot;compiler&quot; 1</h1>
+    <h1 id="term-compiler-1">Term: &quot;compiler&quot; as of 1952</h1>
     <p>Hopper used the term &quot;compiler&quot; in a meaning it
       had at the time: &quot;to compose out of materials from other
       documents&quot;.<a id="footnote-7-ref" href="#footnote-7">[7]</a>
@@ -70,7 +70,7 @@
     </p>
     <h1 id="the-fortran-project-begins">1954: The FORTRAN project begins</h1>
     <p>At IBM, a team under John Backus begins working on the language which will be called FORTRAN.</p>
-    <h1 id="term-compiler-2">Term: &quot;compiler&quot; 2</h1>
+    <h1 id="term-compiler-2">Term: &quot;compiler&quot; as of 1954</h1>
     <p>As of 1954, the term &quot;compiler&quot; was still being used
       in Hopper's looser sense, instead of its modern, specialized,
       one. In particular, there was no implication that the output of a
@@ -106,7 +106,7 @@
       of that compiler.&quot;<a id="footnote-13-ref" href="#footnote-13">[13]</a>
     </p>
     <p>Since when the IT compiler is written before there is a single published parsing algorithm, it is not surprising this proves an issue. More surprising is the persistance of this issue -- in fact, after more than more six decades of stunning progress in other areas of computer, the Operator Issue is still very much a live issue.</p>
-    <h1 id="term-compiler-3">Term: &quot;compiler&quot; 3</h1>
+    <h1 id="term-compiler-3">Term: &quot;compiler&quot; as of 1956</h1>
     <p>In the 1956 document describing the IT compiler,<a id="footnote-14-ref" href="#footnote-14">[14]</a>
       IT team is careful to define the term. Their definition makes clear that
       they are using of the word &quot;compiler&quot; in something like its
@@ -196,9 +196,11 @@
     <p>The Irons algorithm is general, meaning that it can parse anything written in BNF. It is syntax-driven (aka declarative), meaning that the parser is actually created from the BNF -- the parser does not need to be hand-written.</p>
     <h1 id="terms-top-down">Terms: &quot;Top-down&quot;</h1>
     <comment>TODO: Revise</comment>
-    <p>A top-down parser, starts from the top BNF production and works
-      down. It derives child productions, starting with their parent,
-      and eventually reaching input tokens.
+    <p>A top-down parser, identifies BNF productions first,
+      and only after that identifies the components of the productions.
+      Therefore it starts with the start rule, and works down,
+      until it reaches the
+      reaching input tokens.
     </p>
     <p>It is important to note that no useful parser can be purely top-down --
       a pure top-down parser would never look at the input.
@@ -208,9 +210,19 @@
     </p>
     <h1 id="terms-bottom-up">Terms: &quot;Bottom-up&quot;</h1>
     <comment>TODO: Revise</comment>
-    <p>A bottom-up parser, starts from the input and and works up, finding productions based on input tokens, then finding other production based on their children.</p>
+    <p>A bottom-up parser, as the name suggest, works in a way
+    opposite to that of a top-down parser.
+    It identifies the components of a BNF production before identifying
+    a BNF production.
+    Therefore, it starts with the input symbols, and works up,
+    until it reaches the start rule.
+    /p>
     <h1 id="misconception-top-down-vs.-bottom-up">Misconception: &quot;Top-down&quot; vs. &quot;bottom-up&quot;</h1>
-    <p>A common, and important, misconception is that every parser is either top-down or bottom-up. A related misconception is that even parsers that are not clearly one or the other can always be usefully described in terms of their top-down and bottom-up components.</p>
+    <p>A common, and important, misconception is that every parser is
+    either top-down or bottom-up. A related misconception is that even
+    parsers that are not clearly one or the other can always be usefully
+    described in terms of their top-down and bottom-up components.
+    </p>
     <p>As we saw, the Irons 1961 parser is not simply top-down or bottom-up, though arguably describing it in terms of top-down and bottom-up components is helpful. But for other parsing algorithms, top-down vs. bottom-up classification is a pointless pedantry -- the classification can be done, but tells you nothing about the actual behavior of the parser.</p>
     <h1 id="terms-synthetic-attribute">Terms: &quot;Synthetic attribute&quot;</h1>
     <p>Irons 1961 also introduces synthetic attributes: the parse creates
@@ -220,7 +232,8 @@
     <p>Pedantically, synthetic attributes are not a parsing concept -- they are way of doing semantics. But almost nobody parses without intending to apply some kind of semantics, and feedback from new semantic concepts has had major effects on the development of parsing. Synthetic attributes will be important.</p>
     <h1 id="lucas-discovers-recursive-descent">1961: Lucas discovers recursive descent</h1>
     <p>Peter Lucas publishes the first description of a purely top-down parser<a id="footnote-21-ref" href="#footnote-21">[21]</a>
-      Either Irons paper or this one can be considered to be recursive descent. Certainly the Lucas algorithm more closely resembles modern implementations of recursive descent.</p>
+      Either Irons paper or this one can be considered to be recursive descent.
+Certainly the Lucas algorithm more closely resembles modern implementations of recursive descent.</p>
     <p>Except to say that he deals properly with them, Lucas does not say how he parses operator expressions. But it is easy to believe Lucas' claim -- by this time there are several specialized techniques for parsing operator expressions. Eventually there will be a botanical profusion of them.</p>
     <p>For our purposes, it is sufficient to note that while recursive descent cannot parse arithmetic expressions directly, it can deal with them in two ways:</p>
     <ul>
@@ -374,13 +387,28 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     <p>But, while nobody was looking for them, the solutions to the problems encountered in the 1960's had appeared in the literature. Aycock and Horspool had solved the zero-length rule bug. Joop Leo had found the speedup for right recursion. And the issue of bookkeeping overhead had pretty much evaporated on its own. Machine operations are now a billion times faster than in 1968, and are probably no longer relevant in any case -- cache misses are now the bottleneck.</p>
     <p>The programmers of the 1960's would have been prepared to trust a fully declarative Chomskyan parser. With the experience with LALR in their collective consciousness, modern programmers might be more guarded. As Lincoln said, &quot;Once a cat's been burned, he won't even sit on a cold stove.&quot; But I found it straightforward to rearrange the Earley parse engine to allow efficient event-driven handovers between procedural and syntax-driven logic. And Earley tables provide the procedural logic with full knowledge of the state of the parse so far, so that Earley's algorithm is a better platform for hand-written procedural logic than recursive descent.</p>
     <h1>Partial Bibliography</h1>
-    <p>This bibliography contains only a few of this document's most referenced sources.</p>
-    <p><b>Knuth and Pardo 1976</b>:
+    <p>This bibliography contains only a few of this document's most used
+    or most mentioned sources.</p>
+    <p>
+    <b>Irons 1961</b>:
+    Irons, E. T. A syntax-directed compiler for ALGOL 60. Commun. ACM,
+    4(1):51–55, Jan. 1961.
+    </p>
+    <p>
+    <b>Lucas 1961</b>:
+        Lucas, P. Die Strukturanalyse von Formelnübersetzern / analysis of
+        the structure of formula translators. Elektronische Rechenanlagen,
+        3(11.4):159–167, 1961, (in German).
+    </p>
+    <p>
+    <b>Knuth and Pardo 1976</b>:
       D. E. Knuth and L. Trabb Pardo (1976), "The Early Development of
       Programming Languages," Report STAN-CS-76-562, Computer Science Dept.,
       Stanford Univ., Stanford, Calif. (Aug. 1976).
       [http://bitsavers.org/pdf/stanford/cs_techReports/STAN-CS-76-562_EarlyDevelPgmgLang_Aug76.pdf ].
-    </p><p><b>Grune and Jacobs 2008</b>:
+    </p>
+    <p>
+    <b>Grune and Jacobs 2008</b>:
       Grune, D., & Jacobs, C. J. H. (2008). Parsing Techniques: A Practical
       Guide, 2nd edition. (Monographs in Computer Science). New York, USA:
       Springer.
@@ -471,6 +499,7 @@ pp. 4-6.
         3(2):76–83, Feb. 1960.
  <a href="#footnote-18-ref">&#8617;</a></p>
 <p id="footnote-19">19.
+	Irons 1961.
         Among those who state that Irons 1961 parser is what
         is now called "left-corner" is Knuth ("Top-down syntax analysis", p. 109).
  <a href="#footnote-19-ref">&#8617;</a></p>
@@ -479,9 +508,15 @@ pp. 4-6.
         by Knuth ("Genesis of Attibute Grammars").
  <a href="#footnote-20-ref">&#8617;</a></p>
 <p id="footnote-21">21.
-        Lucas, P. Die Strukturanalyse von Formelnübersetzern / analysis of
-        the structure of formula translators. Elektronische Rechenanlagen,
-        3(11.4):159–167, 1961, (in German).
+	Lucas 1961.
+	I follow Grune and Jacobs 2008 in calling Lucas the discoverer of recursive descent.
+        In fact, both Irons 1961 and Lucas 1961 are recursive descent with a major bottom-up element.
+        In conversation, Irons often described his 1961 parser as a kind of recursive descent.
+        Perhaps Grune and Jacobs based their decision on the Lucas' description of his algorithm
+        which talks about his parser's bottom-up element only briefly,
+        while describing the top-down element in detail.
+	Also, the Lucas algorithm more resembles modern implementations of recursive descent
+	much more closely than Irons 1961.</p>
  <a href="#footnote-21-ref">&#8617;</a></p>
 <p id="footnote-22">22.
         Edsger W. Dijkstra, "Algol 60 translation : An Algol 60 translator
