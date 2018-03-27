@@ -283,7 +283,7 @@
     a BNF production.
     Therefore, it starts with the input symbols, and works up,
     until it reaches the start rule.
-    /p>
+    </p>
     <h1 id="misconception-top-down-vs.-bottom-up">Misconception: &quot;Top-down&quot; vs. &quot;bottom-up&quot;</h1>
     <p>A common, and important, misconception is that every parser is
     either top-down or bottom-up. A related misconception is that even
