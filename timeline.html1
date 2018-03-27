@@ -480,22 +480,21 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
       </footnote>
     </p>
     <h1 id="section-19">1995</h1>
+    TODO:
     <footnote>
-      TODO:
-      Philip Wadler,
-      "Monads for Functional programming".
-      1995
+      Wadler Philip. (1995) Monads for functional programming. In:
+      Jeuring J., Meijer E. (eds) Advanced Functional Programming. AFP
+      1995. Lecture Notes in Computer Science, vol 925. Springer,
+      Berlin, Heidelberg.
     </footnote>
     <h1 id="section-20">1996</h1>
+    TODO:
     <footnote>
-      TODO:
-      Hutton and Meijer,
-      "Monadic Parser Combinators",
-      1996
+      Graham Hutton and Erik Meijer. Technical Report NOTTCS-TR-96-4, Department of Computer Science, University of Nottingham, 1996.
     </footnote>
     <h1 id="section-21">1999</h1>
-    <footnote>
       TODO:
+    <footnote>
       Hudak, Peterson and Fasel,
       "A Gentle Introduction to Haskell 98",
       1999.
