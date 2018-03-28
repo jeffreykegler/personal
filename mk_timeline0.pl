@@ -38,21 +38,25 @@ sub do_footnote {
     my $footnoted_line = $line;
     $footnoted_line =~ s/<footnote>.*$//;
     $footnoted_line .= qq{<a id="$fn_ref" href="#$fn_href">[$fn_number]</a>};
-    push @lines, $footnoted_line if $footnoted_line =~ m/\S/;
     push @fn_lines, qq{<p id="$fn_href">$fn_number.};
     $line =~ s/^.*<footnote>//;
-    push @fn_lines, $line if $line =~ m/\S/;
-  FN_LINE: while ( my $line = <> ) {
-        chomp $line;
-        if ( $line =~ m[<\/footnote>] ) {
-	    my $post_footnote = $line;
+    my $inside_footnote = $line;
+    $inside_footnote =~ s/^.*<footnote>//;
+    push @fn_lines, $inside_footnote if $inside_footnote =~ m/\S/;
+    my $post_footnote = '';
+  FN_LINE: while ( my $fn_line = <> ) {
+        chomp $fn_line;
+        if ( $fn_line =~ m[<\/footnote>] ) {
+	    $post_footnote = $fn_line;
 	    $post_footnote =~ s[^.*<\/footnote>][];
-	    $line =~ s[</footnote>.*$][];
-	    push @fn_lines, $line if $line =~ m/\S/;
+	    $fn_line =~ s[</footnote>.*$][];
+	    push @fn_lines, $fn_line if $fn_line =~ m/\S/;
 	    push @fn_lines, qq{ <a href="#$fn_ref">&#8617;</a></p>};
 	    last FN_LINE;
         }
-	push @fn_lines, $line;
+	push @fn_lines, $fn_line;
     }
+    $footnoted_line .= $post_footnote;
+    push @lines, $footnoted_line if $footnoted_line =~ m/\S/;
 }
 

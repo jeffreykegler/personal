@@ -460,24 +460,33 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     <p>Earley's is forgotten. So everyone in LALR-land is content, right? Wrong. Far from it, in fact. Users of LALR are making unpleasant discoveries. While LALR automatically generates their parsers, debugging them is so hard they could just as easily write the parser by hand. Once debugged, their LALR parsers are fast for correct inputs. But almost all they tell the users about incorrect inputs is that they are incorrect. In Larry's words, LALR is &quot;fast but stupid&quot;.</p>
     <h1 id="section-18">1992</h1>
     <p>Combinators were introduced In two 1992 papers. Of more interest
-      to us is the one by Hutton, which focuses on combinator parsing.<footnote>
-        The paper which is devoted to parsing is
-        Hutton, "Higher order functions for parsing",
-        Journal of Functional Programming 2(3):323-343, July 1992.
+      to us is the one by Hutton, which focuses on combinator parsing<footnote>
+        The paper which is devoted to parsing is Hutton 1992.
         The other paper, which centers on combinators as a programming
         paradigm, is
         Frost, Richard A. Constructing programs as executable attribute
         grammars. Computer J., 35(4):376–389, 1992.
-      </footnote>
+      </footnote>.
       Combinators will become important in programming languages and
       semantics. But in terms of parsing algorithms, Hutton introduces
       nothing new -- wrapped up in an attribute grammar; underlying the
       exciting new mathematics is the decades-old recursive descent,
-      unchanged.<footnote>
-        TODO:
-        Revise --
-        tie attributes to combinators.
-      </footnote>
+      unchanged.
+      <p>Hutton's example language is very basic --
+      his expressions require left association,
+      but not precedence.
+      Left association is implemented by post-processing.
+      </p>
+      <p>
+      Hutton's main presentation does not use monads.
+      In his final pages, however,
+      Hutton points out
+      "combinator parsers give rise to a monad" and shows
+      how his presentation could be rewritten in a form
+      closely related to monads<footnote>
+      Hutton 1992, pp. 19-20.
+      </footnote>.
+      </p>
     </p>
     <h1 id="section-19">1995</h1>
     TODO:
@@ -519,9 +528,17 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     <p>But, while nobody was looking for them, the solutions to the problems encountered in the 1960's had appeared in the literature. Aycock and Horspool had solved the zero-length rule bug. Joop Leo had found the speedup for right recursion. And the issue of bookkeeping overhead had pretty much evaporated on its own. Machine operations are now a billion times faster than in 1968, and are probably no longer relevant in any case -- cache misses are now the bottleneck.</p>
     <p>The programmers of the 1960's would have been prepared to trust a fully declarative Chomskyan parser. With the experience with LALR in their collective consciousness, modern programmers might be more guarded. As Lincoln said, &quot;Once a cat's been burned, he won't even sit on a cold stove.&quot; But I found it straightforward to rearrange the Earley parse engine to allow efficient event-driven handovers between procedural and syntax-driven logic. And Earley tables provide the procedural logic with full knowledge of the state of the parse so far, so that Earley's algorithm is a better platform for hand-written procedural logic than recursive descent.</p>
     <h1>Partial Bibliography</h1>
-    <p>This bibliography contains only a few of this document's most used
-    or most mentioned sources.</p>
+    <p>This bibliography is very incomplete --
+    it contains only the more documents
+    more frequently mentioned in this timeline.
+    Bibliographic information for the
+    less frequently mentioned 
+    sources is in the individual footnotes.</p>
     <p>
+	<b>Hutton 1992</b>:
+        Hutton, "Higher order functions for parsing",
+        Journal of Functional Programming 2(3):323-343, July 1992.
+    </p>
     <b>Irons 1961</b>:
     Irons, E. T. A syntax-directed compiler for ALGOL 60. Commun. ACM,
     4(1):51–55, Jan. 1961.
