@@ -490,6 +490,12 @@ vol. 201, Springer-Verlag GmbH, pp. 113-128. DOI: 10.1007/3-540-15975-4_33
         paradigm, is
         Frost, Richard A. Constructing programs as executable attribute
         grammars. Computer J., 35(4):376–389, 1992.
+	Frost only mentions parsing in one paragraph, which focuses
+	on implementation issues.
+	Some of his grammars include operator expressions,
+	but these avoid left recursion,
+	and implement precedence and associativity,
+	using parentheses.
       </footnote>.
       Combinators will become important in programming languages and
       semantics. But in terms of parsing algorithms, Hutton introduces
