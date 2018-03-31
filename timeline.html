@@ -346,7 +346,20 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     <h1 id="section-15">1979</h1>
     <p>Part of the V7 toolkit is Yet Another Compiler Compiler (YACC). YACC is LALR-powered. Despite its name, YACC is the first compiler-compiler in the modern sense. For some useful languages, the process of going from Chomskyan specification to executable is fully automated. Most practical languages, including the C language and YACC's own input language, still require manual hackery. Nonetheless, after two decades of research, it seems that the parsing problem is solved.</p>
     <h1 id="section-16">1987</h1>
-    <p>Larry Wall introduces Perl 1. Perl embraces complexity like no previous language. Larry uses YACC and LALR very aggressively -- to my knowledge more aggressively than anyone before or since.</p>
+    <p>Larry Wall introduces Perl 1. Perl embraces complexity like no
+    previous language. Larry uses YACC and LALR very aggressively --
+    to my knowledge more aggressively than anyone before or since.</p>
+    <h1>1990</h1>
+    <p>
+    Wadler starts to introduce monads to the functional programming community.
+    As one example he converts his previous efforts at function parsing techniques<a id="footnote-32-ref" href="#footnote-32">[32]</a>.
+    The parsing technique is pure recursive descent.
+    The examples shown for monadic parsing are very simple,
+    and do not include operator expressions.
+    In a pre-monadic work, Wadler uses a very restricted form of operator expression:
+    His grammar avoided left recursion by using parentheses,
+    and operator precedence was not implemented<a id="footnote-33-ref" href="#footnote-33">[33]</a>.
+    </p>
     <h1 id="section-17">1991</h1>
     <p>Joop Leo discovers a way of speeding up right recursions in Earley's algorithm. Leo's algorithm is linear for just about every unambiguous grammar of practical interest, and many ambiguous ones as well. In 1991 hardware is six orders of magnitude faster than 1968 hardware, so that the issue of bookkeeping overhead had receded in importance. This is a major discovery. When it comes to speed, the game has changed in favor of the Earley algorithm.</p>
     <p>But Earley parsing is almost forgotten. Twenty years will pass before anyone writes a practical implementation of Leo's algorithm.</p>
@@ -354,7 +367,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     <p>Earley's is forgotten. So everyone in LALR-land is content, right? Wrong. Far from it, in fact. Users of LALR are making unpleasant discoveries. While LALR automatically generates their parsers, debugging them is so hard they could just as easily write the parser by hand. Once debugged, their LALR parsers are fast for correct inputs. But almost all they tell the users about incorrect inputs is that they are incorrect. In Larry's words, LALR is &quot;fast but stupid&quot;.</p>
     <h1 id="section-18">1992</h1>
     <p>Combinators were introduced In two 1992 papers. Of more interest
-      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-32-ref" href="#footnote-32">[32]</a>.
+      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-34-ref" href="#footnote-34">[34]</a>.
       Combinators will become important in programming languages and
       semantics. But in terms of parsing algorithms, Hutton introduces
       nothing new -- wrapped up in an attribute grammar; underlying the
@@ -371,18 +384,18 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
       Hutton points out
       "combinator parsers give rise to a monad" and shows
       how his presentation could be rewritten in a form
-      closely related to monads<a id="footnote-33-ref" href="#footnote-33">[33]</a>.
+      closely related to monads<a id="footnote-35-ref" href="#footnote-35">[35]</a>.
       </p>
     </p>
     <h1 id="section-19">1995</h1>
     TODO:
-    <a id="footnote-34-ref" href="#footnote-34">[34]</a>
+    <a id="footnote-36-ref" href="#footnote-36">[36]</a>
     <h1 id="section-20">1996</h1>
     TODO:
-    <a id="footnote-35-ref" href="#footnote-35">[35]</a>
+    <a id="footnote-37-ref" href="#footnote-37">[37]</a>
     <h1 id="section-21">1999</h1>
       TODO:
-    <a id="footnote-36-ref" href="#footnote-36">[36]</a>
+    <a id="footnote-38-ref" href="#footnote-38">[38]</a>
     <h1 id="section-22">2000</h1>
     <p>Larry Wall decides on a radical reimplementation of Perl -- Perl 6. Larry does not even consider using LALR again.</p>
     <h1 id="section-23">2002</h1>
@@ -581,28 +594,41 @@ pp. 4-6.
         ciples of Programming Languages, pages 41–51. ACM, Oct. 1973.
  <a href="#footnote-31-ref">&#8617;</a></p>
 <p id="footnote-32">32.
+    Philip Wadler,
+    "Comprehending Monads"
+     In <b>Proceedings of the 1990 ACM conference on LISP and functional programming</b> (LFP '90).
+     ACM, New York, NY, USA, 61-78. DOI=http://dx.doi.org/10.1145/91556.91592
+ <a href="#footnote-32-ref">&#8617;</a></p>
+<p id="footnote-33">33.
+    Philip Wadler, "How to Replace Failure by a List of Successes: A method
+for exception handling, backtracking, and pattern matching in lazy
+functional languages". in J-P Jouannaud (ed.), <b>Functional Programming
+Languages and Computer Architecture</b>. <b>Lecture Notes in Computer Science</b>,
+vol. 201, Springer-Verlag GmbH, pp. 113-128. DOI: 10.1007/3-540-15975-4_33
+ <a href="#footnote-33-ref">&#8617;</a></p>
+<p id="footnote-34">34.
         The paper which is devoted to parsing is Hutton 1992.
         The other paper, which centers on combinators as a programming
         paradigm, is
         Frost, Richard A. Constructing programs as executable attribute
         grammars. Computer J., 35(4):376–389, 1992.
- <a href="#footnote-32-ref">&#8617;</a></p>
-<p id="footnote-33">33.
+ <a href="#footnote-34-ref">&#8617;</a></p>
+<p id="footnote-35">35.
       Hutton 1992, pp. 19-20.
- <a href="#footnote-33-ref">&#8617;</a></p>
-<p id="footnote-34">34.
+ <a href="#footnote-35-ref">&#8617;</a></p>
+<p id="footnote-36">36.
       Wadler Philip. (1995) Monads for functional programming. In:
       Jeuring J., Meijer E. (eds) Advanced Functional Programming. AFP
       1995. Lecture Notes in Computer Science, vol 925. Springer,
       Berlin, Heidelberg.
- <a href="#footnote-34-ref">&#8617;</a></p>
-<p id="footnote-35">35.
+ <a href="#footnote-36-ref">&#8617;</a></p>
+<p id="footnote-37">37.
       Graham Hutton and Erik Meijer. Technical Report NOTTCS-TR-96-4, Department of Computer Science, University of Nottingham, 1996.
- <a href="#footnote-35-ref">&#8617;</a></p>
-<p id="footnote-36">36.
+ <a href="#footnote-37-ref">&#8617;</a></p>
+<p id="footnote-38">38.
       Hudak, Peterson and Fasel,
       "A Gentle Introduction to Haskell 98",
       1999.
- <a href="#footnote-36-ref">&#8617;</a></p>
+ <a href="#footnote-38-ref">&#8617;</a></p>
 </body>
 </html>

@@ -452,7 +452,31 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     <h1 id="section-15">1979</h1>
     <p>Part of the V7 toolkit is Yet Another Compiler Compiler (YACC). YACC is LALR-powered. Despite its name, YACC is the first compiler-compiler in the modern sense. For some useful languages, the process of going from Chomskyan specification to executable is fully automated. Most practical languages, including the C language and YACC's own input language, still require manual hackery. Nonetheless, after two decades of research, it seems that the parsing problem is solved.</p>
     <h1 id="section-16">1987</h1>
-    <p>Larry Wall introduces Perl 1. Perl embraces complexity like no previous language. Larry uses YACC and LALR very aggressively -- to my knowledge more aggressively than anyone before or since.</p>
+    <p>Larry Wall introduces Perl 1. Perl embraces complexity like no
+    previous language. Larry uses YACC and LALR very aggressively --
+    to my knowledge more aggressively than anyone before or since.</p>
+    <h1>1990</h1>
+    <p>
+    Wadler starts to introduce monads to the functional programming community.
+    As one example he converts his previous efforts at function parsing techniques<footnote>
+    Philip Wadler,
+    "Comprehending Monads"
+     In <b>Proceedings of the 1990 ACM conference on LISP and functional programming</b> (LFP '90).
+     ACM, New York, NY, USA, 61-78. DOI=http://dx.doi.org/10.1145/91556.91592
+    </footnote>.
+    The parsing technique is pure recursive descent.
+    The examples shown for monadic parsing are very simple,
+    and do not include operator expressions.
+    In a pre-monadic work, Wadler uses a very restricted form of operator expression:
+    His grammar avoided left recursion by using parentheses,
+    and operator precedence was not implemented<footnote>
+    Philip Wadler, "How to Replace Failure by a List of Successes: A method
+for exception handling, backtracking, and pattern matching in lazy
+functional languages". in J-P Jouannaud (ed.), <b>Functional Programming
+Languages and Computer Architecture</b>. <b>Lecture Notes in Computer Science</b>,
+vol. 201, Springer-Verlag GmbH, pp. 113-128. DOI: 10.1007/3-540-15975-4_33
+    </footnote>.
+    </p>
     <h1 id="section-17">1991</h1>
     <p>Joop Leo discovers a way of speeding up right recursions in Earley's algorithm. Leo's algorithm is linear for just about every unambiguous grammar of practical interest, and many ambiguous ones as well. In 1991 hardware is six orders of magnitude faster than 1968 hardware, so that the issue of bookkeeping overhead had receded in importance. This is a major discovery. When it comes to speed, the game has changed in favor of the Earley algorithm.</p>
     <p>But Earley parsing is almost forgotten. Twenty years will pass before anyone writes a practical implementation of Leo's algorithm.</p>
