@@ -7,6 +7,7 @@
     <style type="text/css">
       mytitle { font-size: 300%; text-align: center; display: block }
       author { font-size: 200%; text-align: center; display: block }
+      version { font-size: 200%; text-align: center; display: block }
       h1 { font-size: x-large }
       body { font-size: large }
       comment { display:none }
@@ -15,7 +16,8 @@
     </style>
   </head>
   <body>
-    <mytitle>Parsing: an expanding timeline</mytitle>
+    <mytitle>Parsing: a timeline</mytitle>
+    <version>Version 3.0</version>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact and complete description of
@@ -412,10 +414,12 @@
         is now called "left-corner" is Knuth ("Top-down syntax analysis", p. 109).
       </footnote>
     </p>
-    <p>The Irons algorithm is general, meaning that it can parse anything
-    written in BNF. It is syntax-driven (aka declarative), meaning that
-    the parser is actually created from the BNF -- the parser does not
-    need to be hand-written.</p>
+    <p>You would expect parsing might start with hard-written
+    parsers for specific grammar classes.
+    But in fact, this first parser is declarative and general.
+    And since it is general,
+    operator expressions are well within the power of Irons 1961.
+    </p>
     <h1>Terms: &quot;Top-down&quot;</h1>
     <comment>TODO: Revise</comment>
     <p>A top-down parser, identifies BNF productions first,
@@ -477,7 +481,15 @@
         much more closely than Irons 1961.</footnote></p>
     <!-- html_fmt: Next end tag is cruft -->
     </footnote><p>.
-      Either Irons paper or this one can be considered to be recursive descent.
+      Either Irons paper or this one can be considered to be recursive descent<footnote>
+      As a former student of Irons at Yale,
+      my personal preference would be to give Ned the credit
+      for recursive descent.
+      And this is what Peter Denning does in his introduction
+      to the reprint of Irons 1961
+      (<b>Communications of the ACM</b>, 25th Anniversary Issue, p. 14).
+      But Grune and Jacobs 2008 gives the credit to Lucas 1961.
+      </footnote>.
       Certainly the Lucas algorithm more closely resembles modern implementations of recursive descent.</p>
     <p>Except to say that he deals properly with them, Lucas does not say
       how he parses operator expressions. But it is easy to believe Lucas'
@@ -565,7 +577,6 @@ Norvell has made an attempt at classification</a>
     </p><p>This means that by itself, recursive descent is never
       sufficient for practical grammars -- it must always be part of a
       hybrid.
-    </p><p>
     </p>
     <h1>1963</h1>
     <p>L. Schmidt, Howard Metcalf, and Val Schorre present papers on
@@ -1023,7 +1034,10 @@ Norvell has made an attempt at classification</a>
       Grune, D., & Jacobs, C. J. H. (2008). Parsing Techniques: A Practical
       Guide, 2nd edition. (Monographs in Computer Science). New York, USA:
       Springer.
-      In matters of priority, I often defer to the judgement of Grune and Jacobs.
+      When it comes to determined who first discovered an idea,
+      the literature often disagrees.
+      In such cases, I have often deferred
+      to the judgement of Grune and Jacobs.
     </p>
   </body>
 </html>
