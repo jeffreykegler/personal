@@ -366,7 +366,15 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     <h1 id="the-1990s">The 1990's</h1>
     <p>Earley's is forgotten. So everyone in LALR-land is content, right? Wrong. Far from it, in fact. Users of LALR are making unpleasant discoveries. While LALR automatically generates their parsers, debugging them is so hard they could just as easily write the parser by hand. Once debugged, their LALR parsers are fast for correct inputs. But almost all they tell the users about incorrect inputs is that they are incorrect. In Larry's words, LALR is &quot;fast but stupid&quot;.</p>
     <h1 id="section-18">1992</h1>
-    <p>Combinators were introduced In two 1992 papers. Of more interest
+    <p>Combinators are parsers which can be "combined" to compose other parsers.
+    This allows you to have an algebra of parsers.
+    It's an extremely attractive idea,
+    and suggestive of great power,
+    but in fact underneath it is nothing but recursive descent.
+    </p>
+    <p>
+    Combinator parsing
+    was introduced in two 1992 papers. Of more interest
       to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-34-ref" href="#footnote-34">[34]</a>.
       Combinators will become important in programming languages and
       semantics. But in terms of parsing algorithms, Hutton introduces
@@ -387,10 +395,37 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
       closely related to monads<a id="footnote-35-ref" href="#footnote-35">[35]</a>.
       </p>
     </p>
-    <h1 id="section-19">1995</h1>
-    TODO:
+    <h1>1995</h1>
+    Today monads are a hot topic.
+    In their adaptation into the world of
+    programming,
+    the 1995 article by Wadler
     <a id="footnote-36-ref" href="#footnote-36">[36]</a>
-    <h1 id="section-20">1996</h1>
+    is a turning point.
+    One of Wadler's examples is a parser based on
+    monads and combinator parsing.
+    From here on out,
+    an combinator parsing will become the standard
+    example of monad programming.
+    </p>
+    <p>In its monadic form,
+    the already attractive technique of combinator parsing is extremely elegant
+    and certainly seems as if it *should* solve all parsing problems.
+    But, once again, it is still recursive descent.
+    Wadler handles left recursion by rewriting into
+    right recursive list, and re-processing the list
+    into left recursive form.
+    Wadler's example grammar only has one operator,
+    so the issue of precedence does not arise.
+    </p>
+    <p>
+    Instead of one paradigm to solve them all,
+    Wadler ends up with a two layered approach,
+    with a hackish bottom layer and an awkward interface.
+    This undercuts 
+    the simplicity and elegance of the combinator approach.
+    </p>
+    <h1>1996</h1>
     TODO:
     <a id="footnote-37-ref" href="#footnote-37">[37]</a>
     <h1 id="section-21">1999</h1>
