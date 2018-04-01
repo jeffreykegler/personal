@@ -814,14 +814,7 @@ Norvell has made an attempt at classification</a>
       In a pre-monadic work, Wadler uses a very restricted form of operator expression:
       His grammar avoided left recursion by using parentheses,
       and operator precedence was not implemented<footnote>
-        Philip Wadler, "How to Replace Failure by a List of Successes: A method
-        for exception handling, backtracking, and pattern matching in lazy
-        functional languages". in J-P Jouannaud (ed.),
-        <b>Functional Programming
-          Languages and Computer Architecture</b>.
-        <b>Lecture Notes in Computer Science</b>,
-        vol. 201, Springer-Verlag GmbH, pp. 113-128. DOI: 10.1007/3-540-15975-4_33
-      </footnote>.
+        Wadler 1985.</footnote>.
     </p>
     <h1>1991</h1>
     <p>Joop Leo discovers a way of speeding up right recursions in
@@ -852,15 +845,21 @@ Norvell has made an attempt at classification</a>
     </p>
     <p>
       Combinator parsing
-      was introduced in two 1992 papers. Of more interest
+      was introduced in two 1992 papers<footnote>
+      Some source consider <b>Wadler 1985</b> an
+      early presentation of the ideas of combinator parsing.
+      In assigning priority here,
+      I follow Grune and Jacobs 2008 (p. 564).
+      </footnote>.
+      Of more interest
       to us is the one by Hutton, which focuses on combinator parsing<footnote>
         The paper which is devoted to parsing is Hutton 1992.
         The other paper, which centers on combinators as a programming
         paradigm, is
         Frost, Richard A. Constructing programs as executable attribute
         grammars. Computer J., 35(4):376–389, 1992.
-        Frost only mentions parsing in one paragraph, which focuses
-        on implementation issues.
+        Frost only mentions parsing in one paragraph, and
+	that focuses on implementation issues.
         Some of his grammars include operator expressions,
         but these avoid left recursion,
         and implement precedence and associativity,
@@ -1033,6 +1032,14 @@ Norvell has made an attempt at classification</a>
       Programming Languages," Report STAN-CS-76-562, Computer Science Dept.,
       Stanford Univ., Stanford, Calif. (Aug. 1976).
       [http://bitsavers.org/pdf/stanford/cs_techReports/STAN-CS-76-562_EarlyDevelPgmgLang_Aug76.pdf ].
+      <p><b>Wadler 1985</b>:
+        Philip Wadler, "How to Replace Failure by a List of Successes: A method
+        for exception handling, backtracking, and pattern matching in lazy
+        functional languages". in J-P Jouannaud (ed.),
+        <b>Functional Programming
+          Languages and Computer Architecture</b>.
+        <b>Lecture Notes in Computer Science</b>, 1985
+        vol. 201, Springer-Verlag GmbH, pp. 113-128. DOI: 10.1007/3-540-15975-4_33.
     </p>
       <b>Hutton and Meijer 1996</b>:
         Graham Hutton and Erik Meijer. Technical Report NOTTCS-TR-96-4,

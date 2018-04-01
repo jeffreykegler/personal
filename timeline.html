@@ -724,8 +724,9 @@ Norvell has made an attempt at classification</a>
     </p>
     <p>
       Combinator parsing
-      was introduced in two 1992 papers. Of more interest
-      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-35-ref" href="#footnote-35">[35]</a>.
+      was introduced in two 1992 papers<a id="footnote-35-ref" href="#footnote-35">[35]</a>.
+      Of more interest
+      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-36-ref" href="#footnote-36">[36]</a>.
       Combinators will become important in programming languages and
       semantics. But in terms of parsing algorithms, Hutton introduces
       nothing new -- wrapped up in an attribute grammar; underlying the
@@ -742,7 +743,7 @@ Norvell has made an attempt at classification</a>
       Hutton points out
       "combinator parsers give rise to a monad" and shows
       how his presentation could be rewritten in a form
-      closely related to monads<a id="footnote-36-ref" href="#footnote-36">[36]</a>.
+      closely related to monads<a id="footnote-37-ref" href="#footnote-37">[37]</a>.
     </p>
     <!-- html_fmt: Next end tag is cruft -->
     </p>
@@ -751,7 +752,7 @@ Norvell has made an attempt at classification</a>
       In their adaptation into the world of
       programming,
       the 1995 article by Wadler
-      <a id="footnote-37-ref" href="#footnote-37">[37]</a>
+      <a id="footnote-38-ref" href="#footnote-38">[38]</a>
       is a turning point.
       One of Wadler's examples is a parser based on
       monads and combinator parsing.
@@ -779,7 +780,7 @@ Norvell has made an attempt at classification</a>
     <h1>1996</h1><p>
       Wadler had used parsing as an example to motivate
       his presentation of monads.
-      In 1996, Graham Hutton and Erik Meijer<a id="footnote-38-ref" href="#footnote-38">[38]</a>
+      In 1996, Graham Hutton and Erik Meijer<a id="footnote-39-ref" href="#footnote-39">[39]</a>
       take the opposite perspective -- they 
       write a paper on combinator parsing that could
       "also be viewed as a first introduction to the use
@@ -787,7 +788,7 @@ Norvell has made an attempt at classification</a>
     </p>
     <h1>1999</h1><p>
       TODO:
-      <a id="footnote-39-ref" href="#footnote-39">[39]</a>
+      <a id="footnote-40-ref" href="#footnote-40">[40]</a>
     </p><h1>2000</h1>
     <p>Larry Wall decides on a radical reimplementation of Perl --
     Perl 6. Larry does not even consider using LALR again.</p>
@@ -853,9 +854,9 @@ Norvell has made an attempt at classification</a>
     of the parse so far, so that Earley's algorithm is a better platform
     for hand-written procedural logic than recursive descent.</p>
     <h1>Partial Bibliography</h1>
-    <p>This bibliography is very incomplete --
-      it contains only the more documents
-      more frequently mentioned in this timeline.
+    <p>This bibliography is incomplete --
+      it contains only documents
+      repeatedly mentioned in this timeline.
       Bibliographic information for the
       less frequently mentioned
       sources is in the individual footnotes.</p>
@@ -880,6 +881,14 @@ Norvell has made an attempt at classification</a>
       Programming Languages," Report STAN-CS-76-562, Computer Science Dept.,
       Stanford Univ., Stanford, Calif. (Aug. 1976).
       [http://bitsavers.org/pdf/stanford/cs_techReports/STAN-CS-76-562_EarlyDevelPgmgLang_Aug76.pdf ].
+      <p><b>Wadler 1985</b>:
+        Philip Wadler, "How to Replace Failure by a List of Successes: A method
+        for exception handling, backtracking, and pattern matching in lazy
+        functional languages". in J-P Jouannaud (ed.),
+        <b>Functional Programming
+          Languages and Computer Architecture</b>.
+        <b>Lecture Notes in Computer Science</b>, 1985
+        vol. 201, Springer-Verlag GmbH, pp. 113-128. DOI: 10.1007/3-540-15975-4_33.
     </p>
       <b>Hutton and Meijer 1996</b>:
         Graham Hutton and Erik Meijer. Technical Report NOTTCS-TR-96-4,
@@ -1054,43 +1063,43 @@ pp. 4-6.
         ACM, New York, NY, USA, 61-78. DOI=http://dx.doi.org/10.1145/91556.91592
  <a href="#footnote-33-ref">&#8617;</a></p>
 <p id="footnote-34">34.
-        Philip Wadler, "How to Replace Failure by a List of Successes: A method
-        for exception handling, backtracking, and pattern matching in lazy
-        functional languages". in J-P Jouannaud (ed.),
-        <b>Functional Programming
-          Languages and Computer Architecture</b>.
-        <b>Lecture Notes in Computer Science</b>,
-        vol. 201, Springer-Verlag GmbH, pp. 113-128. DOI: 10.1007/3-540-15975-4_33
+        Wadler 1985.
  <a href="#footnote-34-ref">&#8617;</a></p>
 <p id="footnote-35">35.
+      Some source consider <b>Wadler 1985</b> an
+      early presentation of the ideas of combinator parsing.
+      In assigning priority here,
+      I follow Grune and Jacobs 2008 (p. 564).
+ <a href="#footnote-35-ref">&#8617;</a></p>
+<p id="footnote-36">36.
         The paper which is devoted to parsing is Hutton 1992.
         The other paper, which centers on combinators as a programming
         paradigm, is
         Frost, Richard A. Constructing programs as executable attribute
         grammars. Computer J., 35(4):376–389, 1992.
-        Frost only mentions parsing in one paragraph, which focuses
-        on implementation issues.
+        Frost only mentions parsing in one paragraph, and
+	that focuses on implementation issues.
         Some of his grammars include operator expressions,
         but these avoid left recursion,
         and implement precedence and associativity,
         using parentheses.
- <a href="#footnote-35-ref">&#8617;</a></p>
-<p id="footnote-36">36.
-        Hutton 1992, pp. 19-20.
  <a href="#footnote-36-ref">&#8617;</a></p>
 <p id="footnote-37">37.
+        Hutton 1992, pp. 19-20.
+ <a href="#footnote-37-ref">&#8617;</a></p>
+<p id="footnote-38">38.
         Wadler Philip. (1995) Monads for functional programming. In:
         Jeuring J., Meijer E. (eds) Advanced Functional Programming. AFP
         1995. Lecture Notes in Computer Science, vol 925. Springer,
         Berlin, Heidelberg.
- <a href="#footnote-37-ref">&#8617;</a></p>
-<p id="footnote-38">38.
-      <b>Hutton and Meijer 1996</b>
  <a href="#footnote-38-ref">&#8617;</a></p>
 <p id="footnote-39">39.
+      <b>Hutton and Meijer 1996</b>
+ <a href="#footnote-39-ref">&#8617;</a></p>
+<p id="footnote-40">40.
         Hudak, Peterson and Fasel,
         "A Gentle Introduction to Haskell 98",
         1999.
- <a href="#footnote-39-ref">&#8617;</a></p>
+ <a href="#footnote-40-ref">&#8617;</a></p>
 </body>
 </html>
