@@ -35,7 +35,7 @@
     <p>Andrei Markov introduces his &quot;chains&quot; -- a set of
       states with transitions between them.
       One offshoot of Markov's work will be what we now
-      know as regular expression.
+      know as regular expressions.
       Markov uses his chains, not
       for parsing, but for solving problems in probability.<footnote>
         Markov, A.A.. "Extension of the law of large numbers to quantities, depending on each other (1906).
@@ -924,12 +924,17 @@ Norvell has made an attempt at classification</a>
       the simplicity and elegance of the combinator approach.
     </p>
     <h1>1996</h1><p>
-      TODO:
-      <footnote>
-        Graham Hutton and Erik Meijer. Technical Report NOTTCS-TR-96-4,
-        Department of Computer Science, University of Nottingham, 1996.
+      Wadler had used parsing as an example to motivate
+      his presentation of monads.
+      In 1996, Graham Hutton and Erik Meijer<footnote>
+      <b>Hutton and Meijer 1996</b>
       </footnote>
-    </p><h1>1999</h1><p>
+      take the opposite perspective -- they 
+      write a paper on combinator parsing that could
+      "also be viewed as a first introduction to the use
+      of monads in programming."
+    </p>
+    <h1>1999</h1><p>
       TODO:
       <footnote>
         Hudak, Peterson and Fasel,
@@ -1029,6 +1034,9 @@ Norvell has made an attempt at classification</a>
       Stanford Univ., Stanford, Calif. (Aug. 1976).
       [http://bitsavers.org/pdf/stanford/cs_techReports/STAN-CS-76-562_EarlyDevelPgmgLang_Aug76.pdf ].
     </p>
+      <b>Hutton and Meijer 1996</b>:
+        Graham Hutton and Erik Meijer. Technical Report NOTTCS-TR-96-4,
+        Department of Computer Science, University of Nottingham, 1996.
     <p>
       <b>Grune and Jacobs 2008</b>:
       Grune, D., & Jacobs, C. J. H. (2008). Parsing Techniques: A Practical
