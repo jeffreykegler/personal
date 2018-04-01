@@ -31,13 +31,22 @@
     </p>
     <h1>1906: Markov's chains</h1>
     <p>Andrei Markov introduces his &quot;chains&quot; -- a set of
-      states with transitions between them. Markov uses his chains, not
+      states with transitions between them.
+      One offshoot of Markov's work will be what we now
+      know as regular expression.
+      Markov uses his chains, not
       for parsing, but for solving problems in probability.<a id="footnote-1-ref" href="#footnote-1">[1]</a>
     </p>
     <h1>1943: Post's rewriting system</h1>
-    <p>Emil Post defines and studies a formal rewriting system using productions. With this, the process of rediscovering Pannini in the West begins.</p>
+    <p>Emil Post defines and studies a formal rewriting system using
+    productions. With this, the process of rediscovering Pannini in the
+    West begins.</p>
     <h1>1945: Turing discovers stacks</h1>
-    <p>Alan Turing discovers the stack as part of his design of the ACE machine. This is important in parsing because recursive parsing requires stacks. The importance of Turing's discovery is not noticed at the time and stacks will be re-discovered many times over the next two decades.<a id="footnote-2-ref" href="#footnote-2">[2]</a>
+    <p>Alan Turing discovers the stack as part of his design of the
+    ACE machine. This is important in parsing because recursive parsing
+    requires stacks. The importance of Turing's discovery is not noticed
+    at the time and stacks will be re-discovered many times over the
+    next two decades.<a id="footnote-2-ref" href="#footnote-2">[2]</a>
     </p>
     <h1>1948: Shannon repurposes Markov's chains</h1>
     <p>Claude Shannon publishes the foundation paper of information theory.<a id="footnote-3-ref" href="#footnote-3">[3]</a>
@@ -48,25 +57,59 @@
     <h1>1949: Rutishauser's compiler</h1>
     <p>From 1949 to 1951 at the ETH Zurich, Heinz Rutishauser worked on
       the design of what we would now call a compiler.<a id="footnote-5-ref" href="#footnote-5">[5]</a>
-      Rutishauser's language is line-by-line and parsed as hoc, but it does parse arithmetic expressions. Rutishauser's expression parser did not honor precedence but did allow nested parentheses. It is perhaps the first algorithm which can really be considered a parsing method. Rutishauser's compiler was never implemented.</p>
+      Rutishauser's language is line-by-line and parsed as hoc, but it
+      does parse arithmetic expressions. Rutishauser's expression parser
+      did not honor precedence but did allow nested parentheses. It
+      is perhaps the first algorithm which can really be considered a
+      parsing method. Rutishauser's compiler was never implemented.</p>
     <h1>1950: Boehm's compiler</h1>
-    <p>During 1950, Corrado Boehm, also at the ETH Zurich develops his own compiler. They are working at the same institution at the same time, but Boehm is unaware of Rutishauser's work until his own is complete. Like Rutishauser, Boehm's language is line-by-line and parsed ad hoc, except for expressions. Boehm expression parser
+    <p>During 1950, Corrado Boehm, also at the ETH Zurich develops his
+    own compiler. They are working at the same institution at the same
+    time, but Boehm is unaware of Rutishauser's work until his own is
+    complete. Like Rutishauser, Boehm's language is line-by-line and
+    parsed ad hoc, except for expressions. Boehm expression parser
       <em>does</em>
-      honor precedence, making it perhaps the first operator precedence parser. Boehm's compiler also allows parentheses, but the two cannot be mixed -- an expression can either be parsed using precedence or have parentheses, but not both.</p>
-    <p>Boehm's is the first self-compiling compiler -- it is written in its own language. Like Rutishauser's, Boehm's compiler was never implemented.<a id="footnote-6-ref" href="#footnote-6">[6]</a>
+      honor precedence, making it perhaps the first operator precedence
+      parser. Boehm's compiler also allows parentheses, but the two cannot
+      be mixed -- an expression can either be parsed using precedence
+      or have parentheses, but not both.</p>
+    <p>Boehm's is the first self-compiling compiler -- it is written
+    in its own language. Like Rutishauser's, Boehm's compiler was never
+    implemented.<a id="footnote-6-ref" href="#footnote-6">[6]</a>
     </p>
     <h1>1952: Grace Hopper uses the term &quot;compiler&quot;</h1>
     <p>Grace Hopper writes a linker-loader.
-      <a href="https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers%22">She calls it a &quot;compiler&quot;</a>. Hopper seems to be the first person to use this term for a computer program.</p>
+      <a
+      href="https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers%22">She
+      calls it a &quot;compiler&quot;</a>. Hopper seems to be the first
+      person to use this term for a computer program.</p>
     <h1>Term: &quot;compiler&quot; as of 1952</h1>
     <p>Hopper used the term &quot;compiler&quot; in a meaning it
       had at the time: &quot;to compose out of materials from other
       documents&quot;.<a id="footnote-7-ref" href="#footnote-7">[7]</a>
-      Specifically, before Hopper, the task we now see as &quot;compiling&quot; was then seen putting together a set of pre-existing assembler subroutines and calling them. Hopper's new program went one step further -- instead of calling the subroutines it expanded them (or in other words &quot;compiled&quot; them) into a single program. Since Hopper the term has acquired a different and very specialized meaning in the computer field. Today we would not call Hopper's program a &quot;compiler&quot;.</p>
-    <p>As an aside, whatever it is called, Hopper's program was a major achievement, both in terms of insight and execution. Hopper's reputation is well-deserved.</p>
+      Specifically, before Hopper, the task we now see as
+      &quot;compiling&quot; was then seen putting together a set of
+      pre-existing assembler subroutines and calling them. Hopper's new
+      program went one step further -- instead of calling the subroutines
+      it expanded them (or in other words &quot;compiled&quot; them) into
+      a single program. Since Hopper the term has acquired a different
+      and very specialized meaning in the computer field. Today we would
+      not call Hopper's program a &quot;compiler&quot;.</p>
+    <p>As an aside, whatever it is called, Hopper's program was a
+    major achievement, both in terms of insight and execution. Hopper's
+    reputation is well-deserved.</p>
     <h1>1952: Glennie's AUTOCODE</h1>
     <p>Knuth<a id="footnote-8-ref" href="#footnote-8">[8]</a>
-      calls Glennie's the first &quot;real&quot; compiler in that it was actually implemented and used by someone to translate algebraic statements into machine language. Glennie's AUTOCODE was very low-level and hard-to-use, and had little impact on other users of its target -- the Manchester Mark I. And because Glennie worked for the British atomic weapons projects his papers were routinely classified, so that the influence of AUTOCODE was slow to spread. Nonetheless, many other &quot;compilers&quot; afterward were named AUTOCODE, and this probably indicates some awareness of Glennie's effort.<a id="footnote-9-ref" href="#footnote-9">[9]</a>
+      calls Glennie's the first &quot;real&quot; compiler in that
+      it was actually implemented and used by someone to translate
+      algebraic statements into machine language. Glennie's AUTOCODE
+      was very low-level and hard-to-use, and had little impact on
+      other users of its target -- the Manchester Mark I. And because
+      Glennie worked for the British atomic weapons projects his papers
+      were routinely classified, so that the influence of AUTOCODE was
+      slow to spread. Nonetheless, many other &quot;compilers&quot;
+      afterward were named AUTOCODE, and this probably indicates some
+      awareness of Glennie's effort.<a id="footnote-9-ref" href="#footnote-9">[9]</a>
     </p>
     <h1>1954: The FORTRAN project begins</h1>
     <p>At IBM, a team under John Backus begins working on the language which will be called FORTRAN.</p>
@@ -75,15 +118,21 @@
       in Hopper's looser sense, instead of its modern, specialized,
       one. In particular, there was no implication that the output of a
       &quot;compiler&quot; is ready for execution by a computer.<a id="footnote-10-ref" href="#footnote-10">[10]</a>
-      The output of one 1954 &quot;compiler&quot;, for example, produced relative addresses, which needed to be translated by hand before a machine can execute them.</p>
+      The output of one 1954 &quot;compiler&quot;, for example, produced
+      relative addresses, which needed to be translated by hand before
+      a machine can execute them.</p>
     <h1>1955: Noam Chomsky starts teaching at MIT</h1>
-    <p>Noam Chomsky is awarded a Ph.D. in linguistics and accepts a teaching post at MIT. MIT does not have a linguistics department and Chomsky, in his linguistics course, is free to teach his own approach, highly original and very mathematical.</p>
+    <p>Noam Chomsky is awarded a Ph.D. in linguistics and accepts a
+    teaching post at MIT. MIT does not have a linguistics department and
+    Chomsky, in his linguistics course, is free to teach his own approach,
+    highly original and very mathematical.</p>
     <h1>1955: Work begins on the IT compiler</h1>
     <p>At Purdue, a team including Alan Perlis and Joseph Smith begins work on the IT compiler.
       <a id="footnote-11-ref" href="#footnote-11">[11]</a>
     </p>
     <h1>1956</h1>
-    <p>Perlis and Smith, now at the Carnegie Institute of Technology, finish the IT compiler. Don Knuth calls this &quot;the first really
+    <p>Perlis and Smith, now at the Carnegie Institute of Technology,
+    finish the IT compiler. Don Knuth calls this &quot;the first really
       <em>useful</em>
       compiler. IT and IT's derivatives were used successfully and
       frequently in hundreds of computer installations until [its
@@ -95,7 +144,10 @@
       <a id="footnote-12-ref" href="#footnote-12">[12]</a>
     </p>
     <h1>The Operator Issue</h1>
-    <p>With the IT compiler the &quot;operator issue&quot; comes to the fore -- how to handle expression with operators which are expected to honor associativity and precedence. Both mathematicians and ordinary users expect this in a language.</p>
+    <p>With the IT compiler the &quot;operator issue&quot; comes to the
+    fore -- how to handle expression with operators which are expected to
+    honor associativity and precedence. Both mathematicians and ordinary
+    users expect this in a language.</p>
     <p>The IT language had arithmetic expressions, of a sort --
       parentheses are honored, but otherwise evaluation is always
       right-to-left -- there is no operator precedence. IT did honor
@@ -105,7 +157,11 @@
       language was the most frequent single cause of errors by the users
       of that compiler.&quot;<a id="footnote-13-ref" href="#footnote-13">[13]</a>
     </p>
-    <p>Since when the IT compiler is written before there is a single published parsing algorithm, it is not surprising this proves an issue. More surprising is the persistance of this issue -- in fact, after more than more six decades of stunning progress in other areas of computer, the Operator Issue is still very much a live issue.</p>
+    <p>Since when the IT compiler is written before there is a single
+    published parsing algorithm, it is not surprising this proves an
+    issue. More surprising is the persistance of this issue -- in fact,
+    after more than more six decades of stunning progress in other areas
+    of computer, the Operator Issue is still very much a live issue.</p>
     <h1>Term: &quot;compiler&quot; as of 1956</h1>
     <p>In the 1956 document describing the IT compiler,<a id="footnote-14-ref" href="#footnote-14">[14]</a>
       IT team is careful to define the term. Their definition makes clear that
@@ -115,39 +171,99 @@
       mean what we currently understand it to mean.</p>
     <h1>1956</h1>
     <p>Chomsky publishes the paper which is usually considered the foundation of Western formal language theory.<a id="footnote-15-ref" href="#footnote-15">[15]</a>
-      Chomsky demolishes the idea that natural language grammar can be modeled using only Markov chains. Instead, the paper advocates a natural language approach that uses three layers:</p>
-    <p><b>Bottom layer</b>: For his bottom layer, Chomsky does use Markov's chains. This becomes the modern compiler's lexical phase.</p>
-    <p><b>Middle layer</b>: Chomsky's middle layer uses context-free grammars and context-sensitive grammars. These are his own discoveries. This middle layer becomes the syntactic phase of modern compilers.</p>
-    <p><b>Top layer</b>: Chomsky's top layer, again his own discovery, maps or &quot;transforms&quot; the output of the middle layer. Chomsky's top layer is the inspiration for AST transformation phase of modern parsers.</p>
-    <p>For finite state processes, Chomsky cites Markov. Chomsky seems to have been unaware of Post's work -- he does not cite it.</p>
+      Chomsky demolishes the idea that natural language grammar can be
+      modeled using only Markov chains. Instead, the paper advocates a
+      natural language approach that uses three layers:</p>
+    <p><b>Bottom layer</b>: For his bottom layer, Chomsky does use
+    Markov's chains. This becomes the modern compiler's lexical phase.</p>
+    <p><b>Middle layer</b>: Chomsky's middle layer uses context-free
+    grammars and context-sensitive grammars. These are his own
+    discoveries. This middle layer becomes the syntactic phase of modern
+    compilers.</p>
+    <p><b>Top layer</b>: Chomsky's top layer, again his own
+    discovery, maps or &quot;transforms&quot; the output of the middle
+    layer. Chomsky's top layer is the inspiration for AST transformation
+    phase of modern parsers.</p>
+    <p>For finite state processes, Chomsky cites Markov. Chomsky seems
+    to have been unaware of Post's work -- he does not cite it.</p>
     <h1>Term: &quot;Parsing&quot;</h1>
-    <p>Chomsky is a turning point, so much so that it settles the meaning of many of the terms we are using. &quot;Parsing&quot;, for our purposes, is transforming a string of symbols into a structure. Typically this structure is a parse tree.</p>
+    <p>Chomsky is a turning point, so much so that it settles the
+    meaning of many of the terms we are using. &quot;Parsing&quot;,
+    for our purposes, is transforming a string of symbols into a
+    structure. Typically this structure is a parse tree.</p>
     <h1>1957: Kleene's regular expressions</h1>
-    <p>Steven Kleene discovers regular expressions, a very handy notation for Markov chains. It will turn out that other mathematical objects being studied are equivalent to regular expressions: the various finite state automata; and some of the objects being studied as neural nets.</p>
+    <p>Steven Kleene discovers regular expressions, a very handy notation
+    for Markov chains. It will turn out that other mathematical objects
+    being studied are equivalent to regular expressions: the various
+    finite state automata; and some of the objects being studied as
+    neural nets.</p>
     <h1>1957: Chomsky publishes &quot;Syntactic Structures&quot;</h1>
     <p>Noam Chomsky publishes
-      <em>Syntactic Structures</em>, one of the most important books of all time. The orthodoxy in 1957 is structural linguistics which argues, with Sherlock Holmes, that &quot;it is a capital mistake to theorize in advance of the facts&quot;. Structuralists start with the utterances in a language, and build upward.</p>
-    <p>But Chomsky claims that without a theory there are no facts: there is only noise. The Chomskyan approach is to start with a grammar, and use the corpus of the language to check its accuracy. Chomsky's approach will soon come to dominate linguistics.</p>
+      <em>Syntactic Structures</em>, one of the most important books of
+      all time. The orthodoxy in 1957 is structural linguistics which
+      argues, with Sherlock Holmes, that &quot;it is a capital mistake
+      to theorize in advance of the facts&quot;. Structuralists start
+      with the utterances in a language, and build upward.</p>
+    <p>But Chomsky claims that without a theory there are no facts: there
+    is only noise. The Chomskyan approach is to start with a grammar,
+    and use the corpus of the language to check its accuracy. Chomsky's
+    approach will soon come to dominate linguistics.</p>
     <h1>Term: &quot;Chomskyan parsing&quot;</h1>
-    <p>In computing, parsing theory mainly follows Chomsky's work in linguistics. Parsing is &quot;Chomksyan&quot; if it is guided by a BNF grammar. From this point on, most parsers and most parsing theory will be Chomskyan; and this timeline will focus on Chomskyan parsing. But, as we shall see, non-Chomskyan parsing does survive and has its users today.</p>
+    <p>In computing, parsing theory mainly follows Chomsky's work in
+    linguistics. Parsing is &quot;Chomksyan&quot; if it is guided by
+    a BNF grammar. From this point on, most parsers and most parsing
+    theory will be Chomskyan; and this timeline will focus on Chomskyan
+    parsing. But, as we shall see, non-Chomskyan parsing does survive
+    and has its users today.</p>
     <h1>1957: FORTRAN released</h1>
-    <p>Backus's team makes the first FORTRAN compiler available to IBM customers. FORTRAN is the first high-level language that will find widespread implementation. As of this writing, it is the oldest language that survives in practical use.</p>
+    <p>Backus's team makes the first FORTRAN compiler available to IBM
+    customers. FORTRAN is the first high-level language that will find
+    widespread implementation. As of this writing, it is the oldest
+    language that survives in practical use.</p>
     <h1>1957: Operator precedence</h1>
-    <p>FORTRAN is a line-by-line language and its parsing is pre-Chomskyan and ad hoc. But it includes one important discovery. FORTRAN I was line-by-line, but it allowed expressions. And, learning from the dissatisfaction with the compiler, FORTRAN honors associativity and precedence.</p>
-    <p>The designers of FORTRAN discovered a strange trick -- they hacked the expressions by adding parentheses around each operator. Surprisingly, this works. In fact, once the theoretical understanding of operator precedence comes about, the FORTRAN I implementation is actually a hackish and inefficient way of implementing precedence.</p>
+    <p>FORTRAN is a line-by-line language and its parsing is pre-Chomskyan
+    and ad hoc. But it includes one important discovery. FORTRAN I was
+    line-by-line, but it allowed expressions. And, learning from the
+    dissatisfaction with the compiler, FORTRAN honors associativity
+    and precedence.</p>
+    <p>The designers of FORTRAN discovered a strange trick --
+    they hacked the expressions by adding parentheses around each
+    operator. Surprisingly, this works. In fact, once the theoretical
+    understanding of operator precedence comes about, the FORTRAN
+    I implementation is actually a hackish and inefficient way of
+    implementing precedence.</p>
     <h1>The Operator Issue</h1>
-    <p>FORTRAN used an ad hoc method to address the parsing issue. Again, this is unsurprising since there are no parsing algorithms when FORTRAN was designed. FORTRAN's approach, over the years, was refined into various operator precedence algorithms which are more efficient and better understood mathematically. Nonetheless, the ad hoc nature of operator parsing proves hard to eliminate.</p>
+    <p>FORTRAN used an ad hoc method to address the parsing issue. Again,
+    this is unsurprising since there are no parsing algorithms when
+    FORTRAN was designed. FORTRAN's approach, over the years, was refined
+    into various operator precedence algorithms which are more efficient
+    and better understood mathematically. Nonetheless, the ad hoc nature
+    of operator parsing proves hard to eliminate.</p>
     <h1>1958: LISP released</h1>
-    <p>John McCarthy's LISP appears. LISP goes beyond the line-by-line syntax -- it is recursively structured. But the LISP interpreter does not find the recursive structure: the programmer must explicitly indicate the structure herself, using parentheses. Because of this reliance on parentheses, the Operator Issue does not arise with LISP.</p>
+    <p>John McCarthy's LISP appears. LISP goes beyond the line-by-line
+    syntax -- it is recursively structured. But the LISP interpreter does
+    not find the recursive structure: the programmer must explicitly
+    indicate the structure herself, using parentheses. Because of this
+    reliance on parentheses, the Operator Issue does not arise with
+    LISP.</p>
     <h1>1959: Backus's notation</h1>
     <p>Backus discovers a new notation to describe the IAL language
       (aka ALGOL). Backus's notation is influenced by his study of Post --
       he seems not to have read Chomsky until later.<a id="footnote-16-ref" href="#footnote-16">[16]</a>
     </p>
     <h1>1960: BNF</h1>
-    <p>Peter Naur improves the Backus notation and uses it to describe ALGOL 60. The improved notation will become known as Backus-Naur Form (BNF).</p>
+    <p>Peter Naur improves the Backus notation and uses it to describe
+    ALGOL 60. The improved notation will become known as Backus-Naur Form
+    (BNF).</p>
     <h1>1960: The ALGOL report</h1>
-    <p>The ALGOL 60 report specifies, for the first time, a block structured language. ALGOL 60 is recursively structured but the structure is implicit -- newlines are not semantically significant, and parentheses indicate syntax only in a few specific cases. The ALGOL compiler will have to find the structure. It is a case of 1960's optimism at its best. As the ALGOL committee is well aware, a parsing algorithm capable of handling ALGOL 60 does not yet exist. But the risk they are taking will soon pay off.</p>
+    <p>The ALGOL 60 report specifies, for the first time, a block
+    structured language. ALGOL 60 is recursively structured but the
+    structure is implicit -- newlines are not semantically significant,
+    and parentheses indicate syntax only in a few specific cases. The
+    ALGOL compiler will have to find the structure. It is a case of 1960's
+    optimism at its best. As the ALGOL committee is well aware, a parsing
+    algorithm capable of handling ALGOL 60 does not yet exist. But the
+    risk they are taking will soon pay off.</p>
     <h1>The Quest</h1>
     <p>With the ALGOL 60 report, a quest begins which continues to this day: the search for a parser that is</p>
     <ul>
@@ -157,30 +273,66 @@
       <li>general.</li>
     </ul>
     <h1>Term: &quot;syntax-driven&quot;</h1>
-    <p>For our purposes, a parser is &quot;syntax-driven&quot; if it will parse from grammars written in BNF. You would certainly
+    <p>For our purposes, a parser is &quot;syntax-driven&quot; if it
+    will parse from grammars written in BNF. You would certainly
       <em>hope</em>
       that you could adequately specify a parser by specifying its syntax.</p>
     <h1>Term: &quot;general&quot;</h1>
     <p>A general parser is a parser that will parse
       <em>any</em>
-      grammar that can be written in BNF. This is a very useful property -- it makes it easy for a grammar-writer to know that her grammar will parse. It also makes it easy to auto-generate grammars, knowing that they will successfully parse. This opens the way to second-order languages -- languages which specify other languages.</p>
-    <p>As a pedantic point, a general parser need only parse &quot;proper&quot; grammars. A BNF grammar is &quot;proper&quot; if it has no useless rules and no infinite loops. Neither of these have any practical use, so that the restriction to proper grammars is unproblematic.</p>
+      grammar that can be written in BNF. This is a very useful property
+      -- it makes it easy for a grammar-writer to know that her grammar
+      will parse. It also makes it easy to auto-generate grammars,
+      knowing that they will successfully parse. This opens the way
+      to second-order languages -- languages which specify other
+      languages.</p>
+    <p>As a pedantic point, a general parser need only parse
+    &quot;proper&quot; grammars. A BNF grammar is &quot;proper&quot;
+    if it has no useless rules and no infinite loops. Neither of these
+    have any practical use, so that the restriction to proper grammars
+    is unproblematic.</p>
     <h1>1960: Gleenie's compiler-compiler</h1>
     <p>A.E. Gleenie publishes his description of a compiler-compiler.<a id="footnote-17-ref" href="#footnote-17">[17]</a>
-      Glennie's &quot;universal compiler&quot; is more of a methodology than an implementation -- the compilers must be written by hand. Glennie credits both Chomsky and Backus, and observes that the two notations are &quot;related&quot;. He also mentions Post's productions. Glennie may have been the first to use BNF as a description of a
+      Glennie's &quot;universal compiler&quot; is more of a methodology
+      than an implementation -- the compilers must be written by
+      hand. Glennie credits both Chomsky and Backus, and observes
+      that the two notations are &quot;related&quot;. He also mentions
+      Post's productions. Glennie may have been the first to use BNF as
+      a description of a
       <em>procedure</em>
       instead of as the description of a
       <em>Chomsky grammar</em>. Glennie points out that the distinction is &quot;important&quot;.</p>
     <h1>Chomskyan BNF and procedural BNF</h1>
     <p>BNF, when used as a Chomsky grammar, describes a set of strings, and does
       <em>not</em>
-      describe how to parse strings according to the grammar. BNF notation, if used to describe a procedure, is a set of instructions, to be tried in some order, and used to process a string. Procedural BNF describes a procedure first, and a language only indirectly.</p>
+      describe how to parse strings according to the grammar. BNF
+      notation, if used to describe a procedure, is a set of instructions,
+      to be tried in some order, and used to process a string. Procedural
+      BNF describes a procedure first, and a language only indirectly.</p>
     <p>Both procedural and Chomskyan BNF describe languages, but usually
       <em>not the same</em>
-      language. This is an important point, and one which will be overlooked many times in the years to come.</p>
-    <p>The pre-Chomskyan approach, using procedural BNF, is far more natural to someone trained as a computer programmer. The parsing problem appears to the programmer in the form of strings to be parsed, exactly the starting point of procedural BNF and pre-Chomsky parsing.</p>
-    <p>Even when the Chomskyan approach is pointed out, it does not at first seem very attractive. With the pre-Chomskyan approach, the examples of the language more or less naturally lead to a parser. In the Chomskyan approach the programmer has to search for an algorithm to parse strings according to his grammar -- and the search for good algorithms to parse Chomskyan grammars has proved surprisingly long and difficult. Handling semantics is more natural with a Chomksyan approach. But, using captures, semantics can be added to a pre-Chomskyan parser and, with practice, this seems natural enough.</p>
-    <p>Despite the naturalness of the pre-Chomskyan approach to parsing, we will find that the first fully-described automated parsers are Chomskyan. This is a testimony to Chomsky's influence at the time. We will also see that Chomskyan parsers have been dominant ever since.</p>
+      language. This is an important point, and one which will be
+      overlooked many times in the years to come.</p>
+    <p>The pre-Chomskyan approach, using procedural BNF, is far more
+    natural to someone trained as a computer programmer. The parsing
+    problem appears to the programmer in the form of strings to be
+    parsed, exactly the starting point of procedural BNF and pre-Chomsky
+    parsing.</p>
+    <p>Even when the Chomskyan approach is pointed out, it does not
+    at first seem very attractive. With the pre-Chomskyan approach,
+    the examples of the language more or less naturally lead to a
+    parser. In the Chomskyan approach the programmer has to search for
+    an algorithm to parse strings according to his grammar -- and the
+    search for good algorithms to parse Chomskyan grammars has proved
+    surprisingly long and difficult. Handling semantics is more natural
+    with a Chomksyan approach. But, using captures, semantics can be
+    added to a pre-Chomskyan parser and, with practice, this seems
+    natural enough.</p>
+    <p>Despite the naturalness of the pre-Chomskyan approach to parsing,
+    we will find that the first fully-described automated parsers
+    are Chomskyan. This is a testimony to Chomsky's influence at the
+    time. We will also see that Chomskyan parsers have been dominant
+    ever since.</p>
     <h1>1960: Operator precedence and stacks</h1>
     <p>Since FORTRAN I, many people have refined its operator precedence implementation.
       A Feb 1960 paper by Samuelson and Bauer<a id="footnote-18-ref" href="#footnote-18">[18]</a>
@@ -193,7 +345,10 @@
       corner&quot; element -- it is what now would be called a &quot;left
       corner&quot; parser.<a id="footnote-19-ref" href="#footnote-19">[19]</a>
     </p>
-    <p>The Irons algorithm is general, meaning that it can parse anything written in BNF. It is syntax-driven (aka declarative), meaning that the parser is actually created from the BNF -- the parser does not need to be hand-written.</p>
+    <p>The Irons algorithm is general, meaning that it can parse anything
+    written in BNF. It is syntax-driven (aka declarative), meaning that
+    the parser is actually created from the BNF -- the parser does not
+    need to be hand-written.</p>
     <h1>Terms: &quot;Top-down&quot;</h1>
     <comment>TODO: Revise</comment>
     <p>A top-down parser, identifies BNF productions first,
@@ -223,13 +378,22 @@
       parsers that are not clearly one or the other can always be usefully
       described in terms of their top-down and bottom-up components.
     </p>
-    <p>As we saw, the Irons 1961 parser is not simply top-down or bottom-up, though arguably describing it in terms of top-down and bottom-up components is helpful. But for other parsing algorithms, top-down vs. bottom-up classification is a pointless pedantry -- the classification can be done, but tells you nothing about the actual behavior of the parser.</p>
+    <p>As we saw, the Irons 1961 parser is not simply top-down or
+    bottom-up, though arguably describing it in terms of top-down and
+    bottom-up components is helpful. But for other parsing algorithms,
+    top-down vs. bottom-up classification is a pointless pedantry --
+    the classification can be done, but tells you nothing about the
+    actual behavior of the parser.</p>
     <h1>Terms: &quot;Synthetic attribute&quot;</h1>
     <p>Irons 1961 also introduces synthetic attributes: the parse creates
       a tree, which is evaluated bottom-up. Each node is evaluated using
       attributes &quot;synthesized&quot; from its child nodes.<a id="footnote-20-ref" href="#footnote-20">[20]</a>
     </p>
-    <p>Pedantically, synthetic attributes are not a parsing concept -- they are way of doing semantics. But almost nobody parses without intending to apply some kind of semantics, and feedback from new semantic concepts has had major effects on the development of parsing. Synthetic attributes will be important.</p>
+    <p>Pedantically, synthetic attributes are not a parsing concept --
+    they are way of doing semantics. But almost nobody parses without
+    intending to apply some kind of semantics, and feedback from new
+    semantic concepts has had major effects on the development of
+    parsing. Synthetic attributes will be important.</p>
     <h1>1961: Lucas discovers recursive descent</h1>
     <p>Peter Lucas publishes the first description of a purely top-down parser<a id="footnote-21-ref" href="#footnote-21">[21]</a></p>
     <!-- html_fmt: Next end tag is cruft -->
@@ -241,22 +405,37 @@
       claim -- by this time there are several specialized techniques for
       parsing operator expressions. Eventually there will be a botanical
       profusion of them.</p>
-    <p>For our purposes, it is sufficient to note that while recursive descent cannot parse arithmetic expressions directly, it can deal with them in two ways:</p>
+    <p>For our purposes, it is sufficient to note that while recursive
+    descent cannot parse arithmetic expressions directly, it can deal
+    with them in two ways:</p>
     <ul>
-      <li><p>Recursive descent can switch to another algorithm when it encounters an operator expression. This is easy to do in a hand-written implementation.</p></li>
-      <li><p>It can parse the operands and operands into a list, and the list can be reparsed in post-processing. This is essentially a delayed-action form of the first method.</p></li>
+      <li><p>Recursive descent can switch to another algorithm when
+      it encounters an operator expression. This is easy to do in a
+      hand-written implementation.</p></li>
+      <li><p>It can parse the operands and operands into a list, and
+      the list can be reparsed in post-processing. This is essentially
+      a delayed-action form of the first method.</p></li>
     </ul>
     <h1>1960's: Hand-coded recursive descent</h1>
-    <p>Lucas' writeup most likely describes a hand-written parser. Hand-coded approaches became more popular than syntax-driven ones in the 1960's due to three factors:</p>
+    <p>Lucas' writeup most likely describes a hand-written
+    parser. Hand-coded approaches became more popular than syntax-driven
+    ones in the 1960's due to three factors:</p>
     <ul>
-      <li><p>Memory and CPU were both extremely limited. Hand-coding paid off, even when the gains were small.</p></li>
-      <li><p>Pure recursive descent is, in fact, a very weak parsing technique. As we have seen in the case of operator expressions, it is often necessary to go beyond its limits, and that is easier to do if you are coding the parser by hand.</p></li>
-      <li><p>Top-down parsing is intuitive -- it essentially means calling subroutines. It therefore requires little or no knowledge of parsing theory. This makes it a good fit for hand-coding.</p></li>
+      <li><p>Memory and CPU were both extremely limited. Hand-coding
+      paid off, even when the gains were small.</p></li>
+      <li><p>Pure recursive descent is, in fact, a very weak parsing
+      technique. As we have seen in the case of operator expressions,
+      it is often necessary to go beyond its limits, and that is easier
+      to do if you are coding the parser by hand.</p></li>
+      <li><p>Top-down parsing is intuitive -- it essentially means
+      calling subroutines. It therefore requires little or no knowledge of
+      parsing theory. This makes it a good fit for hand-coding.</p></li>
     </ul>
     <h1>1961: Dijkstra's shunting yard algorithm</h1>
     <p>In November 1961, Dijkstra publishes the &quot;shunting yard&quot; algorithm.<a id="footnote-22-ref" href="#footnote-22">[22]</a>
       <a
-href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has made an attempt at classification</a>
+href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
+Norvell has made an attempt at classification</a>
       of the botanical profusion of operator expression parsers. All
       earlier parsers are subspecies of what he calls &quot;the classic
       algorithm&quot;, so that Dijkstra's approach is new. The number
@@ -268,7 +447,8 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
       it has no major impact on the Operator Issue -- but it offers a
       genuinely different implementation alternative.</p>
     <h1>The operator issue as of 1961</h1>
-    <p>Originally the operator issue was that it required a parsing algorithm at a time
+    <p>Originally the operator issue was that it required a parsing
+    algorithm at a time
       when there were no parsing algorithms.
       With Lucas paper, the operator issue takes a new form --
       one which it still has over 50 years later.
@@ -305,8 +485,13 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     </p><p>
     </p>
     <h1>1963</h1>
-    <p>L. Schmidt, Howard Metcalf, and Val Schorre present papers on compilers at a Denver conference.<a id="footnote-23-ref" href="#footnote-23">[23]</a>
-      At the time, they call their approach syntax-directed, but it will turn out to be non-Chomskyan: BNF is used as a procedural notation, and does not necessarily describe the syntax parsed. This timeline will call parsers of this kind &quot;pseudo-syntax-directed&quot;.</p>
+    <p>L. Schmidt, Howard Metcalf, and Val Schorre present papers on
+    compilers at a Denver conference.<a id="footnote-23-ref" href="#footnote-23">[23]</a>
+      At the time, they call their approach syntax-directed,
+      but it will turn out to be non-Chomskyan: BNF is used as a
+      procedural notation, and does not necessarily describe the
+      syntax parsed. This timeline will call parsers of this kind
+      &quot;pseudo-syntax-directed&quot;.</p>
     <h1>1964</h1>
     <p>Schorre publishes a paper on the Meta II &quot;compiler
       writing language&quot;, summarizing the papers of the 1963
@@ -338,48 +523,122 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
       and LR acquires its current meaning of scan from the left, using
       right reductions&quot;.<a id="footnote-28-ref" href="#footnote-28">[28]</a>
     </p>
-    <p>LL and LR have mirror images: RL means &quot;scan from the right, using left reductions&quot; and RR acquires its current meaning of scan from the right, using right reductions&quot;. Use of these mirror images is rare, but does occur -- operator expression parsing in the IT compiler seems to have been RL(2) with backtracking.</p>
-    <p>If there is a number after the parentheses in this notation for parsing algorithms, it usually indicates the number of tokens of lookahead. RL(2) above, meant that the algorithm looked 2 tokens ahead.</p>
+    <p>LL and LR have mirror images: RL means &quot;scan from the right,
+    using left reductions&quot; and RR acquires its current meaning
+    of scan from the right, using right reductions&quot;. Use of these
+    mirror images is rare, but does occur -- operator expression parsing
+    in the IT compiler seems to have been RL(2) with backtracking.
+    </p>
+    <p>If there is a number after the parentheses in this notation for
+    parsing algorithms, it usually indicates the number of tokens of
+    lookahead. RL(2) above, meant that the algorithm looked 2 tokens
+    ahead.</p>
     <h1>LL(1) and the Operator Issue</h1>
-    <p>Of the algorithms in our new notation, LL(1) -- &quot;scan from the left, using left reductions with one character of lookahead&quot; -- is one of the more important ones. Before the introduction of this notation, and the mathematics behind it, the Operator Issue could not be described in precise terms.</p>
-    <p>Now we can state one form of the Operator Issue in more exact terms: Recursive Descent, in its pure form, is LL(1). Arithmetic operator grammars are not LL(1). Something has to give as long as you are using recursive descent. And this is a major reason why truly syntax-driven versions of LL(1) are not used. A pure syntax-driven LL(1) parser generator
+    <p>Of the algorithms in our new notation, LL(1) -- &quot;scan from the
+    left, using left reductions with one character of lookahead&quot; --
+    is one of the more important ones. Before the introduction of this
+    notation, and the mathematics behind it, the Operator Issue could
+    not be described in precise terms.</p>
+    <p>Now we can state one form of the Operator Issue in more exact
+    terms: Recursive Descent, in its pure form, is LL(1). Arithmetic
+    operator grammars are not LL(1). Something has to give as long as you
+    are using recursive descent. And this is a major reason why truly
+    syntax-driven versions of LL(1) are not used. A pure syntax-driven
+    LL(1) parser generator
       <em>could</em>
-      be written, but it would not be able to parse arithmetic expressions properly.</p>
+      be written, but it would not be able to parse arithmetic expressions
+      properly.</p>
     <h1>1968</h1>
-    <p>Jay Earley discovers the algorithm named after him. Like the Irons algorithm, Earley's algorithm is Chomskyan, syntax-driven and fully general. Unlike the Irons algorithm, it does not backtrack. Earley's algorithm is both top-down and bottom-up at once -- it uses dynamic programming and keeps track of the parse in tables. Earley's approach makes a lot of sense and looks very promising indeed, but there are three serious issues:</p>
+    <p>Jay Earley discovers the algorithm named after him. Like the Irons
+    algorithm, Earley's algorithm is Chomskyan, syntax-driven and fully
+    general. Unlike the Irons algorithm, it does not backtrack. Earley's
+    algorithm is both top-down and bottom-up at once -- it uses dynamic
+    programming and keeps track of the parse in tables. Earley's approach
+    makes a lot of sense and looks very promising indeed, but there are
+    three serious issues:</p>
     <ul>
       <li>First, there is a bug in the handling of zero-length rules.</li>
       <li>Second, it is quadratic for right recursions.</li>
-      <li>Third, the bookkeeping required to set up the tables is, by the standards of 1968 hardware, daunting.</li>
+      <li>Third, the bookkeeping required to set up the tables is,
+      by the standards of 1968 hardware, daunting.</li>
     </ul>
     <h1>1968</h1>
     <p>Knuth publishes a paper on a concept he had been working for the
       previous few years: attribute grammars.<a id="footnote-29-ref" href="#footnote-29">[29]</a>
-      Irons' synthetic attributes had always been inadequate for many problems, and had been supplemented by side effects or state variables. Knuth adds inherited attributes, and discovers attribute grammars.</p>
+      Irons' synthetic attributes had always been inadequate for many
+      problems, and had been supplemented by side effects or state
+      variables. Knuth adds inherited attributes, and discovers attribute
+      grammars.</p>
     <h1>Term: &quot;Inherited attributes&quot;</h1>
-    <p>Recall that a node in parse gets its synthetic attributes from its parents. Inherited attributes are attibutes a node gets from its parents. Of course, this creates potential circularities, but inherited attributes are powerful and, with care, the circularities can be dealt with.</p>
+    <p>Recall that a node in parse gets its synthetic attributes from
+    its parents. Inherited attributes are attibutes a node gets from
+    its parents. Of course, this creates potential circularities, but
+    inherited attributes are powerful and, with care, the circularities
+    can be dealt with.</p>
     <h1>Term: &quot;Attribute grammar&quot;</h1>
     <p>An attribute grammar is a grammar whose node may have both inherited and synthetic attributes.</p>
     <h1>1969</h1>
-    <p>Frank DeRemer describes a new variant of Knuth's LR parsing. DeRemer's LALR algorithm requires only a stack and a state table of quite manageable size. LALR looks practical.</p>
+    <p>Frank DeRemer describes a new variant of Knuth's LR
+    parsing. DeRemer's LALR algorithm requires only a stack and a state
+    table of quite manageable size. LALR looks practical.</p>
     <h1>1969</h1>
-    <p>Ken Thompson writes the &quot;ed&quot; editor as one of the first components of UNIX. At this point, regular expressions are an esoteric mathematical formalism. Through the &quot;ed&quot; editor and its descendants, regular expressions will become an everyday part of the working programmer's toolkit.</p>
+    <p>Ken Thompson writes the &quot;ed&quot; editor as one of the
+    first components of UNIX. At this point, regular expressions are an
+    esoteric mathematical formalism. Through the &quot;ed&quot; editor
+    and its descendants, regular expressions will become an everyday
+    part of the working programmer's toolkit.</p>
     <h1>Recognizers</h1>
     <p>In comparing algorithms, it can be important to keep in mind whether they are recognizers or parsers. A
       <em>recognizer</em>
-      is a program which takes a string and produces a &quot;yes&quot; or &quot;no&quot; according to whether a string is in part of a language. Regular expressions are typically used as recognizers. A
+      is a program which takes a string and produces a &quot;yes&quot;
+      or &quot;no&quot; according to whether a string is in part of a
+      language. Regular expressions are typically used as recognizers. A
       <em>parser</em>
-      is a program which takes a string and produces a tree reflecting its structure according to a grammar. The algorithm for a compiler clearly must be a parser, not a recognizer. Recognizers can be, to some extent, used as parsers by introducing captures.</p>
+      is a program which takes a string and produces a tree reflecting
+      its structure according to a grammar. The algorithm for a compiler
+      clearly must be a parser, not a recognizer. Recognizers can be,
+      to some extent, used as parsers by introducing captures.</p>
     <h1>1972</h1>
-    <p>Alfred Aho and Jeffrey Ullman publish a two volume textbook summarizing the theory of parsing. This book is still important. It is also distressingly up-to-date -- progress in parsing theory slowed dramatically after 1972. Aho and Ullman describe a straightforward fix to the zero-length rule bug in Earley's original algorithm. Unfortunately, this fix involves adding even more bookkeeping to Earley's.</p>
+    <p>Alfred Aho and Jeffrey Ullman publish a two volume textbook
+    summarizing the theory of parsing. This book is still important. It
+    is also distressingly up-to-date -- progress in parsing theory
+    slowed dramatically after 1972. Aho and Ullman describe a
+    straightforward fix to the zero-length rule bug in Earley's
+    original algorithm. Unfortunately, this fix involves adding even
+    more bookkeeping to Earley's.</p>
     <h1>1972</h1>
-    <p>Under the names TDPL and GTDPL, Aho and Ullman investigate the non-Chomksyan parsers in the Schorre lineage. They note that &quot;it can be quite difficult to determine what language is defined by a TDPL parser&quot;. That is, GTDPL parsers do whatever they do, and that whatever is something the programmer in general will not be able to describe. The best a programmer can usually do is to create a test suite and fiddle with the GTDPL description until it passes. Correctness cannot be established in any stronger sense. GTDPL is an extreme form of the old joke that &quot;the code is the documentation&quot; -- with GTDPL nothing documents the language of the parser, not even the code.</p>
-    <p>GTDPL's obscurity buys nothing in the way of additional parsing power. Like all non-Chomskyan parsers, GTDPL is basically a extremely powerful recognizer. Pressed into service as a parser, it is comparatively weak. As a parser, GTDPL is essentially equivalent to Lucas's 1961 syntax-driven algorithm, which was in turn a restricted form of recursive descent.</p>
-    <p>At or around this time, rumor has it that the main line of development for GTDPL parsers is classified secret by the US government.<a id="footnote-30-ref" href="#footnote-30">[30]</a>
+    <p>Under the names TDPL and GTDPL, Aho and Ullman investigate
+    the non-Chomksyan parsers in the Schorre lineage. They note that
+    &quot;it can be quite difficult to determine what language is
+    defined by a TDPL parser&quot;. That is, GTDPL parsers do whatever
+    they do, and that whatever is something the programmer in general
+    will not be able to describe. The best a programmer can usually
+    do is to create a test suite and fiddle with the GTDPL description
+    until it passes. Correctness cannot be established in any stronger
+    sense. GTDPL is an extreme form of the old joke that &quot;the code is
+    the documentation&quot; -- with GTDPL nothing documents the language
+    of the parser, not even the code.</p>
+    <p>GTDPL's obscurity buys nothing in the way of additional parsing
+    power. Like all non-Chomskyan parsers, GTDPL is basically a extremely
+    powerful recognizer. Pressed into service as a parser, it is
+    comparatively weak. As a parser, GTDPL is essentially equivalent to
+    Lucas's 1961 syntax-driven algorithm, which was in turn a restricted
+    form of recursive descent.</p>
+    <p>At or around this time, rumor has it that the main line of
+    development for GTDPL parsers is classified secret by the US
+    government.<a id="footnote-30-ref" href="#footnote-30">[30]</a>
       GTDPL parsers have the property that even small changes in GTDPL parsers can be very labor-intensive. For some government contractors, GTDPL parsing provides steady work for years to come. Public interest in GTDPL fades.</p>
     <h1>1973: Pratt parsing</h1>
-    <p>One approach to the Operator Issue has not been mentioned. We have noted that LL(1) cannot parse operator expressions. What about making the entire grammar an operator grammar? That way you don't have to mix algorithms.</p>
-    <p>There are many problems with switching to operator grammars. Operator grammar are non-Chomskyan -- the BNF no longer accurately describes the grammar. Instead the BNF becomes part of a combined notation, and the actual grammar parsed depends also on precedence and semantics. And operator grammars have a restricted form -- most practical languages are not operator grammars.</p>
+    <p>One approach to the Operator Issue has not been mentioned. We
+    have noted that LL(1) cannot parse operator expressions. What about
+    making the entire grammar an operator grammar? That way you don't
+    have to mix algorithms.</p>
+    <p>There are many problems with switching to operator
+    grammars. Operator grammar are non-Chomskyan -- the BNF no longer
+    accurately describes the grammar. Instead the BNF becomes part of
+    a combined notation, and the actual grammar parsed depends also on
+    precedence and semantics. And operator grammars have a restricted
+    form -- most practical languages are not operator grammars.</p>
     <p>But many practical grammars are almost operator grammars. And the
       Chomskyan approach has always had its dissenter. Vaughn Pratt was one
       of these, and discovered a new approach (the third and last in
@@ -388,15 +647,35 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
         Norvell's taxonomy</a>) to operator expression parsing, one which
       some have adopted as an overall solution to their parsing problems.<a id="footnote-31-ref" href="#footnote-31">[31]</a>
     </p>
-    <p>The Pratt approach, and its descendant, precedence climbing, is not popular as an overall strategy. It is most often used as the operator expression subparser within a recursive descent strategy. All operator expression subparsers breaks the Chomskyan paradigm so the non-Chomskyan nature of Pratt's parser is not a problem in this context. But with respect to the Operator Issue, like Dijkstra's alternative, it is an implementation choice, not a game-changer.</p>
+    <p>The Pratt approach, and its descendant, precedence climbing,
+    is not popular as an overall strategy. It is most often used as the
+    operator expression subparser within a recursive descent strategy. All
+    operator expression subparsers breaks the Chomskyan paradigm so the
+    non-Chomskyan nature of Pratt's parser is not a problem in this
+    context. But with respect to the Operator Issue, like Dijkstra's
+    alternative, it is an implementation choice, not a game-changer.</p>
     <h1>1975</h1>
-    <p>Bell Labs converts its C compiler from hand-written recursive descent to DeRemer's LALR algorithm.</p>
+    <p>Bell Labs converts its C compiler from hand-written recursive
+    descent to DeRemer's LALR algorithm.</p>
     <h1>1977</h1>
-    <p>The first &quot;Dragon book&quot; comes out. This soon-to-be classic textbook is nicknamed after the drawing on the front cover, in which a knight takes on a dragon. Emblazoned on the knight's lance are the letters &quot;LALR&quot;. From here on out, to speak lightly of LALR will be to besmirch the escutcheon of parsing theory.</p>
+    <p>The first &quot;Dragon book&quot; comes out. This soon-to-be
+    classic textbook is nicknamed after the drawing on the front cover,
+    in which a knight takes on a dragon. Emblazoned on the knight's lance
+    are the letters &quot;LALR&quot;. From here on out, to speak lightly
+    of LALR will be to besmirch the escutcheon of parsing theory.</p>
     <h1>1979</h1>
-    <p>Bell Laboratories releases Version 7 UNIX. V7 includes what is, by far, the most comprehensive, useable and easily available compiler writing toolkit yet developed.</p>
+    <p>Bell Laboratories releases Version 7 UNIX. V7 includes what is,
+    by far, the most comprehensive, useable and easily available compiler
+    writing toolkit yet developed.</p>
     <h1>1979</h1>
-    <p>Part of the V7 toolkit is Yet Another Compiler Compiler (YACC). YACC is LALR-powered. Despite its name, YACC is the first compiler-compiler in the modern sense. For some useful languages, the process of going from Chomskyan specification to executable is fully automated. Most practical languages, including the C language and YACC's own input language, still require manual hackery. Nonetheless, after two decades of research, it seems that the parsing problem is solved.</p>
+    <p>Part of the V7 toolkit is Yet Another Compiler Compiler
+    (YACC). YACC is LALR-powered. Despite its name, YACC is the first
+    compiler-compiler in the modern sense. For some useful languages, the
+    process of going from Chomskyan specification to executable is fully
+    automated. Most practical languages, including the C language and
+    YACC's own input language, still require manual hackery. Nonetheless,
+    after two decades of research, it seems that the parsing problem
+    is solved.</p>
     <h1>1987</h1>
     <p>Larry Wall introduces Perl 1. Perl embraces complexity like no
       previous language. Larry uses YACC and LALR very aggressively --
@@ -404,7 +683,8 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
     <h1>1990</h1>
     <p>
       Wadler starts to introduce monads to the functional programming community.
-      As one example he converts his previous efforts at function parsing techniques<a id="footnote-32-ref" href="#footnote-32">[32]</a>.
+      As one example he converts his previous efforts at function parsing
+      techniques<a id="footnote-32-ref" href="#footnote-32">[32]</a>.
       The parsing technique is pure recursive descent.
       The examples shown for monadic parsing are very simple,
       and do not include operator expressions.
@@ -413,10 +693,25 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
       and operator precedence was not implemented<a id="footnote-33-ref" href="#footnote-33">[33]</a>.
     </p>
     <h1>1991</h1>
-    <p>Joop Leo discovers a way of speeding up right recursions in Earley's algorithm. Leo's algorithm is linear for just about every unambiguous grammar of practical interest, and many ambiguous ones as well. In 1991 hardware is six orders of magnitude faster than 1968 hardware, so that the issue of bookkeeping overhead had receded in importance. This is a major discovery. When it comes to speed, the game has changed in favor of the Earley algorithm.</p>
-    <p>But Earley parsing is almost forgotten. Twenty years will pass before anyone writes a practical implementation of Leo's algorithm.</p>
+    <p>Joop Leo discovers a way of speeding up right recursions in
+    Earley's algorithm. Leo's algorithm is linear for just about every
+    unambiguous grammar of practical interest, and many ambiguous ones
+    as well. In 1991 hardware is six orders of magnitude faster than
+    1968 hardware, so that the issue of bookkeeping overhead had receded
+    in importance. This is a major discovery. When it comes to speed,
+    the game has changed in favor of the Earley algorithm.</p>
+    <p>But Earley parsing is almost forgotten. Twenty years will
+    pass before anyone writes a practical implementation of Leo's
+    algorithm.</p>
     <h1>The 1990's</h1>
-    <p>Earley's is forgotten. So everyone in LALR-land is content, right? Wrong. Far from it, in fact. Users of LALR are making unpleasant discoveries. While LALR automatically generates their parsers, debugging them is so hard they could just as easily write the parser by hand. Once debugged, their LALR parsers are fast for correct inputs. But almost all they tell the users about incorrect inputs is that they are incorrect. In Larry's words, LALR is &quot;fast but stupid&quot;.</p>
+    <p>Earley's is forgotten. So everyone in LALR-land is content,
+    right? Wrong. Far from it, in fact. Users of LALR are making
+    unpleasant discoveries. While LALR automatically generates their
+    parsers, debugging them is so hard they could just as easily write the
+    parser by hand. Once debugged, their LALR parsers are fast for correct
+    inputs. But almost all they tell the users about incorrect inputs
+    is that they are incorrect. In Larry's words, LALR is &quot;fast
+    but stupid&quot;.</p>
     <h1>1992</h1>
     <p>Combinators are parsers which can be "combined" to compose other parsers.
       This allows you to have an algebra of parsers.
@@ -485,24 +780,69 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore Norvell has m
       TODO:
       <a id="footnote-38-ref" href="#footnote-38">[38]</a>
     </p><h1>2000</h1>
-    <p>Larry Wall decides on a radical reimplementation of Perl -- Perl 6. Larry does not even consider using LALR again.</p>
+    <p>Larry Wall decides on a radical reimplementation of Perl --
+    Perl 6. Larry does not even consider using LALR again.</p>
     <h1>2002</h1>
-    <p>John Aycock and R. Nigel Horspool publish their attempt at a fast, practical Earley's parser. Missing from it is Joop Leo's improvement -- they seem not to be aware of it. Their own speedup is limited in what it achieves and the complications it introduces can be counter-productive at evaluation time. But buried in their paper is a solution to the zero-length rule bug. And this time the solution requires no additional bookkeeping.</p>
+    <p>John Aycock and R. Nigel Horspool publish their attempt at a
+    fast, practical Earley's parser. Missing from it is Joop Leo's
+    improvement -- they seem not to be aware of it. Their own speedup
+    is limited in what it achieves and the complications it introduces
+    can be counter-productive at evaluation time. But buried in their
+    paper is a solution to the zero-length rule bug. And this time the
+    solution requires no additional bookkeeping.</p>
     <h1>2004</h1>
-    <p>Bryan Ford publishes his paper on PEG. Ford fills this gap by repackaging the nearly-forgotten GTDPL. Ford adds packratting, so that PEG is always linear, and provides PEG with an attractive new syntax.</p>
-    <p>Implementers by now are avoiding YACC, but the demand for syntax-driven parsers remains. PEG is not, in fact, syntax-driven, but it uses the same BNF notation, and many users don't know the difference. And nothing has been done to change
+    <p>Bryan Ford publishes his paper on PEG. Ford fills this gap by
+    repackaging the nearly-forgotten GTDPL. Ford adds packratting,
+    so that PEG is always linear, and provides PEG with an attractive
+    new syntax.</p>
+    <p>Implementers by now are avoiding YACC, but the demand for
+    syntax-driven parsers remains. PEG is not, in fact, syntax-driven,
+    but it uses the same BNF notation, and many users don't know the
+    difference. And nothing has been done to change
       <a href="http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2015/03/peg.html">the problematic behaviors</a>
       of GTDPL.</p>
     <h1>2006</h1>
-    <p>GNU announces that the GCC compiler's parser has been rewritten. For three decades, the industry's flagship C compilers have used LALR as their parser -- proof of the claim that LALR and serious parsing are equivalent. Now, GNU replaces LALR with the technology that it replaced a quarter century earlier: recursive descent.</p>
+    <p>GNU announces that the GCC compiler's parser has been
+    rewritten. For three decades, the industry's flagship C compilers have
+    used LALR as their parser -- proof of the claim that LALR and serious
+    parsing are equivalent. Now, GNU replaces LALR with the technology
+    that it replaced a quarter century earlier: recursive descent.</p>
     <h1>Today</h1>
-    <p>After five decades of parsing theory, the state of the art seems to be back where it started. We can imagine someone taking Ned Iron's original 1961 algorithm from the first paper ever published describing a parser, and republishing it today. True, he would have to translate its code from the mix of assembler and ALGOL into something more fashionable, say Haskell. But with that change, it might look like a breath of fresh air.</p>
+    <p>After five decades of parsing theory, the state of the art seems
+    to be back where it started. We can imagine someone taking Ned Iron's
+    original 1961 algorithm from the first paper ever published describing
+    a parser, and republishing it today. True, he would have to translate
+    its code from the mix of assembler and ALGOL into something more
+    fashionable, say Haskell. But with that change, it might look like
+    a breath of fresh air.</p>
     <h1>Marpa: an afterword</h1>
-    <p>The recollections of my teachers cover most of this timeline. My own begin around 1970. Very early on, as a graduate student, I became unhappy with the way the field was developing. Earley's algorithm looked interesting, and it was something I returned to on and off.</p>
-    <p>Recall that the original vision of the 1960's was a parser that was efficient, practical, general, and syntax-driven.</p>
-    <p>By 2010 this vision seemed to have gone the same way as many other 1960's dreams. The rhetoric stayed upbeat, but parsing practice had become a series of increasingly desperate compromises.</p>
-    <p>But, while nobody was looking for them, the solutions to the problems encountered in the 1960's had appeared in the literature. Aycock and Horspool had solved the zero-length rule bug. Joop Leo had found the speedup for right recursion. And the issue of bookkeeping overhead had pretty much evaporated on its own. Machine operations are now a billion times faster than in 1968, and are probably no longer relevant in any case -- cache misses are now the bottleneck.</p>
-    <p>The programmers of the 1960's would have been prepared to trust a fully declarative Chomskyan parser. With the experience with LALR in their collective consciousness, modern programmers might be more guarded. As Lincoln said, &quot;Once a cat's been burned, he won't even sit on a cold stove.&quot; But I found it straightforward to rearrange the Earley parse engine to allow efficient event-driven handovers between procedural and syntax-driven logic. And Earley tables provide the procedural logic with full knowledge of the state of the parse so far, so that Earley's algorithm is a better platform for hand-written procedural logic than recursive descent.</p>
+    <p>The recollections of my teachers cover most of this timeline. My
+    own begin around 1970. Very early on, as a graduate student, I became
+    unhappy with the way the field was developing. Earley's algorithm
+    looked interesting, and it was something I returned to on and off.</p>
+    <p>Recall that the original vision of the 1960's was a parser that
+    was efficient, practical, general, and syntax-driven.</p>
+    <p>By 2010 this vision seemed to have gone the same way as many other
+    1960's dreams. The rhetoric stayed upbeat, but parsing practice had
+    become a series of increasingly desperate compromises.</p>
+    <p>But, while nobody was looking for them, the solutions to
+    the problems encountered in the 1960's had appeared in the
+    literature. Aycock and Horspool had solved the zero-length rule
+    bug. Joop Leo had found the speedup for right recursion. And the
+    issue of bookkeeping overhead had pretty much evaporated on its
+    own. Machine operations are now a billion times faster than in 1968,
+    and are probably no longer relevant in any case -- cache misses are
+    now the bottleneck.</p>
+    <p>The programmers of the 1960's would have been prepared to trust
+    a fully declarative Chomskyan parser. With the experience with LALR
+    in their collective consciousness, modern programmers might be more
+    guarded. As Lincoln said, &quot;Once a cat's been burned, he won't
+    even sit on a cold stove.&quot; But I found it straightforward to
+    rearrange the Earley parse engine to allow efficient event-driven
+    handovers between procedural and syntax-driven logic. And Earley
+    tables provide the procedural logic with full knowledge of the state
+    of the parse so far, so that Earley's algorithm is a better platform
+    for hand-written procedural logic than recursive descent.</p>
     <h1>Partial Bibliography</h1>
     <p>This bibliography is very incomplete --
       it contains only the more documents
@@ -721,7 +1061,8 @@ pp. 4-6.
         Berlin, Heidelberg.
  <a href="#footnote-36-ref">&#8617;</a></p>
 <p id="footnote-37">37.
-        Graham Hutton and Erik Meijer. Technical Report NOTTCS-TR-96-4, Department of Computer Science, University of Nottingham, 1996.
+        Graham Hutton and Erik Meijer. Technical Report NOTTCS-TR-96-4,
+        Department of Computer Science, University of Nottingham, 1996.
  <a href="#footnote-37-ref">&#8617;</a></p>
 <p id="footnote-38">38.
         Hudak, Peterson and Fasel,
