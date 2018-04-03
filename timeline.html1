@@ -379,14 +379,17 @@ DOI: 10.2307/2371809
     <p>John McCarthy's LISP appears. LISP goes beyond the line-by-line
     syntax -- it is recursively structured. But the LISP interpreter does
     not find the recursive structure: the programmer must explicitly
-    indicate the structure herself, using parentheses. Because of this
-    reliance on parentheses, the Operator Issue does not arise with
-    LISP.</p>
+    indicate the structure herself, using parentheses.
+    Similarly, LISP does not have operator expressions in the usual sense --
+    associativity and precedence must be specified with parentheses.
+    </p>
     <h1>1959: Backus's notation</h1>
-    <p>Backus discovers a new notation to describe the IAL language
-      (aka ALGOL). Backus's notation is influenced by his study of Post --
-      he seems not to have read Chomsky until later.<footnote>
-        http://archive.computerhistory.org/resources/text/Oral_History/Backus_John/Backus_John_1.oral_history.2006.102657970.pdf, p. 25
+    <p>Backus discovers a new notation to describe the IAL language.
+      (aka ALGOL)<footnote>.
+      Backus's notation is influenced by his study of Post --
+      he seems not to have read Chomsky until later.
+      [http://archive.computerhistory.org/resources/text/Oral_History/Backus_John/Backus_John_1.oral_history.2006.102657970.pdf],
+	p. 25
       </footnote>
     </p>
     <h1>1960: BNF</h1>
@@ -402,7 +405,6 @@ DOI: 10.2307/2371809
     optimism at its best. As the ALGOL committee is well aware, a parsing
     algorithm capable of handling ALGOL 60 does not yet exist. But the
     risk they are taking will soon pay off.</p>
-    <h1>The Quest</h1>
     <p>With the ALGOL 60 report, a quest begins which continues to this day: the search for a parser that is</p>
     <ul>
       <li>efficient,</li>
@@ -410,29 +412,43 @@ DOI: 10.2307/2371809
       <li>declarative, and</li>
       <li>general.</li>
     </ul>
-    <h1>Term: <term>declarative</term></h1>
+    On one hand, the
+    risk they are taking will pay off immediately, producting vastly improved
+    parsers and parsing theory.
+    On the other hand, the parser they seek will not be discovered for
+    three decades,
+    two more decades will pass before it is
+    implemented.
+    </p>
+    <h1>Term: <term>declarative</term> and <term>procedural</term></h1>
     <p>For our purposes, a parser is <term>declarative</term>,
     if it
-    will parse from grammars written in BNF. You would certainly
-      <em>hope</em>
-      that you could adequately specify a parser by specifying its syntax.
-      Declarative parsers are often called
+    will parse directly and automatically from grammars written in BNF.
+    Declarative parsers are often called
       <term>syntax-driven</term> parsers.
+      A parser which requires
       </p>
+    <h1>Term: <term>procedural</term></h1>
+    <p>A parser is <term>procedural</term>, if it requires procedural
+    logic as part of its syntax phase.
+    If a parser is procedural, then it is not declarative.
     <h1>Term: <term>general</term></h1>
     <p>A general parser is a parser that will parse
-      <em>any</em>
-      grammar that can be written in BNF. This is a very useful property
+      any grammar that can be written in BNF<footnote>
+    As a pedantic point, a general parser need only parse
+    <term>proper</term> grammars. A BNF grammar is <term>proper</term>
+    if it has no useless rules and no infinite loops.
+    Neither of these
+    have any practical use, so that the restriction to proper grammars
+    is unproblematic.
+      </footnote>.
+      This is a very useful property
       -- it makes it easy for a grammar-writer to know that her grammar
-      will parse. It also makes it easy to auto-generate grammars,
+      will parse.
+      It also makes it easy to auto-generate grammars,
       knowing that they will successfully parse. This opens the way
       to second-order languages -- languages which specify other
       languages.</p>
-    <p>As a pedantic point, a general parser need only parse
-    &quot;proper&quot; grammars. A BNF grammar is &quot;proper&quot;
-    if it has no useless rules and no infinite loops. Neither of these
-    have any practical use, so that the restriction to proper grammars
-    is unproblematic.</p>
     <h1>1960: Gleenie's compiler-compiler</h1>
     <p>A.E. Gleenie publishes his description of a compiler-compiler.<footnote>
         http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm
