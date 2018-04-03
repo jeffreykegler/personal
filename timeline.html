@@ -236,7 +236,7 @@
     <li>Chomsky's <b>top layer</b>, again his own
     discovery, maps or <term>transforms</term> the output of the middle
     layer. Chomsky's top layer is the inspiration for AST transformation
-    phase of modern parsers.</li>
+    phase of modern compilers.</li>
     </ul>
     <h1>Term: &quot;Parsing&quot;</h1>
     <p>Chomsky is a turning point, so much so that it establishes or settles the
@@ -245,11 +245,12 @@
     structure. Typically this structure is a parse tree.</p>
     <h1>1957: Kleene's regular expressions</h1>
     <p>Steven Kleene discovers regular expressions, a very handy notation
-    for Markov chains. It will turn out that other mathematical objects
-    being studied are equivalent to regular expressions: the various
+    for Markov chains. It will turn out that several other mathematical objects
+    being studied at this time
+    are also equivalent to regular expressions: the various
     finite state automata; and some of the objects being studied as
     neural nets.</p>
-    <h1>1957: Chomsky publishes &quot;Syntactic Structures&quot;</h1>
+    <h1>1957: Chomsky publishes <cite>Syntactic Structures</cite></h1>
     <p>Noam Chomsky publishes
       <em>Syntactic Structures</em>, one of the most important books of
       all time. The orthodoxy in 1957 is structural linguistics which
@@ -272,7 +273,6 @@
     customers. FORTRAN is the first high-level language that will find
     widespread implementation. As of this writing, it is the oldest
     language that survives in practical use.</p>
-    <h1>1957: Operator precedence</h1>
     <p>FORTRAN is a line-by-line language and its parsing is pre-Chomskyan
     and ad hoc. But it includes one important discovery. FORTRAN I was
     line-by-line, but it allowed expressions. And, learning from the
@@ -284,13 +284,6 @@
     understanding of operator precedence comes about, the FORTRAN
     I implementation is actually a hackish and inefficient way of
     implementing precedence.</p>
-    <h1>The Operator Issue</h1>
-    <p>FORTRAN used an ad hoc method to address the parsing issue. Again,
-    this is unsurprising since there are no parsing algorithms when
-    FORTRAN was designed. FORTRAN's approach, over the years, was refined
-    into various operator precedence algorithms which are more efficient
-    and better understood mathematically. Nonetheless, the ad hoc nature
-    of operator parsing proves hard to eliminate.</p>
     <h1>1958: LISP released</h1>
     <p>John McCarthy's LISP appears. LISP goes beyond the line-by-line
     syntax -- it is recursively structured. But the LISP interpreter does
@@ -321,15 +314,19 @@
     <ul>
       <li>efficient,</li>
       <li>practical,</li>
-      <li>syntax-driven, and</li>
+      <li>declarative, and</li>
       <li>general.</li>
     </ul>
-    <h1>Term: &quot;syntax-driven&quot;</h1>
-    <p>For our purposes, a parser is &quot;syntax-driven&quot; if it
+    <h1>Term: <term>declarative</term></h1>
+    <p>For our purposes, a parser is <term>declarative</term>,
+    if it
     will parse from grammars written in BNF. You would certainly
       <em>hope</em>
-      that you could adequately specify a parser by specifying its syntax.</p>
-    <h1>Term: &quot;general&quot;</h1>
+      that you could adequately specify a parser by specifying its syntax.
+      Declarative parsers are often called
+      <term>syntax-driven</term> parsers.
+      </p>
+    <h1>Term: <term>general</term></h1>
     <p>A general parser is a parser that will parse
       <em>any</em>
       grammar that can be written in BNF. This is a very useful property
@@ -472,7 +469,7 @@
     </ul>
     <h1>1960's: Hand-coded recursive descent</h1>
     <p>Lucas' writeup most likely describes a hand-written
-    parser. Hand-coded approaches became more popular than syntax-driven
+    parser. Hand-coded approaches became more popular than declarative
     ones in the 1960's due to three factors:</p>
     <ul>
       <li><p>Memory and CPU were both extremely limited. Hand-coding
@@ -596,14 +593,14 @@ Norvell has made an attempt at classification</a>
     terms: Recursive Descent, in its pure form, is LL(1). Arithmetic
     operator grammars are not LL(1). Something has to give as long as you
     are using recursive descent. And this is a major reason why truly
-    syntax-driven versions of LL(1) are not used. A pure syntax-driven
+    declarative versions of LL(1) are not used. A pure declarative
     LL(1) parser generator
       <em>could</em>
       be written, but it would not be able to parse arithmetic expressions
       properly.</p>
     <h1>1968</h1>
     <p>Jay Earley discovers the algorithm named after him. Like the Irons
-    algorithm, Earley's algorithm is Chomskyan, syntax-driven and fully
+    algorithm, Earley's algorithm is Chomskyan, declarative and fully
     general. Unlike the Irons algorithm, it does not backtrack. Earley's
     algorithm is both top-down and bottom-up at once -- it uses dynamic
     programming and keeps track of the parse in tables. Earley's approach
@@ -675,7 +672,7 @@ Norvell has made an attempt at classification</a>
     power. Like all non-Chomskyan parsers, GTDPL is basically a extremely
     powerful recognizer. Pressed into service as a parser, it is
     comparatively weak. As a parser, GTDPL is essentially equivalent to
-    Lucas's 1961 syntax-driven algorithm, which was in turn a restricted
+    Lucas's 1961 algorithm, which was in turn a restricted
     form of recursive descent.</p>
     <p>At or around this time, rumor has it that the main line of
     development for GTDPL parsers is classified secret by the US
@@ -856,7 +853,7 @@ Norvell has made an attempt at classification</a>
     so that PEG is always linear, and provides PEG with an attractive
     new syntax.</p>
     <p>Implementers by now are avoiding YACC, but the demand for
-    syntax-driven parsers remains. PEG is not, in fact, syntax-driven,
+    declarative parsers remains. PEG is not, in fact, declarative,
     but it uses the same BNF notation, and many users don't know the
     difference. And nothing has been done to change
       <a href="http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2015/03/peg.html">the problematic behaviors</a>
@@ -885,7 +882,7 @@ Norvell has made an attempt at classification</a>
     unhappy with the way the field was developing. Earley's algorithm
     looked interesting, and it was something I returned to on and off.</p>
     <p>Recall that the original vision of the 1960's was a parser that
-    was efficient, practical, general, and syntax-driven.</p>
+    was efficient, practical, general, and declarative.</p>
     <p>By 2010 this vision seemed to have gone the same way as many other
     1960's dreams. The rhetoric stayed upbeat, but parsing practice had
     become a series of increasingly desperate compromises.</p>
@@ -903,7 +900,7 @@ Norvell has made an attempt at classification</a>
     guarded. As Lincoln said, &quot;Once a cat's been burned, he won't
     even sit on a cold stove.&quot; But I found it straightforward to
     rearrange the Earley parse engine to allow efficient event-driven
-    handovers between procedural and syntax-driven logic. And Earley
+    handovers between procedural and declarative logic. And Earley
     tables provide the procedural logic with full knowledge of the state
     of the parse so far, so that Earley's algorithm is a better platform
     for hand-written procedural logic than recursive descent.</p>
