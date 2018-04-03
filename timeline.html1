@@ -13,6 +13,9 @@
       comment { display:none }
       footnote { display:none }
       biblio { display:none }
+      term { }
+      term::before { content: open-quote }
+      term::after { content: close-quote }
     </style>
   </head>
   <body>
@@ -32,7 +35,7 @@
       this timeline.
     </p>
     <h1>1906: Markov's chains</h1>
-    <p>Andrey Markov introduces his &quot;chains&quot; -- a set of
+    <p>Andrey Markov introduces his <term>chains</term> -- a set of
       states with transitions between them.
       One offshoot of Markov's work will be what we now
       know as regular expressions.
@@ -192,6 +195,13 @@ DOI: 10.2307/2371809
       both in terms of insight and execution, and her energetic followup
       did much to move forward the events in this timeline.
       Hopper has a big reputation and it is fully deserved</footnote>.
+      <p>There were compilers written or described before Hopper,
+      but nobody called them compilers -- compiling in our modern sense
+      was called
+      "automatic coding", "codification automatique" or "Rechenplanfertigung"<footnote>
+        Knuth and Pardo 1976,
+	p. 50.
+      </footnote>.
     <h1>1952: Glennie's AUTOCODE</h1>
     <p>Knuth<footnote>
         Knuth and Pardo 1976,
@@ -200,17 +210,18 @@ DOI: 10.2307/2371809
       calls Glennie's the first &quot;real&quot; compiler in that
       it was actually implemented and used by someone to translate
       algebraic statements into machine language. Glennie's AUTOCODE
-      was very low-level and hard-to-use, and had little impact on
-      other users of its target -- the Manchester Mark I. And because
+      was close to the machine and too low-level for operator expressions.
+      AUTOCODE was also hard-to-use, and had little impact on
+      other users of its target -- the Manchester Mark I.
+      And because
       Glennie worked for the British atomic weapons projects his papers
       were routinely classified, so that the influence of AUTOCODE was
       slow to spread. Nonetheless, many other &quot;compilers&quot;
       afterward were named AUTOCODE, and this probably indicates some
-      awareness of Glennie's effort.<footnote>
-	[TODO: Research Glennie and operator expressions.]
+      awareness of Glennie's effort<footnote>
         Knuth and Pardo 1976,
         pp. 42-49.
-      </footnote>
+      </footnote>.
     </p>
     <h1>1954: The FORTRAN project begins</h1>
     <p>At IBM, a team under John Backus begins working on the language which will be called FORTRAN.</p>
@@ -228,18 +239,21 @@ DOI: 10.2307/2371809
     <h1>1955: Noam Chomsky starts teaching at MIT</h1>
     <p>Noam Chomsky is awarded a Ph.D. in linguistics and accepts a
     teaching post at MIT. MIT does not have a linguistics department and
-    Chomsky, in his linguistics course, is free to teach his own approach,
+    Chomsky is free to teach his own approach,
+    Chomksy's linguistics course is
     highly original and very mathematical.</p>
     <h1>1955: Work begins on the IT compiler</h1>
-    <p>At Purdue, a team including Alan Perlis and Joseph Smith begins work on the IT compiler.
-      <footnote>
+    <p>At Purdue, a team including Alan Perlis and Joseph Smith begins work
+    on the IT compiler<footnote>
         Knuth and Pardo 1976,
         pp. 83-86.
-      </footnote>
+      </footnote>.
     </p>
-    <h1>1956</h1>
+    <h1>1956: The IT compiler is released</h1>
     <p>Perlis and Smith, now at the Carnegie Institute of Technology,
-    finish the IT compiler. Don Knuth calls this &quot;the first really
+    finish the IT compiler. Don Knuth calls this
+    <blockquote>
+    the first really
       <em>useful</em>
       compiler. IT and IT's derivatives were used successfully and
       frequently in hundreds of computer installations until [its
@@ -247,8 +261,7 @@ DOI: 10.2307/2371809
       were important steps along the way, but none of them had the
       combination of powerful language and adequate implementation and
       documentation needed to make a significant impact in the use of
-      machines.&quot;
-      <footnote>
+      machines.<footnote>
         A.J. Perlis, J.W. Smith and H.R. vanZoeren,
         "Internal Translator (IT)
         A Compiler for the 650",
@@ -256,7 +269,8 @@ DOI: 10.2307/2371809
         Carnegie Institute of Technology,
         April 18, 1958
         pp 1.17-1.22
-      </footnote>
+      </footnote>.
+    </blockquote>
     </p>
     <h1>The Operator Issue</h1>
     <p>With the IT compiler the &quot;operator issue&quot; comes to the
