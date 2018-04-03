@@ -32,52 +32,97 @@
       this timeline.
     </p>
     <h1>1906: Markov's chains</h1>
-    <p>Andrei Markov introduces his &quot;chains&quot; -- a set of
+    <p>Andrey Markov introduces his &quot;chains&quot; -- a set of
       states with transitions between them.
       One offshoot of Markov's work will be what we now
       know as regular expressions.
       Markov uses his chains, not
-      for parsing, but for solving problems in probability.<a id="footnote-1-ref" href="#footnote-1">[1]</a>
+      for parsing, but for solving problems in probability<a id="footnote-1-ref" href="#footnote-1">[1]</a>.
     </p>
     <h1>1943: Post's rewriting system</h1>
-    <p>Emil Post defines and studies a formal rewriting system using
-    productions. With this, the process of rediscovering Pannini in the
-    West begins.</p>
-    <h1>1945: Turing discovers stacks</h1>
-    <p>Alan Turing discovers the stack as part of his design of the
-    ACE machine. This is important in parsing because recursive parsing
-    requires stacks. The importance of Turing's discovery is not noticed
-    at the time and stacks will be re-discovered many times over the
-    next two decades.<a id="footnote-2-ref" href="#footnote-2">[2]</a>
+    <p>Emil Post defines and studies a formal rewriting system
+    <a id="footnote-2-ref" href="#footnote-2">[2]</a>.
     </p>
     <h1>1948: Shannon repurposes Markov's chains</h1>
-    <p>Claude Shannon publishes the foundation paper of information theory.<a id="footnote-3-ref" href="#footnote-3">[3]</a>
-      Andrey Markov's finite state processes are used heavily. In this
-      paper, Shannon makes an attempt to model English using Markov
+    <p>Claude Shannon publishes the foundation paper of information theory<a id="footnote-3-ref" href="#footnote-3">[3]</a>.
+      In this
+      paper, Shannon makes an attempt to model English using Andrey Markov's
       chains.<a id="footnote-4-ref" href="#footnote-4">[4]</a>
     </p>
     <h1>1949: Rutishauser's compiler</h1>
     <p>From 1949 to 1951 at the ETH Zurich, Heinz Rutishauser worked on
-      the design of what we would now call a compiler.<a id="footnote-5-ref" href="#footnote-5">[5]</a>
+      the design of what we would now call a compiler<a id="footnote-5-ref" href="#footnote-5">[5]</a>.
       Rutishauser's language is line-by-line and parsed as hoc, but it
       does parse arithmetic expressions. Rutishauser's expression parser
       did not honor precedence but did allow nested parentheses. It
       is perhaps the first algorithm which can really be considered a
       parsing method. Rutishauser's compiler was never implemented.</p>
+    <h1>Operator Expressions</h1>
+    <p>With Rutishauser's work, the parsing of operator expressions comes
+    into the picture.
+    Operators expressions are
+    often treated a side issue.
+    In fact, as this timeline will show,
+    operator expressions are in fact central to the story of Western parsing theory.
+    </p>
+    <p>
+    Informally, operator are expressions built up from operands
+    and operators.
+    An operand can be another operator expression,
+    so that operators expressions can be built up recursively.
+    </p>
+    <p>
+    The archetypal examples of operator expressions are arithmetic expressions:
+    "2+(3*4)", "13**2**^-5*9/11", "1729-42*8675309", etc.
+    In Western mathematics these were read according traditional ideas of
+    associativity and precedence.
+    Traditionally, in the above
+    <ul>
+    <li>'**' is exponentiation.
+    It right associates and has tightest<a id="footnote-6-ref" href="#footnote-6">[6]</a>
+    precedence.
+    </li>
+    <li>
+    Multiplication ('*') and division ('/') left associate.
+    They have a precedence equal to each other
+    and less tight than exponentiation.
+    </li>
+    <li>
+    Addition ('+') and subtraction ('-') left associate.
+    They have a precedence equal to each other
+    and less tight than multiplication and division.
+    </li>
+    <li>
+    Parentheses, when present, override the traditional
+    associativity and precedence.
+    </li>
+    </ul>
+    <p>Certainly in the first attempts at parsing in compilers,
+    arithmetic expressions are central.
+    The first compiled languages are organized line-by-line and,
+    except for arithmetic expressions,
+    lines are
+    interpreted using basic string manipulations.
+    It is only when those string manipulations turn to dealing
+    with arithmetic expressions that they become sophisticated
+    enough to be called parsing techniques,
+    and having a parsing theory to describe them becomes helpful.
+    </p>
     <h1>1950: Boehm's compiler</h1>
     <p>During 1950, Corrado Boehm, also at the ETH Zurich develops his
     own compiler. They are working at the same institution at the same
     time, but Boehm is unaware of Rutishauser's work until his own is
     complete. Like Rutishauser, Boehm's language is line-by-line and
-    parsed ad hoc, except for expressions. Boehm expression parser
+    parsed ad hoc, except for expressions. Boehm's expression parser
       <em>does</em>
       honor precedence, making it perhaps the first operator precedence
-      parser. Boehm's compiler also allows parentheses, but the two cannot
+      parser
+      Boehm's compiler also allows parentheses, but the two cannot
       be mixed -- an expression can either be parsed using precedence
       or have parentheses, but not both.</p>
-    <p>Boehm's is the first self-compiling compiler -- it is written
+    <p>Boehm's is also the first self-compiling compiler -- it is written
     in its own language. Like Rutishauser's, Boehm's compiler was never
-    implemented.<a id="footnote-6-ref" href="#footnote-6">[6]</a>
+    implemented<a id="footnote-7-ref" href="#footnote-7">[7]</a>.
     </p>
     <h1>1952: Grace Hopper uses the term &quot;compiler&quot;</h1>
     <p>Grace Hopper writes a linker-loader.
@@ -88,7 +133,7 @@
     <h1>Term: &quot;compiler&quot; as of 1952</h1>
     <p>Hopper used the term &quot;compiler&quot; in a meaning it
       had at the time: &quot;to compose out of materials from other
-      documents&quot;.<a id="footnote-7-ref" href="#footnote-7">[7]</a>
+      documents&quot;<a id="footnote-8-ref" href="#footnote-8">[8]</a>.
       Specifically, before Hopper, the task we now see as
       &quot;compiling&quot; was then seen putting together a set of
       pre-existing assembler subroutines and calling them. Hopper's new
@@ -96,12 +141,9 @@
       it expanded them (or in other words &quot;compiled&quot; them) into
       a single program. Since Hopper the term has acquired a different
       and very specialized meaning in the computer field. Today we would
-      not call Hopper's program a &quot;compiler&quot;.</p>
-    <p>As an aside, whatever it is called, Hopper's program was a
-    major achievement, both in terms of insight and execution. Hopper's
-    reputation is well-deserved.</p>
+      not call Hopper's program a &quot;compiler&quot;<a id="footnote-9-ref" href="#footnote-9">[9]</a>.
     <h1>1952: Glennie's AUTOCODE</h1>
-    <p>Knuth<a id="footnote-8-ref" href="#footnote-8">[8]</a>
+    <p>Knuth<a id="footnote-10-ref" href="#footnote-10">[10]</a>
       calls Glennie's the first &quot;real&quot; compiler in that
       it was actually implemented and used by someone to translate
       algebraic statements into machine language. Glennie's AUTOCODE
@@ -111,7 +153,7 @@
       were routinely classified, so that the influence of AUTOCODE was
       slow to spread. Nonetheless, many other &quot;compilers&quot;
       afterward were named AUTOCODE, and this probably indicates some
-      awareness of Glennie's effort.<a id="footnote-9-ref" href="#footnote-9">[9]</a>
+      awareness of Glennie's effort.<a id="footnote-11-ref" href="#footnote-11">[11]</a>
     </p>
     <h1>1954: The FORTRAN project begins</h1>
     <p>At IBM, a team under John Backus begins working on the language which will be called FORTRAN.</p>
@@ -119,7 +161,7 @@
     <p>As of 1954, the term &quot;compiler&quot; was still being used
       in Hopper's looser sense, instead of its modern, specialized,
       one. In particular, there was no implication that the output of a
-      &quot;compiler&quot; is ready for execution by a computer.<a id="footnote-10-ref" href="#footnote-10">[10]</a>
+      &quot;compiler&quot; is ready for execution by a computer.<a id="footnote-12-ref" href="#footnote-12">[12]</a>
       The output of one 1954 &quot;compiler&quot;, for example, produced
       relative addresses, which needed to be translated by hand before
       a machine can execute them.</p>
@@ -130,7 +172,7 @@
     highly original and very mathematical.</p>
     <h1>1955: Work begins on the IT compiler</h1>
     <p>At Purdue, a team including Alan Perlis and Joseph Smith begins work on the IT compiler.
-      <a id="footnote-11-ref" href="#footnote-11">[11]</a>
+      <a id="footnote-13-ref" href="#footnote-13">[13]</a>
     </p>
     <h1>1956</h1>
     <p>Perlis and Smith, now at the Carnegie Institute of Technology,
@@ -143,7 +185,7 @@
       combination of powerful language and adequate implementation and
       documentation needed to make a significant impact in the use of
       machines.&quot;
-      <a id="footnote-12-ref" href="#footnote-12">[12]</a>
+      <a id="footnote-14-ref" href="#footnote-14">[14]</a>
     </p>
     <h1>The Operator Issue</h1>
     <p>With the IT compiler the &quot;operator issue&quot; comes to the
@@ -157,7 +199,7 @@
       proves very unpopular: Donald Knuth reports that &quot;The lack of
       operator priority (often called precedence or hierarchy) in the IT
       language was the most frequent single cause of errors by the users
-      of that compiler.&quot;<a id="footnote-13-ref" href="#footnote-13">[13]</a>
+      of that compiler.&quot;<a id="footnote-15-ref" href="#footnote-15">[15]</a>
     </p>
     <p>Since when the IT compiler is written before there is a single
     published parsing algorithm, it is not surprising this proves an
@@ -165,14 +207,14 @@
     after more than more six decades of stunning progress in other areas
     of computer, the Operator Issue is still very much a live issue.</p>
     <h1>Term: &quot;compiler&quot; as of 1956</h1>
-    <p>In the 1956 document describing the IT compiler,<a id="footnote-14-ref" href="#footnote-14">[14]</a>
+    <p>In the 1956 document describing the IT compiler,<a id="footnote-16-ref" href="#footnote-16">[16]</a>
       IT team is careful to define the term. Their definition makes clear that
       they are using of the word &quot;compiler&quot; in something like its
       modern sense, perhaps for the first time. From this time on, when used
       as a technical term within computing, &quot;compiler&quot; will usually
       mean what we currently understand it to mean.</p>
     <h1>1956</h1>
-    <p>Chomsky publishes the paper which is usually considered the foundation of Western formal language theory.<a id="footnote-15-ref" href="#footnote-15">[15]</a>
+    <p>Chomsky publishes the paper which is usually considered the foundation of Western formal language theory.<a id="footnote-17-ref" href="#footnote-17">[17]</a>
       Chomsky demolishes the idea that natural language grammar can be
       modeled using only Markov chains. Instead, the paper advocates a
       natural language approach that uses three layers:</p>
@@ -251,7 +293,7 @@
     <h1>1959: Backus's notation</h1>
     <p>Backus discovers a new notation to describe the IAL language
       (aka ALGOL). Backus's notation is influenced by his study of Post --
-      he seems not to have read Chomsky until later.<a id="footnote-16-ref" href="#footnote-16">[16]</a>
+      he seems not to have read Chomsky until later.<a id="footnote-18-ref" href="#footnote-18">[18]</a>
     </p>
     <h1>1960: BNF</h1>
     <p>Peter Naur improves the Backus notation and uses it to describe
@@ -294,7 +336,7 @@
     have any practical use, so that the restriction to proper grammars
     is unproblematic.</p>
     <h1>1960: Gleenie's compiler-compiler</h1>
-    <p>A.E. Gleenie publishes his description of a compiler-compiler.<a id="footnote-17-ref" href="#footnote-17">[17]</a>
+    <p>A.E. Gleenie publishes his description of a compiler-compiler.<a id="footnote-19-ref" href="#footnote-19">[19]</a>
       Glennie's &quot;universal compiler&quot; is more of a methodology
       than an implementation -- the compilers must be written by
       hand. Glennie credits both Chomsky and Backus, and observes
@@ -337,7 +379,7 @@
     ever since.</p>
     <h1>1960: Operator precedence and stacks</h1>
     <p>Since FORTRAN I, many people have refined its operator precedence implementation.
-      A Feb 1960 paper by Samuelson and Bauer<a id="footnote-18-ref" href="#footnote-18">[18]</a>
+      A Feb 1960 paper by Samuelson and Bauer<a id="footnote-20-ref" href="#footnote-20">[20]</a>
       implements operator precedence using stacks proves particularly influential.
     </p>
     <h1>1961: The first parsing paper</h1>
@@ -345,7 +387,7 @@
       60 parser. It is the first paper to fully describe any parser. The
       Irons algorithm is Chomskyan and top-down with a bottom-up &quot;left
       corner&quot; element -- it is what now would be called a &quot;left
-      corner&quot; parser.<a id="footnote-19-ref" href="#footnote-19">[19]</a>
+      corner&quot; parser.<a id="footnote-21-ref" href="#footnote-21">[21]</a>
     </p>
     <p>You would expect parsing might start with hard-written
     parsers for specific grammar classes.
@@ -391,7 +433,7 @@
     <h1>Terms: &quot;Synthetic attribute&quot;</h1>
     <p>Irons 1961 also introduces synthetic attributes: the parse creates
       a tree, which is evaluated bottom-up. Each node is evaluated using
-      attributes &quot;synthesized&quot; from its child nodes.<a id="footnote-20-ref" href="#footnote-20">[20]</a>
+      attributes &quot;synthesized&quot; from its child nodes.<a id="footnote-22-ref" href="#footnote-22">[22]</a>
     </p>
     <p>Pedantically, synthetic attributes are not a parsing concept --
     they are way of doing semantics. But almost nobody parses without
@@ -399,10 +441,10 @@
     semantic concepts has had major effects on the development of
     parsing. Synthetic attributes will be important.</p>
     <h1>1961: Lucas discovers recursive descent</h1>
-    <p>Peter Lucas publishes the first description of a purely top-down parser<a id="footnote-21-ref" href="#footnote-21">[21]</a></p>
+    <p>Peter Lucas publishes the first description of a purely top-down parser<a id="footnote-23-ref" href="#footnote-23">[23]</a></p>
     <!-- html_fmt: Next end tag is cruft -->
     </footnote><p>.
-      Either Irons paper or this one can be considered to be recursive descent<a id="footnote-22-ref" href="#footnote-22">[22]</a>.
+      Either Irons paper or this one can be considered to be recursive descent<a id="footnote-24-ref" href="#footnote-24">[24]</a>.
       Certainly the Lucas algorithm more closely resembles modern implementations of recursive descent.</p>
     <p>Except to say that he deals properly with them, Lucas does not say
       how he parses operator expressions. But it is easy to believe Lucas'
@@ -436,7 +478,7 @@
       parsing theory. This makes it a good fit for hand-coding.</p></li>
     </ul>
     <h1>1961: Dijkstra's shunting yard algorithm</h1>
-    <p>In November 1961, Dijkstra publishes the &quot;shunting yard&quot; algorithm.<a id="footnote-23-ref" href="#footnote-23">[23]</a>
+    <p>In November 1961, Dijkstra publishes the &quot;shunting yard&quot; algorithm.<a id="footnote-25-ref" href="#footnote-25">[25]</a>
       <a
 href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
 Norvell has made an attempt at classification</a>
@@ -489,7 +531,7 @@ Norvell has made an attempt at classification</a>
     </p>
     <h1>1963</h1>
     <p>L. Schmidt, Howard Metcalf, and Val Schorre present papers on
-    compilers at a Denver conference.<a id="footnote-24-ref" href="#footnote-24">[24]</a>
+    compilers at a Denver conference.<a id="footnote-26-ref" href="#footnote-26">[26]</a>
       At the time, they call their approach syntax-directed,
       but it will turn out to be non-Chomskyan: BNF is used as a
       procedural notation, and does not necessarily describe the
@@ -503,28 +545,28 @@ Norvell has made an attempt at classification</a>
       different&quot; from that of Irons 1961 -- as noted, it is
       pre-Chomskyan. Meta II is a template, rather than something that
       readers can use, but in principle it can be turned into a fully
-      automated compiler-compiler.<a id="footnote-25-ref" href="#footnote-25">[25]</a>
+      automated compiler-compiler.<a id="footnote-27-ref" href="#footnote-27">[27]</a>
     </p>
     <h1>1965</h1>
     <p>Don Knuth discovers LR parsing. The LR algorithm is deterministic,
       Chomskyan and bottom-up. Knuth is primarily interested in the
       mathematics, and the parsing algorithm he gives is not practical. He
       leaves development of practical LR parsing algorithms as an &quot;open
-      question&quot; for &quot;future research&quot;.<a id="footnote-26-ref" href="#footnote-26">[26]</a>
+      question&quot; for &quot;future research&quot;.<a id="footnote-28-ref" href="#footnote-28">[28]</a>
     </p>
     <h1>1968</h1>
     <p>When Knuth discovered the LR grammars, he announced them to
       the world with a full-blown mathematical description. The top-down
       grammars, which arose historically, lack such a description. In 1968,
-      Lewis and Stearns fill that gap by defining the LL(k) grammars.<a id="footnote-27-ref" href="#footnote-27">[27]</a>
+      Lewis and Stearns fill that gap by defining the LL(k) grammars.<a id="footnote-29-ref" href="#footnote-29">[29]</a>
     </p>
     <h1>Terms: &quot;LL&quot;, &quot;LR&quot;, &quot;RL&quot; and &quot;RR&quot;</h1>
     <p>When LL is added to the vocabulary of parsing, the meaning of
       &quot;LR&quot; shifts slightly. In 1965 Knuth meant LR to mean
-      &quot;translatable from left to right&quot;.<a id="footnote-28-ref" href="#footnote-28">[28]</a>
+      &quot;translatable from left to right&quot;.<a id="footnote-30-ref" href="#footnote-30">[30]</a>
       LL means &quot;scan from the left, using left reductions&quot;
       and LR acquires its current meaning of scan from the left, using
-      right reductions&quot;.<a id="footnote-29-ref" href="#footnote-29">[29]</a>
+      right reductions&quot;.<a id="footnote-31-ref" href="#footnote-31">[31]</a>
     </p>
     <p>LL and LR have mirror images: RL means &quot;scan from the right,
     using left reductions&quot; and RR acquires its current meaning
@@ -567,7 +609,7 @@ Norvell has made an attempt at classification</a>
     </ul>
     <h1>1968</h1>
     <p>Knuth publishes a paper on a concept he had been working for the
-      previous few years: attribute grammars.<a id="footnote-30-ref" href="#footnote-30">[30]</a>
+      previous few years: attribute grammars.<a id="footnote-32-ref" href="#footnote-32">[32]</a>
       Irons' synthetic attributes had always been inadequate for many
       problems, and had been supplemented by side effects or state
       variables. Knuth adds inherited attributes, and discovers attribute
@@ -629,7 +671,7 @@ Norvell has made an attempt at classification</a>
     form of recursive descent.</p>
     <p>At or around this time, rumor has it that the main line of
     development for GTDPL parsers is classified secret by the US
-    government.<a id="footnote-31-ref" href="#footnote-31">[31]</a>
+    government.<a id="footnote-33-ref" href="#footnote-33">[33]</a>
       GTDPL parsers have the property that even small changes in GTDPL parsers can be very labor-intensive. For some government contractors, GTDPL parsing provides steady work for years to come. Public interest in GTDPL fades.</p>
     <h1>1973: Pratt parsing</h1>
     <p>One approach to the Operator Issue has not been mentioned. We
@@ -648,7 +690,7 @@ Norvell has made an attempt at classification</a>
       <a
     href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         Norvell's taxonomy</a>) to operator expression parsing, one which
-      some have adopted as an overall solution to their parsing problems.<a id="footnote-32-ref" href="#footnote-32">[32]</a>
+      some have adopted as an overall solution to their parsing problems.<a id="footnote-34-ref" href="#footnote-34">[34]</a>
     </p>
     <p>The Pratt approach, and its descendant, precedence climbing,
     is not popular as an overall strategy. It is most often used as the
@@ -687,13 +729,13 @@ Norvell has made an attempt at classification</a>
     <p>
       Wadler starts to introduce monads to the functional programming community.
       As one example he converts his previous efforts at function parsing
-      techniques<a id="footnote-33-ref" href="#footnote-33">[33]</a>.
+      techniques<a id="footnote-35-ref" href="#footnote-35">[35]</a>.
       The parsing technique is pure recursive descent.
       The examples shown for monadic parsing are very simple,
       and do not include operator expressions.
       In his earlier non-monadic work, Wadler uses a very restricted form of operator expression:
       His grammar avoided left recursion by using parentheses,
-      and operator precedence was not implemented<a id="footnote-34-ref" href="#footnote-34">[34]</a>.
+      and operator precedence was not implemented<a id="footnote-36-ref" href="#footnote-36">[36]</a>.
     </p>
     <h1>1991</h1>
     <p>Joop Leo discovers a way of speeding up right recursions in
@@ -724,9 +766,9 @@ Norvell has made an attempt at classification</a>
     </p>
     <p>
       Combinator parsing
-      was introduced in two 1992 papers<a id="footnote-35-ref" href="#footnote-35">[35]</a>.
+      was introduced in two 1992 papers<a id="footnote-37-ref" href="#footnote-37">[37]</a>.
       Of more interest
-      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-36-ref" href="#footnote-36">[36]</a>.
+      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-38-ref" href="#footnote-38">[38]</a>.
       Combinators will become important in programming languages and
       semantics. But in terms of parsing algorithms, Hutton introduces
       nothing new -- wrapped up in an attribute grammar; underlying the
@@ -743,7 +785,7 @@ Norvell has made an attempt at classification</a>
       Hutton points out
       "combinator parsers give rise to a monad" and shows
       how his presentation could be rewritten in a form
-      closely related to monads<a id="footnote-37-ref" href="#footnote-37">[37]</a>.
+      closely related to monads<a id="footnote-39-ref" href="#footnote-39">[39]</a>.
     </p>
     <!-- html_fmt: Next end tag is cruft -->
     </p>
@@ -752,7 +794,7 @@ Norvell has made an attempt at classification</a>
       In their adaptation into the world of
       programming,
       the 1995 article by Wadler
-      <a id="footnote-38-ref" href="#footnote-38">[38]</a>
+      <a id="footnote-40-ref" href="#footnote-40">[40]</a>
       is a turning point.
       One of Wadler's examples is a parser based on
       monads and combinator parsing.
@@ -780,7 +822,7 @@ Norvell has made an attempt at classification</a>
     <h1>1996</h1><p>
       Wadler had used parsing as an example to motivate
       his presentation of monads.
-      In 1996, Graham Hutton and Erik Meijer<a id="footnote-39-ref" href="#footnote-39">[39]</a>
+      In 1996, Graham Hutton and Erik Meijer<a id="footnote-41-ref" href="#footnote-41">[41]</a>
       take the opposite perspective -- they 
       write a paper on combinator parsing that could
       "also be viewed as a first introduction to the use
@@ -788,7 +830,7 @@ Norvell has made an attempt at classification</a>
     </p>
     <h1>1999</h1><p>
       TODO:
-      <a id="footnote-40-ref" href="#footnote-40">[40]</a>
+      <a id="footnote-42-ref" href="#footnote-42">[42]</a>
     </p><h1>2000</h1>
     <p>Larry Wall decides on a radical reimplementation of Perl --
     Perl 6. Larry does not even consider using LALR again.</p>
@@ -826,9 +868,9 @@ Norvell has made an attempt at classification</a>
     fashionable, say Haskell. But with that change, it might look like
     a breath of fresh air.</p>
     <h1>2010: The first implementation of Leo 1992</h1>
-    TODO: <a id="footnote-41-ref" href="#footnote-41">[41]</a>
+    TODO: <a id="footnote-43-ref" href="#footnote-43">[43]</a>
     <h1>2012: General precedence parsing</h1>
-    TODO: <a id="footnote-42-ref" href="#footnote-42">[42]</a>
+    TODO: <a id="footnote-44-ref" href="#footnote-44">[44]</a>
     <h1>Marpa: an afterword</h1>
     <p>The recollections of my teachers cover most of this timeline. My
     own begin around 1970. Very early on, as a graduate student, I became
@@ -909,10 +951,25 @@ Norvell has made an attempt at classification</a>
     </p>
   <h1>Footnotes</h1>
 <p id="footnote-1">1.
-        Markov, A.A.. "Extension of the law of large numbers to quantities, depending on each other (1906).
-        (original in Russian).
+        Andrey Andreyevich Markov, "Extension of the law of large numbers to quantities, depending on each other" (1906).
+        The title is a translation -- the original in Russian.
  <a href="#footnote-1-ref">&#8617;</a></p>
 <p id="footnote-2">2.
+Emil L. Post,
+"Formal Reductions of the General Combinatorial Decision Problem",
+<b>American Journal of Mathematics</b>,
+Vol. 65, No. 2, pp. 197-215 (April 1943).
+DOI: 10.2307/2371809
+<footnote>
+    using productions.
+    With this, the process of rediscovering Pannini in the
+    West begins.</p>
+    <h1>1945: Turing discovers stacks</h1>
+    <p>Alan Turing discovers the stack as part of his design of the
+    ACE machine. This is important in parsing because recursive parsing
+    requires stacks. The importance of Turing's discovery is not noticed
+    at the time and stacks will be re-discovered many times over the
+    next two decades<footnote>
         Carpenter, B. E.; Doran, R. W. (January 1977). "The other Turing machine". The Computer Journal. 20 (3): 269–279.
  <a href="#footnote-2-ref">&#8617;</a></p>
 <p id="footnote-3">3.
@@ -923,13 +980,21 @@ pp. 4-6.
  <a href="#footnote-4-ref">&#8617;</a></p>
 <p id="footnote-5">5.
         Knuth and Pardo 1976,
-        pp 29-35, 40.
+        pp. 29-35, 40.
  <a href="#footnote-5-ref">&#8617;</a></p>
 <p id="footnote-6">6.
-        Knuth and Pardo 1976,
-        pp 35-42.
+    This timeline refers to precedence levels as "tight"
+    or "loose".
+    The traditional terminology is confusing: tighter
+    precedences are "higher", but traditionally the
+    precendence levels are also numbered and the higher
+    the number, the lower the precedence.
  <a href="#footnote-6-ref">&#8617;</a></p>
 <p id="footnote-7">7.
+        Knuth and Pardo 1976,
+        pp 35-42.
+ <a href="#footnote-7-ref">&#8617;</a></p>
+<p id="footnote-8">8.
         Quoted definition is from Nora B. Moser,
         "Compiler method of automatic programming",
         Symposium on Automatic Programming for Digital Computer,
@@ -937,24 +1002,32 @@ pp. 4-6.
         as cited in
         Knuth and Pardo 1976,
         p 51.
- <a href="#footnote-7-ref">&#8617;</a></p>
-<p id="footnote-8">8.
-        Knuth and Pardo 1976,
-        p 42.
  <a href="#footnote-8-ref">&#8617;</a></p>
 <p id="footnote-9">9.
-        Knuth and Pardo 1976,
-        pp. 42-49.
+      I hope nobody will interpret this terminological clarification as in any sense
+      detracting from Hopper's achievement.
+      Whatever it is called, Hopper's program was a major advance,
+      both in terms of insight and execution, and her energetic followup
+      did much to move forward the events in this timeline.
+      Hopper has a big reputation and it is fully deserved
  <a href="#footnote-9-ref">&#8617;</a></p>
 <p id="footnote-10">10.
-        "http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf
-        pp. 133-134
+        Knuth and Pardo 1976,
+        p 42.
  <a href="#footnote-10-ref">&#8617;</a></p>
 <p id="footnote-11">11.
         Knuth and Pardo 1976,
-        pp. 83-86.
+        pp. 42-49.
  <a href="#footnote-11-ref">&#8617;</a></p>
 <p id="footnote-12">12.
+        "http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf
+        pp. 133-134
+ <a href="#footnote-12-ref">&#8617;</a></p>
+<p id="footnote-13">13.
+        Knuth and Pardo 1976,
+        pp. 83-86.
+ <a href="#footnote-13-ref">&#8617;</a></p>
+<p id="footnote-14">14.
         A.J. Perlis, J.W. Smith and H.R. vanZoeren,
         "Internal Translator (IT)
         A Compiler for the 650",
@@ -962,8 +1035,8 @@ pp. 4-6.
         Carnegie Institute of Technology,
         April 18, 1958
         pp 1.17-1.22
- <a href="#footnote-12-ref">&#8617;</a></p>
-<p id="footnote-13">13.
+ <a href="#footnote-14-ref">&#8617;</a></p>
+<p id="footnote-15">15.
         D.E. Knuth, “A History of Writing Compilers,”
         in
         _COMPUTERS and AUTOMATION_, December, 1962,
@@ -972,35 +1045,35 @@ pp. 4-6.
         "The FORTRAN I Compiler", David Padua,
         in
         Computing in Science & Engineering 2, pp. 70-75 (2000); https://doi.org/10.1109/5992.814661
- <a href="#footnote-13-ref">&#8617;</a></p>
-<p id="footnote-14">14.
-        J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S, "A mathematical language compiler",
-        in (1956) _Proceedings of the 1956 11th ACM national meeting_
- <a href="#footnote-14-ref">&#8617;</a></p>
-<p id="footnote-15">15.
-        Chomsky, Noam. "Three models for the description of language", IEEE Trans. Inform.
-        Theory, 2(3):113–124, 1956.
  <a href="#footnote-15-ref">&#8617;</a></p>
 <p id="footnote-16">16.
-        http://archive.computerhistory.org/resources/text/Oral_History/Backus_John/Backus_John_1.oral_history.2006.102657970.pdf, p. 25
+        J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S, "A mathematical language compiler",
+        in (1956) _Proceedings of the 1956 11th ACM national meeting_
  <a href="#footnote-16-ref">&#8617;</a></p>
 <p id="footnote-17">17.
-        http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm
+        Chomsky, Noam. "Three models for the description of language", IEEE Trans. Inform.
+        Theory, 2(3):113–124, 1956.
  <a href="#footnote-17-ref">&#8617;</a></p>
 <p id="footnote-18">18.
-        Samelson, K. and Bauer, F. L. Sequential formula translation. Commun. ACM,
-        3(2):76–83, Feb. 1960.
+        http://archive.computerhistory.org/resources/text/Oral_History/Backus_John/Backus_John_1.oral_history.2006.102657970.pdf, p. 25
  <a href="#footnote-18-ref">&#8617;</a></p>
 <p id="footnote-19">19.
+        http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm
+ <a href="#footnote-19-ref">&#8617;</a></p>
+<p id="footnote-20">20.
+        Samelson, K. and Bauer, F. L. Sequential formula translation. Commun. ACM,
+        3(2):76–83, Feb. 1960.
+ <a href="#footnote-20-ref">&#8617;</a></p>
+<p id="footnote-21">21.
         Irons 1961.
         Among those who state that Irons 1961 parser is what
         is now called "left-corner" is Knuth ("Top-down syntax analysis", p. 109).
- <a href="#footnote-19-ref">&#8617;</a></p>
-<p id="footnote-20">20.
+ <a href="#footnote-21-ref">&#8617;</a></p>
+<p id="footnote-22">22.
         Irons is credited with the discovery of synthetic attributes
         by Knuth ("Genesis of Attibute Grammars").
- <a href="#footnote-20-ref">&#8617;</a></p>
-<p id="footnote-21">21.
+ <a href="#footnote-22-ref">&#8617;</a></p>
+<p id="footnote-23">23.
         Lucas 1961.
         I follow Grune and Jacobs 2008 in calling Lucas the discoverer of recursive descent.
         In fact, both Irons 1961 and Lucas 1961 are recursive descent with a major bottom-up element.
@@ -1010,8 +1083,8 @@ pp. 4-6.
         while describing the top-down element in detail.
         Also, the Lucas algorithm more resembles modern implementations of recursive descent
         much more closely than Irons 1961.
- <a href="#footnote-21-ref">&#8617;</a></p>
-<p id="footnote-22">22.
+ <a href="#footnote-23-ref">&#8617;</a></p>
+<p id="footnote-24">24.
       As a former student of Irons at Yale,
       my personal preference would be to give Ned the credit
       for recursive descent.
@@ -1019,63 +1092,63 @@ pp. 4-6.
       to the reprint of Irons 1961
       (<b>Communications of the ACM</b>, 25th Anniversary Issue, p. 14).
       But Grune and Jacobs 2008 gives the credit to Lucas 1961.
- <a href="#footnote-22-ref">&#8617;</a></p>
-<p id="footnote-23">23.
+ <a href="#footnote-24-ref">&#8617;</a></p>
+<p id="footnote-25">25.
         Edsger W. Dijkstra, "Algol 60 translation : An Algol 60 translator
         for the x1 and Making a translator for Algol 60", Research Report 35,
         Mathematisch Centrum, Amsterdam, 1961,
- <a href="#footnote-23-ref">&#8617;</a></p>
-<p id="footnote-24">24.
-        Schorre 1964, p. D1.3-1
- <a href="#footnote-24-ref">&#8617;</a></p>
-<p id="footnote-25">25.
-        Schorre 1964, p. D1.3-1
-        http://ibm-1401.info/Meta-II-schorre.pdf
  <a href="#footnote-25-ref">&#8617;</a></p>
 <p id="footnote-26">26.
-        P. 637
+        Schorre 1964, p. D1.3-1
  <a href="#footnote-26-ref">&#8617;</a></p>
 <p id="footnote-27">27.
-        They are credited in Rosencrantz and Stearns (1970)
-        and Aho and Ullman, p. 368.
+        Schorre 1964, p. D1.3-1
+        http://ibm-1401.info/Meta-II-schorre.pdf
  <a href="#footnote-27-ref">&#8617;</a></p>
 <p id="footnote-28">28.
+        P. 637
+ <a href="#footnote-28-ref">&#8617;</a></p>
+<p id="footnote-29">29.
+        They are credited in Rosencrantz and Stearns (1970)
+        and Aho and Ullman, p. 368.
+ <a href="#footnote-29-ref">&#8617;</a></p>
+<p id="footnote-30">30.
         Knuth 1965, p. 610.
         See on p. 611
         "corresponds with the intuitive notion of translation
         from left to right looking k characters ahead".
- <a href="#footnote-28-ref">&#8617;</a></p>
-<p id="footnote-29">29.
-        Knuth, "Top-down syntax analysis", p. 102.
- <a href="#footnote-29-ref">&#8617;</a></p>
-<p id="footnote-30">30.
-        Knuth, "Semantics of context-free languages", 1968.
  <a href="#footnote-30-ref">&#8617;</a></p>
 <p id="footnote-31">31.
-        http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2
+        Knuth, "Top-down syntax analysis", p. 102.
  <a href="#footnote-31-ref">&#8617;</a></p>
 <p id="footnote-32">32.
-        Pratt, Vaughan R. Top down operator precedence. In First ACM Symposium on Prin-
-        ciples of Programming Languages, pages 41–51. ACM, Oct. 1973.
+        Knuth, "Semantics of context-free languages", 1968.
  <a href="#footnote-32-ref">&#8617;</a></p>
 <p id="footnote-33">33.
+        http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2
+ <a href="#footnote-33-ref">&#8617;</a></p>
+<p id="footnote-34">34.
+        Pratt, Vaughan R. Top down operator precedence. In First ACM Symposium on Prin-
+        ciples of Programming Languages, pages 41–51. ACM, Oct. 1973.
+ <a href="#footnote-34-ref">&#8617;</a></p>
+<p id="footnote-35">35.
         Philip Wadler,
         "Comprehending Monads"
         In
         <b>Proceedings of the 1990 ACM conference on LISP and functional programming</b>
         (LFP '90).
         ACM, New York, NY, USA, 61-78. DOI=http://dx.doi.org/10.1145/91556.91592
- <a href="#footnote-33-ref">&#8617;</a></p>
-<p id="footnote-34">34.
+ <a href="#footnote-35-ref">&#8617;</a></p>
+<p id="footnote-36">36.
         Wadler 1985.
- <a href="#footnote-34-ref">&#8617;</a></p>
-<p id="footnote-35">35.
+ <a href="#footnote-36-ref">&#8617;</a></p>
+<p id="footnote-37">37.
       Some source consider <b>Wadler 1985</b> an
       early presentation of the ideas of combinator parsing.
       In assigning priority here,
       I follow Grune and Jacobs 2008 (p. 564).
- <a href="#footnote-35-ref">&#8617;</a></p>
-<p id="footnote-36">36.
+ <a href="#footnote-37-ref">&#8617;</a></p>
+<p id="footnote-38">38.
         The paper which is devoted to parsing is Hutton 1992.
         The other paper, which centers on combinators as a programming
         paradigm, is
@@ -1087,29 +1160,29 @@ pp. 4-6.
         but these avoid left recursion,
         and implement precedence and associativity,
         using parentheses.
- <a href="#footnote-36-ref">&#8617;</a></p>
-<p id="footnote-37">37.
+ <a href="#footnote-38-ref">&#8617;</a></p>
+<p id="footnote-39">39.
         Hutton 1992, pp. 19-20.
- <a href="#footnote-37-ref">&#8617;</a></p>
-<p id="footnote-38">38.
+ <a href="#footnote-39-ref">&#8617;</a></p>
+<p id="footnote-40">40.
         Wadler Philip. (1995) Monads for functional programming. In:
         Jeuring J., Meijer E. (eds) Advanced Functional Programming. AFP
         1995. Lecture Notes in Computer Science, vol 925. Springer,
         Berlin, Heidelberg.
- <a href="#footnote-38-ref">&#8617;</a></p>
-<p id="footnote-39">39.
+ <a href="#footnote-40-ref">&#8617;</a></p>
+<p id="footnote-41">41.
       <b>Hutton and Meijer 1996</b>
- <a href="#footnote-39-ref">&#8617;</a></p>
-<p id="footnote-40">40.
+ <a href="#footnote-41-ref">&#8617;</a></p>
+<p id="footnote-42">42.
         Hudak, Peterson and Fasel,
         "A Gentle Introduction to Haskell 98",
         1999.
- <a href="#footnote-40-ref">&#8617;</a></p>
-<p id="footnote-41">41.
-    http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html
- <a href="#footnote-41-ref">&#8617;</a></p>
-<p id="footnote-42">42.
-    http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html
  <a href="#footnote-42-ref">&#8617;</a></p>
+<p id="footnote-43">43.
+    http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html
+ <a href="#footnote-43-ref">&#8617;</a></p>
+<p id="footnote-44">44.
+    http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html
+ <a href="#footnote-44-ref">&#8617;</a></p>
 </body>
 </html>

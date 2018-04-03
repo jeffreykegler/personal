@@ -32,66 +32,133 @@
       this timeline.
     </p>
     <h1>1906: Markov's chains</h1>
-    <p>Andrei Markov introduces his &quot;chains&quot; -- a set of
+    <p>Andrey Markov introduces his &quot;chains&quot; -- a set of
       states with transitions between them.
       One offshoot of Markov's work will be what we now
       know as regular expressions.
       Markov uses his chains, not
-      for parsing, but for solving problems in probability.<footnote>
-        Markov, A.A.. "Extension of the law of large numbers to quantities, depending on each other (1906).
-        (original in Russian).
-      </footnote>
+      for parsing, but for solving problems in probability<footnote>
+        Andrey Andreyevich Markov, "Extension of the law of large numbers to quantities, depending on each other" (1906).
+        The title is a translation -- the original in Russian.
+      </footnote>.
     </p>
     <h1>1943: Post's rewriting system</h1>
-    <p>Emil Post defines and studies a formal rewriting system using
-    productions. With this, the process of rediscovering Pannini in the
+    <p>Emil Post defines and studies a formal rewriting system
+    <footnote>
+Emil L. Post,
+"Formal Reductions of the General Combinatorial Decision Problem",
+<b>American Journal of Mathematics</b>,
+Vol. 65, No. 2, pp. 197-215 (April 1943).
+DOI: 10.2307/2371809
+<footnote>
+    using productions.
+    With this, the process of rediscovering Pannini in the
     West begins.</p>
     <h1>1945: Turing discovers stacks</h1>
     <p>Alan Turing discovers the stack as part of his design of the
     ACE machine. This is important in parsing because recursive parsing
     requires stacks. The importance of Turing's discovery is not noticed
     at the time and stacks will be re-discovered many times over the
-    next two decades.<footnote>
+    next two decades<footnote>
         Carpenter, B. E.; Doran, R. W. (January 1977). "The other Turing machine". The Computer Journal. 20 (3): 269–279.
-      </footnote>
+      </footnote>.
     </p>
     <h1>1948: Shannon repurposes Markov's chains</h1>
-    <p>Claude Shannon publishes the foundation paper of information theory.<footnote>
+    <p>Claude Shannon publishes the foundation paper of information theory<footnote>
         "A Mathematical Theory of Communication"
-      </footnote>
-      Andrey Markov's finite state processes are used heavily. In this
-      paper, Shannon makes an attempt to model English using Markov
+      </footnote>.
+      In this
+      paper, Shannon makes an attempt to model English using Andrey Markov's
       chains.<footnote>pp. 4-6.
       </footnote>
     </p>
     <h1>1949: Rutishauser's compiler</h1>
     <p>From 1949 to 1951 at the ETH Zurich, Heinz Rutishauser worked on
-      the design of what we would now call a compiler.<footnote>
+      the design of what we would now call a compiler<footnote>
         Knuth and Pardo 1976,
-        pp 29-35, 40.
-      </footnote>
+        pp. 29-35, 40.
+      </footnote>.
       Rutishauser's language is line-by-line and parsed as hoc, but it
       does parse arithmetic expressions. Rutishauser's expression parser
       did not honor precedence but did allow nested parentheses. It
       is perhaps the first algorithm which can really be considered a
       parsing method. Rutishauser's compiler was never implemented.</p>
+    <h1>Operator Expressions</h1>
+    <p>With Rutishauser's work, the parsing of operator expressions comes
+    into the picture.
+    Operators expressions are
+    often treated a side issue.
+    In fact, as this timeline will show,
+    operator expressions are in fact central to the story of Western parsing theory.
+    </p>
+    <p>
+    Informally, operator are expressions built up from operands
+    and operators.
+    An operand can be another operator expression,
+    so that operators expressions can be built up recursively.
+    </p>
+    <p>
+    The archetypal examples of operator expressions are arithmetic expressions:
+    "2+(3*4)", "13**2**^-5*9/11", "1729-42*8675309", etc.
+    In Western mathematics these were read according traditional ideas of
+    associativity and precedence.
+    Traditionally, in the above
+    <ul>
+    <li>'**' is exponentiation.
+    It right associates and has tightest<footnote>
+    This timeline refers to precedence levels as "tight"
+    or "loose".
+    The traditional terminology is confusing: tighter
+    precedences are "higher", but traditionally the
+    precendence levels are also numbered and the higher
+    the number, the lower the precedence.
+    </footnote>
+    precedence.
+    </li>
+    <li>
+    Multiplication ('*') and division ('/') left associate.
+    They have a precedence equal to each other
+    and less tight than exponentiation.
+    </li>
+    <li>
+    Addition ('+') and subtraction ('-') left associate.
+    They have a precedence equal to each other
+    and less tight than multiplication and division.
+    </li>
+    <li>
+    Parentheses, when present, override the traditional
+    associativity and precedence.
+    </li>
+    </ul>
+    <p>Certainly in the first attempts at parsing in compilers,
+    arithmetic expressions are central.
+    The first compiled languages are organized line-by-line and,
+    except for arithmetic expressions,
+    lines are
+    interpreted using basic string manipulations.
+    It is only when those string manipulations turn to dealing
+    with arithmetic expressions that they become sophisticated
+    enough to be called parsing techniques,
+    and having a parsing theory to describe them becomes helpful.
+    </p>
     <h1>1950: Boehm's compiler</h1>
     <p>During 1950, Corrado Boehm, also at the ETH Zurich develops his
     own compiler. They are working at the same institution at the same
     time, but Boehm is unaware of Rutishauser's work until his own is
     complete. Like Rutishauser, Boehm's language is line-by-line and
-    parsed ad hoc, except for expressions. Boehm expression parser
+    parsed ad hoc, except for expressions. Boehm's expression parser
       <em>does</em>
       honor precedence, making it perhaps the first operator precedence
-      parser. Boehm's compiler also allows parentheses, but the two cannot
+      parser
+      Boehm's compiler also allows parentheses, but the two cannot
       be mixed -- an expression can either be parsed using precedence
       or have parentheses, but not both.</p>
-    <p>Boehm's is the first self-compiling compiler -- it is written
+    <p>Boehm's is also the first self-compiling compiler -- it is written
     in its own language. Like Rutishauser's, Boehm's compiler was never
-    implemented.<footnote>
+    implemented<footnote>
         Knuth and Pardo 1976,
         pp 35-42.
-      </footnote>
+      </footnote>.
     </p>
     <h1>1952: Grace Hopper uses the term &quot;compiler&quot;</h1>
     <p>Grace Hopper writes a linker-loader.
@@ -102,7 +169,7 @@
     <h1>Term: &quot;compiler&quot; as of 1952</h1>
     <p>Hopper used the term &quot;compiler&quot; in a meaning it
       had at the time: &quot;to compose out of materials from other
-      documents&quot;.<footnote>
+      documents&quot;<footnote>
         Quoted definition is from Nora B. Moser,
         "Compiler method of automatic programming",
         Symposium on Automatic Programming for Digital Computer,
@@ -110,7 +177,7 @@
         as cited in
         Knuth and Pardo 1976,
         p 51.
-      </footnote>
+      </footnote>.
       Specifically, before Hopper, the task we now see as
       &quot;compiling&quot; was then seen putting together a set of
       pre-existing assembler subroutines and calling them. Hopper's new
@@ -118,10 +185,13 @@
       it expanded them (or in other words &quot;compiled&quot; them) into
       a single program. Since Hopper the term has acquired a different
       and very specialized meaning in the computer field. Today we would
-      not call Hopper's program a &quot;compiler&quot;.</p>
-    <p>As an aside, whatever it is called, Hopper's program was a
-    major achievement, both in terms of insight and execution. Hopper's
-    reputation is well-deserved.</p>
+      not call Hopper's program a &quot;compiler&quot;<footnote>
+      I hope nobody will interpret this terminological clarification as in any sense
+      detracting from Hopper's achievement.
+      Whatever it is called, Hopper's program was a major advance,
+      both in terms of insight and execution, and her energetic followup
+      did much to move forward the events in this timeline.
+      Hopper has a big reputation and it is fully deserved</footnote>.
     <h1>1952: Glennie's AUTOCODE</h1>
     <p>Knuth<footnote>
         Knuth and Pardo 1976,
