@@ -13,6 +13,7 @@
       comment { display:none }
       footnote { display:none }
       biblio { display:none }
+      bibref { font-weight: bold }
       term { }
       term::before { content: open-quote }
       term::after { content: close-quote }
@@ -50,7 +51,7 @@
     <footnote>
 Emil L. Post,
 "Formal Reductions of the General Combinatorial Decision Problem",
-<b>American Journal of Mathematics</b>,
+<cite>American Journal of Mathematics</cite>,
 Vol. 65, No. 2, pp. 197-215 (April 1943).
 DOI: 10.2307/2371809
 <footnote>
@@ -203,20 +204,24 @@ DOI: 10.2307/2371809
 	p. 50.
       </footnote>.
     <h1>1952: Glennie's AUTOCODE</h1>
-    <p>Knuth<footnote>
+    <p>Knuth
+        Knuth and Pardo 1976,
+        p 42.
+      calls Glennie's the first <q>real</q><footnote>
         Knuth and Pardo 1976,
         p 42.
       </footnote>
-      calls Glennie's the first &quot;real&quot; compiler in that
+      compiler, by which he means that
       it was actually implemented and used by someone to translate
-      algebraic statements into machine language. Glennie's AUTOCODE
-      was close to the machine and too low-level for operator expressions.
-      AUTOCODE was also hard-to-use, and had little impact on
+      algebraic statements into machine language.
+      Glennie's AUTOCODE
+      was very close to the machine -- too close to implement operator expressions.
+      AUTOCODE was hard-to-use, and had little impact on
       other users of its target -- the Manchester Mark I.
       And because
       Glennie worked for the British atomic weapons projects his papers
       were routinely classified, so that the influence of AUTOCODE was
-      slow to spread. Nonetheless, many other &quot;compilers&quot;
+      slow to spread. Nonetheless, many other <term>compilers</term>
       afterward were named AUTOCODE, and this probably indicates some
       awareness of Glennie's effort<footnote>
         Knuth and Pardo 1976,
@@ -420,13 +425,12 @@ DOI: 10.2307/2371809
     two more decades will pass before it is
     implemented.
     </p>
-    <h1>Term: <term>declarative</term> and <term>procedural</term></h1>
+    <h1>Term: <term>declarative</term></h1>
     <p>For our purposes, a parser is <term>declarative</term>,
     if it
     will parse directly and automatically from grammars written in BNF.
     Declarative parsers are often called
       <term>syntax-driven</term> parsers.
-      A parser which requires
       </p>
     <h1>Term: <term>procedural</term></h1>
     <p>A parser is <term>procedural</term>, if it requires procedural
@@ -445,35 +449,89 @@ DOI: 10.2307/2371809
       This is a very useful property
       -- it makes it easy for a grammar-writer to know that her grammar
       will parse.
-      It also makes it easy to auto-generate grammars,
-      knowing that they will successfully parse. This opens the way
-      to second-order languages -- languages which specify other
+      This in turn
+      makes it easy to auto-generate grammars,
+      because it is easy for a program to know that
+      the grammar it generates will successfully parse.
+      This opens the way
+      to true second-order languages -- languages which specify other
       languages.</p>
     <h1>1960: Gleenie's compiler-compiler</h1>
-    <p>A.E. Gleenie publishes his description of a compiler-compiler.<footnote>
-        http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm
-      </footnote>
-      Glennie's &quot;universal compiler&quot; is more of a methodology
+    <p>A.E. Gleenie publishes his description of a compiler-compiler<footnote>
+      <bibref>Glennie 1960</bibref>.
+      </footnote>.
+      Glennie's <term>universal compiler</term> is more of a methodology
       than an implementation -- the compilers must be written by
-      hand. Glennie credits both Chomsky and Backus, and observes
-      that the two notations are &quot;related&quot;. He also mentions
-      Post's productions. Glennie may have been the first to use BNF as
+      hand.
+      <p>
+      Glennie have been the first to use BNF as
       a description of a
       <em>procedure</em>
       instead of as the description of a
-      <em>Chomsky grammar</em>. Glennie points out that the distinction is &quot;important&quot;.</p>
-    <h1>Chomskyan BNF and procedural BNF</h1>
-    <p>BNF, when used as a Chomsky grammar, describes a set of strings, and does
-      <em>not</em>
-      describe how to parse strings according to the grammar. BNF
-      notation, if used to describe a procedure, is a set of instructions,
+      <em>Chomsky grammar</em><footnote>
+      For the context-free BNF notation credits both Chomsky and Backus,
+      and observes that the two notations are <term>related</term>.
+      He also mentions
+      Post's productions.
+      </footnote>
+      Glennie points out that the distinction is
+      <q>important</q><footnote>
+      <bibref>Glennie 1960</bibref>.
+      </footnote>
+      .</p>
+    <p>BNF and Chomsky's context free grammars were created primarily as means
+    of grammar <b>description</b>.
+    It is for this reason that BNF is often used in standards and language
+    manuals, where it is expected that the readers of the BNF will be people
+    not machines.
+    Given a BNF notation,
+    a human can very reasonably determine exactly what strings are and
+    are not in a language, and the structure of the parses of those
+    strings.
+    </p>
+    <p>
+    Of course, a notation exact enough to determine what string are and
+    are not in a language,
+    and their parses,
+    and which does so in a way accessible to human readers,
+    could drive a computer algorithm.
+    At least so you would hope and expect.
+    </p>
+    <p>
+    As this timeline will show, a practical declarative
+    parser proved elusive.
+    BNF remained an attractive notation, and in the place of
+    declarative parsers, there arose, beginning with Glennie,
+    parsers which are driven by BNF notation, but which do
+    not parse the language described by that notation.
+    </p>
+    </p>
+       BNF
+      notation, when used to describe a procedure, is a set of instructions,
       to be tried in some order, and used to process a string. Procedural
       BNF describes a procedure first, and a language only indirectly.</p>
+    <p>
+    I will call these <term>pseudo-declarative</term> parsers.
+    To be sure, Glennie in
+    <bibref>Glennie 1960</bibref>never pretends this parser is declarative.
+    Glennie points the distinction out carefully,
+    and notes that it is <q>important</q><footnote>
+    <bibref>Glennie 1960, Section 1.2, "A Notation for Syntax"</bibref>, 
+    </footnote>.
+    But many subsequent writers will be less clear on the matter,
+    and many more of the readers will suffer because of it.
+    Many will waste time assuming that they can get eventually their test
+    suite to write by writing BNF which describes it.
+    Others will get their test suite to work,
+    and will think (falsely)
+    that this means that the language their parser parses is that
+    specified by the BNF.
     <p>Both procedural and Chomskyan BNF describe languages, but usually
       <em>not the same</em>
       language. This is an important point, and one which will be
       overlooked many times in the years to come.</p>
-    <p>The pre-Chomskyan approach, using procedural BNF, is far more
+    <p>[TODO: needs revision. ]
+    The pre-Chomskyan approach, using procedural BNF, is far more
     natural to someone trained as a computer programmer. The parsing
     problem appears to the programmer in the form of strings to be
     parsed, exactly the starting point of procedural BNF and pre-Chomsky
@@ -496,6 +554,7 @@ DOI: 10.2307/2371809
     <h1>1960: Operator precedence and stacks</h1>
     <p>Since FORTRAN I, many people have refined its operator precedence implementation.
       A Feb 1960 paper by Samuelson and Bauer<footnote>
+      [ TODO: Delete this entry?  Or research it more? ]
         Samelson, K. and Bauer, F. L. Sequential formula translation. Commun. ACM,
         3(2):76–83, Feb. 1960.</footnote>
       implements operator precedence using stacks proves particularly influential.
@@ -584,7 +643,7 @@ DOI: 10.2307/2371809
       for recursive descent.
       And this is what Peter Denning does in his introduction
       to the reprint of Irons 1961
-      (<b>Communications of the ACM</b>, 25th Anniversary Issue, p. 14).
+      (<cite>Communications of the ACM</cite>, 25th Anniversary Issue, p. 14).
       But Grune and Jacobs 2008 gives the credit to Lucas 1961.
       </footnote>.
       Certainly the Lucas algorithm more closely resembles modern implementations of recursive descent.</p>
@@ -859,8 +918,10 @@ Norvell has made an attempt at classification</a>
     href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         Norvell's taxonomy</a>) to operator expression parsing, one which
       some have adopted as an overall solution to their parsing problems.<footnote>
-        Pratt, Vaughan R. Top down operator precedence. In First ACM Symposium on Prin-
-        ciples of Programming Languages, pages 41–51. ACM, Oct. 1973.
+        Vaughan R Pratt,
+        "Top down operator precedence",
+	in <cite>First ACM Symposium on Principles of Programming Languages</cite>,
+	pages 41–51. ACM, Oct. 1973.
       </footnote>
     </p>
     <p>The Pratt approach, and its descendant, precedence climbing,
@@ -904,7 +965,7 @@ Norvell has made an attempt at classification</a>
         Philip Wadler,
         "Comprehending Monads"
         In
-        <b>Proceedings of the 1990 ACM conference on LISP and functional programming</b>
+        <cite>Proceedings of the 1990 ACM conference on LISP and functional programming</cite>
         (LFP '90).
         ACM, New York, NY, USA, 61-78. DOI=http://dx.doi.org/10.1145/91556.91592
       </footnote>.
@@ -946,7 +1007,7 @@ Norvell has made an attempt at classification</a>
     <p>
       Combinator parsing
       was introduced in two 1992 papers<footnote>
-      Some source consider <b>Wadler 1985</b> an
+      Some source consider <bibref>Wadler 1985</bibref> an
       early presentation of the ideas of combinator parsing.
       In assigning priority here,
       I follow Grune and Jacobs 2008 (p. 564).
@@ -1026,7 +1087,7 @@ Norvell has made an attempt at classification</a>
       Wadler had used parsing as an example to motivate
       his presentation of monads.
       In 1996, Graham Hutton and Erik Meijer<footnote>
-      <b>Hutton and Meijer 1996</b>
+      <bibref>Hutton and Meijer 1996</bibref>
       </footnote>
       take the opposite perspective -- they 
       write a paper on combinator parsing that could
@@ -1105,8 +1166,8 @@ Norvell has made an attempt at classification</a>
     <p>The programmers of the 1960's would have been prepared to trust
     a fully declarative Chomskyan parser. With the experience with LALR
     in their collective consciousness, modern programmers might be more
-    guarded. As Lincoln said, &quot;Once a cat's been burned, he won't
-    even sit on a cold stove.&quot; But I found it straightforward to
+    guarded. As Lincoln said, <q>Once a cat's been burned, he won't
+    even sit on a cold stove.</q> But I found it straightforward to
     rearrange the Earley parse engine to allow efficient event-driven
     handovers between procedural and declarative logic. And Earley
     tables provide the procedural logic with full knowledge of the state
@@ -1119,45 +1180,57 @@ Norvell has made an attempt at classification</a>
       Bibliographic information for the
       less frequently mentioned
       sources is in the individual footnotes.</p>
+      <p>
+      <bibref>Glennie 1960</bibref>:
+    A. E. Glennie,
+    "On the Syntax Machine and the Construction of a Universal Compiler"
+    Computation Center, Carnegie Institute of Technology,
+    <cite>Technical Report No. 2</cite>
+  (10 July 1960).
+        http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm
+    </p>
     <p>
-      <b>Hutton 1992</b>:
+      <bibref>Hutton 1992</bibref>:
       Hutton, "Higher order functions for parsing",
       Journal of Functional Programming 2(3):323-343, July 1992.
     </p>
-    <p><b>Irons 1961</b>:
+    <p><bibref>Irons 1961</bibref>:
       Irons, E. T. A syntax-directed compiler for ALGOL 60. Commun. ACM,
       4(1):51–55, Jan. 1961.
     </p>
     <p>
-      <b>Lucas 1961</b>:
+      <bibref>Lucas 1961</bibref>:
       Lucas, P. Die Strukturanalyse von Formelnübersetzern / analysis of
       the structure of formula translators. Elektronische Rechenanlagen,
       3(11.4):159–167, 1961, (in German).
     </p>
     <p>
-      <b>Knuth and Pardo 1976</b>:
+      <bibref>Knuth and Pardo 1976</bibref>:
       D. E. Knuth and L. Trabb Pardo (1976), "The Early Development of
       Programming Languages," Report STAN-CS-76-562, Computer Science Dept.,
       Stanford Univ., Stanford, Calif. (Aug. 1976).
       [http://bitsavers.org/pdf/stanford/cs_techReports/STAN-CS-76-562_EarlyDevelPgmgLang_Aug76.pdf ].
-      <p><b>Wadler 1985</b>:
+      <p><bibref>Wadler 1985</bibref>:
         Philip Wadler, "How to Replace Failure by a List of Successes: A method
         for exception handling, backtracking, and pattern matching in lazy
         functional languages". in J-P Jouannaud (ed.),
-        <b>Functional Programming
-          Languages and Computer Architecture</b>.
-        <b>Lecture Notes in Computer Science</b>, 1985
+        <cite>Functional Programming
+          Languages and Computer Architecture</cite>.
+        <cite>Lecture Notes in Computer Science</cite>, 1985
         vol. 201, Springer-Verlag GmbH, pp. 113-128. DOI: 10.1007/3-540-15975-4_33.
     </p>
-      <b>Hutton and Meijer 1996</b>:
-        Graham Hutton and Erik Meijer. Technical Report NOTTCS-TR-96-4,
+      <bibref>Hutton and Meijer 1996</bibref>:
+        Graham Hutton and Erik Meijer.
+	<cite>Technical Report NOTTCS-TR-96-4</cite>,
         Department of Computer Science, University of Nottingham, 1996.
     <p>
-      <b>Grune and Jacobs 2008</b>:
-      Grune, D., & Jacobs, C. J. H. (2008). Parsing Techniques: A Practical
-      Guide, 2nd edition. (Monographs in Computer Science). New York, USA:
+      <bibref>Grune and Jacobs 2008</bibref>:
+      Grune, D., & Jacobs, C. J. H. (2008).
+      <cite>Parsing Techniques: A Practical
+      Guide, 2nd edition</cite>.
+      (<cite>Monographs in Computer Science</cite>). New York, USA:
       Springer.
-      When it comes to determined who first discovered an idea,
+      When it comes to determining who first discovered an idea,
       the literature often disagrees.
       In such cases, I have often deferred
       to the judgement of Grune and Jacobs.
