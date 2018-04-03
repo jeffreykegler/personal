@@ -272,11 +272,6 @@ DOI: 10.2307/2371809
       </footnote>.
     </blockquote>
     </p>
-    <h1>The Operator Issue</h1>
-    <p>With the IT compiler the &quot;operator issue&quot; comes to the
-    fore -- how to handle expression with operators which are expected to
-    honor associativity and precedence. Both mathematicians and ordinary
-    users expect this in a language.</p>
     <p>The IT language had arithmetic expressions, of a sort --
       parentheses are honored, but otherwise evaluation is always
       right-to-left -- there is no operator precedence. IT did honor
@@ -295,22 +290,17 @@ DOI: 10.2307/2371809
         Computing in Science & Engineering 2, pp. 70-75 (2000); https://doi.org/10.1109/5992.814661
       </footnote>
     </p>
-    <p>Since when the IT compiler is written before there is a single
-    published parsing algorithm, it is not surprising this proves an
-    issue. More surprising is the persistance of this issue -- in fact,
-    after more than more six decades of stunning progress in other areas
-    of computer, the Operator Issue is still very much a live issue.</p>
     <h1>&quot;Compiler&quot; as of 1956</h1>
-    <p>In the 1956 document describing the IT compiler,<footnote>
+    <p>In the 1956 document describing the IT compiler<footnote>
         J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S, "A mathematical language compiler",
         in (1956) _Proceedings of the 1956 11th ACM national meeting_
-      </footnote>
+      </footnote>,
       IT team is careful to define the term. Their definition makes clear that
-      they are using of the word &quot;compiler&quot; in something like its
+      they are using of the word <term>compiler</term> in something like its
       modern sense, perhaps for the first time. From this time on, when used
-      as a technical term within computing, &quot;compiler&quot; will usually
+      as a technical term within computing, <term>compiler</term> will usually
       mean what we currently understand it to mean.</p>
-    <h1>1956</h1>
+    <h1>1956: The Chomsky hierarchy</h1>
     <p>Chomsky publishes the paper which is usually considered the foundation of Western formal language theory.<footnote>
         Chomsky, Noam. "Three models for the description of language", IEEE Trans. Inform.
         Theory, 2(3):113–124, 1956.
@@ -318,20 +308,29 @@ DOI: 10.2307/2371809
       Chomsky demolishes the idea that natural language grammar can be
       modeled using only Markov chains. Instead, the paper advocates a
       natural language approach that uses three layers:</p>
-    <p><b>Bottom layer</b>: For his bottom layer, Chomsky does use
-    Markov's chains. This becomes the modern compiler's lexical phase.</p>
-    <p><b>Middle layer</b>: Chomsky's middle layer uses context-free
-    grammars and context-sensitive grammars. These are his own
-    discoveries. This middle layer becomes the syntactic phase of modern
-    compilers.</p>
-    <p><b>Top layer</b>: Chomsky's top layer, again his own
-    discovery, maps or &quot;transforms&quot; the output of the middle
+      <ul>
+    <li>Chomsky uses
+    Markov's chains
+    as his <b>bottom layer</b>.
+    This becomes the modern compiler's <b>lexical phase</b>.</p>
+    </li>
+    <li>Chomsky's <b>middle layer</b>
+    uses context-free
+    grammars and context-sensitive grammars.
+    These are his own
+    discoveries<footnote>
+    Chomsky seems
+    to have been unaware of Post's work -- he does not cite it.
+    </footnote>.
+    This middle layer becomes the <b>syntactic phase</b> of modern
+    compilers.</li>
+    <li>Chomsky's <b>top layer</b>, again his own
+    discovery, maps or <term>transforms</term> the output of the middle
     layer. Chomsky's top layer is the inspiration for AST transformation
-    phase of modern parsers.</p>
-    <p>For finite state processes, Chomsky cites Markov. Chomsky seems
-    to have been unaware of Post's work -- he does not cite it.</p>
+    phase of modern parsers.</li>
+    </ul>
     <h1>Term: &quot;Parsing&quot;</h1>
-    <p>Chomsky is a turning point, so much so that it settles the
+    <p>Chomsky is a turning point, so much so that it establishes or settles the
     meaning of many of the terms we are using. &quot;Parsing&quot;,
     for our purposes, is transforming a string of symbols into a
     structure. Typically this structure is a parse tree.</p>
@@ -345,8 +344,8 @@ DOI: 10.2307/2371809
     <p>Noam Chomsky publishes
       <em>Syntactic Structures</em>, one of the most important books of
       all time. The orthodoxy in 1957 is structural linguistics which
-      argues, with Sherlock Holmes, that &quot;it is a capital mistake
-      to theorize in advance of the facts&quot;. Structuralists start
+      argues, with Sherlock Holmes, that <q>it is a capital mistake
+      to theorize in advance of the facts</q>. Structuralists start
       with the utterances in a language, and build upward.</p>
     <p>But Chomsky claims that without a theory there are no facts: there
     is only noise. The Chomskyan approach is to start with a grammar,
