@@ -512,8 +512,8 @@
       Glennie points out that the distinction is
       <q>important</q><footnote>
         <bibref>Glennie 1960</bibref>.
-      </footnote>
-      .</p>
+      </footnote>.
+      </p>
     <p>BNF and Chomsky's context free grammars were created primarily as means
       of grammar
       <b>description</b>.
@@ -711,20 +711,29 @@
           the list can be reparsed in post-processing. This is essentially
           a delayed-action form of the first method.</p></li>
     </ul>
-    <h1>1960's: Hand-coded recursive descent</h1>
-    <p>Lucas' writeup most likely describes a hand-written
-      parser. Hand-coded approaches became more popular than declarative
-      ones in the 1960's due to three factors:</p>
+    <p[ TODO -- Rewrite. ]
+    Lucas' writeup most likely describes a hand-written
+      parser, not a declarative one.
+      In the 1960s,
+      Hand-coded approaches became more popular than declarative
+      approaches like that of Irons due to three factors:</p>
     <ul>
       <li><p>Memory and CPU were both extremely limited. Hand-coding
           paid off, even when the gains were small.</p></li>
-      <li><p>Pure recursive descent is, in fact, a very weak parsing
-          technique. As we have seen in the case of operator expressions,
-          it is often necessary to go beyond its limits, and that is easier
-          to do if you are coding the parser by hand.</p></li>
       <li><p>Top-down parsing is intuitive -- it essentially means
           calling subroutines. It therefore requires little or no knowledge of
           parsing theory. This makes it a good fit for hand-coding.</p></li>
+      <li><p>Pure recursive descent is, in fact, a very weak parsing
+          technique. Pure recursive descent cannot
+	  deal with either of the operator grammars we have described:
+	  <a href="g-basic">basic</a>
+	  or
+	  <a href="g-right-recursive">right-recursive</a>.
+	  Recursive descent has severe limits,
+          it is often necessary to go beyond them,
+	  and that helps justify
+          coding the entire parser by hand.</p>
+	  </li>
     </ul>
     <h1>1961: Dijkstra's shunting yard algorithm</h1>
     <p>In November 1961, Dijkstra publishes the &quot;shunting yard&quot; algorithm.<footnote>
@@ -752,7 +761,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       With Lucas paper, the operator issue takes a new form --
       one which it still has over 50 years later.
       Specifically, recursive descent cannot parse this very simple operator grammar:
-    </p><ul>
+    </p id="g-basic"><ul>
       <li>S ::= E</li>
       <li>E ::= E + T</li>
       <li>E ::= T</li>
@@ -768,7 +777,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       and they would find reversing it to be very confusing.
       But suppose we ignore that face and rewrite the above grammar to be right
       recursive:
-    </p><ul>
+    </p id="g-right_recursive"><ul>
       <li>S ::= E</li>
       <li>E ::= T + E</li>
       <li>E ::= T</li>
@@ -784,83 +793,130 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     </p>
     <h1>1963</h1>
     <p>L. Schmidt, Howard Metcalf, and Val Schorre present papers on
-      compilers at a Denver conference.<footnote>
-        Schorre 1964, p. D1.3-1</footnote>
-      At the time, they call their approach syntax-directed,
-      but it will turn out to be non-Chomskyan: BNF is used as a
+      compilers at a Denver conference<footnote>
+        <bibref>Schorre 1964</bibref>, p. D1.3-1</footnote>.
+      This approach is
+      non-Chomskyan: BNF is used as a
       procedural notation, and does not necessarily describe the
-      syntax parsed. This timeline will call parsers of this kind
-      &quot;pseudo-syntax-directed&quot;.</p>
+      syntax parsed.
+      They call their approach syntax-driven.
+      In fact,
+      their approach is pseudo-declarative
+      and therefore,
+      according to the terminology used in this timeline,
+      not truly syntax-driven.
     <h1>1964</h1>
-    <p>Schorre publishes a paper on the Meta II &quot;compiler
-      writing language&quot;, summarizing the papers of the 1963
+    <p>Schorre publishes a paper on the Meta II <q>compiler
+      writing language</q>, summarizing the papers of the 1963
       conference. Schorre cites both Backus and Chomsky as sources for
-      Meta II's notation. Schorre notes that his parser is &quot;entirely
-      different&quot; from that of
+      Meta II's notation. Schorre notes that his parser is
+      <q>entirely different</q>
+      from that of
       <bibref>Irons 1961</bibref>
       -- as noted, it is
-      pre-Chomskyan. Meta II is a template, rather than something that
+      pre-Chomskyan.
+      [ TODO: relate non-Chomskyan to declarative. ]
+      Meta II is a template, rather than something that
       readers can use, but in principle it can be turned into a fully
-      automated compiler-compiler.<footnote>
+      automated compiler-compiler<footnote>
         Schorre 1964, p. D1.3-1
         http://ibm-1401.info/Meta-II-schorre.pdf
-      </footnote>
+      </footnote>.
     </p>
     <h1>1965</h1>
-    <p>Don Knuth discovers LR parsing. The LR algorithm is deterministic,
+    <p>Don Knuth discovers LR parsing<footnote>
+    <bibref>Knuth 1965.</bibref>
+    <footnote>.
+    The LR algorithm is deterministic,
       Chomskyan and bottom-up. Knuth is primarily interested in the
       mathematics, and the parsing algorithm he gives is not practical. He
-      leaves development of practical LR parsing algorithms as an &quot;open
-      question&quot; for &quot;future research&quot;.<footnote>
-        P. 637
-      </footnote>
+      leaves development of practical LR parsing algorithms as an
+      <q>open question</q>
+      for <q>future research</q><footnote>
+        <bibref>Knuth 1965</bibref>, p. 637
+      </footnote>.
+    </p>
+    <h1>Term: "linear time"</h1>
+    <p>[ TODO.  And where to put this?
     </p>
     <h1>Misconception: deterministic parsing versus deterministic parsers</h1>
-    <p>TODO
+    <p>Knuth in his 1965 investigates the question:
+    "What is the best a deterministic parser can do?".
+    Many people mistook this as answering a similar-sounding but
+    different question:
+    "What is the best way to parse a deterministic grammar?".
     </p>
+    <p>More precisely, Knuth found the largest class of grammars that
+    a deterministic parser could parse in linear time,
+    and found an algorithm to do it.
+    (It's called LR(k).)
+    Many people took that to be the answer to the question:
+    "Which deterministic grammars can be parsed in linear time,
+    and what is the best algorithm for that."
+    It seems reasonable to guess the two questions are essentially
+    the same,
+    and have the same answer.
+    In fact, most people as the time, and since,
+    have taken that guess as a fact.
+    But as we will see,
+    in 1991 that guess turns out to be wrong.
     <h1>1968</h1>
     <p>When Knuth discovered the LR grammars, he announced them to
       the world with a full-blown mathematical description. The top-down
       grammars, which arose historically, lack such a description. In 1968,
-      Lewis and Stearns fill that gap by defining the LL(k) grammars.<footnote>
+      Lewis and Stearns fill that gap by defining the LL(k) grammars<footnote>
+	<bibref>Lewis and Stearns 1968</bibref>.
         They are credited in Rosencrantz and Stearns (1970)
         and Aho and Ullman, p. 368.
-      </footnote>
+      </footnote>.
     </p>
-    <h1>Terms: &quot;LL&quot;, &quot;LR&quot;, &quot;RL&quot; and &quot;RR&quot;</h1>
+    <h1>Terms: <term>LL</term>, <term>LR</term>, <term>RL</term> and <term>RR</term></h1>
     <p>When LL is added to the vocabulary of parsing, the meaning of
-      &quot;LR&quot; shifts slightly. In 1965 Knuth meant LR to mean
-      &quot;translatable from left to right&quot;.<footnote>
-        Knuth 1965, p. 610.
+      <term>LR</term> shifts slightly. In 1965 Knuth meant LR to mean
+      <q>translatable from left to right</q><footnote>
+        <bibref>Knuth 1965</bibref>, p. 610.
         See on p. 611
         "corresponds with the intuitive notion of translation
         from left to right looking k characters ahead".
-      </footnote>
-      LL means &quot;scan from the left, using left reductions&quot;
-      and LR acquires its current meaning of scan from the left, using
-      right reductions&quot;.<footnote>
+      </footnote>.
+      LL means <q>scan from the left, using left reductions</q>
+      and LR acquires its current meaning of <q>scan from the left, using
+      right reductions</q><footnote>
         Knuth, "Top-down syntax analysis", p. 102.
-      </footnote>
-    </p>
-    <p>LL and LR have mirror images: RL means &quot;scan from the right,
-      using left reductions&quot; and RR acquires its current meaning
-      of scan from the right, using right reductions&quot;. Use of these
-      mirror images is rare, but does occur -- operator expression parsing
+      LL and LR have mirror images: RL means <q>scan from the right,
+      using left reductions</q> and RR acquires its current meaning
+      of <q>scan from the right, using right reductions</q>.
+      Practical use of these
+      mirror images is rare, but it may have occurred
+      in one of the algorithms in our timeline
+      --
+      operator expression parsing
       in the IT compiler seems to have been RL(2) with backtracking.
-    </p>
+      </footnote>.
     <p>If there is a number after the parentheses in this notation for
       parsing algorithms, it usually indicates the number of tokens of
-      lookahead. RL(2) above, meant that the algorithm looked 2 tokens
-      ahead.</p>
+      lookahead.
+      As an example, LL(1) -- <q>scan from the
+      left, using left reductions with one character of lookahead</q> --
+      will be important in what follows.
+      </p>
     <h1>LL(1) and the Operator Issue</h1>
-    <p>Of the algorithms in our new notation, LL(1) -- &quot;scan from the
-      left, using left reductions with one character of lookahead&quot; --
-      is one of the more important ones. Before the introduction of this
-      notation, and the mathematics behind it, the Operator Issue could
-      not be described in precise terms.</p>
-    <p>Now we can state one form of the Operator Issue in more exact
-      terms: Recursive Descent, in its pure form, is LL(1). Arithmetic
-      operator grammars are not LL(1). Something has to give as long as you
+      With <bibref>Knuth 1965</bibref>
+      and 
+      <bibref>Lewis and Stearns 1968</bibref>,
+      a precise terminology falls into place for describing
+      the "Operator Issue".
+      [ TODO: Go back to Operator Issue terminology? ]
+    We can state what the problem has been with recursive descent.
+      Recursive Descent, in its pure form, is LL(1).
+      Arithmetic operator grammars are not LL(1) -- no even close.
+      In fact neither
+      the <a href="#g-basic">Basic Operator Grammar</a>
+      or its <a href="#right-recursive">right recursive variant</a>
+      is LL(k) for any k.
+      </p>
+      <p>
+      Something has to give as long as you
       are using recursive descent. And this is a major reason why truly
       declarative versions of LL(1) are not used. A pure declarative
       LL(1) parser generator
@@ -1273,12 +1329,24 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       4(1):51–55, Jan. 1961.
     </p>
     <p>
+    <bibid>Knuth 1965</bibid>:
+    D. E. Knuth, "On the translation of languages from left to right"
+    <cite>Information and Control</cite>, Vol. 8, Issue: 6, Page: 607-639 (1965).
+    </p>
+    <p>
       <bibid>Knuth and Pardo 1976</bibid>:
-      D. E. Knuth and L. Trabb Pardo (1976), "The Early Development of
-      Programming Languages," Report STAN-CS-76-562, Computer Science Dept.,
+      D. E. Knuth and L. Trabb Pardo, "The Early Development of
+      Programming Languages," <cite>Report STAN-CS-76-562</cite>, Computer Science Dept.,
       Stanford Univ., Stanford, Calif. (Aug. 1976).
       [http://bitsavers.org/pdf/stanford/cs_techReports/STAN-CS-76-562_EarlyDevelPgmgLang_Aug76.pdf ].
-    </p><p>
+    </p>
+    <p>
+    <bibid>Lewis and Stearns 1968</bibid>:
+    P. M. Lewis, II and R. E .Stearns, "Syntax-directed transduction",
+    <cite>Journal of the ACM</cite>,
+    15(3):465– 488 (1968).
+    </p>
+    <p>
       <bibid>Lucas 1961</bibid>:
       Lucas, P. Die Strukturanalyse von Formelnübersetzern / analysis of
       the structure of formula translators. Elektronische Rechenanlagen,
