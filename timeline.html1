@@ -361,6 +361,22 @@
       meaning of many of the terms we are using. &quot;Parsing&quot;,
       for our purposes, is transforming a string of symbols into a
       structure. Typically this structure is a parse tree.</p>
+    <h1>Recognizers</h1>
+    <p>In contrast to a parser,
+    a <term>recognizer</term>
+    is a program which takes a string and a grammar and answers
+    <q>yes</q> or <q>no</q> --
+    <q>yes</q> if the string is in the language described by the grammar,
+    <q>no</q> otherwise.
+    For a compiler to work, it clearly needs
+    a parser, not a recognizer.
+    <p>In comparing algorithms, it can be important to keep in mind
+    whether they are recognizers or parsers.
+      Recognizers can be,
+      to some extent, pressed into service as parsers by introducing captures.
+      This is often done, for example, with regular expressions,
+      and if the semantics is very simple, it works.
+      </p>
     <h1>1957: Kleene's regular expressions</h1>
     <p>Steven Kleene discovers regular expressions, a very handy notation
       for Markov chains. It will turn out that several other mathematical objects
@@ -867,7 +883,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       Lewis and Stearns fill that gap by defining the LL(k) grammars<footnote>
 	<bibref>Lewis and Stearns 1968</bibref>.
         They are credited in Rosencrantz and Stearns (1970)
-        and Aho and Ullman, p. 368.
+        and <bibref>Aho and Ullman 1972</bibref>, p. 368.
       </footnote>.
     </p>
     <h1>Terms: <term>LL</term>, <term>LR</term>, <term>RL</term> and <term>RR</term></h1>
@@ -924,7 +940,10 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       be written, but it would not be able to parse arithmetic expressions
       properly.</p>
     <h1>1968</h1>
-    <p>Jay Earley discovers the algorithm named after him. Like the Irons
+    <p>Jay Earley discovers the algorithm named after him<footnote>
+    <bibref>Earley 1968.</bibref>
+    </footnote>.
+    Like the Irons
       algorithm, Earley's algorithm is Chomskyan, declarative and fully
       general. Unlike the Irons algorithm, it does not backtrack. Earley's
       algorithm is both top-down and bottom-up at once -- it uses dynamic
@@ -939,61 +958,65 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     </ul>
     <h1>1968</h1>
     <p>Knuth publishes a paper on a concept he had been working for the
-      previous few years: attribute grammars.<footnote>
-        Knuth, "Semantics of context-free languages", 1968.
+      previous few years: attribute grammars<footnote>
+        <bibref>Knuth 1968</bibref>.
       </footnote>
       Irons' synthetic attributes had always been inadequate for many
       problems, and had been supplemented by side effects or state
       variables. Knuth adds inherited attributes, and discovers attribute
       grammars.</p>
-    <h1>Term: &quot;Inherited attributes&quot;</h1>
+    <h1>Term: <term>Inherited attributes</term></h1>
     <p>Recall that a node in parse gets its synthetic attributes from
       its parents. Inherited attributes are attibutes a node gets from
       its parents. Of course, this creates potential circularities, but
       inherited attributes are powerful and, with care, the circularities
       can be dealt with.</p>
-    <h1>Term: &quot;Attribute grammar&quot;</h1>
+    <h1>Term: <term>Attribute grammar</term></h1>
     <p>An attribute grammar is a grammar whose node may have both inherited and synthetic attributes.</p>
     <h1>1969</h1>
     <p>Frank DeRemer describes a new variant of Knuth's LR
       parsing. DeRemer's LALR algorithm requires only a stack and a state
       table of quite manageable size. LALR looks practical.</p>
     <h1>1969</h1>
-    <p>Ken Thompson writes the &quot;ed&quot; editor as one of the
+    <p>Ken Thompson writes the <tt>ed</tt> editor as one of the
       first components of UNIX. At this point, regular expressions are an
-      esoteric mathematical formalism. Through the &quot;ed&quot; editor
+      esoteric mathematical formalism. Through the <tt>ed</tt> editor
       and its descendants, regular expressions will become an everyday
       part of the working programmer's toolkit.</p>
-    <h1>Recognizers</h1>
-    <p>In comparing algorithms, it can be important to keep in mind whether they are recognizers or parsers. A
-      <em>recognizer</em>
-      is a program which takes a string and produces a &quot;yes&quot;
-      or &quot;no&quot; according to whether a string is in part of a
-      language. Regular expressions are typically used as recognizers. A
-      <em>parser</em>
-      is a program which takes a string and produces a tree reflecting
-      its structure according to a grammar. The algorithm for a compiler
-      clearly must be a parser, not a recognizer. Recognizers can be,
-      to some extent, used as parsers by introducing captures.</p>
     <h1>1972</h1>
-    <p>Alfred Aho and Jeffrey Ullman publish a two volume textbook
-      summarizing the theory of parsing. This book is still important. It
+    <p>Alfred Aho and Jeffrey Ullman publish the first volume
+      <footnote>
+      <bibref>Aho and Ullman 1972</bibref>.
+      </footnote>
+    of
+    their two volume textbook
+      summarizing the theory of parsing.
+      This book is still important. It
       is also distressingly up-to-date -- progress in parsing theory
-      slowed dramatically after 1972. Aho and Ullman describe a
-      straightforward fix to the zero-length rule bug in Earley's
-      original algorithm. Unfortunately, this fix involves adding even
+      slowed dramatically after 1972. Aho and Ullman's version
+      of Earley's algorithm includes
+      a straightforward fix to the zero-length rule bug in Earley's
+      original<footnote>
+      <bibref>Aho and Ullman 1972</bibref>, p 321.
+      </footnote>.
+      Unfortunately, this fix involves adding even
       more bookkeeping to Earley's.</p>
     <h1>1972</h1>
     <p>Under the names TDPL and GTDPL, Aho and Ullman investigate
-      the non-Chomksyan parsers in the Schorre lineage. They note that
-      &quot;it can be quite difficult to determine what language is
-      defined by a TDPL parser&quot;. That is, GTDPL parsers do whatever
+      the non-Chomksyan parsers in the Schorre lineage<footnote>
+      <bibref>Aho and Ullman 1972</bibref>, pp. 456-485.
+      </footnote>. They note that
+     <q>it can be quite difficult to determine what language is
+      defined by a TDPL parser<q><footnote>
+      <bibref>Aho and Ullman 1972</bibref>, p. 466.
+      </footnote>.
+      That is, GTDPL parsers do whatever
       they do, and that whatever is something the programmer in general
       will not be able to describe. The best a programmer can usually
       do is to create a test suite and fiddle with the GTDPL description
       until it passes. Correctness cannot be established in any stronger
-      sense. GTDPL is an extreme form of the old joke that &quot;the code is
-      the documentation&quot; -- with GTDPL nothing documents the language
+      sense. GTDPL is an extreme form of the old joke that <q>the code is
+      the documentation</q> -- with GTDPL nothing documents the language
       of the parser, not even the code.</p>
     <p>GTDPL's obscurity buys nothing in the way of additional parsing
       power. Like all non-Chomskyan parsers, GTDPL is basically a extremely
@@ -1003,9 +1026,12 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       form of recursive descent.</p>
     <p>At or around this time, rumor has it that the main line of
       development for GTDPL parsers is classified secret by the US
-      government.<footnote>
-        http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2</footnote>
-      GTDPL parsers have the property that even small changes in GTDPL parsers can be very labor-intensive. For some government contractors, GTDPL parsing provides steady work for years to come. Public interest in GTDPL fades.</p>
+      government<footnote>
+        http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2</footnote>.
+      GTDPL parsers have the property that even small changes in
+      GTDPL parsers can be very labor-intensive. For some government
+      contractors, GTDPL parsing provides steady work for years to
+      come. Public interest in GTDPL fades.</p>
     <h1>1973: Pratt parsing</h1>
     <p>One approach to the Operator Issue has not been mentioned. We
       have noted that LL(1) cannot parse operator expressions. What about
@@ -1293,6 +1319,20 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       less frequently mentioned
       sources is in the individual footnotes.</p>
     <p>
+    <bibid>Aho and Ullman 1972</bibid>:
+    Alfred V. Aho and Jeffrey D. Ullman, <cite>The Theory of Parsing, Translation and Compiling:
+    Volume I: Parsing</cite>, Prentice Hall, Englewood Cliffs, N.J., 1972.
+    </p>
+    <p>
+    <bibid>Aho and Ullman 1973</bibid>:
+    Alfred V. Aho and Jeffrey D. Ullman, <cite>The Theory of Parsing, Translation and Compiling:
+    Volume II: Compiling</cite>, Prentice Hall, Englewood Cliffs, N.J., 1973.
+    <p>
+    <bibid>Earley 1968</bibid>:
+    Jay Earley, <cite>An Efficient Context-free Parsing Algorithm</cite>,
+    PhD thesis, Carnegie-Mellon Univ., Pittsburg, Pa., 1968.
+    </p>
+    <p>
       <bibid>Glennie 1960</bibid>:
       A. E. Glennie,
       "On the Syntax Machine and the Construction of a Universal Compiler"
@@ -1332,6 +1372,11 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     <bibid>Knuth 1965</bibid>:
     D. E. Knuth, "On the translation of languages from left to right"
     <cite>Information and Control</cite>, Vol. 8, Issue: 6, Page: 607-639 (1965).
+    </p>
+    <p>
+    <bibid>Knuth 1968</bibid>:
+    Donald E. Knuth, "Semantics of context-free languages"
+    Math. Syst. Theory, 2(2):127– 145, (1968).
     </p>
     <p>
       <bibid>Knuth and Pardo 1976</bibid>:

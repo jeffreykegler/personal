@@ -272,6 +272,22 @@
       meaning of many of the terms we are using. &quot;Parsing&quot;,
       for our purposes, is transforming a string of symbols into a
       structure. Typically this structure is a parse tree.</p>
+    <h1>Recognizers</h1>
+    <p>In contrast to a parser,
+    a <term>recognizer</term>
+    is a program which takes a string and a grammar and answers
+    <q>yes</q> or <q>no</q> --
+    <q>yes</q> if the string is in the language described by the grammar,
+    <q>no</q> otherwise.
+    For a compiler to work, it clearly needs
+    a parser, not a recognizer.
+    <p>In comparing algorithms, it can be important to keep in mind
+    whether they are recognizers or parsers.
+      Recognizers can be,
+      to some extent, pressed into service as parsers by introducing captures.
+      This is often done, for example, with regular expressions,
+      and if the semantics is very simple, it works.
+      </p>
     <h1>1957: Kleene's regular expressions</h1>
     <p>Steven Kleene discovers regular expressions, a very handy notation
       for Markov chains. It will turn out that several other mathematical objects
@@ -739,7 +755,8 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       be written, but it would not be able to parse arithmetic expressions
       properly.</p>
     <h1>1968</h1>
-    <p>Jay Earley discovers the algorithm named after him. Like the Irons
+    <p>Jay Earley discovers the algorithm named after him<a id="footnote-40-ref" href="#footnote-40">[40]</a>.
+    Like the Irons
       algorithm, Earley's algorithm is Chomskyan, declarative and fully
       general. Unlike the Irons algorithm, it does not backtrack. Earley's
       algorithm is both top-down and bottom-up at once -- it uses dynamic
@@ -754,59 +771,55 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     </ul>
     <h1>1968</h1>
     <p>Knuth publishes a paper on a concept he had been working for the
-      previous few years: attribute grammars.<a id="footnote-40-ref" href="#footnote-40">[40]</a>
+      previous few years: attribute grammars<a id="footnote-41-ref" href="#footnote-41">[41]</a>
       Irons' synthetic attributes had always been inadequate for many
       problems, and had been supplemented by side effects or state
       variables. Knuth adds inherited attributes, and discovers attribute
       grammars.</p>
-    <h1>Term: &quot;Inherited attributes&quot;</h1>
+    <h1>Term: <term>Inherited attributes</term></h1>
     <p>Recall that a node in parse gets its synthetic attributes from
       its parents. Inherited attributes are attibutes a node gets from
       its parents. Of course, this creates potential circularities, but
       inherited attributes are powerful and, with care, the circularities
       can be dealt with.</p>
-    <h1>Term: &quot;Attribute grammar&quot;</h1>
+    <h1>Term: <term>Attribute grammar</term></h1>
     <p>An attribute grammar is a grammar whose node may have both inherited and synthetic attributes.</p>
     <h1>1969</h1>
     <p>Frank DeRemer describes a new variant of Knuth's LR
       parsing. DeRemer's LALR algorithm requires only a stack and a state
       table of quite manageable size. LALR looks practical.</p>
     <h1>1969</h1>
-    <p>Ken Thompson writes the &quot;ed&quot; editor as one of the
+    <p>Ken Thompson writes the <tt>ed</tt> editor as one of the
       first components of UNIX. At this point, regular expressions are an
-      esoteric mathematical formalism. Through the &quot;ed&quot; editor
+      esoteric mathematical formalism. Through the <tt>ed</tt> editor
       and its descendants, regular expressions will become an everyday
       part of the working programmer's toolkit.</p>
-    <h1>Recognizers</h1>
-    <p>In comparing algorithms, it can be important to keep in mind whether they are recognizers or parsers. A
-      <em>recognizer</em>
-      is a program which takes a string and produces a &quot;yes&quot;
-      or &quot;no&quot; according to whether a string is in part of a
-      language. Regular expressions are typically used as recognizers. A
-      <em>parser</em>
-      is a program which takes a string and produces a tree reflecting
-      its structure according to a grammar. The algorithm for a compiler
-      clearly must be a parser, not a recognizer. Recognizers can be,
-      to some extent, used as parsers by introducing captures.</p>
     <h1>1972</h1>
-    <p>Alfred Aho and Jeffrey Ullman publish a two volume textbook
-      summarizing the theory of parsing. This book is still important. It
+    <p>Alfred Aho and Jeffrey Ullman publish the first volume
+      <a id="footnote-42-ref" href="#footnote-42">[42]</a>
+    of
+    their two volume textbook
+      summarizing the theory of parsing.
+      This book is still important. It
       is also distressingly up-to-date -- progress in parsing theory
-      slowed dramatically after 1972. Aho and Ullman describe a
-      straightforward fix to the zero-length rule bug in Earley's
-      original algorithm. Unfortunately, this fix involves adding even
+      slowed dramatically after 1972. Aho and Ullman's version
+      of Earley's algorithm includes
+      a straightforward fix to the zero-length rule bug in Earley's
+      original<a id="footnote-43-ref" href="#footnote-43">[43]</a>.
+      Unfortunately, this fix involves adding even
       more bookkeeping to Earley's.</p>
     <h1>1972</h1>
     <p>Under the names TDPL and GTDPL, Aho and Ullman investigate
-      the non-Chomksyan parsers in the Schorre lineage. They note that
-      &quot;it can be quite difficult to determine what language is
-      defined by a TDPL parser&quot;. That is, GTDPL parsers do whatever
+      the non-Chomksyan parsers in the Schorre lineage<a id="footnote-44-ref" href="#footnote-44">[44]</a>. They note that
+     <q>it can be quite difficult to determine what language is
+      defined by a TDPL parser<q><a id="footnote-45-ref" href="#footnote-45">[45]</a>.
+      That is, GTDPL parsers do whatever
       they do, and that whatever is something the programmer in general
       will not be able to describe. The best a programmer can usually
       do is to create a test suite and fiddle with the GTDPL description
       until it passes. Correctness cannot be established in any stronger
-      sense. GTDPL is an extreme form of the old joke that &quot;the code is
-      the documentation&quot; -- with GTDPL nothing documents the language
+      sense. GTDPL is an extreme form of the old joke that <q>the code is
+      the documentation</q> -- with GTDPL nothing documents the language
       of the parser, not even the code.</p>
     <p>GTDPL's obscurity buys nothing in the way of additional parsing
       power. Like all non-Chomskyan parsers, GTDPL is basically a extremely
@@ -816,8 +829,11 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       form of recursive descent.</p>
     <p>At or around this time, rumor has it that the main line of
       development for GTDPL parsers is classified secret by the US
-      government.<a id="footnote-41-ref" href="#footnote-41">[41]</a>
-      GTDPL parsers have the property that even small changes in GTDPL parsers can be very labor-intensive. For some government contractors, GTDPL parsing provides steady work for years to come. Public interest in GTDPL fades.</p>
+      government<a id="footnote-46-ref" href="#footnote-46">[46]</a>.
+      GTDPL parsers have the property that even small changes in
+      GTDPL parsers can be very labor-intensive. For some government
+      contractors, GTDPL parsing provides steady work for years to
+      come. Public interest in GTDPL fades.</p>
     <h1>1973: Pratt parsing</h1>
     <p>One approach to the Operator Issue has not been mentioned. We
       have noted that LL(1) cannot parse operator expressions. What about
@@ -835,7 +851,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       <a
     href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         Norvell's taxonomy</a>) to operator expression parsing, one which
-      some have adopted as an overall solution to their parsing problems.<a id="footnote-42-ref" href="#footnote-42">[42]</a>
+      some have adopted as an overall solution to their parsing problems.<a id="footnote-47-ref" href="#footnote-47">[47]</a>
     </p>
     <p>The Pratt approach, and its descendant, precedence climbing,
       is not popular as an overall strategy. It is most often used as the
@@ -874,13 +890,13 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     <p>
       Wadler starts to introduce monads to the functional programming community.
       As one example he converts his previous efforts at function parsing
-      techniques<a id="footnote-43-ref" href="#footnote-43">[43]</a>.
+      techniques<a id="footnote-48-ref" href="#footnote-48">[48]</a>.
       The parsing technique is pure recursive descent.
       The examples shown for monadic parsing are very simple,
       and do not include operator expressions.
       In his earlier non-monadic work, Wadler uses a very restricted form of operator expression:
       His grammar avoided left recursion by using parentheses,
-      and operator precedence was not implemented<a id="footnote-44-ref" href="#footnote-44">[44]</a>.
+      and operator precedence was not implemented<a id="footnote-49-ref" href="#footnote-49">[49]</a>.
     </p>
     <h1>1991</h1>
     <p>Joop Leo discovers a way of speeding up right recursions in
@@ -911,9 +927,9 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     </p>
     <p>
       Combinator parsing
-      was introduced in two 1992 papers<a id="footnote-45-ref" href="#footnote-45">[45]</a>.
+      was introduced in two 1992 papers<a id="footnote-50-ref" href="#footnote-50">[50]</a>.
       Of more interest
-      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-46-ref" href="#footnote-46">[46]</a>.
+      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-51-ref" href="#footnote-51">[51]</a>.
       Combinators will become important in programming languages and
       semantics. But in terms of parsing algorithms, Hutton introduces
       nothing new -- wrapped up in an attribute grammar; underlying the
@@ -930,14 +946,14 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       Hutton points out
       "combinator parsers give rise to a monad" and shows
       how his presentation could be rewritten in a form
-      closely related to monads<a id="footnote-47-ref" href="#footnote-47">[47]</a>.
+      closely related to monads<a id="footnote-52-ref" href="#footnote-52">[52]</a>.
     </p>
     <h1>1995</h1><p>
       Today monads are a hot topic.
       In their adaptation into the world of
       programming,
       the 1995 article by Wadler
-      <a id="footnote-48-ref" href="#footnote-48">[48]</a>
+      <a id="footnote-53-ref" href="#footnote-53">[53]</a>
       is a turning point.
       One of Wadler's examples is a parser based on
       monads and combinator parsing.
@@ -965,7 +981,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     <h1>1996</h1><p>
       Wadler had used parsing as an example to motivate
       his presentation of monads.
-      In 1996, Graham Hutton and Erik Meijer<a id="footnote-49-ref" href="#footnote-49">[49]</a>
+      In 1996, Graham Hutton and Erik Meijer<a id="footnote-54-ref" href="#footnote-54">[54]</a>
       take the opposite perspective -- they
       write a paper on combinator parsing that could
       "also be viewed as a first introduction to the use
@@ -973,7 +989,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     </p>
     <h1>1999</h1><p>
       TODO:
-      <a id="footnote-50-ref" href="#footnote-50">[50]</a>
+      <a id="footnote-55-ref" href="#footnote-55">[55]</a>
     </p><h1>2000</h1>
     <p>Larry Wall decides on a radical reimplementation of Perl --
       Perl 6. Larry does not even consider using LALR again.</p>
@@ -1012,10 +1028,10 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       a breath of fresh air.</p>
     <h1>2010: The first implementation of Leo 1992</h1><p>
       TODO:
-      <a id="footnote-51-ref" href="#footnote-51">[51]</a>
+      <a id="footnote-56-ref" href="#footnote-56">[56]</a>
     </p><h1>2012: General precedence parsing</h1><p>
       TODO:
-      <a id="footnote-52-ref" href="#footnote-52">[52]</a>
+      <a id="footnote-57-ref" href="#footnote-57">[57]</a>
     </p><h1>Marpa: an afterword</h1>
     <p>The recollections of my teachers cover most of this timeline. My
       own begin around 1970. Very early on, as a graduate student, I became
@@ -1053,6 +1069,20 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       Bibliographic information for the
       less frequently mentioned
       sources is in the individual footnotes.</p>
+    <p>
+    <b id="bib-Aho_and_Ullman_1972">Aho and Ullman 1972</b>:
+    Alfred V. Aho and Jeffrey D. Ullman, <cite>The Theory of Parsing, Translation and Compiling:
+    Volume I: Parsing</cite>, Prentice Hall, Englewood Cliffs, N.J., 1972.
+    </p>
+    <p>
+    <b id="bib-Aho_and_Ullman_1973">Aho and Ullman 1973</b>:
+    Alfred V. Aho and Jeffrey D. Ullman, <cite>The Theory of Parsing, Translation and Compiling:
+    Volume II: Compiling</cite>, Prentice Hall, Englewood Cliffs, N.J., 1973.
+    <p>
+    <b id="bib-Earley_1968">Earley 1968</b>:
+    Jay Earley, <cite>An Efficient Context-free Parsing Algorithm</cite>,
+    PhD thesis, Carnegie-Mellon Univ., Pittsburg, Pa., 1968.
+    </p>
     <p>
       <b id="bib-Glennie_1960">Glennie 1960</b>:
       A. E. Glennie,
@@ -1093,6 +1123,11 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     <b id="bib-Knuth_1965">Knuth 1965</b>:
     D. E. Knuth, "On the translation of languages from left to right"
     <cite>Information and Control</cite>, Vol. 8, Issue: 6, Page: 607-639 (1965).
+    </p>
+    <p>
+    <b id="bib-Knuth_1968">Knuth 1968</b>:
+    Donald E. Knuth, "Semantics of context-free languages"
+    Math. Syst. Theory, 2(2):127– 145, (1968).
     </p>
     <p>
       <b id="bib-Knuth_and_Pardo_1976">Knuth and Pardo 1976</b>:
@@ -1337,7 +1372,7 @@ pp. 4-6.
 <p id="footnote-37">37.
 	<a href="#bib-Lewis_and_Stearns_1968">Lewis and Stearns 1968</a>.
         They are credited in Rosencrantz and Stearns (1970)
-        and Aho and Ullman, p. 368.
+        and <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>, p. 368.
  <a href="#footnote-37-ref">&#8617;</a></p>
 <p id="footnote-38">38.
         <a href="#bib-Knuth_1965">Knuth 1965</a>, p. 610.
@@ -1358,38 +1393,53 @@ pp. 4-6.
       in the IT compiler seems to have been RL(2) with backtracking.
  <a href="#footnote-39-ref">&#8617;</a></p>
 <p id="footnote-40">40.
-        Knuth, "Semantics of context-free languages", 1968.
+    <a href="#bib-Earley_1968_">Earley 1968.</a>
  <a href="#footnote-40-ref">&#8617;</a></p>
 <p id="footnote-41">41.
-        http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2
+        <a href="#bib-Knuth_1968">Knuth 1968</a>.
  <a href="#footnote-41-ref">&#8617;</a></p>
 <p id="footnote-42">42.
+      <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>.
+ <a href="#footnote-42-ref">&#8617;</a></p>
+<p id="footnote-43">43.
+      <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>, p 321.
+ <a href="#footnote-43-ref">&#8617;</a></p>
+<p id="footnote-44">44.
+      <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>, pp. 456-485.
+ <a href="#footnote-44-ref">&#8617;</a></p>
+<p id="footnote-45">45.
+      <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>, p. 466.
+ <a href="#footnote-45-ref">&#8617;</a></p>
+<p id="footnote-46">46.
+        http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2
+ <a href="#footnote-46-ref">&#8617;</a></p>
+<p id="footnote-47">47.
         Vaughan R Pratt,
         "Top down operator precedence",
         in
         <cite>First ACM Symposium on Principles of Programming Languages</cite>,
         pages 41–51. ACM, Oct. 1973.
- <a href="#footnote-42-ref">&#8617;</a></p>
-<p id="footnote-43">43.
+ <a href="#footnote-47-ref">&#8617;</a></p>
+<p id="footnote-48">48.
         Philip Wadler,
         "Comprehending Monads"
         In
         <cite>Proceedings of the 1990 ACM conference on LISP and functional programming</cite>
         (LFP '90).
         ACM, New York, NY, USA, 61-78. DOI=http://dx.doi.org/10.1145/91556.91592
- <a href="#footnote-43-ref">&#8617;</a></p>
-<p id="footnote-44">44.
+ <a href="#footnote-48-ref">&#8617;</a></p>
+<p id="footnote-49">49.
         Wadler 1985.
- <a href="#footnote-44-ref">&#8617;</a></p>
-<p id="footnote-45">45.
+ <a href="#footnote-49-ref">&#8617;</a></p>
+<p id="footnote-50">50.
         Some source consider
         <a href="#bib-Wadler_1985">Wadler 1985</a>
         an
         early presentation of the ideas of combinator parsing.
         In assigning priority here,
         I follow Grune and Jacobs 2008 (p. 564).
- <a href="#footnote-45-ref">&#8617;</a></p>
-<p id="footnote-46">46.
+ <a href="#footnote-50-ref">&#8617;</a></p>
+<p id="footnote-51">51.
         The paper which is devoted to parsing is
         <a href="#bib-Hutton_1992">Hutton 1992</a>.
         The other paper, which centers on combinators as a programming
@@ -1402,29 +1452,29 @@ pp. 4-6.
         but these avoid left recursion,
         and implement precedence and associativity,
         using parentheses.
- <a href="#footnote-46-ref">&#8617;</a></p>
-<p id="footnote-47">47.
+ <a href="#footnote-51-ref">&#8617;</a></p>
+<p id="footnote-52">52.
         <a href="#bib-Hutton_1992">Hutton 1992</a>, pp. 19-20.
- <a href="#footnote-47-ref">&#8617;</a></p>
-<p id="footnote-48">48.
+ <a href="#footnote-52-ref">&#8617;</a></p>
+<p id="footnote-53">53.
         Wadler Philip. (1995) Monads for functional programming. In:
         Jeuring J., Meijer E. (eds) Advanced Functional Programming. AFP
         1995. Lecture Notes in Computer Science, vol 925. Springer,
         Berlin, Heidelberg.
- <a href="#footnote-48-ref">&#8617;</a></p>
-<p id="footnote-49">49.
+ <a href="#footnote-53-ref">&#8617;</a></p>
+<p id="footnote-54">54.
         <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a>
- <a href="#footnote-49-ref">&#8617;</a></p>
-<p id="footnote-50">50.
+ <a href="#footnote-54-ref">&#8617;</a></p>
+<p id="footnote-55">55.
         Hudak, Peterson and Fasel,
         "A Gentle Introduction to Haskell 98",
         1999.
- <a href="#footnote-50-ref">&#8617;</a></p>
-<p id="footnote-51">51.
+ <a href="#footnote-55-ref">&#8617;</a></p>
+<p id="footnote-56">56.
         http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html
- <a href="#footnote-51-ref">&#8617;</a></p>
-<p id="footnote-52">52.
+ <a href="#footnote-56-ref">&#8617;</a></p>
+<p id="footnote-57">57.
         http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html
- <a href="#footnote-52-ref">&#8617;</a></p>
+ <a href="#footnote-57-ref">&#8617;</a></p>
 </body>
 </html>
