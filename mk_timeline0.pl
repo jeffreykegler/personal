@@ -24,11 +24,40 @@ LINE: while ( my $line = <> ) {
     push @lines, $line;
 }
 
-my $output = join "\n", @lines;
-my $footnotes = join "\n", '<h1>Footnotes</h1>', @fn_lines, '</body>';
+my $output = join "\n", map { do_bib($_) } @lines;
+my $footnotes = join "\n", '<h1>Footnotes</h1>', map { do_bib($_) } @fn_lines, '</body>';
 $output =~ s[</body>][$footnotes];
 
 say $output;
+
+sub bib_tag {
+   my ($desc) = @_;
+   $desc =~ s/ \s+ /_/gxms;
+   $desc =~ s/[^_a-zA-Z0-9]/_/gxms;
+   return 'bib-' . $desc;
+}
+
+sub do_bib {
+   my ($line) = @_;
+   my ($before, $stag, $desc, $etag, $after);
+   ($before, $stag, $desc, $etag, $after) =
+       $line =~ m{^ (.*) (<bibid>) ([^<]*) (<\/bibid>) (.*) $}mxs;
+   if (defined $desc) {
+       my $tag = bib_tag($desc);
+       return $before
+           . '<b id="' . $tag . '">' . $desc . '</b>'
+	   . $after;
+   }
+   ($before, $stag, $desc, $etag, $after) =
+       $line =~ m{^ (.*) (<bibref>) ([^<]*) (<\/bibref>) (.*) $}xms;
+   if (defined $desc) {
+       my $tag = bib_tag($desc);
+       return $before
+           . '<a href="#' . $tag . '">' . $desc . '</a>'
+	   . $after;
+   }
+   return $line;
+}
 
 sub do_footnote {
     my ($line) = @_;

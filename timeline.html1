@@ -14,6 +14,7 @@
       footnote { display:none }
       biblio { display:none }
       bibref { font-weight: bold }
+      bibid { font-weight: bold }
       term { }
       term::before { content: open-quote }
       term::after { content: close-quote }
@@ -54,7 +55,7 @@ Emil L. Post,
 <cite>American Journal of Mathematics</cite>,
 Vol. 65, No. 2, pp. 197-215 (April 1943).
 DOI: 10.2307/2371809
-<footnote>
+</footnote>
     using productions.
     With this, the process of rediscovering Pannini in the
     West begins.</p>
@@ -153,7 +154,13 @@ DOI: 10.2307/2371809
     parsed ad hoc, except for expressions. Boehm's expression parser
       <em>does</em>
       honor precedence, making it perhaps the first operator precedence
-      parser
+      parser<footnote>
+      Many of the "firsts" for parsing algorithms in this
+      timeline are debatable,
+      and the history of operator precedence is especially murky.
+      Here I follow <bibref>Samuelson and Bauer 1960</bibref>
+      in giving the priority to Boehm.
+      </footnote>.
       Boehm's compiler also allows parentheses, but the two cannot
       be mixed -- an expression can either be parsed using precedence
       or have parentheses, but not both.</p>
@@ -554,10 +561,11 @@ DOI: 10.2307/2371809
     <h1>1960: Operator precedence and stacks</h1>
     <p>Since FORTRAN I, many people have refined its operator precedence implementation.
       A Feb 1960 paper by Samuelson and Bauer<footnote>
-      [ TODO: Delete this entry?  Or research it more? ]
-        Samelson, K. and Bauer, F. L. Sequential formula translation. Commun. ACM,
-        3(2):76–83, Feb. 1960.</footnote>
-      implements operator precedence using stacks proves particularly influential.
+        <bibref>Samuelson and Bauer 1960</bibref>.
+        </footnote>
+      describes in detail the use of stacks to implement
+      operator precedence.
+      This paper was very influential.
     </p>
     <h1>1961: The first parsing paper</h1>
     <p>In January, Ned Irons publishes a paper describing his ALGOL
@@ -565,8 +573,8 @@ DOI: 10.2307/2371809
       Irons algorithm is Chomskyan and top-down with a bottom-up &quot;left
       corner&quot; element -- it is what now would be called a &quot;left
       corner&quot; parser.<footnote>
-        Irons 1961.
-        Among those who state that Irons 1961 parser is what
+        <bibref>Irons 1961</bibref>.
+        Among those who state that <bibref>Irons 1961</bibref> parser is what
         is now called "left-corner" is Knuth ("Top-down syntax analysis", p. 109).
       </footnote>
     </p>
@@ -574,7 +582,7 @@ DOI: 10.2307/2371809
     parsers for specific grammar classes.
     But in fact, this first parser is declarative and general.
     And since it is general,
-    operator expressions are well within the power of Irons 1961.
+    operator expressions are well within the power of <bibref>Irons 1961</bibref>.
     </p>
     <h1>Terms: &quot;Top-down&quot;</h1>
     <comment>TODO: Revise</comment>
@@ -605,14 +613,14 @@ DOI: 10.2307/2371809
       parsers that are not clearly one or the other can always be usefully
       described in terms of their top-down and bottom-up components.
     </p>
-    <p>As we saw, the Irons 1961 parser is not simply top-down or
+    <p>As we saw, the <bibref>Irons 1961</bibref> parser is not simply top-down or
     bottom-up, though arguably describing it in terms of top-down and
     bottom-up components is helpful. But for other parsing algorithms,
     top-down vs. bottom-up classification is a pointless pedantry --
     the classification can be done, but tells you nothing about the
     actual behavior of the parser.</p>
     <h1>Terms: &quot;Synthetic attribute&quot;</h1>
-    <p>Irons 1961 also introduces synthetic attributes: the parse creates
+    <p><bibref>Irons 1961</bibref> also introduces synthetic attributes: the parse creates
       a tree, which is evaluated bottom-up. Each node is evaluated using
       attributes &quot;synthesized&quot; from its child nodes.<footnote>
         Irons is credited with the discovery of synthetic attributes
@@ -628,13 +636,13 @@ DOI: 10.2307/2371809
     <p>Peter Lucas publishes the first description of a purely top-down parser<footnote>
         Lucas 1961.
         I follow Grune and Jacobs 2008 in calling Lucas the discoverer of recursive descent.
-        In fact, both Irons 1961 and Lucas 1961 are recursive descent with a major bottom-up element.
+        In fact, both <bibref>Irons 1961</bibref> and Lucas 1961 are recursive descent with a major bottom-up element.
         In conversation, Irons often described his 1961 parser as a kind of recursive descent.
         Perhaps Grune and Jacobs based their decision on the Lucas' description of his algorithm
         which talks about his parser's bottom-up element only briefly,
         while describing the top-down element in detail.
         Also, the Lucas algorithm more resembles modern implementations of recursive descent
-        much more closely than Irons 1961.</footnote></p>
+        much more closely than <bibref>Irons 1961</bibref>.</footnote></p>
     <!-- html_fmt: Next end tag is cruft -->
     </footnote><p>.
       Either Irons paper or this one can be considered to be recursive descent<footnote>
@@ -642,7 +650,7 @@ DOI: 10.2307/2371809
       my personal preference would be to give Ned the credit
       for recursive descent.
       And this is what Peter Denning does in his introduction
-      to the reprint of Irons 1961
+      to the reprint of <bibref>Irons 1961</bibref>
       (<cite>Communications of the ACM</cite>, 25th Anniversary Issue, p. 14).
       But Grune and Jacobs 2008 gives the credit to Lucas 1961.
       </footnote>.
@@ -748,7 +756,7 @@ Norvell has made an attempt at classification</a>
       writing language&quot;, summarizing the papers of the 1963
       conference. Schorre cites both Backus and Chomsky as sources for
       Meta II's notation. Schorre notes that his parser is &quot;entirely
-      different&quot; from that of Irons 1961 -- as noted, it is
+      different&quot; from that of <bibref>Irons 1961</bibref> -- as noted, it is
       pre-Chomskyan. Meta II is a template, rather than something that
       readers can use, but in principle it can be turned into a fully
       automated compiler-compiler.<footnote>
@@ -1014,7 +1022,7 @@ Norvell has made an attempt at classification</a>
       </footnote>.
       Of more interest
       to us is the one by Hutton, which focuses on combinator parsing<footnote>
-        The paper which is devoted to parsing is Hutton 1992.
+        The paper which is devoted to parsing is <bibref>Hutton 1992</bibref>.
         The other paper, which centers on combinators as a programming
         paradigm, is
         Frost, Richard A. Constructing programs as executable attribute
@@ -1043,7 +1051,7 @@ Norvell has made an attempt at classification</a>
       "combinator parsers give rise to a monad" and shows
       how his presentation could be rewritten in a form
       closely related to monads<footnote>
-        Hutton 1992, pp. 19-20.
+        <bibref>Hutton 1992</bibref>, pp. 19-20.
       </footnote>.
     </p>
     <!-- html_fmt: Next end tag is cruft -->
@@ -1181,7 +1189,7 @@ Norvell has made an attempt at classification</a>
       less frequently mentioned
       sources is in the individual footnotes.</p>
       <p>
-      <bibref>Glennie 1960</bibref>:
+      <bibid>Glennie 1960</bibid>:
     A. E. Glennie,
     "On the Syntax Machine and the Construction of a Universal Compiler"
     Computation Center, Carnegie Institute of Technology,
@@ -1190,27 +1198,27 @@ Norvell has made an attempt at classification</a>
         http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm
     </p>
     <p>
-      <bibref>Hutton 1992</bibref>:
+      <bibid>Hutton 1992</bibid>:
       Hutton, "Higher order functions for parsing",
       Journal of Functional Programming 2(3):323-343, July 1992.
     </p>
-    <p><bibref>Irons 1961</bibref>:
+    <p><bibid>Irons 1961</bibid>:
       Irons, E. T. A syntax-directed compiler for ALGOL 60. Commun. ACM,
       4(1):51–55, Jan. 1961.
     </p>
     <p>
-      <bibref>Lucas 1961</bibref>:
+      <bibid>Lucas 1961</bibid>:
       Lucas, P. Die Strukturanalyse von Formelnübersetzern / analysis of
       the structure of formula translators. Elektronische Rechenanlagen,
       3(11.4):159–167, 1961, (in German).
     </p>
     <p>
-      <bibref>Knuth and Pardo 1976</bibref>:
+      <bibid>Knuth and Pardo 1976</bibid>:
       D. E. Knuth and L. Trabb Pardo (1976), "The Early Development of
       Programming Languages," Report STAN-CS-76-562, Computer Science Dept.,
       Stanford Univ., Stanford, Calif. (Aug. 1976).
       [http://bitsavers.org/pdf/stanford/cs_techReports/STAN-CS-76-562_EarlyDevelPgmgLang_Aug76.pdf ].
-      <p><bibref>Wadler 1985</bibref>:
+      <p><bibid>Wadler 1985</bibid>:
         Philip Wadler, "How to Replace Failure by a List of Successes: A method
         for exception handling, backtracking, and pattern matching in lazy
         functional languages". in J-P Jouannaud (ed.),
@@ -1219,12 +1227,12 @@ Norvell has made an attempt at classification</a>
         <cite>Lecture Notes in Computer Science</cite>, 1985
         vol. 201, Springer-Verlag GmbH, pp. 113-128. DOI: 10.1007/3-540-15975-4_33.
     </p>
-      <bibref>Hutton and Meijer 1996</bibref>:
+      <bibid>Hutton and Meijer 1996</bibid>:
         Graham Hutton and Erik Meijer.
 	<cite>Technical Report NOTTCS-TR-96-4</cite>,
         Department of Computer Science, University of Nottingham, 1996.
     <p>
-      <bibref>Grune and Jacobs 2008</bibref>:
+      <bibid>Grune and Jacobs 2008</bibid>:
       Grune, D., & Jacobs, C. J. H. (2008).
       <cite>Parsing Techniques: A Practical
       Guide, 2nd edition</cite>.
@@ -1234,6 +1242,11 @@ Norvell has made an attempt at classification</a>
       the literature often disagrees.
       In such cases, I have often deferred
       to the judgement of Grune and Jacobs.
+    </p>
+    <p>
+	<bibid>Samuelson and Bauer 1960</bibid>:
+        Samelson, K. and Bauer, F. L. Sequential formula translation. Commun. ACM,
+        3(2):76–83, Feb. 1960.
     </p>
   </body>
 </html>

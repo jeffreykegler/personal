@@ -1,0 +1,10 @@
+# Type a grammar here:
+S -> Tern .
+Tern -> E '?' E ':' Tern .
+Tern -> E .
+E -> E '-' T .
+E -> T .
+T -> T '*' P .
+T -> P .
+P -> 'n' .
+P -> '-' 'n' .
