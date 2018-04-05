@@ -1520,7 +1520,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         does not lose the benefits
         of Chomskyan parsing.
         If
-        <q>precedenced statements" are added to a grammar that Marpa parses in linear
+        <q>precedenced statements</q> are added to a grammar that Marpa parses in linear
           time, then the grammar remains linear as long as the precedenced statements
           are (after precedence is taken in consideration) unambiguous<footnote>
             Internally, Marpa rewrites precedenced statements into BNF.
@@ -1530,17 +1530,31 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
             <a href="#loc-linearity-rules">linearity
               rules</a>, the result must be linear.
           </footnote>.
-          <tt><code>
+	  <p>Here is an example of a Marpa <q>precedenced statement</q>:
+	  <footnote>
+	    In this, precedence goes from tightest to loosest.
+	    Single bars (<tt>|</tt>) separate RHS's of equal precedence.
+	    Double bars (<tt>||</tt>) separate RHS's of different precedence --
+	    precedence goes from tightest to loosest.
+	    Associativity default to left,
+	    and exceptions are indicated by the value of the <tt>assoc</tt>
+	    adverb.
+	    Note that these <q>precedenced statements</q>,
+	    like all of Marpa's DSL,
+	    are parsed by Marpa itself.
+	  </footnote>
+	  </p>
+          <pre><tt>
               Expression ::=
-              Number bless => primary
-              | '(' Expression ')' assoc => group
+                 Number
+              |  '(' Expression ')' assoc => group
               || Expression '**' Expression assoc => right
               || Expression '*' Expression
-              | Expression '/' Expression
+              |  Expression '/' Expression
               || Expression '+' Expression
-              | Expression '-' Expression
-            </code></tt>
-        </q></p><h1>Today</h1>
+              |  Expression '-' Expression
+            </tt></pre>
+      <h1>Today</h1>
       <p>After five decades of parsing theory, the state of the art seems
         to be back where it started. We can imagine someone taking Ned Iron's
         original 1961 algorithm from the first paper ever published describing
