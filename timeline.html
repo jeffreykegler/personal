@@ -1025,6 +1025,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         the simplicity and elegance of the combinator approach.
       </p>
       <h1>1996: Hutton and Meijer on cominator parsing</h1><p>
+        <comment>TODO: Expand with stuff on operator issue</comment>
         Wadler had used parsing as an example to motivate
         his presentation of monads.
         In 1996, Graham Hutton and Erik Meijer<a id="footnote-62-ref" href="#footnote-62">[62]</a>
@@ -1034,7 +1035,8 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         of monads in programming."
       </p>
       <h1>1999: Haskell
-        <cite>Gentle Introduction</cite></h1><p>
+        <cite>Gentle Introduction</cite></h1>
+      <p>
         TODO:
         <a id="footnote-63-ref" href="#footnote-63">[63]</a>
       </p><h1>2000: The Perl 6 effort begins</h1>
@@ -1048,7 +1050,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         can be counter-productive at evaluation time. But buried in their
         paper is a solution to the zero-length rule bug. And this time the
         solution requires no additional bookkeeping.</p>
-      <h1>2004: Bryan Ford publishes his paper on PEG</h1>
+      <h1>2004: PEG</h1>
       <p>Ford<a id="footnote-65-ref" href="#footnote-65">[65]</a>fills this gap by
         repackaging the nearly-forgotten GTDPL. Ford adds packratting,
         so that PEG is always linear, and provides PEG with an attractive
@@ -1074,12 +1076,39 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         Now, GNU replaces LALR with the technology
         that it replaced a quarter century earlier: recursive descent.</p>
       <h1>2010: Leo 1991 is implemented</h1><p>
+      </p><p>Jeffrey Kegler (the author of this timeline) releases the first
+        practical implementation of Joop Leo's algorithm<a id="footnote-67-ref" href="#footnote-67">[67]</a>.
+        The new parser, named Marpa, is declarative
+        and linear for all the grammars discussed in
+        <a href="#bib-Knuth_1965">Knuth 1965</a>, that is, it is
+        linear for the LR(k) grammars for all finite k<a id="footnote-68-ref" href="#footnote-68">[68]</a>
+        This means it is also linear for most of the grammar classes we have discussed in this
+        timeline.
+      </p><ul>
+        <li>LR(1) grammars.</li>
+        <li>LL(k) grammars for all finite k, including LL(1) grammars.</li>
+        <li>Operator expression grammars<a id="footnote-69-ref" href="#footnote-69">[69]</a>.
+          <a href="#bib-Leo_1991">Leo 1991</a>
+          does not address the zero-length
+          rule problem.
+          Kegler solves it by adopting the solution of
+          <a href="#bib-Aycock_and_Horspool_2002">Aycock and Horspool 2002</a>.
+        </li>
+      </ul>
+      <p>
+        Finally in an effort to combine the best of declarative and hand-written parsing,
+        Kegler reorders Earley's parse engine so that it
+        allows procedural logic.
+        As a side effect,
+        this gives Marpa excellent error-handling properties.
+      </p>
+      <comment>TODO: Add more</comment>
+      <h1>2012: General precedence parsing</h1>
+      <p>
         TODO:
-        <a id="footnote-67-ref" href="#footnote-67">[67]</a>
-      </p><h1>2012: General precedence parsing</h1><p>
-        TODO:
-        <a id="footnote-68-ref" href="#footnote-68">[68]</a>
-      </p><h1>Today</h1>
+        <a id="footnote-70-ref" href="#footnote-70">[70]</a>
+      </p>
+      <h1>Today</h1>
       <p>After five decades of parsing theory, the state of the art seems
         to be back where it started. We can imagine someone taking Ned Iron's
         original 1961 algorithm from the first paper ever published describing
@@ -1160,7 +1189,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         <cite>Computer J.</cite>
         45(6):620–630. (2002)
       </p>
-      <b id="bib-Ford_2002">Ford 2002</b>:
+      <b id="bib-Ford_2002">Ford 2002</b><p>:
         Bryan Ford, "Packrat parsing: a practical linear-time algorithm with backtracking", Master’s thesis,
         Massachusetts Institute of Technology. (September 2002.)
         [http://pdos.csail.mit.edu/papers/packrat-parsing:ford-ms.pdf.]
@@ -1639,10 +1668,22 @@ pp. 4-6.
               [http://gcc.gnu.org/gcc-4.1/changes.html]
  <a href="#footnote-66-ref">&#8617;</a></p>
 <p id="footnote-67">67.
-          http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html
+          [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html].
  <a href="#footnote-67-ref">&#8617;</a></p>
 <p id="footnote-68">68.
-          http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html
+          In fact,
+          <a href="#bib-Leo_1991">Leo 1991</a>
+          proves his algorithm is linear for the LR-regular
+          grammars -- the LR grammars with infinite lookahead, so long as the lookahead
+          is a regular expresion.
  <a href="#footnote-68-ref">&#8617;</a></p>
+<p id="footnote-69">69.
+            In the literature operator expression grammars are more often
+            call simply
+            <q>operator grammars</q>.
+ <a href="#footnote-69-ref">&#8617;</a></p>
+<p id="footnote-70">70.
+          http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html
+ <a href="#footnote-70-ref">&#8617;</a></p>
 </body>
 </html>
