@@ -1542,6 +1542,16 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
 	    Note that these <q>precedenced statements</q>,
 	    like all of Marpa's DSL,
 	    are parsed by Marpa itself.
+	    The form shown has the semantic adverbs removed for clarity.
+	    The original is part of the
+	    <a href="https://metacpan.org/pod/Marpa::R2">
+	    Marpa::R2</a>
+	    test suite
+	    and can be found in
+	    <a href=
+	    "https://metacpan.org/pod/release/JKEGL/Marpa-R2-4.000000/pod/Scanless/DSL.pod"
+	    >
+	    the Marpa documentation</a>.
 	  </footnote>
 	  </p>
           <pre><tt>
@@ -1554,15 +1564,6 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
               || Expression '+' Expression
               |  Expression '-' Expression
             </tt></pre>
-      <h1>Today</h1>
-      <p>After five decades of parsing theory, the state of the art seems
-        to be back where it started. We can imagine someone taking Ned Iron's
-        original 1961 algorithm from the first paper ever published describing
-        a parser, and republishing it today. True, he would have to translate
-        its code from the mix of assembler and ALGOL into something more
-        fashionable, say Haskell. But with that change, it might look like
-        a breath of fresh air.
-      </p>
       <h1>Marpa: an afterword</h1>
       <p>The recollections of my teachers cover most of this timeline. My
         own begin around 1970. Very early on, as a graduate student, I became
