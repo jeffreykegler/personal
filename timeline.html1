@@ -1447,13 +1447,13 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         <cite>Computer J.</cite>
         45(6):620–630. (2002)
       </p>
-      <bibid>Ford 2002</bibid><p>:
+      <bibid>Ford 2002</bibid>:
         Bryan Ford, "Packrat parsing: a practical linear-time algorithm with backtracking", Master’s thesis,
         Massachusetts Institute of Technology. (September 2002.)
         [http://pdos.csail.mit.edu/papers/packrat-parsing:ford-ms.pdf.]
       </p>
       <p>
-        <bibid>Ford 2004</bibid></p><p>:
+        <bibid>Ford 2004</bibid>:
         Bryan Ford,
         "Parsing expression grammars: A recognition-based syntactic foundation",
         in
