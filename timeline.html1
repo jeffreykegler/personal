@@ -1363,7 +1363,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         practical implementation of Joop Leo's algorithm<footnote>
           [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html].
         </footnote>.
-        The new parser, named Marpa, is declarative
+        The new parser, named Marpa, is general, declarative
         and linear for all the grammars discussed in
         <bibref>Knuth 1965</bibref>, that is, it is
         linear for the LR(k) grammars for all finite k<footnote>
@@ -1372,6 +1372,17 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
           proves his algorithm is linear for the LR-regular
           grammars -- the LR grammars with infinite lookahead, so long as the lookahead
           is a regular expresion.
+	  It is not known (in fact not decidable, see <bibref>Leo 1991</bibref>, p. 175.),
+	  just how large a class of grammars
+	  Marpa is linear for.
+	  But it is known that there are both ambiguous and unambiguous grammars
+	  for which Marpa is not linear.
+	  In the general case, Marpa obeys the bounds of Earley's algorithm --
+	  it is worst-case O(n**2) for unambiguous grammars;
+	  and worst-case O(n**3) for ambiguous grammars.
+	  On the other hand, Marpa follows <bibref>Leo 1991</bibref>
+	  in being linear for many ambiguous grammars,
+	  including those of most practical interest.
         </footnote>
         This means it is also linear for most of the grammar classes we have discussed in this
         timeline.
@@ -1441,7 +1452,9 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         Kegler reorders Earley's parse engine so that it
         allows procedural logic.
         As a side effect,
-        this gives Marpa excellent error-handling properties.
+        this gives Marpa excellent error-handling properties<footnote>
+	Marpa
+	</footnote>.
       </p>
       <comment>TODO: Add more</comment>
       <h1>2012: General precedence parsing</h1>

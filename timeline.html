@@ -1078,7 +1078,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       <h1>2010: Leo 1991 is implemented</h1><p>
       </p><p>Jeffrey Kegler (the author of this timeline) releases the first
         practical implementation of Joop Leo's algorithm<a id="footnote-67-ref" href="#footnote-67">[67]</a>.
-        The new parser, named Marpa, is declarative
+        The new parser, named Marpa, is general, declarative
         and linear for all the grammars discussed in
         <a href="#bib-Knuth_1965">Knuth 1965</a>, that is, it is
         linear for the LR(k) grammars for all finite k<a id="footnote-68-ref" href="#footnote-68">[68]</a>
@@ -1114,13 +1114,13 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         Kegler reorders Earley's parse engine so that it
         allows procedural logic.
         As a side effect,
-        this gives Marpa excellent error-handling properties.
+        this gives Marpa excellent error-handling properties<a id="footnote-73-ref" href="#footnote-73">[73]</a>.
       </p>
       <comment>TODO: Add more</comment>
       <h1>2012: General precedence parsing</h1>
       <p>
         TODO:
-        <a id="footnote-73-ref" href="#footnote-73">[73]</a>
+        <a id="footnote-74-ref" href="#footnote-74">[74]</a>
       </p>
       <h1>Today</h1>
       <p>After five decades of parsing theory, the state of the art seems
@@ -1691,6 +1691,17 @@ pp. 4-6.
           proves his algorithm is linear for the LR-regular
           grammars -- the LR grammars with infinite lookahead, so long as the lookahead
           is a regular expresion.
+	  It is not known (in fact not decidable, see <a href="#bib-Leo_1991">Leo 1991</a>, p. 175.),
+	  just how large a class of grammars
+	  Marpa is linear for.
+	  But it is known that there are both ambiguous and unambiguous grammars
+	  for which Marpa is not linear.
+	  In the general case, Marpa obeys the bounds of Earley's algorithm --
+	  it is worst-case O(n**2) for unambiguous grammars;
+	  and worst-case O(n**3) for ambiguous grammars.
+	  On the other hand, Marpa follows <a href="#bib-Leo_1991">Leo 1991</a>
+	  in being linear for many ambiguous grammars,
+	  including those of most practical interest.
  <a href="#footnote-68-ref">&#8617;</a></p>
 <p id="footnote-69">69.
             In the literature operator expression grammars are more often
@@ -1734,7 +1745,10 @@ A
             will spot any unambiguous right recursions as well.
  <a href="#footnote-72-ref">&#8617;</a></p>
 <p id="footnote-73">73.
-          http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html
+	Marpa
  <a href="#footnote-73-ref">&#8617;</a></p>
+<p id="footnote-74">74.
+          http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html
+ <a href="#footnote-74-ref">&#8617;</a></p>
 </body>
 </html>
