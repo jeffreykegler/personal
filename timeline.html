@@ -924,8 +924,9 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       parsers, debugging them is so hard they could just as easily write the
       parser by hand. Once debugged, their LALR parsers are fast for correct
       inputs. But almost all they tell the users about incorrect inputs
-      is that they are incorrect. In Larry's words, LALR is &quot;fast
-      but stupid&quot;.</p>
+      is that they are incorrect. In Larry's words, LALR is <q>fast
+      but stupid</q><a id="footnote-57-ref" href="#footnote-57">[57]</a>.
+      </p>
     <h1>1992</h1>
     <p>Combinators are parsers which can be "combined" to compose other parsers.
       This allows you to have an algebra of parsers.
@@ -935,9 +936,9 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     </p>
     <p>
       Combinator parsing
-      was introduced in two 1992 papers<a id="footnote-57-ref" href="#footnote-57">[57]</a>.
+      was introduced in two 1992 papers<a id="footnote-58-ref" href="#footnote-58">[58]</a>.
       Of more interest
-      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-58-ref" href="#footnote-58">[58]</a>.
+      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-59-ref" href="#footnote-59">[59]</a>.
       Combinators will become important in programming languages and
       semantics. But in terms of parsing algorithms, Hutton introduces
       nothing new -- wrapped up in an attribute grammar; underlying the
@@ -954,14 +955,14 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       Hutton points out
       "combinator parsers give rise to a monad" and shows
       how his presentation could be rewritten in a form
-      closely related to monads<a id="footnote-59-ref" href="#footnote-59">[59]</a>.
+      closely related to monads<a id="footnote-60-ref" href="#footnote-60">[60]</a>.
     </p>
     <h1>1995</h1><p>
       Today monads are a hot topic.
       In their adaptation into the world of
       programming,
       the 1995 article by Wadler
-      <a id="footnote-60-ref" href="#footnote-60">[60]</a>
+      <a id="footnote-61-ref" href="#footnote-61">[61]</a>
       is a turning point.
       One of Wadler's examples is a parser based on
       monads and combinator parsing.
@@ -989,7 +990,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     <h1>1996</h1><p>
       Wadler had used parsing as an example to motivate
       his presentation of monads.
-      In 1996, Graham Hutton and Erik Meijer<a id="footnote-61-ref" href="#footnote-61">[61]</a>
+      In 1996, Graham Hutton and Erik Meijer<a id="footnote-62-ref" href="#footnote-62">[62]</a>
       take the opposite perspective -- they
       write a paper on combinator parsing that could
       "also be viewed as a first introduction to the use
@@ -997,20 +998,20 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     </p>
     <h1>1999</h1><p>
       TODO:
-      <a id="footnote-62-ref" href="#footnote-62">[62]</a>
+      <a id="footnote-63-ref" href="#footnote-63">[63]</a>
     </p><h1>2000</h1>
     <p>Larry Wall decides on a radical reimplementation of Perl --
       Perl 6. Larry does not even consider using LALR again.</p>
     <h1>2002</h1>
     <p>John Aycock and R. Nigel Horspool publish their attempt at a
-      fast, practical Earley's parser. Missing from it is Joop Leo's
+      fast, practical Earley's parser<a id="footnote-64-ref" href="#footnote-64">[64]</a>. Missing from it is Joop Leo's
       improvement -- they seem not to be aware of it. Their own speedup
       is limited in what it achieves and the complications it introduces
       can be counter-productive at evaluation time. But buried in their
       paper is a solution to the zero-length rule bug. And this time the
       solution requires no additional bookkeeping.</p>
-    <h1>2004</h1>
-    <p>Bryan Ford publishes his paper on PEG. Ford fills this gap by
+    <h1>2002: Bryan Ford publishes his paper on PEG</h1>
+    <p>Ford<a id="footnote-65-ref" href="#footnote-65">[65]</a>fills this gap by
       repackaging the nearly-forgotten GTDPL. Ford adds packratting,
       so that PEG is always linear, and provides PEG with an attractive
       new syntax.</p>
@@ -1021,11 +1022,25 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       <a href="http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2015/03/peg.html">the problematic behaviors</a>
       of GTDPL.</p>
     <h1>2006</h1>
-    <p>GNU announces that the GCC compiler's parser has been
-      rewritten. For three decades, the industry's flagship C compilers have
+    <p>
+    <q>The old Bison-based C and Objective-C parser has been replaced by a new, faster hand-written recursive-descent
+    parser.<q><a id="footnote-66-ref" href="#footnote-66">[66]</a>
+    Bison, an LALR parser, is the direct descendant of Steve Johnson's YACC.
+    </p>
+    <p>
+    With this single line in middle of a change list hundreds of lines long.
+    GNU announces a major event in parsing history.
+      For three decades, the industry's flagship C compilers have
       used LALR as their parser -- proof of the claim that LALR and serious
-      parsing are equivalent. Now, GNU replaces LALR with the technology
+      parsing are equivalent.
+      Now, GNU replaces LALR with the technology
       that it replaced a quarter century earlier: recursive descent.</p>
+    <h1>2010: The first implementation of Leo 1991</h1><p>
+      TODO:
+      <a id="footnote-67-ref" href="#footnote-67">[67]</a>
+    </p><h1>2012: General precedence parsing</h1><p>
+      TODO:
+      <a id="footnote-68-ref" href="#footnote-68">[68]</a>
     <h1>Today</h1>
     <p>After five decades of parsing theory, the state of the art seems
       to be back where it started. We can imagine someone taking Ned Iron's
@@ -1034,12 +1049,6 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       its code from the mix of assembler and ALGOL into something more
       fashionable, say Haskell. But with that change, it might look like
       a breath of fresh air.</p>
-    <h1>2010: The first implementation of Leo 1991</h1><p>
-      TODO:
-      <a id="footnote-63-ref" href="#footnote-63">[63]</a>
-    </p><h1>2012: General precedence parsing</h1><p>
-      TODO:
-      <a id="footnote-64-ref" href="#footnote-64">[64]</a>
     </p><h1>Marpa: an afterword</h1>
     <p>The recollections of my teachers cover most of this timeline. My
       own begin around 1970. Very early on, as a graduate student, I became
@@ -1102,6 +1111,26 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
        is sometimes called the "green dragon book" to distinguish
        it from its second edition,
        which had a red dragon on the cover.
+    </p>
+    <p>
+    <b id="bib-Aycock_and_Horspool_2002">Aycock and Horspool 2002</b>:
+    John Aycock and R. Nigel Horspool, "Practical Earley parsing",
+    <cite>Computer J.</cite> 45(6):620–630. (2002)
+    </p>
+    <b id="bib-Ford_2002">Ford 2002</b>:
+    Bryan Ford, "Packrat parsing: a practical linear-time algorithm with backtracking", Master’s thesis,
+Massachusetts Institute of Technology. (September 2002.)
+[http://pdos.csail.mit.edu/papers/packrat-parsing:ford-ms.pdf.]
+    <p>
+    </p>
+    <b id="bib-Ford_2004">Ford 2004</b>:
+Bryan Ford,
+"Parsing expression grammars: A recognition-based syntactic foundation",
+in <cite>Proceedings
+of the 31st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages<cite>,
+POPL 2004 (Venice, Italy, 14–16 January 2004)<cite>, N. D. Jones and X. Leroy, Eds., ACM, pp. 111–122.
+(January 2004.)
+    <p>
     </p>
     <p>
       <b id="bib-Glennie_1960">Glennie 1960</b>:
@@ -1500,14 +1529,18 @@ pp. 4-6.
       <a href="#bib-Leo_1991">Leo 1991</a>.
  <a href="#footnote-56-ref">&#8617;</a></p>
 <p id="footnote-57">57.
+      Perl 6 IRC, August 30, 2014.
+      [https://irclog.perlgeek.de/perl6/2014-08-30#i_9271280]
+ <a href="#footnote-57-ref">&#8617;</a></p>
+<p id="footnote-58">58.
         Some source consider
         <a href="#bib-Wadler_1985">Wadler 1985</a>
         an
         early presentation of the ideas of combinator parsing.
         In assigning priority here,
         I follow Grune and Jacobs 2008 (p. 564).
- <a href="#footnote-57-ref">&#8617;</a></p>
-<p id="footnote-58">58.
+ <a href="#footnote-58-ref">&#8617;</a></p>
+<p id="footnote-59">59.
         The paper which is devoted to parsing is
         <a href="#bib-Hutton_1992">Hutton 1992</a>.
         The other paper, which centers on combinators as a programming
@@ -1520,29 +1553,41 @@ pp. 4-6.
         but these avoid left recursion,
         and implement precedence and associativity,
         using parentheses.
- <a href="#footnote-58-ref">&#8617;</a></p>
-<p id="footnote-59">59.
-        <a href="#bib-Hutton_1992">Hutton 1992</a>, pp. 19-20.
  <a href="#footnote-59-ref">&#8617;</a></p>
 <p id="footnote-60">60.
+        <a href="#bib-Hutton_1992">Hutton 1992</a>, pp. 19-20.
+ <a href="#footnote-60-ref">&#8617;</a></p>
+<p id="footnote-61">61.
         Wadler Philip. (1995) Monads for functional programming. In:
         Jeuring J., Meijer E. (eds) Advanced Functional Programming. AFP
         1995. Lecture Notes in Computer Science, vol 925. Springer,
         Berlin, Heidelberg.
- <a href="#footnote-60-ref">&#8617;</a></p>
-<p id="footnote-61">61.
-        <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a>
  <a href="#footnote-61-ref">&#8617;</a></p>
 <p id="footnote-62">62.
+        <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a>
+ <a href="#footnote-62-ref">&#8617;</a></p>
+<p id="footnote-63">63.
         Hudak, Peterson and Fasel,
         "A Gentle Introduction to Haskell 98",
         1999.
- <a href="#footnote-62-ref">&#8617;</a></p>
-<p id="footnote-63">63.
-        http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html
  <a href="#footnote-63-ref">&#8617;</a></p>
 <p id="footnote-64">64.
-        http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html
+      <a href="#bib-Aycock_and_Horspool_2002">Aycock and Horspool 2002</a>.
  <a href="#footnote-64-ref">&#8617;</a></p>
+<p id="footnote-65">65.
+    <a href="#bib-Ford_2002">Ford 2002</a>.
+    See also 
+    <a href="#bib-Ford_2004">Ford 2004</a>.
+ <a href="#footnote-65-ref">&#8617;</a></p>
+<p id="footnote-66">66.
+    "GCC 4.1 Release Series: Changes, New Features, and Fixes"
+    [http://gcc.gnu.org/gcc-4.1/changes.html]
+ <a href="#footnote-66-ref">&#8617;</a></p>
+<p id="footnote-67">67.
+        http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html
+ <a href="#footnote-67-ref">&#8617;</a></p>
+<p id="footnote-68">68.
+        http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html
+ <a href="#footnote-68-ref">&#8617;</a></p>
 </body>
 </html>

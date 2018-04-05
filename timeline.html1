@@ -1152,8 +1152,12 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       parsers, debugging them is so hard they could just as easily write the
       parser by hand. Once debugged, their LALR parsers are fast for correct
       inputs. But almost all they tell the users about incorrect inputs
-      is that they are incorrect. In Larry's words, LALR is &quot;fast
-      but stupid&quot;.</p>
+      is that they are incorrect. In Larry's words, LALR is <q>fast
+      but stupid</q><footnote>
+      Perl 6 IRC, August 30, 2014.
+      [https://irclog.perlgeek.de/perl6/2014-08-30#i_9271280]
+      </footnote>.
+      </p>
     <h1>1992</h1>
     <p>Combinators are parsers which can be "combined" to compose other parsers.
       This allows you to have an algebra of parsers.
@@ -1264,14 +1268,20 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       Perl 6. Larry does not even consider using LALR again.</p>
     <h1>2002</h1>
     <p>John Aycock and R. Nigel Horspool publish their attempt at a
-      fast, practical Earley's parser. Missing from it is Joop Leo's
+      fast, practical Earley's parser<footnote>
+      <bibref>Aycock and Horspool 2002</bibref>.
+      </footnote>. Missing from it is Joop Leo's
       improvement -- they seem not to be aware of it. Their own speedup
       is limited in what it achieves and the complications it introduces
       can be counter-productive at evaluation time. But buried in their
       paper is a solution to the zero-length rule bug. And this time the
       solution requires no additional bookkeeping.</p>
-    <h1>2004</h1>
-    <p>Bryan Ford publishes his paper on PEG. Ford fills this gap by
+    <h1>2002: Bryan Ford publishes his paper on PEG</h1>
+    <p>Ford<footnote>
+    <bibref>Ford 2002</bibref>.
+    See also 
+    <bibref>Ford 2004</bibref>.
+    </footnote>fills this gap by
       repackaging the nearly-forgotten GTDPL. Ford adds packratting,
       so that PEG is always linear, and provides PEG with an attractive
       new syntax.</p>
@@ -1282,19 +1292,22 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       <a href="http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2015/03/peg.html">the problematic behaviors</a>
       of GTDPL.</p>
     <h1>2006</h1>
-    <p>GNU announces that the GCC compiler's parser has been
-      rewritten. For three decades, the industry's flagship C compilers have
+    <p>
+    <q>The old Bison-based C and Objective-C parser has been replaced by a new, faster hand-written recursive-descent
+    parser.<q><footnote>
+    "GCC 4.1 Release Series: Changes, New Features, and Fixes"
+    [http://gcc.gnu.org/gcc-4.1/changes.html]
+    </footnote>
+    Bison, an LALR parser, is the direct descendant of Steve Johnson's YACC.
+    </p>
+    <p>
+    With this single line in middle of a change list hundreds of lines long.
+    GNU announces a major event in parsing history.
+      For three decades, the industry's flagship C compilers have
       used LALR as their parser -- proof of the claim that LALR and serious
-      parsing are equivalent. Now, GNU replaces LALR with the technology
+      parsing are equivalent.
+      Now, GNU replaces LALR with the technology
       that it replaced a quarter century earlier: recursive descent.</p>
-    <h1>Today</h1>
-    <p>After five decades of parsing theory, the state of the art seems
-      to be back where it started. We can imagine someone taking Ned Iron's
-      original 1961 algorithm from the first paper ever published describing
-      a parser, and republishing it today. True, he would have to translate
-      its code from the mix of assembler and ALGOL into something more
-      fashionable, say Haskell. But with that change, it might look like
-      a breath of fresh air.</p>
     <h1>2010: The first implementation of Leo 1991</h1><p>
       TODO:
       <footnote>
@@ -1305,6 +1318,14 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       <footnote>
         http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html
       </footnote>
+    <h1>Today</h1>
+    <p>After five decades of parsing theory, the state of the art seems
+      to be back where it started. We can imagine someone taking Ned Iron's
+      original 1961 algorithm from the first paper ever published describing
+      a parser, and republishing it today. True, he would have to translate
+      its code from the mix of assembler and ALGOL into something more
+      fashionable, say Haskell. But with that change, it might look like
+      a breath of fresh air.</p>
     </p><h1>Marpa: an afterword</h1>
     <p>The recollections of my teachers cover most of this timeline. My
       own begin around 1970. Very early on, as a graduate student, I became
@@ -1367,6 +1388,26 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
        is sometimes called the "green dragon book" to distinguish
        it from its second edition,
        which had a red dragon on the cover.
+    </p>
+    <p>
+    <bibid>Aycock and Horspool 2002</bibid>:
+    John Aycock and R. Nigel Horspool, "Practical Earley parsing",
+    <cite>Computer J.</cite> 45(6):620–630. (2002)
+    </p>
+    <bibid>Ford 2002</bibid>:
+    Bryan Ford, "Packrat parsing: a practical linear-time algorithm with backtracking", Master’s thesis,
+Massachusetts Institute of Technology. (September 2002.)
+[http://pdos.csail.mit.edu/papers/packrat-parsing:ford-ms.pdf.]
+    <p>
+    </p>
+    <bibid>Ford 2004</bibid>:
+Bryan Ford,
+"Parsing expression grammars: A recognition-based syntactic foundation",
+in <cite>Proceedings
+of the 31st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages<cite>,
+POPL 2004 (Venice, Italy, 14–16 January 2004)<cite>, N. D. Jones and X. Leroy, Eds., ACM, pp. 111–122.
+(January 2004.)
+    <p>
     </p>
     <p>
       <bibid>Glennie 1960</bibid>:
