@@ -839,68 +839,76 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       have noted that LL(1) cannot parse operator expressions. What about
       making the entire grammar an operator grammar? That way you don't
       have to mix algorithms.</p>
+    <p>It's an idea that had already occurred to
+    Samuelson and Bauer in 1960.
+    They intended their operator parser as a parser for ALGOL.
     <p>There are many problems with switching to operator
       grammars. Operator grammar are non-Chomskyan -- the BNF no longer
-      accurately describes the grammar. Instead the BNF becomes part of
+      accurately describes the grammar<a id="footnote-47-ref" href="#footnote-47">[47]</a>. Instead the BNF becomes part of
       a combined notation, and the actual grammar parsed depends also on
-      precedence and semantics. And operator grammars have a restricted
+      precedence and semantics.
+      And operator grammars have a very restricted
       form -- most practical languages are not operator grammars.</p>
     <p>But many practical grammars are almost operator grammars. And the
-      Chomskyan approach has always had its dissenter. Vaughn Pratt was one
+      Chomskyan approach has always had its dissenters.
+      Vaughn Pratt was one
       of these, and discovered a new approach (the third and last in
       <a
     href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         Norvell's taxonomy</a>) to operator expression parsing, one which
-      some have adopted as an overall solution to their parsing problems.<a id="footnote-47-ref" href="#footnote-47">[47]</a>
+      some have adopted as an overall solution to their parsing problems<a id="footnote-48-ref" href="#footnote-48">[48]</a>.
     </p>
     <p>The Pratt approach, and its descendant, precedence climbing,
-      is not popular as an overall strategy. It is most often used as the
-      operator expression subparser within a recursive descent strategy. All
-      operator expression subparsers breaks the Chomskyan paradigm so the
+      is not popular as an overall strategy.
+      It is most often used as an alternative to the classic
+      and the shunting yard approached,
+      within a recursive descent strategy.
+      All
+      operator expression subparsers break the Chomskyan paradigm so the
       non-Chomskyan nature of Pratt's parser is not a problem in this
       context. But with respect to the Operator Issue, like Dijkstra's
       alternative, it is an implementation choice, not a game-changer.</p>
-    <h1>1975</h1>
+    <h1>1975: The C compiler is converted to LALR</h1>
     <p>Bell Labs converts its C compiler from hand-written recursive
-      descent to DeRemer's LALR algorithm.</p>
-    <h1>1977</h1>
-    <p>The first &quot;Dragon book&quot; comes out. This soon-to-be
+      descent to DeRemer's LALR algorithm<a id="footnote-49-ref" href="#footnote-49">[49]</a>.</p>
+    <h1>1977: The first dragon book is published</h1>
+    <p>The first "dragon book"<a id="footnote-50-ref" href="#footnote-50">[50]</a>
+    comes out. This soon-to-become
       classic textbook is nicknamed after the drawing on the front cover,
       in which a knight takes on a dragon. Emblazoned on the knight's lance
-      are the letters &quot;LALR&quot;. From here on out, to speak lightly
+      are the letters <q>LALR</q>. From here on out, to speak lightly
       of LALR will be to besmirch the escutcheon of parsing theory.</p>
-    <h1>1979</h1>
-    <p>Bell Laboratories releases Version 7 UNIX. V7 includes what is,
+    <h1>1979: Yacc is released</h1>
+    <p>Bell Laboratories releases Version 7 UNIX<a id="footnote-51-ref" href="#footnote-51">[51]</a>. V7 includes what is,
       by far, the most comprehensive, useable and easily available compiler
       writing toolkit yet developed.</p>
-    <h1>1979</h1>
     <p>Part of the V7 toolkit is Yet Another Compiler Compiler
-      (YACC). YACC is LALR-powered. Despite its name, YACC is the first
+      (YACC)<a id="footnote-52-ref" href="#footnote-52">[52]</a>. YACC is LALR-powered. Despite its name, YACC is the first
       compiler-compiler in the modern sense. For some useful languages, the
       process of going from Chomskyan specification to executable is fully
       automated. Most practical languages, including the C language and
       YACC's own input language, still require manual hackery. Nonetheless,
       after two decades of research, it seems that the parsing problem
       is solved.</p>
-    <h1>1987</h1>
-    <p>Larry Wall introduces Perl 1. Perl embraces complexity like no
+    <h1>1987: Perl 1 is released</h1>
+    <p>Larry Wall introduces Perl 1<a id="footnote-53-ref" href="#footnote-53">[53]</a>. Perl embraces complexity like no
       previous language. Larry uses YACC and LALR very aggressively --
       to my knowledge more aggressively than anyone before or since.</p>
     <h1>1990</h1>
     <p>
       Wadler starts to introduce monads to the functional programming community.
       As one example he converts his previous efforts at function parsing
-      techniques<a id="footnote-48-ref" href="#footnote-48">[48]</a>.
+      techniques<a id="footnote-54-ref" href="#footnote-54">[54]</a>.
       The parsing technique is pure recursive descent.
       The examples shown for monadic parsing are very simple,
       and do not include operator expressions.
       In his earlier non-monadic work, Wadler uses a very restricted form of operator expression:
       His grammar avoided left recursion by using parentheses,
-      and operator precedence was not implemented<a id="footnote-49-ref" href="#footnote-49">[49]</a>.
+      and operator precedence was not implemented<a id="footnote-55-ref" href="#footnote-55">[55]</a>.
     </p>
     <h1>1991</h1>
     <p>Joop Leo discovers a way of speeding up right recursions in
-      Earley's algorithm. Leo's algorithm is linear for just about every
+      Earley's algorithm<a id="footnote-56-ref" href="#footnote-56">[56]</a>. Leo's algorithm is linear for just about every
       unambiguous grammar of practical interest, and many ambiguous ones
       as well. In 1991 hardware is six orders of magnitude faster than
       1968 hardware, so that the issue of bookkeeping overhead had receded
@@ -927,9 +935,9 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     </p>
     <p>
       Combinator parsing
-      was introduced in two 1992 papers<a id="footnote-50-ref" href="#footnote-50">[50]</a>.
+      was introduced in two 1992 papers<a id="footnote-57-ref" href="#footnote-57">[57]</a>.
       Of more interest
-      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-51-ref" href="#footnote-51">[51]</a>.
+      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-58-ref" href="#footnote-58">[58]</a>.
       Combinators will become important in programming languages and
       semantics. But in terms of parsing algorithms, Hutton introduces
       nothing new -- wrapped up in an attribute grammar; underlying the
@@ -946,14 +954,14 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       Hutton points out
       "combinator parsers give rise to a monad" and shows
       how his presentation could be rewritten in a form
-      closely related to monads<a id="footnote-52-ref" href="#footnote-52">[52]</a>.
+      closely related to monads<a id="footnote-59-ref" href="#footnote-59">[59]</a>.
     </p>
     <h1>1995</h1><p>
       Today monads are a hot topic.
       In their adaptation into the world of
       programming,
       the 1995 article by Wadler
-      <a id="footnote-53-ref" href="#footnote-53">[53]</a>
+      <a id="footnote-60-ref" href="#footnote-60">[60]</a>
       is a turning point.
       One of Wadler's examples is a parser based on
       monads and combinator parsing.
@@ -981,7 +989,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     <h1>1996</h1><p>
       Wadler had used parsing as an example to motivate
       his presentation of monads.
-      In 1996, Graham Hutton and Erik Meijer<a id="footnote-54-ref" href="#footnote-54">[54]</a>
+      In 1996, Graham Hutton and Erik Meijer<a id="footnote-61-ref" href="#footnote-61">[61]</a>
       take the opposite perspective -- they
       write a paper on combinator parsing that could
       "also be viewed as a first introduction to the use
@@ -989,7 +997,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     </p>
     <h1>1999</h1><p>
       TODO:
-      <a id="footnote-55-ref" href="#footnote-55">[55]</a>
+      <a id="footnote-62-ref" href="#footnote-62">[62]</a>
     </p><h1>2000</h1>
     <p>Larry Wall decides on a radical reimplementation of Perl --
       Perl 6. Larry does not even consider using LALR again.</p>
@@ -1026,12 +1034,12 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       its code from the mix of assembler and ALGOL into something more
       fashionable, say Haskell. But with that change, it might look like
       a breath of fresh air.</p>
-    <h1>2010: The first implementation of Leo 1992</h1><p>
+    <h1>2010: The first implementation of Leo 1991</h1><p>
       TODO:
-      <a id="footnote-56-ref" href="#footnote-56">[56]</a>
+      <a id="footnote-63-ref" href="#footnote-63">[63]</a>
     </p><h1>2012: General precedence parsing</h1><p>
       TODO:
-      <a id="footnote-57-ref" href="#footnote-57">[57]</a>
+      <a id="footnote-64-ref" href="#footnote-64">[64]</a>
     </p><h1>Marpa: an afterword</h1>
     <p>The recollections of my teachers cover most of this timeline. My
       own begin around 1970. Very early on, as a graduate student, I became
@@ -1082,6 +1090,18 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     <b id="bib-Earley_1968">Earley 1968</b>:
     Jay Earley, <cite>An Efficient Context-free Parsing Algorithm</cite>,
     PhD thesis, Carnegie-Mellon Univ., Pittsburg, Pa., 1968.
+    </p>
+    <p>
+       <b id="bib-Aho_and_Ullman_1977">Aho and Ullman 1977</b>:
+       Alfred V. Aho and Jeffrey D. Ullman,
+       <cite>Principles of compiler design</cite>,
+       Addision-Wesley,
+       Reading, Mass. (1977)
+       The dragon on the cover is green,
+       and this classic first edition
+       is sometimes called the "green dragon book" to distinguish
+       it from its second edition,
+       which had a red dragon on the cover.
     </p>
     <p>
       <b id="bib-Glennie_1960">Glennie 1960</b>:
@@ -1137,6 +1157,13 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       [http://bitsavers.org/pdf/stanford/cs_techReports/STAN-CS-76-562_EarlyDevelPgmgLang_Aug76.pdf ].
     </p>
     <p>
+      <b id="bib-Leo_1991">Leo 1991</b>:
+      Joop M. I. M. Leo,
+      "A general context-free parsing algorithm running in linear time on
+every LR(k) grammar without using lookahead",
+Theoret. Comput. Sci., 82:165–176, 1991.
+    </p>
+    <p>
     <b id="bib-Lewis_and_Stearns_1968">Lewis and Stearns 1968</b>:
     P. M. Lewis, II and R. E .Stearns, "Syntax-directed transduction",
     <cite>Journal of the ACM</cite>,
@@ -1149,9 +1176,27 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       3(11.4):159–167, 1961, (in German).
     </p>
     <p>
+      <b id="bib-Pratt_1973">Pratt 1973</b>:
+       Vaughan R. Pratt, "Top down operator precedence", in <cite>First
+       ACM Symposium on Principles of Programming Languages<cite>,
+       pages 41–51, ACM. (Oct. 1973.)
+    </p>
+    <p>
       <b id="bib-Samuelson_and_Bauer_1960">Samuelson and Bauer 1960</b>:
       Samelson, K. and Bauer, F. L. Sequential formula translation. Commun. ACM,
       3(2):76–83, Feb. 1960.
+    </p>
+    <p>
+    <b id="bib-Snyder_1975">Snyder 1975</b>:
+    Alan Snyder, "A Portable Compiler for the Language C",
+    MIT, Project MAC, Cambridge MA. (May 1975.)
+    </p>
+    <p>
+    <b id="bib-McIlroy_and_Kernighan_1979">McIlroy and Kernighan 1979</b>:
+    M. D. McIlroy and B. W. Kernighan, editors,
+    <cite>UNIX Programmer's Manual</cite>, Seventh Edition, Volume 1,
+    Bell Labs, Murray Hill, New Jersey.
+    (January 1979.)
     </p>
     <p><b id="bib-Wadler_1985">Wadler 1985</b>:
       Philip Wadler, "How to Replace Failure by a List of Successes: A method
@@ -1414,32 +1459,55 @@ pp. 4-6.
         http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2
  <a href="#footnote-46-ref">&#8617;</a></p>
 <p id="footnote-47">47.
-        Vaughan R Pratt,
-        "Top down operator precedence",
-        in
-        <cite>First ACM Symposium on Principles of Programming Languages</cite>,
-        pages 41–51. ACM, Oct. 1973.
+      <a href="#bib-Samuelson_and_Bauer_1960">Samuelson and Bauer 1960</a>
+      did not even include a BNF grammar --
+      just the precedence tables.
  <a href="#footnote-47-ref">&#8617;</a></p>
 <p id="footnote-48">48.
+        <a href="#bib-Pratt_1973">Pratt 1973</a>.
+ <a href="#footnote-48-ref">&#8617;</a></p>
+<p id="footnote-49">49.
+      <a href="#bib-Synder_1975">Synder 1975</a>.
+      See, in particular, pp. 67-68.
+ <a href="#footnote-49-ref">&#8617;</a></p>
+<p id="footnote-50">50.
+    <a href="#bib-Aho_and_Ullman_1977">Aho and Ullman 1977</a>.
+ <a href="#footnote-50-ref">&#8617;</a></p>
+<p id="footnote-51">51.
+    <a href="#bib-McIlroy_and_Kernighan_1979">McIlroy and Kernighan 1979</a>.
+ <a href="#footnote-51-ref">&#8617;</a></p>
+<p id="footnote-52">52.
+      S. C. Johnson, "Yet another compiler-compiler", in Volume 2A
+      of <a href="#bib-McIlroy_and_Kernighan_1979">McIlroy and Kernighan 1979</a>.
+ <a href="#footnote-52-ref">&#8617;</a></p>
+<p id="footnote-53">53.
+    Larry Wall, "v13i001: Perl, a "replacement" for awk and sed, Part01/10". Newsgroup: comp.sources.unix.
+    1988-02-01).
+    [https://groups.google.com/forum/#!topic/comp.sources.unix/Njx6b6TiZos].
+ <a href="#footnote-53-ref">&#8617;</a></p>
+<p id="footnote-54">54.
         Philip Wadler,
         "Comprehending Monads"
         In
         <cite>Proceedings of the 1990 ACM conference on LISP and functional programming</cite>
         (LFP '90).
         ACM, New York, NY, USA, 61-78. DOI=http://dx.doi.org/10.1145/91556.91592
- <a href="#footnote-48-ref">&#8617;</a></p>
-<p id="footnote-49">49.
+ <a href="#footnote-54-ref">&#8617;</a></p>
+<p id="footnote-55">55.
         Wadler 1985.
- <a href="#footnote-49-ref">&#8617;</a></p>
-<p id="footnote-50">50.
+ <a href="#footnote-55-ref">&#8617;</a></p>
+<p id="footnote-56">56.
+      <a href="#bib-Leo_1991">Leo 1991</a>.
+ <a href="#footnote-56-ref">&#8617;</a></p>
+<p id="footnote-57">57.
         Some source consider
         <a href="#bib-Wadler_1985">Wadler 1985</a>
         an
         early presentation of the ideas of combinator parsing.
         In assigning priority here,
         I follow Grune and Jacobs 2008 (p. 564).
- <a href="#footnote-50-ref">&#8617;</a></p>
-<p id="footnote-51">51.
+ <a href="#footnote-57-ref">&#8617;</a></p>
+<p id="footnote-58">58.
         The paper which is devoted to parsing is
         <a href="#bib-Hutton_1992">Hutton 1992</a>.
         The other paper, which centers on combinators as a programming
@@ -1452,29 +1520,29 @@ pp. 4-6.
         but these avoid left recursion,
         and implement precedence and associativity,
         using parentheses.
- <a href="#footnote-51-ref">&#8617;</a></p>
-<p id="footnote-52">52.
+ <a href="#footnote-58-ref">&#8617;</a></p>
+<p id="footnote-59">59.
         <a href="#bib-Hutton_1992">Hutton 1992</a>, pp. 19-20.
- <a href="#footnote-52-ref">&#8617;</a></p>
-<p id="footnote-53">53.
+ <a href="#footnote-59-ref">&#8617;</a></p>
+<p id="footnote-60">60.
         Wadler Philip. (1995) Monads for functional programming. In:
         Jeuring J., Meijer E. (eds) Advanced Functional Programming. AFP
         1995. Lecture Notes in Computer Science, vol 925. Springer,
         Berlin, Heidelberg.
- <a href="#footnote-53-ref">&#8617;</a></p>
-<p id="footnote-54">54.
+ <a href="#footnote-60-ref">&#8617;</a></p>
+<p id="footnote-61">61.
         <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a>
- <a href="#footnote-54-ref">&#8617;</a></p>
-<p id="footnote-55">55.
+ <a href="#footnote-61-ref">&#8617;</a></p>
+<p id="footnote-62">62.
         Hudak, Peterson and Fasel,
         "A Gentle Introduction to Haskell 98",
         1999.
- <a href="#footnote-55-ref">&#8617;</a></p>
-<p id="footnote-56">56.
+ <a href="#footnote-62-ref">&#8617;</a></p>
+<p id="footnote-63">63.
         http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html
- <a href="#footnote-56-ref">&#8617;</a></p>
-<p id="footnote-57">57.
+ <a href="#footnote-63-ref">&#8617;</a></p>
+<p id="footnote-64">64.
         http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html
- <a href="#footnote-57-ref">&#8617;</a></p>
+ <a href="#footnote-64-ref">&#8617;</a></p>
 </body>
 </html>

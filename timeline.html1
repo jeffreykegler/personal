@@ -1037,57 +1037,79 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       have noted that LL(1) cannot parse operator expressions. What about
       making the entire grammar an operator grammar? That way you don't
       have to mix algorithms.</p>
+    <p>It's an idea that had already occurred to
+    Samuelson and Bauer in 1960.
+    They intended their operator parser as a parser for ALGOL.
     <p>There are many problems with switching to operator
       grammars. Operator grammar are non-Chomskyan -- the BNF no longer
-      accurately describes the grammar. Instead the BNF becomes part of
+      accurately describes the grammar<footnote>
+      <bibref>Samuelson and Bauer 1960</bibref>
+      did not even include a BNF grammar --
+      just the precedence tables.
+      </footnote>. Instead the BNF becomes part of
       a combined notation, and the actual grammar parsed depends also on
-      precedence and semantics. And operator grammars have a restricted
+      precedence and semantics.
+      And operator grammars have a very restricted
       form -- most practical languages are not operator grammars.</p>
     <p>But many practical grammars are almost operator grammars. And the
-      Chomskyan approach has always had its dissenter. Vaughn Pratt was one
+      Chomskyan approach has always had its dissenters.
+      Vaughn Pratt was one
       of these, and discovered a new approach (the third and last in
       <a
     href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         Norvell's taxonomy</a>) to operator expression parsing, one which
-      some have adopted as an overall solution to their parsing problems.<footnote>
-        Vaughan R Pratt,
-        "Top down operator precedence",
-        in
-        <cite>First ACM Symposium on Principles of Programming Languages</cite>,
-        pages 41–51. ACM, Oct. 1973.
-      </footnote>
+      some have adopted as an overall solution to their parsing problems<footnote>
+        <bibref>Pratt 1973</bibref>.
+      </footnote>.
     </p>
     <p>The Pratt approach, and its descendant, precedence climbing,
-      is not popular as an overall strategy. It is most often used as the
-      operator expression subparser within a recursive descent strategy. All
-      operator expression subparsers breaks the Chomskyan paradigm so the
+      is not popular as an overall strategy.
+      It is most often used as an alternative to the classic
+      and the shunting yard approached,
+      within a recursive descent strategy.
+      All
+      operator expression subparsers break the Chomskyan paradigm so the
       non-Chomskyan nature of Pratt's parser is not a problem in this
       context. But with respect to the Operator Issue, like Dijkstra's
       alternative, it is an implementation choice, not a game-changer.</p>
-    <h1>1975</h1>
+    <h1>1975: The C compiler is converted to LALR</h1>
     <p>Bell Labs converts its C compiler from hand-written recursive
-      descent to DeRemer's LALR algorithm.</p>
-    <h1>1977</h1>
-    <p>The first &quot;Dragon book&quot; comes out. This soon-to-be
+      descent to DeRemer's LALR algorithm<footnote>
+      <bibref>Synder 1975</bibref>.
+      See, in particular, pp. 67-68.
+      </footnote>.</p>
+    <h1>1977: The first dragon book is published</h1>
+    <p>The first "dragon book"<footnote>
+    <bibref>Aho and Ullman 1977</bibref>.
+    </footnote>
+    comes out. This soon-to-become
       classic textbook is nicknamed after the drawing on the front cover,
       in which a knight takes on a dragon. Emblazoned on the knight's lance
-      are the letters &quot;LALR&quot;. From here on out, to speak lightly
+      are the letters <q>LALR</q>. From here on out, to speak lightly
       of LALR will be to besmirch the escutcheon of parsing theory.</p>
-    <h1>1979</h1>
-    <p>Bell Laboratories releases Version 7 UNIX. V7 includes what is,
+    <h1>1979: Yacc is released</h1>
+    <p>Bell Laboratories releases Version 7 UNIX<footnote>
+    <bibref>McIlroy and Kernighan 1979</bibref>.
+    </footnote>. V7 includes what is,
       by far, the most comprehensive, useable and easily available compiler
       writing toolkit yet developed.</p>
-    <h1>1979</h1>
     <p>Part of the V7 toolkit is Yet Another Compiler Compiler
-      (YACC). YACC is LALR-powered. Despite its name, YACC is the first
+      (YACC)<footnote>
+      S. C. Johnson, "Yet another compiler-compiler", in Volume 2A
+      of <bibref>McIlroy and Kernighan 1979</bibref>.
+      </footnote>. YACC is LALR-powered. Despite its name, YACC is the first
       compiler-compiler in the modern sense. For some useful languages, the
       process of going from Chomskyan specification to executable is fully
       automated. Most practical languages, including the C language and
       YACC's own input language, still require manual hackery. Nonetheless,
       after two decades of research, it seems that the parsing problem
       is solved.</p>
-    <h1>1987</h1>
-    <p>Larry Wall introduces Perl 1. Perl embraces complexity like no
+    <h1>1987: Perl 1 is released</h1>
+    <p>Larry Wall introduces Perl 1<footnote>
+    Larry Wall, "v13i001: Perl, a "replacement" for awk and sed, Part01/10". Newsgroup: comp.sources.unix.
+    1988-02-01).
+    [https://groups.google.com/forum/#!topic/comp.sources.unix/Njx6b6TiZos].
+    </footnote>. Perl embraces complexity like no
       previous language. Larry uses YACC and LALR very aggressively --
       to my knowledge more aggressively than anyone before or since.</p>
     <h1>1990</h1>
@@ -1112,7 +1134,9 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     </p>
     <h1>1991</h1>
     <p>Joop Leo discovers a way of speeding up right recursions in
-      Earley's algorithm. Leo's algorithm is linear for just about every
+      Earley's algorithm<footnote>
+      <bibref>Leo 1991</bibref>.
+      </footnote>. Leo's algorithm is linear for just about every
       unambiguous grammar of practical interest, and many ambiguous ones
       as well. In 1991 hardware is six orders of magnitude faster than
       1968 hardware, so that the issue of bookkeeping overhead had receded
@@ -1271,7 +1295,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       its code from the mix of assembler and ALGOL into something more
       fashionable, say Haskell. But with that change, it might look like
       a breath of fresh air.</p>
-    <h1>2010: The first implementation of Leo 1992</h1><p>
+    <h1>2010: The first implementation of Leo 1991</h1><p>
       TODO:
       <footnote>
         http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html
@@ -1333,6 +1357,18 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     PhD thesis, Carnegie-Mellon Univ., Pittsburg, Pa., 1968.
     </p>
     <p>
+       <bibid>Aho and Ullman 1977</bibid>:
+       Alfred V. Aho and Jeffrey D. Ullman,
+       <cite>Principles of compiler design</cite>,
+       Addision-Wesley,
+       Reading, Mass. (1977)
+       The dragon on the cover is green,
+       and this classic first edition
+       is sometimes called the "green dragon book" to distinguish
+       it from its second edition,
+       which had a red dragon on the cover.
+    </p>
+    <p>
       <bibid>Glennie 1960</bibid>:
       A. E. Glennie,
       "On the Syntax Machine and the Construction of a Universal Compiler"
@@ -1386,6 +1422,13 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       [http://bitsavers.org/pdf/stanford/cs_techReports/STAN-CS-76-562_EarlyDevelPgmgLang_Aug76.pdf ].
     </p>
     <p>
+      <bibid>Leo 1991</bibid>:
+      Joop M. I. M. Leo,
+      "A general context-free parsing algorithm running in linear time on
+every LR(k) grammar without using lookahead",
+Theoret. Comput. Sci., 82:165–176, 1991.
+    </p>
+    <p>
     <bibid>Lewis and Stearns 1968</bibid>:
     P. M. Lewis, II and R. E .Stearns, "Syntax-directed transduction",
     <cite>Journal of the ACM</cite>,
@@ -1398,9 +1441,27 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       3(11.4):159–167, 1961, (in German).
     </p>
     <p>
+      <bibid>Pratt 1973</bibid>:
+       Vaughan R. Pratt, "Top down operator precedence", in <cite>First
+       ACM Symposium on Principles of Programming Languages<cite>,
+       pages 41–51, ACM. (Oct. 1973.)
+    </p>
+    <p>
       <bibid>Samuelson and Bauer 1960</bibid>:
       Samelson, K. and Bauer, F. L. Sequential formula translation. Commun. ACM,
       3(2):76–83, Feb. 1960.
+    </p>
+    <p>
+    <bibid>Snyder 1975</bibid>:
+    Alan Snyder, "A Portable Compiler for the Language C",
+    MIT, Project MAC, Cambridge MA. (May 1975.)
+    </p>
+    <p>
+    <bibid>McIlroy and Kernighan 1979</bibid>:
+    M. D. McIlroy and B. W. Kernighan, editors,
+    <cite>UNIX Programmer's Manual</cite>, Seventh Edition, Volume 1,
+    Bell Labs, Murray Hill, New Jersey.
+    (January 1979.)
     </p>
     <p><bibid>Wadler 1985</bibid>:
       Philip Wadler, "How to Replace Failure by a List of Successes: A method
