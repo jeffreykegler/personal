@@ -1390,6 +1390,52 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
           <bibref>Aycock and Horspool 2002</bibref>.
         </li>
       </ul>
+      <p>This is a vast class of grammars,
+        and it has the important feature that a programmer
+        (and, for the benefit of automatic grammar generation,
+        a program)
+        can readily determine if their grammar is linear under Marpa.
+        Marpa will parse a grammar in linear time, if
+      </p><ul>
+        <li>It is unambiguous.<footnote>
+            In the general case, ambiguity is undecidable, but
+            in practice it is usually straight-forward for a programmer
+            to determine that the grammar he wants is unambiguous.
+            Note the while the general case is undecidable,
+            Marpa will tell the programmer is a parse (a grammar with a
+            particular input) is ambiguous and, since it parses ambiguous
+            grammars, produces an error message showing where the ambiguity is.
+          </footnote>
+        </li>
+        <li>It has no unmarked middle recursions<footnote>A
+            <q>marker</q>, in this sense, is something in the input
+            that shows where the middle of a middle recursion is,
+            without having to go to the end and count back.
+            Whether or not a grammar is unmarked is, in general,
+            an undecidable problem.
+            But in practice, there's a easy rule:
+            if a person can
+            <q>eyeball</q>
+            the moddie of a long
+            middle recursion, and does not need to count from both
+            ends to find it,
+            the grammar is
+            <q>marked</q>.
+          </footnote>.
+        </li>
+        <li>It has no ambiguous right recursions<footnote>
+            This is a very pedantic requirement,
+            which practical programmers can in fact ignore.
+            It is an open question whether there
+            <em>are</em>
+            any unambiguous
+            grammars with ambiguous right recursions.
+            In any case, in practice, a programmer,
+            in determining that his grammar is ambiguity-free
+            will spot any unambiguous right recursions as well.
+          </footnote>
+        </li>
+      </ul>
       <p>
         Finally in an effort to combine the best of declarative and hand-written parsing,
         Kegler reorders Earley's parse engine so that it
@@ -1486,7 +1532,8 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         <cite>Computer J.</cite>
         45(6):620–630. (2002)
       </p>
-      <bibid>Ford 2002</bibid><p>:
+      <p>
+        <bibid>Ford 2002</bibid>:
         Bryan Ford, "Packrat parsing: a practical linear-time algorithm with backtracking", Master’s thesis,
         Massachusetts Institute of Technology. (September 2002.)
         [http://pdos.csail.mit.edu/papers/packrat-parsing:ford-ms.pdf.]

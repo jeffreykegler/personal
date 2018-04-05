@@ -1,0 +1,8 @@
+# Type a grammar here:
+S -> E .
+E -> E '-' T .
+E -> T .
+T -> T '*' P .
+T -> P .
+P -> 'n' .
+P -> '-' 'n' .
