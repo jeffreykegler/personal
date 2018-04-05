@@ -106,24 +106,31 @@
     </p>
     <p>
       The archetypal examples of operator expressions are arithmetic expressions:
-      "2+(3*4)", "13**2**-5*9/11", "1729-42*8675309", etc.
+      <tt>2+(3*4)</tt>,
+      <tt>13**2**-5*9/11</tt>
+      <tt>1729-42*8675309</tt>, etc.
       In Western mathematics these were read according traditional ideas of
       associativity and precedence.
       Traditionally, in the above
     </p><ul>
-      <li>'**' is exponentiation.
+      <li><tt>**</tt>
+        is exponentiation.
         It right associates and has tightest<footnote>
-          This timeline refers to precedence levels as "tight"
-          or "loose".
+          This timeline refers to precedence levels as
+          <q>tight</q>
+          or
+          <q>loose</q>.
           The traditional terminology is confusing: tighter
-          precedences are "higher", but traditionally the
+          precedences are
+          <q>higher</q>
+          but traditionally the
           precendence levels are also numbered and the higher
           the number, the lower the precedence.
         </footnote>
         precedence.
       </li>
       <li>
-        Multiplication ('*') and division ('/') left associate.
+        Multiplication (<tt>*</tt>) and division (<tt>/</tt>) left associate.
         They have a precedence equal to each other
         and less tight than exponentiation.
       </li>
@@ -157,7 +164,9 @@
       <em>does</em>
       honor precedence, making it perhaps the first operator precedence
       parser<footnote>
-        Many of the "firsts" for parsing algorithms in this
+        Many of the
+        <q>firsts</q>
+        for parsing algorithms in this
         timeline are debatable,
         and the history of operator precedence is especially murky.
         Here I follow
@@ -209,7 +218,10 @@
     </p><p>There were compilers written or described before Hopper,
       but nobody called them compilers -- compiling in our modern sense
       was called
-      "automatic coding", "codification automatique" or "Rechenplanfertigung"<footnote>
+      <q>automatic coding</q>,
+      <q>codification automatique</q>
+      or
+      <q>Rechenplanfertigung</q><footnote>
         Knuth and Pardo 1976,
         p. 50.
       </footnote>.
@@ -631,7 +643,9 @@
         Among those who state that
         <bibref>Irons 1961</bibref>
         parser is what
-        is now called "left-corner" is Knuth ("Top-down syntax analysis", p. 109).
+        is now called
+        <term>left-corner</term>
+        is Knuth ("Top-down syntax analysis", p. 109).
       </footnote>
     </p>
     <p>You would expect parsing might start with hard-written
@@ -954,7 +968,8 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         and
         <bibref>Lewis and Stearns 1968</bibref>,
         a precise terminology falls into place for describing
-        the "Operator Issue".
+        the
+        <q>Operator Issue</q>.
         [ TODO: Go back to Operator Issue terminology? ]
         We can state what the problem has been with recursive descent.
         Recursive Descent, in its pure form, is LL(1).
@@ -1123,7 +1138,8 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
           See, in particular, pp. 67-68.
         </footnote>.</p>
       <h1>1977: The first dragon book is published</h1>
-      <p>The first "dragon book"<footnote>
+      <p>The first
+        <q>dragon book</q><footnote>
           <bibref>Aho and Ullman 1977</bibref>.
         </footnote>
         comes out. This soon-to-become
@@ -1152,7 +1168,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         is solved.</p>
       <h1>1987: Perl 1 is released</h1>
       <p>Larry Wall introduces Perl 1<footnote>
-          Larry Wall, "v13i001: Perl, a "replacement" for awk and sed, Part01/10". Newsgroup: comp.sources.unix.
+          Larry Wall, 'v13i001: Perl, a "replacement" for awk and sed, Part01/10'. Newsgroup: comp.sources.unix.
           1988-02-01).
           [https://groups.google.com/forum/#!topic/comp.sources.unix/Njx6b6TiZos].
         </footnote>. Perl embraces complexity like no
@@ -1206,7 +1222,9 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         </footnote>.
       </p>
       <h1>1992: Combinator parsing</h1>
-      <p>Combinators are parsers which can be "combined" to compose other parsers.
+      <p>Combinators are parsers which can be
+        <q>combined</q>
+        to compose other parsers.
         This allows you to have an algebra of parsers.
         It's an extremely attractive idea,
         and suggestive of great power,
@@ -1251,7 +1269,8 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         Hutton's main presentation does not use monads.
         In his final pages, however,
         Hutton points out
-        "combinator parsers give rise to a monad" and shows
+        <q>combinator parsers give rise to a monad</q>
+        and shows
         how his presentation could be rewritten in a form
         closely related to monads<footnote>
           <bibref>Hutton 1992</bibref>, pp. 19-20.
@@ -1301,19 +1320,34 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         </footnote>
         take the opposite perspective -- they
         write a paper on combinator parsing that could
-        "also be viewed as a first introduction to the use
-        of monads in programming."
+        <q>also be viewed as a first introduction to the use
+          of monads in programming.</q><footnote>
+          <bibref>Hutton and Meijer 1996</bibref>,
+          p. 3.
+        </footnote>
       </p>
       <h1>1999: Haskell
         <cite>Gentle Introduction</cite></h1>
       <p>
-        TODO:
+        [ TODO: Finish. ]
         <footnote>
           Hudak, Peterson and Fasel,
           "A Gentle Introduction to Haskell 98",
           1999.
         </footnote>
-      </p><h1>2000: The Perl 6 effort begins</h1>
+      </p><h1>The Operator Issue as of 1999</h1>
+      <p>
+        As we have seen,
+        the contributions of combinators parsing,
+        and monads to parsing theory itself are minimal.
+        But effect on
+        interfaces and the way parsing is seen is large
+        and likely to grow.
+        And following this literature has allowed us to
+        see what is consider the state of the parsing art
+        at the time.
+      </p>
+      <h1>2000: The Perl 6 effort begins</h1>
       <p>Larry Wall decides on a radical reimplementation of Perl --
         Perl 6. Larry does not even consider using LALR again.</p>
       <h1>2002: Aycock and Horspool solve Earley's zero-length rule problem</h1>
@@ -1372,17 +1406,19 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
           proves his algorithm is linear for the LR-regular
           grammars -- the LR grammars with infinite lookahead, so long as the lookahead
           is a regular expresion.
-	  It is not known (in fact not decidable, see <bibref>Leo 1991</bibref>, p. 175.),
-	  just how large a class of grammars
-	  Marpa is linear for.
-	  But it is known that there are both ambiguous and unambiguous grammars
-	  for which Marpa is not linear.
-	  In the general case, Marpa obeys the bounds of Earley's algorithm --
-	  it is worst-case O(n**2) for unambiguous grammars;
-	  and worst-case O(n**3) for ambiguous grammars.
-	  On the other hand, Marpa follows <bibref>Leo 1991</bibref>
-	  in being linear for many ambiguous grammars,
-	  including those of most practical interest.
+          It is not known (in fact not decidable, see
+          <bibref>Leo 1991</bibref>, p. 175.),
+          just how large a class of grammars
+          Marpa is linear for.
+          But it is known that there are both ambiguous and unambiguous grammars
+          for which Marpa is not linear.
+          In the general case, Marpa obeys the bounds of Earley's algorithm --
+          it is worst-case O(n**2) for unambiguous grammars;
+          and worst-case O(n**3) for ambiguous grammars.
+          On the other hand, Marpa follows
+          <bibref>Leo 1991</bibref>
+          in being linear for many ambiguous grammars,
+          including those of most practical interest.
         </footnote>
         This means it is also linear for most of the grammar classes we have discussed in this
         timeline.
@@ -1407,7 +1443,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         a program)
         can readily determine if their grammar is linear under Marpa.
         Marpa will parse a grammar in linear time, if
-      </p><ul>
+      </p><ul id="loc-linearity-rules">
         <li>It is unambiguous.<footnote>
             In the general case, ambiguity is undecidable, but
             in practice it is usually straight-forward for a programmer
@@ -1452,19 +1488,59 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         Kegler reorders Earley's parse engine so that it
         allows procedural logic.
         As a side effect,
-        this gives Marpa excellent error-handling properties<footnote>
-	Marpa
-	</footnote>.
+        this gives Marpa excellent error-handling properties.
       </p>
       <comment>TODO: Add more</comment>
       <h1>2012: General precedence parsing</h1>
       <p>
-        TODO:
-        <footnote>
-          http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html
-        </footnote>
+        While the purely
+        precedence-driven parsing of
+        <bibref>Samuelson and Bauer 1960</bibref>
+        and
+        <bibref>Pratt 1973</bibref>
+        never caught on,
+        the use of precedence in parsing remains popular.
+        In fact, precedence tables often occur in documentation
+        and standards,
+        which is a clear sign that they too can contribute
+        to human-readable but precise descriptions of grammars.
       </p>
-      <h1>Today</h1>
+      <p>
+        <comment>TODO: Finish</comment>
+        In 2012, Kegler release a version of Marpa which allows
+        the user to mix Chomskyan and precedence parsing at will<footnote>
+          [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html].
+        </footnote>.
+        Marpa's
+        <q>precedenced statements</q>
+        describe expressions
+        in terms of precedence and association, but they strictly
+        translate into Chomskyan form,
+        so a user writing a precedenced statement
+        does not lose the benefits
+        of Chomskyan parsing.
+        If
+        <q>precedenced statements" are added to a grammar that Marpa parses in linear
+          time, then the grammar remains linear as long as the precedenced statements
+          are (after precedence is taken in consideration) unambiguous<footnote>
+            Internally, Marpa rewrites precedenced statements into BNF.
+            Marpa's rewrite does not use middle recursions
+            and does not introduce any new ambiguities
+            so that, following its
+            <a href="#loc-linearity-rules">linearity
+              rules</a>, the result must be linear.
+          </footnote>.
+          <tt><code>
+              Expression ::=
+              Number bless => primary
+              | '(' Expression ')' assoc => group
+              || Expression '**' Expression assoc => right
+              || Expression '*' Expression
+              | Expression '/' Expression
+              || Expression '+' Expression
+              | Expression '-' Expression
+            </code></tt>
+        </q></p><h1>Today</h1>
       <p>After five decades of parsing theory, the state of the art seems
         to be back where it started. We can imagine someone taking Ned Iron's
         original 1961 algorithm from the first paper ever published describing
@@ -1535,10 +1611,11 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         Reading, Mass. (1977)
         The dragon on the cover is green,
         and this classic first edition
-        is sometimes called the "green dragon book" to distinguish
-        it from its second edition,
-        which had a red dragon on the cover.
-      </p>
+        is sometimes called the
+        <q>green dragon book" to distinguish
+          it from its second edition,
+          which had a red dragon on the cover.
+        </q></p>
       <p>
         <bibid>Aycock and Horspool 2002</bibid>:
         John Aycock and R. Nigel Horspool, "Practical Earley parsing",
