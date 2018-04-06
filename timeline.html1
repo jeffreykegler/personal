@@ -210,7 +210,7 @@
       </footnote>.
       Boehm's compiler also allows parentheses, but the two cannot
       be mixed -- an expression can either be parsed using precedence
-      or have parentheses, but not both.</p><p>
+      or have parentheses, but not both.
       And like Rutishauser's, Boehm's compiler is never
       implemented<footnote>
         Knuth and Pardo 1976,
@@ -271,7 +271,7 @@
         did much to move forward the events in this timeline.
         Hopper has a big reputation and it is fully deserved</footnote>.
     </p>
-    <p>As we haven seen, programs that today we
+    <p>As we have seen, programs that today we
       <em>would</em>
       call compilers
       were envisioned before Hopper,
