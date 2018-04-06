@@ -151,9 +151,15 @@
     </p>
     <h1>1950: Boehm's compiler</h1>
     <p>During 1950, Corrado Boehm, also at the ETH Zurich develops his
-      own compiler. They are working at the same institution at the same
+      own compiler.
+      Rutishauser and Boehm are working at the same institution at the same
       time, but Boehm is unaware of Rutishauser's work until his own is
-      complete. Like Rutishauser, Boehm's language is line-by-line and
+      complete.
+      Boehm's is also the first self-compiling compiler -- it is written
+      in its own language.
+      </p>
+      <p>
+      Like Rutishauser, Boehm's language is line-by-line and
       parsed ad hoc, except for expressions. Boehm's expression parser
       <em>does</em>
       honor precedence, making it perhaps the first operator precedence
@@ -161,28 +167,27 @@
       Boehm's compiler also allows parentheses, but the two cannot
       be mixed -- an expression can either be parsed using precedence
       or have parentheses, but not both.</p>
-    <p>Boehm's is also the first self-compiling compiler -- it is written
-      in its own language. Like Rutishauser's, Boehm's compiler was never
+      And like Rutishauser's, Boehm's compiler is never
       implemented<a id="footnote-11-ref" href="#footnote-11">[11]</a>.
     </p>
-    <h1>1952: Grace Hopper uses the term &quot;compiler&quot;</h1>
+    <h1>1952: Grace Hopper uses the term <term>compiler</term></h1>
     <p>Grace Hopper writes a linker-loader.
       <a
       href="https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers%22">She
-        calls it a &quot;compiler&quot;</a>. Hopper seems to be the first
+        calls it a <term>compiler</term></a>. Hopper seems to be the first
       person to use this term for a computer program.</p>
-    <h1>Term: &quot;Compiler&quot; as of 1952</h1>
-    <p>Hopper used the term &quot;compiler&quot; in a meaning it
-      had at the time: &quot;to compose out of materials from other
-      documents&quot;<a id="footnote-12-ref" href="#footnote-12">[12]</a>.
+    <h1>Term: <term>Compiler</term> as of 1952</h1>
+    <p>Hopper used the term <term>compiler</term> in a meaning it
+      had at the time: <q>to compose out of materials from other
+      documents</q><a id="footnote-12-ref" href="#footnote-12">[12]</a>.
       Specifically, before Hopper, the task we now see as
-      &quot;compiling&quot; was then seen putting together a set of
+      <q>compiling</q> was then seen putting together a set of
       pre-existing assembler subroutines and calling them. Hopper's new
       program went one step further -- instead of calling the subroutines
-      it expanded them (or in other words &quot;compiled&quot; them) into
+      it expanded them (or in other words <q>compiled</q> them) into
       a single program. Since Hopper the term has acquired a different
       and very specialized meaning in the computer field. Today we would
-      not call Hopper's program a &quot;compiler&quot;<a id="footnote-13-ref" href="#footnote-13">[13]</a>.
+      not call Hopper's program a <term>compiler</term><a id="footnote-13-ref" href="#footnote-13">[13]</a>.
     </p><p>There were compilers written or described before Hopper,
       but nobody called them compilers -- compiling in our modern sense
       was called
@@ -213,12 +218,12 @@
     </p>
     <h1>1954: The FORTRAN project begins</h1>
     <p>At IBM, a team under John Backus begins working on the language which will be called FORTRAN.</p>
-    <h1>&quot;Compiler&quot; as of 1954</h1>
-    <p>As of 1954, the term &quot;compiler&quot; was still being used
+    <h1><term>Compiler</term> as of 1954</h1>
+    <p>As of 1954, the term <term>compiler</term> was still being used
       in Hopper's looser sense, instead of its modern, specialized,
       one. In particular, there was no implication that the output of a
-      &quot;compiler&quot; is ready for execution by a computer.<a id="footnote-17-ref" href="#footnote-17">[17]</a>
-      The output of one 1954 &quot;compiler&quot;, for example, produced
+      <term>compiler</term> is ready for execution by a computer.<a id="footnote-17-ref" href="#footnote-17">[17]</a>
+      The output of one 1954 <term>compiler</term>, for example, produced
       relative addresses, which needed to be translated by hand before
       a machine can execute them.</p>
     <h1>1955: Noam Chomsky starts teaching at MIT</h1>
@@ -249,12 +254,12 @@
       parentheses are honored, but otherwise evaluation is always
       right-to-left -- there is no operator precedence. IT did honor
       parentheses, but nonetheless its way of doing arithmetic expressions
-      proves very unpopular: Donald Knuth reports that &quot;The lack of
+      proves very unpopular: Donald Knuth reports that <q>The lack of
       operator priority (often called precedence or hierarchy) in the IT
       language was the most frequent single cause of errors by the users
-      of that compiler.&quot;<a id="footnote-20-ref" href="#footnote-20">[20]</a>
+      of that compiler.</q><a id="footnote-20-ref" href="#footnote-20">[20]</a>
     </p>
-    <h1>&quot;Compiler&quot; as of 1956</h1>
+    <h1><term>Compiler</term> as of 1956</h1>
     <p>In the 1956 document describing the IT compiler<a id="footnote-21-ref" href="#footnote-21">[21]</a>,
       IT team is careful to define the term. Their definition makes clear that
       they are using of the word
@@ -295,9 +300,9 @@
         layer. Chomsky's top layer is the inspiration for AST transformation
         phase of modern compilers.</li>
     </ul>
-    <h1>Term: &quot;Parsing&quot;</h1>
+    <h1>Term: <term>Parsing</term></h1>
     <p>Chomsky is a turning point, so much so that it establishes or settles the
-      meaning of many of the terms we are using. &quot;Parsing&quot;,
+      meaning of many of the terms we are using. <term>Parsing</term>,
       for our purposes, is transforming a string of symbols into a
       structure. Typically this structure is a parse tree.</p>
     <h1>Recognizers</h1>
@@ -342,9 +347,9 @@
       is only noise. The Chomskyan approach is to start with a grammar,
       and use the corpus of the language to check its accuracy. Chomsky's
       approach will soon come to dominate linguistics.</p>
-    <h1>Term: &quot;Chomskyan parsing&quot;</h1>
+    <h1>Term: <term>Chomskyan parsing</term></h1>
     <p>In computing, parsing theory mainly follows Chomsky's work in
-      linguistics. Parsing is &quot;Chomksyan&quot; if it is guided by
+      linguistics. Parsing is <term>Chomksyan</term> if it is guided by
       a BNF grammar. From this point on, most parsers and most parsing
       theory will be Chomskyan; and this timeline will focus on Chomskyan
       parsing. But, as we shall see, non-Chomskyan parsing does survive
@@ -535,9 +540,9 @@
     <h1>1961: The first parsing paper</h1>
     <p>In January, Ned Irons publishes a paper describing his ALGOL
       60 parser. It is the first paper to fully describe any parser. The
-      Irons algorithm is Chomskyan and top-down with a bottom-up &quot;left
-      corner&quot; element -- it is what now would be called a &quot;left
-      corner&quot; parser.<a id="footnote-31-ref" href="#footnote-31">[31]</a>
+      Irons algorithm is Chomskyan and top-down with a bottom-up <term>left
+      corner</term> element -- it is what now would be called a <term>left
+      corner</term> parser.<a id="footnote-31-ref" href="#footnote-31">[31]</a>
     </p>
     <p>You would expect parsing might start with hard-written
       parsers for specific grammar classes.
@@ -585,11 +590,11 @@
       top-down vs. bottom-up classification is a pointless pedantry --
       the classification can be done, but tells you nothing about the
       actual behavior of the parser.</p>
-    <h1>Terms: &quot;Synthetic attribute&quot;</h1>
+    <h1>Terms: <term>Synthetic attribute</term></h1>
     <p><a href="#bib-Irons_1961">Irons 1961</a>
       also introduces synthetic attributes: the parse creates
       a tree, which is evaluated bottom-up. Each node is evaluated using
-      attributes &quot;synthesized&quot; from its child nodes.<a id="footnote-32-ref" href="#footnote-32">[32]</a>
+      attributes <q>synthesized</q> from its child nodes.<a id="footnote-32-ref" href="#footnote-32">[32]</a>
     </p>
     <p>Synthetic attributes are a concept in semantics, not parsing,
       but they will be important for us.
@@ -644,14 +649,14 @@
       </li>
     </ul>
     <h1>1961: Dijkstra's shunting yard algorithm</h1>
-    <p>In November 1961, Dijkstra publishes the &quot;shunting yard&quot; algorithm.<a id="footnote-35-ref" href="#footnote-35">[35]</a>
+    <p>In November 1961, Dijkstra publishes the <q>shunting yard</q> algorithm.<a id="footnote-35-ref" href="#footnote-35">[35]</a>
       <a
 href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
         Norvell has made an attempt at classification</a>
       of the botanical profusion of operator expression parsers. All
-      earlier parsers are subspecies of what he calls &quot;the classic
-      algorithm&quot;, so that Dijkstra's approach is new. The number
-      of level of precedence is not &quot;built in&quot; into the
+      earlier parsers are subspecies of what he calls <q>the classic
+      algorithm</q>, so that Dijkstra's approach is new. The number
+      of level of precedence is not <q>built in</q> into the
       shunting-yard algorithm. And the shunting-yard algorithm is more
       efficient than the classic approaches: Code size does not grow,
       and the algorithm's speed does not decrease, with the number of
