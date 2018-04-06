@@ -50,8 +50,7 @@
       </footnote>.
     </p>
     <h1>1943: Post's rewriting system</h1>
-    <p>Emil Post defines and studies a formal rewriting system
-      <footnote>
+    <p>Emil Post defines and studies a formal rewriting system<footnote>
         Emil L. Post,
         "Formal Reductions of the General Combinatorial Decision Problem",
         <cite>American Journal of Mathematics</cite>,
@@ -72,12 +71,13 @@
     </p>
     <h1>1948: Shannon repurposes Markov's chains</h1>
     <p>Claude Shannon publishes the foundation paper of information theory<footnote>
-        "A Mathematical Theory of Communication"
+        <bibref>Shannon 1948</bibref>
       </footnote>.
       In this
       paper, Shannon makes an attempt to model English using Andrey Markov's
-      chains.<footnote>pp. 4-6.
-      </footnote>
+      chains<footnote>pp. 4-6.
+        <bibref>Shannon 1948</bibref>, pp. 4-6.
+      </footnote>.
     </p>
     <h1>1949: Rutishauser's compiler</h1>
     <p>From 1949 to 1951 at the ETH Zurich, Heinz Rutishauser worked on
@@ -85,35 +85,46 @@
         Knuth and Pardo 1976,
         pp. 29-35, 40.
       </footnote>.
-      Rutishauser's language is line-by-line and parsed as hoc, but it
-      does parse arithmetic expressions. Rutishauser's expression parser
-      did not honor precedence but did allow nested parentheses. It
-      is perhaps the first algorithm which can really be considered a
-      parsing method. Rutishauser's compiler was never implemented.</p>
-    <h1>Operator Expressions</h1>
-    <p>With Rutishauser's work, the parsing of operator expressions comes
-      into the picture.
-      Operators expressions are
-      often treated a side issue.
-      In fact, as this timeline will show,
-      operator expressions are in fact central to the story of Western parsing theory.
+      Rutishauser's arithmetic expression parser
+      did not honor precedence but it does allow nested parentheses.
+      It is perhaps the first algorithm which can really be considered a
+      parsing method.
+      Rutishauser's compiler was never implemented.</p>
+    <h1>The Operator Issue as of 1949</h1>
+    <p>
+      In the form of arithmetic expressions, operator expressions
+      are the target of the first efforts at automatic parsing.
+      Perhaps surprising, we will not see this issue go away.
     </p>
     <p>
-      Informally, operator are expressions built up from operands
+      Very informally<footnote>
+        The formal apparatus for describing operator expressions is not fully formed
+        as of 1949 and,
+        in any case,
+        a very formal definition is beyond the scope of this timeline.
+      </footnote>,
+      we can say that
+      an operator expression is an expression
+      built up from operands
       and operators.
-      An operand can be another operator expression,
-      so that operators expressions can be built up recursively.
+      It is expected that the operand might be another operator expression,
+      so operator expressions raise the issue of recursion.
     </p>
     <p>
       The archetypal examples of operator expressions are arithmetic expressions:
-      <tt>2+(3*4)</tt>,
-      <tt>13**2**-5*9/11</tt>
-      <tt>1729-42*8675309</tt>, etc.
-      In Western mathematics these were read according traditional ideas of
-      associativity and precedence.
-      Traditionally, in the above
+    </p><pre><tt>
+         2+(3*4)
+         13^2^-5*9/11
+         1729-42*8675309
+      </tt></pre>
+    <p>
+      In Western mathematics arithmetic expressions were read
+      according to traditional<footnote>
+      </footnote>
+      ideas of
+      associativity and precedence:
     </p><ul>
-      <li><tt>**</tt>
+      <li><tt>^</tt>
         is exponentiation.
         It right associates and has tightest<footnote>
           This timeline refers to precedence levels as
@@ -132,12 +143,12 @@
       <li>
         Multiplication (<tt>*</tt>) and division (<tt>/</tt>) left associate.
         They have a precedence equal to each other
-        and less tight than exponentiation.
+        and less tight than that of exponentiation.
       </li>
       <li>
         Addition ('+') and subtraction ('-') left associate.
         They have a precedence equal to each other
-        and less tight than multiplication and division.
+        and less tight than that of multiplication and division.
       </li>
       <li>
         Parentheses, when present, override the traditional
@@ -153,7 +164,25 @@
       It is only when those string manipulations turn to dealing
       with arithmetic expressions that they become sophisticated
       enough to be called parsing techniques,
-      and having a parsing theory to describe them becomes helpful.
+      and only then that
+      having a parsing theory to describe them becomes helpful.
+    </p>
+    <p>
+      Rutishauser's language, and in fact all languages before
+      LISP,
+      is structured line-by-line.
+      No language before ALGOL is truly block-structured.
+    </p>
+    <p>
+      The line-by-line languages
+      are parsed using string manipulations.
+      A parsing theory is not helpful for describing these
+      ad hoc string manipulations,
+      so they don't give rise to one.
+      The only logic in these early compilers that really deserves to be called
+      a parsing method,
+      is that which tackles arithmetic expressions.
+    </p><p>
     </p>
     <h1>1950: Boehm's compiler</h1>
     <p>During 1950, Corrado Boehm, also at the ETH Zurich develops his
@@ -1711,6 +1740,15 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       <bibid>Samuelson and Bauer 1960</bibid>:
       Samelson, K. and Bauer, F. L. Sequential formula translation. Commun. ACM,
       3(2):76–83, Feb. 1960.
+    </p>
+    <p>
+      <bibid>Shannon 1948</bibid>:
+      Claude E Shannon, Claude E.
+      "A Mathematical Theory of Communication",
+      <cite>Bell System Technical Journal</cite>,
+      27 (3): 379–423
+      and
+      27 (4): 623–666. (July and October 1948)
     </p>
     <p>
       <bibid>Snyder 1975</bibid>:
