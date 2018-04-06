@@ -1,7 +1,8 @@
-# Type a grammar here:
 S : E ;
-E : T T2 ;
-T2 : '+' T | ;
-T : F F2 ;
-F2 : '*' F | ;
+E : T TL ;
+TL : TI TL | ;
+TI : '+' T ;
+T : F FL ;
+FL : FI FL | ;
+FI : '*' F ;
 F : 'n' ;
