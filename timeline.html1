@@ -685,111 +685,56 @@
       </footnote>.
       languages.</p>
     <h1>1960: Gleenie's compiler-compiler</h1>
-    <p>A.E. Gleenie publishes his description of a compiler-compiler<footnote>
+    <p>The first description of a consciously non-Chomskyan compiler
+      seems to predate the first description of a Chomskyan parser.
+      It is A.E. Gleenie's 1960 description of his compiler-compiler<footnote>
         <bibref>Glennie 1960</bibref>.
       </footnote>.
       Glennie's
       <term>universal compiler</term>
-      is more of a methodology
+      apparently was useable,
+      but it is more of a methodology
       than an implementation -- the compilers must be written by
       hand.
-    </p><p>
-      Glennie have been the first to use BNF as
-      a description of a
-      <em>procedure</em>
-      instead of as the description of a
-      <em>Chomsky grammar</em><footnote>
-        For the context-free BNF notation credits both Chomsky and Backus,
-        and observes that the two notations are
-        <term>related</term>.
-        He also mentions
-        Post's productions.
-      </footnote>
-      Glennie points out that the distinction is
+    </p>
+    <p>
+      Glennie uses BNF,
+      but he does
+      <em>note</em>
+      use it in the way
+      Chomsky, Backus and Naur intended BNF.
+      Glennie is using BNF to describe a
+      <b>procedure</b>.
+      In true BNF, the order of the rules does not matter --
+      in Glennie's pseudo-BNF order matters very much.
+      This means that, for most practical grammars,
+      Glennie's pseudo-BNF and BNF proper do
+      <b>not</b>
+      describe the same language.
+      As we shall see,
+      determining what language Glennie's pseudo-BNF does
+      describe can be a very difficult matter.
+    </p>
+    <p>
+      Glennie is well aware of what he his doing, and
+      is not attempting to deceive anyone --
+      he clearly points out that the distinction
+      between his procedural pseudo-BNF and declarative BNF,
+      and warns his reader that the difference is
       <q>important</q><footnote>
         <bibref>Glennie 1960</bibref>.
       </footnote>.
+      <comment>
+        Is Glennie's non-Chomskyan-ism on theoretical grounds,
+        or pragmatic?
+      </comment>
     </p>
-    <p>BNF and Chomsky's context free grammars were created primarily as means
-      of grammar
-      <b>description</b>.
-      It is for this reason that BNF is often used in standards and language
-      manuals, where it is expected that the readers of the BNF will be people
-      not machines.
-      Given a BNF notation,
-      a human can very reasonably determine exactly what strings are and
-      are not in a language, and the structure of the parses of those
-      strings.
-    </p>
-    <p>
-      Of course, a notation exact enough to determine what string are and
-      are not in a language,
-      and their parses,
-      and which does so in a way accessible to human readers,
-      could drive a computer algorithm.
-      At least so you would hope and expect.
-    </p>
-    <p>
-      As this timeline will show, a practical declarative
-      parser proved elusive.
-      BNF remained an attractive notation, and in the place of
-      declarative parsers, there arose, beginning with Glennie,
-      parsers which are driven by BNF notation, but which do
-      not parse the language described by that notation.
-    </p>
-    <p>
-      BNF
-      notation, when used to describe a procedure, is a set of instructions,
-      to be tried in some order, and used to process a string. Procedural
-      BNF describes a procedure first, and a language only indirectly.</p>
-    <p>
-      I will call these
-      <term>pseudo-declarative</term>
-      parsers.
-      To be sure, Glennie in
-      <bibref>Glennie 1960</bibref>never pretends this parser is declarative.
-      Glennie points the distinction out carefully,
-      and notes that it is
-      <q>important</q><footnote>
-        <bibref>Glennie 1960</bibref>, Section 1.2, "A Notation for Syntax",
-      </footnote>.
-      But many subsequent writers will be less clear on the matter,
-      and many more of the readers will suffer because of it.
-      Many will waste time assuming that they can get eventually their test
-      suite to write by writing BNF which describes it.
-      Others will get their test suite to work,
-      and will think (falsely)
-      that this means that the language their parser parses is that
-      specified by the BNF.
-    </p><p>Both procedural and Chomskyan BNF describe languages, but usually
-      <em>not the same</em>
-      language. This is an important point, and one which will be
-      overlooked many times in the years to come.</p>
-    <p>[TODO: needs revision. ]
-      The pre-Chomskyan approach, using procedural BNF, is far more
-      natural to someone trained as a computer programmer. The parsing
-      problem appears to the programmer in the form of strings to be
-      parsed, exactly the starting point of procedural BNF and pre-Chomsky
-      parsing.</p>
-    <p>Even when the Chomskyan approach is pointed out, it does not
-      at first seem very attractive. With the pre-Chomskyan approach,
-      the examples of the language more or less naturally lead to a
-      parser. In the Chomskyan approach the programmer has to search for
-      an algorithm to parse strings according to his grammar -- and the
-      search for good algorithms to parse Chomskyan grammars has proved
-      surprisingly long and difficult. Handling semantics is more natural
-      with a Chomksyan approach. But, using captures, semantics can be
-      added to a pre-Chomskyan parser and, with practice, this seems
-      natural enough.</p>
-    <p>Despite the naturalness of the pre-Chomskyan approach to parsing,
-      we will find that the first fully-described automated parsers
-      are Chomskyan. This is a testimony to Chomsky's influence at the
-      time. We will also see that Chomskyan parsers have been dominant
-      ever since.</p>
     <h1>1961: The first parsing paper</h1>
     <p>In January, Ned Irons publishes a paper describing his ALGOL
-      60 parser. It is the first paper to fully describe any parser. The
-      Irons algorithm is Chomskyan and top-down with a bottom-up
+      60 parser.
+      It is the first paper to fully describe any parser.
+      The Irons algorithm is pure Chomskyan
+      and top-down with a bottom-up
       <term>left
         corner</term>
       element -- it is what now would be called a
@@ -807,10 +752,14 @@
     </p>
     <p>You would expect parsing might start with hard-written
       parsers for specific grammar classes.
-      But in fact, this first parser is declarative and general.
+      But in fact, the Irons parser is declarative and general.
       And since it is general,
-      operator expressions are well within the power of
-      <bibref>Irons 1961</bibref>.
+      operator expressions are within the power of
+      the Irons parser<footnote>
+        Although it seems likely that parsing operator expressions would require
+        backtracking,
+        and therefore could be inefficient.
+      </footnote>.
     </p>
     <h1>Terms:
       <term>Top-down</term></h1>
@@ -1540,6 +1489,7 @@
       difference. And nothing has been done to change
       <a href="http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2015/03/peg.html">the problematic behaviors</a>
       of GTDPL.</p>
+    <comment>TODO: Remark on the use of BNF in standards here?</comment>
     <h1>2006: GNU C reverts to recursive descent</h1>
     <p>
       <q>The old Bison-based C and Objective-C parser has been replaced by a new, faster hand-written recursive-descent
@@ -1844,7 +1794,7 @@
       Computation Center, Carnegie Institute of Technology,
       <cite>Technical Report No. 2</cite>
       (10 July 1960).
-      http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm
+      [http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm]
     </p>
     <p>
       <bibid>Grune and Jacobs 2008</bibid>:
