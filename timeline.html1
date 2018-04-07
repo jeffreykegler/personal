@@ -249,7 +249,14 @@
       <q>compiling</q>)
       often was viewed as providing a interface
       for calling a collection of
-      carefully chosen assembler subroutines.
+      carefully chosen assembler subroutines<footnote>
+      In 1952, an interface that guided calls to subroutines
+      was much more helpful than current programmers might
+      imagine:
+      "Existing programs for similar problems were unreadable
+      and hence could not be adapted new uses."
+      (<bibref>Backus 1980</bibref>, p. 126)
+      </footnote>.
       Hopper's new
       program took this subroutine calling
       one step further -- instead of calling the subroutines
@@ -286,8 +293,6 @@
       </footnote>.
     </p><h1>1952: Glennie's AUTOCODE</h1>
     <p>Knuth
-      Knuth and Pardo 1976,
-      p 42.
       calls Glennie's the first
       <q>real</q><footnote>
         Knuth and Pardo 1976,
@@ -297,15 +302,19 @@
       it was actually implemented and used by someone to translate
       algebraic statements into machine language.
       Glennie's AUTOCODE
-      was very close to the machine -- too close to implement operator expressions.
-      AUTOCODE was hard-to-use, and had little impact on
-      other users of its target -- the Manchester Mark I.
-      And because
+      was very close to the machine -- just above machine language.
+      It did not allow operator expressions.
+      AUTOCODE was also hard-to-use,
+      and apparently saw little use by anybody but
+      Glennie himself.
+      Because
       Glennie worked for the British atomic weapons projects his papers
-      were routinely classified, so that the influence of AUTOCODE was
-      slow to spread. Nonetheless, many other
+      were routinely classified,
+      so even the indirect influence of AUTOCODE was
+      slow to spread.
+      Nonetheless, many other
       <term>compilers</term>
-      afterward were named AUTOCODE, and this probably indicates some
+      afterward were named AUTOCODE, which probably indicates
       awareness of Glennie's effort<footnote>
         Knuth and Pardo 1976,
         pp. 42-49.
@@ -315,20 +324,20 @@
     <p>At IBM, a team under John Backus begins working on the language which will be called FORTRAN.</p>
     <h1><term>Compiler</term>
       as of 1954</h1>
-    <p>As of 1954, the term
+    <p>The term
       <term>compiler</term>
-      was still being used
+      is still being used
       in Hopper's looser sense, instead of its modern, specialized,
-      one. In particular, there was no implication that the output of a
+      one.
+      In particular, there was no implication that the output of a
       <term>compiler</term>
-      is ready for execution by a computer.<footnote>
-        "http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf
-        pp. 133-134
-      </footnote>
+      is ready for execution by a computer.
       The output of one 1954
       <term>compiler</term>, for example, produced
       relative addresses, which needed to be translated by hand before
-      a machine can execute them.</p>
+      a machine can execute them<footnote>
+      <bibid>Backus 1980</bibid>, pp. 133-134.
+      </footnote>.</p>
     <h1>1955: Noam Chomsky starts teaching at MIT</h1>
     <p>Noam Chomsky is awarded a Ph.D. in linguistics and accepts a
       teaching post at MIT. MIT does not have a linguistics department and
@@ -518,20 +527,35 @@
       associativity and precedence must be specified with parentheses.
     </p>
     <h1>1959: Backus's notation</h1>
-    <p>Backus discovers a new notation to describe the IAL language.
-      (aka ALGOL)<footnote>.
+    <p>Backus discovers a new notation to describe the IAL language
+      (aka ALGOL)<footnote>
         Backus's notation is influenced by his study of Post --
         he seems not to have read Chomsky until later.
         [http://archive.computerhistory.org/resources/text/Oral_History/Backus_John/Backus_John_1.oral_history.2006.102657970.pdf],
-        p. 25
-      </footnote>
+        p. 25.
+	<bibref>Backus 1980</bibref>, p. 133.
+      </footnote>.
+      According to Backus's recollection,
+      it has only one reader: Peter Naur<footnote>
+      <bibref>Backus 1980</bibref>, pp. 132-133.
+      </footnote>.
     </p>
-    <h1>1960: BNF</h1>
-    <p>Peter Naur improves the Backus notation and uses it to describe
-      ALGOL 60. The improved notation will become known as Backus-Naur Form
-      (BNF).</p>
+    <h1>1959: Operator precedence and stacks</h1>
+    <p>Samuelson and Bauer<footnote>
+        <bibref>Samuelson and Bauer 1960</bibref>.
+      </footnote>
+      describes in detail the use of stacks to implement
+      operator precedence.
+      This paper will be very influential.
+    <h1>The Operator Issue as of 1959</h1>
+    <p>Since Boehm,
+    many people have been refining operator precedence.
+    </p>
     <h1>1960: The ALGOL report</h1>
-    <p>The ALGOL 60 report specifies, for the first time, a block
+    <p>The ALGOL 60 report<footnote>
+      <bibref>ALGOL 1960</bibref>
+      </footnote>
+      specifies, for the first time, a block
       structured language. ALGOL 60 is recursively structured but the
       structure is implicit -- newlines are not semantically significant,
       and parentheses indicate syntax only in a few specific cases. The
@@ -554,6 +578,14 @@
       two more decades will pass before it is
       implemented.
     </p>
+    <h1>1960: BNF</h1>
+    <p>In the ALGOL 60 report<footnote>
+    <bibref>ALGOL 60</bibref>,
+    Peter Naur improves the Backus notation and uses it to describe
+      the language.
+      This bring Backus' notation to wide attention.
+      The improved notation will become known as Backus-Naur Form
+      (BNF).</p>
     <h1>Term:
       <term>declarative</term></h1>
     <p>For our purposes, a parser is
@@ -695,15 +727,6 @@
       are Chomskyan. This is a testimony to Chomsky's influence at the
       time. We will also see that Chomskyan parsers have been dominant
       ever since.</p>
-    <h1>1960: Operator precedence and stacks</h1>
-    <p>Since FORTRAN I, many people have refined its operator precedence implementation.
-      A Feb 1960 paper by Samuelson and Bauer<footnote>
-        <bibref>Samuelson and Bauer 1960</bibref>.
-      </footnote>
-      describes in detail the use of stacks to implement
-      operator precedence.
-      This paper was very influential.
-    </p>
     <h1>1961: The first parsing paper</h1>
     <p>In January, Ned Irons publishes a paper describing his ALGOL
       60 parser. It is the first paper to fully describe any parser. The
@@ -882,7 +905,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       precedence levels. Dijkstra's algorithm is not a game-changer --
       it has no major impact on the Operator Issue -- but it offers a
       genuinely different implementation alternative.</p>
-    <h1>The operator issue as of 1961</h1>
+    <h1>The Operator Issue as of 1961</h1>
     <p>Originally the operator issue was that it required a parsing
       algorithm at a time
       when there were no parsing algorithms.
@@ -1180,7 +1203,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       making the entire grammar an operator grammar? That way you don't
       have to mix algorithms.</p>
     <p>It's an idea that had already occurred to
-      Samuelson and Bauer in 1960.
+      Samuelson and Bauer in 1959.
       They intended their operator parser as a parser for ALGOL.
     </p><p>There are many problems with switching to operator
       grammars. Operator grammar are non-Chomskyan -- the BNF no longer
@@ -1669,7 +1692,17 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       Alfred V. Aho and Jeffrey D. Ullman,
       <cite>The Theory of Parsing, Translation and Compiling:
         Volume II: Compiling</cite>, Prentice Hall, Englewood Cliffs, N.J., 1973.
-    </p><p>
+    </p>
+    <p>
+      <bibid>ALGOL 60</bibid>:
+      J.W. Backus, F.L. Bauer, J.Green, C. Katz, J. McCarthy
+      P. Naur, A.J. Perlis, H. Rutishauser, K. Samuelson, B. Vauquois
+      J.H. Wegstein, A. van Wijngaarden and M. Woodger,
+      edited by Peter Naur,
+      <cite>Revised Report on the Algorithmic Language Algol 60</cite>.
+      [http://homepages.cs.ncl.ac.uk/cliff.jones/publications/OCRd/BBG63.pdf]
+    </p>
+    <p>
       <bibid>Earley 1968</bibid>:
       Jay Earley,
       <cite>An Efficient Context-free Parsing Algorithm</cite>,
@@ -1693,6 +1726,14 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       John Aycock and R. Nigel Horspool, "Practical Earley parsing",
       <cite>Computer J.</cite>
       45(6):620–630. (2002)
+    </p>
+    <p>
+      <bibid>Backus 1980</bibid>:
+      John Backus,
+      <cite>Programming in America in the 1950s- Some Personal Impressions</cite>
+      [http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf]
+      10.1016/B978-0-12-491650-0.50017-4. 
+      (1980)
     </p>
     <p>
       <bibid>Ford 2002</bibid>:
@@ -1784,16 +1825,36 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       3(11.4):159–167, 1961, (in German).
     </p>
     <p>
+      <bibid>Mascrenhas et al 2014</bibid>
+      Fabio Mascarenhas, S&egrave;rgio Medeiros and
+      Roberto Ierusalimschy,
+      "On the Relation between Context-Free Grammars
+      and Parsing Expression Grammars",
+      <cite>Science of Computer Programming</cite> 89, pp. 235 - 250.
+      [https://arxiv.org/abs/1304.3177]
+      (2014)
+    </p>
+    <p>
       <bibid>Pratt 1973</bibid>:
       Vaughan R. Pratt, "Top down operator precedence", in
       <cite>First
         ACM Symposium on Principles of Programming Languages<cite>,
           pages 41–51, ACM. (Oct. 1973.)
-        </cite></cite></p>
+      </p>
+    <p>
+      <bibid>Samuelson and Bauer 1959</bibid>:
+      K. Samelson and F. L. Bauer,
+      "Sequentielle Formel&uuml;bersetzung",
+      <cite>Elektronishce Rechenanlagen</cite>,
+      1, 176-182. (1959)
+    </p>
     <p>
       <bibid>Samuelson and Bauer 1960</bibid>:
-      Samelson, K. and Bauer, F. L. Sequential formula translation. Commun. ACM,
+      K. Samelson and F. L. Bauer, "Sequential formula translation",
+      <cite>Communications of the ACM</cite>,
       3(2):76–83, Feb. 1960.
+      A translation of
+      <bibref>Samuelson and Bauer 1959</bibref>.
     </p>
     <p>
       <bibid>Shannon 1948</bibid>:
