@@ -512,32 +512,60 @@
       is only noise. The Chomskyan approach is to start with a grammar,
       and use the corpus of the language to check its accuracy. Chomsky's
       approach will soon come to dominate linguistics.</p>
-    <h1>Term:
-      <term>Chomskyan parsing</term></h1>
-    <p>In computing, parsing theory mainly follows Chomsky's work in
-      linguistics. Parsing is
-      <term>Chomksyan</term>
-      if it is guided by
-      a BNF grammar. From this point on, most parsers and most parsing
-      theory will be Chomskyan; and this timeline will focus on Chomskyan
-      parsing. But, as we shall see, non-Chomskyan parsing does survive
-      and has its users today.</p>
+    <h1>Term: <term>Chomskyan parsing</term></h1>
+    <p>From here on,
+    all parsing theory is defined in terms of
+    Chomsky's ideas.
+    Parsing theory divides into Chomskyan and
+    non-Chomskyan.
+    Chomskyan parsing theory becomes and remains the mainstream
+    but it is far from unchallenged.
+    </p>
+    Above we defined a <term>parser</term>
+    (<term>recognizer</term>)
+    as something or someone that
+    parses (recognizes) a string
+    according to a description.
+    We can now be more specific.
+    In Chomskyan parsing (recognizing),
+    the description is that of Chomsky's middle layer.
+    If the description is anything else,
+    the parser (recognizer) is non-Chomskyan.
+    </p>
+    <p>
+    As of 1957, we are calling the description
+    of a Chomskyan middle layer,
+    a <term>context-free grammar</term>.
+    The BNF notation for context-free grammars
+    has not yet been discovered.
+    Once it is,
+    we will refer to context-free grammars
+    as BNF grammars.
+    </p>
     <h1>1957: FORTRAN released</h1>
     <p>Backus's team makes the first FORTRAN compiler available to IBM
       customers. FORTRAN is the first high-level language that will find
       widespread implementation. As of this writing, it is the oldest
       language that survives in practical use.</p>
-    <p>FORTRAN is a line-by-line language and its parsing is pre-Chomskyan
-      and ad hoc. But it includes one important discovery. FORTRAN I was
-      line-by-line, but it allowed expressions. And, learning from the
-      dissatisfaction with the compiler, FORTRAN honors associativity
+    <p>FORTRAN is a line-by-line language.
+      Its parsing is non-Chomskyan.
+      But it includes one important discovery.
+      FORTRAN I was allowed expressions.
+      And, learning from the
+      dissatisfaction with the IT compiler,
+      FORTRAN honors associativity
       and precedence.</p>
-    <p>The designers of FORTRAN discovered a strange trick --
+    <p>The designers of FORTRAN used a strange trick for parsing operator expresssions --
       they hacked the expressions by adding parentheses around each
-      operator. Surprisingly, this works. In fact, once the theoretical
-      understanding of operator precedence comes about, the FORTRAN
-      I implementation is actually a hackish and inefficient way of
-      implementing precedence.</p>
+      operator.
+      The number of parentheses varied, depending on the operator.
+      Surprisingly, this works.
+      In fact, once the theoretical
+      understanding of operator precedence comes about,
+      the FORTRAN
+      I implementation is recognized
+      as a hackish and inefficient way of
+      implementing the classic operator precedence algorithm.</p>
     <h1>1958: LISP released</h1>
     <p>John McCarthy's LISP appears. LISP goes beyond the line-by-line
       syntax -- it is recursively structured. But the LISP interpreter does
@@ -547,8 +575,7 @@
       associativity and precedence must be specified with parentheses.
     </p>
     <h1>1959: Backus's notation</h1>
-    <p>Backus discovers a new notation to describe the IAL language
-      (aka ALGOL)<footnote>
+    <p>Backus discovers a new notation to describe the IAL language<footnote>
         Backus's notation is influenced by his study of Post --
         he seems not to have read Chomsky until later.
         [http://archive.computerhistory.org/resources/text/Oral_History/Backus_John/Backus_John_1.oral_history.2006.102657970.pdf],
@@ -556,9 +583,13 @@
         <bibref>Backus 1980</bibref>, p. 133.
       </footnote>.
       According to Backus's recollection,
-      it has only one reader: Peter Naur<footnote>
+      his paper<footnote>
+      <bibref>Backus 1959</bibref>
+      </footnote>
+      has only one reader: Peter Naur<footnote>
         <bibref>Backus 1980</bibref>, pp. 132-133.
       </footnote>.
+      The IAL language will soon be renamed ALGOL.
     </p>
     <h1>1959: Operator precedence and stacks</h1>
     <p>Samuelson and Bauer<footnote>
@@ -600,12 +631,14 @@
     </p>
     <h1>1960: BNF</h1>
     <p>In the ALGOL 60 report<footnote>
-        <bibref>ALGOL 60</bibref>,
+        <bibref>ALGOL 60</bibref>
+	</footnote>,
         Peter Naur improves the Backus notation and uses it to describe
         the language.
         This bring Backus' notation to wide attention.
         The improved notation will become known as Backus-Naur Form
-        (BNF).</footnote></p>
+        (BNF).
+      </p>
     <h1>Term:
       <term>declarative</term></h1>
     <p>For our purposes, a parser is
@@ -1746,6 +1779,17 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       John Aycock and R. Nigel Horspool, "Practical Earley parsing",
       <cite>Computer J.</cite>
       45(6):620–630. (2002)
+    </p>
+    <p>
+      <bibid>Backus 1959</bibid>:
+      John Backus,
+      "The Syntax and Semantics of the Proposed International Algebraic
+      Language of the Zurich ACM-GAMM Conference. Proceedings of the
+      International Conference on Information Processing",
+      UNESCO, pp.125-132.
+      [http://www.softwarepreservation.org/projects/ALGOL/paper/Backus-Syntax_and_Semantics_of_Proposed_IAL.pdf]
+      [http://www.softwarepreservation.org/projects/ALGOL/paper/Backus-ICIP-1959.pdf]
+      (1959)
     </p>
     <p>
       <bibid>Backus 1980</bibid>:
