@@ -82,7 +82,7 @@
     <h1>1949: Rutishauser's compiler</h1>
     <p>From 1949 to 1951 at the ETH Zurich, Heinz Rutishauser worked on
       the design of what we would now call a compiler<footnote>
-        Knuth and Pardo 1976,
+        <bibref>Knuth and Pardo 1976</bibref>,
         pp. 29-35, 40.
       </footnote>.
       Rutishauser's arithmetic expression parser
@@ -213,7 +213,7 @@
       or have parentheses, but not both.
       And like Rutishauser's, Boehm's compiler is never
       implemented<footnote>
-        Knuth and Pardo 1976,
+        <bibref>Knuth and Pardo 1976</bibref>,
         pp 35-42.
       </footnote>.
     </p>
@@ -239,7 +239,7 @@
         Symposium on Automatic Programming for Digital Computer,
         ONR, p. 15.,
         as cited in
-        Knuth and Pardo 1976,
+        <bibref>Knuth and Pardo 1976</bibref>,
         p 51.
       </footnote>.
       Specifically, in 1952,
@@ -288,7 +288,7 @@
       <q>codification automatique</q>
       or
       <q>Rechenplanfertigung</q><footnote>
-        Knuth and Pardo 1976,
+        <bibref>Knuth and Pardo 1976</bibref>,
         p. 50.
       </footnote>.
     </p>
@@ -304,7 +304,7 @@
     <p>Knuth
       calls Glennie's the first
       <q>real</q><footnote>
-        Knuth and Pardo 1976,
+        <bibref>Knuth and Pardo 1976</bibref>,
         p 42.
       </footnote>
       compiler, by which he means that
@@ -325,7 +325,7 @@
       <term>compilers</term>
       afterward were named AUTOCODE, which probably indicates
       awareness of Glennie's effort<footnote>
-        Knuth and Pardo 1976,
+        <bibref>Knuth and Pardo 1976</bibref>,
         pp. 42-49.
       </footnote>.
     </p>
@@ -356,7 +356,7 @@
     <h1>1955: Work begins on the IT compiler</h1>
     <p>At Purdue, a team including Alan Perlis and Joseph Smith begins work
       on the IT compiler<footnote>
-        Knuth and Pardo 1976,
+        <bibref>Knuth and Pardo 1976</bibref>,
         pp. 83-86.
       </footnote>.
     </p>
