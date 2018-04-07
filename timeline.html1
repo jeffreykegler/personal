@@ -291,7 +291,16 @@
         Knuth and Pardo 1976,
         p. 50.
       </footnote>.
-    </p><h1>1952: Glennie's AUTOCODE</h1>
+    </p>
+    <h1>1951: Kleene's regular languages</h1>
+    <p>Kleene discovers regular languages<footnote>
+        <bibref>Kleene 1951</bibref>.
+      </footnote>.
+      Kleene does not use regular expression notation,
+      but his regular languages are the idea behind
+      it.
+    </p>
+    <h1>1952: Glennie's AUTOCODE</h1>
     <p>Knuth
       calls Glennie's the first
       <q>real</q><footnote>
@@ -359,7 +368,7 @@
       <em>useful</em>
       compiler. IT and IT's derivatives were used successfully and
       frequently in hundreds of computer installations until [its
-      target,] the [IBM] 650 became obsolete. [... P]previous systems
+      target] the [IBM] 650 became obsolete. [... P]previous systems
       were important steps along the way, but none of them had the
       combination of powerful language and adequate implementation and
       documentation needed to make a significant impact in the use of
@@ -398,7 +407,8 @@
         J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S, "A mathematical language compiler",
         in (1956) _Proceedings of the 1956 11th ACM national meeting_
       </footnote>,
-      IT team is careful to define the term. Their definition makes clear that
+      the IT team is careful to define the term.
+      Their definition makes clear that
       they are using of the word
       <term>compiler</term>
       in something like its
@@ -408,10 +418,10 @@
       will usually
       mean what we currently understand it to mean.</p>
     <h1>1956: The Chomsky hierarchy</h1>
-    <p>Chomsky publishes the paper which is usually considered the foundation of Western formal language theory.<footnote>
-        Chomsky, Noam. "Three models for the description of language", IEEE Trans. Inform.
-        Theory, 2(3):113–124, 1956.
-      </footnote>
+    <p>Chomsky publishes the paper which is usually considered the foundation of
+    Western formal language theory<footnote>
+        <bibref>Chomsky 1956</bibref>.
+      </footnote>.
       Chomsky demolishes the idea that natural language grammar can be
       modeled using only Markov chains. Instead, the paper advocates a
       natural language approach that uses three layers:</p>
@@ -444,49 +454,59 @@
         phase of modern compilers.</li>
     </ul>
     <h1>Term:
-      <term>Parsing</term></h1>
+      <term>Parser</term></h1>
     <p>Chomsky is a turning point, so much so that it establishes or settles the
       meaning of many of the terms we are using.
-      <term>Parsing</term>,
-      for our purposes, is transforming a string of symbols into a
-      structure. Typically this structure is a parse tree.</p>
-    <h1>Recognizers</h1>
+      A
+      <term>Parser</term>,
+      for our purposes, is something or someone that transforms
+      a string of symbols into a
+      structure,
+      according to a description
+      of the mapping from strings to structures.
+      For our purposes,
+      the structures can usually be considered to be parse trees.</p>
+    <h1>Term: <term>Recognizer</term></h1>
     <p>In contrast to a parser,
       a
       <term>recognizer</term>
-      is a program which takes a string and a grammar and answers
+      is a something or someone that
+      takes a string and answers
       <q>yes</q>
       or
       <q>no</q>
       --
       <q>yes</q>
-      if the string is in the language described by the grammar,
+      if the string is in the language described by the recognizer,
       <q>no</q>
       otherwise.
-      For a compiler to work, it clearly needs
-      a parser, not a recognizer.
-    </p><p>In comparing algorithms, it can be important to keep in mind
-      whether they are recognizers or parsers.
-      Recognizers can be,
-      to some extent, pressed into service as parsers by introducing captures.
-      This is often done, for example, with regular expressions,
-      and if the semantics is very simple, it works.
+      Note that,
+      if we intend to do semantics,
+      a recognizer alone is not sufficient.
     </p>
-    <h1>1957: Kleene's regular expressions</h1>
-    <p>Steven Kleene discovers regular expressions, a very handy notation
-      for Markov chains. It will turn out that several other mathematical objects
-      being studied at this time
-      are also equivalent to regular expressions: the various
-      finite state automata; and some of the objects being studied as
-      neural nets.</p>
+    <p>In the strict sense, a recognizer cannot driver a compiler --
+      a compiler needs a parser.
+      But recognizers can be far easier to write,
+      and are often hacked up
+      and pressed into service as parsers.
+      by introducing captures.
+      For example, if your semantics is simple and non-recursive,
+      you might be able to drive your semantics phase with
+      the output of
+      a regex engine, using captures.
+    </p>
     <h1>1957: Chomsky publishes
       <cite>Syntactic Structures</cite></h1>
     <p>Noam Chomsky publishes
-      <em>Syntactic Structures</em>, one of the most important books of
-      all time. The orthodoxy in 1957 is structural linguistics which
+      <cite>Syntactic Structures</cite><footnote>
+        <bibref>Chomsky 1957</bibref>.
+      </footnote>, one of the most important books of
+      all time.
+      The orthodoxy in 1957 is structural linguistics which
       argues, with Sherlock Holmes, that
       <q>it is a capital mistake
-        to theorize in advance of the facts</q>. Structuralists start
+        to theorize in advance of the facts</q>.
+      Structuralists start
       with the utterances in a language, and build upward.</p>
     <p>But Chomsky claims that without a theory there are no facts: there
       is only noise. The Chomskyan approach is to start with a grammar,
@@ -1736,6 +1756,22 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       (1980)
     </p>
     <p>
+      <bibid>Chomsky 1956<bibid>
+          Noam Chomsky,
+          "Three models for the description of language",
+          <cite>IEEE Trans. Inform.  Theory</cite>,
+          2(3):113–124.
+          (1956)
+        </bibid></bibid></p>
+    <p>
+      <bibid>Chomsky 1957</bibid>:
+      Noam Chomsky
+      <cite>Syntactic Structures</cite>,
+      The Hague/Paris: Mouton, ISBN 978-3-11-021832-9.
+      (1957)
+    </p><p>
+    </p>
+    <p>
       <bibid>Ford 2002</bibid>:
       Bryan Ford, "Packrat parsing: a practical linear-time algorithm with backtracking", Master’s thesis,
       Massachusetts Institute of Technology. (September 2002.)
@@ -1786,6 +1822,14 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
     <p><bibid>Irons 1961</bibid>:
       Irons, E. T. A syntax-directed compiler for ALGOL 60. Commun. ACM,
       4(1):51–55, Jan. 1961.
+    </p>
+    <p>
+      <bibid>Kleene 1951</bibid>
+      Stephen C.  Kleene,
+      "Representation of Events in Nerve Nets and Finite Automata",
+      Project Rand Resarch Memorandum RM-704.
+      (15 December 1951)
+      [https://www.rand.org/content/dam/rand/pubs/research_memoranda/2008/RM704.pdf]
     </p>
     <p>
       <bibid>Knuth 1965</bibid>:
@@ -1840,8 +1884,8 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       Vaughan R. Pratt, "Top down operator precedence", in
       <cite>First
         ACM Symposium on Principles of Programming Languages</cite>,
-          pages 41–51, ACM. (Oct. 1973.)
-        </p>
+      pages 41–51, ACM. (Oct. 1973.)
+    </p>
     <p>
       <bibid>Samuelson and Bauer 1959</bibid>:
       K. Samelson and F. L. Bauer,
