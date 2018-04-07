@@ -419,7 +419,7 @@
       mean what we currently understand it to mean.</p>
     <h1>1956: The Chomsky hierarchy</h1>
     <p>Chomsky publishes the paper which is usually considered the foundation of
-    Western formal language theory<footnote>
+      Western formal language theory<footnote>
         <bibref>Chomsky 1956</bibref>.
       </footnote>.
       Chomsky demolishes the idea that natural language grammar can be
@@ -466,7 +466,8 @@
       of the mapping from strings to structures.
       For our purposes,
       the structures can usually be considered to be parse trees.</p>
-    <h1>Term: <term>Recognizer</term></h1>
+    <h1>Term:
+      <term>Recognizer</term></h1>
     <p>In contrast to a parser,
       a
       <term>recognizer</term>
@@ -512,35 +513,38 @@
       is only noise. The Chomskyan approach is to start with a grammar,
       and use the corpus of the language to check its accuracy. Chomsky's
       approach will soon come to dominate linguistics.</p>
-    <h1>Term: <term>Chomskyan parsing</term></h1>
+    <h1>Term:
+      <term>Chomskyan parsing</term></h1>
     <p>From here on,
-    all parsing theory is defined in terms of
-    Chomsky's ideas.
-    Parsing theory divides into Chomskyan and
-    non-Chomskyan.
-    Chomskyan parsing theory becomes and remains the mainstream
-    but it is far from unchallenged.
-    </p>
-    Above we defined a <term>parser</term>
-    (<term>recognizer</term>)
-    as something or someone that
-    parses (recognizes) a string
-    according to a description.
-    We can now be more specific.
-    In Chomskyan parsing (recognizing),
-    the description is that of Chomsky's middle layer.
-    If the description is anything else,
-    the parser (recognizer) is non-Chomskyan.
+      all parsing theory is defined in terms of
+      Chomsky's ideas.
+      Parsing theory divides into Chomskyan and
+      non-Chomskyan.
+      Chomskyan parsing theory becomes and remains the mainstream
+      but it is far from unchallenged.
+    </p><p>
+      Above we defined a
+      <term>parser</term>
+      (<term>recognizer</term>)
+      as something or someone that
+      parses (recognizes) a string
+      according to a description.
+      We can now be more specific.
+      In Chomskyan parsing (recognizing),
+      the description is that of Chomsky's middle layer.
+      If the description is anything else,
+      the parser (recognizer) is non-Chomskyan.
     </p>
     <p>
-    As of 1957, we are calling the description
-    of a Chomskyan middle layer,
-    a <term>context-free grammar</term>.
-    The BNF notation for context-free grammars
-    has not yet been discovered.
-    Once it is,
-    we will refer to context-free grammars
-    as BNF grammars.
+      As of 1957, we are calling the description
+      of a Chomskyan middle layer,
+      a
+      <term>context-free grammar</term>.
+      The BNF notation for context-free grammars
+      has not yet been discovered.
+      Once it is,
+      we will refer to context-free grammars
+      as BNF grammars.
     </p>
     <h1>1957: FORTRAN released</h1>
     <p>Backus's team makes the first FORTRAN compiler available to IBM
@@ -584,7 +588,7 @@
       </footnote>.
       According to Backus's recollection,
       his paper<footnote>
-      <bibref>Backus 1959</bibref>
+        <bibref>Backus 1959</bibref>
       </footnote>
       has only one reader: Peter Naur<footnote>
         <bibref>Backus 1980</bibref>, pp. 132-133.
@@ -595,12 +599,23 @@
     <p>Samuelson and Bauer<footnote>
         <bibref>Samuelson and Bauer 1960</bibref>.
       </footnote>
-      describes in detail the use of stacks to implement
+      describe in detail the use of stacks to implement
       operator precedence.
-      This paper will be very influential.
+      The algorithm and its presentation are thoroughly
+      non-Chomskyan --
+      Samuelson and Bauer describe their example using,
+      not a context-free grammar,
+      but an operator precedence table.
     </p><h1>The Operator Issue as of 1959</h1>
     <p>Since Boehm,
       many people have been refining operator precedence.
+      With Samuelson and Bauer,
+      what Norvell<footnote>
+        <bibref>Norvell 1999</bibref>
+      </footnote>
+      calls "the classic algorithm"
+      takes a well-documented form.
+      The Samuelson and Bauer paper was very influential.
     </p>
     <h1>1960: The ALGOL report</h1>
     <p>The ALGOL 60 report<footnote>
@@ -610,35 +625,35 @@
       structured language. ALGOL 60 is recursively structured but the
       structure is implicit -- newlines are not semantically significant,
       and parentheses indicate syntax only in a few specific cases. The
-      ALGOL compiler will have to find the structure. It is a case of 1960's
-      optimism at its best. As the ALGOL committee is well aware, a parsing
-      algorithm capable of handling ALGOL 60 does not yet exist. But the
-      risk they are taking will soon pay off.</p>
+      ALGOL compiler will have to find the structure.
+    </p>
     <p>With the ALGOL 60 report, a quest begins which continues to this day: the search for a parser that is</p>
-    <ul>
+    <ul id="loc-quest">
       <li>efficient,</li>
       <li>practical,</li>
       <li>declarative, and</li>
       <li>general.</li>
-    </ul><p>
-      On one hand, the
-      risk they are taking will pay off immediately, producting vastly improved
-      parsers and parsing theory.
-      On the other hand, the parser they seek will not be discovered for
-      three decades,
-      two more decades will pass before it is
-      implemented.
+    </ul>
+    <p>
+      It is a case of 1960's
+      optimism at its best. As the ALGOL committee is well aware, a parsing
+      algorithm capable of handling ALGOL 60 does not yet exist. But the
+      risk they are taking has immediate results --
+      1961 will see a number of discoveries that remain important
+      today.
+      On the other hand, the parser they seek remains elusive for
+      decades.
     </p>
     <h1>1960: BNF</h1>
     <p>In the ALGOL 60 report<footnote>
         <bibref>ALGOL 60</bibref>
-	</footnote>,
-        Peter Naur improves the Backus notation and uses it to describe
-        the language.
-        This bring Backus' notation to wide attention.
-        The improved notation will become known as Backus-Naur Form
-        (BNF).
-      </p>
+      </footnote>,
+      Peter Naur improves the Backus notation and uses it to describe
+      the language.
+      This bring Backus' notation to wide attention.
+      The improved notation will become known as Backus-Naur Form
+      (BNF).
+    </p>
     <h1>Term:
       <term>declarative</term></h1>
     <p>For our purposes, a parser is
@@ -654,8 +669,8 @@
     <p>A parser is
       <term>procedural</term>, if it requires procedural
       logic as part of its syntax phase.
-      If a parser is procedural, then it is not declarative.
-    </p><h1>Term:
+    </p>
+    <h1>Term:
       <term>general</term></h1>
     <p>A general parser is a parser that will parse
       any grammar that can be written in BNF<footnote>
@@ -668,15 +683,6 @@
         have any practical use, so that the restriction to proper grammars
         is unproblematic.
       </footnote>.
-      This is a very useful property
-      -- it makes it easy for a grammar-writer to know that her grammar
-      will parse.
-      This in turn
-      makes it easy to auto-generate grammars,
-      because it is easy for a program to know that
-      the grammar it generates will successfully parse.
-      This opens the way
-      to true second-order languages -- languages which specify other
       languages.</p>
     <h1>1960: Gleenie's compiler-compiler</h1>
     <p>A.E. Gleenie publishes his description of a compiler-compiler<footnote>
@@ -942,9 +948,9 @@
         for the x1 and Making a translator for Algol 60", Research Report 35,
         Mathematisch Centrum, Amsterdam, 1961,
       </footnote>
-      <a
-href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
-        Norvell has made an attempt at classification</a>
+      Norvell has made an attempt at classification<footnote>
+        <bibref>Norvell 1999</bibref>.
+      </footnote>
       of the botanical profusion of operator expression parsers. All
       earlier parsers are subspecies of what he calls
       <q>the classic
@@ -1273,13 +1279,13 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       Chomskyan approach has always had its dissenters.
       Vaughn Pratt was one
       of these, and discovered a new approach (the third and last in
-      <a
-    href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
-        Norvell's taxonomy</a>) to operator expression parsing, one which
-      some have adopted as an overall solution to their parsing problems<footnote>
-        <bibref>Pratt 1973</bibref>.
-      </footnote>.
-    </p>
+      Theodore
+      Norvell's taxonomy<footnote><bibref>Norvell 1999</bibref>)
+        to operator expression parsing, one which
+        some have adopted as an overall solution to their parsing problems<footnote>
+          <bibref>Pratt 1973</bibref>.
+        </footnote>.
+      </footnote></p>
     <p>The Pratt approach, and its descendant, precedence climbing,
       is not popular as an overall strategy.
       It is most often used as an alternative to the classic
@@ -1922,6 +1928,13 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       89, pp. 235 - 250.
       [https://arxiv.org/abs/1304.3177]
       (2014)
+    </p>
+    <p>
+      <bibid>Norvell 1999</bibid>:
+      Theodore Norvell,
+      "Parsing Expressions by Recursive Descent",
+      https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm.
+      (1999)
     </p>
     <p>
       <bibid>Pratt 1973</bibid>:
