@@ -250,12 +250,12 @@
       often was viewed as providing a interface
       for calling a collection of
       carefully chosen assembler subroutines<footnote>
-      In 1952, an interface that guided calls to subroutines
-      was much more helpful than current programmers might
-      imagine:
-      "Existing programs for similar problems were unreadable
-      and hence could not be adapted new uses."
-      (<bibref>Backus 1980</bibref>, p. 126)
+        In 1952, an interface that guided calls to subroutines
+        was much more helpful than current programmers might
+        imagine:
+        "Existing programs for similar problems were unreadable
+        and hence could not be adapted new uses."
+        (<bibref>Backus 1980</bibref>, p. 126)
       </footnote>.
       Hopper's new
       program took this subroutine calling
@@ -336,7 +336,7 @@
       <term>compiler</term>, for example, produced
       relative addresses, which needed to be translated by hand before
       a machine can execute them<footnote>
-      <bibid>Backus 1980</bibid>, pp. 133-134.
+        <bibid>Backus 1980</bibid>, pp. 133-134.
       </footnote>.</p>
     <h1>1955: Noam Chomsky starts teaching at MIT</h1>
     <p>Noam Chomsky is awarded a Ph.D. in linguistics and accepts a
@@ -533,11 +533,11 @@
         he seems not to have read Chomsky until later.
         [http://archive.computerhistory.org/resources/text/Oral_History/Backus_John/Backus_John_1.oral_history.2006.102657970.pdf],
         p. 25.
-	<bibref>Backus 1980</bibref>, p. 133.
+        <bibref>Backus 1980</bibref>, p. 133.
       </footnote>.
       According to Backus's recollection,
       it has only one reader: Peter Naur<footnote>
-      <bibref>Backus 1980</bibref>, pp. 132-133.
+        <bibref>Backus 1980</bibref>, pp. 132-133.
       </footnote>.
     </p>
     <h1>1959: Operator precedence and stacks</h1>
@@ -547,13 +547,13 @@
       describes in detail the use of stacks to implement
       operator precedence.
       This paper will be very influential.
-    <h1>The Operator Issue as of 1959</h1>
+    </p><h1>The Operator Issue as of 1959</h1>
     <p>Since Boehm,
-    many people have been refining operator precedence.
+      many people have been refining operator precedence.
     </p>
     <h1>1960: The ALGOL report</h1>
     <p>The ALGOL 60 report<footnote>
-      <bibref>ALGOL 1960</bibref>
+        <bibref>ALGOL 1960</bibref>
       </footnote>
       specifies, for the first time, a block
       structured language. ALGOL 60 is recursively structured but the
@@ -580,12 +580,12 @@
     </p>
     <h1>1960: BNF</h1>
     <p>In the ALGOL 60 report<footnote>
-    <bibref>ALGOL 60</bibref>,
-    Peter Naur improves the Backus notation and uses it to describe
-      the language.
-      This bring Backus' notation to wide attention.
-      The improved notation will become known as Backus-Naur Form
-      (BNF).</p>
+        <bibref>ALGOL 60</bibref>,
+        Peter Naur improves the Backus notation and uses it to describe
+        the language.
+        This bring Backus' notation to wide attention.
+        The improved notation will become known as Backus-Naur Form
+        (BNF).</footnote></p>
     <h1>Term:
       <term>declarative</term></h1>
     <p>For our purposes, a parser is
@@ -1732,7 +1732,7 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       John Backus,
       <cite>Programming in America in the 1950s- Some Personal Impressions</cite>
       [http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf]
-      10.1016/B978-0-12-491650-0.50017-4. 
+      10.1016/B978-0-12-491650-0.50017-4.
       (1980)
     </p>
     <p>
@@ -1830,7 +1830,8 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       Roberto Ierusalimschy,
       "On the Relation between Context-Free Grammars
       and Parsing Expression Grammars",
-      <cite>Science of Computer Programming</cite> 89, pp. 235 - 250.
+      <cite>Science of Computer Programming</cite>
+      89, pp. 235 - 250.
       [https://arxiv.org/abs/1304.3177]
       (2014)
     </p>
@@ -1838,9 +1839,9 @@ href="https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm">Theodore
       <bibid>Pratt 1973</bibid>:
       Vaughan R. Pratt, "Top down operator precedence", in
       <cite>First
-        ACM Symposium on Principles of Programming Languages<cite>,
+        ACM Symposium on Principles of Programming Languages</cite>,
           pages 41–51, ACM. (Oct. 1973.)
-      </p>
+        </p>
     <p>
       <bibid>Samuelson and Bauer 1959</bibid>:
       K. Samelson and F. L. Bauer,
