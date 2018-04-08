@@ -627,7 +627,9 @@
       and parentheses indicate syntax only in a few specific cases. The
       ALGOL compiler will have to find the structure.
     </p>
-    <p>With the ALGOL 60 report, a quest begins which continues to this day: the search for a parser that is</p>
+    <p>With the ALGOL 60 report, a quest begins which continues to this day:
+    to find a parser that solves the Parsing Problem.
+    Ideally such a parser is
     <ul id="loc-quest">
       <li>efficient,</li>
       <li>practical,</li>
@@ -1353,19 +1355,25 @@
       In 1969,
       Frank DeRemer describes a new variant of Knuth's LR
       parsing<footnote>
-        <bibref>DeRemer 1969</bibref>.
-        DeRemer's LALR algorithm requires only a stack and a state
-        table of quite manageable size.
-        LALR looks practical,
-        and will go on to become the most widely used of the LR(k)
-        subsets.</footnote></p>
+        <bibref>DeRemer 1969</bibref>
+      </footnote>.
+      DeRemer's LALR algorithm requires only a stack and a state
+      table of quite manageable size.
+      LALR looks practical,
+      and will go on to become the most widely used of the LR(k)
+      subsets.
+    </p>
     <h1>1969: the
       <tt>ed</tt>
       editor</h1>
     <p>Ken Thompson writes the
       <tt>ed</tt>
       editor as one of the
-      first components of UNIX. At this point, regular expressions are an
+      first components of UNIX<footnote>
+        <bibref>Darwin 1984</bibref>,
+        Section 3.1, "An old editor made new".
+      </footnote>.
+      At this point, regular expressions are an
       esoteric mathematical formalism. Through the
       <tt>ed</tt>
       editor
@@ -1394,17 +1402,15 @@
         <bibref>Aho and Ullman 1972</bibref>, pp. 456-485.
       </footnote>. They note that
       <q>it can be quite difficult to determine what language is
-        defined by a TDPL parser<q><footnote>
-            <bibref>Aho and Ullman 1972</bibref>, p. 466.
-          </footnote>.
-          That is, GTDPL parsers do whatever
-          they do, and that whatever is something the programmer in general
-          will not be able to describe. The best a programmer can usually
-          do is to create a test suite and fiddle with the GTDPL description
-          until it passes. Correctness cannot be established in any stronger
-          sense.
-        </q></q></p>
-    <p>
+        defined by a TDPL parser</q><footnote>
+        <bibref>Aho and Ullman 1972</bibref>, p. 466.
+      </footnote>.
+      That is, GTDPL parsers do whatever
+      they do, and that whatever is something the programmer in general
+      will not be able to describe. The best a programmer can usually
+      do is to create a test suite and fiddle with the GTDPL description
+      until it passes. Correctness cannot be established in any stronger
+      sense.
       GTDPL takes the old joke that
       <q>the code is
         the documentation</q>
@@ -1421,20 +1427,25 @@
       contractors, GTDPL parsing provides steady work for years to
       come. Public interest in GTDPL fades.</p>
     <h1>1973: Pratt parsing</h1>
-    <p>One approach to the Operator Issue has not been mentioned. We
-      have noted that LL(1) cannot parse operator expressions. What about
-      making the entire grammar an operator grammar? That way you don't
-      have to mix algorithms.</p>
-    <p>It's an idea that had already occurred to
-      Samuelson and Bauer in 1959.
-      They intended their operator parser as a parser for ALGOL.
-    </p><p>There are many problems with switching to operator
-      grammars. Operator grammar are non-Chomskyan -- the BNF no longer
+    <p>As we have noted pure LL(1) cannot parse operator expressions,
+      and so operator expression parsers are often called into service
+      as subparsers.
+      What about
+      making the entire grammar an operator grammar?
+      This idea had already occurred to Samuelson and Bauer in 1959.
+      In 1973, Vaughan Pratt revives it<footnote>
+      <bibref>Pratt 1973</bibref>
+      </footnote>.
+    </p>
+    <p>There are many problems with switching to operator
+      grammars.
+      Operator grammars are non-Chomskyan -- the BNF no longer
       accurately describes the grammar<footnote>
         <bibref>Samuelson and Bauer 1960</bibref>
         did not even include a BNF grammar --
         just the precedence tables.
-      </footnote>. Instead the BNF becomes part of
+      </footnote>.
+      Instead the BNF becomes part of
       a combined notation, and the actual grammar parsed depends also on
       precedence and semantics.
       And operator grammars have a very restricted
@@ -1442,24 +1453,28 @@
     <p>But many practical grammars are almost operator grammars. And the
       Chomskyan approach has always had its dissenters.
       Vaughn Pratt was one
-      of these, and discovered a new approach (the third and last in
+      of these, and discovered a new approach
+      to operator expression parsing: precedence climbing.
+      Pratt parsing is the third and last approach in
       Theodore
-      Norvell's taxonomy<footnote><bibref>Norvell 1999</bibref>)
-        to operator expression parsing, one which
-        some have adopted as an overall solution to their parsing problems<footnote>
-          <bibref>Pratt 1973</bibref>.
-        </footnote>.
+      Norvell's taxonomy of approaches to operator expression
+      parsing<footnote>
+        <bibref>Norvell 1999</bibref>
+      </footnote>.
+      Some have adopted Pratt parsing
+      as the overall solution to their parsing problems<footnote>
+        <bibref>Pratt 1973</bibref>.
       </footnote></p>
-    <p>The Pratt approach, and its descendant, precedence climbing,
+    <p>The Pratt approach
       is not popular as an overall strategy.
-      It is most often used as an alternative to the classic
-      and the shunting yard approached,
-      within a recursive descent strategy.
+      Under the name precedence climbing,
+      it is most often used
+      as a subparser within a recursive descent strategy.
       All
       operator expression subparsers break the Chomskyan paradigm so the
       non-Chomskyan nature of Pratt's parser is not a problem in this
-      context. But with respect to the Operator Issue, like Dijkstra's
-      alternative, it is an implementation choice, not a game-changer.</p>
+      context.
+    </p>
     <h1>1975: The C compiler is converted to LALR</h1>
     <p>Bell Labs converts its C compiler from hand-written recursive
       descent to DeRemer's LALR algorithm<footnote>
@@ -1484,24 +1499,53 @@
       by far, the most comprehensive, useable and easily available compiler
       writing toolkit yet developed.</p>
     <p>Part of the V7 toolkit is Yet Another Compiler Compiler
-      (YACC)<footnote>
+      (<tt>yacc</tt>)<footnote>
         S. C. Johnson, "Yet another compiler-compiler", in Volume 2A
         of
         <bibref>McIlroy and Kernighan 1979</bibref>.
-      </footnote>. YACC is LALR-powered. Despite its name, YACC is the first
-      compiler-compiler in the modern sense. For some useful languages, the
+      </footnote>. <tt>yacc</tt> is LALR-powered. Despite its name, <tt>yacc</tt> is the first
+      compiler-compiler in the modern sense.
+      For some useful languages, the
       process of going from Chomskyan specification to executable is fully
-      automated. Most practical languages, including the C language and
-      YACC's own input language, still require manual hackery. Nonetheless,
-      after two decades of research, it seems that the parsing problem
-      is solved.</p>
+      automated.
+      Most practical languages, including the C language and
+      <tt>yacc</tt>'s own input language, still require manual hackery.
+    <h1>The Operator Issue as of 1979</h1>
+    <p>
+      Recall <a href="#loc-quest">the criteria</a>
+      outlined for a solution
+      of the Parsing Problem:
+      that the parser be
+      efficient, practical, declarative and general.
+      LALR is linear and runs fast on 1979 hardware.
+      As of 1979 LALR seems practical.
+      And LALR is declarative.
+      True, LALR is very far from general,
+      but
+      <a href="g-basic-op">BASIC-OP</a>
+      <a href="g-right-op">RIGHT-OP</a>
+      and 
+      <a href="g-right-op">LIST-OP</a>
+      are all LALR,
+      and LALR can parse
+      most operator expressions directly.
+      </p>
+      <p>
+      All the criteria of the original quest have not been
+      completely met.
+      Nonetheless,
+      after two decades of research,
+      it seems as if the Parsing Problem
+      and the Operator Issue
+      can both be declared solved.
+    </p>
     <h1>1987: Perl 1 is released</h1>
     <p>Larry Wall introduces Perl 1<footnote>
         Larry Wall, 'v13i001: Perl, a "replacement" for awk and sed, Part01/10'. Newsgroup: comp.sources.unix.
         1988-02-01).
         [https://groups.google.com/forum/#!topic/comp.sources.unix/Njx6b6TiZos].
       </footnote>. Perl embraces complexity like no
-      previous language. Larry uses YACC and LALR very aggressively --
+      previous language. Larry uses <tt>yacc</tt> and LALR very aggressively --
       to my knowledge more aggressively than anyone before or since.</p>
     <h1>1990: Monads</h1>
     <p>
@@ -1698,7 +1742,7 @@
       repackaging the nearly-forgotten GTDPL. Ford adds packratting,
       so that PEG is always linear, and provides PEG with an attractive
       new syntax.</p>
-    <p>Implementers by now are avoiding YACC, but the demand for
+    <p>Implementers by now are avoiding <tt>yacc</tt>, but the demand for
       declarative parsers remains. PEG is not, in fact, declarative,
       but it uses the same BNF notation, and many users don't know the
       difference. And nothing has been done to change
@@ -1712,7 +1756,7 @@
             "GCC 4.1 Release Series: Changes, New Features, and Fixes"
             [http://gcc.gnu.org/gcc-4.1/changes.html]
           </footnote>
-          Bison, an LALR parser, is the direct descendant of Steve Johnson's YACC.
+          Bison, an LALR parser, is the direct descendant of Steve Johnson's <tt>yacc</tt>.
         </q></q></p>
     <p>
       With this single line in middle of a change list hundreds of lines long.
@@ -1984,6 +2028,13 @@
       <cite>Syntactic Structures</cite>,
       The Hague/Paris: Mouton, ISBN 978-3-11-021832-9.
       (1957)
+    </p>
+    <p>
+      <bibref>Darwin 1984</bibref>:
+      Ian F. Darwin,
+      "A History of UNIX before Berkeley: UNIX Evolution: 1975-1984",
+      [http://doc.cat-v.org/unix/unix-before-berkeley/]
+      (1984)
     </p>
     <p>
       <bibref>DeRemer 1969</bibref>:
