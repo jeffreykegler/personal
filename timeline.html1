@@ -119,8 +119,7 @@
       </tt></pre>
     <p>
       In Western mathematics arithmetic expressions were read
-      according to traditional<footnote>
-      </footnote>
+      according to traditional
       ideas of
       associativity and precedence:
     </p><ul>
@@ -1687,27 +1686,21 @@
       </footnote>.
     </p>
     <h1>1995: Wadler's monads</h1><p>
-      Today monads are a hot topic.
-      In their adaptation into the world of
+      In the adaptation of monads into the world of
       programming,
-      the 1995 article by Wadler
-      <footnote>
-        Wadler Philip. (1995) Monads for functional programming. In:
-        Jeuring J., Meijer E. (eds) Advanced Functional Programming. AFP
-        1995. Lecture Notes in Computer Science, vol 925. Springer,
-        Berlin, Heidelberg.
-      </footnote>
+      <bibref>Walder 1995</bibref>
       is a turning point.
       One of Wadler's examples is a parser based on
       monads and combinator parsing.
       From here on out,
-      an combinator parsing will become the standard
+      combinator parsing becomes the standard
       example of monad programming.
     </p>
     <p>In its monadic form,
       the already attractive technique of combinator parsing is extremely elegant
-      and certainly seems as if it *should* solve all parsing problems.
-      But, once again, it is still recursive descent.
+      and certainly seems as if it <em>should</em> solve all parsing problems.
+      But, once again, it is still recursive descent,
+      completely unchanged.
       Wadler handles left recursion by rewriting into
       right recursive list, and re-processing the list
       into left recursive form.
@@ -2252,7 +2245,8 @@
       Bell Labs, Murray Hill, New Jersey.
       (January 1979.)
     </p>
-    <p><bibid>Wadler 1985</bibid>:
+    <p>
+    <bibid>Wadler 1985</bibid>:
       Philip Wadler, "How to Replace Failure by a List of Successes: A method
       for exception handling, backtracking, and pattern matching in lazy
       functional languages". in J-P Jouannaud (ed.),
@@ -2260,6 +2254,15 @@
         Languages and Computer Architecture</cite>.
       <cite>Lecture Notes in Computer Science</cite>, 1985
       vol. 201, Springer-Verlag GmbH, pp. 113-128. DOI: 10.1007/3-540-15975-4_33.
+      </p>
+      <p>
+    <bibid>Wadler 1995</bibid>:
+        Philip Wadler,
+	"Monads for functional programming" in
+        Jeuring J., Meijer E. (eds) <cite>Advanced Functional Programming. AFP
+        1995.</cite>, <cite>Lecture Notes in Computer Science</cite>,
+	vol 925. Springer, Berlin, Heidelberg.
+	(1995)
     </p>
   </body>
 </html>
