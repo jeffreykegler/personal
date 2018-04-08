@@ -1031,7 +1031,7 @@
     <h1>1965: Knuth discovers LR</h1>
     <p>Don Knuth discovers LR parsing<footnote>
         <bibref>Knuth 1965.</bibref>
-        <footnote>.
+        </footnote>.
           The LR algorithm is deterministic,
           Chomskyan and bottom-up. Knuth is primarily interested in the
           mathematics, and the parsing algorithm he gives is not practical. He
@@ -1041,7 +1041,7 @@
           <q>future research</q><footnote>
             <bibref>Knuth 1965</bibref>, p. 637
           </footnote>.
-        </footnote></footnote></p>
+        </p>
     <h1>Term: "linear time"</h1>
     <p>[ TODO.  And where to put this? After Knuth 1965?]
     </p>
