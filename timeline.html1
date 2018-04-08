@@ -789,17 +789,11 @@
       Thus, it works from the input tokens, and works
       <q>bottom up</q>
       until it reaches the start rule.
+      A parser can be be purely bottom-up,
+      but for efficiency it is usually best to eliminate potential
+      parses based on the grammar,
+      and that requires some kind of top-down logic.
     </p>
-    <p>Many programmers have a fixation on classifying parsers in terms
-      of top-down and bottom-up.
-      As we saw, the
-      <bibref>Irons 1961</bibref>
-      parser is not simply top-down or
-      bottom-up, though arguably describing it in terms of top-down and
-      bottom-up components is helpful. But for other parsing algorithms,
-      top-down vs. bottom-up classification is a pointless pedantry --
-      the classification can be done, but tells you nothing about the
-      actual behavior of the parser.</p>
     <h1>Terms:
       <term>Synthetic attribute</term></h1>
     <p><bibref>Irons 1961</bibref>
@@ -811,14 +805,9 @@
         Irons is credited with the discovery of synthetic attributes
         by Knuth ("Genesis of Attibute Grammars").
       </footnote>
-    </p>
-    <p>Synthetic attributes are a concept in semantics, not parsing,
+      Synthetic attributes are a concept in semantics, not parsing,
       but they will be important for us.
-      Almost everyone doing practical parsing does so because
-      she intends to move on to a semantics phase, and
-      feedback from new
-      semantic concepts often has major effects on the development of
-      parsing.</p>
+    </p>
     <h1>1961: Lucas discovers recursive descent</h1>
     <p>Peter Lucas publishes the first description of a purely top-down parser<footnote>
         <bibref>Lucas 1961</bibref>.
@@ -847,48 +836,16 @@
         (<cite>Communications of the ACM</cite>, 25th Anniversary Issue, p. 14).
         But Grune and Jacobs 2008 gives the credit to Lucas 1961
       </footnote>.
-      Certainly the Lucas algorithm more closely resembles modern implementations of recursive descent.</p>
-    <p>Except to say that he deals properly with them, Lucas does not say
-      how he parses operator expressions. But it is easy to believe Lucas'
-      claim -- by this time there are several specialized techniques for
-      parsing operator expressions and Lucas cites
-      <bibref>Samuelson and Bauer 1960</bibref>.
+      Except to say that he deals properly with them, Lucas does not say
+      how he parses operator expressions.
+      But it is easy to believe Lucas'
+      claim -- by this time the techniques for
+      parsing operator expressions are well understood<footnote>
+        <bibref>Lucas 1961</bibref>
+        cites
+        <bibref>Samuelson and Bauer 1960</bibref>
+      </footnote>.
     </p>
-    <p>For our purposes, it is sufficient to note that while recursive
-      descent cannot parse arithmetic expressions directly, it can deal
-      with them in two ways:</p>
-    <ul>
-      <li><p>Recursive descent can switch to another algorithm when
-          it encounters an operator expression. This is easy to do in a
-          hand-written implementation.</p></li>
-      <li><p>It can parse the operands and operands into a list, and
-          the list can be reparsed in post-processing. This is essentially
-          a delayed-action form of the first method.</p></li>
-    </ul>
-    <p>[ TODO -- Rewrite. ]
-      Lucas' writeup most likely describes a hand-written
-      parser, not a declarative one.
-      In the 1960s,
-      Hand-coded approaches became more popular than declarative
-      approaches like that of Irons due to three factors:</p>
-    <ul>
-      <li><p>Memory and CPU were both extremely limited. Hand-coding
-          paid off, even when the gains were small.</p></li>
-      <li><p>Top-down parsing is intuitive -- it essentially means
-          calling subroutines. It therefore requires little or no knowledge of
-          parsing theory. This makes it a good fit for hand-coding.</p></li>
-      <li><p>Pure recursive descent is, in fact, a very weak parsing
-          technique. Pure recursive descent cannot
-          deal with either of the operator grammars we have described:
-          <a href="g-basic">basic</a>
-          or
-          <a href="g-right-recursive">right-recursive</a>.
-          Recursive descent has severe limits,
-          it is often necessary to go beyond them,
-          and that helps justify
-          coding the entire parser by hand.</p>
-      </li>
-    </ul>
     <h1>1961: Dijkstra's shunting yard algorithm</h1>
     <p>In November 1961, Dijkstra publishes the
       <q>shunting yard</q>
@@ -897,46 +854,76 @@
         for the x1 and Making a translator for Algol 60", Research Report 35,
         Mathematisch Centrum, Amsterdam, 1961,
       </footnote>
-      Norvell has made an attempt at classification<footnote>
+      In Norvell's useful classification<footnote>
         <bibref>Norvell 1999</bibref>.
       </footnote>
-      of the botanical profusion of operator expression parsers. All
-      earlier parsers are subspecies of what he calls
+      of operator expression parsers,
+      All
+      earlier parsers have been what he calls
       <q>the classic
-        algorithm</q>, so that Dijkstra's approach is new. The number
-      of level of precedence is not
-      <q>built in</q>
-      into the
-      shunting-yard algorithm. And the shunting-yard algorithm is more
-      efficient than the classic approaches: Code size does not grow,
-      and the algorithm's speed does not decrease, with the number of
-      precedence levels. Dijkstra's algorithm is not a game-changer --
-      it has no major impact on the Operator Issue -- but it offers a
-      genuinely different implementation alternative.</p>
+        algorithm</q>.
+      Dijkstra's approach is new.
+      In the classic approach,
+      the number
+      of level of precedence is hard-coded into the
+      algorithm.
+      Dijkstra's algorithm can handle any number of levels
+      of precedence without a change in its code,
+      and without any effect on its running speed.
+    </p>
     <h1>The Operator Issue as of 1961</h1>
-    <p>Originally the operator issue was that it required a parsing
-      algorithm at a time
-      when there were no parsing algorithms.
-      With Lucas paper, the operator issue takes a new form --
-      one which it still has over 50 years later.
-      Specifically, recursive descent cannot parse this very simple operator grammar:
-    </p id="g-basic"><ul>
+    <p>The result of 1961 transformed the Operator Issue.
+      Before ALGOL, parsing operator expressions essentially
+      <em>was</em>
+      parsing.
+      After ALGOL, almost all languages will be block-structured
+      and ad hoc string manipulatons are no longer adequate --
+      the language as a whole requires a serious parsing techniques.
+      So parsing operator expressions becomes a side show,
+      or so it seems.
+    </p>
+    <p>
+      Why not use the
+      algorithms that parse operator expressions for the whole
+      language?
+      <bibref>Samuelson and Bauer 1959</bibref>
+      suggests
+      exactly that.
+      But, alas, operator expression parsing is not adequate for
+      languges as a whole<footnote>
+        But see the entry for 1973 on Pratt parsing
+        (<bibref>Pratt 1973></bibref>)
+        where the idea of parsing
+        entire languages as operator grammars is revisited
+        <footnote>.
+        </footnote></footnote></p>
+    <p>Also by 1961, we have BNF, which gives us a useful notation
+      for describing grammars.
+      It allows us to introduce our Basic Operator Grammar:
+    </p><ul id="g-basic-op">
       <li>S ::= E</li>
       <li>E ::= E + T</li>
       <li>E ::= T</li>
       <li>T ::= T * F</li>
       <li>T ::= F</li>
       <li>F ::= number</li>
-    </ul><p>
-      In fact recursive descent cannot parse any left recursive grammar.
-    </p>
-    <p>
-      But the problem is even more severe than that.
-      For human readers, left association is natural for most operators,
-      and they would find reversing it to be very confusing.
-      But suppose we ignore that face and rewrite the above grammar to be right
-      recursive:
-    </p id="g-right_recursive"><ul>
+    </ul>
+    <p>The simple grammar has two operators, three levels of precedence
+      and left associativity.
+      This was enough to challenge the primitive parsing techniques in use
+      before 1961.
+      Surprisingly, this grammar will bedevil mainstream parsing theory for the
+      next half a century.
+    </p><p>
+      Recursive descent, it turns out,
+      cannot parse the
+      <a href="#g-basic-op">Basic Operator Grammar (BASIC-OP)</a>
+      because it is left recursive.
+      And that is not the end of it.
+      Making addition and multiplication right-associate
+      is unnatural, and would cauuse users to revolt.
+      But suppose we do it anyway:
+    </p><ul id="g-rr">
       <li>S ::= E</li>
       <li>E ::= T + E</li>
       <li>E ::= T</li>
@@ -944,27 +931,70 @@
       <li>T ::= F</li>
       <li>F ::= number</li>
     </ul><p>
-      Recursive descent cannot parse this grammar either --
-      the lookahead required is just too much for it.
-    </p><p>This means that by itself, recursive descent is never
+      Recursive descent, without help,
+      cannot parse this
+      <a href="#g-right-op">Right-recursive Operator Grammar (RIGHT-OP)</a>.
+      Parsing theory has not developed well enough to
+      state why in a precise,
+      but suffice it to say for now
+      that
+      the
+      <a href="#g-rr">RIGHT-OP</a>
+      requires too much lookahead.
+    </p><p>But recursive descent does have a huge advantage,
+      one which, despite its severe limitations,
+      will save it from obsolescene time and again.
+      Hand-written recursive descent is essentially calling
+      subroutines.
+      And this it quite feasible to run it with
+      custom modifications.
+    </p><p>
+      Pure recursive descent cannot parse operator expressions,
+      but it can
+      <b>recognize</b>
+      them.
+      This means pure recursive descent may not be able to create
+      the parse subtree for an operator expression itself,
+      but it can recognize the expression and hand control
+      over to a specialized operator expression parser.
+      This seems to be what Lucas' 1961 algorithm did,
+      and it is certainly what many other implementations did afterwards.
+      Adding the operator expression subparser makes the implementation
+      only quasi-Chomskyan,
+      but this was a price the profession has
+      been willing to pay.
+    </p>
+    <p>Alternatively,
+      a recursive descent implementation can parse operator expressions
+      as lists,
+      and add associativity in post-processing.
+      This pushes some of the more important parsing
+      out of the syntactic phase into the semantics
+      but, again,
+      it seemed that the price had to be paid.
+    </p>
+    <p>Bottom line: the operator issue takes a new form.
+      Because of the operator issue,
+      recursive descent is not
       sufficient for practical grammars -- it must always be part of a
       hybrid.
-    </p>
-    <h1>1963: Non-Chomskyan approaches</h1>
-    <p>L. Schmidt, Howard Metcalf, and Val Schorre present papers on
+    </p><p>In this context,
+      Dijkstra's new 1961 algorithm is a welcome
+      alternative choice for a operator expression subparser.
+      But it has no more parsing power than the classic operator
+      precedence algorithm.
+    </p><h1>1963: Non-Chomskyan approaches</h1>
+    <p>In 1963,
+      L. Schmidt, Howard Metcalf, and Val Schorre present papers on
       compilers at a Denver conference<footnote>
         <bibref>Schorre 1964</bibref>, p. D1.3-1</footnote>.
-      This approach is
-      non-Chomskyan: BNF is used as a
-      procedural notation, and does not necessarily describe the
-      syntax parsed.
-      They call their approach syntax-driven.
-      In fact,
-      their approach is pseudo-declarative
-      and therefore,
-      according to the terminology used in this timeline,
-      not truly syntax-driven.
-    </p><h1>1964: The Meta II compiler</h1>
+      Their approach was
+      non-Chomskyan.
+      Like Glennie, they used
+      BNF as a
+      procedural notation.
+    </p>
+    <h1>1964: The Meta II compiler</h1>
     <p>Schorre publishes a paper on the Meta II
       <q>compiler
         writing language</q>, summarizing the papers of the 1963
@@ -974,13 +1004,11 @@
       from that of
       <bibref>Irons 1961</bibref>
       -- as noted, it is
-      pre-Chomskyan.
-      [ TODO: relate non-Chomskyan to declarative. ]
+      non-Chomskyan.
       Meta II is a template, rather than something that
-      readers can use, but in principle it can be turned into a fully
+      his readers can use, but in principle it can be turned into a fully
       automated compiler-compiler<footnote>
-        Schorre 1964, p. D1.3-1
-        http://ibm-1401.info/Meta-II-schorre.pdf
+        <bibref>Schorre 1964</bibref>, p. D1.3-1
       </footnote>.
     </p>
     <h1>1965: Knuth discovers LR</h1>
@@ -1090,7 +1118,7 @@
       Arithmetic operator grammars are not LL(1) -- no even close.
       In fact neither
       the
-      <a href="#g-basic">Basic Operator Grammar</a>
+      <a href="#g-basic-op">Basic Operator Grammar</a>
       or its
       <a href="#right-recursive">right recursive variant</a>
       is LL(k) for any k.
@@ -1867,6 +1895,7 @@
       Lucas, P. Die Strukturanalyse von Formelnübersetzern / analysis of
       the structure of formula translators. Elektronische Rechenanlagen,
       3(11.4):159–167, 1961, (in German).
+      (September 1961)
     </p>
     <p>
       <bibid>Mascrenhas et al 2014</bibid>
@@ -1908,6 +1937,11 @@
       A translation of
       <bibref>Samuelson and Bauer 1959</bibref>.
     </p>
+    <p>
+      <bibid>Schorre 1964<bibid>:
+          "Meta II: A Syntax-oriented compiler writing language",
+          http://ibm-1401.info/Meta-II-schorre.pdf
+        </bibid></bibid></p>
     <p>
       <bibid>Shannon 1948</bibid>:
       Claude E Shannon, Claude E.
