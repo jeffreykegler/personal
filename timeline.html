@@ -503,7 +503,8 @@
     <p>With the ALGOL 60 report, a quest begins which continues to this day:
       to find a parser that solves the Parsing Problem.
       Ideally such a parser is
-    </p><ul id="loc-quest">
+    </p>
+    <ul id="loc-quest">
       <li>efficient,</li>
       <li>practical,</li>
       <li>declarative, and</li>
@@ -1248,7 +1249,7 @@
       And LALR is declarative.
       True, LALR is very far from general,
       but
-      <a href="g-basic-op">BASIC-OP</a>
+      <a href="g-basic-op">BASIC-OP</a>,
       <a href="g-right-op">RIGHT-OP</a>
       and
       <a href="g-right-op">LIST-OP</a>
@@ -1294,7 +1295,8 @@
     <p>But Earley parsing is almost forgotten. Twenty years will
       pass before anyone writes a practical implementation of Leo's
       algorithm.</p>
-    <h1>The Operator Issue as of 1991</h1>
+    <p>[ Note that Leo correct's Knuth misconception. ]
+    </p><h1>The Operator Issue as of 1991</h1>
     <p>Earley's is forgotten. So everyone in LALR-land is content,
       right? Wrong. In fact, far from it.
     </p>
@@ -1334,7 +1336,7 @@
       with one inherited attribute (the input string)
       and two synthesized attributes (the value of the node
       and the remaining part of the input string).
-    Combinators can be
+      Combinators can be
       <q>combined</q>
       to compose other parsers.
       This allows you to have an algebra of parsers.
@@ -1374,7 +1376,9 @@
     </p>
     <p>In its monadic form,
       the already attractive technique of combinator parsing is extremely elegant
-      and certainly seems as if it <em>should</em> solve all parsing problems.
+      and certainly seems as if it
+      <em>should</em>
+      solve all parsing problems.
       But, once again, it is still recursive descent,
       completely unchanged.
       Wadler handles left recursion by rewriting into
@@ -1392,7 +1396,8 @@
     </p>
     <h1>1996: Hutton and Meijer on combinator parsing</h1><p>
       [ TODO: Finish -- add stuff on operator issue. ]
-      <a href="#bib-Wadler_1995">Wadler 1995</a> used parsing as an example to motivate
+      <a href="#bib-Wadler_1995">Wadler 1995</a>
+      used parsing as an example to motivate
       its presentation of monads.
       Graham Hutton and Erik Meijer<a id="footnote-79-ref" href="#footnote-79">[79]</a>
       take the opposite perspective -- they
@@ -1405,16 +1410,22 @@
     <p>
       [ TODO: Finish. ]<a id="footnote-81-ref" href="#footnote-81">[81]</a>
     </p><h1>The Operator Issue as of 1999</h1>
-    <p>
-      As we have seen,
-      the contributions of combinators parsing,
-      and monads to parsing theory itself are minimal.
-      But effect on
-      interfaces and the way parsing is seen is large
-      and likely to grow.
-      And following this literature has allowed us to
-      see what is consider the state of the parsing art
-      at the time.
+    <p>As we have seen,
+      the literature introducing monads and combinator
+      parsing added nothing to what was already known
+      about parsing algorithms.
+      We have focused on it for two reasons:
+      First, functional programming has had a profound influence
+      on the way the profession sees parsing,
+      and that influence will probably grow.
+      Second, it shows relative popularity among
+      one group of highly skilled programmers
+      of LALR and recursive descent.
+      LALR is not mentioned once in any of the
+      articles surveyed.
+      The Operator Issue,
+      once thought solved,
+      is back to where it was in 1961.
     </p>
     <h1>2000: The Perl 6 effort begins</h1>
     <p>Larry Wall decides on a radical reimplementation of Perl --
@@ -1428,7 +1439,9 @@
       paper is a solution to the zero-length rule bug. And this time the
       solution requires no additional bookkeeping.</p>
     <h1>2004: PEG</h1>
-    <p>Ford<a id="footnote-83-ref" href="#footnote-83">[83]</a>fills this gap by
+    <p>
+      [ TODO: Rewrite. ]
+    </p><p>Ford<a id="footnote-83-ref" href="#footnote-83">[83]</a>fills this gap by
       repackaging the nearly-forgotten GTDPL. Ford adds packratting,
       so that PEG is always linear, and provides PEG with an attractive
       new syntax.</p>
@@ -1441,38 +1454,32 @@
       of GTDPL.</p>
     <comment>TODO: Remark on the use of BNF in standards here?</comment>
     <h1>2006: GNU C reverts to recursive descent</h1>
-    <p>
-      <q>The old Bison-based C and Objective-C parser has been replaced by a new, faster hand-written recursive-descent
-        parser.<q><a id="footnote-84-ref" href="#footnote-84">[84]</a>
-          Bison, an LALR parser, is the direct descendant of Steve Johnson's
-          <tt>yacc</tt>.
-        </q></q></p>
+    <blockquote>The old Bison-based C and Objective-C parser has been replaced by a new, faster hand-written recursive-descent
+      parser.<a id="footnote-84-ref" href="#footnote-84">[84]</a>
+    </blockquote>
     <p>
       With this single line in middle of a change list hundreds of lines long.
       GNU announces a major event in parsing history.
+      (Bison, an LALR parser, is the direct descendant of Steve Johnson's
+      <tt>yacc</tt>.)
       For three decades, the industry's flagship C compilers have
       used LALR as their parser -- proof of the claim that LALR and serious
       parsing are equivalent.
       Now, GNU replaces LALR with the technology
-      that it replaced a quarter century earlier: recursive descent.</p>
+      that LALR replaced a quarter century earlier: recursive descent.</p>
     <h1>2010: Leo 1991 is implemented</h1><p>
     </p><p>Jeffrey Kegler (the author of this timeline) releases the first
       practical implementation of Joop Leo's algorithm<a id="footnote-85-ref" href="#footnote-85">[85]</a>.
       The new parser, named Marpa, is general, declarative
       and linear for all the grammars discussed in
       <a href="#bib-Knuth_1965">Knuth 1965</a>, that is, it is
-      linear for the LR(k) grammars for all finite k<a id="footnote-86-ref" href="#footnote-86">[86]</a>
+      linear for the LR(k) grammars for all finite k<a id="footnote-86-ref" href="#footnote-86">[86]</a>.
       This means it is also linear for most of the grammar classes we have discussed in this
       timeline.
     </p><ul>
       <li>LR(1) grammars.</li>
       <li>LL(k) grammars for all finite k, including LL(1) grammars.</li>
       <li>Operator expression grammars<a id="footnote-87-ref" href="#footnote-87">[87]</a>.
-        <a href="#bib-Leo_1991">Leo 1991</a>
-        does not address the zero-length
-        rule problem.
-        Kegler solves it by adopting the solution of
-        <a href="#bib-Aycock_and_Horspool_2002">Aycock and Horspool 2002</a>.
       </li>
     </ul>
     <p>This is a vast class of grammars,
@@ -1490,6 +1497,11 @@
       </li>
     </ul>
     <p>
+      <a href="#bib-Leo_1991">Leo 1991</a>
+      does not address the zero-length
+      rule problem.
+      Kegler solves it by adopting the solution of
+      <a href="#bib-Aycock_and_Horspool_2002">Aycock and Horspool 2002</a>.
       Finally in an effort to combine the best of declarative and hand-written parsing,
       Kegler reorders Earley's parse engine so that it
       allows procedural logic.
@@ -1513,7 +1525,7 @@
     </p>
     <p>
       <comment>TODO: Finish</comment>
-      In 2012, Kegler release a version of Marpa which allows
+      In 2012, Kegler releases a version of Marpa which allows
       the user to mix Chomskyan and precedence parsing at will<a id="footnote-91-ref" href="#footnote-91">[91]</a>.
       Marpa's
       <q>precedenced statements</q>
@@ -1543,7 +1555,59 @@
               |  Expression '-' Expression
             </tt></pre>
     <h1>Operator Expressions as of 2012</h1>
-    <comment>TODO: Do this.</comment>
+    <p>[ TODO: Do this. ]</p>
+    <h1>The Parsing Problem as of 2012</h1>
+    <p>
+      Again recall the four criteria from the original quest
+      for a solution to the Parsing Problem:
+      that a parser be efficient, practical, declarative and general.
+      Does Marpa fulfill them?
+    </p>
+    <p>At first glance, no.
+      While Marpa is general, it is not linear or quasi-linear for the
+      general case,
+      and therefore cannot be considered efficient enough.
+      But to be general, a parser has to parse
+      <b>every</b>
+      context-free grammar, including
+      some wildly ambiguous ones, for which simply printing the
+      list of possible parses takes exponential time.
+      With the experience of the decades,
+      linearity for a fully general BNF parser seems to
+      be a superfluous requirement for a practical parser.
+    </p>
+    <p>
+      The deterministic context-free grammars include every
+      other grammar class we have discussed --
+      LL(k) for all k,
+      LR(k) for all k,
+      LALR,
+      operator grammars,
+      etc.
+      If we change our criteria as follows:
+    </p><ul id="loc-quest">
+      <li>linear for all deterministic context-free grammars
+        and for all grammars parseable in linear time by any
+        other parser in practical use;
+      </li><li>practical, and</li>
+      <li>declarative.
+      </li></ul><p>
+      then Marpa qualifies.
+    </p>
+    <p>My teachers came from the generation which created the ALGOL vision
+      and started the quest for a solution to the Parsing Problem.
+      Alan Perlis was one of them.
+      Would he have accepted my claim that I have found the solution to the
+      problem he posed?
+      I do not know,
+      but I am certain,
+      as anyone else who knew him can attest,
+      that he would given me a plain-spoken answer.
+      In that spirit, I submit this timeline to the candid reader,
+      and in any case I hope
+      that my reader has found this journey
+      through the history of parsing informative.
+    </p>
     <h1>Sources</h1>
     <p>This bibliography is incomplete --
       full details of some documents
@@ -1562,21 +1626,6 @@
         Volume II: Compiling</cite>, Prentice Hall, Englewood Cliffs, N.J., 1973.
     </p>
     <p>
-      <b id="bib-ALGOL_60">ALGOL 60</b>:
-      J.W. Backus, F.L. Bauer, J.Green, C. Katz, J. McCarthy
-      P. Naur, A.J. Perlis, H. Rutishauser, K. Samuelson, B. Vauquois
-      J.H. Wegstein, A. van Wijngaarden and M. Woodger,
-      edited by Peter Naur,
-      <cite>Revised Report on the Algorithmic Language Algol 60</cite>.
-      [http://homepages.cs.ncl.ac.uk/cliff.jones/publications/OCRd/BBG63.pdf]
-    </p>
-    <p>
-      <b id="bib-Earley_1968">Earley 1968</b>:
-      Jay Earley,
-      <cite>An Efficient Context-free Parsing Algorithm</cite>,
-      PhD thesis, Carnegie-Mellon Univ., Pittsburg, Pa., 1968.
-    </p>
-    <p>
       <b id="bib-Aho_and_Ullman_1977">Aho and Ullman 1977</b>:
       Alfred V. Aho and Jeffrey D. Ullman,
       <cite>Principles of compiler design</cite>,
@@ -1588,12 +1637,21 @@
       <q>green dragon book" to distinguish
         it from its second edition,
         which had a red dragon on the cover.
-      </q></p>
+      </q>
+    </p>
     <p>
-      <b id="bib-Aycock_and_Horspool_2002">Aycock and Horspool 2002</b>:
+      <b id="bib-ALGOL_60">ALGOL 60</b>:
+      J.W. Backus, F.L. Bauer, J.Green, C. Katz, J. McCarthy
+      P. Naur, A.J. Perlis, H. Rutishauser, K. Samuelson, B. Vauquois
+      J.H. Wegstein, A. van Wijngaarden and M. Woodger,
+      <cite>Revised Report on the Algorithmic Language Algol 60</cite>.
+      [http://homepages.cs.ncl.ac.uk/cliff.jones/publications/OCRd/BBG63.pdf]
+    </p>
+    <p>
+      <b id="bib-Aycock_and_Horspool_2002">Aycock and Horspool 2002</b>
       John Aycock and R. Nigel Horspool, "Practical Earley parsing",
-      <cite>Computer J.</cite>
-      45(6):620–630. (2002)
+      <cite>Computer J.</cite>, 45(6):620-630.
+      (2002).
     </p>
     <p>
       <b id="bib-Backus_1959">Backus 1959</b>:
@@ -1615,11 +1673,11 @@
       (1980)
     </p>
     <p>
-      <bibid>Chomsky 1956<bibid>
+      <b id="bib-Chomsky_1956">Chomsky 1956</b>:
           Noam Chomsky,
-          "Three models for the description of language",
+          <q>Three models for the description of language</q>,
           <cite>IEEE Trans. Inform.  Theory</cite>,
-          2(3):113–124.
+          2(3):113-124.
           (1956)
         </bibid></bibid></p>
     <p>
@@ -1630,17 +1688,23 @@
       (1957)
     </p>
     <p>
-      <a href="#bib-Darwin_1984">Darwin 1984</a>:
+      <b id="bib-Darwin_1984">Darwin 1984</b>:
       Ian F. Darwin,
-      "A History of UNIX before Berkeley: UNIX Evolution: 1975-1984",
+      <q>A History of UNIX before Berkeley: UNIX Evolution: 1975-1984</q>
       [http://doc.cat-v.org/unix/unix-before-berkeley/]
       (1984)
     </p>
     <p>
-      <a href="#bib-DeRemer_1969">DeRemer 1969</a>:
+      <b id="bib-DeRemer_1969">DeRemer 1969</b>:
       Franklin Lewis DeRemer,
       "Practical Translators for LR(k) Languages"
       PhD thesis, MIT, Cambridge, Mass., Sept. 1969.
+    </p>
+    <p>
+      <b id="bib-Earley_1968">Earley 1968</b>:
+      Jay Earley,
+      <cite>An Efficient Context-free Parsing Algorithm</cite>,
+      PhD thesis, Carnegie-Mellon Univ., Pittsburg, Pa., 1968.
     </p>
     <p>
       <b id="bib-Ford_2002">Ford 2002</b>:
@@ -1655,14 +1719,14 @@
       in
       <cite>Proceedings
         of the 31st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages,
-        POPL 2004 (Venice, Italy, 14–16 January 2004)</cite>, N. D. Jones and X. Leroy, Eds., ACM, pp. 111–122.
+        POPL 2004 (Venice, Italy, 14-16 January 2004)</cite>, N. D. Jones and X. Leroy, Eds., ACM, pp. 111-122.
       (January 2004.)
     </p>
     <p>
-	<b id="bib-Gentle_1999">Gentle 1999</b>:
-        Hudak, Peterson and Fasel,
-        "A Gentle Introduction to Haskell 98".
-        (1999)
+      <b id="bib-Gentle_1999">Gentle 1999</b>:
+      Hudak, Peterson and Fasel,
+      "A Gentle Introduction to Haskell 98".
+      (1999)
     </p>
     <p>
       <b id="bib-Glennie_1960">Glennie 1960</b>:
@@ -1698,7 +1762,7 @@
     </p>
     <p><b id="bib-Irons_1961">Irons 1961</b>:
       Irons, E. T. A syntax-directed compiler for ALGOL 60. Commun. ACM,
-      4(1):51–55, Jan. 1961.
+      4(1):51-55, Jan. 1961.
     </p>
     <p>
       <b id="bib-Kleene_1951">Kleene 1951</b>
@@ -1716,13 +1780,13 @@
     <p>
       <b id="bib-Knuth_1968">Knuth 1968</b>:
       Donald E. Knuth, "Semantics of context-free languages"
-      Math. Syst. Theory, 2(2):127– 145, (1968).
+      Math. Syst. Theory, 2(2):127- 145, (1968).
     </p>
     <p>
       <b id="bib-Knuth_1971">Knuth 1971</b>:
       Donald E.  Knuth, "Top-down syntax analysis",
       <cite>Acta Inform.</cite>,
-      1:79–110.
+      1:79-110.
       (1971)
     </p>
     <p>
@@ -1738,19 +1802,19 @@
       Joop M. I. M. Leo,
       "A general context-free parsing algorithm running in linear time on
       every LR(k) grammar without using lookahead",
-      Theoret. Comput. Sci., 82:165–176, 1991.
+      Theoret. Comput. Sci., 82:165-176, 1991.
     </p>
     <p>
       <b id="bib-Lewis_and_Stearns_1968">Lewis and Stearns 1968</b>:
       P. M. Lewis, II and R. E .Stearns, "Syntax-directed transduction",
       <cite>Journal of the ACM</cite>,
-      15(3):465– 488 (1968).
+      15(3):465- 488 (1968).
     </p>
     <p>
       <b id="bib-Lucas_1961">Lucas 1961</b>:
-      Lucas, P. Die Strukturanalyse von Formelnübersetzern / analysis of
+      Lucas, P. Die Strukturanalyse von Formeln&uuml;bersetzern / analysis of
       the structure of formula translators. Elektronische Rechenanlagen,
-      3(11.4):159–167, 1961, (in German).
+      3(11.4):159-167, 1961, (in German).
       (September 1961)
     </p>
     <p>
@@ -1776,7 +1840,7 @@
       Vaughan R. Pratt, "Top down operator precedence", in
       <cite>First
         ACM Symposium on Principles of Programming Languages</cite>,
-      pages 41–51, ACM. (Oct. 1973.)
+      pages 41-51, ACM. (Oct. 1973.)
     </p>
     <p>
       <b id="bib-Samuelson_and_Bauer_1959">Samuelson and Bauer 1959</b>:
@@ -1789,7 +1853,7 @@
       <b id="bib-Samuelson_and_Bauer_1960">Samuelson and Bauer 1960</b>:
       K. Samelson and F. L. Bauer, "Sequential formula translation",
       <cite>Communications of the ACM</cite>,
-      3(2):76–83, Feb. 1960.
+      3(2):76-83, Feb. 1960.
       A translation of
       <a href="#bib-Samuelson_and_Bauer_1959">Samuelson and Bauer 1959</a>.
     </p>
@@ -1803,9 +1867,9 @@
       Claude E Shannon, Claude E.
       "A Mathematical Theory of Communication",
       <cite>Bell System Technical Journal</cite>,
-      27 (3): 379–423
+      27 (3): 379-423
       and
-      27 (4): 623–666. (July and October 1948)
+      27 (4): 623-666. (July and October 1948)
     </p>
     <p>
       <b id="bib-Snyder_1975">Snyder 1975</b>:
@@ -1820,7 +1884,7 @@
       (January 1979.)
     </p>
     <p>
-    <b id="bib-Wadler_1985">Wadler 1985</b>:
+      <b id="bib-Wadler_1985">Wadler 1985</b>:
       Philip Wadler, "How to Replace Failure by a List of Successes: A method
       for exception handling, backtracking, and pattern matching in lazy
       functional languages". in J-P Jouannaud (ed.),
@@ -1828,15 +1892,17 @@
         Languages and Computer Architecture</cite>.
       <cite>Lecture Notes in Computer Science</cite>, 1985
       vol. 201, Springer-Verlag GmbH, pp. 113-128. DOI: 10.1007/3-540-15975-4_33.
-      </p>
-      <p>
-    <b id="bib-Wadler_1995">Wadler 1995</b>:
-        Philip Wadler,
-	"Monads for functional programming" in
-        Jeuring J., Meijer E. (eds) <cite>Advanced Functional Programming. AFP
-        1995.</cite>, <cite>Lecture Notes in Computer Science</cite>,
-	vol 925. Springer, Berlin, Heidelberg.
-	(1995)
+    </p>
+    <p>
+      <b id="bib-Wadler_1995">Wadler 1995</b>:
+      Philip Wadler,
+      "Monads for functional programming" in
+      Jeuring J., Meijer E. (eds)
+      <cite>Advanced Functional Programming. AFP
+        1995.</cite>,
+      <cite>Lecture Notes in Computer Science</cite>,
+      vol 925. Springer, Berlin, Heidelberg.
+      (1995)
     </p>
   <h1>Footnotes</h1>
 <p id="footnote-1">1.
@@ -1851,7 +1917,7 @@
         DOI: 10.2307/2371809
  <a href="#footnote-2-ref">&#8617;</a></p>
 <p id="footnote-3">3.
-        Carpenter, B. E.; Doran, R. W. (January 1977). "The other Turing machine". The Computer Journal. 20 (3): 269–279.
+        Carpenter, B. E.; Doran, R. W. (January 1977). "The other Turing machine". The Computer Journal. 20 (3): 269-279.
  <a href="#footnote-3-ref">&#8617;</a></p>
 <p id="footnote-4">4.
         <a href="#bib-Shannon_1948">Shannon 1948</a>
@@ -2232,7 +2298,7 @@ pp. 4-6.
         The other paper, which centers on combinators as a programming
         paradigm, is
         Frost, Richard A. Constructing programs as executable attribute
-        grammars. Computer J., 35(4):376–389, 1992.
+        grammars. Computer J., 35(4):376-389, 1992.
         Frost only mentions parsing in one paragraph, and
         that focuses on implementation issues.
         Some of his grammars include operator expressions,
@@ -2254,7 +2320,7 @@ pp. 4-6.
         p. 3.
  <a href="#footnote-80-ref">&#8617;</a></p>
 <p id="footnote-81">81.
-      <a href="#bib-Gentle_1999">Gentle 1999</a>
+        <a href="#bib-Gentle_1999">Gentle 1999</a>
  <a href="#footnote-81-ref">&#8617;</a></p>
 <p id="footnote-82">82.
         <a href="#bib-Aycock_and_Horspool_2002">Aycock and Horspool 2002</a>.
@@ -2265,8 +2331,8 @@ pp. 4-6.
         <a href="#bib-Ford_2002">Ford 2002</a>.
  <a href="#footnote-83-ref">&#8617;</a></p>
 <p id="footnote-84">84.
-            "GCC 4.1 Release Series: Changes, New Features, and Fixes"
-            [http://gcc.gnu.org/gcc-4.1/changes.html]
+        "GCC 4.1 Release Series: Changes, New Features, and Fixes"
+        [http://gcc.gnu.org/gcc-4.1/changes.html]
  <a href="#footnote-84-ref">&#8617;</a></p>
 <p id="footnote-85">85.
         [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html].
