@@ -872,13 +872,14 @@
       and without any effect on its running speed.
     </p>
     <h1>The Operator Issue as of 1961</h1>
-    <p>The result of 1961 transformed the Operator Issue.
-      Before ALGOL, parsing operator expressions essentially
+    <p>The results of 1961 transformed the Operator Issue.
+      Before ALGOL,
+      parsing operator expression parsing essentially
       <em>was</em>
       parsing.
       After ALGOL, almost all languages will be block-structured
       and ad hoc string manipulatons are no longer adequate --
-      the language as a whole requires a serious parsing techniques.
+      the language as a whole requires a serious parsing technique.
       So parsing operator expressions becomes a side show,
       or so it seems.
     </p>
@@ -887,19 +888,20 @@
       algorithms that parse operator expressions for the whole
       language?
       <bibref>Samuelson and Bauer 1959</bibref>
-      suggests
+      had suggested
       exactly that.
       But, alas, operator expression parsing is not adequate for
-      languges as a whole<footnote>
+      languages as a whole<footnote>
         But see the entry for 1973 on Pratt parsing
         (<bibref>Pratt 1973></bibref>)
         where the idea of parsing
         entire languages as operator grammars is revisited
-        <footnote>.
-        </footnote></footnote></p>
-    <p>Also by 1961, we have BNF, which gives us a useful notation
+      </footnote>.
+    </p>
+    <p>Also by 1961, we have BNF.
+      This gives us a useful notation
       for describing grammars.
-      It allows us to introduce our Basic Operator Grammar:
+      It allows us to introduce our Basic Operator Grammar (BASIC-OP):
     </p><ul id="g-basic-op">
       <li>S ::= E</li>
       <li>E ::= E + T</li>
@@ -908,21 +910,26 @@
       <li>T ::= F</li>
       <li>F ::= number</li>
     </ul>
-    <p>The simple grammar has two operators, three levels of precedence
+    <p><a href="#g-basic-op">BASIC-OP</a>
+      has two operators, three levels of precedence
       and left associativity.
       This was enough to challenge the primitive parsing techniques in use
       before 1961.
-      Surprisingly, this grammar will bedevil mainstream parsing theory for the
+      Surprisingly, this simple grammar will bedevil mainstream parsing theory for the
       next half a century.
     </p><p>
       Recursive descent, it turns out,
-      cannot parse the
-      <a href="#g-basic-op">Basic Operator Grammar (BASIC-OP)</a>
+      cannot parse
+      <a href="#g-basic-op">BASIC-OP</a>
       because it is left recursive.
       And that is not the end of it.
       Making addition and multiplication right-associate
-      is unnatural, and would cauuse users to revolt.
-      But suppose we do it anyway:
+      is unnatural and,
+      as the authors of the IT compiler found out,
+      causes users to revolt.
+      But suppose we try to use this
+      Right-recursive Operator Grammar (RIGHT-OP)
+      anyway:
     </p><ul id="g-rr">
       <li>S ::= E</li>
       <li>E ::= T + E</li>
@@ -932,26 +939,30 @@
       <li>F ::= number</li>
     </ul><p>
       Recursive descent, without help,
-      cannot parse this
-      <a href="#g-right-op">Right-recursive Operator Grammar (RIGHT-OP)</a>.
+      cannot parse
+      <a href="#g-right-op">RIGHT-OP</a>.
       Parsing theory has not developed well enough to
-      state why in a precise,
-      but suffice it to say for now
+      state why in a precise terms.
+      Suffice it to say for now
       that
-      the
       <a href="#g-rr">RIGHT-OP</a>
       requires too much lookahead.
-    </p><p>But recursive descent does have a huge advantage,
+    </p>
+    <p>But recursive descent does have a huge advantage,
       one which, despite its severe limitations,
-      will save it from obsolescene time and again.
+      will save it from obsolescence time and again.
       Hand-written recursive descent is essentially calling
       subroutines.
-      And this it quite feasible to run it with
-      custom modifications.
-    </p><p>
-      Pure recursive descent cannot parse operator expressions,
+      Adding custom modification to recursive descent
+      is very straight-forward.
+    </p>
+    <p>
+      In addition,
+      while pure recursive descent cannot
+      <em>parse</em>
+      operator expressions,
       but it can
-      <b>recognize</b>
+      <em>recognize</em>
       them.
       This means pure recursive descent may not be able to create
       the parse subtree for an operator expression itself,
@@ -971,18 +982,24 @@
       This pushes some of the more important parsing
       out of the syntactic phase into the semantics
       but, again,
-      it seemed that the price had to be paid.
+      it seemed that,
+      if the ship was to stay afloat,
+      Chomskyan purity had to be thrown overboard.
     </p>
-    <p>Bottom line: the operator issue takes a new form.
+    <p>Bottom line: as of 1961 the operator issue takes a new form.
       Because of the operator issue,
       recursive descent is not
       sufficient for practical grammars -- it must always be part of a
       hybrid.
-    </p><p>In this context,
+    </p>
+    <p>In this context,
       Dijkstra's new 1961 algorithm is a welcome
-      alternative choice for a operator expression subparser.
-      But it has no more parsing power than the classic operator
-      precedence algorithm.
+      alternative choice: as a operator expression subparser,
+      it can parse operator expressions faster and in less space.
+      But Dijkstra's algorithm has no more parsing power
+      than the classic operator
+      precedence algorithm --
+      it did nothing to change the basic tradeoffs.
     </p><h1>1963: Non-Chomskyan approaches</h1>
     <p>In 1963,
       L. Schmidt, Howard Metcalf, and Val Schorre present papers on
@@ -1939,8 +1956,8 @@
     </p>
     <p>
       <bibid>Schorre 1964</bibid>:
-          "Meta II: A Syntax-oriented compiler writing language",
-          http://ibm-1401.info/Meta-II-schorre.pdf
+      "Meta II: A Syntax-oriented compiler writing language",
+      http://ibm-1401.info/Meta-II-schorre.pdf
     </p>
     <p>
       <bibid>Shannon 1948</bibid>:
