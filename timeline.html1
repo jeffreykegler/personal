@@ -747,7 +747,7 @@
         parser is what
         is now called
         <term>left-corner</term>
-        is Knuth ("Top-down syntax analysis", p. 109).
+        is Knuth (<bibref>Knuth 1971</bibref>, p. 109).
       </footnote>
     </p>
     <p>You would expect parsing might start with hard-written
@@ -1130,7 +1130,7 @@
       and is designed in the hope that the backtracking will not
       get out of hand for your particular grammar.
     </p>
-    <h1>Parsing LR(k): a crucial misconception</h1>
+    <h1>Parsing LR(k): an influential misconception</h1>
     <p>In his 1965, Knuth makes
       a reasonable assumption,
       but one which turns out to be wrong:
@@ -1175,8 +1175,11 @@
       <q>yes</q>.
     </p><h1>1968: Lewis and Stearns discover LL</h1>
     <p>When Knuth discovered the LR grammars, he announced them to
-      the world with a full-blown mathematical description. The top-down
-      grammars, which arose historically, lack such a description. In 1968,
+      the world with a full-blown mathematical description.
+      The top-down
+      grammars, which arose historically,
+      have lacked such a description.
+      In 1968,
       Lewis and Stearns fill that gap by defining the LL(k) grammars<footnote>
         <bibref>Lewis and Stearns 1968</bibref>.
         They are credited in Rosencrantz and Stearns (1970)
@@ -1199,12 +1202,12 @@
         "corresponds with the intuitive notion of translation
         from left to right looking k characters ahead".
       </footnote>.
-      LL means
+      But LL means
       <q>scan from the left, using left reductions</q>
-      and LR acquires its current meaning of
+      and, in response, the meaning of LR shifts to become
       <q>scan from the left, using
         right reductions</q><footnote>
-        Knuth, "Top-down syntax analysis", p. 102.
+        <bibref>Knuth 1971</bibref>, p. 102.
         LL and LR have mirror images: RL means
         <q>scan from the right,
           using left reductions</q>
@@ -1992,6 +1995,13 @@
       <bibid>Knuth 1968</bibid>:
       Donald E. Knuth, "Semantics of context-free languages"
       Math. Syst. Theory, 2(2):127– 145, (1968).
+    </p>
+    <p>
+      <bibid>Knuth 1971</bibid>:
+      Donald E.  Knuth, "Top-down syntax analysis",
+      <cite>Acta Inform.</cite>,
+      1:79–110.
+      (1971)
     </p>
     <p>
       <bibid>Knuth and Pardo 1976</bibid>:

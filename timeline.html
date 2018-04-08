@@ -909,7 +909,7 @@
       and is designed in the hope that the backtracking will not
       get out of hand for your particular grammar.
     </p>
-    <h1>Parsing LR(k): a crucial misconception</h1>
+    <h1>Parsing LR(k): an influential misconception</h1>
     <p>In his 1965, Knuth makes
       a reasonable assumption,
       but one which turns out to be wrong:
@@ -954,8 +954,11 @@
       <q>yes</q>.
     </p><h1>1968: Lewis and Stearns discover LL</h1>
     <p>When Knuth discovered the LR grammars, he announced them to
-      the world with a full-blown mathematical description. The top-down
-      grammars, which arose historically, lack such a description. In 1968,
+      the world with a full-blown mathematical description.
+      The top-down
+      grammars, which arose historically,
+      have lacked such a description.
+      In 1968,
       Lewis and Stearns fill that gap by defining the LL(k) grammars<a id="footnote-51-ref" href="#footnote-51">[51]</a>.
     </p>
     <h1>Terms:
@@ -968,9 +971,9 @@
       <term>LR</term>
       shifts slightly. In 1965 Knuth meant LR to mean
       <q>translatable from left to right</q><a id="footnote-52-ref" href="#footnote-52">[52]</a>.
-      LL means
+      But LL means
       <q>scan from the left, using left reductions</q>
-      and LR acquires its current meaning of
+      and, in response, the meaning of LR shifts to become
       <q>scan from the left, using
         right reductions</q><a id="footnote-53-ref" href="#footnote-53">[53]</a>.
     </p><p>If there is a number after the parentheses in this notation for
@@ -1566,6 +1569,13 @@
       Math. Syst. Theory, 2(2):127– 145, (1968).
     </p>
     <p>
+      <b id="bib-Knuth_1971">Knuth 1971</b>:
+      Donald E.  Knuth, "Top-down syntax analysis",
+      <cite>Acta Inform.</cite>,
+      1:79–110.
+      (1971)
+    </p>
+    <p>
       <b id="bib-Knuth_and_Pardo_1976">Knuth and Pardo 1976</b>:
       D. E. Knuth and L. Trabb Pardo, "The Early Development of
       Programming Languages,"
@@ -1856,7 +1866,7 @@ pp. 4-6.
         parser is what
         is now called
         <term>left-corner</term>
-        is Knuth ("Top-down syntax analysis", p. 109).
+        is Knuth (<a href="#bib-Knuth_1971">Knuth 1971</a>, p. 109).
  <a href="#footnote-37-ref">&#8617;</a></p>
 <p id="footnote-38">38.
         Although it seems likely that parsing operator expressions would require
@@ -1956,7 +1966,7 @@ pp. 4-6.
         from left to right looking k characters ahead".
  <a href="#footnote-52-ref">&#8617;</a></p>
 <p id="footnote-53">53.
-        Knuth, "Top-down syntax analysis", p. 102.
+        <a href="#bib-Knuth_1971">Knuth 1971</a>, p. 102.
         LL and LR have mirror images: RL means
         <q>scan from the right,
           using left reductions</q>
