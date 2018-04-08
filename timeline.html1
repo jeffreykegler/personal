@@ -1000,28 +1000,19 @@
       than the classic operator
       precedence algorithm --
       it did nothing to change the basic tradeoffs.
-    </p><h1>1963: Non-Chomskyan approaches</h1>
-    <p>In 1963,
-      L. Schmidt, Howard Metcalf, and Val Schorre present papers on
-      compilers at a Denver conference<footnote>
-        <bibref>Schorre 1964</bibref>, p. D1.3-1</footnote>.
-      Their approach was
-      non-Chomskyan.
-      Like Glennie, they used
-      BNF as a
-      procedural notation.
     </p>
     <h1>1964: The Meta II compiler</h1>
     <p>Schorre publishes a paper on the Meta II
       <q>compiler
         writing language</q>, summarizing the papers of the 1963
       conference. Schorre cites both Backus and Chomsky as sources for
-      Meta II's notation. Schorre notes that his parser is
+      Meta II's notation.
+      Schorre notes that his parser is
       <q>entirely different</q>
       from that of
       <bibref>Irons 1961</bibref>
-      -- as noted, it is
-      non-Chomskyan.
+      --
+      in fact, it is non-Chomskyan.
       Meta II is a template, rather than something that
       his readers can use, but in principle it can be turned into a fully
       automated compiler-compiler<footnote>
@@ -1031,40 +1022,139 @@
     <h1>1965: Knuth discovers LR</h1>
     <p>Don Knuth discovers LR parsing<footnote>
         <bibref>Knuth 1965.</bibref>
-        </footnote>.
-          The LR algorithm is deterministic,
-          Chomskyan and bottom-up. Knuth is primarily interested in the
-          mathematics, and the parsing algorithm he gives is not practical. He
-          leaves development of practical LR parsing algorithms as an
-          <q>open question</q>
-          for
-          <q>future research</q><footnote>
-            <bibref>Knuth 1965</bibref>, p. 637
-          </footnote>.
-        </p>
-    <h1>Term: "linear time"</h1>
-    <p>[ TODO.  And where to put this? After Knuth 1965?]
+      </footnote>.
+      The LR algorithm is deterministic,
+      Chomskyan and bottom-up. Knuth is primarily interested in the
+      mathematics, and the parsing algorithm he gives is not practical. He
+      leaves development of practical LR parsing algorithms as an
+      <q>open question</q>
+      for
+      <q>future research</q><footnote>
+        <bibref>Knuth 1965</bibref>, p. 637
+      </footnote>.
+    </p>
+    <h1>Term:
+      <term>linear</term></h1><p>
+      Among
+      <a href="#loc-quest">the goals</a>
+      for the ideal
+      ALGOL parser was that it be
+      <q>efficient</q>.
+      As of 1965 this notion has become more precise,
+      thanks to a notation that Knuth borrowed from
+      calculus.
+      This
+      <q>big O</q>
+      notation characterizes algorithm's
+      using functions, but it treats functions that
+      differ by a constant multiple as identical<footnote>
+        This timeline is not a mathematics tutorial,
+        and I have ignored important complications to
+        avoid digression.
+        A reader who does not know the details,
+        they can be
+        <a href="https://en.wikipedia.org/wiki/Big_O_notation">worth learning</a>.
+      </footnote>.
+      <q>Ignoring the constant</q>
+      means that conclusions
+      drawn from
+      <q>big O</q>
+      results outlast steady improvements
+      in technology,
+      but capture non-linear jumps.
+    </p>
+    <p>
+      These big O functions take as input some aspect of the algorithms
+      input.
+      In the case of parsing, by convention,
+      the big O function is usually of the length of the input<footnote>
+        Because constants are ignored, all reasonable measures of
+        the length are equivalent for
+        <q>big O</q>
+        notation.
+        Some papers on parsing also consider the size of the grammar,
+        but usually size of the grammar is regarded as a fixed constant,
+        and in this timeline
+        <q>big O</q>
+        results will be reported only
+        in terms of the input length.
+      </footnote>.
+    </p><p>Of the many possible
+      <q>big O</q>
+      functions,
+      only a few will be of interest in this timeline.
+      A function which grows steadily as the input grows
+      is called
+      <term>linear</term>.
+      In
+      <q>big O</q>
+      notation,
+      <term>linear</term>
+      is
+      written O(n).
+      A function which grows as the length of the input times
+      its logarithm is almost linear:
+      <term>quasi-linear</term>.
+      In
+      <q>big O</q>
+      notation,
+      <term>quasi-linear</term>
+      can be
+      written O(n*log n).
+      A function which grows as the square of the length
+      is called
+      <q>quadratic</q>
+      -- O(n**2).
+      A function which grows as the cube of the length
+      is called
+      <q>cubic</q>
+      -- O(n**3).
+      In extreme cases,
+      a function can grow as a constant taken to the power
+      of the length, or
+      <term>exponentially</term>
+      --
+      O(c**n).
+    </p><p>
+      By this time,
+      <q>efficient</q>
+      for a parser means
+      <q>linear</q>
+      or
+      <q>quasi-linear</q>.
+      Parsers which operate in quadratic or cubic time are
+      considered impractical.
+      But parsers aimed at practitioners will often push the
+      envelope --
+      any parser which uses backtracking in potentially expoential
+      and is designed in the hope that the backtracking will not
+      get out of hand for your particular grammar.
     </p>
     <h1>Misconception: deterministic parsing versus deterministic parsers</h1>
     <p>Knuth in his 1965 investigates the question:
-      "What is the best a deterministic parser can do?".
+    </p><blockquote id="q-det-parser-best">
+      What is the best a deterministic parser can do?
+    </blockquote><p>
       Many people mistook this as answering a similar-sounding but
       different question:
-      "What is the best way to parse a deterministic grammar?".
-    </p>
+    </p><blockquote id="q-det-grammar-best">
+      What is the best way to parse a deterministic grammar?
+    </blockquote>
     <p>More precisely, Knuth found the largest class of grammars that
-      a deterministic parser could parse in linear time,
-      and found an algorithm to do it.
-      (It's called LR(k).)
-      Many people took that to be the answer to the question:
-      "Which deterministic grammars can be parsed in linear time,
-      and what is the best algorithm for that."
-      It seems reasonable to guess the two questions are essentially
-      the same,
-      and have the same answer.
-      In fact, most people as the time, and since,
-      have taken that guess as a fact.
-      But as we will see,
+      a deterministic parser could parse in linear time --
+      he called that class LR(k).
+      Knuth also found an algorithm to do it,
+      although not a practical one.
+      Many people took Knuth to have answered
+      <a href="#q-det-grammar-best">the question about deterministic grammars</a>
+      when he in fact had answered
+      <a href="#q-det-parser-best">the question about deterministic parsers</a>.
+      It is reasonable to guess the two questions
+      have the same answer.
+      But for the next decades,
+      many go beyone the reasonable and treat the quess
+      as an established fact.
+      As we will see,
       in 1991 that guess turns out to be wrong.
     </p><h1>1968: Lewis and Stearns discover LL</h1>
     <p>When Knuth discovered the LR grammars, he announced them to
