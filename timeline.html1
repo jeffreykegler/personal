@@ -1714,11 +1714,11 @@
       This undercuts
       the simplicity and elegance of the combinator approach.
     </p>
-    <h1>1996: Hutton and Meijer on cominator parsing</h1><p>
-      <comment>TODO: Expand with stuff on operator issue</comment>
-      Wadler had used parsing as an example to motivate
-      his presentation of monads.
-      In 1996, Graham Hutton and Erik Meijer<footnote>
+    <h1>1996: Hutton and Meijer on combinator parsing</h1><p>
+      [ TODO: Finish -- add stuff on operator issue. ]
+      <bibref>Wadler 1995</bibref> used parsing as an example to motivate
+      its presentation of monads.
+      Graham Hutton and Erik Meijer<footnote>
         <bibref>Hutton and Meijer 1996</bibref>
       </footnote>
       take the opposite perspective -- they
@@ -1732,11 +1732,8 @@
     <h1>1999: Haskell
       <cite>Gentle Introduction</cite></h1>
     <p>
-      [ TODO: Finish. ]
-      <footnote>
-        Hudak, Peterson and Fasel,
-        "A Gentle Introduction to Haskell 98",
-        1999.
+      [ TODO: Finish. ]<footnote>
+      <bibref>Gentle 1999</bibref>
       </footnote>
     </p><h1>The Operator Issue as of 1999</h1>
     <p>
@@ -2089,6 +2086,12 @@
         of the 31st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages,
         POPL 2004 (Venice, Italy, 14–16 January 2004)</cite>, N. D. Jones and X. Leroy, Eds., ACM, pp. 111–122.
       (January 2004.)
+    </p>
+    <p>
+	<bibid>Gentle 1999</bibid>:
+        Hudak, Peterson and Fasel,
+        "A Gentle Introduction to Haskell 98".
+        (1999)
     </p>
     <p>
       <bibid>Glennie 1960</bibid>:
