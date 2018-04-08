@@ -1263,27 +1263,29 @@
       properly.
     </p>
     <p>As mentioned, a common compromise is to have recursive descent parse
-    arithmetic expressions as lists,
-    and add associativity in post-processing.
-    We are now able to look at this in more detail.
-    An extended BNF grammar to recognize
-    <a href="#g-basic-op">BASIC-OP</a>
-    as a list is as follows:
-    <pre id="g-elist-op"><tt>
+      arithmetic expressions as lists,
+      and add associativity in post-processing.
+      We are now able to look at this in more detail.
+      An extended BNF grammar to recognize
+      <a href="#g-basic-op">BASIC-OP</a>
+      as a list is as follows:
+    </p><pre id="g-elist-op"><tt>
       S  ::= E
       E  ::= T { TI }*
       TI ::= '+' T
       T  ::= F { FI } *
       FI ::= '*' F
       F  ::= number
-    </tt></pre>
-    In the above
-    <tt>{ X }*</tt> means <q>zero or more occurences of X</q>.
-    Expanded into pure BNF,
-    and avoiding empty right hands sides,
-    our operator "list" grammar becomes
-    LIST-OP:
-    <pre id="g-list-op"><tt>
+    </tt></pre><p>
+      In the above
+      <tt>{ X }*</tt>
+      means
+      <q>zero or more occurences of X</q>.
+      Expanded into pure BNF,
+      and avoiding empty right hands sides,
+      our operator "list" grammar becomes
+      LIST-OP:
+    </p><pre id="g-list-op"><tt>
       S  ::= E
       E  ::= T TL
       E  ::= T
@@ -1297,11 +1299,11 @@
       FI ::= '*' F
       F  ::= number
     </tt></pre>
-    <a href="g-list=op">LIST-OP</a>
-    is LL(1),
-    and therefore can be parsed directly
-    by recursive descent.
-    <h1>1968: Earley's algorithm</h1>
+    <p><a href="g-list=op">LIST-OP</a>
+      is LL(1),
+      and therefore can be parsed directly
+      by recursive descent.
+    </p><h1>1968: Earley's algorithm</h1>
     <p>Jay Earley discovers the algorithm named after him<footnote>
         <bibref>Earley 1968.</bibref>
       </footnote>.
@@ -1319,28 +1321,44 @@
         by the standards of 1968 hardware, daunting.</li>
     </ul>
     <h1>1968: Attribute grammars</h1>
-    <p>Knuth publishes a paper on a concept he had been working for the
-      previous few years: attribute grammars<footnote>
+    <p>Irons' synthetic attributes had always been inadequate for many
+      problems.
+      Until now, they had been supplemented by side effects or state
+      variables.
+      In 1968,
+      Knuth publishes a paper on a concept he had been working for the
+      previous few years: inherited attributes<footnote>
         <bibref>Knuth 1968</bibref>.
-      </footnote>
-      Irons' synthetic attributes had always been inadequate for many
-      problems, and had been supplemented by side effects or state
-      variables. Knuth adds inherited attributes, and discovers attribute
-      grammars.</p>
+      </footnote>.
+    </p>
     <h1>Term:
       <term>Inherited attributes</term></h1>
     <p>Recall that a node in parse gets its synthetic attributes from
-      its parents. Inherited attributes are attibutes a node gets from
-      its parents. Of course, this creates potential circularities, but
+      its children. Inherited attributes are attibutes
+      that a node gets from
+      its parents.
+      Of course, if both inherited and synthetic attributes
+      are used, there are potential circularities.
+      But
       inherited attributes are powerful and, with care, the circularities
-      can be dealt with.</p>
+      can be avoided.</p>
     <h1>Term:
       <term>Attribute grammar</term></h1>
-    <p>An attribute grammar is a grammar whose node may have both inherited and synthetic attributes.</p>
+    <p>An attribute grammar is a grammar whose nodes may have both inherited and synthetic attributes.</p>
     <h1>1969: LALR</h1>
-    <p>Frank DeRemer describes a new variant of Knuth's LR
-      parsing. DeRemer's LALR algorithm requires only a stack and a state
-      table of quite manageable size. LALR looks practical.</p>
+    <p>Since
+      <bibref>Knuth 1965</bibref>
+      many have taken up his challenge to find a
+      practically parseable subset of the LR(k) languages.
+      In 1969,
+      Frank DeRemer describes a new variant of Knuth's LR
+      parsing<footnote>
+        <bibref>DeRemer 1969</bibref>.
+        DeRemer's LALR algorithm requires only a stack and a state
+        table of quite manageable size.
+        LALR looks practical,
+        and will go on to become the most widely used of the LR(k)
+        subsets.</footnote></p>
     <h1>1969: the
       <tt>ed</tt>
       editor</h1>
@@ -1354,8 +1372,8 @@
       and its descendants, regular expressions will become an everyday
       part of the working programmer's toolkit.</p>
     <h1>1972: Aho and Ullman is published</h1>
-    <p>Alfred Aho and Jeffrey Ullman publish the first volume
-      <footnote>
+    <p>Alfred Aho and Jeffrey Ullman publish
+      the first volume<footnote>
         <bibref>Aho and Ullman 1972</bibref>.
       </footnote>
       of
@@ -1384,18 +1402,17 @@
           will not be able to describe. The best a programmer can usually
           do is to create a test suite and fiddle with the GTDPL description
           until it passes. Correctness cannot be established in any stronger
-          sense. GTDPL is an extreme form of the old joke that
-          <q>the code is
-            the documentation</q>
-          -- with GTDPL nothing documents the language
-          of the parser, not even the code.</q></q></p>
-    <p>GTDPL's obscurity buys nothing in the way of additional parsing
-      power. Like all non-Chomskyan parsers, GTDPL is basically a extremely
-      powerful recognizer. Pressed into service as a parser, it is
-      comparatively weak. As a parser, GTDPL is essentially equivalent to
-      Lucas's 1961 algorithm, which was in turn a restricted
-      form of recursive descent.</p>
-    <p>At or around this time, rumor has it that the main line of
+          sense.
+        </q></q></p>
+    <p>
+      GTDPL takes the old joke that
+      <q>the code is
+        the documentation</q>
+      one step further --
+      with GTDPL nothing documents the grammar,
+      not even the code.
+      <comment>TODO: Move this to PEG?</comment>
+    </p><p>At or around this time, rumor has it that the main line of
       development for GTDPL parsers is classified secret by the US
       government<footnote>
         http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2</footnote>.
@@ -1967,7 +1984,12 @@
       <cite>Syntactic Structures</cite>,
       The Hague/Paris: Mouton, ISBN 978-3-11-021832-9.
       (1957)
-    </p><p>
+    </p>
+    <p>
+      <bibref>DeRemer 1969</bibref>:
+      Franklin Lewis DeRemer,
+      "Practical Translators for LR(k) Languages"
+      PhD thesis, MIT, Cambridge, Mass., Sept. 1969.
     </p>
     <p>
       <bibid>Ford 2002</bibid>:
