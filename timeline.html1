@@ -1130,32 +1130,49 @@
       and is designed in the hope that the backtracking will not
       get out of hand for your particular grammar.
     </p>
-    <h1>Misconception: deterministic parsing versus deterministic parsers</h1>
-    <p>Knuth in his 1965 investigates the question:
-    </p><blockquote id="q-det-parser-best">
-      What is the best a deterministic parser can do?
-    </blockquote><p>
-      Many people mistook this as answering a similar-sounding but
-      different question:
-    </p><blockquote id="q-det-grammar-best">
-      What is the best way to parse a deterministic grammar?
+    <h1>Parsing LR(k): a crucial misconception</h1>
+    <p>In his 1965, Knuth makes
+      a reasonable assumption,
+      but one which turns out to be wrong:
+    </p>
+    <blockquote>
+      Another important area of research is to develop algorithms that
+      accept LR(k) grammars, or special classes of them, and to mechanically
+      produce efficient parsing programs.
     </blockquote>
-    <p>More precisely, Knuth found the largest class of grammars that
-      a deterministic parser could parse in linear time --
-      he called that class LR(k).
-      Knuth also found an algorithm to do it,
-      although not a practical one.
-      Many people took Knuth to have answered
-      <a href="#q-det-grammar-best">the question about deterministic grammars</a>
-      when he in fact had answered
-      <a href="#q-det-parser-best">the question about deterministic parsers</a>.
-      It is reasonable to guess the two questions
-      have the same answer.
-      But for the next decades,
-      many go beyone the reasonable and treat the quess
-      as an established fact.
-      As we will see,
-      in 1991 that guess turns out to be wrong.
+    <p>Implied in this is
+      the belief that
+      that better algorithms for parsing LR(k)
+      grammars
+      will either be parsers aimed specifically at LR(k)
+      or at subsets of LR(k).
+      That is, Knuth excludes the idea that algorithms which
+      target
+      <b>supersets</b>
+      of LR(k) might be faster than those
+      that take on LR(k) directly.
+      In short, he assumes, as is usually the case,
+      that as you gain in parsing power,
+      you lose in terms of speed.
+      That is a good rule of thumb,
+      and a reasonable expectation,
+      but it is not always true.
+    </p>
+    <p>A factor in this misconception may be another assumption:
+      the most efficient way to parse a deterministic language
+      is with a deterministic parser.
+      Certainly all deterministic parsers are linear.
+      And certainly all non-deterministic parsers can go super-linear,
+      at which point they quickly become impractical.
+      But neither of these truths directly answers the question
+      of practical interest:
+    </p><blockquote>
+      Is there a non-deterministic parser which is linear for
+      superset of the deterministic context-free grammars?
+    </blockquote><p>
+      This question will be answered by Joop Leo in 1991.
+      The answer, surprisingly, will be
+      <q>yes</q>.
     </p><h1>1968: Lewis and Stearns discover LL</h1>
     <p>When Knuth discovered the LR grammars, he announced them to
       the world with a full-blown mathematical description. The top-down
