@@ -628,9 +628,9 @@
       ALGOL compiler will have to find the structure.
     </p>
     <p>With the ALGOL 60 report, a quest begins which continues to this day:
-    to find a parser that solves the Parsing Problem.
-    Ideally such a parser is
-    <ul id="loc-quest">
+      to find a parser that solves the Parsing Problem.
+      Ideally such a parser is
+    </p><ul id="loc-quest">
       <li>efficient,</li>
       <li>practical,</li>
       <li>declarative, and</li>
@@ -1305,7 +1305,12 @@
       is LL(1),
       and therefore can be parsed directly
       by recursive descent.
-    </p><h1>1968: Earley's algorithm</h1>
+      Note that in
+      <a href="g-list-op">LIST-OP</a>,
+      although associativity must be provided by a post-processor,
+      the grammar enforces precedence.
+    </p>
+    <h1>1968: Earley's algorithm</h1>
     <p>Jay Earley discovers the algorithm named after him<footnote>
         <bibref>Earley 1968.</bibref>
       </footnote>.
@@ -1434,7 +1439,7 @@
       making the entire grammar an operator grammar?
       This idea had already occurred to Samuelson and Bauer in 1959.
       In 1973, Vaughan Pratt revives it<footnote>
-      <bibref>Pratt 1973</bibref>
+        <bibref>Pratt 1973</bibref>
       </footnote>.
     </p>
     <p>There are many problems with switching to operator
@@ -1503,16 +1508,21 @@
         S. C. Johnson, "Yet another compiler-compiler", in Volume 2A
         of
         <bibref>McIlroy and Kernighan 1979</bibref>.
-      </footnote>. <tt>yacc</tt> is LALR-powered. Despite its name, <tt>yacc</tt> is the first
+      </footnote>.
+      <tt>yacc</tt>
+      is LALR-powered. Despite its name,
+      <tt>yacc</tt>
+      is the first
       compiler-compiler in the modern sense.
       For some useful languages, the
       process of going from Chomskyan specification to executable is fully
       automated.
       Most practical languages, including the C language and
       <tt>yacc</tt>'s own input language, still require manual hackery.
-    <h1>The Operator Issue as of 1979</h1>
+    </p><h1>The Operator Issue as of 1979</h1>
     <p>
-      Recall <a href="#loc-quest">the criteria</a>
+      Recall
+      <a href="#loc-quest">the criteria</a>
       outlined for a solution
       of the Parsing Problem:
       that the parser be
@@ -1524,13 +1534,13 @@
       but
       <a href="g-basic-op">BASIC-OP</a>
       <a href="g-right-op">RIGHT-OP</a>
-      and 
+      and
       <a href="g-right-op">LIST-OP</a>
       are all LALR,
       and LALR can parse
       most operator expressions directly.
-      </p>
-      <p>
+    </p>
+    <p>
       All the criteria of the original quest have not been
       completely met.
       Nonetheless,
@@ -1545,13 +1555,15 @@
         1988-02-01).
         [https://groups.google.com/forum/#!topic/comp.sources.unix/Njx6b6TiZos].
       </footnote>. Perl embraces complexity like no
-      previous language. Larry uses <tt>yacc</tt> and LALR very aggressively --
+      previous language. Larry uses
+      <tt>yacc</tt>
+      and LALR very aggressively --
       to my knowledge more aggressively than anyone before or since.</p>
     <h1>1990: Monads</h1>
     <p>
       Wadler starts to introduce monads to the functional programming community.
       As one example he converts his previous efforts at function parsing
-      techniques<footnote>
+      techniques to monads<footnote>
         Philip Wadler,
         "Comprehending Monads"
         In
@@ -1580,33 +1592,43 @@
     <p>But Earley parsing is almost forgotten. Twenty years will
       pass before anyone writes a practical implementation of Leo's
       algorithm.</p>
-    <h1>The 1990's</h1>
+    <h1>The Operator Issue as of 1991</h1>
     <p>Earley's is forgotten. So everyone in LALR-land is content,
-      right? Wrong. Far from it, in fact. Users of LALR are making
-      unpleasant discoveries. While LALR automatically generates their
+      right? Wrong. In fact, far from it.
+    </p>
+    <p>
+      As of 1979, LALR seemed practical.
+      But by the 1990s users of LALR are making
+      unpleasant discoveries.
+      While LALR automatically generates their
       parsers, debugging them is so hard they could just as easily write the
-      parser by hand. Once debugged, their LALR parsers are fast for correct
-      inputs. But almost all they tell the users about incorrect inputs
-      is that they are incorrect. In Larry's words, LALR is
+      parser by hand.
+      Once debugged, their LALR parsers are fast for correct
+      inputs.
+      But almost all they tell the users about incorrect inputs
+      is that they are incorrect.
+      In Larry's words, LALR is
       <q>fast
         but stupid</q><footnote>
         Perl 6 IRC, August 30, 2014.
         [https://irclog.perlgeek.de/perl6/2014-08-30#i_9271280]
       </footnote>.
     </p>
-    <h1>1992: Combinator parsing</h1>
-    <p>Combinators are parsers which can be
-      <q>combined</q>
-      to compose other parsers.
-      This allows you to have an algebra of parsers.
-      It's an extremely attractive idea,
-      and suggestive of great power,
-      but in fact underneath it is nothing but recursive descent.
+    <p>
+      On the written record, the discontent with LALR and
+      <tt>yacc</tt>
+      is hard to find.
+      What programmer want to announce to colleagues and
+      potential employers that he cannot figure
+      how to make the standard state-of-the-art tool work?
+      But all signs are that, by 1991,
+      a movement away from LALR has already begun.
     </p>
+    <h1>1992: Combinator parsing</h1>
     <p>
       Combinator parsing
       was introduced in two 1992 papers<footnote>
-        Some source consider
+        Some sources consider
         <bibref>Wadler 1985</bibref>
         an
         early presentation of the ideas of combinator parsing.
@@ -1628,13 +1650,28 @@
         and implement precedence and associativity,
         using parentheses.
       </footnote>.
-      Combinators will become important in programming languages and
-      semantics. But in terms of parsing algorithms, Hutton introduces
-      nothing new -- wrapped up in an attribute grammar; underlying the
-      exciting new mathematics is the decades-old recursive descent,
+      As Hutton explains<footnote>
+        <bibref>Hutton 1992</bibref>, p. 5.
+      </footnote>
+      a combinator is an attribute grammar
+      with one inherited attribute (the input string)
+      and two synthesized attributes (the value of the node
+      and the remaining part of the input string).
+    Combinators can be
+      <q>combined</q>
+      to compose other parsers.
+      This allows you to have an algebra of parsers.
+      It's an extremely attractive idea.
+    </p>
+    <p>
+      But,
+      exciting as the new mathematics is,
+      the underlying parsing theory contains
+      nothing new --
+      it is the decades-old recursive descent,
       unchanged.
-    </p><p>Hutton's example language is very basic --
-      his expressions require left association,
+      Hutton's example language is extremely basic --
+      his operator expressions require left association,
       but not precedence.
       Left association is implemented by post-processing.
     </p>
@@ -1742,7 +1779,8 @@
       repackaging the nearly-forgotten GTDPL. Ford adds packratting,
       so that PEG is always linear, and provides PEG with an attractive
       new syntax.</p>
-    <p>Implementers by now are avoiding <tt>yacc</tt>, but the demand for
+    <p>Implementers by now are avoiding
+      <tt>yacc</tt>, but the demand for
       declarative parsers remains. PEG is not, in fact, declarative,
       but it uses the same BNF notation, and many users don't know the
       difference. And nothing has been done to change
@@ -1756,7 +1794,8 @@
             "GCC 4.1 Release Series: Changes, New Features, and Fixes"
             [http://gcc.gnu.org/gcc-4.1/changes.html]
           </footnote>
-          Bison, an LALR parser, is the direct descendant of Steve Johnson's <tt>yacc</tt>.
+          Bison, an LALR parser, is the direct descendant of Steve Johnson's
+          <tt>yacc</tt>.
         </q></q></p>
     <p>
       With this single line in middle of a change list hundreds of lines long.
