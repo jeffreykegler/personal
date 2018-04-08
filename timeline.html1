@@ -33,7 +33,8 @@
       today, nothing like it exists for any other natural language of
       comparable size or corpus. Pannini is the object of serious study
       today. But in the 1940's and 1950's Pannini is almost unknown in
-      the West. It will have no direct effect on the other events in
+      the West.
+      Pannini will have no direct effect on the other events in
       this timeline.
     </p>
     <h1>1906: Markov's chains</h1>
@@ -94,7 +95,7 @@
     <p>
       In the form of arithmetic expressions, operator expressions
       are the target of the first efforts at automatic parsing.
-      Perhaps surprising, we will not see this issue go away.
+      We will not see this issue go away.
     </p>
     <p>
       Very informally<footnote>
@@ -648,7 +649,7 @@
     </p>
     <h1>1960: BNF</h1>
     <p>In the ALGOL 60 report<footnote>
-        <bibref>ALGOL 60</bibref>
+        <bibref>ALGOL 1960</bibref>
       </footnote>,
       Peter Naur improves the Backus notation and uses it to describe
       the language.
@@ -836,7 +837,8 @@
         to the reprint of
         <bibref>Irons 1961</bibref>
         (<cite>Communications of the ACM</cite>, 25th Anniversary Issue, p. 14).
-        But Grune and Jacobs 2008 gives the credit to Lucas 1961
+        But <bibref>Grune and Jacobs 2008</bibref>
+	gives the credit to <bibref>Lucas 1961</bibref>
       </footnote>.
       Except to say that he deals properly with them, Lucas does not say
       how he parses operator expressions.
@@ -895,7 +897,7 @@
       But, alas, operator expression parsing is not adequate for
       languages as a whole<footnote>
         But see the entry for 1973 on Pratt parsing
-        (<bibref>Pratt 1973></bibref>)
+        (<bibref>Pratt 1973</bibref>)
         where the idea of parsing
         entire languages as operator grammars is revisited
       </footnote>.
@@ -1079,9 +1081,9 @@
         notation.
         Some papers on parsing also consider the size of the grammar,
         but usually size of the grammar is regarded as a fixed constant,
-        and in this timeline
+        and in this timeline all
         <q>big O</q>
-        results will be reported only
+        results will be
         in terms of the input length.
       </footnote>.
     </p><p>Of the many possible
@@ -1634,7 +1636,7 @@
         an
         early presentation of the ideas of combinator parsing.
         In assigning priority here,
-        I follow Grune and Jacobs 2008 (p. 564).
+        I follow <bibref>Grune and Jacobs 2008</bibref> (p. 564).
       </footnote>.
       Of more interest
       to us is the one by Hutton, which focuses on combinator parsing<footnote>
@@ -2069,7 +2071,7 @@
       </q>
     </p>
     <p>
-      <bibid>ALGOL 60</bibid>:
+      <bibid>ALGOL 1960</bibid>:
       J.W. Backus, F.L. Bauer, J.Green, C. Katz, J. McCarthy
       P. Naur, A.J. Perlis, H. Rutishauser, K. Samuelson, B. Vauquois
       J.H. Wegstein, A. van Wijngaarden and M. Woodger,
