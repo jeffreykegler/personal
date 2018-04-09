@@ -76,7 +76,7 @@
       </footnote>.
       In this
       paper, Shannon makes an attempt to model English using Andrey Markov's
-      chains<footnote>pp. 4-6.
+      chains<footnote>
         <bibref>Shannon 1948</bibref>, pp. 4-6.
       </footnote>.
     </p>
@@ -391,21 +391,23 @@
         operator priority (often called precedence or hierarchy) in the IT
         language was the most frequent single cause of errors by the users
         of that compiler.</q><footnote>
-        D.E. Knuth, “A History of Writing Compilers,”
+        D.E. Knuth, "A History of Writing Compilers",
         in
-        _COMPUTERS and AUTOMATION_, December, 1962,
-        pp. 8-10.
+        <cite>Computers and Automation</cite>, pp. 8-10.
+	(December 1962)
         1956 date is from
         "The FORTRAN I Compiler", David Padua,
         in
-        Computing in Science & Engineering 2, pp. 70-75 (2000); https://doi.org/10.1109/5992.814661
+        <cite>Computing in Science & Engineering</cite>, 2, pp. 70-75.
+	(2000)
+	https://doi.org/10.1109/5992.814661.
       </footnote>
     </p>
     <h1><term>Compiler</term>
       as of 1956</h1>
     <p>In the 1956 document describing the IT compiler<footnote>
         J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S, "A mathematical language compiler",
-        in (1956) _Proceedings of the 1956 11th ACM national meeting_
+        in (1956) <cite>Proceedings of the 1956 11th ACM national meeting</cite>
       </footnote>,
       the IT team is careful to define the term.
       Their definition makes clear that
@@ -806,7 +808,7 @@
       <q>synthesized</q>
       from its child nodes.<footnote>
         Irons is credited with the discovery of synthetic attributes
-        by Knuth ("Genesis of Attibute Grammars").
+        by Knuth (<bibref>Knuth 1990</bibref>).
       </footnote>
       Synthetic attributes are a concept in semantics, not parsing,
       but they will be important for us.
@@ -2140,9 +2142,10 @@
       through the history of parsing informative.
     </p>
     <h1>Sources</h1>
-    <p>This bibliography is incomplete --
-      full details of some documents
-      are given in the individual footnotes.
+    <p>
+      This bibliography is not complete:
+      details of some references
+      are in individual footnotes.
     </p>
     <p>
       <bibid>Aho and Ullman 1972</bibid>:
@@ -2339,6 +2342,16 @@
       <cite>Report STAN-CS-76-562</cite>, Computer Science Dept.,
       Stanford Univ., Stanford, Calif. (Aug. 1976).
       [http://bitsavers.org/pdf/stanford/cs_techReports/STAN-CS-76-562_EarlyDevelPgmgLang_Aug76.pdf ].
+    </p>
+    <p>
+      <bibid>Knuth 1990</bibid>:
+      Donald E. Knuth,
+      "The Genesis of Attribute Grammars",
+      <cite>Proceedings of the International Conference WAGA on Attribute
+      Grammars and their Applications</cite>,
+      pp 1-12.
+      (September 1990)
+      [http://www.dcs.warwick.ac.uk/~sk/cs325/gag.pdf]
     </p>
     <p>
       <bibid>Leo 1991</bibid>:
