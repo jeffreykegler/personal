@@ -1049,13 +1049,13 @@
       E  ::= T { TI }*
       TI ::= '+' T
       T  ::= F { FI } *
-      FI ::= '*' F
+      FI ::= 'x' F
       F  ::= number
     </tt></pre><p>
       In the above
-      <tt>{ X }*</tt>
+      <tt>{Z}*</tt>
       means
-      <q>zero or more occurences of X</q>.
+      <q>zero or more occurences of Z</q>.
       Expanded into pure BNF,
       and avoiding empty right hands sides,
       our operator "list" grammar becomes
@@ -1071,7 +1071,7 @@
       T  ::= F
       FL ::= FI
       FL ::= FI FL
-      FI ::= '*' F
+      FI ::= 'x' F
       F  ::= number
     </tt></pre>
     <p><a href="g-list=op">LIST-OP</a>
@@ -1090,7 +1090,8 @@
       general. Unlike the Irons algorithm, it does not backtrack. Earley's
       algorithm is both top-down and bottom-up at once -- it uses dynamic
       programming and keeps track of the parse in tables. Earley's approach
-      makes a lot of sense and looks very promising indeed, but there are
+      makes a lot of sense and looks very promising indeed, but
+      it has
       three serious issues:</p>
     <ul>
       <li>First, there is a bug in the handling of zero-length rules.</li>
@@ -1100,7 +1101,7 @@
     </ul>
     <h1>1968: Attribute grammars</h1>
     <p>Irons' synthetic attributes had always been inadequate for many
-      problems.
+      tasks.
       Until now, they had been supplemented by side effects or state
       variables.
       In 1968,
@@ -1142,11 +1143,12 @@
       <tt>ed</tt>
       editor as one of the
       first components of UNIX<a id="footnote-59-ref" href="#footnote-59">[59]</a>.
-      At this point, regular expressions are an
+      Before of 1969,
+      regular expressions were an
       esoteric mathematical formalism. Through the
       <tt>ed</tt>
       editor
-      and its descendants, regular expressions will become an everyday
+      and its descendants, regular expressions become an everyday
       part of the working programmer's toolkit.</p>
     <h1>1972: Aho and Ullman is published</h1>
     <p>Alfred Aho and Jeffrey Ullman publish
@@ -1170,10 +1172,7 @@
     <p>At or around this time, rumor has it that the main line of
       development for GTDPL parsers is classified secret by the US
       government<a id="footnote-64-ref" href="#footnote-64">[64]</a>.
-      GTDPL parsers have the property that even small changes in
-      GTDPL parsers can be very labor-intensive. For some government
-      contractors, GTDPL parsing provides steady work for years to
-      come. Public interest in GTDPL fades.</p>
+      Public interest in GTDPL fades.</p>
     <h1>1973: Pratt parsing</h1>
     <p>As we have noted pure LL(1) cannot parse operator expressions,
       and so operator expression parsers are often called into service
@@ -1194,16 +1193,17 @@
       form -- most practical languages are not operator grammars.</p>
     <p>But many practical grammars are almost operator grammars. And the
       Chomskyan approach has always had its dissenters.
-      Vaughn Pratt was one
-      of these, and discovered a new approach
+      Vaughn Pratt is one
+      of these, and discovers a new approach
       to operator expression parsing: precedence climbing.
       Pratt parsing is the third and last approach in
       Theodore
       Norvell's taxonomy of approaches to operator expression
       parsing<a id="footnote-67-ref" href="#footnote-67">[67]</a>.
       Some have adopted Pratt parsing
-      as the overall solution to their parsing problems<a id="footnote-68-ref" href="#footnote-68">[68]</a></p>
-    <p>The Pratt approach
+      as the overall solution to their parsing problems<a id="footnote-68-ref" href="#footnote-68">[68]</a>.
+      </p>
+    <p>As of 2018, the Pratt approach
       is not popular as an overall strategy.
       Under the name precedence climbing,
       it is most often used
@@ -1236,9 +1236,9 @@
       <tt>yacc</tt>
       is the first
       compiler-compiler in the modern sense.
-      For some useful languages, the
-      process of going from Chomskyan specification to executable is fully
-      automated.
+      For a few useful languages, the
+      process of going from Chomskyan specification to executable
+      is now fully automated.
       Most practical languages, including the C language and
       <tt>yacc</tt>'s own input language, still require manual hackery.
     </p><h1>The Operator Issue as of 1979</h1>
@@ -1297,7 +1297,7 @@
       1968 hardware, so that the issue of bookkeeping overhead had receded
       in importance. This is a major discovery. When it comes to speed,
       the game has changed in favor of the Earley algorithm.</p>
-    <h1>Knuth's influential misconception</h1>
+    <h1>Knuth's influential misconception revisited</h1>
     <p>Recall that
       <a href="#bib-Knuth_1965">Knuth 1965</a>, in suggesting lines of future research,
       had excluded the possibility that a parser of a superset of the LR(k) languages
@@ -1345,10 +1345,10 @@
       On the written record, the discontent with LALR and
       <tt>yacc</tt>
       is hard to find.
-      What programmer want to announce to colleagues and
+      What programmer wants to announce to colleagues and
       potential employers that he cannot figure
       how to make the standard state-of-the-art tool work?
-      But all signs are that, by 1991,
+      But, by 1991,
       a movement away from LALR has already begun.
     </p>
     <h1>1992: Combinator parsing</h1>
@@ -1407,8 +1407,8 @@
       solve all parsing problems.
       But, once again, it is still recursive descent,
       completely unchanged.
-      Wadler handles left recursion by rewriting into
-      right recursive list, and re-processing the list
+      Wadler handles left recursion by parsing into
+      list, and re-processing that list
       into left recursive form.
       Wadler's example grammar only has one operator,
       so the issue of precedence does not arise.
