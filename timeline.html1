@@ -1659,8 +1659,7 @@
         <bibref>Hutton 1992</bibref>.
         The other paper, which centers on combinators as a programming
         paradigm, is
-        Frost, Richard A. Constructing programs as executable attribute
-        grammars. Computer J., 35(4):376-389, 1992.
+	<bibref>Frost 1992</bibref>.
         Frost only mentions parsing in one paragraph, and
         that focuses on implementation issues.
         Some of his grammars include operator expressions,
@@ -2259,6 +2258,14 @@
         of the 31st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages,
         POPL 2004 (Venice, Italy, 14-16 January 2004)</cite>, N. D. Jones and X. Leroy, Eds., ACM, pp. 111-122.
       (January 2004.)
+    </p>
+    <p>
+      <bibid>Frost 1992</bibid>:
+        Richard A.  Frost
+	"Constructing programs as executable attribute
+        grammars"
+	<cite>The Computer Journal</cite>, 35(4):376-389.
+	(1992)
     </p>
     <p>
       <bibid>Gentle 1999</bibid>:
