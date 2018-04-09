@@ -1955,13 +1955,18 @@
       <li>It has no ambiguous right recursions<footnote>
           This is a very pedantic requirement,
           which practical programmers can in fact ignore.
+	  Any programmer who has found and eliminated
+	  ambiguities in his grammar will, in the process,
+	  have also have found and
+	  eliminated ambiguous right recursions,
+	  rather than determine if they are true
+	  ambiguities.
+	  In fact,
           It is an open question whether there
           <em>are</em>
           any unambiguous
-          grammars with ambiguous right recursions.
-          In any case, in practice, a programmer,
-          in determining that his grammar is ambiguity-free
-          will spot any unambiguous right recursions as well.
+          grammars with ambiguous right recursions --
+	  neither Joop Leo or I know of any.
         </footnote>
       </li>
     </ul>
