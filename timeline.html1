@@ -1932,13 +1932,6 @@
           grammars, produces an error message showing where the ambiguity is.
         </footnote>
       </li>
-      <p>The ability to ensure that a grammar can
-      be parsed in linear time is highly useful for second-order
-      languages --
-      a programmer can easily ensure that all his
-      automatically generated grammars will be practical.
-      Marpa's own DSL will make use of second-order programming.
-      </p>
       <li>It has no unmarked middle recursions<footnote>A
           <q>marker</q>, in this sense, is something in the input
           that shows where the middle of a middle recursion is,
@@ -1968,6 +1961,13 @@
         </footnote>
       </li>
     </ul>
+      <p>The ability to ensure that a grammar can
+      be parsed in linear time is highly useful for second-order
+      languages --
+      a programmer can easily ensure that all his
+      automatically generated grammars will be practical.
+      Marpa's own DSL will make use of second-order programming.
+      </p>
     <p>
       <bibref>Leo 1991</bibref>
       did not address the zero-length
