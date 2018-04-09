@@ -1193,7 +1193,7 @@
       In 1968,
       Lewis and Stearns fill that gap by defining the LL(k) grammars<footnote>
         <bibref>Lewis and Stearns 1968</bibref>.
-        They are credited in Rosencrantz and Stearns (1970)
+        They are credited in <bibref>Rosencrantz and Stearns 1970</bibref>
         and
         <bibref>Aho and Ullman 1972</bibref>, p. 368.
       </footnote>.
@@ -2405,6 +2405,13 @@
       (2014)
     </p>
     <p>
+      <bibid>McIlroy and Kernighan 1979</bibid>:
+      M. D. McIlroy and B. W. Kernighan, editors,
+      <cite>UNIX Programmer's Manual</cite>, Seventh Edition, Volume 1,
+      Bell Labs, Murray Hill, New Jersey.
+      (January 1979.)
+    </p>
+    <p>
       <bibid>Norvell 1999</bibid>:
       Theodore Norvell,
       "Parsing Expressions by Recursive Descent",
@@ -2418,6 +2425,14 @@
         ACM Symposium on Principles of Programming Languages</cite>,
       pages 41-51, ACM. (Oct. 1973.)
     </p>
+    </p>
+    <p>
+        <bibid>Rosencrantz and Stearns 1970</bibid>:
+	D.J. Rosenkrantz, and R.E. Stearns,
+	"Properties of deterministic top-down grammars",
+	<cite>Inform. Control</cite>,
+	17:226–256.
+	(1970)
     <p>
       <bibid>Samuelson and Bauer 1959</bibid>:
       K. Samelson and F. L. Bauer,
@@ -2451,13 +2466,6 @@
       <bibid>Snyder 1975</bibid>:
       Alan Snyder, "A Portable Compiler for the Language C",
       MIT, Project MAC, Cambridge MA. (May 1975.)
-    </p>
-    <p>
-      <bibid>McIlroy and Kernighan 1979</bibid>:
-      M. D. McIlroy and B. W. Kernighan, editors,
-      <cite>UNIX Programmer's Manual</cite>, Seventh Edition, Volume 1,
-      Bell Labs, Murray Hill, New Jersey.
-      (January 1979.)
     </p>
     <p>
       <bibid>Wadler 1985</bibid>:
