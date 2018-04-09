@@ -167,9 +167,11 @@
       parser<a id="footnote-9-ref" href="#footnote-9">[9]</a>.
       In Norvell's taxonomy<a id="footnote-10-ref" href="#footnote-10">[10]</a>,
       Boehm's algorithm inaugurates
-      the <q>classic approach</q> to operator parsing.
-      </p>
-      <p>
+      the
+      <q>classic approach</q>
+      to operator parsing.
+    </p>
+    <p>
       Boehm's compiler also allows parentheses, but the two cannot
       be mixed -- an expression can either be parsed using precedence
       or have parentheses, but not both.
@@ -179,8 +181,8 @@
     <h1>1952: Grace Hopper uses the term
       <term>compiler</term></h1>
     <p>Grace Hopper writes a linker-loader,a
-    and calls it a
-        <term>compiler</term><a id="footnote-12-ref" href="#footnote-12">[12]</a>. Hopper seems to be the first
+      and calls it a
+      <term>compiler</term><a id="footnote-12-ref" href="#footnote-12">[12]</a>. Hopper seems to be the first
       person to use this term for a computer program.</p>
     <h1>Term:
       <term>Compiler</term>
@@ -241,8 +243,8 @@
       Glennie's AUTOCODE
       was very close to the machine -- just above machine language.
       It did not allow operator expressions.
-      </p>
-      <p>
+    </p>
+    <p>
       AUTOCODE was hard-to-use,
       and apparently saw little use by anybody but
       Glennie himself.
@@ -302,14 +304,13 @@
       right-to-left -- and there is no operator precedence.
       The IT compiler's way of doing arithmetic expressions
       proves very unpopular: Donald Knuth reports that
-      </p>
-      <blockquote>
-      The lack of
-        operator priority (often called precedence or hierarchy) in the IT
-        language was the most frequent single cause of errors by the users
-        of that compiler.<a id="footnote-24-ref" href="#footnote-24">[24]</a>
-      </blockquote>
     </p>
+    <blockquote>
+      The lack of
+      operator priority (often called precedence or hierarchy) in the IT
+      language was the most frequent single cause of errors by the users
+      of that compiler.<a id="footnote-24-ref" href="#footnote-24">[24]</a>
+    </blockquote>
     <h1><term>Compiler</term>
       as of 1956</h1>
     <p>In the 1956 document describing the IT compiler<a id="footnote-25-ref" href="#footnote-25">[25]</a>,
@@ -435,7 +436,8 @@
       As of 1957, we are calling the description
       of a Chomskyan middle layer,
       a
-      <term>context-free grammar</term> --
+      <term>context-free grammar</term>
+      --
       BNF notation for context-free grammars
       has not yet been discovered.
       Once it is,
@@ -555,7 +557,7 @@
       <term>general</term></h1>
     <p>A general parser is a parser that will parse
       any grammar that can be written in BNF<a id="footnote-36-ref" href="#footnote-36">[36]</a>.
-      </p>
+    </p>
     <h1>1960: Gleenie's compiler-compiler</h1>
     <p>The first description of a consciously non-Chomskyan compiler
       seems to predate the first description of a Chomskyan parser.
@@ -677,8 +679,8 @@
       earlier parsers have been what he calls
       <q>the classic
         algorithm</q>.
-	</p>
-	<p>
+    </p>
+    <p>
       Dijkstra's approach is new.
       In the classic approach,
       the number
@@ -876,46 +878,45 @@
       <q>big O</q>
       functions,
       only a few will be of interest in this timeline.
-      <ul>
+    </p><ul>
       <li>A function which grows steadily as the input grows
-      is called
-      <term>linear</term>.
-      In
-      <q>big O</q>
-      notation,
-      <term>linear</term>
-      is
-      written O(n).
+        is called
+        <term>linear</term>.
+        In
+        <q>big O</q>
+        notation,
+        <term>linear</term>
+        is
+        written O(n).
       </li>
       <li>A function which grows as the length of the input times
-      its logarithm is almost linear:
-      <term>quasi-linear</term>.
-      In
-      <q>big O</q>
-      notation,
-      <term>quasi-linear</term>
-      can be
-      written O(n*log n).
+        its logarithm is almost linear:
+        <term>quasi-linear</term>.
+        In
+        <q>big O</q>
+        notation,
+        <term>quasi-linear</term>
+        can be
+        written O(n*log n).
       </li>
       <li>A function which grows as the square of the length
-      is called
-      <q>quadratic</q>
-      -- O(n**2).
+        is called
+        <q>quadratic</q>
+        -- O(n**2).
       </li>
       <li>A function which grows as the cube of the length
-      is called
-      <q>cubic</q>
-      -- O(n**3).
+        is called
+        <q>cubic</q>
+        -- O(n**3).
       </li>
       <li>In extreme cases,
-      a function can grow as a constant taken to the power
-      of the length, or
-      <term>exponentially</term>
-      --
-      O(c**n).
+        a function can grow as a constant taken to the power
+        of the length, or
+        <term>exponentially</term>
+        --
+        O(c**n).
       </li>
-      </ul>
-    </p>
+    </ul>
     <p>
       By this time,
       <q>efficient</q>
@@ -1204,7 +1205,7 @@
       parsing<a id="footnote-67-ref" href="#footnote-67">[67]</a>.
       Some have adopted Pratt parsing
       as the overall solution to their parsing problems<a id="footnote-68-ref" href="#footnote-68">[68]</a>.
-      </p>
+    </p>
     <p>As of 2018, the Pratt approach
       is not popular as an overall strategy.
       Under the name precedence climbing,
@@ -1431,24 +1432,24 @@
       write a paper on combinator parsing that could
       <q>also be viewed as a first introduction to the use
         of monads in programming.</q><a id="footnote-83-ref" href="#footnote-83">[83]</a>
-      <p>The most complicated grammar for operator expressions<a id="footnote-84-ref" href="#footnote-84">[84]</a>
+    </p><p>The most complicated grammar for operator expressions<a id="footnote-84-ref" href="#footnote-84">[84]</a>
       has two operators (exponentiation and addition)
       with two levels of precedence
       and two different associativities:
       exponentiation associates right
       and
       addition associates left.
-      </p>
-      <p>
+    </p>
+    <p>
       The solution in
-        <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a> will
-	be familiar by now:
+      <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a>
+      will
+      be familiar by now:
       Precedence is provided by the combinator parser
       which parses operators and operands of the same
       precedence into lists.
       Associativity is provided by re-processing the
       lists.
-      </p>
     </p>
     <h1>The Operator Issue as of 1996</h1>
     <p>As we have seen,
@@ -1458,26 +1459,26 @@
       We have focused on it for three reasons:
     </p>
     <ul>
-    <li>
-      Functional programming has had a profound influence
-      on the way the profession sees parsing.
-      That influence will probably grow.
-    </li>
-    <li>The literature shows
-    the relative popularity among
-      one group of highly skilled programmers
-      of LALR and recursive descent.
-      LALR is not mentioned once in any of the
-      articles surveyed.
-    </li>
-    <li>
-      The functional programming literature
-      shows that the
-      Operator Issue,
-      once thought solved,
-      is as live an issue in the 1990's
-      as it was at the end of 1961.
-    </li>
+      <li>
+        Functional programming has had a profound influence
+        on the way the profession sees parsing.
+        That influence will probably grow.
+      </li>
+      <li>The literature shows
+        the relative popularity among
+        one group of highly skilled programmers
+        of LALR and recursive descent.
+        LALR is not mentioned once in any of the
+        articles surveyed.
+      </li>
+      <li>
+        The functional programming literature
+        shows that the
+        Operator Issue,
+        once thought solved,
+        is as live an issue in the 1990's
+        as it was at the end of 1961.
+      </li>
     </ul>
     <h1>2000: The Perl 6 effort begins</h1>
     <p>Larry Wall decides on a radical reimplementation of Perl --
@@ -1505,7 +1506,9 @@
       But PEG is, in fact, pseudo-declarative --
       it uses the BNF notation,
       but it does not parse the BNF grammar described by the notation:
-      Ignoring PEG's <q>not</q> predicate for the moment,
+      Ignoring PEG's
+      <q>not</q>
+      predicate for the moment,
       PEG achieves unambiguity by finding only a subset of the parses
       of its BNF grammar.
       And, as with its predecessor GTDPL,
@@ -1559,8 +1562,8 @@
       GNU announces a major event in parsing history.
       (Bison, an LALR parser, is the direct descendant of Steve Johnson's
       <tt>yacc</tt>.)
-      </p>
-      <p>
+    </p>
+    <p>
       For three decades, the industry's flagship C compilers have
       used LALR as their parser -- proof of the claim that LALR and serious
       parsing are equivalent.
@@ -1593,13 +1596,13 @@
       <li>It has no ambiguous right recursions<a id="footnote-94-ref" href="#footnote-94">[94]</a>.
       </li>
     </ul>
-      <p>The ability to ensure that a grammar can
+    <p>The ability to ensure that a grammar can
       be parsed in linear time is highly useful for second-order
       languages --
       a programmer can easily ensure that all his
       automatically generated grammars will be practical.
       Marpa's own DSL will make use of second-order programming.
-      </p>
+    </p>
     <p>
       <a href="#bib-Leo_1991">Leo 1991</a>
       did not address the zero-length
@@ -1654,33 +1657,35 @@
               |  Expression '-' Expression
             </tt></pre>
     <p>Previously operator expression parsers had worked by
-    comparing adjacent operators.
-    This limited them to binary expressions
-    (the ternary expressions in most languages are
-    implemented using post-parsing hackery).
-    Marpa's <q>precedenced expressions</q> are not operator-driven --
-    operators are used only to avoid ambiguity.
-    <q>Precedenced statements</q>
-    will directly implement any number of ternary, 
-    quaternary or n-ary operators.
-    Ternary and larger expressions are useful in
-    financial calculations,
-    and are common in calculus.
-   </p>
+      comparing adjacent operators.
+      This limited them to binary expressions
+      (the ternary expressions in most languages are
+      implemented using post-parsing hackery).
+      Marpa's
+      <q>precedenced expressions</q>
+      are not operator-driven --
+      operators are used only to avoid ambiguity.
+      <q>Precedenced statements</q>
+      will directly implement any number of ternary,
+      quaternary or n-ary operators.
+      Ternary and larger expressions are useful in
+      financial calculations,
+      and are common in calculus.
+    </p>
     <h1>Operator Expressions as of 2012</h1>
     <p>It is said that no theory can be considered correct
-    until it is shown to be a special case of a larger theory.
-    Marpa allows operators expressions to be parsed as BNF,
-    eliminating the need for them.
-    Marpa's ability to handle second-order languages
-    allows it to take statements which describe expressions
-    in terms of precedence and association,
-    and rewrite them in a natural way into Chomskyan form.
-    In this way the grammar writer does not lose
-    the benefits of Chomskyan parsing.
-    Once again, the Operator Issue seems to be solved,
-    but this time perhaps for real.
-    <h1>The Parsing Problem as of 2012</h1>
+      until it is shown to be a special case of a larger theory.
+      Marpa allows operators expressions to be parsed as BNF,
+      eliminating the need for them.
+      Marpa's ability to handle second-order languages
+      allows it to take statements which describe expressions
+      in terms of precedence and association,
+      and rewrite them in a natural way into Chomskyan form.
+      In this way the grammar writer does not lose
+      the benefits of Chomskyan parsing.
+      Once again, the Operator Issue seems to be solved,
+      but this time perhaps for real.
+    </p><h1>The Parsing Problem as of 2012</h1>
     <p>
       Again recall the four criteria from the original quest
       for a solution to the Parsing Problem:
@@ -1718,8 +1723,8 @@
       <li>practical; and</li>
       <li>declarative.
       </li>
-      </ul>
-      <p>
+    </ul>
+    <p>
       then Marpa qualifies.
     </p>
     <p>My teachers came from the generation which created the ALGOL vision
@@ -1747,14 +1752,14 @@
       Alfred V. Aho and Jeffrey D. Ullman,
       <cite>The Theory of Parsing, Translation and Compiling:
         Volume I: Parsing</cite>, Prentice Hall, Englewood Cliffs, N.J.
-	(1972)
+      (1972)
     </p>
     <p>
       <b id="bib-Aho_and_Ullman_1973">Aho and Ullman 1973</b>:
       Alfred V. Aho and Jeffrey D. Ullman,
       <cite>The Theory of Parsing, Translation and Compiling:
         Volume II: Compiling</cite>, Prentice Hall, Englewood Cliffs, N.J.
-	(1973)
+      (1973)
     </p>
     <p>
       <b id="bib-Aho_and_Ullman_1977">Aho and Ullman 1977</b>:
@@ -1857,11 +1862,11 @@
     </p>
     <p>
       <b id="bib-Frost_1992">Frost 1992</b>:
-        Richard A.  Frost,
-	"Constructing programs as executable attribute
-        grammars"
-	<cite>The Computer Journal</cite>, 35(4):376-389.
-	(1992)
+      Richard A.  Frost,
+      "Constructing programs as executable attribute
+      grammars"
+      <cite>The Computer Journal</cite>, 35(4):376-389.
+      (1992)
     </p>
     <p>
       <b id="bib-Glennie_1960">Glennie 1960</b>:
@@ -1901,9 +1906,9 @@
       E. T. Irons,
       "A syntax-directed compiler for ALGOL 60",
       <cite>Commun. ACM<cite>,
-      4(1):51-55.
-      (Jan. 1961)
-    </p>
+          4(1):51-55.
+          (Jan. 1961)
+        </cite></cite></p>
     <p>
       <b id="bib-Kegler_2013">Kegler 2013</b>:
       Jeffrey Kegler,
@@ -1952,7 +1957,7 @@
       Donald E. Knuth,
       "The Genesis of Attribute Grammars",
       <cite>Proceedings of the International Conference WAGA on Attribute
-      Grammars and their Applications</cite>,
+        Grammars and their Applications</cite>,
       pp 1-12.
       (September 1990)
       [http://www.dcs.warwick.ac.uk/~sk/cs325/gag.pdf]
@@ -1980,12 +1985,13 @@
       (September 1961)
     </p>
     <p>
-      <b id="bib-Marpa__R2">Marpa::R2</b>:
-      Home website: http://savage.net.au/Marpa.html.</br>
-      Kegler's Marpa website: https://jeffreykegler.github.io/Marpa-web-site/.</br>
-      Github: https://github.com/jeffreykegler/Marpa--R2.</br>
-      MetaCPAN: https://metacpan.org/pod/Marpa::R2.</br>
-      See also <a href="#bib-Kegler_2013">Kegler 2013</a>.
+      <b id="bib-Marpa__R2">Marpa::R2</b>:<br>
+      Home website: http://savage.net.au/Marpa.html<br>
+      Kegler's Marpa website: https://jeffreykegler.github.io/Marpa-web-site/.<br>
+      Github: https://github.com/jeffreykegler/Marpa--R2.<br>
+      MetaCPAN: https://metacpan.org/pod/Marpa::R2.<br>
+      See also
+      <a href="#bib-Kegler_2013">Kegler 2013</a>.
     </p>
     <p>
       <b id="bib-Mascrenhas_et_al_2014">Mascrenhas et al 2014</b>:
@@ -2019,15 +2025,14 @@
         ACM Symposium on Principles of Programming Languages</cite>,
       pages 41-51, ACM. (Oct. 1973)
     </p>
-    </p>
     <p>
-        <b id="bib-Rosencrantz_and_Stearns_1970">Rosencrantz and Stearns 1970</b>:
-	D.J. Rosenkrantz, and R.E. Stearns,
-	"Properties of deterministic top-down grammars",
-	<cite>Inform. Control</cite>,
-	17:226–256.
-	(1970)
-    <p>
+      <b id="bib-Rosencrantz_and_Stearns_1970">Rosencrantz and Stearns 1970</b>:
+      D.J. Rosenkrantz, and R.E. Stearns,
+      "Properties of deterministic top-down grammars",
+      <cite>Inform. Control</cite>,
+      17:226–256.
+      (1970)
+    </p><p>
       <b id="bib-Samuelson_and_Bauer_1959">Samuelson and Bauer 1959</b>:
       K. Samelson and F. L. Bauer,
       "Sequentielle Formel&uuml;bersetzung",
@@ -2141,7 +2146,7 @@
         pp 35-42.
  <a href="#footnote-11-ref">&#8617;</a></p>
 <p id="footnote-12">12.
-	  https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers%22.
+        https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers%22.
  <a href="#footnote-12-ref">&#8617;</a></p>
 <p id="footnote-13">13.
         Quoted definition is from Nora B. Moser,
@@ -2206,17 +2211,18 @@
         D.E. Knuth, "A History of Writing Compilers",
         in
         <cite>Computers and Automation</cite>, pp. 8-10.
-	(December 1962)
+        (December 1962)
         1956 date is from
         "The FORTRAN I Compiler", David Padua,
         in
         <cite>Computing in Science & Engineering</cite>, 2, pp. 70-75.
-	(2000)
-	https://doi.org/10.1109/5992.814661.
+        (2000)
+        https://doi.org/10.1109/5992.814661.
  <a href="#footnote-24-ref">&#8617;</a></p>
 <p id="footnote-25">25.
         J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S, "A mathematical language compiler",
-        in (1956) <cite>Proceedings of the 1956 11th ACM national meeting</cite>
+        in (1956)
+        <cite>Proceedings of the 1956 11th ACM national meeting</cite>
  <a href="#footnote-25-ref">&#8617;</a></p>
 <p id="footnote-26">26.
         <a href="#bib-Chomsky_1956">Chomsky 1956</a>.
@@ -2350,11 +2356,11 @@
         This timeline is not a mathematics tutorial,
         and I have ignored important complications to
         avoid digression.
-	For interested readers,
+        For interested readers,
         the details of "big O"
-	notation can be
+        notation can be
         <a href="https://en.wikipedia.org/wiki/Big_O_notation">worth learning
-	</a>.
+        </a>.
  <a href="#footnote-51-ref">&#8617;</a></p>
 <p id="footnote-52">52.
         Because constants are ignored, all reasonable measures of
@@ -2370,7 +2376,8 @@
  <a href="#footnote-52-ref">&#8617;</a></p>
 <p id="footnote-53">53.
         <a href="#bib-Lewis_and_Stearns_1968">Lewis and Stearns 1968</a>.
-        They are credited in <a href="#bib-Rosencrantz_and_Stearns_1970">Rosencrantz and Stearns 1970</a>
+        They are credited in
+        <a href="#bib-Rosencrantz_and_Stearns_1970">Rosencrantz and Stearns 1970</a>
         and
         <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>, p. 368.
  <a href="#footnote-53-ref">&#8617;</a></p>
@@ -2490,7 +2497,7 @@
         <a href="#bib-Hutton_1992">Hutton 1992</a>.
         The other paper, which centers on combinators as a programming
         paradigm, is
-	<a href="#bib-Frost_1992">Frost 1992</a>.
+        <a href="#bib-Frost_1992">Frost 1992</a>.
         Frost only mentions parsing in one paragraph, and
         that focuses on implementation issues.
         Some of his grammars include operator expressions,
@@ -2513,8 +2520,8 @@
  <a href="#footnote-83-ref">&#8617;</a></p>
 <p id="footnote-84">84.
         <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a>, p. 18.
-	A simpler arithmetic expression grammar on p. 15 raises no issues
-	not present in the more complicated example.
+        A simpler arithmetic expression grammar on p. 15 raises no issues
+        not present in the more complicated example.
  <a href="#footnote-84-ref">&#8617;</a></p>
 <p id="footnote-85">85.
         <a href="#bib-Aycock_and_Horspool_2002">Aycock and Horspool 2002</a>.
@@ -2542,16 +2549,17 @@
  <a href="#footnote-88-ref">&#8617;</a></p>
 <p id="footnote-89">89.
         [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html].
-	This references the initial announcement,
-	and its examples and links are obsolete.
-	The latest stable version of Marpa is <a href="#bib-Marpa__R2">Marpa::R2</a>.
+        This references the initial announcement,
+        and its examples and links are obsolete.
+        The latest stable version of Marpa is
+        <a href="#bib-Marpa__R2">Marpa::R2</a>.
  <a href="#footnote-89-ref">&#8617;</a></p>
 <p id="footnote-90">90.
         In fact,
         <a href="#bib-Leo_1991">Leo 1991</a>
         proves his algorithm,
-	and therefore Marpa,
-	is linear for the LR-regular
+        and therefore Marpa,
+        is linear for the LR-regular
         grammars -- the LR grammars with infinite lookahead, so long as the lookahead
         is a regular expresion.
         It is not known (in fact not decidable, see
@@ -2579,8 +2587,8 @@
           to determine that the grammar he wants is unambiguous.
           Note the while the general case is undecidable,
           Marpa will tell the programmer if a parse
-	  (a grammar with a particular input)
-	  is ambiguous and, since it parses ambiguous
+          (a grammar with a particular input)
+          is ambiguous and, since it parses ambiguous
           grammars, produces an error message showing where the ambiguity is.
  <a href="#footnote-92-ref">&#8617;</a></p>
 <p id="footnote-93">93.
@@ -2602,25 +2610,26 @@ A
 <p id="footnote-94">94.
           This is a very pedantic requirement,
           which practical programmers can in fact ignore.
-	  Any programmer who has found and eliminated
-	  ambiguities in his grammar will usually,
-	  in the process,
-	  also have found and
-	  eliminated ambiguous right recursions,
-	  since it is far easier to eliminate them than
-	  to determine is they create a overall ambiguity.
-	  In fact,
+          Any programmer who has found and eliminated
+          ambiguities in his grammar will usually,
+          in the process,
+          also have found and
+          eliminated ambiguous right recursions,
+          since it is far easier to eliminate them than
+          to determine is they create a overall ambiguity.
+          In fact,
           it is an open question whether there
           <em>are</em>
           any unambiguous
           grammars with ambiguous right recursions --
-	  neither Joop Leo or I know of any.
+          neither Joop Leo or I know of any.
  <a href="#footnote-94-ref">&#8617;</a></p>
 <p id="footnote-95">95.
         [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html].
-	This references the initial announcement,
-	and its examples and links are obsolete.
-	The latest stable version of Marpa is <a href="#bib-Marpa__R2">Marpa::R2</a>.
+        This references the initial announcement,
+        and its examples and links are obsolete.
+        The latest stable version of Marpa is
+        <a href="#bib-Marpa__R2">Marpa::R2</a>.
  <a href="#footnote-95-ref">&#8617;</a></p>
 <p id="footnote-96">96.
         Internally, Marpa rewrites precedenced statements into BNF.
@@ -2645,7 +2654,7 @@ A
         are parsed by Marpa itself.
         The statement shown has the semantic adverbs removed for clarity.
         The original is part of the
-	<a href="#bib-Marpa__R2">Marpa::R2</a>
+        <a href="#bib-Marpa__R2">Marpa::R2</a>
         test suite
         and can be found in
         <a href=
@@ -2654,7 +2663,7 @@ A
           the Marpa documentation</a>.
  <a href="#footnote-97-ref">&#8617;</a></p>
 <p id="footnote-98">98.
-         <a href="#bib-Marpa__R2">Marpa::R2</a>.
+        <a href="#bib-Marpa__R2">Marpa::R2</a>.
  <a href="#footnote-98-ref">&#8617;</a></p>
 </body>
 </html>
