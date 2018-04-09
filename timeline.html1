@@ -65,7 +65,7 @@
     <p>Alan Turing discovers the stack as part of his design of the
       ACE machine. This is important in parsing because recursive parsing
       requires stacks. The importance of Turing's discovery is not noticed
-      at the time and stacks will be re-discovered many times over the
+      at the time and stacks will be rediscovered many times over the
       next two decades<footnote>
         Carpenter, B. E.; Doran, R. W. (January 1977). "The other Turing machine". The Computer Journal. 20 (3): 269-279.
       </footnote>.
@@ -96,8 +96,6 @@
       In the form of arithmetic expressions, operator expressions
       are the target of the first efforts at automatic parsing.
       We will not see this issue go away.
-    </p>
-    <p>
       Very informally<footnote>
         The formal apparatus for describing operator expressions is not fully formed
         as of 1949 and,
@@ -180,7 +178,7 @@
       ad hoc string manipulations,
       so they don't give rise to one.
       The only logic in these early compilers that really deserves to be called
-      a parsing method,
+      a parsing method
       is that which tackles arithmetic expressions.
     </p><p>
     </p>
@@ -208,6 +206,13 @@
         <bibref>Samuelson and Bauer 1960</bibref>
         in giving the priority to Boehm.
       </footnote>.
+      In Norvell's taxonomy<footnote>
+        <bibref>Norvell 1999</bibref>
+      <footnote>,
+      Boehm's algorithm inaugurates
+      the <q>classic approach</q> to operator parsing.
+      </p>
+      <p>
       Boehm's compiler also allows parentheses, but the two cannot
       be mixed -- an expression can either be parsed using precedence
       or have parentheses, but not both.
@@ -219,11 +224,11 @@
     </p>
     <h1>1952: Grace Hopper uses the term
       <term>compiler</term></h1>
-    <p>Grace Hopper writes a linker-loader.
-      <a
-      href="https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers%22">She
-        calls it a
-        <term>compiler</term></a>. Hopper seems to be the first
+    <p>Grace Hopper writes a linker-loader,a
+    and calls it a
+        <term>compiler</term><footnote>
+	  https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers%22.
+	</footnote>. Hopper seems to be the first
       person to use this term for a computer program.</p>
     <h1>Term:
       <term>Compiler</term>
@@ -313,7 +318,9 @@
       Glennie's AUTOCODE
       was very close to the machine -- just above machine language.
       It did not allow operator expressions.
-      AUTOCODE was also hard-to-use,
+      </p>
+      <p>
+      AUTOCODE was hard-to-use,
       and apparently saw little use by anybody but
       Glennie himself.
       Because
@@ -350,7 +357,7 @@
     <h1>1955: Noam Chomsky starts teaching at MIT</h1>
     <p>Noam Chomsky is awarded a Ph.D. in linguistics and accepts a
       teaching post at MIT. MIT does not have a linguistics department and
-      Chomsky is free to teach his own approach,
+      Chomsky is free to teach his own approach.
       Chomksy's linguistics course is
       highly original and very mathematical.</p>
     <h1>1955: Work begins on the IT compiler</h1>
@@ -362,17 +369,7 @@
     </p>
     <h1>1956: The IT compiler is released</h1>
     <p>Perlis and Smith, now at the Carnegie Institute of Technology,
-      finish the IT compiler. Don Knuth calls this
-    </p><blockquote>
-      the first really
-      <em>useful</em>
-      compiler. IT and IT's derivatives were used successfully and
-      frequently in hundreds of computer installations until [its
-      target] the [IBM] 650 became obsolete. [... P]previous systems
-      were important steps along the way, but none of them had the
-      combination of powerful language and adequate implementation and
-      documentation needed to make a significant impact in the use of
-      machines.<footnote>
+      finish the IT compiler<footnote>
         A.J. Perlis, J.W. Smith and H.R. vanZoeren,
         "Internal Translator (IT)
         A Compiler for the 650",
@@ -381,16 +378,31 @@
         April 18, 1958
         pp 1.17-1.22
       </footnote>.
+      Don Knuth calls this
+    </p><blockquote>
+      the first really
+      <em>useful</em>
+      compiler. IT and IT's derivatives were used successfully and
+      frequently in hundreds of computer installations until [their
+      target] the [IBM] 650 became obsolete. [... P]previous systems
+      were important steps along the way, but none of them had the
+      combination of powerful language and adequate implementation and
+      documentation needed to make a significant impact in the use of
+      machines.<footnote>
+        <bibref>Knuth and Pardo 1976</bibref>, p. 84.
+      </footnote>.
     </blockquote>
     <p>The IT language had arithmetic expressions, of a sort --
       parentheses are honored, but otherwise evaluation is always
-      right-to-left -- there is no operator precedence. IT did honor
-      parentheses, but nonetheless its way of doing arithmetic expressions
+      right-to-left -- and there is no operator precedence.
+      The IT compiler's way of doing arithmetic expressions
       proves very unpopular: Donald Knuth reports that
-      <q>The lack of
+      </p>
+      <blockquote>
+      The lack of
         operator priority (often called precedence or hierarchy) in the IT
         language was the most frequent single cause of errors by the users
-        of that compiler.</q><footnote>
+        of that compiler.<footnote>
         D.E. Knuth, "A History of Writing Compilers",
         in
         <cite>Computers and Automation</cite>, pp. 8-10.
@@ -402,6 +414,7 @@
 	(2000)
 	https://doi.org/10.1109/5992.814661.
       </footnote>
+      <blockquote>
     </p>
     <h1><term>Compiler</term>
       as of 1956</h1>
@@ -411,7 +424,7 @@
       </footnote>,
       the IT team is careful to define the term.
       Their definition makes clear that
-      they are using of the word
+      they are using the word
       <term>compiler</term>
       in something like its
       modern sense, perhaps for the first time. From this time on, when used
@@ -457,10 +470,10 @@
     </ul>
     <h1>Term:
       <term>Parser</term></h1>
-    <p>Chomsky is a turning point, so much so that it establishes or settles the
+    <p>Chomsky is a turning point, so much so that he establishes or settles the
       meaning of many of the terms we are using.
       A
-      <term>Parser</term>,
+      <term>parser</term>,
       for our purposes, is something or someone that transforms
       a string of symbols into a
       structure,
@@ -492,7 +505,6 @@
       But recognizers can be far easier to write,
       and are often hacked up
       and pressed into service as parsers.
-      by introducing captures.
       For example, if your semantics is simple and non-recursive,
       you might be able to drive your semantics phase with
       the output of
@@ -518,9 +530,8 @@
     <h1>Term:
       <term>Chomskyan parsing</term></h1>
     <p>From here on,
-      all parsing theory is defined in terms of
-      Chomsky's ideas.
-      Parsing theory divides into Chomskyan and
+      parsing theory
+      divides into Chomskyan and
       non-Chomskyan.
       Chomskyan parsing theory becomes and remains the mainstream
       but it is far from unchallenged.
@@ -531,7 +542,6 @@
       as something or someone that
       parses (recognizes) a string
       according to a description.
-      We can now be more specific.
       In Chomskyan parsing (recognizing),
       the description is that of Chomsky's middle layer.
       If the description is anything else,
@@ -541,8 +551,8 @@
       As of 1957, we are calling the description
       of a Chomskyan middle layer,
       a
-      <term>context-free grammar</term>.
-      The BNF notation for context-free grammars
+      <term>context-free grammar</term> --
+      BNF notation for context-free grammars
       has not yet been discovered.
       Once it is,
       we will refer to context-free grammars
@@ -556,8 +566,8 @@
     <p>FORTRAN is a line-by-line language.
       Its parsing is non-Chomskyan.
       But it includes one important discovery.
-      FORTRAN I was allowed expressions.
-      And, learning from the
+      FORTRAN I was allowed expressions and,
+      learning from the
       dissatisfaction with the IT compiler,
       FORTRAN honors associativity
       and precedence.</p>
@@ -997,8 +1007,8 @@
       if the ship was to stay afloat,
       Chomskyan purity had to be thrown overboard.
     </p>
-    <p>Bottom line: as of 1961 the operator issue takes a new form.
-      Because of the operator issue,
+    <p>Bottom line: as of 1961 the Operator Issue takes a new form.
+      Because of the Operator Issue,
       recursive descent is not
       sufficient for practical grammars -- it must always be part of a
       hybrid.
@@ -1735,7 +1745,7 @@
       the simplicity and elegance of the combinator approach.
     </p>
     <h1>1996: Hutton and Meijer on combinator parsing</h1><p>
-      [ TODO: Finish -- add stuff on operator issue. ]
+      [ TODO: Finish -- add stuff on Operator Issue. ]
       <bibref>Wadler 1995</bibref>
       used parsing as an example to motivate
       its presentation of monads.
