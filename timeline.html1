@@ -1795,13 +1795,7 @@
       lists.
       </p>
     </p>
-    <h1>1999: Haskell
-      <cite>Gentle Introduction</cite></h1>
-    <p>
-      [ TODO: Finish. ]<footnote>
-        <bibref>Gentle 1999</bibref>
-      </footnote>
-    </p><h1>The Operator Issue as of 1999</h1>
+    <h1>The Operator Issue as of 1996</h1>
     <p>As we have seen,
       the literature introducing monads and combinator
       parsing added nothing to what was already known
@@ -2338,12 +2332,6 @@
         grammars"
 	<cite>The Computer Journal</cite>, 35(4):376-389.
 	(1992)
-    </p>
-    <p>
-      <bibid>Gentle 1999</bibid>:
-      Hudak, Peterson and Fasel,
-      "A Gentle Introduction to Haskell 98".
-      (1999)
     </p>
     <p>
       <bibid>Glennie 1960</bibid>:
