@@ -654,7 +654,7 @@
       optimism at its best. As the ALGOL committee is well aware, a parsing
       algorithm capable of handling ALGOL 60 does not yet exist. But the
       risk they are taking has immediate results --
-      1961 will see a number of discoveries that remain important
+      1961 will see a number of discoveries that are still important
       today.
       On the other hand, the parser they seek remains elusive for
       decades.
@@ -698,7 +698,7 @@
         have any practical use, so that the restriction to proper grammars
         is unproblematic.
       </footnote>.
-      languages.</p>
+      </p>
     <h1>1960: Gleenie's compiler-compiler</h1>
     <p>The first description of a consciously non-Chomskyan compiler
       seems to predate the first description of a Chomskyan parser.
@@ -715,7 +715,7 @@
     <p>
       Glennie uses BNF,
       but he does
-      <em>note</em>
+      <em>not</em>
       use it in the way
       Chomsky, Backus and Naur intended BNF.
       Glennie is using BNF to describe a
@@ -726,16 +726,13 @@
       Glennie's pseudo-BNF and BNF proper do
       <b>not</b>
       describe the same language.
-      As we shall see,
-      determining what language Glennie's pseudo-BNF does
-      describe can be a very difficult matter.
     </p>
     <p>
       Glennie is well aware of what he his doing, and
       is not attempting to deceive anyone --
-      he clearly points out that the distinction
+      he points out that the distinction
       between his procedural pseudo-BNF and declarative BNF,
-      and warns his reader that the difference is
+      and clearly warns his reader that the difference is
       <q>important</q><footnote>
         <bibref>Glennie 1960</bibref>.
       </footnote>.
@@ -755,7 +752,7 @@
       element -- it is what now would be called a
       <term>left
         corner</term>
-      parser.<footnote>
+      parser<footnote>
         <bibref>Irons 1961</bibref>.
         Among those who state that
         <bibref>Irons 1961</bibref>
@@ -763,7 +760,7 @@
         is now called
         <term>left-corner</term>
         is Knuth (<bibref>Knuth 1971</bibref>, p. 109).
-      </footnote>
+      </footnote>.
     </p>
     <p>You would expect parsing might start with hard-written
       parsers for specific grammar classes.
@@ -816,10 +813,10 @@
       a tree, which is evaluated bottom-up. Each node is evaluated using
       attributes
       <q>synthesized</q>
-      from its child nodes.<footnote>
+      from its child nodes<footnote>
         Irons is credited with the discovery of synthetic attributes
         by Knuth (<bibref>Knuth 1990</bibref>).
-      </footnote>
+      </footnote>.
       Synthetic attributes are a concept in semantics, not parsing,
       but they will be important for us.
     </p>
@@ -876,10 +873,12 @@
         <bibref>Norvell 1999</bibref>.
       </footnote>
       of operator expression parsers,
-      All
+      all
       earlier parsers have been what he calls
       <q>the classic
         algorithm</q>.
+	</p>
+	<p>
       Dijkstra's approach is new.
       In the classic approach,
       the number
@@ -898,7 +897,7 @@
       After ALGOL, almost all languages will be block-structured
       and ad hoc string manipulatons are no longer adequate --
       the language as a whole requires a serious parsing technique.
-      So parsing operator expressions becomes a side show,
+      Parsing operator expressions becomes a side show,
       or so it seems.
     </p>
     <p>
@@ -934,7 +933,7 @@
       and left associativity.
       This was enough to challenge the primitive parsing techniques in use
       before 1961.
-      Surprisingly, this simple grammar will bedevil mainstream parsing theory for the
+      Surprisingly, this simple grammar will continue to bedevil mainstream parsing theory for the
       next half a century.
     </p><p>
       Recursive descent, it turns out,
@@ -962,7 +961,8 @@
       Recursive descent, without help,
       cannot parse
       <a href="#g-right-op">RIGHT-OP</a>.
-      Parsing theory has not developed well enough to
+      As of 1961,
+      parsing theory has not developed well enough to
       state why in a precise terms.
       Suffice it to say for now
       that
@@ -1002,10 +1002,10 @@
       and add associativity in post-processing.
       This pushes some of the more important parsing
       out of the syntactic phase into the semantics
-      but, again,
-      it seemed that,
-      if the ship was to stay afloat,
+      but, once again,
+      it seemed that
       Chomskyan purity had to be thrown overboard.
+      if the ship was to stay afloat.
     </p>
     <p>Bottom line: as of 1961 the Operator Issue takes a new form.
       Because of the Operator Issue,
@@ -1085,10 +1085,11 @@
       but capture non-linear jumps.
     </p>
     <p>
-      These big O functions take as input some aspect of the algorithms
+      These big O functions take as their input some aspect of the algorithm's
       input.
       In the case of parsing, by convention,
-      the big O function is usually of the length of the input<footnote>
+      the big O function is usually a function
+      of the length of the input<footnote>
         Because constants are ignored, all reasonable measures of
         the length are equivalent for
         <q>big O</q>
@@ -1104,7 +1105,8 @@
       <q>big O</q>
       functions,
       only a few will be of interest in this timeline.
-      A function which grows steadily as the input grows
+      <ul>
+      <li>A function which grows steadily as the input grows
       is called
       <term>linear</term>.
       In
@@ -1113,7 +1115,8 @@
       <term>linear</term>
       is
       written O(n).
-      A function which grows as the length of the input times
+      </li>
+      <li>A function which grows as the length of the input times
       its logarithm is almost linear:
       <term>quasi-linear</term>.
       In
@@ -1122,34 +1125,43 @@
       <term>quasi-linear</term>
       can be
       written O(n*log n).
-      A function which grows as the square of the length
+      </li>
+      <li>A function which grows as the square of the length
       is called
       <q>quadratic</q>
       -- O(n**2).
-      A function which grows as the cube of the length
+      </li>
+      <li>A function which grows as the cube of the length
       is called
       <q>cubic</q>
       -- O(n**3).
-      In extreme cases,
+      </li>
+      <li>In extreme cases,
       a function can grow as a constant taken to the power
       of the length, or
       <term>exponentially</term>
       --
       O(c**n).
-    </p><p>
+      </li>
+      </ul>
+    </p>
+    <p>
       By this time,
       <q>efficient</q>
       for a parser means
       <q>linear</q>
       or
       <q>quasi-linear</q>.
-      Parsers which operate in quadratic or cubic time are
+      Parsers which operate in quadratic, cubic, or exponential
+      time are
       considered impractical.
       But parsers aimed at practitioners will often push the
       envelope --
       any parser which uses backtracking in potentially expoential
-      and is designed in the hope that the backtracking will not
-      get out of hand for your particular grammar.
+      and is designed in the (often disappointed) hope
+      that the backtracking will not
+      get out of hand
+      for the grammar of interest to the user.
     </p>
     <h1>An influential misconception</h1>
     <p>In his 1965, Knuth makes
@@ -1163,7 +1175,7 @@
     </blockquote>
     <p>Implied in this is
       the belief that
-      that better algorithms for parsing LR(k)
+      better algorithms for parsing LR(k)
       grammars
       will either be parsers aimed specifically at LR(k)
       or at subsets of LR(k).
@@ -1189,7 +1201,7 @@
       of practical interest:
     </p><blockquote>
       Is there a non-deterministic parser which is linear for
-      superset of the deterministic context-free grammars?
+      the LR(k) grammars, or a superset of them?
     </blockquote><p>
       This question will be answered by Joop Leo in 1991.
       The answer, surprisingly, will be
