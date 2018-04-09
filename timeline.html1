@@ -98,9 +98,7 @@
       We will not see this issue go away.
       Very informally<footnote>
         The formal apparatus for describing operator expressions is not fully formed
-        as of 1949 and,
-        in any case,
-        a very formal definition is beyond the scope of this timeline.
+        as of 1949.
       </footnote>,
       we can say that
       an operator expression is an expression
@@ -259,7 +257,7 @@
         was much more helpful than current programmers might
         imagine:
         "Existing programs for similar problems were unreadable
-        and hence could not be adapted new uses."
+        and hence could not be adapted to new uses."
         (<bibref>Backus 1980</bibref>, p. 126)
       </footnote>.
       Hopper's new
@@ -1072,9 +1070,11 @@
         This timeline is not a mathematics tutorial,
         and I have ignored important complications to
         avoid digression.
-        A reader who does not know the details,
-        they can be
-        <a href="https://en.wikipedia.org/wiki/Big_O_notation">worth learning</a>.
+	For interested readers,
+        the details of "big O"
+	notation can be
+        <a href="https://en.wikipedia.org/wiki/Big_O_notation">worth learning
+	</a>.
       </footnote>.
       <q>Ignoring the constant</q>
       means that conclusions
@@ -1919,7 +1919,7 @@
       practical implementation of Joop Leo's algorithm<footnote>
         [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html].
 	This references the initial announcement,
-	and the examples and links are obsolete.
+	and its examples and links are obsolete.
 	The latest stable version of Marpa is <bibref>Marpa::R2</bibref>.
       </footnote>.
       The new parser, named Marpa, is general, declarative
@@ -1928,7 +1928,9 @@
       linear for the LR(k) grammars for all finite k<footnote>
         In fact,
         <bibref>Leo 1991</bibref>
-        proves his algorithm is linear for the LR-regular
+        proves his algorithm,
+	and therefore Marpa,
+	is linear for the LR-regular
         grammars -- the LR grammars with infinite lookahead, so long as the lookahead
         is a regular expresion.
         It is not known (in fact not decidable, see
@@ -1967,8 +1969,9 @@
           in practice it is usually straight-forward for a programmer
           to determine that the grammar he wants is unambiguous.
           Note the while the general case is undecidable,
-          Marpa will tell the programmer is a parse (a grammar with a
-          particular input) is ambiguous and, since it parses ambiguous
+          Marpa will tell the programmer if a parse
+	  (a grammar with a particular input)
+	  is ambiguous and, since it parses ambiguous
           grammars, produces an error message showing where the ambiguity is.
         </footnote>.
       </li>
@@ -1981,7 +1984,7 @@
           But in practice, there's a easy rule:
           if a person can
           <q>eyeball</q>
-          the moddie of a long
+          the middle of a long
           middle recursion, and does not need to count from both
           ends to find it,
           the grammar is
@@ -1992,13 +1995,14 @@
           This is a very pedantic requirement,
           which practical programmers can in fact ignore.
 	  Any programmer who has found and eliminated
-	  ambiguities in his grammar will, in the process,
-	  have also have found and
+	  ambiguities in his grammar will usually,
+	  in the process,
+	  also have found and
 	  eliminated ambiguous right recursions,
-	  rather than determine if they are true
-	  ambiguities.
+	  since it is far easier to eliminate them than
+	  to determine is they create a overall ambiguity.
 	  In fact,
-          It is an open question whether there
+          it is an open question whether there
           <em>are</em>
           any unambiguous
           grammars with ambiguous right recursions --
@@ -2045,7 +2049,7 @@
       the user to mix Chomskyan and precedence parsing at will<footnote>
         [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html].
 	This references the initial announcement,
-	and the examples and links are obsolete.
+	and its examples and links are obsolete.
 	The latest stable version of Marpa is <bibref>Marpa::R2</bibref>.
       </footnote>.
       Marpa's
