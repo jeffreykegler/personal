@@ -1881,6 +1881,9 @@
     </p><p>Jeffrey Kegler (the author of this timeline) releases the first
       practical implementation of Joop Leo's algorithm<footnote>
         [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html].
+	This references the initial announcement,
+	and the examples and links are obsolete.
+	The latest stable version of Marpa is <bibref>Marpa::R2</bibref>.
       </footnote>.
       The new parser, named Marpa, is general, declarative
       and linear for all the grammars discussed in
@@ -1998,6 +2001,9 @@
       In 2012, Kegler releases a version of Marpa which allows
       the user to mix Chomskyan and precedence parsing at will<footnote>
         [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html].
+	This references the initial announcement,
+	and the examples and links are obsolete.
+	The latest stable version of Marpa is <bibref>Marpa::R2</bibref>.
       </footnote>.
       Marpa's
       <q>precedenced statements</q>
@@ -2032,8 +2038,7 @@
         are parsed by Marpa itself.
         The form shown has the semantic adverbs removed for clarity.
         The original is part of the
-        <a href="https://metacpan.org/pod/Marpa::R2">
-          Marpa::R2</a>
+	<bibref>Marpa::R2</bibref>
         test suite
         and can be found in
         <a href=
@@ -2084,7 +2089,10 @@
       Again recall the four criteria from the original quest
       for a solution to the Parsing Problem:
       that a parser be efficient, practical, declarative and general.
-      Does Marpa fulfill them?
+      Does Marpa<footnote>
+         <bibref>Marpa::R2</bibref>.
+      </footnote>
+      fulfill them?
     </p>
     <p>At first glance, no.
       While Marpa is general, it is not linear or quasi-linear for the
@@ -2288,6 +2296,14 @@
       4(1):51-55, Jan. 1961.
     </p>
     <p>
+      <bibid>Kegler 2013</bibid>:
+      Jeffrey Kegler,
+      "Marpa, A practical general parser:
+      the recognizer",
+      [https://docs.google.com/file/d/0B9_mR_M2zOc4Ni1zSW5IYzk3TGc/edit].
+      (2013)
+    </p>
+    <p>
       <bibid>Kleene 1951</bibid>
       Stephen C.  Kleene,
       "Representation of Events in Nerve Nets and Finite Automata",
@@ -2339,6 +2355,14 @@
       the structure of formula translators. Elektronische Rechenanlagen,
       3(11.4):159-167, 1961, (in German).
       (September 1961)
+    </p>
+    <p>
+      <bibid>Marpa::R2</bibid>:
+      Home website: http://savage.net.au/Marpa.html.
+      Kegler's Marpa website: https://jeffreykegler.github.io/Marpa-web-site/.
+      Github: https://github.com/jeffreykegler/Marpa--R2.
+      MetaCPAN: https://metacpan.org/pod/Marpa::R2.
+      See also <bibref>Kegler 2013</bibref>.
     </p>
     <p>
       <bibid>Mascrenhas et al 2014</bibid>
