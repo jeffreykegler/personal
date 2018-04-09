@@ -2306,7 +2306,7 @@
     </p>
     <p>
       <bibid>Frost 1992</bibid>:
-        Richard A.  Frost
+        Richard A.  Frost,
 	"Constructing programs as executable attribute
         grammars"
 	<cite>The Computer Journal</cite>, 35(4):376-389.
@@ -2342,7 +2342,9 @@
     <p>
       <bibid>Hutton 1992</bibid>:
       Hutton, "Higher order functions for parsing",
-      Journal of Functional Programming 2(3):323-343, July 1992.
+      <cite>Journal of Functional Programming</cite>,
+      2(3):323-343.
+      (July 1992)
     </p>
     <p>
       <bibid>Hutton and Meijer 1996</bibid>:
@@ -2351,8 +2353,11 @@
       Department of Computer Science, University of Nottingham, 1996.
     </p>
     <p><bibid>Irons 1961</bibid>:
-      Irons, E. T. A syntax-directed compiler for ALGOL 60. Commun. ACM,
-      4(1):51-55, Jan. 1961.
+      E. T. Irons,
+      "A syntax-directed compiler for ALGOL 60",
+      <cite>Commun. ACM<cite>,
+      4(1):51-55.
+      (Jan. 1961)
     </p>
     <p>
       <bibid>Kegler 2013</bibid>:
@@ -2378,7 +2383,9 @@
     <p>
       <bibid>Knuth 1968</bibid>:
       Donald E. Knuth, "Semantics of context-free languages"
-      Math. Syst. Theory, 2(2):127- 145, (1968).
+      <cite>Math. Syst. Theory</cite>,
+      2(2):127- 145.
+      (1968)
     </p>
     <p>
       <bibid>Knuth 1971</bibid>:
@@ -2410,7 +2417,9 @@
       Joop M. I. M. Leo,
       "A general context-free parsing algorithm running in linear time on
       every LR(k) grammar without using lookahead",
-      Theoret. Comput. Sci., 82:165-176, 1991.
+      <cite>Theoret. Comput. Sci.</cite>,
+      82:165-176.
+      (1991)
     </p>
     <p>
       <bibid>Lewis and Stearns 1968</bibid>:
@@ -2427,10 +2436,10 @@
     </p>
     <p>
       <bibid>Marpa::R2</bibid>:
-      Home website: http://savage.net.au/Marpa.html.
-      Kegler's Marpa website: https://jeffreykegler.github.io/Marpa-web-site/.
-      Github: https://github.com/jeffreykegler/Marpa--R2.
-      MetaCPAN: https://metacpan.org/pod/Marpa::R2.
+      Home website: http://savage.net.au/Marpa.html.</br>
+      Kegler's Marpa website: https://jeffreykegler.github.io/Marpa-web-site/.</br>
+      Github: https://github.com/jeffreykegler/Marpa--R2.</br>
+      MetaCPAN: https://metacpan.org/pod/Marpa::R2.</br>
       See also <bibref>Kegler 2013</bibref>.
     </p>
     <p>
@@ -2449,7 +2458,7 @@
       M. D. McIlroy and B. W. Kernighan, editors,
       <cite>UNIX Programmer's Manual</cite>, Seventh Edition, Volume 1,
       Bell Labs, Murray Hill, New Jersey.
-      (January 1979.)
+      (January 1979)
     </p>
     <p>
       <bibid>Norvell 1999</bibid>:
@@ -2463,7 +2472,7 @@
       Vaughan R. Pratt, "Top down operator precedence", in
       <cite>First
         ACM Symposium on Principles of Programming Languages</cite>,
-      pages 41-51, ACM. (Oct. 1973.)
+      pages 41-51, ACM. (Oct. 1973)
     </p>
     </p>
     <p>
@@ -2505,7 +2514,7 @@
     <p>
       <bibid>Snyder 1975</bibid>:
       Alan Snyder, "A Portable Compiler for the Language C",
-      MIT, Project MAC, Cambridge MA. (May 1975.)
+      MIT, Project MAC, Cambridge MA. (May 1975)
     </p>
     <p>
       <bibid>Wadler 1985</bibid>:
