@@ -1828,13 +1828,17 @@
         <bibref>Ford 2002</bibref>.
       </footnote>fills this gap by
       repackaging the nearly-forgotten GTDPL.
-      PEG is declarative, always linear,
+      Ford's new algorithm,
+      PEG,
+      is declarative, always linear,
       and has an attractive new syntax.</p>
     <p>
       But PEG is, in fact, pseudo-declarative --
       it uses the BNF notation,
       but it does not parse the BNF grammar described by the notation --
-      PEG achieves unambiguity by parsing only a subset of that grammar.
+      Ignoring PEG's <q>not</q> predicate for the moment,
+      PEG achieves unambiguity by finding only a subset of the parses
+      of its BNF grammar.
       And, as with its predecessor GTDPL,
       in practice it is usually impossible to determine what the subset
       is.
@@ -1860,8 +1864,13 @@
       <q>not</q>
       operator is used,
       the situation is even worse.
-      PEG then might successfully parse strings
-      not in the grammar under a BNF interpretation.
+      PEG remains unambiguous,
+      but the parses it finds will not necessarily be a subset of
+      those for the BNF grammar.
+      PEG might successfully accept strings
+      that the BNF grammar would not,
+      or find parses ways that are wrong
+      according to the BNF.
       This could create security holes.
       As usually used,
       PEG is the nitroglycerin of LL(1) parsing --
@@ -1895,6 +1904,8 @@
       GNU announces a major event in parsing history.
       (Bison, an LALR parser, is the direct descendant of Steve Johnson's
       <tt>yacc</tt>.)
+      </p>
+      <p>
       For three decades, the industry's flagship C compilers have
       used LALR as their parser -- proof of the claim that LALR and serious
       parsing are equivalent.
@@ -1948,7 +1959,7 @@
       can readily determine if their grammar is linear under Marpa.
       Marpa will parse a grammar in linear time, if
     </p><ul id="loc-linearity-rules">
-      <li>It is unambiguous.<footnote>
+      <li>It is unambiguous<footnote>
           In the general case, ambiguity is undecidable, but
           in practice it is usually straight-forward for a programmer
           to determine that the grammar he wants is unambiguous.
@@ -1956,7 +1967,7 @@
           Marpa will tell the programmer is a parse (a grammar with a
           particular input) is ambiguous and, since it parses ambiguous
           grammars, produces an error message showing where the ambiguity is.
-        </footnote>
+        </footnote>.
       </li>
       <li>It has no unmarked middle recursions<footnote>A
           <q>marker</q>, in this sense, is something in the input
@@ -1989,7 +2000,7 @@
           any unambiguous
           grammars with ambiguous right recursions --
 	  neither Joop Leo or I know of any.
-        </footnote>
+        </footnote>.
       </li>
     </ul>
       <p>The ability to ensure that a grammar can
@@ -2085,7 +2096,7 @@
               || Expression '+' Expression
               |  Expression '-' Expression
             </tt></pre>
-    <p>Previously operator expressions had worked by
+    <p>Previously operator expression parsers had worked by
     comparing adjacent operators.
     This limited them to binary expressions
     (the ternary expressions in most languages are
@@ -2104,7 +2115,7 @@
     until it is shown to be a special case of a larger theory.
     Marpa allows operators expressions to be parsed as BNF,
     eliminating the need for them.
-    Marpa's ability to handle second-order languages,
+    Marpa's ability to handle second-order languages
     allows it to take statements which describe expressions
     in terms of precedence and association,
     and rewrite them in a natural way into Chomskyan form.
@@ -2136,21 +2147,24 @@
       be a superfluous requirement for a practical parser.
     </p>
     <p>
-      The deterministic context-free grammars include every
+      The LR(k) grammars include every
       other grammar class we have discussed --
       LL(k) for all k,
-      LR(k) for all k,
       LALR,
       operator grammars,
       etc.
       If we change our criteria as follows:
-    </p><ul id="loc-quest">
-      <li>linear for all deterministic context-free grammars
+    </p>
+    <ul>
+      <li>linear for all LR(k) grammars,
         and for all grammars parseable in linear time by any
         other parser in practical use;
-      </li><li>practical, and</li>
+      </li>
+      <li>practical; and</li>
       <li>declarative.
-      </li></ul><p>
+      </li>
+      </ul>
+      <p>
       then Marpa qualifies.
     </p>
     <p>My teachers came from the generation which created the ALGOL vision
