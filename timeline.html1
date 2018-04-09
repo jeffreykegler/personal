@@ -2047,7 +2047,20 @@
               || Expression '+' Expression
               |  Expression '-' Expression
             </tt></pre>
-    <p>[ TODO: Finish this. ]</p>
+    <p>Previously operator expressions had worked by
+    comparing adjacent operators.
+    This limited them to binary expressions
+    (the ternary expressions in most languages are
+    implemented using post-parsing hackery).
+    Marpa's <q>precedenced expressions</q> is not operator-driven --
+    operators are used only to avoid ambiguity.
+    <q>Precedenced statements<q>
+    will directly implement any number of ternary, 
+    quaternary or n-ary operators.
+    Ternary and larger expressions are useful in
+    financial calculations,
+    and are common in calculus.
+   </p>
     <h1>Operator Expressions as of 2012</h1>
     <p>It is said that no theory can be considered correct
     until it is shown to be a special case of a larger theory.
@@ -2061,8 +2074,7 @@
       precedenced statements
       translate into Chomskyan form
       in a natural way.
-    With Marpa,
-    the Operator Issue is solved.
+    With Marpa, the Operator Issue is solved.
     <h1>The Parsing Problem as of 2012</h1>
     <p>
       Again recall the four criteria from the original quest
