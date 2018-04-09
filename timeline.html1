@@ -1759,7 +1759,6 @@
       the simplicity and elegance of the combinator approach.
     </p>
     <h1>1996: Hutton and Meijer on combinator parsing</h1><p>
-      [ TODO: Finish -- add stuff on Operator Issue. ]
       <bibref>Wadler 1995</bibref>
       used parsing as an example to motivate
       its presentation of monads.
@@ -1773,6 +1772,28 @@
         <bibref>Hutton and Meijer 1996</bibref>,
         p. 3.
       </footnote>
+      <p>The most complicated grammar with arithmetic expression<footnote>
+        <bibref>Hutton and Meijer 1996</bibref>, p. 18.
+	A simpler operator grammar on p. 15 raises no issues
+	not present in the more complicated example.
+      </footnote>
+      has two operators (exponentiation and addition)
+      with two levels of precedence
+      and two different associativities:
+      exponentiation associates right
+      and
+      addition associates left.
+      </p>
+      <p>
+      The solution in
+        <bibref>Hutton and Meijer 1996</bibref> will
+	be familiar by now:
+      Precedence is provided by the combinator parser
+      which parses operators and operands of the same
+      precedence into lists.
+      Associativity is provided by re-processing the
+      lists.
+      </p>
     </p>
     <h1>1999: Haskell
       <cite>Gentle Introduction</cite></h1>
