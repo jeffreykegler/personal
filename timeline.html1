@@ -345,7 +345,7 @@
       <term>compiler</term>, for example, produced
       relative addresses, which needed to be translated by hand before
       a machine can execute them<footnote>
-        <bibid>Backus 1980</bibid>, pp. 133-134.
+        <bibref>Backus 1980</bibref>, pp. 133-134.
       </footnote>.</p>
     <h1>1955: Noam Chomsky starts teaching at MIT</h1>
     <p>Noam Chomsky is awarded a Ph.D. in linguistics and accepts a
@@ -2183,7 +2183,7 @@
       [http://homepages.cs.ncl.ac.uk/cliff.jones/publications/OCRd/BBG63.pdf]
     </p>
     <p>
-      <bibid>Aycock and Horspool 2002</bibid>
+      <bibid>Aycock and Horspool 2002</bibid>:
       John Aycock and R. Nigel Horspool, "Practical Earley parsing",
       <cite>The Computer Journal</cite>, Volume 45, Issue 6, pp. 620-630.
       (2002).
@@ -2308,7 +2308,7 @@
       (2013)
     </p>
     <p>
-      <bibid>Kleene 1951</bibid>
+      <bibid>Kleene 1951</bibid>:
       Stephen C.  Kleene,
       "Representation of Events in Nerve Nets and Finite Automata",
       Project Rand Resarch Memorandum RM-704.
@@ -2369,7 +2369,7 @@
       See also <bibref>Kegler 2013</bibref>.
     </p>
     <p>
-      <bibid>Mascrenhas et al 2014</bibid>
+      <bibid>Mascrenhas et al 2014</bibid>:
       Fabio Mascarenhas, S&egrave;rgio Medeiros and
       Roberto Ierusalimschy,
       "On the Relation between Context-Free Grammars
