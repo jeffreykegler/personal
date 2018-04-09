@@ -837,8 +837,10 @@
         to the reprint of
         <bibref>Irons 1961</bibref>
         (<cite>Communications of the ACM</cite>, 25th Anniversary Issue, p. 14).
-        But <bibref>Grune and Jacobs 2008</bibref>
-	gives the credit to <bibref>Lucas 1961</bibref>
+        But
+        <bibref>Grune and Jacobs 2008</bibref>
+        gives the credit to
+        <bibref>Lucas 1961</bibref>
       </footnote>.
       Except to say that he deals properly with them, Lucas does not say
       how he parses operator expressions.
@@ -1412,20 +1414,8 @@
         defined by a TDPL parser</q><footnote>
         <bibref>Aho and Ullman 1972</bibref>, p. 466.
       </footnote>.
-      That is, GTDPL parsers do whatever
-      they do, and that whatever is something the programmer in general
-      will not be able to describe. The best a programmer can usually
-      do is to create a test suite and fiddle with the GTDPL description
-      until it passes. Correctness cannot be established in any stronger
-      sense.
-      GTDPL takes the old joke that
-      <q>the code is
-        the documentation</q>
-      one step further --
-      with GTDPL nothing documents the grammar,
-      not even the code.
-      <comment>TODO: Move this to PEG?</comment>
-    </p><p>At or around this time, rumor has it that the main line of
+    </p>
+    <p>At or around this time, rumor has it that the main line of
       development for GTDPL parsers is classified secret by the US
       government<footnote>
         http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2</footnote>.
@@ -1636,7 +1626,9 @@
         an
         early presentation of the ideas of combinator parsing.
         In assigning priority here,
-        I follow <bibref>Grune and Jacobs 2008</bibref> (p. 564).
+        I follow
+        <bibref>Grune and Jacobs 2008</bibref>
+        (p. 564).
       </footnote>.
       Of more interest
       to us is the one by Hutton, which focuses on combinator parsing<footnote>
@@ -1748,26 +1740,25 @@
       parsing added nothing to what was already known
       about parsing algorithms.
       We have focused on it for three reasons:
-      </p>
-      <p>
+    </p>
+    <p>
       First, functional programming has had a profound influence
       on the way the profession sees parsing.
       That influence will probably grow.
-      </p>
-      <p>
+    </p>
+    <p>
       Second, it shows relative popularity among
       one group of highly skilled programmers
       of LALR and recursive descent.
       LALR is not mentioned once in any of the
       articles surveyed.
-      </p>
-      <p>
+    </p>
+    <p>
       Third, it shows that the
       Operator Issue,
       once thought solved,
       is as live an issue in the 1990's
       as it was at the end of 1961.
-      </p>
     </p>
     <h1>2000: The Perl 6 effort begins</h1>
     <p>Larry Wall decides on a radical reimplementation of Perl --
@@ -1783,24 +1774,71 @@
       paper is a solution to the zero-length rule bug. And this time the
       solution requires no additional bookkeeping.</p>
     <h1>2004: PEG</h1>
-    <p>
-      [ TODO: Rewrite. ]
-    </p><p>Ford<footnote>
+    <p>Implementers by now are avoiding
+      <tt>yacc</tt>, but the demand for
+      declarative parsers remains.
+      In 2004,
+      Bryan Ford<footnote>
         <bibref>Ford 2004</bibref>.
         See also
         <bibref>Ford 2002</bibref>.
       </footnote>fills this gap by
-      repackaging the nearly-forgotten GTDPL. Ford adds packratting,
-      so that PEG is always linear, and provides PEG with an attractive
-      new syntax.</p>
-    <p>Implementers by now are avoiding
-      <tt>yacc</tt>, but the demand for
-      declarative parsers remains. PEG is not, in fact, declarative,
-      but it uses the same BNF notation, and many users don't know the
-      difference. And nothing has been done to change
-      <a href="http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2015/03/peg.html">the problematic behaviors</a>
-      of GTDPL.</p>
-    <comment>TODO: Remark on the use of BNF in standards here?</comment>
+      repackaging the nearly-forgotten GTDPL.
+      PEG is declarative, always linear,
+      and has an attractive new syntax.</p>
+    <p>
+      But PEG is, in fact, pseudo-declarative --
+      it uses the BNF notation,
+      but it does not parse the BNF grammar described by the notation --
+      PEG achieves unambiguity by parsing only a subset of that grammar.
+      And, as with its predecessor GTDPL,
+      in practice it is usually impossible to determine what the subset
+      is.
+      This means that a programmer usually will not know what language his
+      PEG grammar is actually parsing.
+      The best he can
+      do is to create a test suite and fiddle with the PEG description
+      until it passes.
+      Problems not in the test suite will be encountered at runtime.
+    </p>
+    <p>
+      PEG takes the old joke that
+      <q>the code is
+        the documentation</q>
+      one step further --
+      with PEG it is often the case that
+      nothing documents the grammar,
+      not even the code.
+      Under this circumstance, creating reliable software is impossible.
+    </p>
+    <p>
+      If PEG's seductive
+      <q>not</q>
+      operator is used,
+      the situation is even worse.
+      PEG then might successfully parse strings
+      not in the grammar under a BNF interpretation.
+      This could create security holes.
+      As usually used,
+      PEG is the nitroglycerin of LL(1) parsing --
+      slightly more powerful, but too dangerous to be worth it.
+    </p><p>
+      PEG, in safe use, would essentially be LL(1)<footnote>
+        <bibref>Mascrenhas et al 2014</bibref>.
+        My account of PEG is negative because almost all of
+        PEG practice is unsafe,
+        and almost all of the literature offers no cautions
+        against unsafe use of PEG.
+        Ford's PEG is efficient
+        and does in fact have real, if niche, uses.
+        Programmers interested in the safe use of PEG should
+        consult
+        <bibref>Mascrenhas et al 2014</bibref>.
+      </footnote>.
+      Those adventurous souls who parse operator expressions under
+      PEG typically seem to parse the operator expressions as lists,
+      and re-process them in the semantics.
+    </p>
     <h1>2006: GNU C reverts to recursive descent</h1>
     <blockquote>The old Bison-based C and Objective-C parser has been replaced by a new, faster hand-written recursive-descent
       parser.<footnote>
@@ -2114,12 +2152,12 @@
     </p>
     <p>
       <bibid>Chomsky 1956</bibid>:
-          Noam Chomsky,
-          <q>Three models for the description of language</q>,
-          <cite>IEEE Trans. Inform.  Theory</cite>,
-          2(3):113-124.
-          (1956)
-        </bibid></bibid></p>
+      Noam Chomsky,
+      <q>Three models for the description of language</q>,
+      <cite>IEEE Trans. Inform.  Theory</cite>,
+      2(3):113-124.
+      (1956)
+    </p>
     <p>
       <bibid>Chomsky 1957</bibid>:
       Noam Chomsky

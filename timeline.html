@@ -1150,20 +1150,8 @@
       the non-Chomksyan parsers in the Schorre lineage<a id="footnote-59-ref" href="#footnote-59">[59]</a>. They note that
       <q>it can be quite difficult to determine what language is
         defined by a TDPL parser</q><a id="footnote-60-ref" href="#footnote-60">[60]</a>.
-      That is, GTDPL parsers do whatever
-      they do, and that whatever is something the programmer in general
-      will not be able to describe. The best a programmer can usually
-      do is to create a test suite and fiddle with the GTDPL description
-      until it passes. Correctness cannot be established in any stronger
-      sense.
-      GTDPL takes the old joke that
-      <q>the code is
-        the documentation</q>
-      one step further --
-      with GTDPL nothing documents the grammar,
-      not even the code.
-      <comment>TODO: Move this to PEG?</comment>
-    </p><p>At or around this time, rumor has it that the main line of
+    </p>
+    <p>At or around this time, rumor has it that the main line of
       development for GTDPL parsers is classified secret by the US
       government<a id="footnote-61-ref" href="#footnote-61">[61]</a>.
       GTDPL parsers have the property that even small changes in
@@ -1416,26 +1404,25 @@
       parsing added nothing to what was already known
       about parsing algorithms.
       We have focused on it for three reasons:
-      </p>
-      <p>
+    </p>
+    <p>
       First, functional programming has had a profound influence
       on the way the profession sees parsing.
       That influence will probably grow.
-      </p>
-      <p>
+    </p>
+    <p>
       Second, it shows relative popularity among
       one group of highly skilled programmers
       of LALR and recursive descent.
       LALR is not mentioned once in any of the
       articles surveyed.
-      </p>
-      <p>
+    </p>
+    <p>
       Third, it shows that the
       Operator Issue,
       once thought solved,
       is as live an issue in the 1990's
       as it was at the end of 1961.
-      </p>
     </p>
     <h1>2000: The Perl 6 effort begins</h1>
     <p>Larry Wall decides on a radical reimplementation of Perl --
@@ -1449,23 +1436,59 @@
       paper is a solution to the zero-length rule bug. And this time the
       solution requires no additional bookkeeping.</p>
     <h1>2004: PEG</h1>
-    <p>
-      [ TODO: Rewrite. ]
-    </p><p>Ford<a id="footnote-83-ref" href="#footnote-83">[83]</a>fills this gap by
-      repackaging the nearly-forgotten GTDPL. Ford adds packratting,
-      so that PEG is always linear, and provides PEG with an attractive
-      new syntax.</p>
     <p>Implementers by now are avoiding
       <tt>yacc</tt>, but the demand for
-      declarative parsers remains. PEG is not, in fact, declarative,
-      but it uses the same BNF notation, and many users don't know the
-      difference. And nothing has been done to change
-      <a href="http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2015/03/peg.html">the problematic behaviors</a>
-      of GTDPL.</p>
-    <comment>TODO: Remark on the use of BNF in standards here?</comment>
+      declarative parsers remains.
+      In 2004,
+      Bryan Ford<a id="footnote-83-ref" href="#footnote-83">[83]</a>fills this gap by
+      repackaging the nearly-forgotten GTDPL.
+      PEG is declarative, always linear,
+      and has an attractive new syntax.</p>
+    <p>
+      But PEG is, in fact, pseudo-declarative --
+      it uses the BNF notation,
+      but it does not parse the BNF grammar described by the notation --
+      PEG achieves unambiguity by parsing only a subset of that grammar.
+      And, as with its predecessor GTDPL,
+      in practice it is usually impossible to determine what the subset
+      is.
+      This means that a programmer usually will not know what language his
+      PEG grammar is actually parsing.
+      The best he can
+      do is to create a test suite and fiddle with the PEG description
+      until it passes.
+      Problems not in the test suite will be encountered at runtime.
+    </p>
+    <p>
+      PEG takes the old joke that
+      <q>the code is
+        the documentation</q>
+      one step further --
+      with PEG it is often the case that
+      nothing documents the grammar,
+      not even the code.
+      Under this circumstance, creating reliable software is impossible.
+    </p>
+    <p>
+      If PEG's seductive
+      <q>not</q>
+      operator is used,
+      the situation is even worse.
+      PEG then might successfully parse strings
+      not in the grammar under a BNF interpretation.
+      This could create security holes.
+      As usually used,
+      PEG is the nitroglycerin of LL(1) parsing --
+      slightly more powerful, but too dangerous to be worth it.
+    </p><p>
+      PEG, in safe use, would essentially be LL(1)<a id="footnote-84-ref" href="#footnote-84">[84]</a>.
+      Those adventurous souls who parse operator expressions under
+      PEG typically seem to parse the operator expressions as lists,
+      and re-process them in the semantics.
+    </p>
     <h1>2006: GNU C reverts to recursive descent</h1>
     <blockquote>The old Bison-based C and Objective-C parser has been replaced by a new, faster hand-written recursive-descent
-      parser.<a id="footnote-84-ref" href="#footnote-84">[84]</a>
+      parser.<a id="footnote-85-ref" href="#footnote-85">[85]</a>
     </blockquote>
     <p>
       With this single line in middle of a change list hundreds of lines long.
@@ -1479,17 +1502,17 @@
       that LALR replaced a quarter century earlier: recursive descent.</p>
     <h1>2010: Leo 1991 is implemented</h1><p>
     </p><p>Jeffrey Kegler (the author of this timeline) releases the first
-      practical implementation of Joop Leo's algorithm<a id="footnote-85-ref" href="#footnote-85">[85]</a>.
+      practical implementation of Joop Leo's algorithm<a id="footnote-86-ref" href="#footnote-86">[86]</a>.
       The new parser, named Marpa, is general, declarative
       and linear for all the grammars discussed in
       <a href="#bib-Knuth_1965">Knuth 1965</a>, that is, it is
-      linear for the LR(k) grammars for all finite k<a id="footnote-86-ref" href="#footnote-86">[86]</a>.
+      linear for the LR(k) grammars for all finite k<a id="footnote-87-ref" href="#footnote-87">[87]</a>.
       This means it is also linear for most of the grammar classes we have discussed in this
       timeline.
     </p><ul>
       <li>LR(1) grammars.</li>
       <li>LL(k) grammars for all finite k, including LL(1) grammars.</li>
-      <li>Operator expression grammars<a id="footnote-87-ref" href="#footnote-87">[87]</a>.
+      <li>Operator expression grammars<a id="footnote-88-ref" href="#footnote-88">[88]</a>.
       </li>
     </ul>
     <p>This is a vast class of grammars,
@@ -1499,11 +1522,11 @@
       can readily determine if their grammar is linear under Marpa.
       Marpa will parse a grammar in linear time, if
     </p><ul id="loc-linearity-rules">
-      <li>It is unambiguous.<a id="footnote-88-ref" href="#footnote-88">[88]</a>
+      <li>It is unambiguous.<a id="footnote-89-ref" href="#footnote-89">[89]</a>
       </li>
-      <li>It has no unmarked middle recursions<a id="footnote-89-ref" href="#footnote-89">[89]</a>.
+      <li>It has no unmarked middle recursions<a id="footnote-90-ref" href="#footnote-90">[90]</a>.
       </li>
-      <li>It has no ambiguous right recursions<a id="footnote-90-ref" href="#footnote-90">[90]</a>
+      <li>It has no ambiguous right recursions<a id="footnote-91-ref" href="#footnote-91">[91]</a>
       </li>
     </ul>
     <p>
@@ -1536,7 +1559,7 @@
     <p>
       <comment>TODO: Finish</comment>
       In 2012, Kegler releases a version of Marpa which allows
-      the user to mix Chomskyan and precedence parsing at will<a id="footnote-91-ref" href="#footnote-91">[91]</a>.
+      the user to mix Chomskyan and precedence parsing at will<a id="footnote-92-ref" href="#footnote-92">[92]</a>.
       Marpa's
       <q>precedenced statements</q>
       describe expressions
@@ -1549,10 +1572,10 @@
       <q>precedenced statements</q>
       are added to a grammar that Marpa parses in linear
       time, then the grammar remains linear as long as the precedenced statements
-      are (after precedence is taken in consideration) unambiguous<a id="footnote-92-ref" href="#footnote-92">[92]</a>.
+      are (after precedence is taken in consideration) unambiguous<a id="footnote-93-ref" href="#footnote-93">[93]</a>.
     </p><p>Here is an example of a Marpa
       <q>precedenced statement</q>:
-      <a id="footnote-93-ref" href="#footnote-93">[93]</a>
+      <a id="footnote-94-ref" href="#footnote-94">[94]</a>
     </p>
     <pre><tt>
               Expression ::=
@@ -1684,12 +1707,12 @@
     </p>
     <p>
       <b id="bib-Chomsky_1956">Chomsky 1956</b>:
-          Noam Chomsky,
-          <q>Three models for the description of language</q>,
-          <cite>IEEE Trans. Inform.  Theory</cite>,
-          2(3):113-124.
-          (1956)
-        </bibid></bibid></p>
+      Noam Chomsky,
+      <q>Three models for the description of language</q>,
+      <cite>IEEE Trans. Inform.  Theory</cite>,
+      2(3):113-124.
+      (1956)
+    </p>
     <p>
       <b id="bib-Chomsky_1957">Chomsky 1957</b>:
       Noam Chomsky
@@ -2137,8 +2160,10 @@ pp. 4-6.
         to the reprint of
         <a href="#bib-Irons_1961">Irons 1961</a>
         (<cite>Communications of the ACM</cite>, 25th Anniversary Issue, p. 14).
-        But <a href="#bib-Grune_and_Jacobs_2008">Grune and Jacobs 2008</a>
-	gives the credit to <a href="#bib-Lucas_1961">Lucas 1961</a>
+        But
+        <a href="#bib-Grune_and_Jacobs_2008">Grune and Jacobs 2008</a>
+        gives the credit to
+        <a href="#bib-Lucas_1961">Lucas 1961</a>
  <a href="#footnote-40-ref">&#8617;</a></p>
 <p id="footnote-41">41.
         <a href="#bib-Lucas_1961">Lucas 1961</a>
@@ -2301,7 +2326,9 @@ pp. 4-6.
         an
         early presentation of the ideas of combinator parsing.
         In assigning priority here,
-        I follow <a href="#bib-Grune_and_Jacobs_2008">Grune and Jacobs 2008</a> (p. 564).
+        I follow
+        <a href="#bib-Grune_and_Jacobs_2008">Grune and Jacobs 2008</a>
+        (p. 564).
  <a href="#footnote-75-ref">&#8617;</a></p>
 <p id="footnote-76">76.
         The paper which is devoted to parsing is
@@ -2342,13 +2369,25 @@ pp. 4-6.
         <a href="#bib-Ford_2002">Ford 2002</a>.
  <a href="#footnote-83-ref">&#8617;</a></p>
 <p id="footnote-84">84.
-        "GCC 4.1 Release Series: Changes, New Features, and Fixes"
-        [http://gcc.gnu.org/gcc-4.1/changes.html]
+        <a href="#bib-Mascrenhas_et_al_2014">Mascrenhas et al 2014</a>.
+        My account of PEG is negative because almost all of
+        PEG practice is unsafe,
+        and almost all of the literature offers no cautions
+        against unsafe use of PEG.
+        Ford's PEG is efficient
+        and does in fact have real, if niche, uses.
+        Programmers interested in the safe use of PEG should
+        consult
+        <a href="#bib-Mascrenhas_et_al_2014">Mascrenhas et al 2014</a>.
  <a href="#footnote-84-ref">&#8617;</a></p>
 <p id="footnote-85">85.
-        [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html].
+        "GCC 4.1 Release Series: Changes, New Features, and Fixes"
+        [http://gcc.gnu.org/gcc-4.1/changes.html]
  <a href="#footnote-85-ref">&#8617;</a></p>
 <p id="footnote-86">86.
+        [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html].
+ <a href="#footnote-86-ref">&#8617;</a></p>
+<p id="footnote-87">87.
         In fact,
         <a href="#bib-Leo_1991">Leo 1991</a>
         proves his algorithm is linear for the LR-regular
@@ -2367,13 +2406,13 @@ pp. 4-6.
         <a href="#bib-Leo_1991">Leo 1991</a>
         in being linear for many ambiguous grammars,
         including those of most practical interest.
- <a href="#footnote-86-ref">&#8617;</a></p>
-<p id="footnote-87">87.
+ <a href="#footnote-87-ref">&#8617;</a></p>
+<p id="footnote-88">88.
           In the literature operator expression grammars are more often
           call simply
           <q>operator grammars</q>.
- <a href="#footnote-87-ref">&#8617;</a></p>
-<p id="footnote-88">88.
+ <a href="#footnote-88-ref">&#8617;</a></p>
+<p id="footnote-89">89.
           In the general case, ambiguity is undecidable, but
           in practice it is usually straight-forward for a programmer
           to determine that the grammar he wants is unambiguous.
@@ -2381,8 +2420,8 @@ pp. 4-6.
           Marpa will tell the programmer is a parse (a grammar with a
           particular input) is ambiguous and, since it parses ambiguous
           grammars, produces an error message showing where the ambiguity is.
- <a href="#footnote-88-ref">&#8617;</a></p>
-<p id="footnote-89">89.
+ <a href="#footnote-89-ref">&#8617;</a></p>
+<p id="footnote-90">90.
 A
           <q>marker</q>, in this sense, is something in the input
           that shows where the middle of a middle recursion is,
@@ -2397,8 +2436,8 @@ A
           ends to find it,
           the grammar is
           <q>marked</q>.
- <a href="#footnote-89-ref">&#8617;</a></p>
-<p id="footnote-90">90.
+ <a href="#footnote-90-ref">&#8617;</a></p>
+<p id="footnote-91">91.
           This is a very pedantic requirement,
           which practical programmers can in fact ignore.
           It is an open question whether there
@@ -2408,19 +2447,19 @@ A
           In any case, in practice, a programmer,
           in determining that his grammar is ambiguity-free
           will spot any unambiguous right recursions as well.
- <a href="#footnote-90-ref">&#8617;</a></p>
-<p id="footnote-91">91.
-        [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html].
  <a href="#footnote-91-ref">&#8617;</a></p>
 <p id="footnote-92">92.
+        [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html].
+ <a href="#footnote-92-ref">&#8617;</a></p>
+<p id="footnote-93">93.
         Internally, Marpa rewrites precedenced statements into BNF.
         Marpa's rewrite does not use middle recursions
         and does not introduce any new ambiguities
         so that, following its
         <a href="#loc-linearity-rules">linearity
           rules</a>, the result must be linear.
- <a href="#footnote-92-ref">&#8617;</a></p>
-<p id="footnote-93">93.
+ <a href="#footnote-93-ref">&#8617;</a></p>
+<p id="footnote-94">94.
         In this, precedence goes from tightest to loosest.
         Single bars (<tt>|</tt>) separate RHS's of equal precedence.
         Double bars (<tt>||</tt>) separate RHS's of different precedence --
@@ -2443,6 +2482,6 @@ A
 	    "https://metacpan.org/pod/release/JKEGL/Marpa-R2-4.000000/pod/Scanless/DSL.pod"
 	    >
           the Marpa documentation</a>.
- <a href="#footnote-93-ref">&#8617;</a></p>
+ <a href="#footnote-94-ref">&#8617;</a></p>
 </body>
 </html>
