@@ -2071,7 +2071,7 @@
         Single bars (<tt>|</tt>) separate RHS's of equal precedence.
         Double bars (<tt>||</tt>) separate RHS's of different precedence --
         precedence goes from tightest to loosest.
-        Associativity default to left,
+        Associativity defaults to left,
         and exceptions are indicated by the value of the
         <tt>assoc</tt>
         adverb.
@@ -2079,7 +2079,7 @@
         <q>precedenced statements</q>,
         like all of Marpa's DSL,
         are parsed by Marpa itself.
-        The form shown has the semantic adverbs removed for clarity.
+        The statement shown has the semantic adverbs removed for clarity.
         The original is part of the
 	<bibref>Marpa::R2</bibref>
         test suite
