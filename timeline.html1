@@ -1139,7 +1139,7 @@
       and is designed in the hope that the backtracking will not
       get out of hand for your particular grammar.
     </p>
-    <h1>Parsing LR(k): an influential misconception</h1>
+    <h1>An influential misconception</h1>
     <p>In his 1965, Knuth makes
       a reasonable assumption,
       but one which turns out to be wrong:
@@ -1238,7 +1238,7 @@
         left, using left reductions with one character of lookahead</q>.
       LL(1) will be important in what follows.
     </p>
-    <h1>LL(1) and the Operator Issue</h1>
+    <h1>The Operator Issue as of 1968</h1>
     <p>
       With
       <bibref>Knuth 1965</bibref>
@@ -1581,11 +1581,32 @@
       1968 hardware, so that the issue of bookkeeping overhead had receded
       in importance. This is a major discovery. When it comes to speed,
       the game has changed in favor of the Earley algorithm.</p>
-    <p>But Earley parsing is almost forgotten. Twenty years will
-      pass before anyone writes a practical implementation of Leo's
-      algorithm.</p>
-    <p>[ Note that Leo correct's Knuth misconception. ]
-    </p><h1>The Operator Issue as of 1991</h1>
+    <h1>Knuth's influential misconception</h1>
+    <p>Recall that
+      <bibref>Knuth 1965</bibref>, in suggesting lines of future research,
+      had excluded the possibility that a parser of a superset of the LR(k) languages
+      could be practical and linear.
+      Knuth did not conclude this carelessly --
+      he proved a strong relationship between the
+      <term>deterministic languagues</term>
+      of previous theory,
+      and the language defined by his new LR(k) model.
+      Knuth's argument was highly suggestive,
+      so much so that most took it as a proof.
+    </p>
+    <p>But it was not a proof --
+      Earley's non-deterministic algorithm,
+      while not linear in general,
+      <b>is</b>
+      linear for a superset of Knuth's LR(k) grammars.
+      Is it practical?
+      At this point, Earley parsing is almost forgotten,
+      and few take notice of Earley's discovery.
+      Two decades will pass before anyone
+      attempts a practical implementation of
+      <bibref>Leo 1991</bibref>.
+    </p>
+    <h1>The Operator Issue as of 1991</h1>
     <p>Earley's is forgotten. So everyone in LALR-land is content,
       right? Wrong. In fact, far from it.
     </p>
@@ -1825,8 +1846,8 @@
     </p><p>
       PEG, in safe use, would essentially be LL(1)<footnote>
         <bibref>Mascrenhas et al 2014</bibref>.
-        My account of PEG is negative because almost all of
-        PEG practice is unsafe,
+        My account of PEG is negative because almost all
+        real-life PEG practice is unsafe,
         and almost all of the literature offers no cautions
         against unsafe use of PEG.
         Ford's PEG is efficient
