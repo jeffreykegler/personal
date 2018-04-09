@@ -1626,15 +1626,14 @@
     until it is shown to be a special case of a larger theory.
     Marpa allows operators expressions to be parsed as BNF,
     eliminating the need for them.
-    But Marpa's ability to handle second-order languages,
-    allows it to include statements which describe expressions
-    in terms of precedence and association.
-    And, in doing so, the grammar writer does not lose
-    the benefits of Chomskyan parsing --
-      precedenced statements
-      translate into Chomskyan form
-      in a natural way.
-    With Marpa, the Operator Issue is solved.
+    Marpa's ability to handle second-order languages,
+    allows it to take statements which describe expressions
+    in terms of precedence and association,
+    and rewrite them in a natural way into Chomskyan form.
+    In this way the grammar writer does not lose
+    the benefits of Chomskyan parsing.
+    Once again, the Operator Issue seems to be solved,
+    but this time perhaps for real.
     <h1>The Parsing Problem as of 2012</h1>
     <p>
       Again recall the four criteria from the original quest
