@@ -1772,9 +1772,9 @@
         <bibref>Hutton and Meijer 1996</bibref>,
         p. 3.
       </footnote>
-      <p>The most complicated grammar with arithmetic expression<footnote>
+      <p>The most complicated grammar for operator expressions<footnote>
         <bibref>Hutton and Meijer 1996</bibref>, p. 18.
-	A simpler operator grammar on p. 15 raises no issues
+	A simpler arithmetic expression grammar on p. 15 raises no issues
 	not present in the more complicated example.
       </footnote>
       has two operators (exponentiation and addition)
