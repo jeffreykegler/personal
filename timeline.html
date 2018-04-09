@@ -1442,25 +1442,28 @@
       about parsing algorithms.
       We have focused on it for three reasons:
     </p>
-    <p>
-      First, functional programming has had a profound influence
+    <ul>
+    <li>
+      Functional programming has had a profound influence
       on the way the profession sees parsing.
       That influence will probably grow.
-    </p>
-    <p>
-      Second, it shows relative popularity among
+    </li>
+    <li>The literature shows
+    the relative popularity among
       one group of highly skilled programmers
       of LALR and recursive descent.
       LALR is not mentioned once in any of the
       articles surveyed.
-    </p>
-    <p>
-      Third, it shows that the
+    </li>
+    <li>
+      The functional programming literature
+      shows that the
       Operator Issue,
       once thought solved,
       is as live an issue in the 1990's
       as it was at the end of 1961.
-    </p>
+    </li>
+    </ul>
     <h1>2000: The Perl 6 effort begins</h1>
     <p>Larry Wall decides on a radical reimplementation of Perl --
       Perl 6. Larry does not even consider using LALR again.</p>
@@ -1486,7 +1489,7 @@
     <p>
       But PEG is, in fact, pseudo-declarative --
       it uses the BNF notation,
-      but it does not parse the BNF grammar described by the notation --
+      but it does not parse the BNF grammar described by the notation:
       Ignoring PEG's <q>not</q> predicate for the moment,
       PEG achieves unambiguity by finding only a subset of the parses
       of its BNF grammar.
@@ -1513,17 +1516,17 @@
     <p>
       If PEG's seductive
       <q>not</q>
-      operator is used,
+      predicate is used,
       the situation is even worse.
       PEG remains unambiguous,
       but the parses it finds will not necessarily be a subset of
       those for the BNF grammar.
-      PEG might successfully accept strings
+      PEG might accept strings
       that the BNF grammar would not,
-      or find parses ways that are wrong
+      or it might find parses that are wrong
       according to the BNF.
       This could create security holes.
-      As usually used,
+      As it is usually used,
       PEG is the nitroglycerin of LL(1) parsing --
       slightly more powerful, but too dangerous to be worth it.
     </p><p>
