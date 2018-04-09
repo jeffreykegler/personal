@@ -1552,7 +1552,7 @@
     </ul>
     <p>
       <a href="#bib-Leo_1991">Leo 1991</a>
-      does not address the zero-length
+      did not address the zero-length
       rule problem.
       Kegler solves it by adopting the solution of
       <a href="#bib-Aycock_and_Horspool_2002">Aycock and Horspool 2002</a>.
@@ -1562,7 +1562,6 @@
       As a side effect,
       this gives Marpa excellent error-handling properties.
     </p>
-    <comment>TODO: Add more</comment>
     <h1>2012: General precedence parsing</h1>
     <p>
       While the purely
@@ -1574,21 +1573,16 @@
       the use of precedence in parsing remains popular.
       In fact, precedence tables often occur in documentation
       and standards,
-      which is a clear sign that they too can contribute
-      to human-readable but precise descriptions of grammars.
+      which is a clear sign that they too can play a role
+      in human-readable but precise descriptions of grammars.
     </p>
     <p>
-      <comment>TODO: Finish</comment>
       In 2012, Kegler releases a version of Marpa which allows
       the user to mix Chomskyan and precedence parsing at will<a id="footnote-92-ref" href="#footnote-92">[92]</a>.
       Marpa's
       <q>precedenced statements</q>
       describe expressions
-      in terms of precedence and association, but they strictly
-      translate into Chomskyan form,
-      so a user writing a precedenced statement
-      does not lose the benefits
-      of Chomskyan parsing.
+      in terms of precedence and association.
       If
       <q>precedenced statements</q>
       are added to a grammar that Marpa parses in linear
@@ -1608,8 +1602,22 @@
               || Expression '+' Expression
               |  Expression '-' Expression
             </tt></pre>
+    <p>[ TODO: Finish this. ]</p>
     <h1>Operator Expressions as of 2012</h1>
-    <p>[ TODO: Do this. ]</p>
+    <p>It is said that no theory can be considered correct
+    until it is shown to be a special case of a larger theory.
+    Marpa allows operators expressions to be parsed as BNF,
+    eliminating the need for them.
+    But Marpa's ability to handle second-order languages,
+    allows it to include statements which describe expressions
+    in terms of precedence and association.
+    And, in doing so, the grammar writer does not lose
+    the benefits of Chomskyan parsing --
+      precedenced statements
+      translate into Chomskyan form
+      in a natural way.
+    With Marpa,
+    the Operator Issue is solved.
     <h1>The Parsing Problem as of 2012</h1>
     <p>
       Again recall the four criteria from the original quest
