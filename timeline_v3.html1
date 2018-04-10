@@ -2202,14 +2202,14 @@
       Alfred V. Aho and Jeffrey D. Ullman,
       <cite>The Theory of Parsing, Translation and Compiling:
         Volume I: Parsing</cite>, Prentice Hall, Englewood Cliffs, N.J.
-      (1972)
+      (1972).
     </p>
     <p>
       <bibid>Aho and Ullman 1973</bibid>:
       Alfred V. Aho and Jeffrey D. Ullman,
       <cite>The Theory of Parsing, Translation and Compiling:
         Volume II: Compiling</cite>, Prentice Hall, Englewood Cliffs, N.J.
-      (1973)
+      (1973).
     </p>
     <p>
       <bibid>Aho and Ullman 1977</bibid>:
@@ -2217,7 +2217,7 @@
       <cite>Principles of compiler design</cite>,
       Addision-Wesley,
       Reading, Mass.
-      (1977)
+      (1977).
       The dragon on the cover is green,
       and this classic first edition
       is sometimes called the
@@ -2231,14 +2231,14 @@
       J.W. Backus, F.L. Bauer, J.Green, C. Katz, J. McCarthy
       P. Naur, A.J. Perlis, H. Rutishauser, K. Samuelson, B. Vauquois
       J.H. Wegstein, A. van Wijngaarden and M. Woodger,
-      <cite>Revised Report on the Algorithmic Language Algol 60</cite>.
-      (1960)
+      <cite>Revised Report on the Algorithmic Language Algol 60</cite>
+      (1960).
       [http://homepages.cs.ncl.ac.uk/cliff.jones/publications/OCRd/BBG63.pdf]
     </p>
     <p>
       <bibid>Aycock and Horspool 2002</bibid>:
       John Aycock and R. Nigel Horspool, "Practical Earley parsing",
-      <cite>The Computer Journal</cite>, Volume 45, Issue 6, pp. 620-630.
+      <cite>The Computer Journal</cite>, Volume 45, Issue 6, pp. 620-630
       (2002).
     </p>
     <p>
@@ -2247,16 +2247,16 @@
       "The Syntax and Semantics of the Proposed International Algebraic
       Language of the Zurich ACM-GAMM Conference. Proceedings of the
       International Conference on Information Processing",
-      UNESCO, pp.125-132.
-      (1959)
+      UNESCO, pp.125-132
+      (1959).
       [http://www.softwarepreservation.org/projects/ALGOL/paper/Backus-Syntax_and_Semantics_of_Proposed_IAL.pdf]
       [http://www.softwarepreservation.org/projects/ALGOL/paper/Backus-ICIP-1959.pdf]
     </p>
     <p>
       <bibid>Backus 1980</bibid>:
       John Backus,
-      <cite>Programming in America in the 1950s- Some Personal Impressions</cite>.
-      (1980)
+      <cite>Programming in America in the 1950s- Some Personal Impressions</cite>
+      (1980).
       [http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf]
       10.1016/B978-0-12-491650-0.50017-4.
     </p>
@@ -2282,28 +2282,29 @@
       <q>Three models for the description of language</q>,
       <cite>IEEE Transactions on Information
         Theory</cite>,
-      2(3):113-124.
-      (1956)
+      2(3):113-124
+      (1956).
     </p>
     <p>
       <bibid>Chomsky 1957</bibid>:
       Noam Chomsky
       <cite>Syntactic Structures</cite>,
-      The Hague/Paris: Mouton, ISBN 978-3-11-021832-9.
-      (1957)
+      The Hague/Paris: Mouton, ISBN 978-3-11-021832-9
+      (1957).
     </p>
     <p>
       <bibid>Darwin 1984</bibid>:
       Ian F. Darwin,
       <q>A History of UNIX before Berkeley: UNIX Evolution: 1975-1984</q>
+      (1984).
       [http://doc.cat-v.org/unix/unix-before-berkeley/]
-      (1984)
     </p>
     <p>
       <bibid>DeRemer 1969</bibid>:
       Franklin Lewis DeRemer,
       "Practical Translators for LR(k) Languages"
-      PhD thesis, MIT, Cambridge, Mass., Sept. 1969.
+      PhD thesis, MIT, Cambridge, Mass.
+      (Sept. 1969).
     </p>
     <p>
       <bibid>Dijkstra 1961</bibid>:
@@ -2318,12 +2319,14 @@
       <bibid>Earley 1968</bibid>:
       Jay Earley,
       <cite>An Efficient Context-free Parsing Algorithm</cite>,
-      PhD thesis, Carnegie-Mellon Univ., Pittsburg, Pa., 1968.
+      PhD thesis, Carnegie-Mellon Univ., Pittsburg, Pa.
+      (1968).
     </p>
     <p>
       <bibid>Ford 2002</bibid>:
       Bryan Ford, "Packrat parsing: a practical linear-time algorithm with backtracking", Master's thesis,
-      Massachusetts Institute of Technology. (September 2002)
+      Massachusetts Institute of Technology
+      (September 2002).
       [http://pdos.csail.mit.edu/papers/packrat-parsing:ford-ms.pdf.]
     </p>
     <p>
@@ -2333,16 +2336,16 @@
       in
       <cite>Proceedings
         of the 31st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages,
-        POPL 2004 (Venice, Italy, 14-16 January 2004)</cite>, N. D. Jones and X. Leroy, Eds., ACM, pp. 111-122.
-      (January 2004)
+        POPL 2004 (Venice, Italy, 14-16 January 2004)</cite>, N. D. Jones and X. Leroy, Eds., ACM, pp. 111-122
+      (January 2004).
     </p>
     <p>
       <bibid>Frost 1992</bibid>:
       Richard A.  Frost,
       "Constructing programs as executable attribute
       grammars"
-      <cite>The Computer Journal</cite>, 35(4):376-389.
-      (1992)
+      <cite>The Computer Journal</cite>, 35(4):376-389
+      (1992).
     </p>
     <p>
       <bibid>Glennie 1960</bibid>:
@@ -2359,8 +2362,8 @@
       <cite>Parsing Techniques: A Practical
         Guide, 2nd edition</cite>.
       (<cite>Monographs in Computer Science</cite>), New York, USA:
-      Springer.
-      (2008)
+      Springer
+      (2008).
       When it comes to determining who first discovered an idea,
       the literature often disagrees.
       In such cases, I have often deferred
@@ -2370,8 +2373,8 @@
       <bibid>Hutton 1992</bibid>:
       Graham Hutton, "Higher order functions for parsing",
       <cite>Journal of Functional Programming</cite>,
-      2(3):323-343.
-      (July 1992)
+      2(3):323-343
+      (July 1992).
     </p>
     <p>
       <bibid>Hutton and Meijer 1996</bibid>:
@@ -2379,27 +2382,28 @@
       <cite>Technical Report NOTTCS-TR-96-4</cite>,
       Department of Computer Science, University of Nottingham, 1996.
     </p>
-    <p><bibid>Irons 1961</bibid>:
+    <p>
+    <bibid>Irons 1961</bibid>:
       E. T. Irons,
       "A syntax-directed compiler for ALGOL 60",
-      <cite>Communications of the ACM<cite>,
-          4(1):51-55.
-          (Jan. 1961)
-        </cite></cite></p>
+      <cite>Communications of the ACM</cite>,
+          4(1):51-55
+          (Jan. 1961).
+    </p>
     <p>
       <bibid>Kegler 2013</bibid>:
       Jeffrey Kegler,
       "Marpa, A practical general parser:
-      the recognizer".
-      (June 19, 2013)
+      the recognizer.
+      (June 19, 2013).
       [https://drive.google.com/file/d/1Xw1hoh-gLG5zFHBtC4RtJJnz9B_DNkpF/view?usp=sharing]
     </p>
     <p>
       <bibid>Kleene 1951</bibid>:
       Stephen C.  Kleene,
       "Representation of Events in Nerve Nets and Finite Automata",
-      Project Rand Resarch Memorandum RM-704.
-      (15 December 1951)
+      Project Rand Resarch Memorandum RM-704
+      (15 December 1951).
       [https://www.rand.org/content/dam/rand/pubs/research_memoranda/2008/RM704.pdf]
     </p>
     <p>
@@ -2413,22 +2417,22 @@
     <p>
       <bibid>Knuth 1965</bibid>:
       Donald E. Knuth, "On the translation of languages from left to right"
-      <cite>Information and Control</cite>, Vol. 8, Issue: 6, Page: 607-639.
-      (1965)
+      <cite>Information and Control</cite>, Vol. 8, Issue: 6, Page: 607-639
+      (1965).
     </p>
     <p>
       <bibid>Knuth 1968</bibid>:
       Donald E. Knuth, "Semantics of context-free languages"
       <cite>Mathematical Systems Theory</cite>,
-      2(2):127- 145.
-      (1968)
+      2(2):127-145
+      (1968).
     </p>
     <p>
       <bibid>Knuth 1971</bibid>:
       Donald E.  Knuth, "Top-down syntax analysis",
       <cite>Acta Informatica</cite>,
-      1:79-110.
-      (1971)
+      1:79-110
+      (1971).
     </p>
     <p>
       <bibid>Knuth 1990</bibid>:
@@ -2436,8 +2440,8 @@
       "The Genesis of Attribute Grammars",
       <cite>Proceedings of the International Conference WAGA on Attribute
         Grammars and their Applications</cite>,
-      pp 1-12.
-      (September 1990)
+      pp 1-12
+      (September 1990).
       [http://www.dcs.warwick.ac.uk/~sk/cs325/gag.pdf]
     </p>
     <p>
@@ -2454,22 +2458,22 @@
       "A general context-free parsing algorithm running in linear time on
       every LR(k) grammar without using lookahead",
       <cite>Theoretical Computer Science</cite>,
-      82:165-176.
-      (1991)
+      82:165-176
+      (1991).
     </p>
     <p>
       <bibid>Lewis and Stearns 1968</bibid>:
       P. M. Lewis, II and R. E .Stearns, "Syntax-directed transduction",
       <cite>Journal of the ACM</cite>,
-      15(3):465- 488 (1968).
+      15(3):465-488 (1968).
     </p>
     <p>
       <bibid>Lucas 1961</bibid>:
       P. Lucas, "Die Strukturanalyse von Formeln&uuml;bersetzern / analysis of
       the structure of formula translators" (in German),
       <cite>Elektronische Rechenanlagen</cite>,
-      3(11.4):159-167.
-      (September 1961)
+      3(11.4):159-167
+      (September 1961).
     </p>
     <p>
       <bibid>Marpa::R2</bibid>:<br>
@@ -2487,23 +2491,23 @@
       "On the Relation between Context-Free Grammars
       and Parsing Expression Grammars",
       <cite>Science of Computer Programming</cite>
-      89, pp. 235 - 250.
+      89, pp. 235-250
+      (2014).
       [https://arxiv.org/abs/1304.3177]
-      (2014)
     </p>
     <p>
       <bibid>McIlroy and Kernighan 1979</bibid>:
       M. D. McIlroy and B. W. Kernighan, editors,
       <cite>UNIX Programmer's Manual</cite>, Seventh Edition, Volume 1,
-      Bell Labs, Murray Hill, New Jersey.
-      (January 1979)
+      Bell Labs, Murray Hill, New Jersey
+      (January 1979).
     </p>
     <p>
       <bibid>Norvell 1999</bibid>:
       Theodore Norvell,
-      "Parsing Expressions by Recursive Descent",
-      https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm.
-      (1999)
+      "Parsing Expressions by Recursive Descent"
+      (1999).
+      [https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm].
     </p>
     <p>
       <bibid>Padua 2000</bibid>:
@@ -2537,21 +2541,21 @@
       Vaughan R. Pratt, "Top down operator precedence", in
       <cite>First
         ACM Symposium on Principles of Programming Languages</cite>,
-      pages 41-51, ACM. (Oct. 1973)
+      pages 41-51, ACM (Oct. 1973).
     </p>
     <p>
       <bibid>Rosencrantz and Stearns 1970</bibid>:
       D.J. Rosenkrantz, and R.E. Stearns,
       "Properties of deterministic top-down grammars",
       <cite>Information and Control</cite>,
-      17:226–256.
-      (1970)
+      17:226–256
+      (1970).
     </p><p>
       <bibid>Samuelson and Bauer 1959</bibid>:
       K. Samelson and F. L. Bauer,
       "Sequentielle Formel&uuml;bersetzung",
       <cite>Elektronishce Rechenanlagen</cite>,
-      1, 176-182. (1959)
+      1, 176-182 (1959).
     </p>
     <p>
       <bibid>Samuelson and Bauer 1960</bibid>:
@@ -2571,14 +2575,14 @@
       Claude E Shannon, Claude E.
       "A Mathematical Theory of Communication",
       <cite>Bell System Technical Journal</cite>,
-      27 (3): 379-423
+      27(3):379-423
       and
-      27 (4): 623-666. (July and October 1948)
+      27(4):623-666 (July and October 1948).
     </p>
     <p>
       <bibid>Snyder 1975</bibid>:
       Alan Snyder, "A Portable Compiler for the Language C",
-      MIT, Project MAC, Cambridge MA. (May 1975)
+      MIT, Project MAC, Cambridge MA (May 1975).
     </p>
     <p>
       <bibid>Wadler 1985</bibid>:
@@ -2609,8 +2613,8 @@
       <cite>Advanced Functional Programming. AFP
         1995.</cite>,
       <cite>Lecture Notes in Computer Science</cite>,
-      vol 925. Springer, Berlin, Heidelberg.
-      (1995)
+      vol 925. Springer, Berlin, Heidelberg
+      (1995).
     </p>
   </body>
 </html>
