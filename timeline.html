@@ -1506,20 +1506,17 @@
       But PEG is, in fact, pseudo-declarative --
       it uses the BNF notation,
       but it does not parse the BNF grammar described by the notation:
-      Ignoring PEG's
-      <q>not</q>
-      predicate for the moment,
       PEG achieves unambiguity by finding only a subset of the parses
       of its BNF grammar.
       And, as with its predecessor GTDPL,
       in practice it is usually impossible to determine what the subset
       is.
-      This means that a programmer usually will not know what language his
-      PEG grammar is actually parsing.
-      The best he can
+      This means that the best a programmer
+      usually can
       do is to create a test suite and fiddle with the PEG description
       until it passes.
-      Problems not in the test suite will be encountered at runtime.
+      Problems not covered
+      by the test suite will be encountered at runtime.
     </p>
     <p>
       PEG takes the old joke that
@@ -1530,24 +1527,11 @@
       nothing documents the grammar,
       not even the code.
       Under this circumstance, creating reliable software is impossible.
-    </p>
-    <p>
-      If PEG's seductive
-      <q>not</q>
-      predicate is used,
-      the situation is even worse.
-      PEG remains unambiguous,
-      but the parses it finds will not necessarily be a subset of
-      those for the BNF grammar.
-      PEG might accept strings
-      that the BNF grammar would not,
-      or it might find parses that are wrong
-      according to the BNF.
-      This could create security holes.
       As it is usually used,
       PEG is the nitroglycerin of LL(1) parsing --
       slightly more powerful, but too dangerous to be worth it.
-    </p><p>
+    </p>
+    <p>
       PEG, in safe use, would essentially be LL(1)<a id="footnote-87-ref" href="#footnote-87">[87]</a>.
       Those adventurous souls who parse operator expressions under
       PEG typically seem to parse the operator expressions as lists,
