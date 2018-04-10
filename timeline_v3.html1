@@ -59,7 +59,7 @@
         <cite>American Journal of Mathematics</cite>,
         Vol. 65, No. 2, pp. 197-215.
         DOI: 10.2307/2371809.
-	(April 1943)
+        (April 1943)
       </footnote>
       using productions.
       With this, the process of rediscovering Pannini in the
@@ -71,9 +71,10 @@
       at the time and stacks will be rediscovered many times over the
       next two decades<footnote>
         B. E. Carpenter and R. W.  Doran,
-	"The other Turing machine", <cite>The Computer Journal</cite>,
-	20 (3): 269-279.
-	(January 1977).
+        "The other Turing machine",
+        <cite>The Computer Journal</cite>,
+        20 (3): 269-279.
+        (January 1977).
       </footnote>.
     </p>
     <h1>1948: Shannon repurposes Markov's chains</h1>
@@ -288,7 +289,7 @@
         both in terms of insight and execution, and her energetic followup
         did much to move forward the events in this timeline.
         Hopper has a big reputation and it is fully deserved.
-	</footnote>.
+      </footnote>.
     </p>
     <p>As we have seen, programs that today we
       <em>would</em>
@@ -426,8 +427,9 @@
       as of 1956</h1>
     <p>In the 1956 document describing the IT compiler<footnote>
         J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S, "A mathematical language compiler",
-        in <cite>Proceedings of the 1956 11th ACM national meeting</cite>.
-	(1956)
+        in
+        <cite>Proceedings of the 1956 11th ACM national meeting</cite>.
+        (1956)
       </footnote>,
       the IT team is careful to define the term.
       Their definition makes clear that
@@ -849,7 +851,7 @@
         Also, the Lucas algorithm more resembles modern implementations of recursive descent
         much more closely than
         <bibref>Irons 1961</bibref>.
-	</footnote>.
+      </footnote>.
       Either Irons paper or this one can be considered to be recursive descent<footnote>
         As a former student of Irons at Yale,
         my personal preference would be to give Ned the credit
@@ -880,7 +882,7 @@
         Edsger W. Dijkstra, "Algol 60 translation : An Algol 60 translator
         for the x1 and Making a translator for Algol 60", Research Report 35,
         Mathematisch Centrum, Amsterdam.
-	(1961)
+        (1961)
       </footnote>
       In Norvell's useful classification<footnote>
         <bibref>Norvell 1999</bibref>.
@@ -1461,7 +1463,7 @@
       development for GTDPL parsers is classified secret by the US
       government<footnote>
         http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2.
-	</footnote>.
+      </footnote>.
       Public interest in GTDPL fades.</p>
     <h1>1973: Pratt parsing</h1>
     <p>As we have noted pure LL(1) cannot parse operator expressions,
@@ -1519,7 +1521,7 @@
         <bibref>Synder 1975</bibref>.
         See, in particular, pp. 67-68.
       </footnote>.
-      </p>
+    </p>
     <h1>1977: The first dragon book is published</h1>
     <p>The first
       <q>dragon book</q><footnote>
@@ -1606,7 +1608,7 @@
         <cite>Proceedings of the 1990 ACM conference on LISP and functional programming</cite>
         (LFP '90).
         ACM, New York, NY, USA, 61-78. DOI: http://dx.doi.org/10.1145/91556.91592.
-	(1990)
+        (1990)
       </footnote>.
       The parsing technique is pure recursive descent.
       The examples shown for monadic parsing are very simple,
@@ -1616,7 +1618,7 @@
       and operator precedence was not implemented
       <footnote>
         <bibref>Wadler 1985</bibref>.
-	</footnote>.
+      </footnote>.
     </p>
     <h1>1991: Leo's speed-up of Earley's algorithm</h1>
     <p>Joop Leo discovers a way of speeding up right recursions in
@@ -2292,7 +2294,7 @@
       Noam Chomsky,
       <q>Three models for the description of language</q>,
       <cite>IEEE Transactions on Information
-      Theory</cite>,
+        Theory</cite>,
       2(3):113-124.
       (1956)
     </p>
