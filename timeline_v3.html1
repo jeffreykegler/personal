@@ -57,8 +57,9 @@
         Emil L. Post,
         "Formal Reductions of the General Combinatorial Decision Problem",
         <cite>American Journal of Mathematics</cite>,
-        Vol. 65, No. 2, pp. 197-215 (April 1943).
-        DOI: 10.2307/2371809
+        Vol. 65, No. 2, pp. 197-215.
+        DOI: 10.2307/2371809.
+	(April 1943)
       </footnote>
       using productions.
       With this, the process of rediscovering Pannini in the
@@ -69,12 +70,15 @@
       requires stacks. The importance of Turing's discovery is not noticed
       at the time and stacks will be rediscovered many times over the
       next two decades<footnote>
-        Carpenter, B. E.; Doran, R. W. (January 1977). "The other Turing machine". The Computer Journal. 20 (3): 269-279.
+        B. E. Carpenter and R. W.  Doran,
+	"The other Turing machine", <cite>The Computer Journal</cite>,
+	20 (3): 269-279.
+	(January 1977).
       </footnote>.
     </p>
     <h1>1948: Shannon repurposes Markov's chains</h1>
     <p>Claude Shannon publishes the foundation paper of information theory<footnote>
-        <bibref>Shannon 1948</bibref>
+        <bibref>Shannon 1948</bibref>.
       </footnote>.
       In this
       paper, Shannon makes an attempt to model English using Andrey Markov's
@@ -207,7 +211,7 @@
         in giving the priority to Boehm.
       </footnote>.
       In Norvell's taxonomy<footnote>
-        <bibref>Norvell 1999</bibref>
+        <bibref>Norvell 1999</bibref>.
       </footnote>,
       Boehm's algorithm inaugurates
       the
@@ -283,7 +287,8 @@
         Whatever it is called, Hopper's program was a major advance,
         both in terms of insight and execution, and her energetic followup
         did much to move forward the events in this timeline.
-        Hopper has a big reputation and it is fully deserved</footnote>.
+        Hopper has a big reputation and it is fully deserved.
+	</footnote>.
     </p>
     <p>As we have seen, programs that today we
       <em>would</em>
@@ -377,8 +382,8 @@
         A Compiler for the 650",
         Computation Center,
         Carnegie Institute of Technology,
-        April 18, 1958
-        pp 1.17-1.22
+        pp. 1.17-1.22.
+        (April 18, 1958)
       </footnote>.
       Don Knuth calls this
     </p><blockquote>
@@ -421,8 +426,8 @@
       as of 1956</h1>
     <p>In the 1956 document describing the IT compiler<footnote>
         J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S, "A mathematical language compiler",
-        in (1956)
-        <cite>Proceedings of the 1956 11th ACM national meeting</cite>
+        in <cite>Proceedings of the 1956 11th ACM national meeting</cite>.
+	(1956)
       </footnote>,
       the IT team is careful to define the term.
       Their definition makes clear that
@@ -605,7 +610,7 @@
       </footnote>.
       According to Backus's recollection,
       his paper<footnote>
-        <bibref>Backus 1959</bibref>
+        <bibref>Backus 1959</bibref>.
       </footnote>
       has only one reader: Peter Naur<footnote>
         <bibref>Backus 1980</bibref>, pp. 132-133.
@@ -628,7 +633,7 @@
       many people have been refining operator precedence.
       With Samuelson and Bauer,
       what Norvell<footnote>
-        <bibref>Norvell 1999</bibref>
+        <bibref>Norvell 1999</bibref>.
       </footnote>
       calls "the classic algorithm"
       takes a well-documented form.
@@ -636,7 +641,7 @@
     </p>
     <h1>1960: The ALGOL report</h1>
     <p>The ALGOL 60 report<footnote>
-        <bibref>ALGOL 1960</bibref>
+        <bibref>ALGOL 1960</bibref>.
       </footnote>
       specifies, for the first time, a block
       structured language. ALGOL 60 is recursively structured but the
@@ -667,7 +672,7 @@
     </p>
     <h1>1960: BNF</h1>
     <p>In the ALGOL 60 report<footnote>
-        <bibref>ALGOL 1960</bibref>
+        <bibref>ALGOL 1960</bibref>.
       </footnote>,
       Peter Naur improves the Backus notation and uses it to describe
       the language.
@@ -843,7 +848,8 @@
         while describing the top-down element in detail.
         Also, the Lucas algorithm more resembles modern implementations of recursive descent
         much more closely than
-        <bibref>Irons 1961</bibref></footnote>.
+        <bibref>Irons 1961</bibref>.
+	</footnote>.
       Either Irons paper or this one can be considered to be recursive descent<footnote>
         As a former student of Irons at Yale,
         my personal preference would be to give Ned the credit
@@ -855,7 +861,7 @@
         But
         <bibref>Grune and Jacobs 2008</bibref>
         gives the credit to
-        <bibref>Lucas 1961</bibref>
+        <bibref>Lucas 1961</bibref>.
       </footnote>.
       Except to say that he deals properly with them, Lucas does not say
       how he parses operator expressions.
@@ -864,7 +870,7 @@
       parsing operator expressions are well understood<footnote>
         <bibref>Lucas 1961</bibref>
         cites
-        <bibref>Samuelson and Bauer 1960</bibref>
+        <bibref>Samuelson and Bauer 1960</bibref>.
       </footnote>.
     </p>
     <h1>1961: Dijkstra's shunting yard algorithm</h1>
@@ -873,7 +879,8 @@
       algorithm.<footnote>
         Edsger W. Dijkstra, "Algol 60 translation : An Algol 60 translator
         for the x1 and Making a translator for Algol 60", Research Report 35,
-        Mathematisch Centrum, Amsterdam, 1961,
+        Mathematisch Centrum, Amsterdam.
+	(1961)
       </footnote>
       In Norvell's useful classification<footnote>
         <bibref>Norvell 1999</bibref>.
@@ -918,7 +925,7 @@
         But see the entry for 1973 on Pratt parsing
         (<bibref>Pratt 1973</bibref>)
         where the idea of parsing
-        entire languages as operator grammars is revisited
+        entire languages as operator grammars is revisited.
       </footnote>.
     </p>
     <p>Also by 1961, we have BNF.
@@ -1043,12 +1050,12 @@
       Meta II is a template, rather than something that
       his readers can use, but in principle it can be turned into a fully
       automated compiler-compiler<footnote>
-        <bibref>Schorre 1964</bibref>, p. D1.3-1
+        <bibref>Schorre 1964</bibref>, p. D1.3-1.
       </footnote>.
     </p>
     <h1>1965: Knuth discovers LR</h1>
     <p>Don Knuth discovers LR parsing<footnote>
-        <bibref>Knuth 1965.</bibref>
+        <bibref>Knuth 1965.</bibref>.
       </footnote>.
       The LR algorithm is deterministic,
       Chomskyan and bottom-up. Knuth is primarily interested in the
@@ -1057,7 +1064,7 @@
       <q>open question</q>
       for
       <q>future research</q><footnote>
-        <bibref>Knuth 1965</bibref>, p. 637
+        <bibref>Knuth 1965</bibref>, p. 637.
       </footnote>.
     </p>
     <h1>Term:
@@ -1348,7 +1355,7 @@
     </p>
     <h1>1968: Earley's algorithm</h1>
     <p>Jay Earley discovers the algorithm named after him<footnote>
-        <bibref>Earley 1968.</bibref>
+        <bibref>Earley 1968</bibref>.
       </footnote>.
       Like the Irons
       algorithm, Earley's algorithm is Chomskyan, declarative and fully
@@ -1453,7 +1460,8 @@
     <p>At or around this time, rumor has it that the main line of
       development for GTDPL parsers is classified secret by the US
       government<footnote>
-        http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2</footnote>.
+        http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2.
+	</footnote>.
       Public interest in GTDPL fades.</p>
     <h1>1973: Pratt parsing</h1>
     <p>As we have noted pure LL(1) cannot parse operator expressions,
@@ -1463,7 +1471,7 @@
       making the entire grammar an operator grammar?
       This idea had already occurred to Samuelson and Bauer in 1959.
       In 1973, Vaughan Pratt revives it<footnote>
-        <bibref>Pratt 1973</bibref>
+        <bibref>Pratt 1973</bibref>.
       </footnote>.
     </p>
     <p>There are many problems with switching to operator
@@ -1488,7 +1496,7 @@
       Theodore
       Norvell's taxonomy of approaches to operator expression
       parsing<footnote>
-        <bibref>Norvell 1999</bibref>
+        <bibref>Norvell 1999</bibref>.
       </footnote>.
       Some have adopted Pratt parsing
       as the overall solution to their parsing problems<footnote>
@@ -1510,7 +1518,8 @@
       descent to DeRemer's LALR algorithm<footnote>
         <bibref>Synder 1975</bibref>.
         See, in particular, pp. 67-68.
-      </footnote>.</p>
+      </footnote>.
+      </p>
     <h1>1977: The first dragon book is published</h1>
     <p>The first
       <q>dragon book</q><footnote>
@@ -1525,7 +1534,8 @@
     <h1>1979: Yacc is released</h1>
     <p>Bell Laboratories releases Version 7 UNIX<footnote>
         <bibref>McIlroy and Kernighan 1979</bibref>.
-      </footnote>. V7 includes what is,
+      </footnote>.
+      V7 includes what is,
       by far, the most comprehensive, useable and easily available compiler
       writing toolkit yet developed.</p>
     <p>Part of the V7 toolkit is Yet Another Compiler Compiler
@@ -1595,15 +1605,18 @@
         In
         <cite>Proceedings of the 1990 ACM conference on LISP and functional programming</cite>
         (LFP '90).
-        ACM, New York, NY, USA, 61-78. DOI=http://dx.doi.org/10.1145/91556.91592
+        ACM, New York, NY, USA, 61-78. DOI: http://dx.doi.org/10.1145/91556.91592.
+	(1990)
       </footnote>.
       The parsing technique is pure recursive descent.
       The examples shown for monadic parsing are very simple,
       and do not include operator expressions.
       In his earlier non-monadic work, Wadler uses a very restricted form of operator expression:
       His grammar avoided left recursion by using parentheses,
-      and operator precedence was not implemented<footnote>
-        Wadler 1985.</footnote>.
+      and operator precedence was not implemented
+      <footnote>
+        <bibref>Wadler 1985</bibref>.
+	</footnote>.
     </p>
     <h1>1991: Leo's speed-up of Earley's algorithm</h1>
     <p>Joop Leo discovers a way of speeding up right recursions in
@@ -1659,7 +1672,7 @@
       <q>fast
         but stupid</q><footnote>
         Perl 6 IRC, August 30, 2014.
-        [https://irclog.perlgeek.de/perl6/2014-08-30#i_9271280]
+        [https://irclog.perlgeek.de/perl6/2014-08-30#i_9271280].
       </footnote>.
     </p>
     <p>
@@ -1771,7 +1784,7 @@
       used parsing as an example to motivate
       its presentation of monads.
       Graham Hutton and Erik Meijer<footnote>
-        <bibref>Hutton and Meijer 1996</bibref>
+        <bibref>Hutton and Meijer 1996</bibref>.
       </footnote>
       take the opposite perspective -- they
       write a paper on combinator parsing that could
@@ -1911,7 +1924,7 @@
     <blockquote>The old Bison-based C and Objective-C parser has been replaced by a new, faster hand-written recursive-descent
       parser.<footnote>
         "GCC 4.1 Release Series: Changes, New Features, and Fixes"
-        [http://gcc.gnu.org/gcc-4.1/changes.html]
+        [http://gcc.gnu.org/gcc-4.1/changes.html].
       </footnote>
     </blockquote>
     <p>
