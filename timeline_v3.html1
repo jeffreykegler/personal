@@ -369,13 +369,7 @@
     <h1>1956: The IT compiler is released</h1>
     <p>Perlis and Smith, now at the Carnegie Institute of Technology,
       finish the IT compiler<footnote>
-        A.J. Perlis, J.W. Smith and H.R. vanZoeren,
-        "Internal Translator (IT)
-        A Compiler for the 650",
-        Computation Center,
-        Carnegie Institute of Technology,
-        pp. 1.17-1.22.
-        (April 18, 1958)
+	<bibref>Perlis et al 1958</bibref>.
       </footnote>.
       Don Knuth calls this
     </p><blockquote>
@@ -402,25 +396,15 @@
       operator priority (often called precedence or hierarchy) in the IT
       language was the most frequent single cause of errors by the users
       of that compiler.<footnote>
-        D.E. Knuth, "A History of Writing Compilers",
-        in
-        <cite>Computers and Automation</cite>, pp. 8-10.
-        (December 1962)
-        1956 date is from
-        "The FORTRAN I Compiler", David Padua,
-        in
-        <cite>Computing in Science & Engineering</cite>, 2, pp. 70-75.
-        (2000)
-        https://doi.org/10.1109/5992.814661.
+	<bibref>Knuth 1962</bibref>.
+        The 1956 date for IT is from
+	<bibref>Padua 2000</bibref>.
       </footnote>
     </blockquote>
     <h1><term>Compiler</term>
       as of 1956</h1>
     <p>In the 1956 document describing the IT compiler<footnote>
-        J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S, "A mathematical language compiler",
-        in
-        <cite>Proceedings of the 1956 11th ACM national meeting</cite>.
-        (1956)
+	<bibref>Chipps et al 1956</bibref>.
       </footnote>,
       the IT team is careful to define the term.
       Their definition makes clear that
@@ -867,10 +851,7 @@
     <p>In November 1961, Dijkstra publishes the
       <q>shunting yard</q>
       algorithm<footnote>
-        Edsger W. Dijkstra, "Algol 60 translation : An Algol 60 translator
-        for the x1 and Making a translator for Algol 60", Research Report 35,
-        Mathematisch Centrum, Amsterdam
-        (1961).
+        <bibref>Dijkstra 1961</bibref>.
       </footnote>.
       In Norvell's useful classification<footnote>
         <bibref>Norvell 1999</bibref>.
@@ -1590,13 +1571,7 @@
       Wadler starts to introduce monads to the functional programming community.
       As one example he converts his previous efforts at function parsing
       techniques to monads<footnote>
-        Philip Wadler,
-        "Comprehending Monads"
-        In
-        <cite>Proceedings of the 1990 ACM conference on LISP and functional programming</cite>
-        (LFP '90).
-        ACM, New York, NY, USA, 61-78. DOI: http://dx.doi.org/10.1145/91556.91592.
-        (1990)
+        <bibref>Walder 1990</bibref>
       </footnote>.
       The parsing technique is pure recursive descent.
       The examples shown for monadic parsing are very simple,
@@ -2219,7 +2194,7 @@
     <h1>Sources</h1>
     <p>
       This bibliography is not complete:
-      details of some references
+      details of a few references
       are in individual footnotes.
     </p>
     <p>
@@ -2293,6 +2268,14 @@
         20 (3): 269-279
         (January 1977).
     </p>
+      <bibid>Chipps et al 1956</bibid>:
+        J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S,
+	"A mathematical language compiler",
+        in
+        <cite>Proceedings of the 1956 11th ACM national meeting</cite>
+        (1956).
+    <p>
+    </p>
     <p>
       <bibid>Chomsky 1956</bibid>:
       Noam Chomsky,
@@ -2321,6 +2304,15 @@
       Franklin Lewis DeRemer,
       "Practical Translators for LR(k) Languages"
       PhD thesis, MIT, Cambridge, Mass., Sept. 1969.
+    </p>
+    <p>
+      <bibid>Dijkstra 1961</bibid>:
+        Edsger W. Dijkstra,
+	"Algol 60 translation : An Algol 60 translator
+        for the x1 and Making a translator for Algol 60",
+	Research Report 35,
+        Mathematisch Centrum, Amsterdam
+        (1961).
     </p>
     <p>
       <bibid>Earley 1968</bibid>:
@@ -2411,6 +2403,14 @@
       [https://www.rand.org/content/dam/rand/pubs/research_memoranda/2008/RM704.pdf]
     </p>
     <p>
+        <bibid>Knuth 1962</bibid>:
+        Donald E. Knuth,
+	"A History of Writing Compilers",
+        in
+        <cite>Computers and Automation</cite>, pp. 8-10
+        (December 1962).
+    </p>
+    <p>
       <bibid>Knuth 1965</bibid>:
       Donald E. Knuth, "On the translation of languages from left to right"
       <cite>Information and Control</cite>, Vol. 8, Issue: 6, Page: 607-639.
@@ -2431,14 +2431,6 @@
       (1971)
     </p>
     <p>
-      <bibid>Knuth and Pardo 1976</bibid>:
-      Donald E. Knuth and L. Trabb Pardo, "The Early Development of
-      Programming Languages,"
-      <cite>Report STAN-CS-76-562</cite>, Computer Science Dept.,
-      Stanford Univ., Stanford, Calif. (Aug. 1976).
-      [http://bitsavers.org/pdf/stanford/cs_techReports/STAN-CS-76-562_EarlyDevelPgmgLang_Aug76.pdf ].
-    </p>
-    <p>
       <bibid>Knuth 1990</bibid>:
       Donald E. Knuth,
       "The Genesis of Attribute Grammars",
@@ -2447,6 +2439,14 @@
       pp 1-12.
       (September 1990)
       [http://www.dcs.warwick.ac.uk/~sk/cs325/gag.pdf]
+    </p>
+    <p>
+      <bibid>Knuth and Pardo 1976</bibid>:
+      Donald E. Knuth and L. Trabb Pardo, "The Early Development of
+      Programming Languages,"
+      <cite>Report STAN-CS-76-562</cite>, Computer Science Dept.,
+      Stanford Univ., Stanford, Calif. (Aug. 1976).
+      [http://bitsavers.org/pdf/stanford/cs_techReports/STAN-CS-76-562_EarlyDevelPgmgLang_Aug76.pdf ].
     </p>
     <p>
       <bibid>Leo 1991</bibid>:
@@ -2504,6 +2504,25 @@
       "Parsing Expressions by Recursive Descent",
       https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm.
       (1999)
+    </p>
+    <p>
+      <bibid>Padua 2000</bibid>:
+        David Padua,
+        "The FORTRAN I Compiler",
+        in
+        <cite>Computing in Science & Engineering</cite>, 2, pp. 70-75
+        (2000).
+        DOI: https://doi.org/10.1109/5992.814661.
+    </p>
+    <p>
+	<bibid>Perlis et al 1958</bibid>:
+        A.J. Perlis, J.W. Smith and H.R. vanZoeren,
+        "Internal Translator (IT)
+        A Compiler for the 650",
+        Computation Center,
+        Carnegie Institute of Technology,
+        p. 1.17 to p. 1.22
+        (April 18, 1958).
     </p>
     <p>
       <bibid>Post 1943</bibid>:
@@ -2571,6 +2590,16 @@
       <cite>Lecture Notes in Computer Science</cite>,
       Volume 201, Springer-Verlag GmbH, pp. 113-128 (1985).
       DOI: 10.1007/3-540-15975-4_33.
+    </p>
+    <p>
+      <bibid>Wadler 1990</bibid>:
+        Philip Wadler,
+        "Comprehending Monads"
+        In
+        <cite>Proceedings of the 1990 ACM conference on LISP and functional programming</cite>
+        (LFP '90).
+        ACM, New York, NY, USA, 61-78 (1990).
+	DOI: http://dx.doi.org/10.1145/91556.91592.
     </p>
     <p>
       <bibid>Wadler 1995</bibid>:
