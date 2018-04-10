@@ -567,7 +567,7 @@
       It is A.E. Gleenie's 1960 description of his compiler-compiler<a id="footnote-37-ref" href="#footnote-37">[37]</a>.
       Glennie's
       <term>universal compiler</term>
-      apparently was useable,
+      apparently is useable,
       but it is more of a methodology
       than an implementation -- the compilers must be written by
       hand.
@@ -612,9 +612,7 @@
         corner</term>
       parser<a id="footnote-39-ref" href="#footnote-39">[39]</a>.
     </p>
-    <p>You would expect parsing might start with hard-written
-      parsers for specific grammar classes.
-      But in fact, the Irons parser is declarative and general.
+    <p>The Irons parser is declarative and general.
       And since it is general,
       operator expressions are within the power of
       the Irons parser<a id="footnote-40-ref" href="#footnote-40">[40]</a>.
@@ -630,7 +628,9 @@
     </p>
     <p>It is important to note that no useful parser can be purely top-down --
       if parser worked purely pure top-down, it would never look at its input.
-      So every top-parser we will consider has *some* kind of bottom-up element.
+      So every top-parser we will consider has
+      <em>some</em>
+      kind of bottom-up element.
       That bottom-up element may be very simple -- for example, one character lookahead.
       The
       <a href="#bib-Irons_1961">Irons 1961</a>
@@ -641,7 +641,7 @@
     <h1>Terms:
       <term>Bottom-up</term></h1>
     <p>A bottom-up parser deduces a rule from its constituents.
-      That is, it looks at either the input or the LHS symbols
+      That is, it looks at either the input or at the LHS symbols
       of previously deduced rules,
       and from that deduces a rule.
       Thus, it works from the input tokens, and works
@@ -664,8 +664,9 @@
       but they will be important for us.
     </p>
     <h1>1961: Lucas discovers recursive descent</h1>
-    <p>Peter Lucas publishes the first description of a purely top-down parser<a id="footnote-42-ref" href="#footnote-42">[42]</a>.
-      Either Irons paper or this one can be considered to be recursive descent<a id="footnote-43-ref" href="#footnote-43">[43]</a>.
+    <p>Peter Lucas publishes the his description of a top-down parser<a id="footnote-42-ref" href="#footnote-42">[42]</a>.
+      Either Irons paper or this one can be considered to be
+      the first description of recursive descent<a id="footnote-43-ref" href="#footnote-43">[43]</a>.
       Except to say that he deals properly with them, Lucas does not say
       how he parses operator expressions.
       But it is easy to believe Lucas'
@@ -2296,34 +2297,33 @@
  <a href="#footnote-41-ref">&#8617;</a></p>
 <p id="footnote-42">42.
         <a href="#bib-Lucas_1961">Lucas 1961</a>.
-        I follow
-        <a href="#bib-Grune_and_Jacobs_2008">Grune and Jacobs 2008</a>
-        in calling Lucas the discoverer of recursive descent.
-        In fact, both
-        <a href="#bib-Irons_1961">Irons 1961</a>
-        and
-        <a href="#bib-Lucas_1961">Lucas 1961</a>
-        are recursive descent with a major bottom-up element.
-        In conversation, Irons often described his 1961 parser as a kind of recursive descent.
-        Perhaps Grune and Jacobs based their decision on the Lucas' description of his algorithm,
-        which talks about his parser's bottom-up element only briefly,
-        while describing the top-down element in detail.
-        Also, the Lucas algorithm more resembles modern implementations of recursive descent
-        much more closely than
-        <a href="#bib-Irons_1961">Irons 1961</a>.
  <a href="#footnote-42-ref">&#8617;</a></p>
 <p id="footnote-43">43.
-        As a former student of Irons at Yale,
-        my personal preference would be to give Ned the credit
-        for recursive descent.
-        And this is what Peter Denning does in his introduction
-        to the reprint of
-        <a href="#bib-Irons_1961">Irons 1961</a>
-        (<cite>Communications of the ACM</cite>, 25th Anniversary Issue, p. 14).
-        But
-        <a href="#bib-Grune_and_Jacobs_2008">Grune and Jacobs 2008</a>
-        gives the credit to
-        <a href="#bib-Lucas_1961">Lucas 1961</a>.
+        <p>
+          <a href="#bib-Grune_and_Jacobs_2008">Grune and Jacobs 2008</a>
+          call Lucas the discoverer of recursive descent.
+          In fact, both
+          <a href="#bib-Irons_1961">Irons 1961</a>
+          and
+          <a href="#bib-Lucas_1961">Lucas 1961</a>
+          are recursive descent with a major bottom-up element.
+          Perhaps Grune and Jacobs based their decision on the Lucas' description of his algorithm,
+          which talks about his parser's bottom-up element only briefly,
+          while describing the top-down element in detail.
+          Also, the Lucas algorithm more resembles modern implementations of recursive descent
+          much more closely than
+          <a href="#bib-Irons_1961">Irons 1961</a>.
+        </p>
+        <p>
+          In conversation, Irons described his 1961 parser as a kind of recursive descent.
+          As a former student of Irons at Yale,
+          my personal preference would be to give Ned the credit
+          for recursive descent.
+          And this is what Peter Denning does in his introduction
+          to the reprint of
+          <a href="#bib-Irons_1961">Irons 1961</a>
+          (<cite>Communications of the ACM</cite>, 25th Anniversary Issue, p. 14).
+        </p>
  <a href="#footnote-43-ref">&#8617;</a></p>
 <p id="footnote-44">44.
         <a href="#bib-Lucas_1961">Lucas 1961</a>
