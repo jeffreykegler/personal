@@ -2082,8 +2082,7 @@
       <footnote>
         In this, precedence goes from tightest to loosest.
         Single bars (<tt>|</tt>) separate RHS's of equal precedence.
-        Double bars (<tt>||</tt>) separate RHS's of different precedence --
-        precedence goes from tightest to loosest.
+        Double bars (<tt>||</tt>) separate RHS's of different precedence.
         Associativity defaults to left,
         and exceptions are indicated by the value of the
         <tt>assoc</tt>
