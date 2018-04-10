@@ -161,9 +161,9 @@
       interpreted using basic string manipulations.
       It is only when those string manipulations turn to dealing
       with arithmetic expressions that they become sophisticated
-      enough to be called parsing techniques,
-      and only then that
-      having a parsing theory to describe them becomes helpful.
+      enough to be called parsing techniques.
+      And only then does a parsing theory to describe
+      those techniques become helpful.
     </p>
     <p>
       Rutishauser's language, and in fact all languages before
@@ -226,7 +226,7 @@
     </p>
     <h1>1952: Grace Hopper uses the term
       <term>compiler</term></h1>
-    <p>Grace Hopper writes a linker-loader,a
+    <p>Grace Hopper writes a linker-loader,
       and calls it a
       <term>compiler</term><footnote>
         https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers%22.
@@ -467,8 +467,10 @@
         discovery, maps or
         <term>transforms</term>
         the output of the middle
-        layer. Chomsky's top layer is the inspiration for AST transformation
-        phase of modern compilers.</li>
+        layer. Chomsky's top layer is the inspiration for
+	the AST transformation
+        phase of modern compilers.
+	</li>
     </ul>
     <h1>Term:
       <term>Parser</term></h1>
@@ -566,10 +568,10 @@
       customers. FORTRAN is the first high-level language that will find
       widespread implementation. As of this writing, it is the oldest
       language that survives in practical use.</p>
-    <p>FORTRAN is a line-by-line language.
+    <p>FORTRAN I is a line-by-line language.
       Its parsing is non-Chomskyan.
       But it includes one important discovery.
-      FORTRAN I was allowed expressions and,
+      FORTRAN allows expressions and,
       learning from the
       dissatisfaction with the IT compiler,
       FORTRAN honors associativity
@@ -720,7 +722,7 @@
       but he does
       <em>not</em>
       use it in the way
-      Chomsky, Backus and Naur intended BNF.
+      Chomsky, Backus and Naur intended.
       Glennie is using BNF to describe a
       <b>procedure</b>.
       In true BNF, the order of the rules does not matter --
@@ -885,7 +887,7 @@
       Dijkstra's approach is new.
       In the classic approach,
       the number
-      of level of precedence is hard-coded into the
+      of levels of precedence is hard-coded into the
       algorithm.
       Dijkstra's algorithm can handle any number of levels
       of precedence without a change in its code,
@@ -894,7 +896,7 @@
     <h1>The Operator Issue as of 1961</h1>
     <p>The results of 1961 transformed the Operator Issue.
       Before ALGOL,
-      parsing operator expression parsing essentially
+      parsing operator expressions essentially
       <em>was</em>
       parsing.
       After ALGOL, almost all languages will be block-structured
@@ -985,7 +987,7 @@
       while pure recursive descent cannot
       <em>parse</em>
       operator expressions,
-      but it can
+      it can
       <em>recognize</em>
       them.
       This means pure recursive descent may not be able to create
@@ -1374,7 +1376,8 @@
     </p>
     <h1>Term:
       <term>Inherited attributes</term></h1>
-    <p>Recall that a node in parse gets its synthetic attributes from
+    <p>Recall that a node in a parse
+    gets its synthetic attributes from
       its children. Inherited attributes are attibutes
       that a node gets from
       its parents.
@@ -1562,8 +1565,9 @@
       most operator expressions directly.
     </p>
     <p>
-      All the criteria of the original quest have not been
-      completely met.
+      Not all of the criteria
+      of the original quest have been
+      fully met.
       Nonetheless,
       after two decades of research,
       it seems as if the Parsing Problem
@@ -1910,7 +1914,8 @@
       </footnote>
     </blockquote>
     <p>
-      With this single line in middle of a change list hundreds of lines long.
+      With this single line
+      in the middle of a change list hundreds of lines long.
       GNU announces a major event in parsing history.
       (Bison, an LALR parser, is the direct descendant of Steve Johnson's
       <tt>yacc</tt>.)
