@@ -2153,16 +2153,18 @@
       and are common in calculus.
     </p>
     <h1>The Operator Issue as of 2012</h1>
-    <p>It is said that no theory can be considered correct
-      until it is shown to be a special case of a larger theory.
-      Marpa allows operators expressions to be parsed as BNF,
+    <p>Marpa allows operators expressions to be parsed as BNF,
       eliminating the need for them.
+      On the other hand,
       Marpa's ability to handle second-order languages
       allows it to take statements which describe expressions
       in terms of precedence and association,
       and rewrite them in a natural way into Chomskyan form.
-      In this way the grammar writer does not lose
-      the benefits of Chomskyan parsing.
+      In this way the grammar writer has all
+      the benefits of Chomskyan parsing,
+      but is also allowed to describe his grammar in terms
+      of operators,
+      when that is convenient.
       Once again, the Operator Issue seems to be solved,
       but this time perhaps for real.
     </p><h1>The Parsing Problem as of 2012</h1>
