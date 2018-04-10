@@ -468,9 +468,9 @@
         <term>transforms</term>
         the output of the middle
         layer. Chomsky's top layer is the inspiration for
-	the AST transformation
+        the AST transformation
         phase of modern compilers.
-	</li>
+      </li>
     </ul>
     <h1>Term:
       <term>Parser</term></h1>
@@ -644,6 +644,7 @@
       and parentheses indicate syntax only in a few specific cases. The
       ALGOL compiler will have to find the structure.
     </p>
+    <h1>The Parsing Problem</h1>
     <p>With the ALGOL 60 report, a quest begins which continues to this day:
       to find a parser that solves the Parsing Problem.
       Ideally such a parser is
@@ -1377,7 +1378,7 @@
     <h1>Term:
       <term>Inherited attributes</term></h1>
     <p>Recall that a node in a parse
-    gets its synthetic attributes from
+      gets its synthetic attributes from
       its children. Inherited attributes are attibutes
       that a node gets from
       its parents.
@@ -2133,7 +2134,7 @@
       financial calculations,
       and are common in calculus.
     </p>
-    <h1>Operator Expressions as of 2012</h1>
+    <h1>The Operator Issue as of 2012</h1>
     <p>It is said that no theory can be considered correct
       until it is shown to be a special case of a larger theory.
       Marpa allows operators expressions to be parsed as BNF,
