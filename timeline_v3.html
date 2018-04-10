@@ -676,7 +676,7 @@
     <h1>1961: Dijkstra's shunting yard algorithm</h1>
     <p>In November 1961, Dijkstra publishes the
       <q>shunting yard</q>
-      algorithm.<a id="footnote-45-ref" href="#footnote-45">[45]</a>
+      algorithm<a id="footnote-45-ref" href="#footnote-45">[45]</a>.
       In Norvell's useful classification<a id="footnote-46-ref" href="#footnote-46">[46]</a>
       of operator expression parsers,
       all
@@ -805,7 +805,7 @@
       out of the syntactic phase into the semantics
       but, once again,
       it seemed that
-      Chomskyan purity had to be thrown overboard.
+      Chomskyan purity had to be thrown overboard
       if the ship was to stay afloat.
     </p>
     <p>Bottom line: as of 1961 the Operator Issue takes a new form.
@@ -821,7 +821,7 @@
       But Dijkstra's algorithm has no more parsing power
       than the classic operator
       precedence algorithm --
-      it did nothing to change the basic tradeoffs.
+      it does nothing to change the basic tradeoffs.
     </p>
     <h1>1964: The Meta II compiler</h1>
     <p>Schorre publishes a paper on the Meta II
@@ -856,8 +856,8 @@
       for the ideal
       ALGOL parser was that it be
       <q>efficient</q>.
-      As of 1965 this notion has become more precise,
-      thanks to a notation that Knuth borrowed from
+      As of 1965 this notion becomes more precise,
+      thanks to a notation that Knuth borrows from
       calculus.
       This
       <q>big O</q>
@@ -878,7 +878,7 @@
       In the case of parsing, by convention,
       the big O function is usually a function
       of the length of the input<a id="footnote-52-ref" href="#footnote-52">[52]</a>.
-    </p><p>Of the many possible
+      Of the many possible
       <q>big O</q>
       functions,
       only a few will be of interest in this timeline.
@@ -947,7 +947,7 @@
     <blockquote>
       Another important area of research is to develop algorithms that
       accept LR(k) grammars, or special classes of them, and to mechanically
-      produce efficient parsing programs.
+      produce efficient parsing programs.<a id="footnote-53-ref" href="#footnote-53">[53]</a>
     </blockquote>
     <p>Implied in this is
       the belief that
@@ -989,23 +989,21 @@
       grammars, which arose historically,
       have lacked such a description.
       In 1968,
-      Lewis and Stearns fill that gap by defining the LL(k) grammars<a id="footnote-53-ref" href="#footnote-53">[53]</a>.
+      Lewis and Stearns fill that gap by defining the LL(k) grammars<a id="footnote-54-ref" href="#footnote-54">[54]</a>.
     </p>
     <h1>Terms:
       <term>LL</term>,
-      <term>LR</term>,
-      <term>RL</term>
       and
-      <term>RR</term></h1>
-    <p>When LL is added to the vocabulary of parsing, the meaning of
+      <term>LR</term>
+    </h1><p>When LL is added to the vocabulary of parsing, the meaning of
       <term>LR</term>
       shifts slightly. In 1965 Knuth meant LR to mean
-      <q>translatable from left to right</q><a id="footnote-54-ref" href="#footnote-54">[54]</a>.
+      <q>translatable from left to right</q><a id="footnote-55-ref" href="#footnote-55">[55]</a>.
       But LL means
       <q>scan from the left, using left reductions</q>
       and, in response, the meaning of LR shifts to become
       <q>scan from the left, using
-        right reductions</q><a id="footnote-55-ref" href="#footnote-55">[55]</a>.
+        right reductions</q><a id="footnote-56-ref" href="#footnote-56">[56]</a>.
     </p><p>If there is a number after the parentheses in this notation for
       parsing algorithms, it usually indicates the number of tokens of
       lookahead.
@@ -1064,7 +1062,7 @@
       means
       <q>zero or more occurences of Z</q>.
       Expanded into pure BNF,
-      and avoiding empty right hands sides,
+      and avoiding empty right hand sides,
       our operator "list" grammar becomes
       LIST-OP:
     </p><pre id="g-list-op"><tt>
@@ -1091,7 +1089,7 @@
       the grammar enforces precedence.
     </p>
     <h1>1968: Earley's algorithm</h1>
-    <p>Jay Earley discovers the algorithm named after him<a id="footnote-56-ref" href="#footnote-56">[56]</a>.
+    <p>Jay Earley discovers the algorithm named after him<a id="footnote-57-ref" href="#footnote-57">[57]</a>.
       Like the Irons
       algorithm, Earley's algorithm is Chomskyan, declarative and fully
       general. Unlike the Irons algorithm, it does not backtrack. Earley's
@@ -1113,7 +1111,7 @@
       variables.
       In 1968,
       Knuth publishes a paper on a concept he had been working for the
-      previous few years: inherited attributes<a id="footnote-57-ref" href="#footnote-57">[57]</a>.
+      previous few years: inherited attributes<a id="footnote-58-ref" href="#footnote-58">[58]</a>.
     </p>
     <h1>Term:
       <term>Inherited attributes</term></h1>
@@ -1137,7 +1135,7 @@
       practically parseable subset of the LR(k) languages.
       In 1969,
       Frank DeRemer describes a new variant of Knuth's LR
-      parsing<a id="footnote-58-ref" href="#footnote-58">[58]</a>.
+      parsing<a id="footnote-59-ref" href="#footnote-59">[59]</a>.
       DeRemer's LALR algorithm requires only a stack and a state
       table of quite manageable size.
       LALR looks practical,
@@ -1150,7 +1148,7 @@
     <p>Ken Thompson writes the
       <tt>ed</tt>
       editor as one of the
-      first components of UNIX<a id="footnote-59-ref" href="#footnote-59">[59]</a>.
+      first components of UNIX<a id="footnote-60-ref" href="#footnote-60">[60]</a>.
       Before 1969,
       regular expressions were an
       esoteric mathematical formalism. Through the
@@ -1160,7 +1158,7 @@
       part of the working programmer's toolkit.</p>
     <h1>1972: Aho and Ullman is published</h1>
     <p>Alfred Aho and Jeffrey Ullman publish
-      the first volume<a id="footnote-60-ref" href="#footnote-60">[60]</a>
+      the first volume<a id="footnote-61-ref" href="#footnote-61">[61]</a>
       of
       their two volume textbook
       summarizing the theory of parsing.
@@ -1169,17 +1167,16 @@
       slowed dramatically after 1972. Aho and Ullman's version
       of Earley's algorithm includes
       a straightforward fix to the zero-length rule bug in Earley's
-      original<a id="footnote-61-ref" href="#footnote-61">[61]</a>.
+      original<a id="footnote-62-ref" href="#footnote-62">[62]</a>.
       Unfortunately, this fix involves adding even
       more bookkeeping to Earley's.</p>
     <p>Under the names TDPL and GTDPL, Aho and Ullman investigate
-      the non-Chomksyan parsers in the Schorre lineage<a id="footnote-62-ref" href="#footnote-62">[62]</a>. They note that
+      the non-Chomksyan parsers in the Schorre lineage<a id="footnote-63-ref" href="#footnote-63">[63]</a>. They note that
       <q>it can be quite difficult to determine what language is
-        defined by a TDPL parser</q><a id="footnote-63-ref" href="#footnote-63">[63]</a>.
-    </p>
-    <p>At or around this time, rumor has it that the main line of
+        defined by a TDPL parser</q><a id="footnote-64-ref" href="#footnote-64">[64]</a>.
+      At or around this time, rumor has it that the main line of
       development for GTDPL parsers is classified secret by the US
-      government<a id="footnote-64-ref" href="#footnote-64">[64]</a>.
+      government<a id="footnote-65-ref" href="#footnote-65">[65]</a>.
       Public interest in GTDPL fades.</p>
     <h1>1973: Pratt parsing</h1>
     <p>As we have noted pure LL(1) cannot parse operator expressions,
@@ -1188,28 +1185,29 @@
       What about
       making the entire grammar an operator grammar?
       This idea had already occurred to Samuelson and Bauer in 1959.
-      In 1973, Vaughan Pratt revives it<a id="footnote-65-ref" href="#footnote-65">[65]</a>.
+      In 1973, Vaughan Pratt revives it<a id="footnote-66-ref" href="#footnote-66">[66]</a>.
     </p>
-    <p>There are many problems with switching to operator
+    <p>There are problems with switching to operator
       grammars.
       Operator grammars are non-Chomskyan -- the BNF no longer
-      accurately describes the grammar<a id="footnote-66-ref" href="#footnote-66">[66]</a>.
+      accurately describes the grammar<a id="footnote-67-ref" href="#footnote-67">[67]</a>.
       Instead the BNF becomes part of
       a combined notation, and the actual grammar parsed depends also on
-      precedence and semantics.
+      precedence, associativity,
+      and semantics.
       And operator grammars have a very restricted
       form -- most practical languages are not operator grammars.</p>
     <p>But many practical grammars are almost operator grammars. And the
       Chomskyan approach has always had its dissenters.
       Vaughn Pratt is one
       of these, and discovers a new approach
-      to operator expression parsing: precedence climbing.
+      to operator expression parsing:
       Pratt parsing is the third and last approach in
       Theodore
       Norvell's taxonomy of approaches to operator expression
-      parsing<a id="footnote-67-ref" href="#footnote-67">[67]</a>.
+      parsing<a id="footnote-68-ref" href="#footnote-68">[68]</a>.
       Some have adopted Pratt parsing
-      as the overall solution to their parsing problems<a id="footnote-68-ref" href="#footnote-68">[68]</a>.
+      as the overall solution to their parsing problems<a id="footnote-69-ref" href="#footnote-69">[69]</a>.
     </p>
     <p>As of 2018, the Pratt approach
       is not popular as an overall strategy.
@@ -1223,11 +1221,11 @@
     </p>
     <h1>1975: The C compiler is converted to LALR</h1>
     <p>Bell Labs converts its C compiler from hand-written recursive
-      descent to DeRemer's LALR algorithm<a id="footnote-69-ref" href="#footnote-69">[69]</a>.
+      descent to DeRemer's LALR algorithm<a id="footnote-70-ref" href="#footnote-70">[70]</a>.
     </p>
     <h1>1977: The first dragon book is published</h1>
     <p>The first
-      <q>dragon book</q><a id="footnote-70-ref" href="#footnote-70">[70]</a>
+      <q>dragon book</q><a id="footnote-71-ref" href="#footnote-71">[71]</a>
       comes out. This soon-to-become
       classic textbook is nicknamed after the drawing on the front cover,
       in which a knight takes on a dragon. Emblazoned on the knight's lance
@@ -1235,12 +1233,12 @@
       <q>LALR</q>. From here on out, to speak lightly
       of LALR will be to besmirch the escutcheon of parsing theory.</p>
     <h1>1979: Yacc is released</h1>
-    <p>Bell Laboratories releases Version 7 UNIX<a id="footnote-71-ref" href="#footnote-71">[71]</a>.
+    <p>Bell Laboratories releases Version 7 UNIX<a id="footnote-72-ref" href="#footnote-72">[72]</a>.
       V7 includes what is,
       by far, the most comprehensive, useable and easily available compiler
       writing toolkit yet developed.</p>
     <p>Part of the V7 toolkit is Yet Another Compiler Compiler
-      (<tt>yacc</tt>)<a id="footnote-72-ref" href="#footnote-72">[72]</a>.
+      (<tt>yacc</tt>)<a id="footnote-73-ref" href="#footnote-73">[73]</a>.
       <tt>yacc</tt>
       is LALR-powered. Despite its name,
       <tt>yacc</tt>
@@ -1283,7 +1281,7 @@
       can both be declared solved.
     </p>
     <h1>1987: Perl 1 is released</h1>
-    <p>Larry Wall introduces Perl 1<a id="footnote-73-ref" href="#footnote-73">[73]</a>. Perl embraces complexity like no
+    <p>Larry Wall introduces Perl 1<a id="footnote-74-ref" href="#footnote-74">[74]</a>. Perl embraces complexity like no
       previous language. Larry uses
       <tt>yacc</tt>
       and LALR very aggressively --
@@ -1292,18 +1290,18 @@
     <p>
       Wadler starts to introduce monads to the functional programming community.
       As one example he converts his previous efforts at function parsing
-      techniques to monads<a id="footnote-74-ref" href="#footnote-74">[74]</a>.
+      techniques to monads<a id="footnote-75-ref" href="#footnote-75">[75]</a>.
       The parsing technique is pure recursive descent.
       The examples shown for monadic parsing are very simple,
       and do not include operator expressions.
       In his earlier non-monadic work, Wadler uses a very restricted form of operator expression:
       His grammar avoided left recursion by using parentheses,
       and operator precedence was not implemented
-      <a id="footnote-75-ref" href="#footnote-75">[75]</a>.
+      <a id="footnote-76-ref" href="#footnote-76">[76]</a>.
     </p>
     <h1>1991: Leo's speed-up of Earley's algorithm</h1>
     <p>Joop Leo discovers a way of speeding up right recursions in
-      Earley's algorithm<a id="footnote-76-ref" href="#footnote-76">[76]</a>. Leo's algorithm is linear for just about every
+      Earley's algorithm<a id="footnote-77-ref" href="#footnote-77">[77]</a>. Leo's algorithm is linear for just about every
       unambiguous grammar of practical interest, and many ambiguous ones
       as well. In 1991 hardware is six orders of magnitude faster than
       1968 hardware, so that the issue of bookkeeping overhead had receded
@@ -1351,7 +1349,7 @@
       is that they are incorrect.
       In Larry's words, LALR is
       <q>fast
-        but stupid</q><a id="footnote-77-ref" href="#footnote-77">[77]</a>.
+        but stupid</q><a id="footnote-78-ref" href="#footnote-78">[78]</a>.
     </p>
     <p>
       On the written record, the discontent with LALR and
@@ -1362,14 +1360,18 @@
       how to make the standard state-of-the-art tool work?
       But, by 1991,
       a movement away from LALR has already begun.
+      Parsing practice falls back on
+      recursive descent
+      and the Operator Issue
+      is back in full force.
     </p>
     <h1>1992: Combinator parsing</h1>
     <p>
       Combinator parsing
-      was introduced in two 1992 papers<a id="footnote-78-ref" href="#footnote-78">[78]</a>.
+      was introduced in two 1992 papers<a id="footnote-79-ref" href="#footnote-79">[79]</a>.
       Of more interest
-      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-79-ref" href="#footnote-79">[79]</a>.
-      As Hutton explains<a id="footnote-80-ref" href="#footnote-80">[80]</a>
+      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-80-ref" href="#footnote-80">[80]</a>.
+      As Hutton explains<a id="footnote-81-ref" href="#footnote-81">[81]</a>
       a combinator is an attribute grammar
       with one inherited attribute (the input string)
       and two synthesized attributes (the value of the node
@@ -1399,7 +1401,7 @@
       <q>combinator parsers give rise to a monad</q>
       and shows
       how his presentation could be rewritten in a form
-      closely related to monads<a id="footnote-81-ref" href="#footnote-81">[81]</a>.
+      closely related to monads<a id="footnote-82-ref" href="#footnote-82">[82]</a>.
     </p>
     <h1>1995: Wadler's monads</h1><p>
       In the adaptation of monads into the world of
@@ -1408,8 +1410,7 @@
       is a turning point.
       One of Wadler's examples is a parser based on
       monads and combinator parsing.
-      From here on out,
-      combinator parsing becomes the standard
+      Combinator parsing becomes the standard
       example of monad programming.
     </p>
     <p>In its monadic form,
@@ -1436,12 +1437,15 @@
       <a href="#bib-Wadler_1995">Wadler 1995</a>
       used parsing as an example to motivate
       its presentation of monads.
-      Graham Hutton and Erik Meijer<a id="footnote-82-ref" href="#footnote-82">[82]</a>
+      Graham Hutton and Erik Meijer<a id="footnote-83-ref" href="#footnote-83">[83]</a>
       take the opposite perspective -- they
       write a paper on combinator parsing that could
       <q>also be viewed as a first introduction to the use
-        of monads in programming.</q><a id="footnote-83-ref" href="#footnote-83">[83]</a>
-    </p><p>The most complicated grammar for operator expressions<a id="footnote-84-ref" href="#footnote-84">[84]</a>
+        of monads in programming.</q><a id="footnote-84-ref" href="#footnote-84">[84]</a>
+    </p>
+    <p>The most complicated grammar<a id="footnote-85-ref" href="#footnote-85">[85]</a>
+      for operator expressions in
+      <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a>
       has two operators (exponentiation and addition)
       with two levels of precedence
       and two different associativities:
@@ -1494,7 +1498,7 @@
       Perl 6. Larry does not even consider using LALR again.</p>
     <h1>2002: Aycock and Horspool solve Earley's zero-length rule problem</h1>
     <p>John Aycock and R. Nigel Horspool publish their attempt at a
-      fast, practical Earley's parser<a id="footnote-85-ref" href="#footnote-85">[85]</a>. Missing from it is Joop Leo's
+      fast, practical Earley's parser<a id="footnote-86-ref" href="#footnote-86">[86]</a>. Missing from it is Joop Leo's
       improvement -- they seem not to be aware of it. Their own speedup
       is limited in what it achieves and the complications it introduces
       can be counter-productive at evaluation time. But buried in their
@@ -1505,7 +1509,7 @@
       <tt>yacc</tt>, but the demand for
       declarative parsers remains.
       In 2004,
-      Bryan Ford<a id="footnote-86-ref" href="#footnote-86">[86]</a>
+      Bryan Ford<a id="footnote-87-ref" href="#footnote-87">[87]</a>
       fills this gap by
       repackaging the nearly-forgotten GTDPL.
       Ford's new algorithm,
@@ -1542,14 +1546,14 @@
       slightly more powerful, but too dangerous to be worth it.
     </p>
     <p>
-      PEG, in safe use, would essentially be LL(1)<a id="footnote-87-ref" href="#footnote-87">[87]</a>.
+      PEG, in safe use, would essentially be LL(1)<a id="footnote-88-ref" href="#footnote-88">[88]</a>.
       Those adventurous souls who parse operator expressions under
       PEG typically seem to parse the operator expressions as lists,
       and re-process them in the semantics.
     </p>
     <h1>2006: GNU C reverts to recursive descent</h1>
     <blockquote>The old Bison-based C and Objective-C parser has been replaced by a new, faster hand-written recursive-descent
-      parser.<a id="footnote-88-ref" href="#footnote-88">[88]</a>
+      parser.<a id="footnote-89-ref" href="#footnote-89">[89]</a>
     </blockquote>
     <p>
       With this single line
@@ -1566,17 +1570,17 @@
       that LALR replaced a quarter century earlier: recursive descent.</p>
     <h1>2010: Leo 1991 is implemented</h1><p>
     </p><p>Jeffrey Kegler (the author of this timeline) releases the first
-      practical implementation of Joop Leo's algorithm<a id="footnote-89-ref" href="#footnote-89">[89]</a>.
+      practical implementation of Joop Leo's algorithm<a id="footnote-90-ref" href="#footnote-90">[90]</a>.
       The new parser, named Marpa, is general, declarative
       and linear for all the grammars discussed in
       <a href="#bib-Knuth_1965">Knuth 1965</a>, that is, it is
-      linear for the LR(k) grammars for all finite k<a id="footnote-90-ref" href="#footnote-90">[90]</a>.
+      linear for the LR(k) grammars for all finite k<a id="footnote-91-ref" href="#footnote-91">[91]</a>.
       This means it is also linear for most of the grammar classes we have discussed in this
       timeline.
     </p><ul>
       <li>LR(1) grammars.</li>
       <li>LL(k) grammars for all finite k, including LL(1) grammars.</li>
-      <li>Operator expression grammars<a id="footnote-91-ref" href="#footnote-91">[91]</a>.
+      <li>Operator expression grammars<a id="footnote-92-ref" href="#footnote-92">[92]</a>.
       </li>
     </ul>
     <p>This is a vast class of grammars,
@@ -1584,11 +1588,11 @@
       can readily determine if their grammar is linear under Marpa.
       Marpa will parse a grammar in linear time, if
     </p><ul id="loc-linearity-rules">
-      <li>It is unambiguous<a id="footnote-92-ref" href="#footnote-92">[92]</a>.
+      <li>It is unambiguous<a id="footnote-93-ref" href="#footnote-93">[93]</a>.
       </li>
-      <li>It has no unmarked middle recursions<a id="footnote-93-ref" href="#footnote-93">[93]</a>.
+      <li>It has no unmarked middle recursions<a id="footnote-94-ref" href="#footnote-94">[94]</a>.
       </li>
-      <li>It has no ambiguous right recursions<a id="footnote-94-ref" href="#footnote-94">[94]</a>.
+      <li>It has no ambiguous right recursions<a id="footnote-95-ref" href="#footnote-95">[95]</a>.
       </li>
     </ul>
     <p>The ability to ensure that a grammar can
@@ -1627,7 +1631,7 @@
     </p>
     <p>
       In 2012, Kegler releases a version of Marpa which allows
-      the user to mix Chomskyan and precedence parsing at will<a id="footnote-95-ref" href="#footnote-95">[95]</a>.
+      the user to mix Chomskyan and precedence parsing at will<a id="footnote-96-ref" href="#footnote-96">[96]</a>.
       Marpa's
       <q>precedenced statements</q>
       describe expressions
@@ -1636,10 +1640,10 @@
       <q>precedenced statements</q>
       are added to a grammar that Marpa parses in linear
       time, then the grammar remains linear as long as the precedenced statements
-      are (after precedence is taken in consideration) unambiguous<a id="footnote-96-ref" href="#footnote-96">[96]</a>.
+      are (after precedence is taken in consideration) unambiguous<a id="footnote-97-ref" href="#footnote-97">[97]</a>.
     </p><p>Here is an example of a Marpa
       <q>precedenced statement</q>:
-      <a id="footnote-97-ref" href="#footnote-97">[97]</a>
+      <a id="footnote-98-ref" href="#footnote-98">[98]</a>
     </p>
     <pre><tt>
               Expression ::=
@@ -1685,7 +1689,7 @@
       Again recall the four criteria from the original quest
       for a solution to the Parsing Problem:
       that a parser be efficient, practical, declarative and general.
-      Does Marpa<a id="footnote-98-ref" href="#footnote-98">[98]</a>
+      Does Marpa<a id="footnote-99-ref" href="#footnote-99">[99]</a>
       fulfill them?
     </p>
     <p>At first glance, no.
@@ -2374,19 +2378,22 @@
         in terms of the input length.
  <a href="#footnote-52-ref">&#8617;</a></p>
 <p id="footnote-53">53.
+        <a href="#bib-Knuth_1965">Knuth 1965</a>, p. 637.
+ <a href="#footnote-53-ref">&#8617;</a></p>
+<p id="footnote-54">54.
         <a href="#bib-Lewis_and_Stearns_1968">Lewis and Stearns 1968</a>.
         They are credited in
         <a href="#bib-Rosencrantz_and_Stearns_1970">Rosencrantz and Stearns 1970</a>
         and
         <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>, p. 368.
- <a href="#footnote-53-ref">&#8617;</a></p>
-<p id="footnote-54">54.
+ <a href="#footnote-54-ref">&#8617;</a></p>
+<p id="footnote-55">55.
         <a href="#bib-Knuth_1965">Knuth 1965</a>, p. 610.
         See on p. 611
         "corresponds with the intuitive notion of translation
         from left to right looking k characters ahead".
- <a href="#footnote-54-ref">&#8617;</a></p>
-<p id="footnote-55">55.
+ <a href="#footnote-55-ref">&#8617;</a></p>
+<p id="footnote-56">56.
         <a href="#bib-Knuth_1971">Knuth 1971</a>, p. 102.
         LL and LR have mirror images: RL means
         <q>scan from the right,
@@ -2400,70 +2407,70 @@
         --
         operator expression parsing
         in the IT compiler seems to have been RL(2) with backtracking.
- <a href="#footnote-55-ref">&#8617;</a></p>
-<p id="footnote-56">56.
-        <a href="#bib-Earley_1968">Earley 1968</a>.
  <a href="#footnote-56-ref">&#8617;</a></p>
 <p id="footnote-57">57.
-        <a href="#bib-Knuth_1968">Knuth 1968</a>.
+        <a href="#bib-Earley_1968">Earley 1968</a>.
  <a href="#footnote-57-ref">&#8617;</a></p>
 <p id="footnote-58">58.
-        <a href="#bib-DeRemer_1969">DeRemer 1969</a>
+        <a href="#bib-Knuth_1968">Knuth 1968</a>.
  <a href="#footnote-58-ref">&#8617;</a></p>
 <p id="footnote-59">59.
-        <a href="#bib-Darwin_1984">Darwin 1984</a>,
-        Section 3.1, "An old editor made new".
+        <a href="#bib-DeRemer_1969">DeRemer 1969</a>
  <a href="#footnote-59-ref">&#8617;</a></p>
 <p id="footnote-60">60.
-        <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>.
+        <a href="#bib-Darwin_1984">Darwin 1984</a>,
+        Section 3.1, "An old editor made new".
  <a href="#footnote-60-ref">&#8617;</a></p>
 <p id="footnote-61">61.
-        <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>, p 321.
+        <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>.
  <a href="#footnote-61-ref">&#8617;</a></p>
 <p id="footnote-62">62.
-        <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>, pp. 456-485.
+        <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>, p 321.
  <a href="#footnote-62-ref">&#8617;</a></p>
 <p id="footnote-63">63.
-        <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>, p. 466.
+        <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>, pp. 456-485.
  <a href="#footnote-63-ref">&#8617;</a></p>
 <p id="footnote-64">64.
-        http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2.
+        <a href="#bib-Aho_and_Ullman_1972">Aho and Ullman 1972</a>, p. 466.
  <a href="#footnote-64-ref">&#8617;</a></p>
 <p id="footnote-65">65.
-        <a href="#bib-Pratt_1973">Pratt 1973</a>.
+        http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2.
  <a href="#footnote-65-ref">&#8617;</a></p>
 <p id="footnote-66">66.
+        <a href="#bib-Pratt_1973">Pratt 1973</a>.
+ <a href="#footnote-66-ref">&#8617;</a></p>
+<p id="footnote-67">67.
         <a href="#bib-Samuelson_and_Bauer_1960">Samuelson and Bauer 1960</a>
         did not even include a BNF grammar --
         just the precedence tables.
- <a href="#footnote-66-ref">&#8617;</a></p>
-<p id="footnote-67">67.
-        <a href="#bib-Norvell_1999">Norvell 1999</a>.
  <a href="#footnote-67-ref">&#8617;</a></p>
 <p id="footnote-68">68.
-        <a href="#bib-Pratt_1973">Pratt 1973</a>.
+        <a href="#bib-Norvell_1999">Norvell 1999</a>.
  <a href="#footnote-68-ref">&#8617;</a></p>
 <p id="footnote-69">69.
-        <a href="#bib-Synder_1975">Synder 1975</a>.
-        See, in particular, pp. 67-68.
+        <a href="#bib-Pratt_1973">Pratt 1973</a>.
  <a href="#footnote-69-ref">&#8617;</a></p>
 <p id="footnote-70">70.
-        <a href="#bib-Aho_and_Ullman_1977">Aho and Ullman 1977</a>.
+        <a href="#bib-Synder_1975">Synder 1975</a>.
+        See, in particular, pp. 67-68.
  <a href="#footnote-70-ref">&#8617;</a></p>
 <p id="footnote-71">71.
-        <a href="#bib-McIlroy_and_Kernighan_1979">McIlroy and Kernighan 1979</a>.
+        <a href="#bib-Aho_and_Ullman_1977">Aho and Ullman 1977</a>.
  <a href="#footnote-71-ref">&#8617;</a></p>
 <p id="footnote-72">72.
-        S. C. Johnson, "Yet another compiler-compiler", in Volume 2A
-        of
         <a href="#bib-McIlroy_and_Kernighan_1979">McIlroy and Kernighan 1979</a>.
  <a href="#footnote-72-ref">&#8617;</a></p>
 <p id="footnote-73">73.
+        S. C. Johnson, "Yet another compiler-compiler", in Volume 2A
+        of
+        <a href="#bib-McIlroy_and_Kernighan_1979">McIlroy and Kernighan 1979</a>.
+ <a href="#footnote-73-ref">&#8617;</a></p>
+<p id="footnote-74">74.
         Larry Wall, 'v13i001: Perl, a "replacement" for awk and sed, Part01/10'. Newsgroup: comp.sources.unix.
         1988-02-01).
         [https://groups.google.com/forum/#!topic/comp.sources.unix/Njx6b6TiZos].
- <a href="#footnote-73-ref">&#8617;</a></p>
-<p id="footnote-74">74.
+ <a href="#footnote-74-ref">&#8617;</a></p>
+<p id="footnote-75">75.
         Philip Wadler,
         "Comprehending Monads"
         In
@@ -2471,18 +2478,18 @@
         (LFP '90).
         ACM, New York, NY, USA, 61-78. DOI: http://dx.doi.org/10.1145/91556.91592.
         (1990)
- <a href="#footnote-74-ref">&#8617;</a></p>
-<p id="footnote-75">75.
-        <a href="#bib-Wadler_1985">Wadler 1985</a>.
  <a href="#footnote-75-ref">&#8617;</a></p>
 <p id="footnote-76">76.
-        <a href="#bib-Leo_1991">Leo 1991</a>.
+        <a href="#bib-Wadler_1985">Wadler 1985</a>.
  <a href="#footnote-76-ref">&#8617;</a></p>
 <p id="footnote-77">77.
-        Perl 6 IRC, August 30, 2014.
-        [https://irclog.perlgeek.de/perl6/2014-08-30#i_9271280].
+        <a href="#bib-Leo_1991">Leo 1991</a>.
  <a href="#footnote-77-ref">&#8617;</a></p>
 <p id="footnote-78">78.
+        Perl 6 IRC, August 30, 2014.
+        [https://irclog.perlgeek.de/perl6/2014-08-30#i_9271280].
+ <a href="#footnote-78-ref">&#8617;</a></p>
+<p id="footnote-79">79.
         Some sources consider
         <a href="#bib-Wadler_1985">Wadler 1985</a>
         an
@@ -2491,8 +2498,8 @@
         I follow
         <a href="#bib-Grune_and_Jacobs_2008">Grune and Jacobs 2008</a>
         (p. 564).
- <a href="#footnote-78-ref">&#8617;</a></p>
-<p id="footnote-79">79.
+ <a href="#footnote-79-ref">&#8617;</a></p>
+<p id="footnote-80">80.
         The paper which is devoted to parsing is
         <a href="#bib-Hutton_1992">Hutton 1992</a>.
         The other paper, which centers on combinators as a programming
@@ -2504,34 +2511,34 @@
         but these avoid left recursion,
         and implement precedence and associativity,
         using parentheses.
- <a href="#footnote-79-ref">&#8617;</a></p>
-<p id="footnote-80">80.
-        <a href="#bib-Hutton_1992">Hutton 1992</a>, p. 5.
  <a href="#footnote-80-ref">&#8617;</a></p>
 <p id="footnote-81">81.
-        <a href="#bib-Hutton_1992">Hutton 1992</a>, pp. 19-20.
+        <a href="#bib-Hutton_1992">Hutton 1992</a>, p. 5.
  <a href="#footnote-81-ref">&#8617;</a></p>
 <p id="footnote-82">82.
-        <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a>.
+        <a href="#bib-Hutton_1992">Hutton 1992</a>, pp. 19-20.
  <a href="#footnote-82-ref">&#8617;</a></p>
 <p id="footnote-83">83.
-        <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a>,
-        p. 3.
+        <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a>.
  <a href="#footnote-83-ref">&#8617;</a></p>
 <p id="footnote-84">84.
+        <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a>,
+        p. 3.
+ <a href="#footnote-84-ref">&#8617;</a></p>
+<p id="footnote-85">85.
         <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a>, p. 18.
         A simpler arithmetic expression grammar on p. 15 raises no issues
         not present in the more complicated example.
- <a href="#footnote-84-ref">&#8617;</a></p>
-<p id="footnote-85">85.
-        <a href="#bib-Aycock_and_Horspool_2002">Aycock and Horspool 2002</a>.
  <a href="#footnote-85-ref">&#8617;</a></p>
 <p id="footnote-86">86.
+        <a href="#bib-Aycock_and_Horspool_2002">Aycock and Horspool 2002</a>.
+ <a href="#footnote-86-ref">&#8617;</a></p>
+<p id="footnote-87">87.
         <a href="#bib-Ford_2004">Ford 2004</a>.
         See also
         <a href="#bib-Ford_2002">Ford 2002</a>.
- <a href="#footnote-86-ref">&#8617;</a></p>
-<p id="footnote-87">87.
+ <a href="#footnote-87-ref">&#8617;</a></p>
+<p id="footnote-88">88.
         <a href="#bib-Mascrenhas_et_al_2014">Mascrenhas et al 2014</a>.
         My account of PEG is negative because almost all
         real-life PEG practice is unsafe,
@@ -2542,19 +2549,19 @@
         Programmers interested in the safe use of PEG should
         consult
         <a href="#bib-Mascrenhas_et_al_2014">Mascrenhas et al 2014</a>.
- <a href="#footnote-87-ref">&#8617;</a></p>
-<p id="footnote-88">88.
-        "GCC 4.1 Release Series: Changes, New Features, and Fixes"
-        [http://gcc.gnu.org/gcc-4.1/changes.html].
  <a href="#footnote-88-ref">&#8617;</a></p>
 <p id="footnote-89">89.
+        "GCC 4.1 Release Series: Changes, New Features, and Fixes"
+        [http://gcc.gnu.org/gcc-4.1/changes.html].
+ <a href="#footnote-89-ref">&#8617;</a></p>
+<p id="footnote-90">90.
         [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html].
         This references the initial announcement,
         and its examples and links are obsolete.
         The latest stable version of Marpa is
         <a href="#bib-Marpa__R2">Marpa::R2</a>.
- <a href="#footnote-89-ref">&#8617;</a></p>
-<p id="footnote-90">90.
+ <a href="#footnote-90-ref">&#8617;</a></p>
+<p id="footnote-91">91.
         In fact,
         <a href="#bib-Leo_1991">Leo 1991</a>
         proves his algorithm,
@@ -2575,13 +2582,13 @@
         <a href="#bib-Leo_1991">Leo 1991</a>
         in being linear for many ambiguous grammars,
         including those of most practical interest.
- <a href="#footnote-90-ref">&#8617;</a></p>
-<p id="footnote-91">91.
+ <a href="#footnote-91-ref">&#8617;</a></p>
+<p id="footnote-92">92.
           In the literature operator expression grammars are more often
           call simply
           <q>operator grammars</q>.
- <a href="#footnote-91-ref">&#8617;</a></p>
-<p id="footnote-92">92.
+ <a href="#footnote-92-ref">&#8617;</a></p>
+<p id="footnote-93">93.
           In the general case, ambiguity is undecidable, but
           in practice it is usually straight-forward for a programmer
           to determine that the grammar he wants is unambiguous.
@@ -2590,8 +2597,8 @@
           (a grammar with a particular input)
           is ambiguous and, since it parses ambiguous
           grammars, produces an error message showing where the ambiguity is.
- <a href="#footnote-92-ref">&#8617;</a></p>
-<p id="footnote-93">93.
+ <a href="#footnote-93-ref">&#8617;</a></p>
+<p id="footnote-94">94.
 A
           <q>marker</q>, in this sense, is something in the input
           that shows where the middle of a middle recursion is,
@@ -2606,8 +2613,8 @@ A
           ends to find it,
           the grammar is
           <q>marked</q>.
- <a href="#footnote-93-ref">&#8617;</a></p>
-<p id="footnote-94">94.
+ <a href="#footnote-94-ref">&#8617;</a></p>
+<p id="footnote-95">95.
           This is a very pedantic requirement,
           which practical programmers can in fact ignore.
           Any programmer who has found and eliminated
@@ -2623,23 +2630,23 @@ A
           any unambiguous
           grammars with ambiguous right recursions --
           neither Joop Leo or I know of any.
- <a href="#footnote-94-ref">&#8617;</a></p>
-<p id="footnote-95">95.
+ <a href="#footnote-95-ref">&#8617;</a></p>
+<p id="footnote-96">96.
         [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html].
         This references the initial announcement,
         and its examples and links are obsolete.
         The latest stable version of Marpa is
         <a href="#bib-Marpa__R2">Marpa::R2</a>.
- <a href="#footnote-95-ref">&#8617;</a></p>
-<p id="footnote-96">96.
+ <a href="#footnote-96-ref">&#8617;</a></p>
+<p id="footnote-97">97.
         Internally, Marpa rewrites precedenced statements into BNF.
         Marpa's rewrite does not use middle recursions
         and does not introduce any new ambiguities
         so that, following its
         <a href="#loc-linearity-rules">linearity
           rules</a>, the result must be linear.
- <a href="#footnote-96-ref">&#8617;</a></p>
-<p id="footnote-97">97.
+ <a href="#footnote-97-ref">&#8617;</a></p>
+<p id="footnote-98">98.
         In this, precedence goes from tightest to loosest.
         Single bars (<tt>|</tt>) separate RHS's of equal precedence.
         Double bars (<tt>||</tt>) separate RHS's of different precedence.
@@ -2660,9 +2667,9 @@ A
 	    "https://metacpan.org/pod/release/JKEGL/Marpa-R2-4.000000/pod/Scanless/DSL.pod"
 	    >
           the Marpa documentation</a>.
- <a href="#footnote-97-ref">&#8617;</a></p>
-<p id="footnote-98">98.
-        <a href="#bib-Marpa__R2">Marpa::R2</a>.
  <a href="#footnote-98-ref">&#8617;</a></p>
+<p id="footnote-99">99.
+        <a href="#bib-Marpa__R2">Marpa::R2</a>.
+ <a href="#footnote-99-ref">&#8617;</a></p>
 </body>
 </html>

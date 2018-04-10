@@ -875,12 +875,12 @@
     <h1>1961: Dijkstra's shunting yard algorithm</h1>
     <p>In November 1961, Dijkstra publishes the
       <q>shunting yard</q>
-      algorithm.<footnote>
+      algorithm<footnote>
         Edsger W. Dijkstra, "Algol 60 translation : An Algol 60 translator
         for the x1 and Making a translator for Algol 60", Research Report 35,
         Mathematisch Centrum, Amsterdam.
         (1961)
-      </footnote>
+      </footnote>.
       In Norvell's useful classification<footnote>
         <bibref>Norvell 1999</bibref>.
       </footnote>
@@ -1016,7 +1016,7 @@
       out of the syntactic phase into the semantics
       but, once again,
       it seemed that
-      Chomskyan purity had to be thrown overboard.
+      Chomskyan purity had to be thrown overboard
       if the ship was to stay afloat.
     </p>
     <p>Bottom line: as of 1961 the Operator Issue takes a new form.
@@ -1032,7 +1032,7 @@
       But Dijkstra's algorithm has no more parsing power
       than the classic operator
       precedence algorithm --
-      it did nothing to change the basic tradeoffs.
+      it does nothing to change the basic tradeoffs.
     </p>
     <h1>1964: The Meta II compiler</h1>
     <p>Schorre publishes a paper on the Meta II
@@ -1073,8 +1073,8 @@
       for the ideal
       ALGOL parser was that it be
       <q>efficient</q>.
-      As of 1965 this notion has become more precise,
-      thanks to a notation that Knuth borrowed from
+      As of 1965 this notion becomes more precise,
+      thanks to a notation that Knuth borrows from
       calculus.
       This
       <q>big O</q>
@@ -1115,7 +1115,7 @@
         results will be
         in terms of the input length.
       </footnote>.
-    </p><p>Of the many possible
+      Of the many possible
       <q>big O</q>
       functions,
       only a few will be of interest in this timeline.
@@ -1184,7 +1184,9 @@
     <blockquote>
       Another important area of research is to develop algorithms that
       accept LR(k) grammars, or special classes of them, and to mechanically
-      produce efficient parsing programs.
+      produce efficient parsing programs.<footnote>
+        <bibref>Knuth 1965</bibref>, p. 637.
+      </footnote>
     </blockquote>
     <p>Implied in this is
       the belief that
@@ -1236,11 +1238,9 @@
     </p>
     <h1>Terms:
       <term>LL</term>,
-      <term>LR</term>,
-      <term>RL</term>
       and
-      <term>RR</term></h1>
-    <p>When LL is added to the vocabulary of parsing, the meaning of
+      <term>LR</term>
+    </h1><p>When LL is added to the vocabulary of parsing, the meaning of
       <term>LR</term>
       shifts slightly. In 1965 Knuth meant LR to mean
       <q>translatable from left to right</q><footnote>
@@ -1326,7 +1326,7 @@
       means
       <q>zero or more occurences of Z</q>.
       Expanded into pure BNF,
-      and avoiding empty right hands sides,
+      and avoiding empty right hand sides,
       our operator "list" grammar becomes
       LIST-OP:
     </p><pre id="g-list-op"><tt>
@@ -1455,8 +1455,7 @@
         defined by a TDPL parser</q><footnote>
         <bibref>Aho and Ullman 1972</bibref>, p. 466.
       </footnote>.
-    </p>
-    <p>At or around this time, rumor has it that the main line of
+      At or around this time, rumor has it that the main line of
       development for GTDPL parsers is classified secret by the US
       government<footnote>
         http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2.
@@ -1473,7 +1472,7 @@
         <bibref>Pratt 1973</bibref>.
       </footnote>.
     </p>
-    <p>There are many problems with switching to operator
+    <p>There are problems with switching to operator
       grammars.
       Operator grammars are non-Chomskyan -- the BNF no longer
       accurately describes the grammar<footnote>
@@ -1483,14 +1482,15 @@
       </footnote>.
       Instead the BNF becomes part of
       a combined notation, and the actual grammar parsed depends also on
-      precedence and semantics.
+      precedence, associativity,
+      and semantics.
       And operator grammars have a very restricted
       form -- most practical languages are not operator grammars.</p>
     <p>But many practical grammars are almost operator grammars. And the
       Chomskyan approach has always had its dissenters.
       Vaughn Pratt is one
       of these, and discovers a new approach
-      to operator expression parsing: precedence climbing.
+      to operator expression parsing:
       Pratt parsing is the third and last approach in
       Theodore
       Norvell's taxonomy of approaches to operator expression
@@ -1683,6 +1683,10 @@
       how to make the standard state-of-the-art tool work?
       But, by 1991,
       a movement away from LALR has already begun.
+      Parsing practice falls back on
+      recursive descent
+      and the Operator Issue
+      is back in full force.
     </p>
     <h1>1992: Combinator parsing</h1>
     <p>
@@ -1754,8 +1758,7 @@
       is a turning point.
       One of Wadler's examples is a parser based on
       monads and combinator parsing.
-      From here on out,
-      combinator parsing becomes the standard
+      Combinator parsing becomes the standard
       example of monad programming.
     </p>
     <p>In its monadic form,
@@ -1792,11 +1795,14 @@
         <bibref>Hutton and Meijer 1996</bibref>,
         p. 3.
       </footnote>
-    </p><p>The most complicated grammar for operator expressions<footnote>
+    </p>
+    <p>The most complicated grammar<footnote>
         <bibref>Hutton and Meijer 1996</bibref>, p. 18.
         A simpler arithmetic expression grammar on p. 15 raises no issues
         not present in the more complicated example.
       </footnote>
+      for operator expressions in
+      <bibref>Hutton and Meijer 1996</bibref>
       has two operators (exponentiation and addition)
       with two levels of precedence
       and two different associativities:
