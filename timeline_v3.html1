@@ -54,7 +54,7 @@
     </p>
     <h1>1943: Post's rewriting system</h1>
     <p>Emil Post defines and studies a formal rewriting system<footnote>
-	<bibref>Post 1943</bibref>.
+        <bibref>Post 1943</bibref>.
       </footnote>
       using productions.
       With this, the process of rediscovering Pannini in the
@@ -65,7 +65,7 @@
       requires stacks. The importance of Turing's discovery is not noticed
       at the time and stacks will be rediscovered many times over the
       next two decades<footnote>
-	<bibref>Carpenter and Doran 1977</bibref>
+        <bibref>Carpenter and Doran 1977</bibref>
       </footnote>.
     </p>
     <h1>1948: Shannon repurposes Markov's chains</h1>
@@ -369,7 +369,7 @@
     <h1>1956: The IT compiler is released</h1>
     <p>Perlis and Smith, now at the Carnegie Institute of Technology,
       finish the IT compiler<footnote>
-	<bibref>Perlis et al 1958</bibref>.
+        <bibref>Perlis et al 1958</bibref>.
       </footnote>.
       Don Knuth calls this
     </p><blockquote>
@@ -396,15 +396,15 @@
       operator priority (often called precedence or hierarchy) in the IT
       language was the most frequent single cause of errors by the users
       of that compiler.<footnote>
-	<bibref>Knuth 1962</bibref>.
+        <bibref>Knuth 1962</bibref>.
         The 1956 date for IT is from
-	<bibref>Padua 2000</bibref>.
+        <bibref>Padua 2000</bibref>.
       </footnote>
     </blockquote>
     <h1><term>Compiler</term>
       as of 1956</h1>
     <p>In the 1956 document describing the IT compiler<footnote>
-	<bibref>Chipps et al 1956</bibref>.
+        <bibref>Chipps et al 1956</bibref>.
       </footnote>,
       the IT team is careful to define the term.
       Their definition makes clear that
@@ -2262,19 +2262,19 @@
     </p>
     <p>
       <bibid>Carpenter and Doran 1977</bibid>:
-        B. E. Carpenter and R. W.  Doran,
-        "The other Turing machine",
-        <cite>The Computer Journal</cite>,
-        20 (3): 269-279
-        (January 1977).
+      B. E. Carpenter and R. W.  Doran,
+      "The other Turing machine",
+      <cite>The Computer Journal</cite>,
+      20 (3): 269-279
+      (January 1977).
     </p>
-      <bibid>Chipps et al 1956</bibid>:
-        J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S,
-	"A mathematical language compiler",
-        in
-        <cite>Proceedings of the 1956 11th ACM national meeting</cite>
-        (1956).
     <p>
+      <bibid>Chipps et al 1956</bibid>:
+      J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S,
+      "A mathematical language compiler",
+      in
+      <cite>Proceedings of the 1956 11th ACM national meeting</cite>
+      (1956).
     </p>
     <p>
       <bibid>Chomsky 1956</bibid>:
@@ -2307,12 +2307,12 @@
     </p>
     <p>
       <bibid>Dijkstra 1961</bibid>:
-        Edsger W. Dijkstra,
-	"Algol 60 translation : An Algol 60 translator
-        for the x1 and Making a translator for Algol 60",
-	Research Report 35,
-        Mathematisch Centrum, Amsterdam
-        (1961).
+      Edsger W. Dijkstra,
+      "Algol 60 translation : An Algol 60 translator
+      for the x1 and Making a translator for Algol 60",
+      Research Report 35,
+      Mathematisch Centrum, Amsterdam
+      (1961).
     </p>
     <p>
       <bibid>Earley 1968</bibid>:
@@ -2403,12 +2403,12 @@
       [https://www.rand.org/content/dam/rand/pubs/research_memoranda/2008/RM704.pdf]
     </p>
     <p>
-        <bibid>Knuth 1962</bibid>:
-        Donald E. Knuth,
-	"A History of Writing Compilers",
-        in
-        <cite>Computers and Automation</cite>, pp. 8-10
-        (December 1962).
+      <bibid>Knuth 1962</bibid>:
+      Donald E. Knuth,
+      "A History of Writing Compilers",
+      in
+      <cite>Computers and Automation</cite>, pp. 8-10
+      (December 1962).
     </p>
     <p>
       <bibid>Knuth 1965</bibid>:
@@ -2507,30 +2507,30 @@
     </p>
     <p>
       <bibid>Padua 2000</bibid>:
-        David Padua,
-        "The FORTRAN I Compiler",
-        in
-        <cite>Computing in Science & Engineering</cite>, 2, pp. 70-75
-        (2000).
-        DOI: https://doi.org/10.1109/5992.814661.
+      David Padua,
+      "The FORTRAN I Compiler",
+      in
+      <cite>Computing in Science & Engineering</cite>, 2, pp. 70-75
+      (2000).
+      DOI: https://doi.org/10.1109/5992.814661.
     </p>
     <p>
-	<bibid>Perlis et al 1958</bibid>:
-        A.J. Perlis, J.W. Smith and H.R. vanZoeren,
-        "Internal Translator (IT)
-        A Compiler for the 650",
-        Computation Center,
-        Carnegie Institute of Technology,
-        p. 1.17 to p. 1.22
-        (April 18, 1958).
+      <bibid>Perlis et al 1958</bibid>:
+      A.J. Perlis, J.W. Smith and H.R. vanZoeren,
+      "Internal Translator (IT)
+      A Compiler for the 650",
+      Computation Center,
+      Carnegie Institute of Technology,
+      p. 1.17 to p. 1.22
+      (April 18, 1958).
     </p>
     <p>
       <bibid>Post 1943</bibid>:
-        Emil L. Post,
-        "Formal Reductions of the General Combinatorial Decision Problem",
-        <cite>American Journal of Mathematics</cite>,
-        Vol. 65, No. 2, pp. 197-215 (April 1943).
-        DOI: 10.2307/2371809.
+      Emil L. Post,
+      "Formal Reductions of the General Combinatorial Decision Problem",
+      <cite>American Journal of Mathematics</cite>,
+      Vol. 65, No. 2, pp. 197-215 (April 1943).
+      DOI: 10.2307/2371809.
     </p>
     <p>
       <bibid>Pratt 1973</bibid>:
@@ -2593,13 +2593,13 @@
     </p>
     <p>
       <bibid>Wadler 1990</bibid>:
-        Philip Wadler,
-        "Comprehending Monads"
-        In
-        <cite>Proceedings of the 1990 ACM conference on LISP and functional programming</cite>
-        (LFP '90).
-        ACM, New York, NY, USA, 61-78 (1990).
-	DOI: http://dx.doi.org/10.1145/91556.91592.
+      Philip Wadler,
+      "Comprehending Monads"
+      In
+      <cite>Proceedings of the 1990 ACM conference on LISP and functional programming</cite>
+      (LFP '90).
+      ACM, New York, NY, USA, 61-78 (1990).
+      DOI: http://dx.doi.org/10.1145/91556.91592.
     </p>
     <p>
       <bibid>Wadler 1995</bibid>:
