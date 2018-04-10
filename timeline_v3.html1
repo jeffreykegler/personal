@@ -834,36 +834,34 @@
       but they will be important for us.
     </p>
     <h1>1961: Lucas discovers recursive descent</h1>
-    <p>Peter Lucas publishes the his description of a top-down parser<footnote>
+    <p>Peter Lucas publishes his description of a top-down parser<footnote>
         <bibref>Lucas 1961</bibref>.
       </footnote>.
       Either Irons paper or this one can be considered to be
       the first description of recursive descent<footnote>
-        <p>
-          <bibref>Grune and Jacobs 2008</bibref>
-          call Lucas the discoverer of recursive descent.
-          In fact, both
-          <bibref>Irons 1961</bibref>
-          and
-          <bibref>Lucas 1961</bibref>
-          are recursive descent with a major bottom-up element.
-          Perhaps Grune and Jacobs based their decision on the Lucas' description of his algorithm,
-          which talks about his parser's bottom-up element only briefly,
-          while describing the top-down element in detail.
-          Also, the Lucas algorithm more resembles modern implementations of recursive descent
-          much more closely than
-          <bibref>Irons 1961</bibref>.
-        </p>
-        <p>
-          In conversation, Irons described his 1961 parser as a kind of recursive descent.
-          As a former student of Irons at Yale,
-          my personal preference would be to give Ned the credit
-          for recursive descent.
-          And this is what Peter Denning does in his introduction
-          to the reprint of
-          <bibref>Irons 1961</bibref>
-          (<cite>Communications of the ACM</cite>, 25th Anniversary Issue, p. 14).
-        </p></footnote>.
+        <bibref>Grune and Jacobs 2008</bibref>
+        call Lucas the discoverer of recursive descent.
+        In fact, both
+        <bibref>Irons 1961</bibref>
+        and
+        <bibref>Lucas 1961</bibref>
+        are recursive descent with a major bottom-up element.
+        Perhaps Grune and Jacobs based their decision on the Lucas' description of his algorithm,
+        which talks about his parser's bottom-up element only briefly,
+        while describing the top-down element in detail.
+        Also, the Lucas algorithm more resembles modern implementations of recursive descent
+        much more closely than
+        <bibref>Irons 1961</bibref>.
+        <br><br>
+        In conversation, Irons described his 1961 parser as a kind of recursive descent.
+        As a former student of Irons at Yale,
+        my personal preference would be to give Ned the credit
+        for recursive descent.
+        And this is what Peter Denning does in his introduction
+        to the reprint of
+        <bibref>Irons 1961</bibref>
+        (<cite>Communications of the ACM</cite>, 25th Anniversary Issue, p. 14).
+      </footnote>.
       Except to say that he deals properly with them, Lucas does not say
       how he parses operator expressions.
       But it is easy to believe Lucas'
