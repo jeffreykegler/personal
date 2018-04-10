@@ -878,8 +878,8 @@
       algorithm<footnote>
         Edsger W. Dijkstra, "Algol 60 translation : An Algol 60 translator
         for the x1 and Making a translator for Algol 60", Research Report 35,
-        Mathematisch Centrum, Amsterdam.
-        (1961)
+        Mathematisch Centrum, Amsterdam
+        (1961).
       </footnote>.
       In Norvell's useful classification<footnote>
         <bibref>Norvell 1999</bibref>.
@@ -1499,7 +1499,7 @@
       </footnote>.
       Some have adopted Pratt parsing
       as the overall solution to their parsing problems<footnote>
-        <bibref>Pratt 1973</bibref>.
+        <bibref>Pratt 1973</bibref>, p. 51.
       </footnote>.
     </p>
     <p>As of 2018, the Pratt approach
@@ -2097,7 +2097,7 @@
         Internally, Marpa rewrites precedenced statements into BNF.
         Marpa's rewrite does not use middle recursions
         and does not introduce any new ambiguities
-        so that, following its
+        so that, following Marpa's
         <a href="#loc-linearity-rules">linearity
           rules</a>, the result must be linear.
       </footnote>.
@@ -2343,7 +2343,7 @@
       <cite>Proceedings
         of the 31st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages,
         POPL 2004 (Venice, Italy, 14-16 January 2004)</cite>, N. D. Jones and X. Leroy, Eds., ACM, pp. 111-122.
-      (January 2004.)
+      (January 2004)
     </p>
     <p>
       <bibid>Frost 1992</bibid>:
@@ -2364,11 +2364,12 @@
     </p>
     <p>
       <bibid>Grune and Jacobs 2008</bibid>:
-      Grune, D., & Jacobs, C. J. H. (2008).
+       D.  Grune and C. J. H. Jacobs,
       <cite>Parsing Techniques: A Practical
         Guide, 2nd edition</cite>.
-      (<cite>Monographs in Computer Science</cite>). New York, USA:
+      (<cite>Monographs in Computer Science</cite>), New York, USA:
       Springer.
+       (2008)
       When it comes to determining who first discovered an idea,
       the literature often disagrees.
       In such cases, I have often deferred
@@ -2376,7 +2377,7 @@
     </p>
     <p>
       <bibid>Hutton 1992</bibid>:
-      Hutton, "Higher order functions for parsing",
+      Graham Hutton, "Higher order functions for parsing",
       <cite>Journal of Functional Programming</cite>,
       2(3):323-343.
       (July 1992)
@@ -2412,8 +2413,9 @@
     </p>
     <p>
       <bibid>Knuth 1965</bibid>:
-      D. E. Knuth, "On the translation of languages from left to right"
-      <cite>Information and Control</cite>, Vol. 8, Issue: 6, Page: 607-639 (1965).
+      Donald E. Knuth, "On the translation of languages from left to right"
+      <cite>Information and Control</cite>, Vol. 8, Issue: 6, Page: 607-639.
+      (1965)
     </p>
     <p>
       <bibid>Knuth 1968</bibid>:
@@ -2431,7 +2433,7 @@
     </p>
     <p>
       <bibid>Knuth and Pardo 1976</bibid>:
-      D. E. Knuth and L. Trabb Pardo, "The Early Development of
+      Donald E. Knuth and L. Trabb Pardo, "The Early Development of
       Programming Languages,"
       <cite>Report STAN-CS-76-562</cite>, Computer Science Dept.,
       Stanford Univ., Stanford, Calif. (Aug. 1976).
@@ -2464,9 +2466,10 @@
     </p>
     <p>
       <bibid>Lucas 1961</bibid>:
-      Lucas, P. Die Strukturanalyse von Formeln&uuml;bersetzern / analysis of
-      the structure of formula translators. Elektronische Rechenanlagen,
-      3(11.4):159-167, 1961, (in German).
+      P. Lucas, "Die Strukturanalyse von Formeln&uuml;bersetzern / analysis of
+      the structure of formula translators" (in German),
+      <cite>Elektronische Rechenanlagen</cite>,
+      3(11.4):159-167.
       (September 1961)
     </p>
     <p>
@@ -2528,7 +2531,7 @@
       <bibid>Samuelson and Bauer 1960</bibid>:
       K. Samelson and F. L. Bauer, "Sequential formula translation",
       <cite>Communications of the ACM</cite>,
-      3(2):76-83, Feb. 1960.
+      3(2):76-83 (Feb. 1960).
       A translation of
       <bibref>Samuelson and Bauer 1959</bibref>.
     </p>
@@ -2558,8 +2561,9 @@
       functional languages". in J-P Jouannaud (ed.),
       <cite>Functional Programming
         Languages and Computer Architecture</cite>.
-      <cite>Lecture Notes in Computer Science</cite>, 1985
-      vol. 201, Springer-Verlag GmbH, pp. 113-128. DOI: 10.1007/3-540-15975-4_33.
+      <cite>Lecture Notes in Computer Science</cite>,
+      Volume 201, Springer-Verlag GmbH, pp. 113-128 (1985).
+      DOI: 10.1007/3-540-15975-4_33.
     </p>
     <p>
       <bibid>Wadler 1995</bibid>:
