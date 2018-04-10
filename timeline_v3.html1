@@ -54,12 +54,7 @@
     </p>
     <h1>1943: Post's rewriting system</h1>
     <p>Emil Post defines and studies a formal rewriting system<footnote>
-        Emil L. Post,
-        "Formal Reductions of the General Combinatorial Decision Problem",
-        <cite>American Journal of Mathematics</cite>,
-        Vol. 65, No. 2, pp. 197-215.
-        DOI: 10.2307/2371809.
-        (April 1943)
+	<bibref>Post 1943</bibref>.
       </footnote>
       using productions.
       With this, the process of rediscovering Pannini in the
@@ -70,11 +65,7 @@
       requires stacks. The importance of Turing's discovery is not noticed
       at the time and stacks will be rediscovered many times over the
       next two decades<footnote>
-        B. E. Carpenter and R. W.  Doran,
-        "The other Turing machine",
-        <cite>The Computer Journal</cite>,
-        20 (3): 269-279.
-        (January 1977).
+	<bibref>Carpenter and Doran 1977</bibref>
       </footnote>.
     </p>
     <h1>1948: Shannon repurposes Markov's chains</h1>
@@ -2295,6 +2286,14 @@
       10.1016/B978-0-12-491650-0.50017-4.
     </p>
     <p>
+      <bibid>Carpenter and Doran 1977</bibid>:
+        B. E. Carpenter and R. W.  Doran,
+        "The other Turing machine",
+        <cite>The Computer Journal</cite>,
+        20 (3): 269-279
+        (January 1977).
+    </p>
+    <p>
       <bibid>Chomsky 1956</bibid>:
       Noam Chomsky,
       <q>Three models for the description of language</q>,
@@ -2505,6 +2504,14 @@
       "Parsing Expressions by Recursive Descent",
       https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm.
       (1999)
+    </p>
+    <p>
+      <bibid>Post 1943</bibid>:
+        Emil L. Post,
+        "Formal Reductions of the General Combinatorial Decision Problem",
+        <cite>American Journal of Mathematics</cite>,
+        Vol. 65, No. 2, pp. 197-215 (April 1943).
+        DOI: 10.2307/2371809.
     </p>
     <p>
       <bibid>Pratt 1973</bibid>:
