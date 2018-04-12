@@ -2383,12 +2383,12 @@
       Department of Computer Science, University of Nottingham, 1996.
     </p>
     <p>
-    <bibid>Irons 1961</bibid>:
+      <bibid>Irons 1961</bibid>:
       E. T. Irons,
       "A syntax-directed compiler for ALGOL 60",
       <cite>Communications of the ACM</cite>,
-          4(1):51-55
-          (Jan. 1961).
+      4(1):51-55
+      (Jan. 1961).
     </p>
     <p>
       <bibid>Kegler 2013</bibid>:
@@ -2616,5 +2616,17 @@
       vol 925. Springer, Berlin, Heidelberg
       (1995).
     </p>
+    <comment>FOOTNOTES HERE</comment>
+    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+    <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-33430331-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
   </body>
 </html>

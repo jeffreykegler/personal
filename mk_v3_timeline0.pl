@@ -25,8 +25,8 @@ LINE: while ( my $line = <> ) {
 }
 
 my $output = join "\n", map { do_bib($_) } @lines;
-my $footnotes = join "\n", '<h1>Footnotes</h1>', map { do_bib($_) } @fn_lines, '</body>';
-$output =~ s[</body>][$footnotes];
+my $footnotes = join "\n", '<h1>Footnotes</h1>', map { do_bib($_) } @fn_lines;
+$output =~ s[<comment>FOOTNOTES HERE</comment>][$footnotes];
 
 say $output;
 
