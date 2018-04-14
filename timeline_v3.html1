@@ -43,19 +43,28 @@
     <p>Andrey Markov introduces his
       <term>chains</term>
       -- a set of
-      states with transitions between them.
+      states with transitions between them.<footnote>
+        <bibref>Markov 1906</bibref>.
+      </footnote>
       One offshoot of Markov's work will be what we now
       know as regular expressions.
-      Markov uses his chains, not
-      for parsing, but for solving problems in probability<footnote>
-        <bibref>Markov 1906</bibref>.
-	Note that while Markov is not interested in parsing,
-	he was aware of the implications for philosophy --
-	specifically, he was refuting a theory by Nekrasov,
-	who held that the fact that social statistics prove
-	the human actions are independent events,
-	and therefore the product of free will
-	(<bibref>Hayes 2013</bibref>).
+      Markov uses his chains,
+      not for parsing,
+      but for addressing a problem in probability --
+      does the law of large numbers require that events be
+      independent?<footnote>
+        Indirectly, Markov's purpose may have been
+	to refute Nekrasov's proof of free will.
+	Nekrasov pointed out that social statistics of all kinds
+	follow the law of large numbers,
+	which (up until then)
+	had assumed events were independent.
+	Since social events were human choices,
+	Nekrasov saw this as a proof of free will.
+	Markov's demonstration that the law of large
+	numbers works just as well for dependent events
+	undercut Nekrasov's proof.
+	(<bibref>Hayes 2013</bibref>, pp. 92-93).
       </footnote>.
     </p>
     <h1>1913: Markov and Eugene Onegin</h1>
@@ -2397,12 +2406,10 @@
     </p>
     <p>
       <bibid>Hayes 2013</bibid>:
-      Brian Hayes,
-      "First Links in the Markov Chain",
-      <cite>American Scientist</cite>,
-      Volume 101, Number 2, Page 92
-      (March-April 2013).
-      DOI: 10.1511/2013.101.92.
+      Hayes, Brian. "First links in the Markov chain." American Scientist 101.2 (2013): 252.
+      <comment>MLA</comment>
+      <a href="https://raichev.net/markov/misc/markov_chain.pdf">
+      Available online.</a>
     </p>
     <p>
       <bibid>Hilgers and Langville 2006</bibid>:
@@ -2410,6 +2417,9 @@
       "The five greatest applications of Markov Chains",
       <cite>Proceedings of the Markov Anniversary Meeting</cite>,
       Boston Press, Boston, Massachusetts (2006). 
+      [http://langvillea.people.cofc.edu/MCapps7.pdf].
+      A slide presentation of this paper is
+      [https://www.csc2.ncsu.edu/conferences/nsmc/MAM2006/langville.pdf].
     </p>
     <p>
       <bibid>Hutton 1992</bibid>:
@@ -2555,8 +2565,12 @@
       Sankt-Peterburg,
       VI seriya,
       Tom 7, 9(3), pp. 153-162 (1913).
-      In English, the title translates to
-      "An example of statistical investigation of the text Eugene Onegin concerning the connection of samples in chains".
+      An English translation is
+      "An example of statistical investigation of the text Eugene Onegin concerning the connection of samples in chains",
+      <cite>Science in Context</cite>,
+      19, no. 4, pp. 591-600
+      (December 2006).
+      [http://www.alpha60.de/research/markov/DavidLink_AnExampleOfStatistical_MarkovTrans_2007.pdf]
     </p>
     <p>
       <bibid>McIlroy and Kernighan 1979</bibid>:
