@@ -24,7 +24,7 @@
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.0</version>
-    <datestamp>12 April 2018</datestamp>
+    <datestamp>14 April 2018</datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact and complete description of
@@ -48,8 +48,7 @@
       know as regular expressions.
       Markov uses his chains, not
       for parsing, but for solving problems in probability<footnote>
-        Andrey Andreyevich Markov, "Extension of the law of large numbers to quantities, depending on each other" (1906).
-        The title is a translation -- the original in Russian.
+        <bibref>Markov 1906</bibref>.
       </footnote>.
     </p>
     <h1>1943: Post's rewriting system</h1>
@@ -2494,6 +2493,15 @@
       89, pp. 235-250
       (2014).
       [https://arxiv.org/abs/1304.3177]
+    </p>
+    <p>
+      <bibid>Markov 1906</bibid>:
+        Andrey Andreyevich Markov,
+       "Rasprostranenie zakona bol'shih chisel na velichiny, zavisyaschie drug ot druga",
+       <cite>Izvestiya Fiziko-matematicheskogo obschestva pri Kazanskom universitete</cite>,
+       2-ya seriya, tom 15, pp. 135–156 (1906).
+       In English, the title translates to
+       "Extension of the law of large numbers to quantities, depending on each other".
     </p>
     <p>
       <bibid>McIlroy and Kernighan 1979</bibid>:
