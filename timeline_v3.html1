@@ -49,7 +49,26 @@
       Markov uses his chains, not
       for parsing, but for solving problems in probability<footnote>
         <bibref>Markov 1906</bibref>.
+	Note that while Markov is not interested in parsing,
+	he was aware of the implications for philosophy --
+	specifically, he was refuting a theory by Nekrasov,
+	who held that the fact that social statistics prove
+	the human actions are independent events,
+	and therefore the product of free will
+	(<bibref>Hayes 2013</bibref>).
       </footnote>.
+    </p>
+    <h1>1913: Markov and Eugene Onegin</h1>
+    <p>In 1913 revisits his chains,
+    applying them to the sequence of vowels and consonants
+    in Pushkin's <cite>Eugene Onegin</cite><footnote>
+    <bibref>Markov 1913</bibref>.
+    See <bibref>Hayes 2013</bibref>.
+    </footnote>.
+    Again, Markov's interest is not in parsing,
+    but this is an application of what later is regarded
+    as a parsing technique to language,
+    apparently for the first time in the West.
     </p>
     <h1>1943: Post's rewriting system</h1>
     <p>Emil Post defines and studies a formal rewriting system<footnote>
@@ -72,10 +91,14 @@
         <bibref>Shannon 1948</bibref>.
       </footnote>.
       In this
-      paper, Shannon makes an attempt to model English using Andrey Markov's
+      paper, Shannon models English using Andrey Markov's
       chains<footnote>
         <bibref>Shannon 1948</bibref>, pp. 4-6.
       </footnote>.
+      The approach is similar to Markov's but the intent
+      seems to be different --
+      Shannon's is a serious attempt at a contribution
+      to parsing human languages.
     </p>
     <h1>1949: Rutishauser's compiler</h1>
     <p>From 1949 to 1951 at the ETH Zurich, Heinz Rutishauser worked on
@@ -2369,6 +2392,15 @@
       to the judgement of Grune and Jacobs.
     </p>
     <p>
+      <bibid>Hayes 2013</bibid>:
+      Brian Hayes,
+      "First Links in the Markov Chain",
+      <cite>American Scientist</cite>,
+      Volume 101, Number 2, Page 92
+      (March-April 2013).
+      DOI: 10.1511/2013.101.92.
+    </p>
+    <p>
       <bibid>Hutton 1992</bibid>:
       Graham Hutton, "Higher order functions for parsing",
       <cite>Journal of Functional Programming</cite>,
@@ -2502,6 +2534,17 @@
        2-ya seriya, tom 15, pp. 135–156 (1906).
        In English, the title translates to
        "Extension of the law of large numbers to quantities, depending on each other".
+    </p>
+    <p>
+      <bibid>Markov 1913</bibid>:
+      Andrey Andreyevich Markov,
+      "Primer statisticheskogo issledovaniya nad tekstom “Evgeniya Onegina”,
+      illyustriruyuschij svyaz’ ispytanij v cep’",
+      <cite>Izvestiya Akademii Nauk</cite>,
+      SPb, VI seriya,
+      7(93), pp. 153-162 (1913).
+      In English, the title translates to
+      "An example of statistical investigation of the text Eugene Onegin concerning the connection of samples in chains".
     </p>
     <p>
       <bibid>McIlroy and Kernighan 1979</bibid>:
