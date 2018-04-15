@@ -1297,11 +1297,7 @@
         <bibref>Aho and Ullman 1972</bibref>, p. 368.
       </footnote>.
     </p>
-    <h1>Terms:
-      <term>LL</term>
-      and
-      <term>LR</term>
-    </h1>
+    <h1>Terms: "LL" and "LR"</h1>
     <p>When LL is added to the vocabulary of parsing, the meaning of
       <term>LR</term>
       shifts slightly. In 1965 Knuth meant LR to mean
