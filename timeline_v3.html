@@ -950,11 +950,46 @@
       considered impractical.
       But parsers aimed at practitioners will often push the
       envelope --
-      any parser which uses backtracking is potentially expoential
+      any parser which uses backtracking is potentially exponential
       and is designed in the (often disappointed) hope
       that the backtracking will not
       get out of hand
       for the grammar of interest to the user.
+    </p>
+    <h1>The Operator Issue as of 1965</h1>
+    <p><a href="#bib-Knuth_1965">Knuth 1965</a> is a sigificant milestone
+    in the history of operator expresssion parsing.
+    Knuth specifically addresses the parsing of ALGOL
+    and he zeroes in on its arithmetic expressions
+    as the crucial issue<a id="footnote-55-ref" href="#footnote-55">[55]</a>.
+    Knuth suggests a "typical" grammar<a id="footnote-56-ref" href="#footnote-56">[56]</a>
+    which is short,
+    but encapusulates the parsing challenges
+    presented by ALGOL's arithmetic expressions:
+    <ul id="g-knuth-op">
+      <li>S ::= E</li>
+      <li>E ::= - T</li>
+      <li>E ::= T</li>
+      <li>E ::= E - T</li>
+      <li>T ::= P</li>
+      <li>T ::= T * P</li>
+      <li>P ::= a</li>
+      <li>P ::= ( E )</li>
+    </ul>
+    <a href="#g-knuth-op">KNUTH-OP</a>
+    is left-recursive,
+    allows parentheses,
+    has three levels of precedence,
+    and implements both unary and
+    binary minus.
+    Recursive descent cannot parse
+    <a href="#g-knuth-op">KNUTH-OP</a>,
+    but it is LR(1).
+    The means that it is well within Knuth's new
+    class of grammars and,
+    by implication,
+    probably within a practical subclass of the
+    LR grammars.
     </p>
     <h1>An influential misconception</h1>
     <p>In his 1965, Knuth makes
@@ -964,7 +999,7 @@
     <blockquote>
       Another important area of research is to develop algorithms that
       accept LR(k) grammars, or special classes of them, and to mechanically
-      produce efficient parsing programs.<a id="footnote-55-ref" href="#footnote-55">[55]</a>
+      produce efficient parsing programs.<a id="footnote-57-ref" href="#footnote-57">[57]</a>
     </blockquote>
     <p>Implied in this is
       the belief that
@@ -999,41 +1034,6 @@
       This question will be answered by Joop Leo in 1991.
       The answer, surprisingly, will be
       <q>yes</q>.
-    <h1>The Operator Issue as of 1965</h1>
-    <p><a href="#bib-Knuth_1965">Knuth 1965</a> is a sigificant milestone
-    in the history of operator expresssion parsing.
-    Knuth specifically addresses the parsing of ALGOL
-    and he zeroes in on its arithmetic expressions
-    as the crucial issue<a id="footnote-56-ref" href="#footnote-56">[56]</a>.
-    Knuth suggests a "typical" grammar<a id="footnote-57-ref" href="#footnote-57">[57]</a>
-    which is short,
-    but encapusulates the parsing challenges
-    presented by ALGOL's arithmetic expressions:
-    <ul id="g-knuth-op">
-      <li>S ::= E</li>
-      <li>E ::= - T</li>
-      <li>E ::= T</li>
-      <li>E ::= E - T</li>
-      <li>T ::= P</li>
-      <li>T ::= T * P</li>
-      <li>P ::= a</li>
-      <li>P ::= ( E )</li>
-    </ul>
-    <a href="#g-knuth-op">KNUTH-OP</a>
-    is left-recursive,
-    allows parentheses,
-    has three levels of precedence,
-    and implements both unary and
-    binary minus.
-    Recursive descent cannot parse
-    <a href="#g-knuth-op">KNUTH-OP</a>,
-    but it is LR(1).
-    The means that it is well within Knuth's new
-    class of grammars and,
-    by implication,
-    probably within a practical subclass of the
-    LR grammars.
-    </p>
     </p><h1>1968: Lewis and Stearns discover LL</h1>
     <p>When Knuth discovered the LR grammars, he announced them to
       the world with a full-blown mathematical description.
@@ -2548,17 +2548,17 @@
         in terms of the input length.
  <a href="#footnote-54-ref">&#8617;</a></p>
 <p id="footnote-55">55.
-        <a href="#bib-Knuth_1965">Knuth 1965</a>, p. 637.
- <a href="#footnote-55-ref">&#8617;</a></p>
-<p id="footnote-56">56.
     Knuth also discusses some ambiguities in the
     ALGOL report, but he (quite appropriately)
     notes that BNF was new when it was written,
     and treats the other issues
     as problems with the ALGOL specification.
+ <a href="#footnote-55-ref">&#8617;</a></p>
+<p id="footnote-56">56.
+    <a href="#bib-Knuth_1965">Knuth 1965</a>, p. 621.
  <a href="#footnote-56-ref">&#8617;</a></p>
 <p id="footnote-57">57.
-    <a href="#bib-Knuth_1965">Knuth 1965</a>, p. 621.
+        <a href="#bib-Knuth_1965">Knuth 1965</a>, p. 637.
  <a href="#footnote-57-ref">&#8617;</a></p>
 <p id="footnote-58">58.
         <a href="#bib-Lewis_and_Stearns_1968">Lewis and Stearns 1968</a>.
