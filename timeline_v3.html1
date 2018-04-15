@@ -54,32 +54,35 @@
       does the law of large numbers require that events be
       independent?<footnote>
         Indirectly, Markov's purpose may have been
-	to refute Nekrasov's proof of free will.
-	Nekrasov pointed out that social statistics of all kinds
-	follow the law of large numbers,
-	which (up until then)
-	had assumed events were independent.
-	Since social events were human choices,
-	Nekrasov saw this as a proof of free will.
-	Markov's demonstration that the law of large
-	numbers works just as well for dependent events
-	undercut Nekrasov's proof.
-	(<bibref>Hayes 2013</bibref>, pp. 92-93).
+        to refute Nekrasov's proof of free will.
+        Nekrasov pointed out that social statistics of all kinds
+        follow the law of large numbers,
+        which (up until then)
+        had assumed events were independent.
+        Since social events were human choices,
+        Nekrasov saw this as a proof of free will.
+        Markov's demonstration that the law of large
+        numbers works just as well for dependent events
+        undercut Nekrasov's proof.
+        (<bibref>Hayes 2013</bibref>, pp. 92-93).
       </footnote>.
     </p>
     <h1>1913: Markov and Eugene Onegin</h1>
     <p>In 1913 revisits his chains,
-    applying them to the sequence of vowels and consonants
-    in Pushkin's <cite>Eugene Onegin</cite><footnote>
-    <bibref>Markov 1913</bibref>.
-    See <bibref>Hayes 2013</bibref>
-	and <bibref>Hilgers and Langville 2006</bibref>, pp. 155-157.
-    </footnote>.
-    Again, Markov's interest is not in parsing.
-    Nonetheless,
-    this is an application of what later will be regarded
-    as a parsing technique to language,
-    and apparently for the first time in the West.
+      applying them to the sequence of vowels and consonants
+      in Pushkin's
+      <cite>Eugene Onegin</cite><footnote>
+        <bibref>Markov 1913</bibref>.
+        See
+        <bibref>Hayes 2013</bibref>
+        and
+        <bibref>Hilgers and Langville 2006</bibref>, pp. 155-157.
+      </footnote>.
+      Again, Markov's interest is not in parsing.
+      Nonetheless,
+      this is an application of what later will be regarded
+      as a parsing technique to language,
+      and apparently for the first time in the West.
     </p>
     <h1>1943: Post's rewriting system</h1>
     <p>Emil Post defines and studies a formal rewriting system<footnote>
@@ -105,8 +108,9 @@
       paper, Shannon models English using Andrey Markov's
       chains<footnote>
         <bibref>Shannon 1948</bibref>, pp. 4-6.
-	See also <bibref>Hilgers and Langville 2006</bibref>,
-	pp. 157-159.
+        See also
+        <bibref>Hilgers and Langville 2006</bibref>,
+        pp. 157-159.
       </footnote>.
       The approach is similar to Markov's but the intent
       seems to be different --
@@ -1184,24 +1188,29 @@
       for the grammar of interest to the user.
     </p>
     <h1>The Operator Issue as of 1965</h1>
-    <p><bibref>Knuth 1965</bibref> is a sigificant milestone
-    in the history of operator expresssion parsing.
-    Knuth specifically addresses the parsing of ALGOL
-    and he zeroes in on its arithmetic expressions
-    as the crucial issue<footnote>
-    Knuth also discusses some ambiguities in the
-    ALGOL report, but he (quite appropriately)
-    notes that BNF was new when it was written,
-    and treats the other issues
-    as problems with the ALGOL specification.
-    </footnote>.
-    Knuth suggests a "typical" grammar<footnote>
-    <bibref>Knuth 1965</bibref>, p. 621.
-    </footnote>
-    which is short,
-    but encapsulates the parsing challenges
-    presented by ALGOL's arithmetic expressions:
-    <ul id="g-knuth-op">
+    <p><bibref>Knuth 1965</bibref>
+      is a sigificant milestone
+      in the history of operator expresssion parsing.
+      Knuth specifically addresses the parsing of ALGOL
+      and he zeroes in on its arithmetic expressions
+      as the crucial issue<footnote>
+        Knuth also discusses some ambiguities,
+	and some intermixing of semantics with syntax,
+	in the
+        ALGOL report
+	(<bibref>Knuth 1965<bibref>, pp. 622-625).
+	But Knuth (quite appropriately)
+        notes that BNF was new when it was written,
+        and treats these other issues
+        as problems with the ALGOL specification.
+      </footnote>.
+      Knuth suggests a "typical" grammar<footnote>
+        <bibref>Knuth 1965</bibref>, p. 621.
+      </footnote>
+      which is short,
+      but encapsulates the parsing challenges
+      presented by ALGOL's arithmetic expressions:
+    </p><ul id="g-knuth-op">
       <li>S ::= E</li>
       <li>E ::= - T</li>
       <li>E ::= T</li>
@@ -1211,20 +1220,20 @@
       <li>P ::= a</li>
       <li>P ::= ( E )</li>
     </ul>
-    <a href="#g-knuth-op">KNUTH-OP</a>
-    is left-recursive,
-    allows parentheses,
-    has three levels of precedence,
-    and implements both unary and
-    binary minus.
-    Recursive descent cannot parse
-    <a href="#g-knuth-op">KNUTH-OP</a>,
-    but it is LR(1).
-    The means that it is well within Knuth's new
-    class of grammars and,
-    by implication,
-    probably within a practical subclass of the
-    LR grammars.
+    <p><a href="#g-knuth-op">KNUTH-OP</a>
+      is left-recursive,
+      allows parentheses,
+      has three levels of precedence,
+      and implements both unary and
+      binary minus.
+      Recursive descent cannot parse
+      <a href="#g-knuth-op">KNUTH-OP</a>,
+      but it is LR(1).
+      The means that it is well within Knuth's new
+      class of grammars and,
+      by implication,
+      probably within a practical subclass of the
+      LR grammars.
     </p>
     <h1>An influential misconception</h1>
     <p>In his 1965, Knuth makes
@@ -1461,7 +1470,8 @@
       DeRemer's LALR algorithm requires only a stack and a state
       table of quite manageable size.
       LALR looks practical,
-      and can parse <a href="#g-knuth-op">KNUTH-OP</a>.
+      and can parse
+      <a href="#g-knuth-op">KNUTH-OP</a>.
       LALR will go on to become the most widely used of the LR(k)
       subsets.
     </p>
@@ -2457,14 +2467,14 @@
       Hayes, Brian. "First links in the Markov chain." American Scientist 101.2 (2013): 252.
       <comment>MLA</comment>
       <a href="https://raichev.net/markov/misc/markov_chain.pdf">
-      Available online.</a>
+        Available online.</a>
     </p>
     <p>
       <bibid>Hilgers and Langville 2006</bibid>:
       Philipp Von Hilgers, and Amy Langville,
       "The five greatest applications of Markov Chains",
       <cite>Proceedings of the Markov Anniversary Meeting</cite>,
-      Boston Press, Boston, Massachusetts (2006). 
+      Boston Press, Boston, Massachusetts (2006).
       [http://langvillea.people.cofc.edu/MCapps7.pdf].
       A slide presentation of this paper is
       [https://www.csc2.ncsu.edu/conferences/nsmc/MAM2006/langville.pdf].
@@ -2597,12 +2607,12 @@
     </p>
     <p>
       <bibid>Markov 1906</bibid>:
-        Andrey Andreyevich Markov,
-       "Rasprostranenie zakona bol'shih chisel na velichiny, zavisyaschie drug ot druga",
-       <cite>Izvestiya Fiziko-matematicheskogo obschestva pri Kazanskom universitete</cite>,
-       2-ya seriya, tom 15, pp. 135–156 (1906).
-       In English, the title translates to
-       "Extension of the law of large numbers to quantities, depending on each other".
+      Andrey Andreyevich Markov,
+      "Rasprostranenie zakona bol'shih chisel na velichiny, zavisyaschie drug ot druga",
+      <cite>Izvestiya Fiziko-matematicheskogo obschestva pri Kazanskom universitete</cite>,
+      2-ya seriya, tom 15, pp. 135–156 (1906).
+      In English, the title translates to
+      "Extension of the law of large numbers to quantities, depending on each other".
     </p>
     <p>
       <bibid>Markov 1913</bibid>:
