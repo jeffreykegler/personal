@@ -1228,6 +1228,49 @@
       This question will be answered by Joop Leo in 1991.
       The answer, surprisingly, will be
       <q>yes</q>.
+    <h1>The Operator Issue as of 1965</h1>
+    <p><bibref>Knuth 1965</bibref> is a sigificant milestone
+    in the history of operator expresssion parsing.
+    Knuth specifically addresses the parsing of ALGOL
+    and he zeroes in on its arithmetic expressions
+    as the crucial issue<footnote>
+    Knuth also discusses some ambiguities in the
+    ALGOL report, but he (quite appropriately)
+    notes that BNF was new when it was written,
+    and treats the other issues
+    as problems with the ALGOL specification.
+    </footnote>.
+    Knuth suggests a "typical" grammar<footnote>
+    <bibref>Knuth 1965</bibref>, p. 621.
+    </footnote>
+    which is short,
+    but encapusulates the parsing challenges
+    presented by ALGOL's arithmetic expressions:
+    <ul id="g-knuth-op">
+      <li>S ::= E</li>
+      <li>E ::= - T</li>
+      <li>E ::= T</li>
+      <li>E ::= E - T</li>
+      <li>T ::= P</li>
+      <li>T ::= T * P</li>
+      <li>P ::= a</li>
+      <li>P ::= ( E )</li>
+    </ul>
+    <a href="#g-knuth-op">KNUTH-OP</a>
+    is left-recursive,
+    allows parentheses,
+    has three levels of precedence,
+    and implements both unary and
+    binary minus.
+    Recursive descent cannot parse
+    <a href="#g-knuth-op">KNUTH-OP</a>,
+    but it is LR(1).
+    The means that it is well within Knuth's new
+    class of grammars and,
+    by implication,
+    probably within a practical subclass of the
+    LR grammars.
+    </p>
     </p><h1>1968: Lewis and Stearns discover LL</h1>
     <p>When Knuth discovered the LR grammars, he announced them to
       the world with a full-blown mathematical description.
@@ -1295,11 +1338,13 @@
       in its pure form,
       is LL(1).
       Arithmetic operator grammars are not LL(1) -- not even close.
-      In fact neither
-      <a href="#g-basic-op">BASIC-OP</a>
-      or
-      <a href="#g-right-op">RIGHT-OP</a>
-      is LL(k) for any k.
+      In fact,
+      of the grammars
+      <a href="#g-basic-op">BASIC-OP</a>,
+      <a href="#g-right-op">RIGHT-OP</a>,
+      and
+      <a href="#g-knuth-op">KNUTH-OP</a>,
+      none is LL(k) for any k.
     </p>
     <p>
       Compromises have to be made
@@ -1416,7 +1461,8 @@
       DeRemer's LALR algorithm requires only a stack and a state
       table of quite manageable size.
       LALR looks practical,
-      and will go on to become the most widely used of the LR(k)
+      and can parse <a href="#g-knuth-op">KNUTH-OP</a>.
+      LALR will go on to become the most widely used of the LR(k)
       subsets.
     </p>
     <h1>1969: the
@@ -1575,6 +1621,7 @@
       but
       <a href="g-basic-op">BASIC-OP</a>,
       <a href="g-right-op">RIGHT-OP</a>
+      <a href="g-right-op">KNUTH-OP</a>
       and
       <a href="g-right-op">LIST-OP</a>
       are all LALR,
