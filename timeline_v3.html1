@@ -637,13 +637,25 @@
     <p>Samuelson and Bauer<footnote>
         <bibref>Samuelson and Bauer 1960</bibref>.
       </footnote>
-      describe in detail the use of stacks to implement
+      describe the use of stacks to implement
       operator precedence.
-      The algorithm and its presentation are thoroughly
-      non-Chomskyan --
-      Samuelson and Bauer describe their example using,
-      not a context-free grammar,
-      but an operator precedence table.
+      Samuelson and Bauer do not use the word
+      <term>stack</term>
+      --
+      what we call a
+      <term>stack</term>,
+      they call a
+      <term>cellar</term>.
+      And they explain the idea in great detail,
+      indicating that they expect it to be unfamiliar,
+      even to the readers of technical journals.
+    </p>
+    <p>
+      Their algorithm, and its presentation,
+      are thoroughly non-Chomskyan.
+      Samuelson and Bauer do not provide
+      a context-free grammar for their grammar,
+      just an operator precedence table.
     </p><h1>The Operator Issue as of 1959</h1>
     <p>Since Boehm,
       many people have been refining operator precedence.
@@ -1195,11 +1207,11 @@
       and he zeroes in on its arithmetic expressions
       as the crucial issue<footnote>
         Knuth also discusses some ambiguities,
-	and some intermixing of semantics with syntax,
-	in the
+        and some intermixing of semantics with syntax,
+        in the
         ALGOL report
-	(<bibref>Knuth 1965</bibref>, pp. 622-625).
-	But Knuth (quite appropriately)
+        (<bibref>Knuth 1965</bibref>, pp. 622-625).
+        But Knuth (quite appropriately)
         notes that BNF was new when it was written,
         and treats these other issues
         as problems with the ALGOL specification.
@@ -1538,11 +1550,7 @@
     <p>There are problems with switching to operator
       grammars.
       Operator grammars are non-Chomskyan -- the BNF no longer
-      accurately describes the grammar<footnote>
-        <bibref>Samuelson and Bauer 1960</bibref>
-        did not even include a BNF grammar --
-        just the precedence tables.
-      </footnote>.
+      accurately describes the grammar.
       Instead the BNF becomes part of
       a combined notation, and the actual grammar parsed depends also on
       precedence, associativity,
