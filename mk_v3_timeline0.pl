@@ -101,6 +101,7 @@ sub h1_tag {
    $desc = lc $desc;
    $desc =~ s/\s+$//;
    $desc =~ s/^\s+//;
+   $desc =~ s/[":]//g;
    $desc =~ s/<[^>]*>//g;
    $desc =~ s/ \s+ /_/gxms;
    $desc =~ s/[^_a-zA-Z0-9]/_/gxms;
