@@ -267,9 +267,7 @@
         https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers%22.
       </footnote>. Hopper seems to be the first
       person to use this term for a computer program.</p>
-    <h1>Term:
-      <term>Compiler</term>
-      as of 1952</h1>
+    <h1>"Compiler" as of 1952</h1>
     <p>Hopper used the term
       <term>compiler</term>
       in a meaning it
@@ -376,8 +374,7 @@
     </p>
     <h1>1954: The FORTRAN project begins</h1>
     <p>At IBM, a team under John Backus begins working on the language which will be called FORTRAN.</p>
-    <h1><term>Compiler</term>
-      as of 1954</h1>
+    <h1>"Compiler" as of 1954</h1>
     <p>The term
       <term>compiler</term>
       is still being used
@@ -440,8 +437,7 @@
         <bibref>Padua 2000</bibref>.
       </footnote>
     </blockquote>
-    <h1><term>Compiler</term>
-      as of 1956</h1>
+    <h1>"Compiler" as of 1956</h1>
     <p>In the 1956 document describing the IT compiler<footnote>
         <bibref>Chipps et al 1956</bibref>.
       </footnote>,
@@ -493,8 +489,7 @@
         phase of modern compilers.
       </li>
     </ul>
-    <h1>Term:
-      <term>Parser</term></h1>
+    <h1>Term: "Parser"</h1>
     <p>Chomsky is a turning point, so much so that he establishes or settles the
       meaning of many of the terms we are using.
       A
@@ -506,8 +501,7 @@
       of the mapping from strings to structures.
       For our purposes,
       the structures can usually be considered to be parse trees.</p>
-    <h1>Term:
-      <term>Recognizer</term></h1>
+    <h1>Term: "Recognizer"</h1>
     <p>In contrast to a parser,
       a
       <term>recognizer</term>
@@ -552,8 +546,7 @@
       is only noise. The Chomskyan approach is to start with a grammar,
       and use the corpus of the language to check its accuracy. Chomsky's
       approach will soon come to dominate linguistics.</p>
-    <h1>Term:
-      <term>Chomskyan parsing</term></h1>
+    <h1>Term: "Chomskyan parsing"</h1>
     <p>From here on,
       parsing theory
       divides into Chomskyan and
@@ -646,8 +639,9 @@
       <term>stack</term>,
       they call a
       <term>cellar</term>.
-      And they explain the idea in great detail,
-      indicating that they expect it to be unfamiliar,
+      And they explain the idea in great detail.
+      Apparently, 14 years after Turing's discovery of them,
+      stacks are still unfamiliar,
       even to the readers of technical journals.
     </p>
     <p>
@@ -656,7 +650,8 @@
       Samuelson and Bauer do not provide
       a context-free grammar for their grammar,
       just an operator precedence table.
-    </p><h1>The Operator Issue as of 1959</h1>
+    </p>
+    <h1>The Operator Issue as of 1959</h1>
     <p>Since Boehm,
       many people have been refining operator precedence.
       With Samuelson and Bauer,
@@ -708,8 +703,7 @@
       The improved notation will become known as Backus-Naur Form
       (BNF).
     </p>
-    <h1>Term:
-      <term>declarative</term></h1>
+    <h1>Term: "declarative"</h1>
     <p>For our purposes, a parser is
       <term>declarative</term>,
       if it
@@ -718,14 +712,12 @@
       <term>syntax-driven</term>
       parsers.
     </p>
-    <h1>Term:
-      <term>procedural</term></h1>
+    <h1>Term: "procedural"</h1>
     <p>A parser is
       <term>procedural</term>, if it requires procedural
       logic as part of its syntax phase.
     </p>
-    <h1>Term:
-      <term>general</term></h1>
+    <h1>Term: "general"</h1>
     <p>A general parser is a parser that will parse
       any grammar that can be written in BNF<footnote>
         As a pedantic point, a general parser need only parse
@@ -810,8 +802,7 @@
         and therefore could be inefficient.
       </footnote>.
     </p>
-    <h1>Term:
-      <term>Top-down</term></h1>
+    <h1>Term: "Top-down"</h1>
     <p>A top-down parser deduces the consituents of a rule from the rule.
       That is, it looks at the rule first,
       and then deduces what is on its RHS.
@@ -831,8 +822,7 @@
       like most modern top-down parsers,
       has a sophisticated bottom-up element.
     </p>
-    <h1>Term:
-      <term>Bottom-up</term></h1>
+    <h1>Term: "Bottom-up"</h1>
     <p>A bottom-up parser deduces a rule from its constituents.
       That is, it looks at either the input or at the LHS symbols
       of previously deduced rules,
@@ -845,8 +835,7 @@
       parses based on the grammar,
       and that requires some kind of top-down logic.
     </p>
-    <h1>Term:
-      <term>Synthetic attribute</term></h1>
+    <h1>Term: "Synthetic attribute"</h1>
     <p><bibref>Irons 1961</bibref>
       also introduces synthetic attributes: the parse creates
       a tree, which is evaluated bottom-up. Each node is evaluated using
@@ -1089,8 +1078,8 @@
         <bibref>Knuth 1965</bibref>, p. 637.
       </footnote>.
     </p>
-    <h1>Term:
-      <term>linear</term></h1><p>
+    <h1>Term: "linear"</h1>
+    <p>
       Among
       <a href="#loc-quest">the goals</a>
       for the ideal
@@ -1292,7 +1281,8 @@
       This question will be answered by Joop Leo in 1991.
       The answer, surprisingly, will be
       <q>yes</q>.
-    </p><h1>1968: Lewis and Stearns discover LL</h1>
+    </p>
+    <h1>1968: Lewis and Stearns discover LL</h1>
     <p>When Knuth discovered the LR grammars, he announced them to
       the world with a full-blown mathematical description.
       The top-down
@@ -1311,7 +1301,8 @@
       <term>LL</term>
       and
       <term>LR</term>
-    </h1><p>When LL is added to the vocabulary of parsing, the meaning of
+    </h1>
+    <p>When LL is added to the vocabulary of parsing, the meaning of
       <term>LR</term>
       shifts slightly. In 1965 Knuth meant LR to mean
       <q>translatable from left to right</q><footnote>
@@ -1454,8 +1445,7 @@
         <bibref>Knuth 1968</bibref>.
       </footnote>.
     </p>
-    <h1>Term:
-      <term>Inherited attributes</term></h1>
+    <h1>Term: "Inherited attributes"</h1>
     <p>Recall that a node in a parse
       gets its synthetic attributes from
       its children. Inherited attributes are attibutes
@@ -1466,8 +1456,7 @@
       But
       inherited attributes are powerful and, with care, the circularities
       can be avoided.</p>
-    <h1>Term:
-      <term>Attribute grammar</term></h1>
+    <h1>Term: "Attribute grammar"</h1>
     <p>An attribute grammar is a grammar whose nodes may have both inherited and synthetic attributes.</p>
     <h1>1969: LALR</h1>
     <p>Since
@@ -1624,7 +1613,8 @@
       is now fully automated.
       Most practical languages, including the C language and
       <tt>yacc</tt>'s own input language, still require manual hackery.
-    </p><h1>The Operator Issue as of 1979</h1>
+    </p>
+    <h1>The Operator Issue as of 1979</h1>
     <p>
       Recall
       <a href="#loc-quest">the criteria</a>
@@ -1817,7 +1807,8 @@
         <bibref>Hutton 1992</bibref>, pp. 19-20.
       </footnote>.
     </p>
-    <h1>1995: Wadler's monads</h1><p>
+    <h1>1995: Wadler's monads</h1>
+    <p>
       In the adaptation of monads into the world of
       programming,
       <bibref>Walder 1995</bibref>
@@ -1847,7 +1838,8 @@
       This undercuts
       the simplicity and elegance of the combinator approach.
     </p>
-    <h1>1996: Hutton and Meijer on combinator parsing</h1><p>
+    <h1>1996: Hutton and Meijer on combinator parsing</h1>
+    <p>
       <bibref>Wadler 1995</bibref>
       used parsing as an example to motivate
       its presentation of monads.
@@ -2011,8 +2003,8 @@
       parsing are equivalent.
       Now, GNU replaces LALR with the technology
       that LALR replaced a quarter century earlier: recursive descent.</p>
-    <h1>2010: Leo 1991 is implemented</h1><p>
-    </p><p>Jeffrey Kegler (the author of this timeline) releases the first
+    <h1>2010: Leo 1991 is implemented</h1>
+    <p>Jeffrey Kegler (the author of this timeline) releases the first
       practical implementation of Joop Leo's algorithm<footnote>
         [http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html].
         This references the initial announcement,
@@ -2233,7 +2225,8 @@
       when that is convenient.
       Once again, the Operator Issue seems to be solved,
       but this time perhaps for real.
-    </p><h1>The Parsing Problem as of 2012</h1>
+    </p>
+    <h1>The Parsing Problem as of 2012</h1>
     <p>
       Again recall the four criteria from the original quest
       for a solution to the Parsing Problem:

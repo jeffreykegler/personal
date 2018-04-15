@@ -21,6 +21,10 @@ LINE: while ( my $line = <> ) {
         do_footnote($line);
 	next LINE;
     }
+    if ( $line =~ /<h1>/ ) {
+        do_h1($line);
+	next LINE;
+    }
     push @lines, $line;
 }
 
@@ -87,5 +91,55 @@ sub do_footnote {
     }
     $footnoted_line .= $post_footnote;
     push @lines, $footnoted_line if $footnoted_line =~ m/\S/;
+}
+
+# for tracking duplicates
+my %h1_tags = ();
+
+sub h1_tag {
+   my ($desc) = @_;
+   $desc = lc $desc;
+   $desc =~ s/\s+$//;
+   $desc =~ s/^\s+//;
+   $desc =~ s/<[^>]*>//g;
+   $desc =~ s/ \s+ /_/gxms;
+   $desc =~ s/[^_a-zA-Z0-9]/_/gxms;
+   die "Duplicate h1 tag: $desc" if $h1_tags{$desc};
+   $h1_tags{$desc} = 1;
+   return 'h1-' . $desc;
+}
+
+sub do_h1 {
+    my ($line) = @_;
+    if ($line !~ m{</h1>}) {
+      # multiline
+      my ($prefix, $header) = $line =~ m{(.*)<h1>(.*)$};
+      if (not defined $header) {
+       die "mal-formed line: $line";
+       }
+      if ($prefix =~ /\S/) {
+	 die "Non-whitespace before <h1> in $line";
+      }
+      my $h1_tag = h1_tag($header);
+      push @lines, qq{$prefix<h1 id="$h1_tag">};
+      push @lines, qq{$prefix$header};
+      return;
+     }
+     # single line
+    my ($prefix, $header, $suffix) = $line =~ m{^(.*)<h1>(.*)</h1>(.*)$};
+    if (not defined $suffix) {
+       die "mal-formed line: $line";
+    }
+    if ($prefix =~ /\S/) {
+       die "Non-whitespace before single-line <h1> in $line";
+    }
+    if ($suffix =~ /\S/) {
+       die "Non-whitespace after </h1> in $line";
+    }
+    my $h1_tag = h1_tag($header);
+    push @lines, qq{$prefix<h1 id="$h1_tag">};
+    push @lines, qq{$prefix$header};
+    push @lines, qq{$prefix</h1>};
+    return;
 }
 
