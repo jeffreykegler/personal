@@ -274,13 +274,11 @@
       had at the time:
       <q>to compose out of materials from other
         documents</q><footnote>
-        Quoted definition is from Nora B. Moser,
-        "Compiler method of automatic programming",
-        Symposium on Automatic Programming for Digital Computer,
-        ONR, p. 15.,
-        as cited in
+	The quoted definition is from
+	<bibref>Moser 1954</bibref>, p. 15,
+	as cited in 
         <bibref>Knuth and Pardo 1976</bibref>,
-        p 51.
+	p. 51.
       </footnote>.
       Specifically, in 1952,
       subroutines were new,
@@ -2462,7 +2460,7 @@
     <p>
       <bibid>Hayes 2013</bibid>:
       Hayes, Brian. "First links in the Markov chain." American Scientist 101.2 (2013): 252.
-      <comment>MLA</comment>
+      <comment>MLA from GS</comment>
       <a href="https://raichev.net/markov/misc/markov_chain.pdf">
         Available online.</a>
     </p>
@@ -2633,6 +2631,11 @@
       <cite>UNIX Programmer's Manual</cite>, Seventh Edition, Volume 1,
       Bell Labs, Murray Hill, New Jersey
       (January 1979).
+    </p>
+    <p>
+	<bibid><Moser 1954</bibid>:
+	<comment>MLA from GS</comment>
+	Moser, Nora B. "Compiler method of automatic programming." Proc. Symp. on Automatic Programming for Digital Computers. 1954.
     </p>
     <p>
       <bibid>Norvell 1999</bibid>:
