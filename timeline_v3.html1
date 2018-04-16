@@ -1516,7 +1516,7 @@
       At or around this time, rumor has it that the main line of
       development for GTDPL parsers is classified secret by the US
       government<footnote>
-        http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2.
+        <bibref>Simms 2014</bibref>.
       </footnote>.
       Public interest in GTDPL fades.</p>
     <h1>1973: Pratt parsing</h1>
@@ -2730,6 +2730,14 @@
       27(3):379-423
       and
       27(4):623-666 (July and October 1948).
+    </p>
+    <p>
+      <bibid>Simms 2014</bibid>:
+	<comment>ad lib</comment>
+	Wikipedia archive of Talk:Metacompiler,
+	Damon Simms (talk) 16:31, 9 October 2014 (UTC).
+	<a href="http://www.wikiwand.com/en/Talk:Metacompiler/Archive_2">
+	Available online.</a>
     </p>
     <p>
       <bibid>Snyder 1975</bibid>:
