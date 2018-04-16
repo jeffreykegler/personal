@@ -611,8 +611,8 @@
     <p>Backus discovers a new notation to describe the IAL language<footnote>
         Backus's notation is influenced by his study of Post --
         he seems not to have read Chomsky until later.
-        [http://archive.computerhistory.org/resources/text/Oral_History/Backus_John/Backus_John_1.oral_history.2006.102657970.pdf],
-        p. 25.
+	<bibref>Backus 2006</bibref>, p. 25
+	and
         <bibref>Backus 1980</bibref>, p. 133.
       </footnote>.
       According to Backus's recollection,
@@ -2347,6 +2347,14 @@
       (1980).
       [http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf]
       10.1016/B978-0-12-491650-0.50017-4.
+    </p>
+    <p>
+      <bibid>Backus 2006</bibid>: GS MLA TODO
+      Booch, Grady. "Oral History of John Backus." (2006).
+      <a
+      href="http://archive.computerhistory.org/resources/text/oral_history/backus_john/backus_john_1.oral_history.2006.102657970.pdf">
+      Available online.
+      </a>
     </p>
     <p>
       <bibid>Carpenter and Doran 1977</bibid>:
