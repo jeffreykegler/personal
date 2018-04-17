@@ -5,7 +5,7 @@
 <html>
   <head>
     <title>
-      <p>Parsing: a timeline -- V3.0
+      Parsing: a timeline -- V3.0
     </title>
     <style type="text/css">
       mytitle { font-size: 300%; text-align: center; display: block }
@@ -1655,9 +1655,9 @@
           current</a>
         and
         <a href="https://en.wikipedia.org/w/index.php?title=Perl&oldid=836112216#Early_versions">
-	permalink</a>
-          versions.
-        </footnote>.
+          permalink</a>
+        versions.
+      </footnote>.
       Perl embraces complexity like no
       previous language.
       Larry uses
