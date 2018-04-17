@@ -71,7 +71,7 @@
       </footnote>.
     </p>
     <h1>1913: Markov and Eugene Onegin</h1>
-    <p>In 1913 revisits his chains,
+    <p>In 1913, Markov revisits his chains,
       applying them to the sequence of vowels and consonants
       in Pushkin's
       <cite>Eugene Onegin</cite><footnote>
@@ -2410,14 +2410,17 @@
     </p>
     <p>
       <bibid>Darwin 1984</bibid>:
-      Ian F. Darwin,
-      <q>A History of UNIX before Berkeley: UNIX Evolution: 1975-1984</q>
-      (1984).
-      [http://doc.cat-v.org/unix/unix-before-berkeley/]
+      <comment>repaired MLA from GS</comment>
+      Darwin, Ian F., and Geoffrey Collyer. "A History of UNIX before
+      Berkeley: UNIX Evolution, 1975-1984." (1984).
+      <a
+      href="http://doc.cat-v.org/unix/unix-before-berkeley/">
+        Available online.
+      </a>
     </p>
     <p>
       <bibid>Denning 1983</bibid>:
-      <comment>part ad lib; part MLA from GS</comment>
+      <comment>after MLA from GS</comment>
       From Peter Denning's introduction to
       the reprint of
       <bibref>Irons 1961</bibref>
