@@ -2429,19 +2429,20 @@
     </p>
     <p>
       <bibid>DeRemer 1969</bibid>:
-      Franklin Lewis DeRemer,
-      "Practical Translators for LR(k) Languages"
-      PhD thesis, MIT, Cambridge, Mass.
-      (Sept. 1969).
+      <comment>MLA from GS</comment>
+      DeRemer, Franklin Lewis. Practical translators for LR (k) languages. Diss. Massachusetts Institute of Technology, 1969.
+      (September 1969.)
+      <a
+      href="https://dspace.mit.edu/bitstream/handle/1721.1/13628/24228988-MIT.pdf?sequence=2">
+        Available online.
+      </a>
     </p>
     <p>
       <bibid>Dijkstra 1961</bibid>:
-      Edsger W. Dijkstra,
-      "Algol 60 translation : An Algol 60 translator
-      for the x1 and Making a translator for Algol 60",
-      Research Report 35,
-      Mathematisch Centrum, Amsterdam
-      (1961).
+      <comment>MLA from GS</comment>
+      Dijkstra, E. W. "Algol 60 translation: An algol 60 translator for
+      the x1 and making a translator for algol 60." Stichting Mathematisch
+      Centrum. Rekenafdeling MR 34/61 (1961).
     </p>
     <p>
       <bibid>Earley 1968</bibid>:
