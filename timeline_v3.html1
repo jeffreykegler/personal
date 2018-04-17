@@ -2365,11 +2365,10 @@
     <p>
       <bibid>Backus 1980</bibid>:
       <comment>MLA from GS</comment>
-      John Backus,
-      <cite>Programming in America in the 1950s- Some Personal Impressions</cite>
-      (1980).
-      [http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf]
-      10.1016/B978-0-12-491650-0.50017-4.
+      Backus, John. "Programming in america in the 1950s—Some Personal Impressions." A History of Computing in the twentieth century. 1980. 125-135.
+      <a href="http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf">
+	Available online.
+      </a>
     </p>
     <p>
       <bibid>Backus 2006</bibid>:
@@ -2382,34 +2381,31 @@
     </p>
     <p>
       <bibid>Carpenter and Doran 1977</bibid>:
-      B. E. Carpenter and R. W.  Doran,
-      "The other Turing machine",
-      <cite>The Computer Journal</cite>,
-      20 (3): 269-279
+      <comment>MLA from GS</comment>
+      Carpenter, Brian E., and Robert W. Doran. "The other Turing machine." The Computer Journal 20.3 (1977): 269-279.
+      <a
+      href="https://academic.oup.com/comjnl/article-pdf/20/3/269/2256995/200269.pdf">
+        Available online.
+      </a>
       (January 1977).
     </p>
     <p>
       <bibid>Chipps et al 1956</bibid>:
-      J. Chipps, M. Koschmann, S. Orgel, A. Perlis, J. S,
-      "A mathematical language compiler",
-      in
-      <cite>Proceedings of the 1956 11th ACM national meeting</cite>
-      (1956).
+      <comment>MLA from GS</comment>
+      Chipps, J., et al. "A mathematical language compiler." Proceedings of the 1956 11th ACM national meeting. ACM, 1956.
     </p>
     <p>
       <bibid>Chomsky 1956</bibid>:
-      Noam Chomsky,
-      <q>Three models for the description of language</q>,
-      <cite>IEEE Transactions on Information
-        Theory</cite>,
-      2(3):113-124
-      (1956).
+      <comment>MLA from GS</comment>
+      Chomsky, Noam.
+      "Three models for the description of language." IRE Transactions on information theory 2.3 (1956): 113-124.
     </p>
     <p>
       <bibid>Chomsky 1957</bibid>:
-      Noam Chomsky
-      <cite>Syntactic Structures</cite>,
-      The Hague/Paris: Mouton, ISBN 978-3-11-021832-9
+      <comment>after MLA</comment>
+      Chomsky, Noam.
+      <cite>Syntactic Structures</cite>.
+      The Hague/Paris: Mouton.
       (1957).
     </p>
     <p>
