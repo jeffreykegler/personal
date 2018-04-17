@@ -429,10 +429,7 @@
     <blockquote>
       The lack of
       operator priority
-      (otherwise known as
-      <q>operator precedence</q> or
-      <q>operator hierarchy</q>)
-      in the IT
+      (often called precedence or hierarchy) in the IT
       language was the most frequent single cause of errors by the users
       of that compiler.<footnote>
         <bibref>Knuth 1962</bibref>.
