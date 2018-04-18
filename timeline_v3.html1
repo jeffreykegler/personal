@@ -2460,45 +2460,54 @@
     <p>
       <bibid>Ford 2002</bibid>:
       <comment>MLA from GS</comment>
-      Ford, Bryan. Packet parsing: a practical linear-time algorithm with backtracking. Diss. Massachusetts Institute of Technology, 2002.
+      Ford, Bryan. Packet parsing: a practical linear-time algorithm with
+      backtracking. Diss. Massachusetts Institute of Technology, 2002.
       (September 2002).
-      <comment>Online ref TODO</comment>
+      <a
+      href="https://dspace.mit.edu/bitstream/handle/1721.1/87310/51972156-MIT.pdf;sequence=2">
+        Available online.
+      </a>
     </p>
     <p>
       <bibid>Ford 2004</bibid>:
-      Bryan Ford,
-      "Parsing expression grammars: A recognition-based syntactic foundation",
-      in
-      <cite>Proceedings
-        of the 31st ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages,
-        POPL 2004 (Venice, Italy, 14-16 January 2004)</cite>, N. D. Jones and X. Leroy, Eds., ACM, pp. 111-122
+      <comment>MLA from GS</comment>
+      Ford, Bryan. "Parsing expression grammars: a recognition-based
+      syntactic foundation." ACM SIGPLAN Notices. Vol. 39. No. 1. ACM,
+      2004.
       (January 2004).
+      <a
+      href="https://pdos.csail.mit.edu/papers/parsing:popl04.pdf">
+        Available online.
+      </a>
     </p>
     <p>
       <bibid>Frost 1992</bibid>:
-      Richard A.  Frost,
-      "Constructing programs as executable attribute
-      grammars"
-      <cite>The Computer Journal</cite>, 35(4):376-389
-      (1992).
+      <comment>MLA from GS</comment>
+      Frost, Richard A. "Constructing programs as executable attribute grammars." The Computer Journal 35.4 (1992): 376-389.
+      <a
+      href="https://watermark.silverchair.com/35-4-376.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAaowggGmBgkqhkiG9w0BBwagggGXMIIBkwIBADCCAYwGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMVzKV6eGa2snnqtQVAgEQgIIBXY4xn4QKSNrtnLCQ9iAnydzaRuW994a6RR8wY4ZgOyOPYwktyqMGbDmMeYbPKpuDYqkLnFQOLn9x9hxSFDqXv9DWcCx7lLzN-wjYwE_A2n6xT_8VBb-ZjfROPx4_0k_VMhkY6HQi4dnrOO4K9CV_z6eK4gqOS3bkv9Ee_L2AkVMYSreapyMpTV0ZQZnz3ZT8rEoMg3EZStMm1iRrACbyq7h-W2ImHpWJce65X1P14bwQJ1tVcm_P2pDFG88LKe6ShVg8Mj9BMrVOvr7JXw-DlBxc3zDbW41yYpBtyKapHTvoTA9szHawpoaYN3k4EhCtPD99UX-2xShzOYIPOPT39O414Z0MJ3ZXjSwJzBrpTsnO8GtOjoI4tTZ5rZGsscz70NXJZXE5bDO3jn7Q7TB_qBACsVW0E5l_OIowL1XRl9s3pSjKDxIT68Lu-HoiFCM8S0Zc6nsdL_HdbCR2bYo">
+        Available online.
+      </a>
     </p>
     <p>
       <bibid>Glennie 1960</bibid>:
-      A. E. Glennie,
-      "On the Syntax Machine and the Construction of a Universal Compiler"
-      Computation Center, Carnegie Institute of Technology,
-      <cite>Technical Report No. 2</cite>
-      (10 July 1960).
-      [http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm]
+      <comment>MLA from GS</comment>
+      Glennie, A. E. On the syntax machine and the construction of a
+      universal compiler. No. TR-2. CARNEGIE INST OF TECH PITTSBURGH PA
+      COMPUTATION CENTER, 1960.
+      <a
+      href="http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm">
+        Available online.
+      </a>
     </p>
     <p>
       <bibid>Grune and Jacobs 2008</bibid>:
-      D. Grune and C. J. H. Jacobs,
+      <comment>after MLA</comment>
+      Grune, D. and Jacobs, C. J. H.
       <cite>Parsing Techniques: A Practical
         Guide, 2nd edition</cite>.
-      (<cite>Monographs in Computer Science</cite>), New York, USA:
-      Springer
-      (2008).
+      Monographs in Computer Science. New York, USA.
+      Springer (2008).
       When it comes to determining who first discovered an idea,
       the literature often disagrees.
       In such cases, I have often deferred
@@ -2513,13 +2522,14 @@
     </p>
     <p>
       <bibid>Hilgers and Langville 2006</bibid>:
-      Philipp Von Hilgers, and Amy Langville,
-      "The five greatest applications of Markov Chains",
-      <cite>Proceedings of the Markov Anniversary Meeting</cite>,
-      Boston Press, Boston, Massachusetts (2006).
-      [http://langvillea.people.cofc.edu/MCapps7.pdf].
-      A slide presentation of this paper is
-      [https://www.csc2.ncsu.edu/conferences/nsmc/MAM2006/langville.pdf].
+      <comment>MLA from GS</comment>
+      Hilgers, Philipp, and Amy N. Langville. "The five greatest applications of Markov Chains." Proceedings of the Markov Anniversary Meeting, Boston Press, Boston, MA. 2006.
+      <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.672.6373&rep=rep1&type=pdf">
+        Article</a>
+	and
+      <a href="https://www.csc2.ncsu.edu/conferences/nsmc/MAM2006/langville.pdf">
+        slide presentation</a>
+	available online.
     </p>
     <p>
       <bibid>Hutton 1992</bibid>:
