@@ -1505,7 +1505,7 @@
       <tt>ed</tt>
       editor
       and its descendants, regular expressions become an everyday
-      part of the working programmer's toolkit.</p>
+      part of the working programmers toolkit.</p>
     <h1>1972: Aho and Ullman is published</h1>
     <p>Alfred Aho and Jeffrey Ullman publish
       the first volume<footnote>
@@ -2090,7 +2090,7 @@
           without having to go to the end and count back.
           Whether or not a grammar is unmarked is, in general,
           an undecidable problem.
-          But in practice, there's a easy rule:
+          But in practice, there is a easy rule:
           if a person can
           <q>eyeball</q>
           the middle of a long
