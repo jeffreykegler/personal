@@ -14,8 +14,8 @@
       datestamp { text-align: center; display: block }
       h1 { font-size: x-large }
       body {
-        max-width:900px;
-	font-size: large
+      max-width:900px;
+      font-size: large
       }
       comment { display:none }
       footnote { display:none }
@@ -2359,18 +2359,18 @@
       conference." Proceedings of the International Comference on
       Information Processing, 1959 (1959).
       Available online
-      <a href="http://www.softwarepreservation.org/projects/ALGOL/paper/Backus-Syntax_and_Semantics_of_Proposed_IAL.pdf"
-      here</a>
+      <a href="http://www.softwarepreservation.org/projects/ALGOL/paper/Backus-Syntax_and_Semantics_of_Proposed_IAL.pdf">
+        here</a>
       and
       <a href="http://www.softwarepreservation.org/projects/ALGOL/paper/Backus-ICIP-1959.pdf">
-      here</a>.
+        here</a>.
     </p>
     <p>
       <bibid>Backus 1980</bibid>:
       <comment>MLA from GS</comment>
       Backus, John. "Programming in america in the 1950s—Some Personal Impressions." A History of Computing in the twentieth century. 1980. 125-135.
       <a href="http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf">
-	Available online.
+        Available online.
       </a>
     </p>
     <p>
@@ -2526,10 +2526,10 @@
       Hilgers, Philipp, and Amy N. Langville. "The five greatest applications of Markov Chains." Proceedings of the Markov Anniversary Meeting, Boston Press, Boston, MA. 2006.
       <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.672.6373&rep=rep1&type=pdf">
         Article</a>
-	and
+      and
       <a href="https://www.csc2.ncsu.edu/conferences/nsmc/MAM2006/langville.pdf">
         slide presentation</a>
-	available online.
+      available online.
     </p>
     <p>
       <bibid>Hutton 1992</bibid>:
