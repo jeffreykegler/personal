@@ -1,8 +1,0 @@
-# Type a grammar here:
-S : C ;
-A : ;
-A : 'x' 'z' ;
-B : A 'x' 'y' ;
-B : C ;
-C : C 'w' ;
-C : 'v' ;
