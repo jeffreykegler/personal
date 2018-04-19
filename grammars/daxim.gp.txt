@@ -1,0 +1,9 @@
+# Type a grammar here:
+# Not - LL(1), LR(0), LALR, SLR(1), LR(1)
+S -> B .
+A -> .
+A -> 'x' 'z' .
+B -> A 'x' 'y' .
+B -> C .
+C -> C 'w' .
+C -> 'v' .
