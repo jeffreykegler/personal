@@ -28,8 +28,8 @@ LINE: while ( my $line = <> ) {
     push @lines, $line;
 }
 
-my $output = join "\n", map { do_bib($_) } @lines;
-my $footnotes = join "\n", '<h1>Footnotes</h1>', map { do_bib($_) } @fn_lines;
+my $output = join "\n", map { do_phase2($_) } @lines;
+my $footnotes = join "\n", '<h1>Footnotes</h1>', map { do_phase2($_) } @fn_lines;
 $output =~ s[<comment>FOOTNOTES HERE</comment>][$footnotes];
 
 say $output;
@@ -61,6 +61,33 @@ sub do_bib {
 	   . $after;
    }
    return $line;
+}
+
+sub do_mla_url {
+   my ($line) = @_;
+   my @mla_lines = ();
+   my ($before, $stag, $desc, $etag, $after) =
+       $line =~ m{^ (.*) (<mla_url>) ([^<]*) (<\/mla_url>) (.*) $}xms;
+   if (not defined $desc) {
+      @mla_lines = ($line);
+      return @mla_lines;
+   }
+   @mla_lines =
+      ($before
+	 . '<a href="#' . $desc . '">' . $desc . '</a>'
+	   . $after);
+   return @mla_lines;
+}
+
+sub do_phase2 {
+   my ($line) = @_;
+   my @lines = ();
+   my $bibed_line = do_bib($line);
+   for my $urled_line (do_mla_url($bibed_line))
+   {
+      push @lines, $urled_line;
+   }
+   return @lines;
 }
 
 sub do_footnote {

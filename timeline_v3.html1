@@ -17,6 +17,7 @@
       max-width:900px;
       font-size: large
       }
+      mla_url { display:none }
       comment { display:none }
       footnote { display:none }
       biblio { display:none }
@@ -270,15 +271,7 @@
     <p>Grace Hopper writes a linker-loader,
       and calls it a
       <term>compiler</term><footnote>
-        "First compilers" section of
-        "History of compiler construction" in Wikipedia, The Free Encyclopedia. Accessed 17 Apr. 2018.
-        Available online in
-        <a href="https://en.wikipedia.org/wiki/History_of_compiler_construction#First_compilers%22">
-          current</a>
-        and
-        <a href="https://en.wikipedia.org/w/index.php?title=History_of_compiler_construction&oldid=832900006#First_compilers">
-          permalink</a>
-        versions.
+        <bibref>Knuth and Pardo 1976</bibref>, p. 50.
       </footnote>. Hopper seems to be the first
       person to use this term for a computer program.</p>
     <h1>"Compiler" as of 1952</h1>
@@ -418,6 +411,9 @@
     <p>Perlis and Smith, now at the Carnegie Institute of Technology,
       finish the IT compiler<footnote>
         <bibref>Perlis et al 1958</bibref>.
+	<bibref>Knuth and Pardo 1976</bibref>, p. 83,
+	state that the IT compiler "was put into use
+	in October, 1956."
       </footnote>.
       Don Knuth calls this
     </p><blockquote>
@@ -2782,37 +2778,39 @@
     </p>
     <p>
       <bibid>Norvell 1999</bibid>:
-      Theodore Norvell,
-      "Parsing Expressions by Recursive Descent"
-      (1999).
-      [https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm].
+      <comment>converted to MLA</comment>
+      Norvell, Theodore.
+      "Parsing Expressions by Recursive Descent."
+      1999,
+      <mla_url>https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm</mla_url>.
     </p>
     <p>
       <bibid>Padua 2000</bibid>:
-      David Padua,
-      "The FORTRAN I Compiler",
-      in
-      <cite>Computing in Science & Engineering</cite>, 2, pp. 70-75
-      (2000).
-      DOI: https://doi.org/10.1109/5992.814661.
+      <comment>Corrected MLA from GS</comment>
+      Padua, David. "The Fortran I compiler." Computing in Science & Engineering 2.1 (2000): 70-75.
+      <a
+      href="https://web.stanford.edu/class/archive/cs/cs339/cs339.2002/fortran.pdf">
+        Available online as of 23 April 2018.
+      </a>
     </p>
     <p>
       <bibid>Perlis et al 1958</bibid>:
-      A.J. Perlis, J.W. Smith and H.R. vanZoeren,
-      "Internal Translator (IT)
-      A Compiler for the 650",
+      <comment>Corrected MLA from GS</comment>
+      Perlis, Alan J., J. W. Smith, and H. R. Van Zoeren.
+      "Internal Translator (IT): A compiler for the 650."
       Computation Center,
-      Carnegie Institute of Technology,
-      p. 1.17 to p. 1.22
-      (April 18, 1958).
+      Carnegie Institute of Technology.
+      Date is given as March 1957 in
+      <bibref>Knuth and Pardo 1976</bibref>, p. 105.
+      <a
+      href="https://ia801904.us.archive.org/11/items/bitsavers_ibm650Carntor_16304233/CarnegieInternalTranslator.pdf">
+        Available online as of 23 April 2018.
+      </a>
     </p>
     <p>
       <bibid>Post 1943</bibid>:
-      Emil L. Post,
-      "Formal Reductions of the General Combinatorial Decision Problem",
-      <cite>American Journal of Mathematics</cite>,
-      Vol. 65, No. 2, pp. 197-215 (April 1943).
-      DOI: 10.2307/2371809.
+      <comment>MLA from GS</comment>
+      Post, Emil L. "Formal reductions of the general combinatorial decision problem." American journal of mathematics 65.2 (1943): 197-215.
     </p>
     <p>
       <bibid>Pratt 1973</bibid>:
