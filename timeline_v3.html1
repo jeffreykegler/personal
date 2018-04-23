@@ -1624,8 +1624,10 @@
       is now fully automated.
       Most practical languages, including the C language and
       <tt>yacc</tt>'s own input language, still require manual hackery<footnote>.
-      See <bibref>McIlroy 1971</bibref>, p. 11 for a listing of yacc-powered
-      language in V7 Unix.
+        See
+        <bibref>McIlroy 1971</bibref>, p. 11,
+        for a listing of yacc-powered
+        languages in V7 Unix.
       </footnote>.
     </p>
     <h1>The Operator Issue as of 1979</h1>
@@ -2683,8 +2685,8 @@
     <p>
       <bibid>Lewis and Stearns 1968</bibid>:
       <comment>There is a 1966 paper with the same authors and title.
-      but Aho and Ullman 1972, p. 268 says that the 1968 paper is the
-      first definition of LL(k).
+        but Aho and Ullman 1972, p. 268 says that the 1968 paper is the
+        first definition of LL(k).
       </comment>
       <comment>MLA from GS</comment>
       Lewis II, Philip M., and Richard Edwin Stearns. "Syntax-directed
@@ -2701,6 +2703,14 @@
     </p>
     <p>
       <bibid>Marpa::R2</bibid>:<br>
+        Lucas, Peter. "Die Strukturanalyse von
+        Formel&uuml;bersetzern/Analysis of the structure of formula
+        translators." it-Information Technology 3.1-6 (1961): 159-167.
+        (September 1961).
+      Lucas, Peter. "Die Strukturanalyse von
+      Formel&uuml;bersetzern/Analysis of the structure of formula
+      translators." it-Information Technology 3.1-6 (1961): 159-167.
+      (September 1961).
       Home website: http://savage.net.au/Marpa.html<br>
       Kegler's Marpa website: https://jeffreykegler.github.io/Marpa-web-site/.<br>
       Github: https://github.com/jeffreykegler/Marpa--R2.<br>
@@ -2747,7 +2757,7 @@
     <p>
       <bibid>McIlroy 1971</bibid>:
       <comment>MLA from GS</comment>
-      McIlroy, M. Douglas. "A Research Unix reader: annotated excerpts from the Programmer’s Manual." (1971).
+      McIlroy, M. Douglas. "A Research Unix reader: annotated excerpts from the Programmer's Manual." (1971).
       <a
       href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.692.4849&rep=rep1&type=pdf">
         Available online.
@@ -2757,7 +2767,7 @@
       <bibid>McIlroy and Kernighan 1979</bibid>:
       <comment>corrected MLA from GS</comment>
       McIlroy, M. D., and Kernighan, B. W.
-      "Unix Time-Sharing System: Unix Programmer’s Manual."
+      "Unix Time-Sharing System: Unix Programmer's Manual."
       Seventh Edition, Volume 1,
       Bell Telephone Laboratories (January 1979).
       <a
