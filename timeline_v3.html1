@@ -2711,6 +2711,10 @@
       Formel&uuml;bersetzern/Analysis of the structure of formula
       translators." it-Information Technology 3.1-6 (1961): 159-167.
       (September 1961).
+      Lucas, Peter. "Die Strukturanalyse von
+      Formel&uuml;bersetzern/Analysis of the structure of formula
+      translators." it-Information Technology 3.1-6 (1961): 159-167.
+      (September 1961).
       Home website: http://savage.net.au/Marpa.html<br>
       Kegler's Marpa website: https://jeffreykegler.github.io/Marpa-web-site/.<br>
       Github: https://github.com/jeffreykegler/Marpa--R2.<br>
@@ -2818,10 +2822,10 @@
     </p>
     <p>
       <bibid>Pratt 1973</bibid>:
-      Vaughan R. Pratt, "Top down operator precedence", in
-      <cite>First
-        ACM Symposium on Principles of Programming Languages</cite>,
-      pages 41-51, ACM (Oct. 1973).
+      <comment>MLA from GS</comment>
+      Pratt, Vaughan R. "Top down operator precedence." Proceedings
+      of the 1st annual ACM SIGACT-SIGPLAN symposium on Principles of
+      programming languages. ACM, 1973.
     </p>
     <p>
       <bibid>Rosencrantz and Stearns 1970</bibid>:
