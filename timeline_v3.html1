@@ -1623,7 +1623,7 @@
       process of going from Chomskyan specification to executable
       is now fully automated.
       Most practical languages, including the C language and
-      <tt>yacc</tt>'s own input language, still require manual hackery<footnote>.
+      <tt>yacc</tt>'s own input language, still require manual hackery<footnote>
         See
         <bibref>McIlroy 1971</bibref>, p. 11,
         for a listing of yacc-powered
