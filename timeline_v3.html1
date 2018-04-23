@@ -1623,7 +1623,10 @@
       process of going from Chomskyan specification to executable
       is now fully automated.
       Most practical languages, including the C language and
-      <tt>yacc</tt>'s own input language, still require manual hackery.
+      <tt>yacc</tt>'s own input language, still require manual hackery<footnote>.
+      See <bibref>McIlroy 1971</bibref>, p. 11 for a listing of yacc-powered
+      language in V7 Unix.
+      </footnote>.
     </p>
     <h1>The Operator Issue as of 1979</h1>
     <p>
@@ -2598,8 +2601,10 @@
       <bibid>Kegler 2012b</bibid>:
       <comment>MLA from GS</comment>
       Kegler, Jeffrey. "Marpa, A Practical General Parser: The Recognizer." (2012): 115.
-      <a href="http://dinhe.net/~aredridel/.notmine/PDFs/Parsing/KEGLER,%20Jeffrey%20-%20Marpa,%20a%20practical%20general%20parser:%20the%20recognizer.pdf">
-        Available online.</a>
+      <a
+      href="http://dinhe.net/~aredridel/.notmine/PDFs/Parsing/KEGLER,%20Jeffrey%20-%20Marpa,%20a%20practical%20general%20parser:%20the%20recognizer.pdf">
+        Available online.
+      </a>
     </p>
     <p>
       <bibid>Kleene 1951</bibid>:
@@ -2666,25 +2671,32 @@
     </p>
     <p>
       <bibid>Leo 1991</bibid>:
-      Joop M. I. M. Leo,
-      "A general context-free parsing algorithm running in linear time on
-      every LR(k) grammar without using lookahead",
-      <cite>Theoretical Computer Science</cite>,
-      82:165-176
-      (1991).
+      <comment>MLA from GS</comment>
+      Leo, Joop MIM. "A general context-free parsing algorithm
+      running in linear time on every LR (k) grammar without using
+      lookahead." Theoretical computer science 82.1 (1991): 165-176.
+      <a
+      href="https://ac.els-cdn.com/030439759190180A/1-s2.0-030439759190180A-main.pdf?_tid=86ea80dd-c153-43a0-9824-13c1723fab9c&acdnat=1524496824_ffa285ce878fc2f3ce09e0e9e4ec31ac">
+        Available online.
+      </a>
     </p>
     <p>
       <bibid>Lewis and Stearns 1968</bibid>:
-      P. M. Lewis, II and R. E .Stearns, "Syntax-directed transduction",
-      <cite>Journal of the ACM</cite>,
-      15(3):465-488 (1968).
+      <comment>There is a 1966 paper with the same authors and title.
+      but Aho and Ullman 1972, p. 268 says that the 1968 paper is the
+      first definition of LL(k).
+      </comment>
+      <comment>MLA from GS</comment>
+      Lewis II, Philip M., and Richard Edwin Stearns. "Syntax-directed
+      transduction." Journal of the ACM (JACM) 15.3 (1968): 465-488.
     </p>
     <p>
       <bibid>Lucas 1961</bibid>:
-      P. Lucas, "Die Strukturanalyse von Formeln&uuml;bersetzern / analysis of
-      the structure of formula translators" (in German),
-      <cite>Elektronische Rechenanlagen</cite>,
-      3(11.4):159-167
+      <comment>MLA from GS</comment>
+      <comment>Container capitalization?</comment>
+      Lucas, Peter. "Die Strukturanalyse von
+      Formel&uuml;bersetzern/Analysis of the structure of formula
+      translators." it-Information Technology 3.1-6 (1961): 159-167.
       (September 1961).
     </p>
     <p>
@@ -2698,14 +2710,14 @@
     </p>
     <p>
       <bibid>Mascrenhas et al 2014</bibid>:
-      Fabio Mascarenhas, S&egrave;rgio Medeiros and
-      Roberto Ierusalimschy,
-      "On the Relation between Context-Free Grammars
-      and Parsing Expression Grammars",
-      <cite>Science of Computer Programming</cite>
-      89, pp. 235-250
-      (2014).
-      [https://arxiv.org/abs/1304.3177]
+      <comment>MLA from GS</comment>
+      Mascarenhas, Fabio, Sérgio Medeiros, and Roberto Ierusalimschy. "On
+      the relation between context-free grammars and parsing expression
+      grammars." Science of Computer Programming 89 (2014): 235-250.
+      <a
+      href="https://arxiv.org/abs/1304.3177">
+        Available online.
+      </a>
     </p>
     <p>
       <bibid>Markov 1906</bibid>:
@@ -2733,11 +2745,25 @@
       [http://www.alpha60.de/research/markov/DavidLink_AnExampleOfStatistical_MarkovTrans_2007.pdf]
     </p>
     <p>
+      <bibid>McIlroy 1971</bibid>:
+      <comment>MLA from GS</comment>
+      McIlroy, M. Douglas. "A Research Unix reader: annotated excerpts from the Programmer’s Manual." (1971).
+      <a
+      href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.692.4849&rep=rep1&type=pdf">
+        Available online.
+      </a>
+    </p>
+    <p>
       <bibid>McIlroy and Kernighan 1979</bibid>:
-      M. D. McIlroy and B. W. Kernighan, editors,
-      <cite>UNIX Programmer's Manual</cite>, Seventh Edition, Volume 1,
-      Bell Labs, Murray Hill, New Jersey
-      (January 1979).
+      <comment>corrected MLA from GS</comment>
+      McIlroy, M. D., and Kernighan, B. W.
+      "Unix Time-Sharing System: Unix Programmer’s Manual."
+      Seventh Edition, Volume 1,
+      Bell Telephone Laboratories (January 1979).
+      <a
+      href="http://web.cuzuco.com/~cuzuco/v7/v7vol1.pdf">
+        Available online.
+      </a>
     </p>
     <p>
       <bibid>Moser 1954</bibid>:
