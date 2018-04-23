@@ -411,9 +411,9 @@
     <p>Perlis and Smith, now at the Carnegie Institute of Technology,
       finish the IT compiler<footnote>
         <bibref>Perlis et al 1958</bibref>.
-	<bibref>Knuth and Pardo 1976</bibref>, p. 83,
-	state that the IT compiler "was put into use
-	in October, 1956."
+        <bibref>Knuth and Pardo 1976</bibref>, p. 83,
+        state that the IT compiler "was put into use
+        in October, 1956."
       </footnote>.
       Don Knuth calls this
     </p><blockquote>
@@ -2707,6 +2707,10 @@
       Formel&uuml;bersetzern/Analysis of the structure of formula
       translators." it-Information Technology 3.1-6 (1961): 159-167.
       (September 1961).
+      Lucas, Peter. "Die Strukturanalyse von
+      Formel&uuml;bersetzern/Analysis of the structure of formula
+      translators." it-Information Technology 3.1-6 (1961): 159-167.
+      (September 1961).
       Home website: http://savage.net.au/Marpa.html<br>
       Kegler's Marpa website: https://jeffreykegler.github.io/Marpa-web-site/.<br>
       Github: https://github.com/jeffreykegler/Marpa--R2.<br>
@@ -2824,7 +2828,7 @@
       D.J. Rosenkrantz, and R.E. Stearns,
       "Properties of deterministic top-down grammars",
       <cite>Information and Control</cite>,
-      17:226–256
+      17:226-256
       (1970).
     </p><p>
       <bibid>Samuelson and Bauer 1959</bibid>:
