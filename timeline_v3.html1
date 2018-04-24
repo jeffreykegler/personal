@@ -2395,73 +2395,75 @@
       Computer History Museum,
       5 September 2006.
       <mla_url>http://archive.computerhistory.org/resources/text/oral_history/backus_john/backus_john_1.oral_history.2006.102657970.pdf</mla_url>
-      Accessible as of 24 April 2018.
-      <comment>TO HERE</comment>
+      Accessed 24 April 2018.
     </p>
     <p>
       <bibid>Carpenter and Doran 1977</bibid>:
-      <comment>MLA from GS</comment>
-      Carpenter, Brian E., and Robert W. Doran. "The other Turing machine." The Computer Journal 20.3 (1977): 269-279.
+      Carpenter, Brian E., and Robert W. Doran.
+      <mla_title>The other Turing machine.</mla_title>
+      <mla_container>The Computer Journal</mla_container>,
+      vol. 20, issue 3, 1 January 1977, pp. 269-279.
       <a
       href="https://academic.oup.com/comjnl/article-pdf/20/3/269/2256995/200269.pdf">
-        Accessible online.
+        Accessed online 24 April 2018.
       </a>
-      (January 1977).
     </p>
     <p>
       <bibid>Chipps et al 1956</bibid>:
-      <comment>MLA from GS</comment>
-      Chipps, J., et al. "A mathematical language compiler." Proceedings of the 1956 11th ACM national meeting. ACM, 1956.
+      Chipps, J., et al.
+      <mla_title>A mathematical language compiler.</mla_title>
+      <mla_container>Proceedings of the 1956 11th ACM national meeting</mla_container>,
+      ACM, 1956.
     </p>
     <p>
       <bibid>Chomsky 1956</bibid>:
-      <comment>MLA from GS</comment>
       Chomsky, Noam.
-      "Three models for the description of language." IRE Transactions on information theory 2.3 (1956): 113-124.
+      <mla_title>Three models for the description of language.</mla_title>
+      <mla_container>IRE Transactions on information theory</mla_container>,
+      vol. 2, issue 3, September 1956, pp. 113-124.
     </p>
     <p>
       <bibid>Chomsky 1957</bibid>:
-      <comment>after MLA</comment>
       Chomsky, Noam.
       <cite>Syntactic Structures</cite>.
-      The Hague/Paris: Mouton.
-      (1957).
+      Mouton & Co., 1957.
     </p>
     <p>
       <bibid>Darwin 1984</bibid>:
-      <comment>repaired MLA from GS</comment>
-      Darwin, Ian F., and Geoffrey Collyer. "A History of UNIX before
-      Berkeley: UNIX Evolution, 1975-1984." (1984).
-      <a
-      href="http://doc.cat-v.org/unix/unix-before-berkeley/">
-        Accessible online.
-      </a>
+      Darwin, Ian F., and Geoffrey Collyer.
+      <mla_title>A History of UNIX before
+      Berkeley: UNIX Evolution, 1975-1984.</mla_title>
+      <mla_container>/sys/doc/</mla_container>,
+      1984,
+      <mla_url>http://doc.cat-v.org/unix/unix-before-berkeley/</mla_url>.
+      Accessed 24 April 2018.
     </p>
     <p>
       <bibid>Denning 1983</bibid>:
-      <comment>after MLA from GS</comment>
-      From Peter Denning's introduction to
-      the reprint of
-      <bibref>Irons 1961</bibref>
-      in the 25th Anniversary Issue,
-      Communications of the ACM 26.1 (1983): 14.
+      Denning, Peter,
+      Untitled introduction to
+      <bibref>Irons 1961</bibref>,
+      <mla_container>Communications of the ACM</mla_container>,
+      25th Anniversary Issue,
+      vol. 26, no. 1, 1983, p. 14.
     </p>
     <p>
       <bibid>DeRemer 1969</bibid>:
-      <comment>MLA from GS</comment>
-      DeRemer, Franklin Lewis. Practical translators for LR (k) languages. Diss. Massachusetts Institute of Technology, 1969.
-      (September 1969.)
-      <a
-      href="https://dspace.mit.edu/bitstream/handle/1721.1/13628/24228988-MIT.pdf?sequence=2">
-        Accessible online.
-      </a>
+      DeRemer, Franklin Lewis.
+      <mla_container>Practical translators for LR(k) languages</mla_container>.
+      September 1969.
+      PhD dissertation, Massachusetts Institute of Technology,
+      <mla_url>https://dspace.mit.edu/bitstream/handle/1721.1/13628/24228988-MIT.pdf?sequence=2</mla_url>.
+      Accessed 24 April 2018.
     </p>
     <p>
       <bibid>Dijkstra 1961</bibid>:
-      <comment>MLA from GS</comment>
-      Dijkstra, E. W. "Algol 60 translation: An algol 60 translator for
-      the x1 and making a translator for algol 60." Stichting Mathematisch
-      Centrum. Rekenafdeling MR 34/61 (1961).
+      Dijkstra, E. W.
+      <mla_title>Algol 60 translation: An algol 60 translator for
+      the x1 and making a translator for algol 60.</mla_title>
+      Stichting Mathematisch Centrum,
+      Rekenafdeling, MR 34/61, 1961.
+      <comment>TO HERE</comment>
     </p>
     <p>
       <bibid>Earley 1968</bibid>:
