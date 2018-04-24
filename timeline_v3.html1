@@ -2357,7 +2357,7 @@
       <bibid>Aycock and Horspool 2002</bibid>:
       Aycock, John, and R. Nigel Horspool.
       <mla_title>Practical earley parsing.</mla_title>
-      <mla_container>The Computer Journal</mla_container>, vol. 45, no. 6, 2002, pp. 620-630.
+      <mla_container>The Computer Journal</mla_container>, vol. 45, issue 6, 2002, pp. 620-630.
       <a href="https://wiki.eecs.yorku.ca/course_archive/2013-14/W/6339/_media/practicalearleyparsing.pdf">
         Accessed 23 April 2018</a>.
     </p>
@@ -2463,73 +2463,66 @@
       the x1 and making a translator for algol 60.</mla_title>
       Stichting Mathematisch Centrum,
       Rekenafdeling, MR 34/61, 1961.
-      <comment>TO HERE</comment>
     </p>
     <p>
       <bibid>Earley 1968</bibid>:
-      <comment>MLA from GS</comment>
-      Earley, Jay. AN EFFICIENT CONTEXT-FREE PARSING ALGORITHM. Diss. Carnegie-Mellon University, 1968.
-      (August 1968.)
-      <a
-      href="http://reports-archive.adm.cs.cmu.edu/anon/anon/usr0/ftp/scan/CMU-CS-68-earley.pdf">
-        Accessible online.
-      </a>
+      Earley, Jay.
+      <mla_title>An Efficient Context-free Parsing Algorithm.</mla_title>
+      August 1968.
+      PhD dissertation, Carnegie-Mellon University,
+      <mla_url>http://reports-archive.adm.cs.cmu.edu/anon/anon/usr0/ftp/scan/CMU-CS-68-earley.pdf</mla_url>.
+      Accessed 24 April 2018.
     </p>
     <p>
       <bibid>Ford 2002</bibid>:
-      <comment>MLA from GS</comment>
-      Ford, Bryan. Packet parsing: a practical linear-time algorithm with
-      backtracking. Diss. Massachusetts Institute of Technology, 2002.
-      (September 2002).
-      <a
-      href="https://dspace.mit.edu/bitstream/handle/1721.1/87310/51972156-MIT.pdf;sequence=2">
-        Accessible online.
-      </a>
+      Ford, Bryan.
+      <mla_title>Packet parsing: a Practical Linear-Time Algorithm with
+      Backtracking.<mla_title>
+      September 2002.
+      PhD dissertation, Massachusetts Institute of Technology,
+      <mla_url>https://dspace.mit.edu/bitstream/handle/1721.1/87310/51972156-MIT.pdf;sequence=2</mla_url>.
+      Accessed 24 April 2018.
     </p>
     <p>
       <bibid>Ford 2004</bibid>:
-      <comment>MLA from GS</comment>
-      Ford, Bryan. "Parsing expression grammars: a recognition-based
-      syntactic foundation." ACM SIGPLAN Notices. Vol. 39. No. 1. ACM,
-      2004.
-      (January 2004).
-      <a
-      href="https://pdos.csail.mit.edu/papers/parsing:popl04.pdf">
-        Accessible online.
-      </a>
+      Ford, Bryan.
+      <mla_title>Parsing expression grammars: a recognition-based
+      syntactic foundation.</mla_title>
+      <mla_container>ACM SIGPLAN Notices</mla_container>,
+      vol. 39, no. 1, January 2004.
+      <mla_url>https://pdos.csail.mit.edu/papers/parsing:popl04.pdf</mla_url>.
+      Accessed 24 April 2018.
     </p>
     <p>
       <bibid>Frost 1992</bibid>:
-      <comment>MLA from GS</comment>
-      Frost, Richard A. "Constructing programs as executable attribute grammars." The Computer Journal 35.4 (1992): 376-389.
-      <a
-      href="https://watermark.silverchair.com/35-4-376.pdf?token=AQECAHi208BE49Ooan9kkhW_Ercy7Dm3ZL_9Cf3qfKAc485ysgAAAaowggGmBgkqhkiG9w0BBwagggGXMIIBkwIBADCCAYwGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMVzKV6eGa2snnqtQVAgEQgIIBXY4xn4QKSNrtnLCQ9iAnydzaRuW994a6RR8wY4ZgOyOPYwktyqMGbDmMeYbPKpuDYqkLnFQOLn9x9hxSFDqXv9DWcCx7lLzN-wjYwE_A2n6xT_8VBb-ZjfROPx4_0k_VMhkY6HQi4dnrOO4K9CV_z6eK4gqOS3bkv9Ee_L2AkVMYSreapyMpTV0ZQZnz3ZT8rEoMg3EZStMm1iRrACbyq7h-W2ImHpWJce65X1P14bwQJ1tVcm_P2pDFG88LKe6ShVg8Mj9BMrVOvr7JXw-DlBxc3zDbW41yYpBtyKapHTvoTA9szHawpoaYN3k4EhCtPD99UX-2xShzOYIPOPT39O414Z0MJ3ZXjSwJzBrpTsnO8GtOjoI4tTZ5rZGsscz70NXJZXE5bDO3jn7Q7TB_qBACsVW0E5l_OIowL1XRl9s3pSjKDxIT68Lu-HoiFCM8S0Zc6nsdL_HdbCR2bYo">
-        Accessible online.
-      </a>
+      Frost, Richard A.
+      <mla_title>Constructing Programs as Executable Attribute Grammars.<mla_title>
+      <mla_container>The Computer Journal</mla_container>,
+      vol. 35, issue 4, 1 August 1992, pp. 376-389.
+      <mla_url>https://academic.oup.com/comjnl/article/35/4/376/348233</mla_url>.
     </p>
     <p>
       <bibid>Glennie 1960</bibid>:
-      <comment>MLA from GS</comment>
-      Glennie, A. E. On the syntax machine and the construction of a
-      universal compiler. No. TR-2. CARNEGIE INST OF TECH PITTSBURGH PA
-      COMPUTATION CENTER, 1960.
-      <a
-      href="http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm">
-        Accessible online.
-      </a>
+      Glennie, A. E.
+      <mla_title>On the syntax machine and the construction of a
+      universal compiler.</mla_title>,
+      no. TR-2.
+      Carnegie Institute of Technology,
+      Computation Center, 1960.
+      <mla_url>http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm</mla_url>.
+      Accessed 24 April 2018.
     </p>
     <p>
       <bibid>Grune and Jacobs 2008</bibid>:
-      <comment>after MLA</comment>
       Grune, D. and Jacobs, C. J. H.
       <cite>Parsing Techniques: A Practical
         Guide, 2nd edition</cite>.
-      Monographs in Computer Science. New York, USA.
-      Springer (2008).
+      Springer, 2008.
       When it comes to determining who first discovered an idea,
       the literature often disagrees.
       In such cases, I have often deferred
       to the judgement of Grune and Jacobs.
+      <comment>TO HERE</comment>
     </p>
     <p>
       <bibid>Hayes 2013</bibid>:
