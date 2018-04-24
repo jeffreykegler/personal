@@ -2522,70 +2522,71 @@
       the literature often disagrees.
       In such cases, I have often deferred
       to the judgement of Grune and Jacobs.
-      <comment>TO HERE</comment>
     </p>
     <p>
       <bibid>Hayes 2013</bibid>:
-      Hayes, Brian. "First links in the Markov chain." American Scientist 101.2 (2013): 252.
-      <comment>MLA from GS</comment>
+      Hayes, Brian.
+      <mla_title>First links in the Markov chain.</mla_title>
+      <mla_container>American Scientist</mla_container>,
+      vol. 101, no .2, 2013, p. 252.
       <a href="https://raichev.net/markov/misc/markov_chain.pdf">
-        Accessible online.</a>
+        Accessed online as of 24 April 2018.</a>
     </p>
     <p>
       <bibid>Hilgers and Langville 2006</bibid>:
-      <comment>MLA from GS</comment>
-      Hilgers, Philipp, and Amy N. Langville. "The five greatest applications of Markov Chains." Proceedings of the Markov Anniversary Meeting, Boston Press, Boston, MA. 2006.
-      <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.672.6373&rep=rep1&type=pdf">
-        Article</a>
-      and
-      <a href="https://www.csc2.ncsu.edu/conferences/nsmc/MAM2006/langville.pdf">
-        slide presentation</a>
-      available online.
+      Hilgers, Philipp, and Amy N. Langville.
+      <mla_title>The five greatest applications of Markov Chains.</mla_title>
+      <mla_container>Proceedings of the Markov Anniversary Meeting</mla_container>,
+      Boston Press, 2006.
+      <mla_url>http://langvillea.people.cofc.edu/MCapps7.pdf</mla_url>.
+      Accessed 24 April 2018.
+      Slide presentation:
+      <mla_url>https://www.csc2.ncsu.edu/conferences/nsmc/MAM2006/langville.pdf</mla_url>.
+      Accessed 24 April 2018.
     </p>
     <p>
       <bibid>Hutton 1992</bibid>:
-      <comment>MLA from GS</comment>
-      Hutton, Graham. "Higher-order functions for parsing." Journal of functional programming 2.3 (1992): 323-343.
-      (July 1992).
-      <a
-      href="http://eprints.nottingham.ac.uk/221/1/parsing.pdf">
-        Accessible online.
-      </a>
+      Hutton, Graham.
+      <mla_title>Higher-order functions for parsing.</mla_title>
+      <mla_containter>Journal of functional programming</mla_container>,
+      vol. 2, no. 3, July 1992, pp. 323-343.
+      <mla_url>http://eprints.nottingham.ac.uk/221/1/parsing.pdf</mla_url>.
+      Accessed 24 April 2018.
     </p>
     <p>
       <bibid>Hutton and Meijer 1996</bibid>:
-      <comment>corrected MLA from GS</comment>
-      Graham, Hutton, and Meijer Erik. Monadic parser
-      combinators. Technical Report NOTTCS-TR-96-4, Department
-      of Computer Science, University of Nottingham.
+      Hutton, Graham and Erik Meijer.
+      <mla_title>Monadic parser combinators</mla_title>,
+      Technical Report NOTTCS-TR-96-4.
+      Department of Computer Science, University of Nottingham,
       1996.
-      <a
-      href="http://eprints.nottingham.ac.uk/237/1/monparsing.pdf">
-        Accessible online.
-      </a>
+      <mla_url>http://eprints.nottingham.ac.uk/237/1/monparsing.pdf</mla_url>.
+      Accessed 24 April 2018.
     </p>
     <p>
       <bibid>Irons 1961</bibid>:
-      <comment>MLA from GS</comment>
-      Irons, Edgar T. "A syntax directed compiler for ALGOL 60." Communications of the ACM 4.1 (1961): 51-55.
-      (Jan. 1961).
+      Irons, Edgar T.
+      <mla_title>A syntax directed compiler for ALGOL 60.</mla_title>
+      <mla_container>Communications of the ACM</mla_container>,
+      vol. 4, no. 1, January 1961, pp. 51-55.
     </p>
     <p>
       <bibid>Johnson 1975</bibid>:
-      <comment>MLA from GS</comment>
-      Johnson, Stephen C. Yacc: Yet another compiler-compiler. Vol. 32. Murray Hill, NJ: Bell Laboratories, 1975.
-      <a href="https://www.isi.edu/~pedro/Teaching/CSCI565-Fall15/Materials/Yacc.pdf">
-        Accessible online.</a>
+      Johnson, Stephen C.
+      <mla_title>Yacc: Yet another compiler-compiler</mla_title>,
+      Technical Report.
+      Bell Laboratories, Murray Hill, NJ, 1975.
+      <mla_url>https://www.isi.edu/~pedro/Teaching/CSCI565-Fall15/Materials/Yacc.pdf</mla_url>.
+      Accessed 24 April 2018.
     </p>
     <p>
       <bibid>Kegler 2010</bibid>:
-      <comment>MLA from self</comment>
       Kegler, Jeffrey.
-      "Marpa is now O(n) for Right Recursions."
-      <cite>Ocean of Awareness</cite>,
+      <mla_title>Marpa is now O(n) for Right Recursions.</mla_title>
+      <mla_container>Ocean of Awareness</mla_container>,
       June 5, 2010.
-      <a href="http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html">
-        Accessible online.</a>
+      <mla_url>http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2010/06/marpa-is-now-on-for-right-recursions.html</mla_url>.
+      Accessed 24 April 2018.
       This is the initial announcement,
       and its examples and links are obsolete.
       The latest stable version of Marpa is
@@ -2593,13 +2594,12 @@
     </p>
     <p>
       <bibid>Kegler 2012a</bibid>:
-      <comment>MLA from self</comment>
       Kegler, Jeffrey.
-      "Precedence parsing made simpler"
-      <cite>Ocean of Awareness</cite>,
+      <mla_title>Precedence parsing made simpler.</mla_title>
+      <mla_container>Ocean of Awareness</mla_container>,
       August 22, 2012.
-      <a href="http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html">
-        Accessible online.</a>
+      <mla_url>http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2012/08/precedence-parsing-made-simpler.html</mla_url>.
+      Accessed 24 April 2018.
       This is the initial announcement,
       and its examples and links are obsolete.
       The latest stable version of Marpa is
@@ -2607,12 +2607,12 @@
     </p>
     <p>
       <bibid>Kegler 2012b</bibid>:
-      <comment>MLA from GS</comment>
-      Kegler, Jeffrey. "Marpa, A Practical General Parser: The Recognizer." (2012): 115.
-      <a
-      href="http://dinhe.net/~aredridel/.notmine/PDFs/Parsing/KEGLER,%20Jeffrey%20-%20Marpa,%20a%20practical%20general%20parser:%20the%20recognizer.pdf">
-        Accessible online.
-      </a>
+      Kegler, Jeffrey.
+      <mla_title>Marpa, A Practical General Parser: The Recognizer.</mla_title>
+      <mla_url>http://dinhe.net/~aredridel/.notmine/PDFs/Parsing/KEGLER,%20Jeffrey%20-%20Marpa,%20a%20practical%20general%20parser:%20the%20recognizer.pdf</mla_url>.
+      Accessed 24 April 2018.
+      The link is to the 19 June 2013 revision of the 2012 original.
+      <comment>TO HERE</comment>
     </p>
     <p>
       <bibid>Kleene 1951</bibid>:
