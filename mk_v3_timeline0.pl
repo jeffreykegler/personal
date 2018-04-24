@@ -74,7 +74,7 @@ sub do_mla_url {
    }
    @mla_lines =
       ($before
-	 . '<a href="#' . $desc . '">' . $desc . '</a>'
+	 . '<a href="' . $desc . '">' . $desc . '</a>'
 	   . $after);
    return @mla_lines;
 }
