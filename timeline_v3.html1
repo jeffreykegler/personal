@@ -431,7 +431,7 @@
       documentation needed to make a significant impact in the use of
       machines.<footnote>
         <bibref>Knuth and Pardo 1976</bibref>, p. 84.
-      </footnote>.
+      </footnote>
     </blockquote>
     <p>The IT language had arithmetic expressions, of a sort --
       parentheses are honored, but otherwise evaluation is always
@@ -2505,7 +2505,7 @@
       Glennie, A. E.
       <mla_title>On the syntax machine and the construction of a
         universal compiler,</mla_title>
-      no. TR-2.
+      TR-2.
       Carnegie Institute of Technology,
       Computation Center, 1960.
       <mla_url>http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm</mla_url>.
