@@ -1625,7 +1625,7 @@
       Most practical languages, including the C language and
       <tt>yacc</tt>'s own input language, still require manual hackery<footnote>
         See
-        <bibref>McIlroy 1971</bibref>, p. 11,
+        <bibref>McIlroy 1987</bibref>, p. 11,
         for a listing of yacc-powered
         languages in V7 Unix.
       </footnote>.
@@ -2727,71 +2727,68 @@
       <br>
       See also
       <bibref>Kegler 2012b</bibref>.
-      <comment>TO HERE</comment>
-    </p>
-    <p>
-      <bibid>Mascrenhas et al 2014</bibid>:
-      <comment>MLA from GS</comment>
-      Mascarenhas, Fabio, S&egrave;rgio Medeiros, and Roberto Ierusalimschy.
-      "On
-      the relation between context-free grammars and parsing expression
-      grammars."
-      Science of Computer Programming 89 (2014): 235-250.
-      <a
-      href="https://arxiv.org/abs/1304.3177">
-        Accessible online.
-      </a>
     </p>
     <p>
       <bibid>Markov 1906</bibid>:
-      Andrey Andreyevich Markov,
-      "Rasprostranenie zakona bol'shih chisel na velichiny, zavisyaschie drug ot druga",
-      <cite>Izvestiya Fiziko-matematicheskogo obschestva pri Kazanskom universitete</cite>,
-      2-ya seriya, tom 15, pp. 135-156 (1906).
+      Markov, Andrey Andreyevich.
+      <mla_title>Rasprostranenie zakona bol'shih chisel na velichiny, zavisyaschie drug ot druga</mla_title>.
+      <mla_container>Izvestiya Fiziko-matematicheskogo obschestva pri Kazanskom universitete</mla_container>,
+      2-ya seriya, tom 15, 1906, pp. 135-156.
       In English, the title translates to
       "Extension of the law of large numbers to quantities, depending on each other".
     </p>
     <p>
       <bibid>Markov 1913</bibid>:
-      Andrey Andreyevich Markov,
-      "Primer statisticheskogo issledovaniya nad tekstom "Evgeniya Onegina",
-      illyustriruyuschij svyaz' ispytanij v cep'",
-      <cite>Izvestiya Akademii Nauk</cite>,
+      Markov, Andrey Andreyevich.
+      <mla_title>Primer statisticheskogo issledovaniya nad tekstom 'Evgeniya Onegina',
+      illyustriruyuschij svyaz' ispytanij v cep'</mla_title>.
+      <mla_container>Izvestiya Akademii Nauk</mla_container>,
       Sankt-Peterburg,
       VI seriya,
-      Tom 7, 9(3), pp. 153-162 (1913).
+      tom 7, 9(3), 1913, pp. 153-162.
       An English translation is
-      "An example of statistical investigation of the text Eugene Onegin concerning the connection of samples in chains",
-      <cite>Science in Context</cite>,
-      19, no. 4, pp. 591-600
-      (December 2006).
-      [http://www.alpha60.de/research/markov/DavidLink_AnExampleOfStatistical_MarkovTrans_2007.pdf]
+      <mla_title>An example of statistical investigation of the text Eugene Onegin concerning the connection of samples in chains</mla_title>,
+      <mla_container>Science in Context</mla_container>,
+      vol. 19, no. 4, December 2006, pp. 591-600.
+      <mla_url>http://www.alpha60.de/research/markov/DavidLink_AnExampleOfStatistical_MarkovTrans_2007.pdf</mla_url>.
+      Accessed 25 April 2018.
     </p>
     <p>
-      <bibid>McIlroy 1971</bibid>:
-      <comment>MLA from GS</comment>
-      McIlroy, M. Douglas. "A Research Unix reader: annotated excerpts from the Programmer's Manual." (1971).
-      <a
-      href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.692.4849&rep=rep1&type=pdf">
-        Accessible online.
-      </a>
+      <bibid>Mascrenhas et al 2014</bibid>:
+      Mascarenhas, Fabio, S&egrave;rgio Medeiros, and Roberto Ierusalimschy.
+      <mla_title>On the relation between context-free grammars and parsing expression grammars.</mla_title>
+      <mla_container>Science of Computer Programming</mla_container>,
+      volume 89, part C, 1 September 2014, pp. 235-250.
+      <mla_url>https://arxiv.org/abs/1304.3177</mla_url>.
+      Accessed 25 April 2018.
+    </p>
+    <p>
+      <bibid>McIlroy 1987</bibid>:
+      McIlroy, M. Douglas.
+      "A Research Unix reader: annotated excerpts from the Programmer's Manual, 1971-1986,"
+      AT&T Bell Laboratories Computing Science Technical Report #139, 1987.
+      <mla_url>http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.692.4849&rep=rep1&type=pdf</mla_url>.
+      Accessed 25 April 2018.
     </p>
     <p>
       <bibid>McIlroy and Kernighan 1979</bibid>:
-      <comment>corrected MLA from GS</comment>
-      McIlroy, M. D., and Kernighan, B. W.
-      "Unix Time-Sharing System: Unix Programmer's Manual."
-      Seventh Edition, Volume 1,
-      Bell Telephone Laboratories (January 1979).
-      <a
-      href="http://web.cuzuco.com/~cuzuco/v7/v7vol1.pdf">
-        Accessible online.
-      </a>
+      McIlroy, M. D. and B. W. Kernighan.
+      <mla_title>Unix Time-Sharing System: Unix Programmer's Manual.</mla_title>
+      Seventh Edition, Bell Telephone Laboratories, January 1979.
+      <mla_url>https://s3.amazonaws.com/plan9-bell-labs/7thEdMan/index.html</mla_url>.
+      Accessed 25 April 2018.
     </p>
     <p>
       <bibid>Moser 1954</bibid>:
-      <comment>MLA from GS</comment>
-      Moser, Nora B. "Compiler method of automatic programming." Proc. Symp. on Automatic Programming for Digital Computers. 1954.
+      Moser, Nora B.
+      <mla_title>Compiler method of automatic programming.</mla_title>
+      <mla_container>Proceedings of the Symposium on Automatic Programming for Digital Computers</mla_container>,
+      Office of Naval Research,
+      1954, pp. 15-21.
+      <comment>TO HERE</comment>
+      This conference, held 13-14 May and
+      organized by Grace Hopper, was
+      the first symposium devoted to software.
     </p>
     <p>
       <bibid>Norvell 1999</bibid>:
