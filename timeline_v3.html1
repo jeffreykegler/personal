@@ -1667,12 +1667,12 @@
         <mla_title>Perl</mla_title>
         article,
         <mla_title>Early versions</mla_title>
-	section of
-          <bibref>Wikipedia</bibref>,
-          <mla_url>https://en.wikipedia.org/w/index.php?title=Perl&oldid=837585549#Early_versions</mla_url>.
-          Last updated 21 April 2018.
-          Accessed 25 April 2018.
-        </footnote>.
+        section of
+        <bibref>Wikipedia</bibref>,
+        <mla_url>https://en.wikipedia.org/w/index.php?title=Perl&oldid=837585549#Early_versions</mla_url>.
+        Last updated 21 April 2018.
+        Accessed 25 April 2018.
+      </footnote>.
       Perl embraces complexity like no
       previous language.
       Larry uses
@@ -2936,8 +2936,8 @@
     <p>
       <bibid>Wikipedia</bibid>:
       <mla_container>Wikipedia: The Free Encyclopedia</mla_container>,
-          Wikimedia Foundation, Inc.
-      </p>
+      Wikimedia Foundation, Inc.
+    </p>
     <comment>FOOTNOTES HERE</comment>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     <script type="text/javascript">
