@@ -2680,11 +2680,11 @@
       <mla_title>A general context-free parsing algorithm
         running in linear time on every LR (k) grammar without using
         lookahead.</mla_title>
-      <mla_container>Theoretical computer science<mla_container>
-          vol. 82, issue 1, 22 May 1991, pp. 165-176.
-          <mla_url>https://www.sciencedirect.com/science/article/pii/030439759190180A</mla_url>
-          Accessed 24 April 2018.
-        </mla_container></mla_container></p>
+      <mla_container>Theoretical computer science</mla_container>
+      vol. 82, issue 1, 22 May 1991, pp. 165-176.
+      <mla_url>https://www.sciencedirect.com/science/article/pii/030439759190180A</mla_url>
+      Accessed 24 April 2018.
+    </p>
     <p>
       <bibid>Lewis and Stearns 1968</bibid>:
       <comment>There is a 1966 paper with the same authors and title.
@@ -2820,7 +2820,7 @@
       <bibid>Post 1943</bibid>:
       Post, Emil L.
       <mla_title>Formal Reductions of the General Combinatorial Decision Problem.</mla_title>
-      <mla_container>American Journal of Mathematics<mla_container>,
+      <mla_container>American Journal of Mathematics</mla_container>,
       vol. 65, no .2, April 1943, pp. 197-215.
     </p>
     <p>
@@ -2828,8 +2828,8 @@
       Pratt, Vaughan R.
       <mla_title>Top down operator precedence.</mla_title>
       <mla_container>Proceedings
-      of the 1st annual ACM SIGACT-SIGPLAN symposium on Principles of
-      programming languages<mla_container>,
+        of the 1st annual ACM SIGACT-SIGPLAN symposium on Principles of
+        programming languages</mla_container>,
       ACM, 1973.
     </p>
     <p>
@@ -2839,8 +2839,7 @@
       <mla_container>Information and Control</mla_container>,
       volume 17, no. 3, October 1970, pp. 226-256.
       <mla_url>https://s3.amazonaws.com/academia.edu.documents/43093758/Properties_of_Deterministic_Top-Down_Gra20160226-4294-1dzfmgn.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1524516488&Signature=EQ9rs7iGKORIoxa%2F1jGEzOI5pOQ%3D&response-content-disposition=inline%3B%20filename%3DProperties_of_deterministic_top_down_gra.pdf</mla_url>.
-        Accessed 23 April 2018.
-      </a>
+      Accessed 23 April 2018.
     </p>
     <p>
       <bibid>Samuelson and Bauer 1959</bibid>:
@@ -2852,7 +2851,7 @@
       <bibid>Samuelson and Bauer 1960</bibid>:
       Samelson, Klaus, and Friedrich L. Bauer.
       <mla_title>Sequential formula translation.</mla_title>
-      <mla_container>Communications of the ACM<mla_container>,
+      <mla_container>Communications of the ACM</mla_container>,
       vol. 3, no. 2, February 1960, pp. 76-83.
       A translation of
       <bibref>Samuelson and Bauer 1959</bibref>.
@@ -2869,7 +2868,7 @@
     <p>
       <bibid>Shannon 1948</bibid>:
       Shannon, Claude E.
-      <mla_title>A Mathematical Theory of Communication.<mla_title>
+      <mla_title>A Mathematical Theory of Communication.</mla_title>
       <mla_container>Bell System Technical Journal</mla_container>,
       vol. 27, pp. 379-423, 623-656, July, October, 1948.
       <mla_url>http://cs-www.cs.yale.edu/homes/yry/readings/general/shannon1948.pdf</mla_url>.
