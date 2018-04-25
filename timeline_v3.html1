@@ -1664,13 +1664,15 @@
     </p>
     <h1>1987: Perl 1 is released</h1>
     <p>Larry Wall introduces Perl 1<footnote>
-	<mla_title>Perl</mla_title> article,
-        <mla_title>Early versions" section of
-        <bibref>Wikipedia</bibref>,
-	<mla_url>https://en.wikipedia.org/w/index.php?title=Perl&oldid=837585549#Early_versions</mla_url>.
-	Last updated 21 April 2018.
-	Accessed 25 April 2018.
-      </footnote>.
+        <mla_title>Perl</mla_title>
+        article,
+        <mla_title>Early versions</mla_title>
+	section of
+          <bibref>Wikipedia</bibref>,
+          <mla_url>https://en.wikipedia.org/w/index.php?title=Perl&oldid=837585549#Early_versions</mla_url>.
+          Last updated 21 April 2018.
+          Accessed 25 April 2018.
+        </footnote>.
       Perl embraces complexity like no
       previous language.
       Larry uses
@@ -1747,7 +1749,7 @@
       In Larry's words, LALR is
       <q>fast
         but stupid</q><footnote>
-	<bibref>Wall 2014</bibref>.
+        <bibref>Wall 2014</bibref>.
       </footnote>.
     </p>
     <p>
@@ -2493,11 +2495,11 @@
     </p>
     <p>
       <bibid>FSF 2006</bibid>:
-        "GCC 4.1 Release Series: Changes, New Features, and Fixes."
-	Free Software Foundation,
-        <mla_url>http://gcc.gnu.org/gcc-4.1/changes.html</mla_url>.
-        Accessed 25 April 2018.
-        The release date of GCC 4.1 was February 28, 2006.
+      "GCC 4.1 Release Series: Changes, New Features, and Fixes."
+      Free Software Foundation,
+      <mla_url>http://gcc.gnu.org/gcc-4.1/changes.html</mla_url>.
+      Accessed 25 April 2018.
+      The release date of GCC 4.1 was February 28, 2006.
     </p>
     <p>
       <bibid>Glennie 1960</bibid>:
@@ -2926,16 +2928,16 @@
     </p>
     <p>
       <bibid>Wall 2014</bibid>:
-        Wall, Larry.
-	<mla_container>IRC log for #perl6</mla_container>, 30 August 2014,
-        <mla_url>https://irclog.perlgeek.de/perl6/2014-08-30#i_9271280</mla_url>.
-        Accessed 25 April 2018.
+      Wall, Larry.
+      <mla_container>IRC log for #perl6</mla_container>, 30 August 2014,
+      <mla_url>https://irclog.perlgeek.de/perl6/2014-08-30#i_9271280</mla_url>.
+      Accessed 25 April 2018.
     </p>
     <p>
       <bibid>Wikipedia</bibid>:
-      <mla_container>Wikipedia: The Free Encyclopedia<mla_container>,
-      Wikimedia Foundation, Inc.
-    </p>
+      <mla_container>Wikipedia: The Free Encyclopedia</mla_container>,
+          Wikimedia Foundation, Inc.
+      </p>
     <comment>FOOTNOTES HERE</comment>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     <script type="text/javascript">
