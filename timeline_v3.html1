@@ -957,14 +957,14 @@
       for describing grammars.
       It allows us to introduce our Basic Operator Grammar (BASIC-OP):
     </p>
-    <ul id="g-basic-op">
-      <li>S ::= E</li>
-      <li>E ::= E + T</li>
-      <li>E ::= T</li>
-      <li>T ::= T * F</li>
-      <li>T ::= F</li>
-      <li>F ::= number</li>
-    </ul>
+    <pre id="g-basic-op"><tt>
+      S ::= E
+      E ::= E + T
+      E ::= T
+      T ::= T * F
+      T ::= F
+      F ::= number
+    </tt></pre>
     <p><a href="#g-basic-op">BASIC-OP</a>
       has two operators, three levels of precedence
       and left associativity.
@@ -986,14 +986,14 @@
       Right-recursive Operator Grammar (RIGHT-OP)
       anyway:
     </p>
-    <ul id="g-right-op">
-      <li>S ::= E</li>
-      <li>E ::= T + E</li>
-      <li>E ::= T</li>
-      <li>T ::= F * T</li>
-      <li>T ::= F</li>
-      <li>F ::= number</li>
-    </ul>
+    <pre id="g-right-op"><tt>
+      S ::= E
+      E ::= T + E
+      E ::= T
+      T ::= F * T
+      T ::= F
+      F ::= number
+    </tt></pre>
     <p>
       Recursive descent, without help,
       cannot parse
@@ -1225,16 +1225,16 @@
       which is short,
       but encapsulates the parsing challenges
       presented by ALGOL's arithmetic expressions:
-    </p><ul id="g-knuth-op">
-      <li>S ::= E</li>
-      <li>E ::= - T</li>
-      <li>E ::= T</li>
-      <li>E ::= E - T</li>
-      <li>T ::= P</li>
-      <li>T ::= T * P</li>
-      <li>P ::= a</li>
-      <li>P ::= ( E )</li>
-    </ul>
+    </p><pre id="g-knuth-op"><tt>
+      S ::= E
+      E ::= - T
+      E ::= T
+      E ::= E - T
+      T ::= P
+      T ::= T * P
+      P ::= a
+      P ::= ( E )
+    </tt></pre>
     <p><a href="#g-knuth-op">KNUTH-OP</a>
       is left-recursive,
       allows parentheses,
