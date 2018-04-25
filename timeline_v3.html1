@@ -2476,12 +2476,12 @@
       <bibid>Ford 2002</bibid>:
       Ford, Bryan.
       <mla_title>Packet parsing: a Practical Linear-Time Algorithm with
-        Backtracking.<mla_title>
-          September 2002.
-          PhD dissertation, Massachusetts Institute of Technology,
-          <mla_url>https://dspace.mit.edu/bitstream/handle/1721.1/87310/51972156-MIT.pdf;sequence=2</mla_url>.
-          Accessed 24 April 2018.
-        </mla_title></mla_title></p>
+        Backtracking.</mla_title>
+      September 2002.
+      PhD dissertation, Massachusetts Institute of Technology,
+      <mla_url>https://dspace.mit.edu/bitstream/handle/1721.1/87310/51972156-MIT.pdf;sequence=2</mla_url>.
+      Accessed 24 April 2018.
+    </p>
     <p>
       <bibid>Ford 2004</bibid>:
       Ford, Bryan.
@@ -2495,11 +2495,11 @@
     <p>
       <bibid>Frost 1992</bibid>:
       Frost, Richard A.
-      <mla_title>Constructing Programs as Executable Attribute Grammars.<mla_title>
-          <mla_container>The Computer Journal</mla_container>,
-          vol. 35, issue 4, 1 August 1992, pp. 376-389.
-          <mla_url>https://academic.oup.com/comjnl/article/35/4/376/348233</mla_url>.
-        </mla_title></mla_title></p>
+      <mla_title>Constructing Programs as Executable Attribute Grammars.</mla_title>
+      <mla_container>The Computer Journal</mla_container>,
+      vol. 35, issue 4, 1 August 1992, pp. 376-389.
+      <mla_url>https://academic.oup.com/comjnl/article/35/4/376/348233</mla_url>.
+    </p>
     <p>
       <bibid>Glennie 1960</bibid>:
       Glennie, A. E.
@@ -2692,10 +2692,10 @@
         first definition of LL(k).
       </comment>
       Lewis II, Philip M., and Richard Edwin Stearns.
-      <mla_title>Syntax-directed transduction.<mla_title>
-          <mla_container>Journal of the ACM</mla_container>,
-          vol. 15, issue 3, 1968, pp. 465-488.
-        </mla_title></mla_title></p>
+      <mla_title>Syntax-directed transduction.</mla_title>
+      <mla_container>Journal of the ACM</mla_container>,
+      vol. 15, issue 3, 1968, pp. 465-488.
+    </p>
     <p>
       <bibid>Lucas 1961</bibid>:
       Lucas, Peter.
