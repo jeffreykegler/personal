@@ -849,7 +849,7 @@
       parses based on the grammar,
       and that requires some kind of top-down logic.
     </p>
-    <h1>Term: "Synthetic attribute"</h1>
+    <h1>Term: "Synthesized attribute"</h1>
     <p><bibref>Irons 1961</bibref>
       also introduces synthesized attributes: the parse creates
       a tree, which is evaluated bottom-up. Each node is evaluated using
@@ -858,7 +858,7 @@
       from its child nodes<footnote>
         Irons is credited with the discovery of synthesized attributes
         by Knuth (<bibref>Knuth 1990</bibref>).
-        Synthetic attributes are a concept in semantics,
+        Synthesized attributes are a concept in semantics,
 	which this timeline does not cover.
         But synthesized attributes
 	will be important for us.
