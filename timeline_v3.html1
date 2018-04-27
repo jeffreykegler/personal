@@ -35,7 +35,7 @@
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.0</version>
-    <datestamp>26 April 2018</datestamp>
+    <datestamp>27 April 2018</datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact and complete description of
@@ -858,9 +858,11 @@
       from its child nodes<footnote>
         Irons is credited with the discovery of synthetic attributes
         by Knuth (<bibref>Knuth 1990</bibref>).
+        Synthetic attributes are a concept in semantics,
+	which this timeline does not cover.
+        But synthesized attributes
+	will be important for us.
       </footnote>.
-      Synthetic attributes are a concept in semantics, not parsing,
-      but they will be important for us.
     </p>
     <h1>1961: Lucas discovers recursive descent</h1>
     <p>Peter Lucas publishes his description of a top-down parser<footnote>
