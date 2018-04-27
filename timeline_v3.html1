@@ -851,12 +851,12 @@
     </p>
     <h1>Term: "Synthetic attribute"</h1>
     <p><bibref>Irons 1961</bibref>
-      also introduces synthetic attributes: the parse creates
+      also introduces synthesized attributes: the parse creates
       a tree, which is evaluated bottom-up. Each node is evaluated using
       attributes
       <q>synthesized</q>
       from its child nodes<footnote>
-        Irons is credited with the discovery of synthetic attributes
+        Irons is credited with the discovery of synthesized attributes
         by Knuth (<bibref>Knuth 1990</bibref>).
         Synthetic attributes are a concept in semantics,
 	which this timeline does not cover.
@@ -1450,7 +1450,7 @@
         by the standards of 1968 hardware, daunting.</li>
     </ul>
     <h1>1968: Attribute grammars</h1>
-    <p>Irons' synthetic attributes had always been inadequate for many
+    <p>Irons' synthesized attributes had always been inadequate for many
       tasks.
       Until now, they had been supplemented by side effects or state
       variables.
@@ -1462,17 +1462,17 @@
     </p>
     <h1>Term: "Inherited attributes"</h1>
     <p>Recall that a node in a parse
-      gets its synthetic attributes from
+      gets its synthesized attributes from
       its children. Inherited attributes are attibutes
       that a node gets from
       its parents.
-      Of course, if both inherited and synthetic attributes
+      Of course, if both inherited and synthesized attributes
       are used, there are potential circularities.
       But
       inherited attributes are powerful and, with care, the circularities
       can be avoided.</p>
     <h1>Term: "Attribute grammar"</h1>
-    <p>An attribute grammar is a grammar whose nodes may have both inherited and synthetic attributes.</p>
+    <p>An attribute grammar is a grammar whose nodes may have both inherited and synthesized attributes.</p>
     <h1>1969: LALR</h1>
     <p>Since
       <bibref>Knuth 1965</bibref>
