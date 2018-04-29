@@ -1105,7 +1105,7 @@
       calculus.
       This
       <q>big O</q>
-      notation characterizes algorithm's
+      notation characterizes algorithms
       using functions, but it treats functions that
       differ by a constant multiple as identical<footnote>
         This timeline is not a mathematics tutorial,
