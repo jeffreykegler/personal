@@ -35,7 +35,7 @@
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.0</version>
-    <datestamp>30 April 2018</datestamp>
+    <datestamp>10 May 2018</datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact and complete description of
@@ -1710,7 +1710,7 @@
       could be practical and linear.
       Knuth did not conclude this carelessly --
       he proved a strong relationship between the
-      <term>deterministic languagues</term>
+      <term>deterministic languages</term>
       of previous theory,
       and the language defined by his new LR(k) model.
       Knuth's argument was highly suggestive,
