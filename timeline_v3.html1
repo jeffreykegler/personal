@@ -35,7 +35,7 @@
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.0</version>
-    <datestamp>10 May 2018</datestamp>
+    <datestamp>12 May 2018</datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact and complete description of
@@ -532,7 +532,7 @@
       if we intend to do semantics,
       a recognizer alone is not sufficient.
     </p>
-    <p>In the strict sense, a recognizer cannot driver a compiler --
+    <p>In the strict sense, a recognizer cannot drive a compiler --
       a compiler needs a parser.
       But recognizers can be far easier to write,
       and are often hacked up
