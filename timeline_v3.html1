@@ -35,7 +35,7 @@
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.0</version>
-    <datestamp>12 May 2018</datestamp>
+    <datestamp>31 May 2018</datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact and complete description of
@@ -689,13 +689,54 @@
     <h1>The Parsing Problem</h1>
     <p>With the ALGOL 60 report, a quest begins which continues to this day:
       to find a parser that solves the Parsing Problem.
-      Ideally such a parser is
+      Ideally such a parser is<footnote>
+      The linguistics literature discuss goals, philosophy and motivations,
+      sometimes to the detriment of actual research
+      (<bibref>Harris 1993</bibref>).
+      The Parsing Theory literature, on the other hand, avoids
+      non-technical discussions,
+      so that a "manifesto" listing the goals of Parsing Theory
+      is hard to find.
+      But the first two sentences of the pivotal
+      <bibref>Knuth 1965</bibref> may serve as one:
+      <br><br>
+      "There has been much recent interest in languages
+      whose grammar is sufficiently simple
+      that an <b>efficient</b> left-to-right parsing
+      algorithm can be
+      <b>mechanically produced</b>
+      from the grammar.
+      In this paper, we define LR(k) grammars,
+      which are perhaps the <b>most general</b>
+      ones of this type, [...]"
+      (p. 607, boldface added.)
+      <br><br>
+      Here Knuth explcitly refers to goals of efficiency,
+      declarativeness,
+      and generality,
+      announcing a trade-off of the first two against
+      the second.
+      Note Knuth also refers to "left-to-right",
+      which is a requirement in some applications,
+      as one of his goals.
+      </footnote>
     </p>
     <ul id="loc-quest">
       <li>efficient,</li>
-      <li>practical,</li>
+      <li>general,</li>
       <li>declarative, and</li>
-      <li>general.</li>
+      <li>practical<footnote>
+      <term>Practical</term> here is a catch-all term
+      for those properties which Parsing Theory
+      de-emphasized.
+      As such, the literature rarely explicitly refers
+      to practicality as a goal.
+      And, in some Parsing Theory papers, it is not a goal,
+      at least not directly.
+      But I think it can be taken as given that,
+      when the discussion was about parsers intended for actual
+      use, practicality was a goal.
+      </footnote>.</li>
     </ul>
     <p>
       It is a case of 1960's
@@ -1253,7 +1294,7 @@
     </p>
     <h1>An influential misconception</h1>
     <p>In his 1965, Knuth makes
-      a reasonable assumption,
+      a reasonable conjecture,
       but one which turns out to be wrong:
     </p>
     <blockquote>
@@ -1261,6 +1302,28 @@
       accept LR(k) grammars, or special classes of them, and to mechanically
       produce efficient parsing programs.<footnote>
         <bibref>Knuth 1965</bibref>, p. 637.
+	It is not completely clear that Knuth is actually
+	conjecturing that the best way to parse in
+	linear time will be by tackling LR(k) subsets.
+	Elsewhere (p. 638)
+	Knuth is well aware that some grammars
+	beyond LR(k) can be parsed in linear time.
+	Knuth also knows (p. 638) that
+	it is an open question whether all context-free grammars
+	can be parsed in linear time.
+	Knuth even describes (pp. 638-639) a superclass of LR(k),
+	called LR(k,t)
+	and points out that they can be parsed
+	if we "back up a finite amount" --
+	in other words they are also linear (pp. 638-639).
+	<br><br>
+	But Knuth is dismissive about his LR(k,t)
+	grammars: "One might choose to call this left-to-right
+	translation" (p. 639).
+	So perhaps subsequent researchers were correct in
+	reading into Knuth a prediction that
+	research into beyond-LR(k)
+	parsing would be not be fruitful.
       </footnote>
     </blockquote>
     <p>Implied in this is
@@ -1638,7 +1701,7 @@
       outlined for a solution
       of the Parsing Problem:
       that the parser be
-      efficient, practical, declarative and general.
+      efficient, general, declarative and practical.
       LALR is linear and runs fast on 1979 hardware.
       As of 1979 LALR seems practical.
       And LALR is declarative.
@@ -2243,7 +2306,7 @@
     <p>
       Again recall the four criteria from the original quest
       for a solution to the Parsing Problem:
-      that a parser be efficient, practical, declarative and general.
+      that a parser be efficient, general, declarative and practical.
       Does Marpa<footnote>
         <bibref>Marpa::R2</bibref>.
       </footnote>
@@ -2276,8 +2339,8 @@
         and for all grammars parseable in linear time by any
         other parser in practical use;
       </li>
-      <li>practical; and</li>
-      <li>declarative.
+      <li>declarative; and</li>
+      <li>practical.
       </li>
     </ul>
     <p>
@@ -2520,6 +2583,12 @@
       the literature often disagrees.
       In such cases, I have often deferred
       to the judgement of Grune and Jacobs.
+    </p>
+    <p>
+      <bibid>Harris 1993</bibid>:
+      Harris, Randy Allen.
+      <cite>The Linguistics Wars</cite>.
+      Oxford University Press, 1993
     </p>
     <p>
       <bibid>Hayes 2013</bibid>:
