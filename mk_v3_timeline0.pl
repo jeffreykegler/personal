@@ -98,7 +98,7 @@ sub do_footnote {
     my $footnoted_line = $line;
     $footnoted_line =~ s/<footnote>.*$//;
     $footnoted_line .= qq{<a id="$fn_ref" href="#$fn_href">[$fn_number]</a>};
-    push @fn_lines, qq{<p id="$fn_href">$fn_number.};
+    push @fn_lines, qq{<p id="$fn_href"><b>$fn_number</b>.};
     $line =~ s/^.*<footnote>//;
     my $inside_footnote = $line;
     $inside_footnote =~ s/^.*<footnote>//;
