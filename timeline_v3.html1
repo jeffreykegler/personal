@@ -787,10 +787,10 @@
         is unproblematic.
       </footnote>.
     </p>
-    <h1>1960: Gleenie's compiler-compiler</h1>
+    <h1>1960: Glennie's compiler-compiler</h1>
     <p>The first description of a consciously non-Chomskyan compiler
       seems to predate the first description of a Chomskyan parser.
-      It is A.E. Gleenie's 1960 description of his compiler-compiler<footnote>
+      It is A.E. Glennie's 1960 description of his compiler-compiler<footnote>
         <bibref>Glennie 1960</bibref>.
       </footnote>.
       Glennie's
@@ -868,7 +868,7 @@
       until it arrives at the input tokens.
     </p>
     <p>It is important to note that no useful parser can be purely top-down --
-      if a parser worked purely pure top-down, it would never look at its input.
+      if a parser worked purely top-down, it would never look at its input.
       So every top-parser we will consider has
       <em>some</em>
       kind of bottom-up element.
@@ -887,7 +887,7 @@
       Thus, it works from the input tokens, and works
       <q>bottom up</q>
       until it reaches the start rule.
-      A parser can be be purely bottom-up,
+      A parser can be purely bottom-up,
       but for efficiency it is usually best to eliminate potential
       parses based on the grammar,
       and that requires some kind of top-down logic.
@@ -1412,7 +1412,7 @@
         operator expression parsing
         in the IT compiler seems to have been RL(2) with backtracking.
       </footnote>.
-    </p><p>If there is a number after the parentheses in this notation for
+    </p><p>If there is a number in parentheses in this notation for
       parsing algorithms, it usually indicates the number of tokens of
       lookahead.
       As an example, LL(1) means
@@ -1542,7 +1542,7 @@
     <p>An attribute grammar is a grammar whose nodes may have both inherited and synthesized attributes.</p>
     <h1>1969: LALR</h1>
     <p>Since
-      <bibref>Knuth 1965</bibref>
+      <bibref>Knuth 1965</bibref>,
       many have taken up his challenge to find a
       practically parseable subset of the LR(k) languages.
       In 1969,
@@ -1749,7 +1749,7 @@
       Wadler starts to introduce monads to the functional programming community.
       As one example he converts his previous efforts at function parsing
       techniques to monads<footnote>
-        <bibref>Walder 1990</bibref>
+        <bibref>Wadler 1990</bibref>
       </footnote>.
       The parsing technique is pure recursive descent.
       The examples shown for monadic parsing are very simple,
@@ -1898,7 +1898,7 @@
     <p>
       In the adaptation of monads into the world of
       programming,
-      <bibref>Walder 1995</bibref>
+      <bibref>Wadler 1995</bibref>
       is a turning point.
       One of Wadler's examples is a parser based on
       monads and combinator parsing.
@@ -2172,7 +2172,7 @@
           also have found and
           eliminated ambiguous right recursions,
           since it is far easier to eliminate them than
-          to determine is they create a overall ambiguity.
+          to determine if they create a overall ambiguity.
           In fact,
           it is an open question whether there
           <em>are</em>
