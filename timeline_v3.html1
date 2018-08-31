@@ -887,10 +887,31 @@
       Thus, it works from the input tokens, and works
       <q>bottom up</q>
       until it reaches the start rule.
-      A parser can be purely bottom-up,
-      but for efficiency it is usually best to eliminate potential
-      parses based on the grammar,
-      and that requires some kind of top-down logic.
+    </p>
+    <p>
+      But just as no really useful parser in purely top-down,
+      no really useful parser is purely bottom-up.
+      It it true that
+      the implementation of a useful parser might be purely bottom-up.
+      But a useful
+      parser must do more than return all possible partitions of the input --
+      it must
+      implement some criteria for preferring some parse trees over
+      others.
+      Implicitly, such criteria comes "from the top".
+    <p>
+    </p>
+      In fact,
+      bottom-up parsers will often be pressed into service
+      for Chomskyan parsing,
+      and the Chomskyan approach is inherently top down.
+      Even when it comes to implementation,
+      bottom-up parsers will often use
+      explicit top-down logic.
+      For efficiency it is usually necessary to eliminate unwanted
+      parses trees while parsing,
+      and culling unwanted parse trees is a job
+      for top-down logic.
     </p>
     <h1>Term: "Synthesized attribute"</h1>
     <p><bibref>Irons 1961</bibref>
