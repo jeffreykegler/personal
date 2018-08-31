@@ -889,7 +889,7 @@
       until it reaches the start rule.
     </p>
     <p>
-      But just as no really useful parser in purely top-down,
+      But just as no really useful parser is purely top-down,
       no really useful parser is purely bottom-up.
       It it true that
       the implementation of a useful parser might be purely bottom-up.
