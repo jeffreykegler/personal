@@ -1607,6 +1607,35 @@
         <bibref>Simms 2014</bibref>.
       </footnote>.
       Public interest in GTDPL fades.</p>
+    <h1>1973: LR-regular</h1>
+    <p>An article by Čulik and Cohen
+    extends the idea behind LR to
+    grammars with infinite lookahead.<footnote>
+      <bibref>Čulik and Cohen 1973</bibref>.
+      Čulik and Cohen give an algorithm for parsing LR-regular,
+      but the obstacles to implementation are daunting.
+      (See <bibref>Grune and Jacobs 2008</bibref>,
+      pp. 327-333 and Problem 9.28 on p. 341.)
+      Their algorithm did not come into practical use,
+      and as of 1991 LR-regular grammars could be
+      handled more easily by
+      <a href="#text-1991-Leo">Joop Leo's algorithm</a>.</footnote>
+    LR-regular (LRR) grammars are LR with lookahead that is
+    infinite but restricted.
+    The restriction is that to tell the strings apart,
+    you must use a finite set of regular expressions.
+    </p>
+    <p>LRR seems to be a natural class of grammars,
+    coming close to capturing the idea of "eyeball grammars" --
+    grammars that humans can spot by "eyeball".
+    And, despite computer languages being designed around the idea
+    that practical parsing falls short of LR(1), never mind LRR,
+    constructs requiring infinite lookahead will come up in real languages.<footnote>
+    Haskell list comprehension, for example, requires infinite lookahead --
+    see <bibref>Kegler 2018</bibref>.
+    (Haskell's native parser deals with this in post-processing.)
+    </footnote>
+    </p>
     <h1>1973: Pratt parsing</h1>
     <p>As we have noted pure LL(1) cannot parse operator expressions,
       and so operator expression parsers are often called into service
@@ -1761,7 +1790,8 @@
         <bibref>Wadler 1985</bibref>.
       </footnote>.
     </p>
-    <h1>1991: Leo's speed-up of Earley's algorithm</h1>
+    <h1 id="text-1991-Leo">1991:
+    Leo's speed-up of Earley's algorithm</h1>
     <p>Joop Leo discovers a way of speeding up right recursions in
       Earley's algorithm<footnote>
         <bibref>Leo 1991</bibref>.
@@ -2693,6 +2723,15 @@
       <mla_url>http://dinhe.net/~aredridel/.notmine/PDFs/Parsing/KEGLER,%20Jeffrey%20-%20Marpa,%20a%20practical%20general%20parser:%20the%20recognizer.pdf</mla_url>.
       Accessed 24 April 2018.
       The link is to the 19 June 2013 revision of the 2012 original.
+    </p>
+    <p>
+      <bibid>Kegler 2018</bibid>:
+      Kegler, Jeffrey.
+      <mla_title>A Haskell challenge.</mla_title>
+      <mla_container>Ocean of Awareness</mla_container>,
+      August 28, 2018.
+      <mla_url>http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2018/08/rntz.html</mla_url>.
+      Accessed 28 August 2018.
     </p>
     <p>
       <bibid>Kleene 1951</bibid>:
