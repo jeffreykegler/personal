@@ -461,7 +461,8 @@
       and Chomsky is free to teach his own
       (highly original and very mathematical)
       approach to linguistics.
-    </p><h1>1955: Work begins on the IT compiler</h1>
+    </p>
+    <h1>1955: Work begins on the IT compiler</h1>
     <p>At Purdue, a team including Alan Perlis and Joseph Smith begins work
       on the IT compiler<footnote>
         <bibref>Knuth and Pardo 1976</bibref>,
@@ -1135,6 +1136,63 @@
       Dijkstra's algorithm can handle any number of levels
       of precedence without a change in its code,
       and without any effect on its running speed.
+    </p>
+    <h1>1961: Oettinger discovers pushdown automata</h1>
+    <p>
+      Mathematical study of stacks as models of computing begins with Anthony Oettinger's 1961 paper.<footnote>
+        <bibref>Oettinger 1961</bibref>
+        American Mathematical Society, 1961.
+      </footnote>
+      Oettinger 1961 is full of evidence that stacks
+      are still very new.
+      For a start, he does not call them stacks --
+      he calls them "pushdown stores".
+      And Oettinger does not assume his highly sophisticated audience
+      knows what the "push"
+      and "pop" operations are --
+      he defines them based on
+      another set of operations -- one that later form the basis
+      of the APL language.
+    </p>
+    <p>
+      Oettinger's definitions all follow the behavorist model --
+      they are sets of strings.<footnote>
+        <bibref>Oettinger 1961</bibref>, p. 106.
+      </footnote>
+      Oettinger's mathematical model of stacks
+      will come to be called
+      a deterministic pushdown automata (DPDA).
+      DPDA's will become
+      the subject of a substantial literature.
+    </p>
+    <p>
+      Oettinger's own field is Russian translation.
+      And he hopes that DPDA's
+      will be an adequate basis for
+      the study of both computer and
+      natural language translation.
+      DPDA's soon prove totally inadequate
+      for this purpose.
+    </p>
+    <p>
+      But for dealing with computing languages,
+      DPDA's will have a much longer life.
+      As of 1961, all algorithms with acceptable speed are using
+      stacks with various modifications.
+    </p>
+    <p>
+      Oettinger challenges the research community to
+      develop a systematic method for generating stack-based
+      parsers.<footnote>
+      "The development of a theory of pushdown algorithms should
+      hopefully lead to systematic techniques for generating
+      algorithms satisfying given requirements to replace
+      the ad hoc invention of each new algorithm."
+      (<bibref>Oettinger 1961</bibref>, p. 127.)
+      </footnote>
+      This search
+      quickly becomes identified
+      with the search for a theoretical basis for practical parsing.
     </p>
     <h1>The Operator Issue as of 1961</h1>
     <p>The results of 1961 transformed the Operator Issue.
@@ -3121,6 +3179,13 @@
       1999,
       <mla_url>https://www.engr.mun.ca/~theo/Misc/exp_parsing.htm</mla_url>.
       Accessed 25 April 2018.
+    </p>
+    <p>
+      <bibid>Oettinger 1961</bibid>:
+      Oettinger, Anthony.
+      <mla_title>Automatic Syntactic Analysis and the Pushdown Store.</mla_title>
+      <mla_container>Proceedings of Symposia in Applied Mathematics</mla_container>,
+      Volume 12, American Mathematical Society, 1961.
     </p>
     <p>
       <bibid>Padua 2000</bibid>:
