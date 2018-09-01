@@ -95,6 +95,55 @@
       as a parsing technique to language,
       and apparently for the first time in the West.
     </p>
+    <h1>1929: Bloomfield's "Postulates"</h2>
+    <p>In 1929 Leonard Bloomfield,
+      as part of his effort to create a linguistics that
+      would be taken seriously as a science,
+      published his "Postulates".<footnote>
+	<bibref>Bloomfield 1926</bibref>.
+      </footnote>
+      Known as structural linguistics,
+      Bloomfield's approach will be very successful,
+      dominating American lingustics for
+      over two decades.
+    </p>
+    <h1>"Language" as of 1929</h2>
+    <p>
+      Bloomfield's "Postulates" defines a "language" as
+    </p>
+    <blockquote>
+      [t]he totality of utterances that can be made in a speech
+      community<footnote>
+	<bibref>Bloomfield 1926</bibref>,
+        definition 4 on p. 154.
+      </footnote>
+    </blockquote>
+    <p>
+      Note that there is no reference in this definition to the usual view --
+      that the utterances of a language "mean" something.
+    </p>
+    <p>
+      This omission is not accidental.<footnote>
+      "The statement of meanings is therefore the weak point in
+      language-study, and will remain so until human knowledge
+      advances very far beyond its present state. In practice, we define the
+      meaning of a linguistic form, wherever we can, in terms of some
+      other science.",
+	<bibref>Bloomfield 1926</bibref>, p. 140.
+      </footnote>
+      Bloomfield excludes meaning from his definition of language
+      because he wants linguistics to be taken
+      seriously as science.
+      Behaviorist thought is very influential at this
+      time and behavorists believe that,
+      while human behaviors can be observed and verified
+      and therefore made the subject of science,
+      mental states cannot be verified.
+      Claiming to know what someone means
+      by a word
+      is claiming to read his mind.
+      And "mind-reading" is not science.
+    </p>
     <h1>1943: Post's rewriting system</h1>
     <p>Emil Post defines and studies a formal rewriting system<footnote>
         <bibref>Post 1943</bibref>.
@@ -898,7 +947,7 @@
       it must
       implement some criteria for preferring some parse trees over
       others.
-      Implicitly, such criteria comes "from the top".
+      Implicitly, such criteria come "from the top".
     <p>
     </p>
       In fact,
@@ -2497,6 +2546,18 @@
         Accessed 24 April 2018.
       </a>
     </p>
+    <p>
+      <bibid>Bloomfield 1926</bibid>:
+      Bloomfield, Leonard.
+      <mla_title>A set of Postulates
+        for the Science of Language.</mla_title>
+      <mla_container>Language</mla_container>,
+      Vol. 2, No. 3 (Sep., 1926), pp. 153-164.
+    </p>
+      <bibid>Bloomfield 1933</bibid>:
+        Bloomfield, Leonard.
+        <cite>Language</cite>.
+        Holt, Rinehart and Winston, 1933.
     <p>
       <bibid>Backus 2006</bibid>:
       Booch, Grady.
