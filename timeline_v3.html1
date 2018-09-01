@@ -447,12 +447,20 @@
       a machine can execute them<footnote>
         <bibref>Backus 1980</bibref>, pp. 133-134.
       </footnote>.</p>
-    <h1>1955: Noam Chomsky starts teaching at MIT</h1>
-    <p>Noam Chomsky is awarded a Ph.D. in linguistics and accepts a
-      teaching post at MIT. MIT does not have a linguistics department and
-      Chomsky is free to teach his own approach.
-      Chomksy's linguistics course is
-      highly original and very mathematical.</p>
+    <h1>1955: Noam Chomsky graduates</h1>
+    <p>
+      Noam Chomsky earns his PhD at the University of Pennsylvania.
+      His teacher, Zelig Harris, is a prominent Bloomfieldian,
+      and Chomsky's early work is thought to be in the Bloomfield school.<footnote>
+	<bibid>Harris 1993</bibid>,
+        pp 31-34, p. 37.
+      </footnote>
+      That same year Chomsky accepts
+      a teaching post at MIT.
+      MIT does not have a linguistics department,
+      and Chomsky is free to teach his own 
+      (highly original and very mathematical)
+      approach to linguistics.
     <h1>1955: Work begins on the IT compiler</h1>
     <p>At Purdue, a team including Alan Perlis and Joseph Smith begins work
       on the IT compiler<footnote>
@@ -551,6 +559,44 @@
         phase of modern compilers.
       </li>
     </ul>
+    <h1>Term: "Language" as of 1956</h1>
+    <p>In his "Three models" paper,
+      Chomsky says that
+    </p><blockquote>
+      By a language then, we shall mean a set (finite or infinite) of
+      sentences, each of finite length, all constructed from a finite
+      alphabet of symbols.<footnote>
+        <bibref>Chomsky 1956</bibref>, p. 114.
+        In case there is any doubt Chomsky's "strings"
+        are the same as Bloomfield's utterances,
+        Chomsky also calls his strings,
+        "utterances".
+        For example, <bibref>Chomsky 2002</bibref>, p. 15:
+        "Any grammar of a language will project the finite and somewhat accidental
+        corpus of observed utterances to a set (presumably infinite)
+        of grammatical utterances."
+      </footnote>
+    </blockquote>
+    <p>
+      This is exactly Bloomfield's definition,
+      restated using set theory.
+    </p>
+    <p>
+      Nonetheless signs of departure from the behaviorist orthodoxy are
+      apparent in "Three Models" --
+      Chomsky is quite willing to talk about what sentences mean,
+      when it serves his purposes.
+      For a utterance with multiple meanings,
+      Chomsky's new model produces multiple syntactic derivations.
+      Each of these syntactic derivations
+      "looks" like the natural representation
+      of one of the meanings.
+      Chomsky points out that the insight into semantics
+      that his new model provides is a very
+      desirable property to have.<footnote>
+        <bibref>Chomsky 1956</bibref>, p. 118, p. 123.
+      </footnote>
+    </p>
     <h1>Term: "Parser"</h1>
     <p>Chomsky is a turning point, so much so that he establishes or settles the
       meaning of many of the terms we are using.
@@ -2597,6 +2643,13 @@
       Chomsky, Noam.
       <cite>Syntactic Structures</cite>.
       Mouton & Co., 1957.
+    </p>
+    <p>
+      <bibid>Chomsky 2002</bibid>:
+      Chomsky, Noam.
+      <mla_container>Syntactic Structures</mla_container>,
+      2nd ed.,
+      Mouton de Gruyter, 2002.
     </p>
     <p>
       <bibid>Čulik and Cohen 1973</bibid>:
