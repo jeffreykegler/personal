@@ -1137,7 +1137,7 @@
       of precedence without a change in its code,
       and without any effect on its running speed.
     </p>
-    <h1>1961: Oettinger discovers pushdown automata</h1>
+    <h1 id="text-1961-Oettinger">1961: Oettinger discovers pushdown automata</h1>
     <p>
       Mathematical study of stacks as models of computing begins with Anthony Oettinger's 1961 paper.<footnote>
         <bibref>Oettinger 1961</bibref>
@@ -1172,9 +1172,7 @@
       the study of both computer and
       natural language translation.
       DPDA's soon prove totally inadequate
-      for this purpose.
-    </p>
-    <p>
+      for natural language translation.
       But for dealing with computing languages,
       DPDA's will have a much longer life.
       As of 1961, all algorithms with acceptable speed are using
