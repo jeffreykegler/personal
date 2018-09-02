@@ -1345,18 +1345,94 @@
       </footnote>.
     </p>
     <h1>1965: Knuth discovers LR</h1>
-    <p>Don Knuth discovers LR parsing<footnote>
+    <p>In 1965 the renowned mathematician Knuth responds<footnote>
         <bibref>Knuth 1965.</bibref>.
-      </footnote>.
-      The LR algorithm is deterministic,
-      Chomskyan and bottom-up. Knuth is primarily interested in the
-      mathematics, and the parsing algorithm he gives is not practical. He
-      leaves development of practical LR parsing algorithms as an
-      <q>open question</q>
-      for
-      <q>future research</q><footnote>
-        <bibref>Knuth 1965</bibref>, p. 637.
-      </footnote>.
+      </footnote>
+    to the challenge expressed
+    a few years earlier by <a href="#text-1961-Oettinger">Oettinger</a>.
+      Oettinger had hoped for a theory of stack-based
+      parsing
+      to replace "ad hoc invention".<footnote>
+      (<bibref>Oettinger 1961</bibref>, p. 127.)
+      </footnote>
+      Knuth responds with a theory that
+      encompasses all the "tricks"<footnote>
+        Knuth 1965, p. 607, in the abstract.
+      </footnote>
+      used for efficient parsing up to that time.
+      Knuth is as skilled a mathematician as
+      any of his time.
+      In an exhilarating and exhausting 39-page
+      paper,
+      Knuth shows that stack-based parsing is
+      equivalent to a new class of grammars.
+      Knuth calls this new class, LR(k).
+      Knuth also provides a parsing algorithm for them.
+    </p>
+    <p>
+      Knuth's new LR parsing algorithm is deterministic,
+      Chomskyan and bottom-up.
+      It might be expected to be "the one to rule
+      them all".
+      Unfortunately, while linear,
+      it is not practical -- it requires huge tables well beyond
+      the memory capabilities of the time.
+    </p>
+    <p>
+      The impracticality of his LR(k) algorithm
+      does not suggest to Knuth that the stack-based model
+      is inappropriate as a model of practical parsing.
+      Instead it suggests to him, and to the field,
+      that the boundary of practical parsing lies in a subclass of the
+      LR(k) grammars.<footnote>
+      To be sure,
+      Knuth, in his program for further research
+      (Knuth 1961, pp. 637-639)
+      does suggests investigation of parsers for superclasses
+      of LR(k).
+      He even describes a new superclass of his own:
+      LR(k,t), which is LR(k) with more aggressive lookahead.
+      But Knuth is clearly unenthusiastic about LR(k,t):
+      "Finally, we might mention another generalization of LR(k)"
+      (Knuth 1965, p. 638); and
+        "One might choose to call this left-to-right translation,
+        although we had to back up a finite amount."
+        (p. 639).
+      <br><br>
+      It is reasonable to suppose
+      that Knuth is even more negative about
+      the more general approaches that
+      he does not bother to mention.
+      Knuth's skepticism of more general Chomskyan approaches
+      is also suggested by his own plans for his (not yet released) Chapter
+      12 of the
+      <cite>Art of Computer Programming</cite>,
+      in which he planned to use pre-Chomskyan bottom-up methods (
+      <bibref>Knuth 1990</bibref>, p. 3).
+      <br><br>
+      Whatever Knuth's own beliefs,
+      we do not have to guess at those of his readers:
+      They focused almost
+      exclusively on his suggestions for research within the stack-based
+      model.
+      These included grammar rewrites;
+      streamlining of the LR(k) tables;
+      and research into LR(k) subclasses.
+      It is LR(k) subclassing that will receive the most attention.
+      </footnote>
+    </p>
+    <p>
+      The idea that the solution to the parsing problem must be
+      stack-based is not without foundation.
+      In 1965, the limits of computer technology are severe.
+      For practitioners,
+      any parsing technique that required much more
+      than a reasonably-sized state
+      machine and a stack,
+      is not likely to happen.
+      After all,
+      only four years earlier,
+      stacks were bleeding edge.
     </p>
     <h1>Term: "linear"</h1>
     <p>
@@ -1467,56 +1543,123 @@
       get out of hand
       for the grammar of interest to the user.
     </p>
-    <h1>The Operator Issue as of 1965</h1>
-    <p><bibref>Knuth 1965</bibref>
-      is a significant milestone
-      in the history of operator expresssion parsing.
-      Knuth specifically addresses the parsing of ALGOL
-      and he zeroes in on its arithmetic expressions
-      as the crucial issue<footnote>
-        Knuth also discusses some ambiguities,
-        and some intermixing of semantics with syntax,
-        in the
-        ALGOL report.
-        But Knuth (quite appropriately)
-        notes that BNF was new when it was written,
-        and treats these other issues
-        as problems with the ALGOL specification.
-        (See
-        <bibref>Knuth 1965</bibref>, pp. 622-625.)
-      </footnote>.
-      Knuth suggests a "typical" grammar<footnote>
-        <bibref>Knuth 1965</bibref>, p. 621.
-      </footnote>
-      which is short,
-      but encapsulates the parsing challenges
-      presented by ALGOL's arithmetic expressions:
-    </p><pre id="g-knuth-op"><tt>
-      S ::= E
-      E ::= - T
-      E ::= T
-      E ::= E - T
-      T ::= P
-      T ::= T * P
-      P ::= a
-      P ::= ( E )
-    </tt></pre>
-    <p><a href="#g-knuth-op">KNUTH-OP</a>
-      is left-recursive,
-      allows parentheses,
-      has three levels of precedence,
-      and implements both unary and
-      binary minus.
-      Recursive descent cannot parse
-      <a href="#g-knuth-op">KNUTH-OP</a>,
-      but it is LR(1).
-      The means that it is well within Knuth's new
-      class of grammars and,
-      by implication,
-      probably within a practical subclass of the
-      LR grammars.
+    ===
+    <h2>"Language" as of 1965</h2>
+    <p>
+      Knuth defines language as follows:
     </p>
-    <h1>An influential misconception</h1>
+    <blockquote>
+      The language defined by G is<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      { &alpha; | S => &alpha; and &alpha; is a string over T }<br>
+      namely, the set of all terminal strings derivable from S by using
+      the productions of G as substitution rules.<footnote>
+        Knuth 1965, p. 608.
+      </footnote>
+    </blockquote><p>
+      Here G is a grammar whose start symbol is S and whose set
+      of terminals is T.
+      This is the behavorist definition of language
+      translated into set-theoretic terms.
+    </p>
+    <p>Knuth proves, to the satisfaction of the profession,
+      the "equivalence" of LR(k) and DPDA's.
+      LR(k) is a class of grammars and the DPDA model is of
+      languages -- sets of strings.
+      At first glance, this is an "apples and oranges" comparison --
+      how do you prove the equivalence of a class of languages
+      and a class of grammars?
+    </p>
+    <p>
+      Knuth does this by reducing the class of DPDA languages and the class
+      of grammars to their lowest common denominator, which is the language.
+      And, of course, the "language" in the usage of Parsing Theory
+      is a set of strings, without consideration of their syntax.
+    </p>
+    <p>
+      Every grammar, when stripped of its syntax, defines a language.
+      So Knuth compares the language which results from stripping down
+      the LR(k) grammars,
+      to the language of DPDA's.
+      After some very impressive mathematics,
+      Knuth is able to show that the two languages are equivalent.
+    </p>
+    <p>
+      In theoretical mathematics, of course,
+      you can define "equivalent" however you like.
+      But if the purpose is to suggest limits in practice,
+      you have to be much more careful.
+      And in fact, as Knuth's paper shows,
+      if you equate languages and grammars,
+      you get into a very serious degree of magical thinking.
+      Using the Knuth algorithm,
+    </p>
+    <ul>
+      <li>parsing LR(k) grammars for arbitrary k is hopelessly impractical;
+      </li>
+      <li>parsing LR(1) grammars is impractical, but close to the boundary<footnote>
+          Given the capacity of computer memories in 1965,
+          LR(1) was clearly impractical.
+          With the huge computer memories of 2018,
+          that could be reconsidered, but LR(1) is still restrictive
+          and has poor error-handling,
+          and few have looked at the possibility.
+        </footnote>;
+        and
+      </li>
+      <li>parsing LR(0) grammars is very practical.
+      </li>
+    </ul>
+    <p>A problem for the relevance
+      of Knuth's proof of equivalence is that,
+      if you just look at sets of strings
+      without regard to syntax,
+      LR(1) and LR(k) are equivalent.
+      That means that from the sets-of-strings point of view,
+      hopelessly impractical and
+      borderline impractical are the same thing.
+    </p>
+    <p>
+      Worse, both LR(1) and LR(k) are equivalent to LR(0)
+      for most applications.
+      If you add
+      an explicit end marker to an LR(1) language,
+      which in most applications is easy to do<footnote>
+        Some parsing applications, such as those which receive their input "on-line",
+        can not determine the size of their input in advance.
+        For these applications adding an end marker to their input is
+        inconvenient or impossible.
+      </footnote>,
+      your LR(1) language becomes LR(0).
+      Therefore, for most applications,
+    </p>
+    <center>
+      LR(k) = LR(1) = LR(0)
+    </center>
+    <p>
+      This means that, in the world of sets-of-strings,
+      extremely impractical and very practical are usually the same thing.
+    </p>
+    <p>
+      Clearly the world of sets of strings
+      is a magical one,
+      in which we can easily transport ourselves across the
+      boundary between practical and impractical.
+      We can take visions of a magical world back into the world of practice,
+      but we cannot assume they will be helpful.
+      In that light,
+      it is no surprise that
+      Joop Leo will show how to extend practical
+      parsing well beyond LR(k).<footnote>
+        Joop M. I. M.
+        "A general context-free parsing algorithm running in linear time on every LR (k) grammar without using lookahead."
+        <cite>Theoretical computer science</cite>, Volume 82, Issue 1, 22 May 1991, pp. 165-176.
+        <a href="https://www.sciencedirect.com/science/article/pii/030439759190180A">
+          https://www.sciencedirect.com/science/article/pii/030439759190180A</a>, accessed 24 April 2018.
+      </footnote>
+    </p>
+    ===
+    <h1>The Parsing Problem as of 1965</h1>
     <p>In his 1965, Knuth makes
       a reasonable conjecture,
       but one which turns out to be wrong:
@@ -1589,6 +1732,55 @@
       This question will be answered by Joop Leo in 1991.
       The answer, surprisingly, will be
       <q>yes</q>.
+    </p>
+    <h1>The Operator Issue as of 1965</h1>
+    <p><bibref>Knuth 1965</bibref>
+      is a significant milestone
+      in the history of operator expresssion parsing.
+      Knuth specifically addresses the parsing of ALGOL
+      and he zeroes in on its arithmetic expressions
+      as the crucial issue<footnote>
+        Knuth also discusses some ambiguities,
+        and some intermixing of semantics with syntax,
+        in the
+        ALGOL report.
+        But Knuth (quite appropriately)
+        notes that BNF was new when it was written,
+        and treats these other issues
+        as problems with the ALGOL specification.
+        (See
+        <bibref>Knuth 1965</bibref>, pp. 622-625.)
+      </footnote>.
+      Knuth suggests a "typical" grammar<footnote>
+        <bibref>Knuth 1965</bibref>, p. 621.
+      </footnote>
+      which is short,
+      but encapsulates the parsing challenges
+      presented by ALGOL's arithmetic expressions:
+    </p><pre id="g-knuth-op"><tt>
+      S ::= E
+      E ::= - T
+      E ::= T
+      E ::= E - T
+      T ::= P
+      T ::= T * P
+      P ::= a
+      P ::= ( E )
+    </tt></pre>
+    <p><a href="#g-knuth-op">KNUTH-OP</a>
+      is left-recursive,
+      allows parentheses,
+      has three levels of precedence,
+      and implements both unary and
+      binary minus.
+      Recursive descent cannot parse
+      <a href="#g-knuth-op">KNUTH-OP</a>,
+      but it is LR(1).
+      The means that it is well within Knuth's new
+      class of grammars and,
+      by implication,
+      probably within a practical subclass of the
+      LR grammars.
     </p>
     <h1>1968: Lewis and Stearns discover LL</h1>
     <p>When Knuth discovered the LR grammars, he announced them to
