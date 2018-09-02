@@ -1566,13 +1566,47 @@
       all of its results are in terms of sets
       of strings.
     </p>
-    ===
-    TO HERE
-    ===
     <p>
       How do you show that string-sets
       are the equivalent of grammars?
+      What Knuth does is treat them both as string-sets,
+      comparing the extension of language of the LR grammars
+      to the strings-sets recognized by the DPDA's.
+      Given the state of the literature,
+      Knuth does not have much choice.
     </p>
+    <p>The result was all too encouraging.
+    It turns out that the language extension of
+    deterministic stack machines
+    is
+    <b>exactly</b>
+    that of the
+    <tt>LR</tt>
+    grammars.
+    </p>
+    <p>
+      If you take language extensions as the proxy for grammars,
+      things fall into place very neatly:
+      the
+      <tt>LR</tt>-parsers are the deterministic subset of the
+      context-free parsers.
+      And "deterministic" seemed like a very good approximation
+      of practical.
+      Certainly non-deterministic parsing is probably not practical.
+      And the best practical parsers in 1965 were
+      deterministic stack parsers.
+    </p>
+    <p>
+      Viewed this way,
+      <tt>LR</tt>-parsing looked like the equivalent
+      of practical parsing.
+      It was a "direct hit",
+      or as close to an exact equivalent of practical parsing
+      as theory was going to get.
+    </p>
+    ===
+    ===
+    TO HERE
     ===
     </p>
     <h2>The Wrong Turn</h2>
@@ -1708,43 +1742,9 @@
     </p>
     ===
     <p>
-      Knuth defines language as follows:
-    </p>
-    <blockquote>
-      The language defined by G is<br>
-      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      { &alpha; | S => &alpha; and &alpha; is a string over T }<br>
-      namely, the set of all terminal strings derivable from S by using
-      the productions of G as substitution rules.<footnote>
-        Knuth 1965, p. 608.
-      </footnote>
-    </blockquote><p>
-      Here G is a grammar whose start symbol is S and whose set
-      of terminals is T.
-      This is the behavorist definition of language
-      translated into set-theoretic terms.
-    </p>
-    <p>Knuth proves, to the satisfaction of the profession,
-      the "equivalence" of LR(k) and DPDA's.
-      LR(k) is a class of grammars and the DPDA model is of
-      languages -- sets of strings.
       At first glance, this is an "apples and oranges" comparison --
       how do you prove the equivalence of a class of languages
       and a class of grammars?
-    </p>
-    <p>
-      Knuth does this by reducing the class of DPDA languages and the class
-      of grammars to their lowest common denominator, which is the language.
-      And, of course, the "language" in the usage of Parsing Theory
-      is a set of strings, without consideration of their syntax.
-    </p>
-    <p>
-      Every grammar, when stripped of its syntax, defines a language.
-      So Knuth compares the language which results from stripping down
-      the LR(k) grammars,
-      to the language of DPDA's.
-      After some very impressive mathematics,
-      Knuth is able to show that the two languages are equivalent.
     </p>
     <p>
       In theoretical mathematics, of course,
@@ -1865,41 +1865,6 @@
       </li>
     </ul>
     <h2>Red Herring 1: The stack machine model as a natural boundary</h2>
-    <p>The temptation to use language extensions as
-      a proxy for
-      <tt>LR</tt>-grammars must have been overwhelming.
-      It turns out that the language extension of
-      deterministic stack machines
-      is
-      <b>exactly</b>
-      that of the
-      <tt>LR</tt>
-      grammars.
-      Further,
-      the language extension of the context-free grammars is
-      exactly that of the non-deterministic stack machines.
-      (Non-deterministic stack machines are
-      stack machines which can "fork" new instances of themselves on the fly.)
-    </p>
-    <p>
-      If you take language extensions as the proxy for grammars,
-      things fall into place very neatly:
-      the
-      <tt>LR</tt>-parsers are the deterministic subset of the
-      context-free parsers.
-      And "deterministic" seemed like a very good approximation
-      of practical.
-      Certainly non-deterministic parsing is probably not practical.
-      And the best practical parsers in 1965 were
-      deterministic stack parsers.
-    </p><p>
-      Viewed this way,
-      <tt>LR</tt>-parsing looked like the equivalent
-      of practical parsing.
-      It was a "direct hit",
-      or as close to a exact equivalent of practical parsing
-      as theory was going to get.
-    </p>
     <p>As we shall see,
       with this red herring,
       the reasoning went astray.
