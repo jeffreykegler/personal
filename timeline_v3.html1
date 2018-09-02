@@ -1487,48 +1487,93 @@
       get out of hand
       for the grammar of interest to the user.
     </p>
-    ===
     <h1>"Language" as of 1965</h1>
-    ===
-    <h2>Language extension versus language intension</h2>
-    <p>Knuth, of course, wanted to make contact with prior art.
-      The definition he had inherited seemed to work well enough
-      and Knuth's 1965 defines a language as a set of strings.
-      Most subsequent work has refused to breach this tradition.
-    </p>
-    <p>In most people's idea of what a language is,
-      the utterances/strings mean something --
-      you cannot take just
-      any set of meaningless strings and call it a language.
-      So the parsing theorists and everybody else had
-      two different definitions of language.
-    </p>
-    <p>But parsing theory also hoped to produce results relevant
-      to practice,
-      and few people are interested in recognizing meaningless strings --
-      almost everybody who parses is interested in (at a minimum)
-      finding some kind of structure in what they parse,
-      in order to do something with the result of the parse.
-      Parsing theorists ended up using the word "language" in one
-      sense, but implying that results they found worked
-      for the word "language" in the usual sense.
+    <p>
+      At this point two senses of the word "language"
+      have gotten entrenched in parsing theory.
+      Bloomfield and the behaviorist had defined
+      a language as just a set of strings or utterances.
+      Everybody else thinks that,
+      by definition, languages have a semantics
+      -- the strings have "meaning".
     </p>
     <p>
-      At this point both senses of the word "language"
-      have gotten entrenched in parsing theory.
-      Instead of making up a new terminology for this blog post,
       I will borrow a distinction from linguistics
-      and speak of
-      <b>the extension of a language</b>
-      and
-      <b>the intension of a language</b>.
-      The extension of a language is the Bloomfieldian defintion --
-      the set of utterances/strings in the language.
-      The intension of a language, for our purposes here,
-      can be regarded as its BNF grammar.
-      Each language intension will have (if it is well-defined)
-      exactly one extension.
-      But multiple language intensions can have the same extension.
+      and speak of the "set of strings" that make
+      up a language as its
+      <b>extension</b>.
+      The semantics of a language will
+      be its
+      <b>intension</b>.
+      For looking at <bibref>Knuth 1965</bibref>,
+      we can insist that the semantics of every
+      string is a tagged tree.
+      In fact, since
+      since we are dealing only with context-free parsing,
+      we can regard a language as its
+      extension plus a BNF grammar.<footnote>
+      This document is almost completely about context-free parsing,
+      and we do not need to actually represent a semantics,
+      just an interface to it.
+      I therefore present a very simplified semantics,
+      not adequate even for most computer 
+      applications,
+      which will almost always require at least some kind
+      of post-processing for the trees.
+      </footnote>
+    </p>
+    <p>
+      Each language intension (BNF grammar) will have
+      exactly one extension (string set).
+      But, multiple language intensions can have the same extension.
+      In other words,
+      many different BNF grammars might produce
+      exactly the same set of strings.
+      This is important point --
+      it undermines the traditional interpretations
+      of <bibref>Knuth 1965</bibref>.
+    </p>
+    <p>
+      <bibref>Knuth 1965<bibref> followed the rest
+      of the parsing literature of his time
+      by considering a "language" as the same as its
+      extension -- ignoring the semantics.
+      In Knuth's terminology, therefore,
+      there is no possibility
+      that the same language extensions 
+      might represent many different languages --
+      language extensions <b>are</b> languages.
+    </p>
+    <p>
+      Knuth, of course,
+      knows that BNF grammars are not the same
+      as sets of strings.
+      He gets all the details exactly right.
+      But using the same word for two different
+      things is dangerous,
+      and when it comes to the less exact
+      part --
+      assessing the implications of his results,
+      things do not go so well.
+    </p>
+    <p>
+      Knuth needs to establish an equivalence
+      between his LR grammars,
+      and the mathematical literature on
+      stack-based parsing (DPDA's).
+      The trouble is, the DPDA's literature is
+      entirely non-Chomskyan --
+      all of its results are in terms of sets
+      of strings.
+    </p>
+    ===
+    TO HERE
+    ===
+    <p>
+      How do you show that string-sets
+      are the equivalent of grammars?
+    </p>
+    ===
     </p>
     <h2>The Wrong Turn</h2>
     <h2>Signs of trouble ignored</h2>
