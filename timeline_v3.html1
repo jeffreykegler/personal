@@ -1608,7 +1608,7 @@
     <h1>Terms: "LL" and "LR"</h1>
     <p>When LL is added to the vocabulary of parsing, the meaning of
       <term>LR</term>
-      shifts slightly. In 1965 Knuth meant LR to mean
+      shifts slightly. In 1965 Knuth defined LR to mean
       <q>translatable from left to right</q><footnote>
         <bibref>Knuth 1965</bibref>, p. 610.
         See also on p. 611
