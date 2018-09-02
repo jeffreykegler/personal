@@ -1488,7 +1488,180 @@
       for the grammar of interest to the user.
     </p>
     ===
-    <h2>"Language" as of 1965</h2>
+    <h1>"Language" as of 1965</h1>
+    ===
+    <h2>Language extension versus language intension</h2>
+    <p>Knuth, of course, wanted to make contact with prior art.
+      The definition he had inherited seemed to work well enough
+      and Knuth's 1965 defines a language as a set of strings.
+      Most subsequent work has refused to breach this tradition.
+    </p>
+    <p>In most people's idea of what a language is,
+      the utterances/strings mean something --
+      you cannot take just
+      any set of meaningless strings and call it a language.
+      So the parsing theorists and everybody else had
+      two different definitions of language.
+    </p>
+    <p>But parsing theory also hoped to produce results relevant
+      to practice,
+      and few people are interested in recognizing meaningless strings --
+      almost everybody who parses is interested in (at a minimum)
+      finding some kind of structure in what they parse,
+      in order to do something with the result of the parse.
+      Parsing theorists ended up using the word "language" in one
+      sense, but implying that results they found worked
+      for the word "language" in the usual sense.
+    </p>
+    <p>
+      At this point both senses of the word "language"
+      have gotten entrenched in parsing theory.
+      Instead of making up a new terminology for this blog post,
+      I will borrow a distinction from linguistics
+      and speak of
+      <b>the extension of a language</b>
+      and
+      <b>the intension of a language</b>.
+      The extension of a language is the Bloomfieldian defintion --
+      the set of utterances/strings in the language.
+      The intension of a language, for our purposes here,
+      can be regarded as its BNF grammar.
+      Each language intension will have (if it is well-defined)
+      exactly one extension.
+      But multiple language intensions can have the same extension.
+    </p>
+    <h2>The Wrong Turn</h2>
+    <h2>Signs of trouble ignored</h2>
+    <p>There were, in hindsight, clear signs
+      that
+      <tt>LR</tt>
+      language extensions were not a good proxy for
+      <tt>LR</tt>
+      grammars.
+      <tt>LR</tt>
+      grammars form a hierarchy --
+      for every
+      <tt>k&#8805;0</tt>,
+      there is an
+      <tt>LR</tt>
+      grammar which
+      is
+      <tt>LR(k+1)</tt>, but which is not
+      <tt>LR(k)</tt>.
+    </p>
+    <p>
+      But if you look at extensions
+      instead of grammars,
+      the hierarchy immediately
+      collapses --
+      every
+      <tt>LR(k)</tt>
+      language extension is also
+      an
+      <tt>LR(1)</tt>
+      language extension,
+      as long as
+      <tt>k&#8805;1</tt>.
+      Only
+      <tt>LR(0)</tt>
+      remains distinct.
+    </p>
+    <p>It gets worse.
+      In most practical applications,
+      you can add an end-of-input marker to a grammar.
+      If you do this the
+      <tt>LR</tt>
+      extension hierarchy collapses totally --
+      every
+      <tt>LR(k)</tt>
+      language extension is also an
+      <tt>LR(0)</tt>
+      language extension.
+    </p>
+    <p>In short, it seems that,
+      as a proxy for
+      <tt>LR</tt>
+      grammars,
+      <tt>LR</tt>
+      language extensions are likely to be completely worthless.
+    </p>
+    <h2>Why didn't Knuth see the problem?</h2>
+    <p>Why didn't Knuth see the problem?
+      Knuth certainly noted the strange behavior of the
+      <tt>LR</tt>
+      hierarchy
+      in extensional terms -- he discovered it,
+      and devoted several dense pages of his 1965 to laying
+      out the complicated mathematics involved.
+    </p>
+    <p>
+      So why did
+      Knuth expect to get away with punning
+      intension and extension,
+      even in the face of some very unsettling results?
+      Here, the answer is very simple --
+      "punning" had always worked before.
+    </p>
+    <p>
+      Regular expressions are easily turned into parsers<footnote>
+        For example,
+        regular expressions can be extended with "captures".
+        Captures cannot handle recursion, but neither can regular expressions,
+        so captures are usually sufficient to provide all the structure
+        an application wants.
+      </footnote>,
+      so the language extension of a regular grammar is an adequate approximation
+      to its intension.
+      Context-free recognition has the same complexity,
+      and in practice uses the same algorithms,
+      as context-free parsing,
+      so here again,
+      language extension is a good approximation
+      of language intension.
+    </p>
+    <p>
+      And the
+      <tt>LL</tt>
+      language extensions follow a strict hierarchy --
+      for every
+      <tt>k&#8805;0</tt>,
+      <tt>LL(k+1)</tt>
+      is a proper superset of
+      <tt>LL(k)</tt>.
+      This fact forces
+      <tt>LL</tt>
+      grammars to follow the same
+      hierarchy<footnote>
+        The discussion of the
+        <tt>LL(k)</tt>
+        hierarchy is in a sense anachronistic --
+        the
+        <tt>LL(k)</tt>
+        hierachy was not studied until after 1965.
+        But Knuth certainly was aware of recursive descent,
+        and it seems reasonable to suppose that,
+        even in 1965,
+        he had a sense of what
+        the
+        <tt>LL</tt>
+        hierarchy would look like.
+      </footnote>.
+      So, when studying complexity,
+      <tt>LL</tt>
+      language extensions are an excellent proxy for
+      <tt>LL</tt>
+      grammars.
+    </p>
+    <p>
+      Based on past experience,
+      Knuth had reason to believe
+      he could use language extensions as a proxy
+      for grammars,
+      and that the result would be
+      a theory that was a reliable
+      guide to practice.
+    </p>
+    ===
     <p>
       Knuth defines language as follows:
     </p>
@@ -1604,6 +1777,216 @@
     </p>
     ===
     <h1>The Parsing Problem as of 1965</h1>
+    ===
+    <h2>The Practitioners</h2>
+    <p>
+      To summarize, in 1965,
+      <b>practitioners</b>
+      accepted the parsing problem as solved
+      for the following reasons.
+    </p>
+    <ul>
+      <li>In 1965, every practical parser was stack-driven.</li>
+      <li>As of 1965, stacks themselves were quite leading edge.
+        As recently as 1961,
+        a leading edge article<footnote>
+          Oettinger, Anthony. "Automatic Syntactic Analysis and the Pushdown
+          Store",
+          <cite>Proceedings of Symposia in Applied Mathematics</cite>,
+          Volume 12,
+          American Mathematical Society, 1961.
+          Oettinger describes "push" and "pop"
+          stack operations in "Iversion notation" -- what
+          later became APL.
+          See the discussion of Oettinger in
+          my
+    <a href="http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2018/05/knuth_1965.html">
+            "Why is parsing considered solved?" post</a>.
+        </footnote>
+        could not assume that its readers knew what "pop" and "push" operations
+        were.
+      </li>
+      <li>An algorithm that combined state transitions and stack operations was
+        already a challenge to existing machines.
+        In 1965, any more complicated algorithm was likely to be unuseable
+        in practice.
+      </li>
+      <li>Last, but not least, the theoreticians assured the
+        practitioners that
+        <tt>LR</tt>-parsing was either state-of-the-art
+        or beyond,
+        so making more agressive use of hardware
+        would be futile.
+      </li>
+    </ul>
+    <h2>Red Herring 1: The stack machine model as a natural boundary</h2>
+    <p>The temptation to use language extensions as
+      a proxy for
+      <tt>LR</tt>-grammars must have been overwhelming.
+      It turns out that the language extension of
+      deterministic stack machines
+      is
+      <b>exactly</b>
+      that of the
+      <tt>LR</tt>
+      grammars.
+      Further,
+      the language extension of the context-free grammars is
+      exactly that of the non-deterministic stack machines.
+      (Non-deterministic stack machines are
+      stack machines which can "fork" new instances of themselves on the fly.)
+    </p>
+    <p>
+      If you take language extensions as the proxy for grammars,
+      things fall into place very neatly:
+      the
+      <tt>LR</tt>-parsers are the deterministic subset of the
+      context-free parsers.
+      And "deterministic" seemed like a very good approximation
+      of practical.
+      Certainly non-deterministic parsing is probably not practical.
+      And the best practical parsers in 1965 were
+      deterministic stack parsers.
+    </p><p>
+      Viewed this way,
+      <tt>LR</tt>-parsing looked like the equivalent
+      of practical parsing.
+      It was a "direct hit",
+      or as close to a exact equivalent of practical parsing
+      as theory was going to get.
+    </p>
+    <p>As we shall see,
+      with this red herring,
+      the reasoning went astray.
+      But disaster was not inevitable.
+      The whole point of bracketing, after all,
+      is that it allows you to correct errors.
+      Another red herring, however, resulted in
+      parsing theory going on a decades-long
+      wrong turn.
+    </p>
+    <h2>Red Herring 2:
+      <tt>LR</tt>
+      parsers are not good at
+      <tt>LR</tt>
+      grammars</h2>
+    <p>The second red herring led to the mis-bracketing of practical
+      parsing.
+      Having seemingly established that
+      <tt>LR</tt>-parsing is a natural boundary
+      in the hierarchy of languages,
+      Knuth discovered that general
+      <tt>LR</tt>-parsers were very far from practical.
+      <tt>LR</tt>
+      parsing goes out to
+      <tt>LR(k)</tt>
+      for arbitrary
+      <tt>k</tt>,
+      but even
+      <tt>LR(1)</tt>
+      parsing was impractical in 1965 --
+      in fact, it is rare in practical use today.
+      As the
+      <tt>k</tt>
+      in
+      <tt>LR(k)</tt>
+      grows, the size of the tables grows exponentially,
+      while the value of the additional lookahead rapidly diminishes.
+      It is not likely that
+      <tt>LR(2)</tt>
+      parsing will ever see much practical use,
+      never mind
+      <tt>LR(k)</tt> for any <tt>k</tt>
+      greater than 2.
+    </p>
+    <p>
+      From this it was concluded that
+      <tt>LR</tt>-parsing is an overshoot.
+      In reality,
+      as Joop Leo was to show,
+      it is an
+      <b>undershoot</b>,
+      and in practical terms a very large one.
+      If you mistake an undershoot for an overshoot,
+      bracketing no longer works,
+      and you are not likely to hit your target.
+    </p>
+    <h2>Why didn't Knuth see the problem?</h2>
+    <p>Why didn't Knuth see the problem?
+      Knuth certainly noted the strange behavior of the
+      <tt>LR</tt>
+      hierarchy
+      in extensional terms -- he discovered it,
+      and devoted several dense pages of his 1965 to laying
+      out the complicated mathematics involved.
+    </p>
+    <p>
+      So why did
+      Knuth expect to get away with punning
+      intension and extension,
+      even in the face of some very unsettling results?
+      Here, the answer is very simple --
+      "punning" had always worked before.
+    </p>
+    <p>
+      Regular expressions are easily turned into parsers<footnote>
+        For example,
+        regular expressions can be extended with "captures".
+        Captures cannot handle recursion, but neither can regular expressions,
+        so captures are usually sufficient to provide all the structure
+        an application wants.
+      </footnote>,
+      so the language extension of a regular grammar is an adequate approximation
+      to its intension.
+      Context-free recognition has the same complexity,
+      and in practice uses the same algorithms,
+      as context-free parsing,
+      so here again,
+      language extension is a good approximation
+      of language intension.
+    </p>
+    <p>
+      And the
+      <tt>LL</tt>
+      language extensions follow a strict hierarchy --
+      for every
+      <tt>k&#8805;0</tt>,
+      <tt>LL(k+1)</tt>
+      is a proper superset of
+      <tt>LL(k)</tt>.
+      This fact forces
+      <tt>LL</tt>
+      grammars to follow the same
+      hierarchy<footnote>
+        The discussion of the
+        <tt>LL(k)</tt>
+        hierarchy is in a sense anachronistic --
+        the
+        <tt>LL(k)</tt>
+        hierachy was not studied until after 1965.
+        But Knuth certainly was aware of recursive descent,
+        and it seems reasonable to suppose that,
+        even in 1965,
+        he had a sense of what
+        the
+        <tt>LL</tt>
+        hierarchy would look like.
+      </footnote>.
+      So, when studying complexity,
+      <tt>LL</tt>
+      language extensions are an excellent proxy for
+      <tt>LL</tt>
+      grammars.
+    </p>
+    <p>
+      Based on past experience,
+      Knuth had reason to believe
+      he could use language extensions as a proxy
+      for grammars,
+      and that the result would be
+      a theory that was a reliable
+      guide to practice.
+    </p>
     ===
     <p>
       The impracticality of his LR(k) algorithm
