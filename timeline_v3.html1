@@ -1736,11 +1736,11 @@
       <q>yes</q>.
     </p>
     <p><footnote>I deal with the implications of
-      <bibid>Knuth 1965</bibid> for parsing theory
+      <bibref>Knuth 1965</bibref> for parsing theory
       at greater length in these blog posts:
-      <bibid>Kegler Strings 2018</bibid>,
-      <bibid>Kegler Solved 2018</bibid>,
-      and <bibid>Kegler Undershoot 2018</bibid>.
+      <bibref>Kegler Strings 2018</bibref>,
+      <bibref>Kegler Solved 2018</bibref>,
+      and <bibref>Kegler Undershoot 2018</bibref>.
     </footnote>
     </p>
     <h1>The Operator Issue as of 1965</h1>
