@@ -1345,7 +1345,7 @@
       </footnote>.
     </p>
     <h1>1965: Knuth discovers LR</h1>
-    <p>In 1965 the renowned mathematician Knuth responds<footnote>
+    <p>In 1965 Donald Knuth responds<footnote>
         <bibref>Knuth 1965.</bibref>.
       </footnote>
     to the challenge expressed
@@ -1377,62 +1377,6 @@
       Unfortunately, while linear,
       it is not practical -- it requires huge tables well beyond
       the memory capabilities of the time.
-    </p>
-    <p>
-      The impracticality of his LR(k) algorithm
-      does not suggest to Knuth that the stack-based model
-      is inappropriate as a model of practical parsing.
-      Instead it suggests to him, and to the field,
-      that the boundary of practical parsing lies in a subclass of the
-      LR(k) grammars.<footnote>
-      To be sure,
-      Knuth, in his program for further research
-      (Knuth 1961, pp. 637-639)
-      does suggests investigation of parsers for superclasses
-      of LR(k).
-      He even describes a new superclass of his own:
-      LR(k,t), which is LR(k) with more aggressive lookahead.
-      But Knuth is clearly unenthusiastic about LR(k,t):
-      "Finally, we might mention another generalization of LR(k)"
-      (Knuth 1965, p. 638); and
-        "One might choose to call this left-to-right translation,
-        although we had to back up a finite amount."
-        (p. 639).
-      <br><br>
-      It is reasonable to suppose
-      that Knuth is even more negative about
-      the more general approaches that
-      he does not bother to mention.
-      Knuth's skepticism of more general Chomskyan approaches
-      is also suggested by his own plans for his (not yet released) Chapter
-      12 of the
-      <cite>Art of Computer Programming</cite>,
-      in which he planned to use pre-Chomskyan bottom-up methods (
-      <bibref>Knuth 1990</bibref>, p. 3).
-      <br><br>
-      Whatever Knuth's own beliefs,
-      we do not have to guess at those of his readers:
-      They focused almost
-      exclusively on his suggestions for research within the stack-based
-      model.
-      These included grammar rewrites;
-      streamlining of the LR(k) tables;
-      and research into LR(k) subclasses.
-      It is LR(k) subclassing that will receive the most attention.
-      </footnote>
-    </p>
-    <p>
-      The idea that the solution to the parsing problem must be
-      stack-based is not without foundation.
-      In 1965, the limits of computer technology are severe.
-      For practitioners,
-      any parsing technique that required much more
-      than a reasonably-sized state
-      machine and a stack,
-      is not likely to happen.
-      After all,
-      only four years earlier,
-      stacks were bleeding edge.
     </p>
     <h1>Term: "linear"</h1>
     <p>
@@ -1660,6 +1604,64 @@
     </p>
     ===
     <h1>The Parsing Problem as of 1965</h1>
+    ===
+    <p>
+      The impracticality of his LR(k) algorithm
+      does not suggest to Knuth that the stack-based model
+      is inappropriate as a model of practical parsing.
+      Instead it suggests to him, and to the field,
+      that the boundary of practical parsing lies in a subclass of the
+      LR(k) grammars.<footnote>
+      To be sure,
+      Knuth, in his program for further research
+      (Knuth 1961, pp. 637-639)
+      does suggests investigation of parsers for superclasses
+      of LR(k).
+      He even describes a new superclass of his own:
+      LR(k,t), which is LR(k) with more aggressive lookahead.
+      But Knuth is clearly unenthusiastic about LR(k,t):
+      "Finally, we might mention another generalization of LR(k)"
+      (Knuth 1965, p. 638); and
+        "One might choose to call this left-to-right translation,
+        although we had to back up a finite amount."
+        (p. 639).
+      <br><br>
+      It is reasonable to suppose
+      that Knuth is even more negative about
+      the more general approaches that
+      he does not bother to mention.
+      Knuth's skepticism of more general Chomskyan approaches
+      is also suggested by his own plans for his (not yet released) Chapter
+      12 of the
+      <cite>Art of Computer Programming</cite>,
+      in which he planned to use pre-Chomskyan bottom-up methods (
+      <bibref>Knuth 1990</bibref>, p. 3).
+      <br><br>
+      Whatever Knuth's own beliefs,
+      we do not have to guess at those of his readers:
+      They focused almost
+      exclusively on his suggestions for research within the stack-based
+      model.
+      These included grammar rewrites;
+      streamlining of the LR(k) tables;
+      and research into LR(k) subclasses.
+      It is LR(k) subclassing that will receive the most attention.
+      </footnote>
+    </p>
+    <p>
+      The idea that the solution to the parsing problem must be
+      stack-based is not without foundation.
+      In 1965, the limits of computer technology are severe.
+      For practitioners,
+      any parsing technique that required much more
+      than a reasonably-sized state
+      machine and a stack,
+      is not likely to happen.
+      After all,
+      only four years earlier,
+      stacks were bleeding edge.
+    </p>
+    ===
     <p>In his 1965, Knuth makes
       a reasonable conjecture,
       but one which turns out to be wrong:
@@ -1732,6 +1734,14 @@
       This question will be answered by Joop Leo in 1991.
       The answer, surprisingly, will be
       <q>yes</q>.
+    </p>
+    <p><footnote>I deal with the implications of
+      <bibid>Knuth 1965</bibid> for parsing theory
+      at greater length in these blog posts:
+      <bibid>Kegler Strings 2018</bibid>,
+      <bibid>Kegler Solved 2018</bibid>,
+      and <bibid>Kegler Undershoot 2018</bibid>.
+    </footnote>
     </p>
     <h1>The Operator Issue as of 1965</h1>
     <p><bibref>Knuth 1965</bibref>
@@ -2048,7 +2058,7 @@
       constructs requiring infinite lookahead will come up in real languages.<footnote>
         Haskell list comprehension, for example, requires infinite lookahead --
         see
-        <bibref>Kegler 2018</bibref>.
+        <bibref>Kegler Haskell 2018</bibref>.
         (Haskell's native parser deals with this in post-processing.)
       </footnote>
     </p>
@@ -3175,7 +3185,34 @@
       The link is to the 19 June 2013 revision of the 2012 original.
     </p>
     <p>
-      <bibid>Kegler 2018</bibid>:
+      <bibid>Kegler Strings 2018</bibid>:
+      Kegler, Jeffrey.
+      <mla_title>Is a language just a set of strings?</mla_title>
+      <mla_container>Ocean of Awareness</mla_container>,
+      May 28, 2018.
+      <mla_url>http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2018/05/chomsky_1956.html</mla_url>.
+      Accessed 2 September 2018.
+    </p>
+    <p>
+      <bibid>Kegler Solved 2018</bibid>:
+      Kegler, Jeffrey.
+      <mla_title>Why is parsing considered solved?</mla_title>
+      <mla_container>Ocean of Awareness</mla_container>,
+      4 June, 2018.
+      <mla_url>http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2018/05/knuth_1965.html</mla_url>.
+      Accessed 2 September 2018.
+    </p>
+    <p>
+      <bibid>Kegler Undershoot 2018</bibid>:
+      Kegler, Jeffrey.
+      <mla_title>Undershoot: Parsing theory in 1965</mla_title>.
+      <mla_container>Ocean of Awareness</mla_container>,
+      August 8, 2018.
+      <mla_url>http://jeffreykegler.github.io/Ocean-of-Awareness-blog/individual/2018/07/knuth_1965_2.html</mla_url>.
+      Accessed 2 September 2018.
+    </p>
+    <p>
+      <bibid>Kegler Haskell 2018</bibid>:
       Kegler, Jeffrey.
       <mla_title>A Haskell challenge.</mla_title>
       <mla_container>Ocean of Awareness</mla_container>,
