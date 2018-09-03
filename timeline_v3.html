@@ -1385,7 +1385,7 @@
       that meant that the theoretical equivalent of "practical
       parsing" was somewhere between LR(0) and LR(1).
     </p>
-    <p>Not all the signs were promising, however.
+    <p id="text-LR-hierarchy-collapse">Not all the signs were promising, however.
       In fact, one of them is ominous.
       LR
       grammars form a hierarchy --
@@ -1425,7 +1425,7 @@
       In terms of strings-sets,
       there is no LR hierarchy.
       <center>
-      LR(0) = LR(1) = LR(2) = &nbsp;&nbsp; ... &nbsp;&nbsp; = LR(42) = &nbsp;&nbsp;
+      LR(0) = LR(1) = LR(2) = &nbsp;&nbsp; ... &nbsp;&nbsp; = LR(42) = &nbsp;&nbsp; ...
       </center>
     <p>In short,
       as a proxy for LR grammars,
@@ -1440,68 +1440,74 @@
       did not solve the Parsing Problem,
       it convinced most that stack-based,
       and therefore LR, parsing
-      was the framework for the solution.
+      was the framework for the solution.<a id="footnote-74-ref" href="#footnote-74">[74]</a>
+    The reasons seem overwhelming:
     </p>
     <ul>
-      <li>In 1965, every practical parser was stack-driven.</li>
-      <li>An algorithm that combined state transitions and stack operations was
+      <li>In 1965, every practical parser is stack-driven.</li>
+      <li>An algorithm that combines state transitions and stack operations is
         already a challenge to existing machines.
-        In 1965, any more complicated algorithm was likely to be unuseable
-        in practice.<a id="footnote-74-ref" href="#footnote-74">[74]</a>
+        In 1965, any more complicated algorithm is likely to be unuseable
+        in practice.<a id="footnote-75-ref" href="#footnote-75">[75]</a>
       </li>
-      <li>For LR(k) grammars, practical parsing was bracketed somewhere
+      <li>For LR(k) grammars, practical parsing is bracketed somewhere
 	between LR(0) and LR(1).</li>
-      <li>In terms of what were then called "languages",
-      LR(k) parsing was equivalent of deterministic stack-based parsing.</li>
+      <li>In terms of what the parsing literature calls "languages"
+      (that is, in terms of language extensions),
+      LR(k) parsing is the exact equivalent of deterministic stack-based parsing.</li>
       <li>Determinism is always linear, and linear is always practical.</li>
-      <li>In 1965, every practical parser was deterministic.</li>
+      <li>In 1965, every practical parser is deterministic.</li>
       <li>In general, power is a trade-off for speed.</li>
     </ul>
-    <p>This was the evidence in 1965,
-    and it must have looked overwhelming.
-    That the "languages" of interest were intensions,
-    not extensions,
-    and that extensions within the LR hierarchy collapsed
-    were things that were known,
+    <p>That the "languages" used in the reasoning are extensions,
+    while those of interest are intensions,
+    and that
+    <a href="#text-LR-hierarchy-collapse">extensions
+    within the LR hierarchy collapse</a>,
+    are things that are known,
     but not considered troubling.
     After all, there is no exact theoretical equivalent
-    "practical" --
+    of "practical" --
     you always have to settle for a rough equivalent.
     </p>
     <p>
-    And this theoretical equivalent for practical practical
-    parsing looked less rough than many others --
-    the fact that deterministic stack-based parsing was
-    exactly LR-parsing,
-    and that non-deterministic stack-based parsing was
-    exactly context-free was very elegant,
-    and suggested to the theoreticians that they had
-    found the fundamental laws governing these phenomemon.
-    The "exactly" meant "exactly in terms of extensions"
-    was not extremely troubling --
-    extensions were what were used and had produced
-    impressive results going as far back to Chomsky.
-    </ul>
+    And this theoretical equivalent for practical
+    parsing looks less rough than many others.
+    The fact that deterministic stack-based parsing is
+    "exactly" LR-parsing,
+    is complemented by the fact
+    that non-deterministic stack-based parsing is
+    "exactly" context-free parsing.
+    This is very elegant,
+    and suggests that the theoreticians have indeed
+    revealed the fundamental laws behind parsing.
+    Of course, "exactly" here means "exactly in terms of extensions".
+    But, again, this is not extremely troubling.
+    Extensions are what is used.
+    Nobody understood the limits of extensions as a definition
+    of language better than Chomsky,
+    but Chomsky himself had used extensions
+    to produce some of his most
+    impressive results.
     </p>
-	<a id="footnote-75-ref" href="#footnote-75">[75]</a>.
-    ===
-    <h2>Red Herring 1: The stack machine model as a natural boundary</h2>
-    <h2>Red Herring 2:
-      LR
-      parsers are not good at
-      LR
-      grammars</h2>
-    ===
+      After 1965, the consensus
+      excludes the idea that algorithms which target supersets of LR(k) might be faster than those that take on LR(k)
+      directly.<a id="footnote-76-ref" href="#footnote-76">[76]</a>.
+    But, what if the LR language hierarchy collapse is a real
+    problem?
+    If we remove the evidence based on language extensions from the list above,
+    all we have left are couple of over-generalizations.
+    So the question remains:
     <blockquote>
       Is there a non-deterministic parser that is linear for
-      the LR(k) grammars, or even a superset of LR(k)?
+      the LR(k) grammars, or even a superset of them?
     </blockquote>
     <p>
-      This question will be answered by Joop Leo in 1991.
+      This question will be answered
+      <a href="#text-1991-Leo">
+      by Joop Leo in 1991</a>.
       The answer, surprisingly, will be
       <q>yes</q>.
-    </p>
-    <p><a id="footnote-76-ref" href="#footnote-76">[76]</a>
     </p>
     <h1 id="h1-the_operator_issue_as_of_1965">
     The Operator Issue as of 1965
@@ -3600,22 +3606,31 @@
 	is not possible.
  <a href="#footnote-72-ref">&#8617;</a></p>
 <p id="footnote-73"><b>73</b>.
-      None of these problematic signs escaped Knuth.
+      None of these problematic signs escape Knuth.
       He discovers and proves them on pp. 630-636.
-      Knuth seems to have considered the LR hierarchy collapse as a
+      But Knuth seems to consider the LR hierarchy collapse a
       mathematical curiousity,
-      one of no great relevance to applications.
+      and one with no implications for practical parsing.
  <a href="#footnote-73-ref">&#8617;</a></p>
 <p id="footnote-74"><b>74</b>.
-	In 1964, stack-based parsing would not have been seen as "safe"
-	or "traditional".
+I deal with the implications of
+      <a href="#bib-Knuth_1965">Knuth 1965</a> for parsing theory
+      at greater length in these blog posts:
+      <a href="#bib-Kegler_Strings_2018">Kegler Strings 2018</a>,
+      <a href="#bib-Kegler_Solved_2018">Kegler Solved 2018</a>,
+      and <a href="#bib-Kegler_Undershoot_2018">Kegler Undershoot 2018</a>.
+ <a href="#footnote-74-ref">&#8617;</a></p>
+<p id="footnote-75"><b>75</b>.
+	In 1964, advocates of stack-based parsing would not
+	have been seen themselves as settling for a "safe"
+	or "traditional" solution.
 	<a href="#text-1961-Oettinger">As
 	recently as 1961</a>, readers of technical journals were
 	not expected to know what a stack was.
- <a href="#footnote-74-ref">&#8617;</a></p>
-<p id="footnote-75"><b>75</b>.
+ <a href="#footnote-75-ref">&#8617;</a></p>
+<p id="footnote-76"><b>76</b>.
 	  <a href="#bib-Knuth_1965">Knuth 1965</a>, p. 637.
-	  Knuth's language is cautious,
+	  Knuth's own language is cautious,
 	  so it is not 100% clear
 	  that he believes that the
 	  future of practical parsing theory lies
@@ -3671,14 +3686,6 @@
 	  These included grammar rewrites;
 	  streamlining of the LR(k) tables;
 	  and research into LR(k) subclasses.
- <a href="#footnote-75-ref">&#8617;</a></p>
-<p id="footnote-76"><b>76</b>.
-I deal with the implications of
-      <a href="#bib-Knuth_1965">Knuth 1965</a> for parsing theory
-      at greater length in these blog posts:
-      <a href="#bib-Kegler_Strings_2018">Kegler Strings 2018</a>,
-      <a href="#bib-Kegler_Solved_2018">Kegler Solved 2018</a>,
-      and <a href="#bib-Kegler_Undershoot_2018">Kegler Undershoot 2018</a>.
  <a href="#footnote-76-ref">&#8617;</a></p>
 <p id="footnote-77"><b>77</b>.
         Knuth also discusses some ambiguities,
