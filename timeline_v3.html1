@@ -1495,7 +1495,7 @@
       LR(0) requires no lookahead, but
       is too weak for practical use.
       Even
-      <tt>LR(1)</tt>
+      LR(1)
       parsing was impractical in 1965 --
       in fact, it is rare in practical use today.<footnote>
           Given the capacity of computer memories in 1965,
@@ -1510,16 +1510,16 @@
 	  and LR(1) parsing shares that problem.
         </footnote>
       As the
-      <tt>k</tt>
+      k</tt>
       in
-      <tt>LR(k)</tt>
+      LR(k)
       grows, the size of the tables grows exponentially,
       while the value of the additional lookahead rapidly diminishes.
       It is not likely that
-      <tt>LR(2)</tt>
+      LR(2)
       parsing will ever see much practical use,
       never mind
-      <tt>LR(k)</tt> for any <tt>k</tt>
+      LR(k) for any k</tt>
       greater than 2.
     </p>
     <h1>"Language" as of 1965</h1>
@@ -1590,7 +1590,13 @@
       </footnote>
     </p>
     <p>
-      Up to 1965, the Bloomfieldian definition has
+      Using the same word for two different
+      things is dangerous.
+      You have to be very careful
+      or your reasoning goes off the rails.
+    </p>
+    <p>
+      But, up to 1965, the Bloomfieldian definition has
       not only not caused any recognizable harm,
       it has arguably been helpful.
       It <b>is</b> simpler to deal with a language
@@ -1607,13 +1613,6 @@
       and if the semantics and the intension
       are not needed to show that,
       then they are just getting in the way.
-    </p>
-    <p>
-      But, whatever the advantages,
-      using the same word for two different
-      things is dangerous.
-      You have to be very careful
-      or your reasoning goes off the rails.
     </p>
     <p>
       Knuth needs to establish an equivalence
@@ -1643,14 +1642,14 @@
     is
     <b>exactly</b>
     that of the
-    <tt>LR</tt>
+    LR
     grammars.
     </p>
     <p>
       If you take language extensions as the proxy for grammars,
       things fall into place very neatly:
       the
-      <tt>LR</tt>-parsers are the deterministic subset of the
+      LR-parsers are the deterministic subset of the
       context-free parsers.
       And "deterministic" seemed like a very good approximation
       of practical.
@@ -1660,7 +1659,7 @@
     </p>
     <p>
       Viewed this way,
-      <tt>LR</tt>-parsing looked like the equivalent
+      LR-parsing looked like the equivalent
       of practical parsing.
       It was a "direct hit",
       or as close to an exact equivalent of practical parsing
@@ -1669,12 +1668,8 @@
       that meant that the theoretical equivalent of "practical
       parsing" was somewhere between LR(0) and LR(1).
     </p>
-    <p>There were, in hindsight, clear signs
-      that
-      LR
-      language extensions were not a good proxy for
-      LR
-      grammars.
+    <p>Not all the signs were promising, however.
+      In fact, one of them is ominous.
       LR
       grammars form a hierarchy --
       for every
@@ -1685,24 +1680,18 @@
       is
       LR(k+1), but which is not
       LR(k).
-      That is,
-      if you just look at sets of strings
-      LR(1) and LR(k) are equivalent.
     </p>
     <p>
-      But if you look at extensions
-      instead of grammars,
-      the hierarchy immediately
-      collapses --
-      every
-      <tt>LR(k)</tt>
+      But if you just look at sets of strings,
+      this hierarchy pancakes.
+      Every
+      LR(k)
       language extension is also
       an
-      <tt>LR(1)</tt>
+      LR(1)
       language extension,
       as long as
-      <tt>k&#8805;1</tt>.
-      remains distinct.
+      k&#8805;1.
     </p>
     <p>It gets worse.
       So far
@@ -1718,19 +1707,24 @@
       </footnote>,
       If you do this,
       every
-      <tt>LR(k)</tt>
+      LR(k)
       language extension is also an
-      <tt>LR(0)</tt>
+      LR(0)
       language extension.
-      The <tt>LR</tt>
-      extension hierarchy collapses totally.
-    </p>
-    <p>In short, it seems that,
-      as a proxy for
-      <tt>LR</tt>
-      grammars,
-      <tt>LR</tt>
-      language extensions are likely to be completely worthless.
+      In terms of strings-sets,
+      there is no LR hierarchy.
+      <center>
+      LR(0) = LR(1) = LR(2) = &nbsp;&nbsp; ... &nbsp;&nbsp; = LR(42) = &nbsp;&nbsp;
+      </center>
+    <p>In short,
+      as a proxy for LR grammars,
+      LR language extensions look like they might be completely worthless.<footnote>
+      None of these problematic signs escaped Knuth.
+      He discovers and proves them on pp. 630-636.
+      Knuth seems to have considered the LR hierarchy collapse as a
+      mathematical curiousity,
+      one of no great relevance to applications.
+      </footnote>
     </p>
     <h1>The Parsing Problem as of 1965</h1>
     <p>
@@ -1821,21 +1815,21 @@
     ===
     <h2>Red Herring 1: The stack machine model as a natural boundary</h2>
     <h2>Red Herring 2:
-      <tt>LR</tt>
+      LR
       parsers are not good at
-      <tt>LR</tt>
+      LR
       grammars</h2>
     <p>The second red herring led to the mis-bracketing of practical
       parsing.
       Having seemingly established that
-      <tt>LR</tt>-parsing is a natural boundary
+      LR-parsing is a natural boundary
       in the hierarchy of languages,
       Knuth discovered that general
-      <tt>LR</tt>-parsers were very far from practical.
+      LR-parsers were very far from practical.
     </p>
     <p>Why didn't Knuth see the problem?
       Knuth certainly noted the strange behavior of the
-      <tt>LR</tt>
+      LR
       hierarchy
       in extensional terms -- he discovered it,
       and devoted several dense pages of his 1965 to laying
