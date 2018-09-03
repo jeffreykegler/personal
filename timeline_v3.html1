@@ -1748,10 +1748,41 @@
 	not expected to know what a stack was.
 	</footnote>
       </li>
-      <li>Last, and far from least, theoreticians assured the
-        practitioners that the limits of practical parsing would
-	be in the LR(k) hierarchy, probably bracketed somewhere
-	between LR(0) and LR(1).<footnote>
+      <li>For LR(k) grammars, practical parsing was bracketed somewhere
+	between LR(0) and LR(1).</li>
+      <li>In terms of what were then called "languages",
+      LR(k) parsing was equivalent of deterministic stack-based parsing.</li>
+      <li>Determinism is always linear, and linear is always practical.</li>
+      <li>In 1965, every practical parser was deterministic.</li>
+      <li>In general, power is a trade-off for speed.</li>
+    </ul>
+    <p>This was the evidence in 1965,
+    and it must have looked overwhelming.
+    That the "languages" of interest were intensions,
+    not extensions,
+    and that extensions within the LR hierarchy collapsed
+    were things that were known,
+    but not considered troubling.
+    After all, there is no exact theoretical equivalent
+    "practical" --
+    you always have to settle for a rough equivalent.
+    </p>
+    <p>
+    And this theoretical equivalent for practical practical
+    parsing looked less rough than many others --
+    the fact that deterministic stack-based parsing was
+    exactly LR-parsing,
+    and that non-deterministic stack-based parsing was
+    exactly context-free was very elegant,
+    and suggested to the theoreticians that they had
+    found the fundamental laws governing these phenomemon.
+    The "exactly" meant "exactly in terms of extensions"
+    was not extremely troubling --
+    extensions were what were used and had produced
+    impressive results going as far back to Chomsky.
+    </ul>
+    </p>
+	<footnote>
 	  <bibref>Knuth 1965</bibref>, p. 637.
 	  Knuth's language is cautious,
 	  so it is not 100% clear
@@ -1810,8 +1841,6 @@
 	  streamlining of the LR(k) tables;
 	  and research into LR(k) subclasses.
       </footnote>.
-      </li>
-    </ul>
     ===
     <h2>Red Herring 1: The stack machine model as a natural boundary</h2>
     <h2>Red Herring 2:
@@ -1819,68 +1848,7 @@
       parsers are not good at
       LR
       grammars</h2>
-    <p>The second red herring led to the mis-bracketing of practical
-      parsing.
-      Having seemingly established that
-      LR-parsing is a natural boundary
-      in the hierarchy of languages,
-      Knuth discovered that general
-      LR-parsers were very far from practical.
-    </p>
-    <p>Why didn't Knuth see the problem?
-      Knuth certainly noted the strange behavior of the
-      LR
-      hierarchy
-      in extensional terms -- he discovered it,
-      and devoted several dense pages of his 1965 to laying
-      out the complicated mathematics involved.
-    </p>
     ===
-    <p>
-      The impracticality of his LR(k) algorithm
-      does not suggest to Knuth that the stack-based model
-      is inappropriate as a model of practical parsing.
-      Instead it suggests to him, and to the field,
-      that the boundary of practical parsing lies in a subclass of the
-      LR(k) grammars.
-    </p>
-    <p>
-      The idea that the solution to the parsing problem must be
-      stack-based is not without foundation.
-      In 1965, the limits of computer technology are severe.
-      For practitioners,
-      any parsing technique that required much more
-      than a reasonably-sized state
-      machine and a stack,
-      is not likely to happen.
-      After all,
-      only four years earlier,
-      stacks were bleeding edge.
-    </p>
-    ===
-      <p>
-      That is, Knuth excludes the idea that algorithms which
-      target
-      <b>supersets</b>
-      of LR(k) might be faster than those
-      that take on LR(k) directly.
-      In short, he assumes, as is usually the case,
-      that as you gain in parsing power,
-      you lose in terms of speed.
-      That is a good rule of thumb,
-      and a reasonable expectation,
-      but it is not always true.
-    </p>
-    <p>A factor in this misconception may be another assumption:
-      the most efficient way to parse a deterministic language
-      is with a deterministic parser.
-      Certainly all deterministic parsers are linear.
-      And certainly all non-deterministic parsers can run
-      in worse than quasi-linear time,
-      at which point they quickly become impractical.
-      But neither of these truths directly answers the question
-      of practical interest:
-    </p>
     <blockquote>
       Is there a non-deterministic parser that is linear for
       the LR(k) grammars, or even a superset of LR(k)?
