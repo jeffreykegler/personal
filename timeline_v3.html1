@@ -1523,34 +1523,41 @@
       for the grammar of interest to the user.
     </p>
     <h1>"Language" as of 1965</h1>
-    <p>
-      At this point two senses of the word "language"
-      have gotten entrenched in parsing theory.
-      Bloomfield and the behaviorist had defined
-      a language as just a set of strings or utterances.
-      Everybody else thinks that,
-      by definition, languages have a semantics
-      -- the strings have "meaning".
+    <p>The peculiar Bloomfieldian definition of language --
+    that a language is a "set of strings" --
+    has survived in parsing theory,
+    but has yet to cause any confusion.
+    In fact, in some respects it has been helpful.
     </p>
     <p>
-      I will borrow a distinction from linguistics
-      and speak of the "set of strings" that make
+      For this discussion,
+      I will speak of the "set of strings" that make
       up a language as its
       <b>extension</b>.
-      The semantics of a language will
-      be its
+      If you are Bloomfieldian,
+      that's all a language is to you.
+    </p>
+    <p>Most people think that,
+    to be a language,
+    a set of strings has to have a semantics --
+    that is, the strings must mean something.
+      I will call the semantics of a language
+      its
       <b>intension</b>.
-      For looking at <bibref>Knuth 1965</bibref>,
-      we can insist that the semantics of every
-      string is a tagged tree.
-      In fact, since
-      since we are dealing only with context-free parsing,
-      we can regard a language as its
+      (The "intension"/"extension" distinction
+      is from linguistics.)
+      For our purposes,
+      we can get away with treating the semantics of every
+      string as a tagged tree.
+      In fact, usually we
+      are dealing with context-free parsing,
+      in which case we can consider a language intension
+      to be its
       extension plus a BNF grammar.<footnote>
-      This document is almost completely about context-free parsing,
-      and we do not need to actually represent a semantics,
+      In this document
+      we do not need to actually represent a semantics,
       just an interface to it.
-      I therefore present a very simplified semantics,
+      I therefore use a very simplified view of semantics,
       not adequate even for most computer 
       applications,
       which will almost always require at least some kind
@@ -1584,12 +1591,32 @@
       knows that BNF grammars are not the same
       as sets of strings.
       He gets all the details exactly right.
-      But using the same word for two different
-      things is dangerous,
-      and when it comes to the less exact
-      part --
-      assessing the implications of his results,
-      things do not go so well.
+    </p>
+    <p>
+      Up to 1965, the Bloomfieldian definition has
+      not only not caused any recognizable harm,
+      it has arguably been helpful.
+      It <b>is</b> simpler to deal with a language
+      as its extension, and sometimes the results
+      clearly apply to the intension.
+      For example, Chomsky, to demonstrate the
+      superiority of his model over its competitors,
+      shows that the extension of his model contains
+      strings which are clearly in English,
+      but which are not in the extension of
+      other models of language.
+      Obviously, your model of language is wrong
+      if its extension is wrong,
+      and if the semantics and the intension
+      are not needed to show that,
+      then they are just getting in the way.
+    </p>
+    <p>
+      But, whatever the advantages,
+      using the same word for two different
+      things is dangerous.
+      You have to be very careful
+      or your reasoning goes off the rails.
     </p>
     <p>
       Knuth needs to establish an equivalence
@@ -1604,13 +1631,14 @@
     <p>
       How do you show that string-sets
       are the equivalent of grammars?
-      What Knuth does is treat them both as string-sets,
-      comparing the extension of language of the LR grammars
-      to the strings-sets recognized by the DPDA's.
-      Given the state of the literature,
+      What Knuth does is treat them both as string-sets.
+      Knuth compares the language extensions of the LR grammars
+      to the sets of strings recognized by the DPDA's.
+      Arguably,
+      given the state of the literature,
       Knuth does not have much choice.
     </p>
-    <p>The result was all too encouraging.
+    <p>The result certainly seems encouraging.
     It turns out that the language extension of
     deterministic stack machines
     is
@@ -1700,17 +1728,6 @@
     TO HERE
     ===
     <h2>Signs of trouble ignored</h2>
-    <h3>Why didn't Knuth see the problem?</h3>
-    <p>
-      Based on past experience,
-      Knuth had reason to believe
-      he could use language extensions as a proxy
-      for grammars,
-      and that the result would be
-      a theory that was a reliable
-      guide to practice.
-    </p>
-    ===
     <p>
       At first glance, this is an "apples and oranges" comparison --
       how do you prove the equivalence of a class of languages
@@ -1745,24 +1762,6 @@
     <p>
       This means that, in the world of sets-of-strings,
       extremely impractical and very practical are usually the same thing.
-    </p>
-    <p>
-      Clearly the world of sets of strings
-      is a magical one,
-      in which we can easily transport ourselves across the
-      boundary between practical and impractical.
-      We can take visions of a magical world back into the world of practice,
-      but we cannot assume they will be helpful.
-      In that light,
-      it is no surprise that
-      Joop Leo will show how to extend practical
-      parsing well beyond LR(k).<footnote>
-        Joop M. I. M.
-        "A general context-free parsing algorithm running in linear time on every LR (k) grammar without using lookahead."
-        <cite>Theoretical computer science</cite>, Volume 82, Issue 1, 22 May 1991, pp. 165-176.
-        <a href="https://www.sciencedirect.com/science/article/pii/030439759190180A">
-          https://www.sciencedirect.com/science/article/pii/030439759190180A</a>, accessed 24 April 2018.
-      </footnote>
     </p>
     ===
     <h1>The Parsing Problem as of 1965</h1>
@@ -1866,7 +1865,6 @@
       Knuth discovered that general
       <tt>LR</tt>-parsers were very far from practical.
     </p>
-    <h2>Why didn't Knuth see the problem?</h2>
     <p>Why didn't Knuth see the problem?
       Knuth certainly noted the strange behavior of the
       <tt>LR</tt>
@@ -1874,23 +1872,6 @@
       in extensional terms -- he discovered it,
       and devoted several dense pages of his 1965 to laying
       out the complicated mathematics involved.
-    </p>
-    <p>
-      So why did
-      Knuth expect to get away with punning
-      intension and extension,
-      even in the face of some very unsettling results?
-      Here, the answer is very simple --
-      "punning" had always worked before.
-    </p>
-    <p>
-      Based on past experience,
-      Knuth had reason to believe
-      he could use language extensions as a proxy
-      for grammars,
-      and that the result would be
-      a theory that was a reliable
-      guide to practice.
     </p>
     ===
     <p>
