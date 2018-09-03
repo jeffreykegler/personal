@@ -1216,8 +1216,9 @@
     1965: Knuth discovers LR
     </h1>
     <p>In 1965 Donald Knuth responds<a id="footnote-66-ref" href="#footnote-66">[66]</a>
-    to the challenge expressed
-    a few years earlier by <a href="#text-1961-Oettinger">Oettinger</a>.
+      to the challenge expressed
+      a few years earlier by
+      <a href="#text-1961-Oettinger">Oettinger</a>.
       Oettinger had hoped for a theory of stack-based
       parsing
       to replace "ad hoc invention".<a id="footnote-67-ref" href="#footnote-67">[67]</a>
@@ -1231,7 +1232,9 @@
       Knuth shows that stack-based parsing is
       equivalent to a new class of grammars.
       Knuth calls this new class, LR(k).
-      (Here <tt>k</tt> stands for the amount of lookahead.)
+      (Here
+      <tt>k</tt>
+      stands for the amount of lookahead.)
       Knuth also provides a parsing algorithm for the
       LR(k) grammars.
     </p>
@@ -1245,8 +1248,11 @@
     </p>
     <p>
       LR(k) is actually a set of grammar classes.
-      There is a grammar class for every <tt>k</tt>,
-      where <tt>k</tt> is the amount of lookahead used.
+      There is a grammar class for every
+      <tt>k</tt>,
+      where
+      <tt>k</tt>
+      is the amount of lookahead used.
       LR(0) requires no lookahead, but
       is too weak for practical use.
       Even
@@ -1254,7 +1260,7 @@
       parsing was impractical in 1965 --
       in fact, it is rare in practical use today.<a id="footnote-69-ref" href="#footnote-69">[69]</a>
       As the
-      k</tt>
+      <tt>k</tt>
       in
       LR(k)
       grows, the size of the tables grows exponentially,
@@ -1263,17 +1269,17 @@
       LR(2)
       parsing will ever see much practical use,
       never mind
-      LR(k) for any k</tt>
+      LR(k) for any <tt>k</tt>
       greater than 2.
     </p>
     <h1 id="h1-language_as_of_1965">
     "Language" as of 1965
     </h1>
     <p>The peculiar Bloomfieldian definition of language --
-    that a language is a "set of strings" --
-    has survived in parsing theory,
-    but has yet to cause any confusion.
-    In fact, in some respects it has been helpful.
+      that a language is a "set of strings" --
+      has survived in parsing theory,
+      but has yet to cause any confusion.
+      In fact, in some respects it has been helpful.
     </p>
     <p>
       For this discussion,
@@ -1281,12 +1287,14 @@
       up a language as its
       <b>extension</b>.
       If you are Bloomfieldian,
-      a language <b>is</b> its extension.
+      a language
+      <b>is</b>
+      its extension.
     </p>
     <p>The vast majority of people has always thought that,
-    to be considered a language,
-    a set of strings has to have a semantics --
-    that is, the strings must mean something.
+      to be considered a language,
+      a set of strings has to have a semantics --
+      that is, the strings must mean something.
       I will call the semantics of a language
       its
       <b>intension</b>.
@@ -1296,15 +1304,18 @@
       and an extension.<a id="footnote-70-ref" href="#footnote-70">[70]</a>
     </p>
     <p>
-      <a href="#bib-Knuth_1965">Knuth 1965</a> followed the rest
+      <a href="#bib-Knuth_1965">Knuth 1965</a>
+      followed the rest
       of the parsing literature of his time
       by considering a "language" as the same as its
       extension -- ignoring the semantics.
       In Knuth's terminology, therefore,
       there is no possibility
-      that the same language extensions 
+      that the same language extensions
       might represent many different languages --
-      language extensions <b>are</b> languages.<a id="footnote-71-ref" href="#footnote-71">[71]</a>
+      language extensions
+      <b>are</b>
+      languages.<a id="footnote-71-ref" href="#footnote-71">[71]</a>
     </p>
     <p>
       Using the same word for two different
@@ -1316,7 +1327,9 @@
       But, up to 1965, the Bloomfieldian definition has
       not only not caused any recognizable harm,
       it has arguably been helpful.
-      It <b>is</b> simpler to deal with a language
+      It
+      <b>is</b>
+      simpler to deal with a language
       as its extension, and sometimes the results
       clearly apply to the intension.
       For example, Chomsky, to demonstrate the
@@ -1354,13 +1367,13 @@
       Knuth does not have much choice.
     </p>
     <p>The result certainly seems encouraging.
-    It turns out that the language extension of
-    deterministic stack machines
-    is
-    <b>exactly</b>
-    that of the
-    LR
-    grammars.
+      It turns out that the language extension of
+      deterministic stack machines
+      is
+      <b>exactly</b>
+      that of the
+      LR
+      grammars.
     </p>
     <p>
       If you take language extensions as the proxy for grammars,
@@ -1381,7 +1394,8 @@
       It was a "direct hit",
       or as close to an exact equivalent of practical parsing
       as theory was going to get.
-      And, based on the algorithms of <a href="#bib-Knuth_1965">Knuth 1965</a>,
+      And, based on the algorithms of
+      <a href="#bib-Knuth_1965">Knuth 1965</a>,
       that meant that the theoretical equivalent of "practical
       parsing" was somewhere between LR(0) and LR(1).
     </p>
@@ -1424,9 +1438,9 @@
       language extension.
       In terms of strings-sets,
       there is no LR hierarchy.
-      <center>
+    </p><center>
       LR(0) = LR(1) = LR(2) = &nbsp;&nbsp; ... &nbsp;&nbsp; = LR(42) = &nbsp;&nbsp; ...
-      </center>
+    </center>
     <p>In short,
       as a proxy for LR grammars,
       LR language extensions look like they might be completely worthless.<a id="footnote-73-ref" href="#footnote-73">[73]</a>
@@ -1435,13 +1449,13 @@
     The Parsing Problem as of 1965
     </h1>
     <p>
-      While the algorithm of 
+      While the algorithm of
       <a href="#bib-Knuth_1965">Knuth 1965</a>
       did not solve the Parsing Problem,
       it convinced most that stack-based,
       and therefore LR, parsing
       was the framework for the solution.<a id="footnote-74-ref" href="#footnote-74">[74]</a>
-    The reasons seem overwhelming:
+      The reasons seem overwhelming:
     </p>
     <ul>
       <li>In 1965, every practical parser is stack-driven.</li>
@@ -1451,61 +1465,61 @@
         in practice.<a id="footnote-75-ref" href="#footnote-75">[75]</a>
       </li>
       <li>For LR(k) grammars, practical parsing is bracketed somewhere
-	between LR(0) and LR(1).</li>
+        between LR(0) and LR(1).</li>
       <li>In terms of what the parsing literature calls "languages"
-      (that is, in terms of language extensions),
-      LR(k) parsing is the exact equivalent of deterministic stack-based parsing.</li>
+        (that is, in terms of language extensions),
+        LR(k) parsing is the exact equivalent of deterministic stack-based parsing.</li>
       <li>Determinism is always linear, and linear is always practical.</li>
       <li>In 1965, every practical parser is deterministic.</li>
       <li>In general, power is a trade-off for speed.</li>
     </ul>
     <p>That the "languages" used in the reasoning are extensions,
-    while those of interest are intensions,
-    and that
-    <a href="#text-LR-hierarchy-collapse">extensions
-    within the LR hierarchy collapse</a>,
-    are things that are known,
-    but not considered troubling.
-    After all, there is no exact theoretical equivalent
-    of "practical" --
-    you always have to settle for a rough equivalent.
+      while those of interest are intensions,
+      and that
+      <a href="#text-LR-hierarchy-collapse">extensions
+        within the LR hierarchy collapse</a>,
+      are things that are known,
+      but not considered troubling.
+      After all, there is no exact theoretical equivalent
+      of "practical" --
+      you always have to settle for a rough equivalent.
     </p>
     <p>
-    And this theoretical equivalent for practical
-    parsing looks less rough than many others.
-    The fact that deterministic stack-based parsing is
-    "exactly" LR-parsing,
-    is complemented by the fact
-    that non-deterministic stack-based parsing is
-    "exactly" context-free parsing.
-    This is very elegant,
-    and suggests that the theoreticians have indeed
-    revealed the fundamental laws behind parsing.
-    Of course, "exactly" here means "exactly in terms of extensions".
-    But, again, this is not extremely troubling.
-    Extensions are what is used.
-    Nobody understood the limits of extensions as a definition
-    of language better than Chomsky,
-    but Chomsky himself had used extensions
-    to produce some of his most
-    impressive results.
-    </p>
+      And this theoretical equivalent for practical
+      parsing looks less rough than many others.
+      The fact that deterministic stack-based parsing is
+      "exactly" LR-parsing,
+      is complemented by the fact
+      that non-deterministic stack-based parsing is
+      "exactly" context-free parsing.
+      This is very elegant,
+      and suggests that the theoreticians have indeed
+      revealed the fundamental laws behind parsing.
+      Of course, "exactly" here means "exactly in terms of extensions".
+      But, again, this is not extremely troubling.
+      Extensions are what is used.
+      Nobody understood the limits of extensions as a definition
+      of language better than Chomsky,
+      but Chomsky himself had used extensions
+      to produce some of his most
+      impressive results.
+    </p><p>
       After 1965, the consensus
       excludes the idea that algorithms which target supersets of LR(k) might be faster than those that take on LR(k)
       directly.<a id="footnote-76-ref" href="#footnote-76">[76]</a>.
-    But, what if the LR language hierarchy collapse is a real
-    problem?
-    If we remove the evidence based on language extensions from the list above,
-    all we have left are couple of over-generalizations.
-    So the question remains:
-    <blockquote>
+      But, what if the LR language hierarchy collapse is a real
+      problem?
+      If we remove the evidence based on language extensions from the list above,
+      all we have left are couple of over-generalizations.
+      So the question remains:
+    </p><blockquote>
       Is there a non-deterministic parser that is linear for
       the LR(k) grammars, or even a superset of them?
     </blockquote>
     <p>
       This question will be answered
       <a href="#text-1991-Leo">
-      by Joop Leo in 1991</a>.
+        by Joop Leo in 1991</a>.
       The answer, surprisingly, will be
       <q>yes</q>.
     </p>
@@ -1887,8 +1901,8 @@
       The criteria
       set in
       <a href="#loc-parsing-problem">
-      the original statement of
-      the Parsing Problem
+        the original statement of
+        the Parsing Problem
       </a>
       have not been
       fully met.
@@ -3510,11 +3524,11 @@
         <a href="#bib-Oettinger_1961">Oettinger 1961</a>, p. 106.
  <a href="#footnote-60-ref">&#8617;</a></p>
 <p id="footnote-61"><b>61</b>.
-      "The development of a theory of pushdown algorithms should
-      hopefully lead to systematic techniques for generating
-      algorithms satisfying given requirements to replace
-      the ad hoc invention of each new algorithm."
-      (<a href="#bib-Oettinger_1961">Oettinger 1961</a>, p. 127.)
+        "The development of a theory of pushdown algorithms should
+        hopefully lead to systematic techniques for generating
+        algorithms satisfying given requirements to replace
+        the ad hoc invention of each new algorithm."
+        (<a href="#bib-Oettinger_1961">Oettinger 1961</a>, p. 127.)
  <a href="#footnote-61-ref">&#8617;</a></p>
 <p id="footnote-62"><b>62</b>.
         But see the entry for 1973 on Pratt parsing
@@ -3550,142 +3564,147 @@
         <a href="#bib-Knuth_1965_">Knuth 1965.</a>.
  <a href="#footnote-66-ref">&#8617;</a></p>
 <p id="footnote-67"><b>67</b>.
-      (<a href="#bib-Oettinger_1961">Oettinger 1961</a>, p. 127.)
+        (<a href="#bib-Oettinger_1961">Oettinger 1961</a>, p. 127.)
  <a href="#footnote-67-ref">&#8617;</a></p>
 <p id="footnote-68"><b>68</b>.
         Knuth 1965, p. 607, in the abstract.
  <a href="#footnote-68-ref">&#8617;</a></p>
 <p id="footnote-69"><b>69</b>.
-          Given the capacity of computer memories in 1965,
-          LR(1) was clearly impractical.
-          With the huge computer memories of 2018,
-          that could be reconsidered.
-          but few have looked at the possibility,
-	  because LR(1) is still somewhat restrictive.
-	  Worse, as this timeline will show,
-	  the LR(k)-based parsers are doomed
-          by their poor error-handling,
-	  and LR(1) parsing shares that problem.
+        Given the capacity of computer memories in 1965,
+        LR(1) was clearly impractical.
+        With the huge computer memories of 2018,
+        that could be reconsidered.
+        but few have looked at the possibility,
+        because LR(1) is still somewhat restrictive.
+        Worse, as this timeline will show,
+        the LR(k)-based parsers are doomed
+        by their poor error-handling,
+        and LR(1) parsing shares that problem.
  <a href="#footnote-69-ref">&#8617;</a></p>
 <p id="footnote-70"><b>70</b>.
-      In this document
-      I will usually speak of a language intension as it it was
-      a BNF grammar.
-      This is a very simplified view of semantics.
-      It not only assumes that the language is pure context-free,
-      and but is not adequate even for most computer 
-      applications,
-      which will almost always require at least some kind
-      of post-processing for the parse trees.
-      <br><br>
-      But this is not a formal mathematical presentation.
-      and for our purposes,
-      we do not need to actually represent a semantics,
-      just the interface to it.
-      And the grammars we consider are almost always
-      context-free.
+        In this document
+        I will usually speak of a language intension as it it was
+        a BNF grammar.
+        This is a very simplified view of semantics.
+        It not only assumes that the language is pure context-free,
+        and but is not adequate even for most computer
+        applications,
+        which will almost always require at least some kind
+        of post-processing for the parse trees.
+        <br><br>
+        But this is not a formal mathematical presentation.
+        and for our purposes,
+        we do not need to actually represent a semantics,
+        just the interface to it.
+        And the grammars we consider are almost always
+        context-free.
  <a href="#footnote-70-ref">&#8617;</a></p>
 <p id="footnote-71"><b>71</b>.
-      I hope no one will read me as suggesting that
-      Knuth was in any way unclear about
-      the extension/intension distinction.
-      In <a href="#bib-Knuth_1965">Knuth 1965</a>, both
-      string-sets and BNF grammars appear throughout,
-      and Knuth repeatedly shifts back and forth
-      flawlessly.
-      Knuth is never at pains to point these
-      shift out to the reader,
-      perhaps because for him they
-      are unproblematic.
+        I hope no one will read me as suggesting that
+        Knuth was in any way unclear about
+        the extension/intension distinction.
+        In
+        <a href="#bib-Knuth_1965">Knuth 1965</a>, both
+        string-sets and BNF grammars appear throughout,
+        and Knuth repeatedly shifts back and forth
+        flawlessly.
+        Knuth is never at pains to point these
+        shift out to the reader,
+        perhaps because for him they
+        are unproblematic.
  <a href="#footnote-71-ref">&#8617;</a></p>
 <p id="footnote-72"><b>72</b>.
         The exception are applications which receive their input "on-line";
         can not determine the size of their input in advance;
-	and must return a result in a fixed amount of time.
+        and must return a result in a fixed amount of time.
         For these few applications, adding an end marker to their input,
-	is not possible.
+        is not possible.
  <a href="#footnote-72-ref">&#8617;</a></p>
 <p id="footnote-73"><b>73</b>.
-      None of these problematic signs escape Knuth.
-      He discovers and proves them on pp. 630-636.
-      But Knuth seems to consider the LR hierarchy collapse a
-      mathematical curiousity,
-      and one with no implications for practical parsing.
+        None of these problematic signs escape Knuth.
+        He discovers and proves them on pp. 630-636.
+        But Knuth seems to consider the LR hierarchy collapse a
+        mathematical curiousity,
+        and one with no implications for practical parsing.
  <a href="#footnote-73-ref">&#8617;</a></p>
 <p id="footnote-74"><b>74</b>.
 I deal with the implications of
-      <a href="#bib-Knuth_1965">Knuth 1965</a> for parsing theory
-      at greater length in these blog posts:
-      <a href="#bib-Kegler_Strings_2018">Kegler Strings 2018</a>,
-      <a href="#bib-Kegler_Solved_2018">Kegler Solved 2018</a>,
-      and <a href="#bib-Kegler_Undershoot_2018">Kegler Undershoot 2018</a>.
+        <a href="#bib-Knuth_1965">Knuth 1965</a>
+        for parsing theory
+        at greater length in these blog posts:
+        <a href="#bib-Kegler_Strings_2018">Kegler Strings 2018</a>,
+        <a href="#bib-Kegler_Solved_2018">Kegler Solved 2018</a>,
+        and
+        <a href="#bib-Kegler_Undershoot_2018">Kegler Undershoot 2018</a>.
  <a href="#footnote-74-ref">&#8617;</a></p>
 <p id="footnote-75"><b>75</b>.
-	In 1964, advocates of stack-based parsing would not
-	have been seen themselves as settling for a "safe"
-	or "traditional" solution.
-	<a href="#text-1961-Oettinger">As
-	recently as 1961</a>, readers of technical journals were
-	not expected to know what a stack was.
+          In 1964, advocates of stack-based parsing would not
+          have been seen themselves as settling for a "safe"
+          or "traditional" solution.
+          <a href="#text-1961-Oettinger">As
+            recently as 1961</a>, readers of technical journals were
+          not expected to know what a stack was.
  <a href="#footnote-75-ref">&#8617;</a></p>
 <p id="footnote-76"><b>76</b>.
-	  <a href="#bib-Knuth_1965">Knuth 1965</a>, p. 637.
-	  Knuth's own language is cautious,
-	  so it is not 100% clear
-	  that he believes that the
-	  future of practical parsing theory lies
-	  in the pursuit of LR(k) subsets.
-	  His program for further research
-	  (Knuth 1961, pp. 637-639)
-	  also suggests investigation of parsers for superclasses
-	  of LR(k).
-	  Indeed,
-	  Knuth shows elsewhere (p. 638)
-	  that he is well aware that some grammars
-	  beyond LR(k) can be parsed in linear time.
-	  Knuth also is very much aware (p. 638) that
-	  it is an open question whether all context-free grammars
-	  can be parsed in linear time.
-	  <br><br>
-	  He even describes a new superclass of his own:
-	  LR(k,t), which is LR(k) with more aggressive lookahead.
-	  But Knuth introduces LR(k,t) in dismissive terms:
-	  "Finally, we might mention another generalization of LR(k)"
-	  (Knuth 1965, p. 638); and
-	    "One might choose to call this left-to-right translation,
-	    although we had to back up a finite amount."
-	  (p. 639).
-	  <br><br>
-	  It is reasonable to suppose
-	  that Knuth is even more negative about
-	  the more general approaches that
-	  he does not bother to mention.
-	  Knuth's skepticism of more general Chomskyan approaches
-	  is also suggested by his own plans for his (not yet released) Chapter
-	  12 of the
-	  <cite>Art of Computer Programming</cite>,
-	  in which he planned to use pre-Chomskyan bottom-up methods
-	  (<a href="#bib-Knuth_1990">Knuth 1990</a>, p. 3).
-	  <br><br>
-	  In <a href="#bib-Knuth_1965">Knuth 1965</a> (pp. 607-608),
-	  Knuth had emphasized that
-	  proceeding strictly left-to-right
-	  is necessary for efficiency reasons.
-	  So probably subsequent researchers were correct in
-	  reading into Knuth a prediction that
-	  research into beyond-LR(k)
-	  parsing would be not be fruitful.
-	  And, regardless of what Knuth, believed
-	  the consensus of the parsing theorists is not
-	  in doubt:
-	  interest in beyond-LR parsing will almost disappear
-	  after 1965.
-	  Their attention will be focused almost
-	  exclusively on Knuth's suggestions for research within the stack-based
-	  model (p. 637).
-	  These included grammar rewrites;
-	  streamlining of the LR(k) tables;
-	  and research into LR(k) subclasses.
+        <a href="#bib-Knuth_1965">Knuth 1965</a>, p. 637.
+        Knuth's own language is cautious,
+        so it is not 100% clear
+        that he believes that the
+        future of practical parsing theory lies
+        in the pursuit of LR(k) subsets.
+        His program for further research
+        (Knuth 1961, pp. 637-639)
+        also suggests investigation of parsers for superclasses
+        of LR(k).
+        Indeed,
+        Knuth shows elsewhere (p. 638)
+        that he is well aware that some grammars
+        beyond LR(k) can be parsed in linear time.
+        Knuth also is very much aware (p. 638) that
+        it is an open question whether all context-free grammars
+        can be parsed in linear time.
+        <br><br>
+        He even describes a new superclass of his own:
+        LR(k,t), which is LR(k) with more aggressive lookahead.
+        But Knuth introduces LR(k,t) in dismissive terms:
+        "Finally, we might mention another generalization of LR(k)"
+        (Knuth 1965, p. 638); and
+        "One might choose to call this left-to-right translation,
+        although we had to back up a finite amount."
+        (p. 639).
+        <br><br>
+        It is reasonable to suppose
+        that Knuth is even more negative about
+        the more general approaches that
+        he does not bother to mention.
+        Knuth's skepticism of more general Chomskyan approaches
+        is also suggested by his own plans for his (not yet released) Chapter
+        12 of the
+        <cite>Art of Computer Programming</cite>,
+        in which he planned to use pre-Chomskyan bottom-up methods
+        (<a href="#bib-Knuth_1990">Knuth 1990</a>, p. 3).
+        <br><br>
+        In
+        <a href="#bib-Knuth_1965">Knuth 1965</a>
+        (pp. 607-608),
+        Knuth had emphasized that
+        proceeding strictly left-to-right
+        is necessary for efficiency reasons.
+        So probably subsequent researchers were correct in
+        reading into Knuth a prediction that
+        research into beyond-LR(k)
+        parsing would be not be fruitful.
+        And, regardless of what Knuth, believed
+        the consensus of the parsing theorists is not
+        in doubt:
+        interest in beyond-LR parsing will almost disappear
+        after 1965.
+        Their attention will be focused almost
+        exclusively on Knuth's suggestions for research within the stack-based
+        model (p. 637).
+        These included grammar rewrites;
+        streamlining of the LR(k) tables;
+        and research into LR(k) subclasses.
  <a href="#footnote-76-ref">&#8617;</a></p>
 <p id="footnote-77"><b>77</b>.
         Knuth also discusses some ambiguities,
