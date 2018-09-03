@@ -1344,75 +1344,6 @@
         <bibref>Schorre 1964</bibref>, p. D1.3-1.
       </footnote>.
     </p>
-    <h1>1965: Knuth discovers LR</h1>
-    <p>In 1965 Donald Knuth responds<footnote>
-        <bibref>Knuth 1965.</bibref>.
-      </footnote>
-    to the challenge expressed
-    a few years earlier by <a href="#text-1961-Oettinger">Oettinger</a>.
-      Oettinger had hoped for a theory of stack-based
-      parsing
-      to replace "ad hoc invention".<footnote>
-      (<bibref>Oettinger 1961</bibref>, p. 127.)
-      </footnote>
-      Knuth responds with a theory that
-      encompasses all the "tricks"<footnote>
-        Knuth 1965, p. 607, in the abstract.
-      </footnote>
-      used for efficient parsing up to that time.
-      Knuth is as skilled a mathematician as
-      any of his time.
-      In an exhilarating and exhausting 39-page
-      paper,
-      Knuth shows that stack-based parsing is
-      equivalent to a new class of grammars.
-      Knuth calls this new class, LR(k).
-      (Here <tt>k</tt> stands for the amount of lookahead.)
-      Knuth also provides a parsing algorithm for the
-      LR(k) grammars.
-    </p>
-    <p>
-      Knuth's new LR parsing algorithm is deterministic,
-      Chomskyan and bottom-up.
-      It might be expected to be "the one to rule
-      them all".
-      Unfortunately, while linear,
-      it is not practical.
-    </p>
-    <p>
-      LR(k) is actually a set of grammar classes.
-      There is a grammar class for every <tt>k</tt>,
-      where <tt>k</tt> is the amount of lookahead used.
-      LR(0) requires no lookahead, but
-      is too weak for practical use.
-      Even
-      <tt>LR(1)</tt>
-      parsing was impractical in 1965 --
-      in fact, it is rare in practical use today.<footnote>
-          Given the capacity of computer memories in 1965,
-          LR(1) was clearly impractical.
-          With the huge computer memories of 2018,
-          that could be reconsidered.
-          but few have looked at the possibility,
-	  because LR(1) is still somewhat restrictive.
-	  Worse, as this timeline will show,
-	  the LR(k)-based parsers are doomed
-          by their poor error-handling,
-	  and LR(1) parsing shares that problem.
-        </footnote>
-      As the
-      <tt>k</tt>
-      in
-      <tt>LR(k)</tt>
-      grows, the size of the tables grows exponentially,
-      while the value of the additional lookahead rapidly diminishes.
-      It is not likely that
-      <tt>LR(2)</tt>
-      parsing will ever see much practical use,
-      never mind
-      <tt>LR(k)</tt> for any <tt>k</tt>
-      greater than 2.
-    </p>
     <h1>Term: "linear"</h1>
     <p>
       Among
@@ -1522,6 +1453,75 @@
       get out of hand
       for the grammar of interest to the user.
     </p>
+    <h1>1965: Knuth discovers LR</h1>
+    <p>In 1965 Donald Knuth responds<footnote>
+        <bibref>Knuth 1965.</bibref>.
+      </footnote>
+    to the challenge expressed
+    a few years earlier by <a href="#text-1961-Oettinger">Oettinger</a>.
+      Oettinger had hoped for a theory of stack-based
+      parsing
+      to replace "ad hoc invention".<footnote>
+      (<bibref>Oettinger 1961</bibref>, p. 127.)
+      </footnote>
+      Knuth responds with a theory that
+      encompasses all the "tricks"<footnote>
+        Knuth 1965, p. 607, in the abstract.
+      </footnote>
+      used for efficient parsing up to that time.
+      Knuth is as skilled a mathematician as
+      any of his time.
+      In an exhilarating and exhausting 39-page
+      paper,
+      Knuth shows that stack-based parsing is
+      equivalent to a new class of grammars.
+      Knuth calls this new class, LR(k).
+      (Here <tt>k</tt> stands for the amount of lookahead.)
+      Knuth also provides a parsing algorithm for the
+      LR(k) grammars.
+    </p>
+    <p>
+      Knuth's new LR parsing algorithm is deterministic,
+      Chomskyan and bottom-up.
+      It might be expected to be "the one to rule
+      them all".
+      Unfortunately, while linear,
+      it is not practical.
+    </p>
+    <p>
+      LR(k) is actually a set of grammar classes.
+      There is a grammar class for every <tt>k</tt>,
+      where <tt>k</tt> is the amount of lookahead used.
+      LR(0) requires no lookahead, but
+      is too weak for practical use.
+      Even
+      <tt>LR(1)</tt>
+      parsing was impractical in 1965 --
+      in fact, it is rare in practical use today.<footnote>
+          Given the capacity of computer memories in 1965,
+          LR(1) was clearly impractical.
+          With the huge computer memories of 2018,
+          that could be reconsidered.
+          but few have looked at the possibility,
+	  because LR(1) is still somewhat restrictive.
+	  Worse, as this timeline will show,
+	  the LR(k)-based parsers are doomed
+          by their poor error-handling,
+	  and LR(1) parsing shares that problem.
+        </footnote>
+      As the
+      <tt>k</tt>
+      in
+      <tt>LR(k)</tt>
+      grows, the size of the tables grows exponentially,
+      while the value of the additional lookahead rapidly diminishes.
+      It is not likely that
+      <tt>LR(2)</tt>
+      parsing will ever see much practical use,
+      never mind
+      <tt>LR(k)</tt> for any <tt>k</tt>
+      greater than 2.
+    </p>
     <h1>"Language" as of 1965</h1>
     <p>The peculiar Bloomfieldian definition of language --
     that a language is a "set of strings" --
@@ -1535,10 +1535,10 @@
       up a language as its
       <b>extension</b>.
       If you are Bloomfieldian,
-      that's all a language is to you.
+      a language <b>is</b> its extension.
     </p>
-    <p>Most people think that,
-    to be a language,
+    <p>The vast majority of people has always thought that,
+    to be considered a language,
     a set of strings has to have a semantics --
     that is, the strings must mean something.
       I will call the semantics of a language
@@ -1546,37 +1546,28 @@
       <b>intension</b>.
       (The "intension"/"extension" distinction
       is from linguistics.)
-      For our purposes,
-      we can get away with treating the semantics of every
-      string as a tagged tree.
-      In fact, usually we
-      are dealing with context-free parsing,
-      in which case we can consider a language intension
-      to be its
-      extension plus a BNF grammar.<footnote>
+      For most people, a language is an intension
+      and an extension.<footnote>
       In this document
-      we do not need to actually represent a semantics,
-      just an interface to it.
-      I therefore use a very simplified view of semantics,
-      not adequate even for most computer 
+      I will usually speak of a language intension as it it was
+      a BNF grammar.
+      This is a very simplified view of semantics.
+      It not only assumes that the language is pure context-free,
+      and but is not adequate even for most computer 
       applications,
       which will almost always require at least some kind
-      of post-processing for the trees.
+      of post-processing for the parse trees.
+      <br><br>
+      But this is not a formal mathematical presentation.
+      and for our purposes,
+      we do not need to actually represent a semantics,
+      just the interface to it.
+      And the grammars we consider are almost always
+      context-free.
       </footnote>
     </p>
     <p>
-      Each language intension (BNF grammar) will have
-      exactly one extension (string set).
-      But, multiple language intensions can have the same extension.
-      In other words,
-      many different BNF grammars might produce
-      exactly the same set of strings.
-      This is important point --
-      it undermines the traditional interpretations
-      of <bibref>Knuth 1965</bibref>.
-    </p>
-    <p>
-      <bibref>Knuth 1965<bibref> followed the rest
+      <bibref>Knuth 1965</bibref> followed the rest
       of the parsing literature of his time
       by considering a "language" as the same as its
       extension -- ignoring the semantics.
@@ -1584,13 +1575,19 @@
       there is no possibility
       that the same language extensions 
       might represent many different languages --
-      language extensions <b>are</b> languages.
-    </p>
-    <p>
-      Knuth, of course,
-      knows that BNF grammars are not the same
-      as sets of strings.
-      He gets all the details exactly right.
+      language extensions <b>are</b> languages.<footnote>
+      I hope no one will read me as suggesting that
+      Knuth was in any way unclear about
+      the extension/intension distinction.
+      In <bibref>Knuth 1965</bibref>, both
+      string-sets and BNF grammars appear throughout,
+      and Knuth repeatedly shifts back and forth
+      flawlessly.
+      Knuth is never at pains to point these
+      shift out to the reader,
+      perhaps because for him they
+      are unproblematic.
+      </footnote>
     </p>
     <p>
       Up to 1965, the Bloomfieldian definition has
@@ -1627,6 +1624,8 @@
       entirely non-Chomskyan --
       all of its results are in terms of sets
       of strings.
+      Knuth is forced to
+      "compare apples to oranges"
     </p>
     <p>
       How do you show that string-sets
@@ -1672,20 +1671,23 @@
     </p>
     <p>There were, in hindsight, clear signs
       that
-      <tt>LR</tt>
+      LR
       language extensions were not a good proxy for
-      <tt>LR</tt>
+      LR
       grammars.
-      <tt>LR</tt>
+      LR
       grammars form a hierarchy --
       for every
-      <tt>k&#8805;0</tt>,
+      k&#8805;0,
       there is an
-      <tt>LR</tt>
+      LR
       grammar which
       is
-      <tt>LR(k+1)</tt>, but which is not
-      <tt>LR(k)</tt>.
+      LR(k+1), but which is not
+      LR(k).
+      That is,
+      if you just look at sets of strings
+      LR(1) and LR(k) are equivalent.
     </p>
     <p>
       But if you look at extensions
@@ -1700,21 +1702,28 @@
       language extension,
       as long as
       <tt>k&#8805;1</tt>.
-      Only
-      <tt>LR(0)</tt>
       remains distinct.
     </p>
     <p>It gets worse.
-      In most practical applications,
-      you can add an end-of-input marker to a grammar.
-      If you do this the
-      <tt>LR</tt>
-      extension hierarchy collapses totally --
+      So far
+      LR(0) has withstood the general collapse of the
+      extensional hierarchy.
+      But in most practical applications,
+      you can add an end-of-input marker to a grammar.<footnote>
+        The exception are applications which receive their input "on-line";
+        can not determine the size of their input in advance;
+	and must return a result in a fixed amount of time.
+        For these few applications, adding an end marker to their input,
+	is not possible.
+      </footnote>,
+      If you do this,
       every
       <tt>LR(k)</tt>
       language extension is also an
       <tt>LR(0)</tt>
       language extension.
+      The <tt>LR</tt>
+      extension hierarchy collapses totally.
     </p>
     <p>In short, it seems that,
       as a proxy for
@@ -1723,47 +1732,6 @@
       <tt>LR</tt>
       language extensions are likely to be completely worthless.
     </p>
-    ===
-    ===
-    TO HERE
-    ===
-    <h2>Signs of trouble ignored</h2>
-    <p>
-      At first glance, this is an "apples and oranges" comparison --
-      how do you prove the equivalence of a class of languages
-      and a class of grammars?
-    </p>
-    <p>A problem for the relevance
-      of Knuth's proof of equivalence is that,
-      if you just look at sets of strings
-      without regard to syntax,
-      LR(1) and LR(k) are equivalent.
-      That means that from the sets-of-strings point of view,
-      hopelessly impractical and
-      borderline impractical are the same thing.
-    </p>
-    <p>
-      Worse, both LR(1) and LR(k) are equivalent to LR(0)
-      for most applications.
-      If you add
-      an explicit end marker to an LR(1) language,
-      which in most applications is easy to do<footnote>
-        Some parsing applications, such as those which receive their input "on-line",
-        can not determine the size of their input in advance.
-        For these applications adding an end marker to their input is
-        inconvenient or impossible.
-      </footnote>,
-      your LR(1) language becomes LR(0).
-      Therefore, for most applications,
-    </p>
-    <center>
-      LR(k) = LR(1) = LR(0)
-    </center>
-    <p>
-      This means that, in the world of sets-of-strings,
-      extremely impractical and very practical are usually the same thing.
-    </p>
-    ===
     <h1>The Parsing Problem as of 1965</h1>
     <p>
       While the algorithm of 
