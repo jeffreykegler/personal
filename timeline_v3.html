@@ -35,7 +35,7 @@
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.0</version>
-    <datestamp>14 June 2018</datestamp>
+    <datestamp>Revision 1, 4 September 2018</datestamp>
     <author>Jeffrey Kegler</author>
     <h1 id="h1-4th_bce_pannini_s_description_of_sanskrit">
     4th BCE: Pannini's description of Sanskrit
@@ -76,8 +76,9 @@
       <cite>Eugene Onegin</cite><a id="footnote-3-ref" href="#footnote-3">[3]</a>.
       Again, Markov's interest is not in parsing.
       Nonetheless,
-      this is an application of what later will be regarded
-      as a parsing technique to language,
+      this is an application to language
+      of what later will be regarded
+      as a parsing technique,
       and apparently for the first time in the West.
     </p>
     <h1 id="h1-1929_bloomfield_s_postulates">
@@ -152,13 +153,13 @@
     <h1 id="h1-1949_rutishauser_s_compiler">
     1949: Rutishauser's compiler
     </h1>
-    <p>From 1949 to 1951 at the ETH Zurich, Heinz Rutishauser worked on
+    <p>From 1949 to 1951 at the ETH Zurich, Heinz Rutishauser works on
       the design of what we would now call a compiler<a id="footnote-11-ref" href="#footnote-11">[11]</a>.
       Rutishauser's arithmetic expression parser
-      did not honor precedence but it does allow nested parentheses.
+      does not honor precedence but it does allow nested parentheses.
       It is perhaps the first algorithm which can really be considered a
       parsing method.
-      Rutishauser's compiler was never implemented.</p>
+      Rutishauser's compiler is never implemented.</p>
     <h1 id="h1-the_operator_issue_as_of_1949">
     The Operator Issue as of 1949
     </h1>
@@ -207,7 +208,7 @@
         associativity and precedence.
       </li>
     </ul>
-    <p>Certainly in the first attempts at parsing in compilers,
+    <p>In the first attempts at parsing in compilers,
       arithmetic expressions are central.
       The first compiled languages are organized line-by-line and,
       except for arithmetic expressions,
@@ -263,7 +264,7 @@
       Boehm's compiler also allows parentheses, but the two cannot
       be mixed -- an expression can either be parsed using precedence
       or have parentheses, but not both.
-      And like Rutishauser's, Boehm's compiler is never
+      Also like Rutishauser's, Boehm's compiler is never
       implemented<a id="footnote-16-ref" href="#footnote-16">[16]</a>.
     </p>
     <h1 id="h1-1952_grace_hopper_uses_the_term">
@@ -327,29 +328,32 @@
     <h1 id="h1-1952_glennie_s_autocode">
     1952: Glennie's AUTOCODE
     </h1>
-    <p>Knuth
-      calls Glennie's the first
+    <p>
+      Glennie discovers what Knuth will later
+      call the first
       <q>real</q><a id="footnote-23-ref" href="#footnote-23">[23]</a>
-      compiler, by which he means that
-      it was actually implemented and used by someone to translate
-      algebraic statements into machine language.
+      compiler.
+      (By this Knuth will mean that
+      AUTOCODE was actually implemented and used by someone to translate
+      algebraic statements into machine language.)
       Glennie's AUTOCODE
-      was very close to the machine -- just above machine language.
-      It did not allow operator expressions.
+      is very close to the machine -- just above machine language.
+      It does not allow operator expressions.
     </p>
     <p>
-      AUTOCODE was hard-to-use,
-      and apparently saw little use by anybody but
+      AUTOCODE is hard-to-use,
+      and apparently sees little use by anybody but
       Glennie himself.
       Because
-      Glennie worked for the British atomic weapons projects his papers
-      were routinely classified,
-      so even the indirect influence of AUTOCODE was
+      Glennie works for the British atomic weapons projects his papers
+      are routinely classified,
+      so even the indirect influence of AUTOCODE is
       slow to spread.
       Nonetheless, many other
       <term>compilers</term>
-      afterward were named AUTOCODE, which probably indicates
-      awareness of Glennie's effort<a id="footnote-24-ref" href="#footnote-24">[24]</a>.
+      afterward will be named AUTOCODE, probably
+      because the authors are
+      aware of Glennie's effort<a id="footnote-24-ref" href="#footnote-24">[24]</a>.
     </p>
     <h1 id="h1-1954_the_fortran_project_begins">
     1954: The FORTRAN project begins
@@ -437,7 +441,8 @@
     <h1 id="h1-1956_the_chomsky_hierarchy">
     1956: The Chomsky hierarchy
     </h1>
-    <p>Chomsky publishes the paper which is usually considered the foundation of
+    <p>Chomsky publishes his "Three models" paper,
+      which is usually considered the foundation of
       Western formal language theory<a id="footnote-32-ref" href="#footnote-32">[32]</a>.
       Chomsky demolishes the idea that natural language grammar can be
       modeled using only Markov chains. Instead, the paper advocates a
@@ -564,8 +569,8 @@
       parsing theory
       divides into Chomskyan and
       non-Chomskyan.
-      Chomskyan parsing theory becomes and remains the mainstream
-      but it is far from unchallenged.
+      Chomskyan parsing theory becomes and remains the mainstream.
+      But it is far from unchallenged.
     </p><p>
       Above we defined a
       <term>parser</term>
@@ -605,8 +610,8 @@
       dissatisfaction with the IT compiler,
       FORTRAN honors associativity
       and precedence.</p>
-    <p>The designers of FORTRAN used a strange trick for parsing operator expresssions --
-      they hacked the expressions by adding parentheses around each
+    <p>The designers of FORTRAN use a strange trick for parsing operator expresssions --
+      they hack the expressions by adding parentheses around each
       operator.
       The number of parentheses varied, depending on the operator.
       Surprisingly, this works.
@@ -669,7 +674,7 @@
       what Norvell<a id="footnote-41-ref" href="#footnote-41">[41]</a>
       calls "the classic algorithm"
       takes a well-documented form.
-      The Samuelson and Bauer paper was very influential.
+      The Samuelson and Bauer paper will be very influential.
     </p>
     <h1 id="h1-language_as_of_1959">
     "Language" as of 1959
@@ -786,12 +791,14 @@
       In true BNF, the order of the rules does not matter --
       in Glennie's pseudo-BNF order matters very much.
       This means that, for most practical grammars,
-      Glennie's pseudo-BNF and BNF proper do
-      <b>not</b>
-      describe the same language.
+      a set of rules in BNF form describe one
+      language when interpreted as intended
+      by Backus and Naur,
+      and another when interpreted as
+      intended by Glennie.
     </p>
     <p>
-      Glennie is well aware of what he his doing, and
+      Glennie is aware of what he is doing, and
       is not attempting to deceive anyone --
       he points out that the distinction
       between his procedural pseudo-BNF and declarative BNF,
@@ -808,7 +815,8 @@
     <p>In January, Ned Irons publishes a paper describing his ALGOL
       60 parser.
       It is the first paper to fully describe any parser.
-      The Irons algorithm is pure Chomskyan
+      The Irons algorithm is pure Chomskyan,
+      declarative, general,
       and top-down with a bottom-up
       <term>left
         corner</term>
@@ -816,16 +824,14 @@
       <term>left
         corner</term>
       parser<a id="footnote-51-ref" href="#footnote-51">[51]</a>.
-    </p>
-    <p>The Irons parser is declarative and general.
-      And since it is general,
+      Since it is general,
       operator expressions are within the power of
       the Irons parser<a id="footnote-52-ref" href="#footnote-52">[52]</a>.
     </p>
     <h1 id="h1-term_top_down">
     Term: "Top-down"
     </h1>
-    <p>A top-down parser deduces the consituents of a rule from the rule.
+    <p>A top-down parser deduces the constituents of a rule from the rule.
       That is, it looks at the rule first,
       and then deduces what is on its RHS.
       Thus, it works from the start rule, and works
@@ -952,7 +958,7 @@
     </p>
     <p>
       Oettinger's own field is Russian translation.
-      And he hopes that DPDA's
+      He hopes that DPDA's
       will be an adequate basis for
       the study of both computer and
       natural language translation.
@@ -1230,9 +1236,6 @@
       Knuth shows that stack-based parsing is
       equivalent to a new class of grammars.
       Knuth calls this new class, LR(k).
-      (Here
-      <tt>k</tt>
-      stands for the amount of lookahead.)
       Knuth also provides a parsing algorithm for the
       LR(k) grammars.
     </p>
@@ -1282,7 +1285,7 @@
       following the rest
       of the parsing literature at this time.
       In other words, Knuth defines a language
-      a "set of strings", without regard it
+      a "set of strings", without regard
       to their meaning.
       The Bloomfieldian definition,
       while severely restrictive,
@@ -1296,7 +1299,7 @@
       I will speak of the "set of strings" that make
       up a language as its
       <b>extension</b>.
-      If you are Bloomfieldian,
+      If you are a Bloomfieldian,
       a language
       <b>is</b>
       its extension.
@@ -1321,7 +1324,7 @@
       It
       <b>is</b>
       easier to do math with an extensional language.
-      And results for its extension sometimes apply
+      And the results for its extension sometimes do apply
       to an intensional language.
       For example, Chomsky, to demonstrate the
       superiority of his model over Markov chains,
@@ -1330,7 +1333,7 @@
       but which are not predicted by Markov chains.
       Obviously, your model of an intensional language is wrong
       if its extension is wrong,
-      and if you can get that result without getting into
+      and if you can discover that without getting into
       the semantics, all the better.
     </p>
     <p>
@@ -1484,7 +1487,7 @@
     </p>
     <p>
       Of course, "exactly" here means "exactly in terms of extensions".
-      But, again, this is not extremely troubling.
+      But, again, in 1965 this is not extremely troubling.
       Extensions are what is used.
       Nobody understood the limits of extensions as a definition
       of language better than Chomsky,
@@ -1543,7 +1546,8 @@
       binary minus.
       Recursive descent cannot parse
       <a href="#g-knuth-op">KNUTH-OP</a>,
-      but it is LR(1).
+      but <a href="#g-knuth-op">KNUTH-OP</a>
+      is LR(1).
       The means that it is well within Knuth's new
       class of grammars and,
       by implication,
@@ -1603,19 +1607,7 @@
       <a href="#g-knuth-op">KNUTH-OP</a>,
       none is LL(k) for any k.
     </p>
-    <p>
-      Compromises have to be made
-      if we are parsing with recursive descent.
-      As one result of these compromises,
-      truly
-      declarative versions of LL(1) are not used.
-      A pure declarative
-      LL(1) parser generator
-      <em>could</em>
-      be written, but it would not be able to parse arithmetic expressions
-      properly.
-    </p>
-    <p>As mentioned, a common compromise is to have recursive descent parse
+    <p>A common work-around is to have recursive descent parse
       arithmetic expressions as lists,
       and add associativity in post-processing.
       We are now able to look at this in more detail.
@@ -1860,8 +1852,8 @@
       Most practical languages, including the C language and
       <tt>yacc</tt>'s own input language, still require manual hackery<a id="footnote-99-ref" href="#footnote-99">[99]</a>.
     </p>
-    <h1 id="h1-the_operator_issue_as_of_1979">
-    The Operator Issue as of 1979
+    <h1 id="h1-the_parsing_problem_as_of_1979">
+    The Parsing Problem as of 1979
     </h1>
     <p>
       Recall
@@ -1914,7 +1906,7 @@
     </h1>
     <p>
       Wadler starts to introduce monads to the functional programming community.
-      As one example he converts his previous efforts at function parsing
+      As one example he converts his previous efforts at functional parsing
       techniques to monads<a id="footnote-101-ref" href="#footnote-101">[101]</a>.
       The parsing technique is pure recursive descent.
       The examples shown for monadic parsing are very simple,
@@ -1946,7 +1938,7 @@
       the research consensus
       had excluded the possibility that a parser of a superset of the LR(k) languages
       could be practical and linear.
-      Knuth's argument had been highly suggestive.
+      The argument from Knuth had been highly suggestive.
       It was not actually a proof, but by 1991 many effectively take it as one.
     </p>
     <p>Does Leo's algorithm refute the consensus?
@@ -1963,8 +1955,8 @@
       attempts a practical implementation of
       <a href="#bib-Leo_1991">Leo 1991</a>.
     </p>
-    <h1 id="text-1991-operator-issue">The Operator Issue as of 1991</h1>
-    <p>Earley's is forgotten. So everyone in LALR-land is content,
+    <p>If Earley's is almost forgotten,
+    then everyone in LALR-land is content,
       right? Wrong. In fact, far from it.
     </p>
     <p>
@@ -2013,7 +2005,7 @@
       <q>combined</q>
       to compose other parsers.
       This allows you to have an algebra of parsers.
-      It's an extremely attractive idea.
+      It is an extremely attractive idea.
     </p>
     <p>
       But,
@@ -2491,7 +2483,7 @@
       <mla_container>Language</mla_container>,
       Vol. 2, No. 3 (Sep., 1926), pp. 153-164.
     </p>
-    <b id="bib-Bloomfield_1933">Bloomfield 1933</b><p>:
+    <b id="bib-Bloomfield_1933">Bloomfield 1933</b>:
       Bloomfield, Leonard.
       <cite>Language</cite>.
       Holt, Rinehart and Winston, 1933.
@@ -3223,7 +3215,7 @@
           the number, the lower the precedence.
  <a href="#footnote-13-ref">&#8617;</a></p>
 <p id="footnote-14"><b>14</b>.
-        Many of the
+        Some of the
         <q>firsts</q>
         for parsing algorithms in this
         timeline are debatable,
@@ -3284,7 +3276,7 @@
         <a href="#bib-Backus_1980">Backus 1980</a>, pp. 133-134.
  <a href="#footnote-25-ref">&#8617;</a></p>
 <p id="footnote-26"><b>26</b>.
-        <b id="bib-Harris_1993">Harris 1993</b>,
+        <a href="#bib-Harris_1993">Harris 1993</a>,
         pp 31-34, p. 37.
  <a href="#footnote-26-ref">&#8617;</a></p>
 <p id="footnote-27"><b>27</b>.
@@ -3483,8 +3475,8 @@
         Perhaps Grune and Jacobs based their decision on the Lucas' description of his algorithm,
         which talks about his parser's bottom-up element only briefly,
         while describing the top-down element in detail.
-        Also, the Lucas algorithm more resembles modern implementations of recursive descent
-        much more closely than
+        Also, the Lucas algorithm resembles modern implementations of recursive descent
+        much more closely than does
         <a href="#bib-Irons_1961">Irons 1961</a>.
         <br><br>
         In conversation, Irons described his 1961 parser as a kind of recursive descent.
@@ -3563,12 +3555,12 @@
         Given the capacity of computer memories in 1965,
         LR(1) was clearly impractical.
         With the huge computer memories of 2018,
-        that could be reconsidered.
+        that could be reconsidered,
         but even today LR(1) is rare in practical use.
 	LR(1) shares 
 	the poor error-handling that
         the LR(k)-based parsers became known for.
-	And, since it
+	And, since
         LR(1) is still somewhat limited in its power,
 	it just does not seem to be worth it.
  <a href="#footnote-69-ref">&#8617;</a></p>
@@ -3597,7 +3589,8 @@
         The exception are applications which receive their input "on-line";
         can not determine the size of their input in advance;
         and must return a result in a fixed amount of time.
-        For these few applications, adding an end marker to their input,
+        For these few applications,
+	adding an end marker to their input
         is not possible.
  <a href="#footnote-71-ref">&#8617;</a></p>
 <p id="footnote-72"><b>72</b>.
@@ -3644,7 +3637,7 @@ I deal with the implications of
         it is an open question whether all context-free grammars
         can be parsed in linear time.
         <br><br>
-        He even describes a new superclass of his own:
+        Knuth even describes a new superclass of his own:
         LR(k,t), which is LR(k) with more aggressive lookahead.
         But Knuth introduces LR(k,t) in dismissive terms:
         "Finally, we might mention another generalization of LR(k)"
@@ -3674,7 +3667,7 @@ I deal with the implications of
         reading into Knuth a prediction that
         research into beyond-LR(k)
         parsing would be not be fruitful.
-        And, regardless of what Knuth, believed
+        And, regardless of what Knuth himself believed,
         the consensus of the parsing theorists is not
         in doubt:
         interest in beyond-LR parsing will almost disappear
@@ -3900,6 +3893,7 @@ I deal with the implications of
         <a href="#bib-Leo_1991">Leo 1991</a>, p. 175.),
         just how large a class of grammars
         Marpa is linear for.
+	<br><br>
         But it is known that there are both ambiguous and unambiguous grammars
         for which Marpa is not linear.
         In the general case, Marpa obeys the bounds of Earley's algorithm --
@@ -3919,7 +3913,7 @@ I deal with the implications of
           In the general case, ambiguity is undecidable, but
           in practice it is usually straight-forward for a programmer
           to determine that the grammar he wants is unambiguous.
-          Note the while the general case is undecidable,
+          Note that while the general case is undecidable,
           Marpa will tell the programmer if a parse
           (a grammar with a particular input)
           is ambiguous and, since it parses ambiguous
@@ -3984,15 +3978,12 @@ A
         The statement shown has the semantic adverbs removed for clarity.
         The original is part of the
         <a href="#bib-Marpa__R2">Marpa::R2</a>
-        test suite
-        and can also be found on
-        <a href="#bib-Marpa__R2_MetaCPAN">Marpa::R2 MetaCPAN</a>,
-        <mla_title>Synopsis</mla_title>
-        section,
-        <mla_title>Scanless::DSL</mla_title>
-        page,
-        <mla_url>https://metacpan.org/pod/release/JKEGL/Marpa-R2-4.000000/pod/Scanless/DSL.pod
-        </mla_url>.
+        test suite.
+        It can also be found in the "Synopsis"
+	of the "Scanless::DSL" document on
+        <a href="#bib-Marpa__R2_MetaCPAN">Marpa::R2 MetaCPAN</a>:
+	<a href="https://metacpan.org/pod/release/JKEGL/Marpa-R2-4.000000/pod/Scanless/DSL.pod#Synopsis">https://metacpan.org/pod/release/JKEGL/Marpa-R2-4.000000/pod/Scanless/DSL.pod#Synopsis</a>,
+	permalink accessed 4 September 2018.
  <a href="#footnote-124-ref">&#8617;</a></p>
 <p id="footnote-125"><b>125</b>.
         <a href="#bib-Marpa__R2">Marpa::R2</a>.

@@ -293,7 +293,7 @@
       <em>does</em>
       honor precedence, making it perhaps the first operator precedence
       parser<footnote>
-        Many of the
+        Some of the
         <q>firsts</q>
         for parsing algorithms in this
         timeline are debatable,
@@ -401,15 +401,17 @@
       it.
     </p>
     <h1>1952: Glennie's AUTOCODE</h1>
-    <p>Knuth
-      calls Glennie's the first
+    <p>
+      Glennie discovers what Knuth will later
+      call the first
       <q>real</q><footnote>
         <bibref>Knuth and Pardo 1976</bibref>,
         p 42.
       </footnote>
-      compiler, by which he means that
-      it was actually implemented and used by someone to translate
-      algebraic statements into machine language.
+      compiler.
+      (By this Knuth will mean that
+      AUTOCODE was actually implemented and used by someone to translate
+      algebraic statements into machine language.)
       Glennie's AUTOCODE
       is very close to the machine -- just above machine language.
       It does not allow operator expressions.
@@ -454,7 +456,7 @@
       Noam Chomsky earns his PhD at the University of Pennsylvania.
       His teacher, Zelig Harris, is a prominent Bloomfieldian,
       and Chomsky's early work is thought to be in the Bloomfield school.<footnote>
-        <bibid>Harris 1993</bibid>,
+        <bibref>Harris 1993</bibref>,
         pp 31-34, p. 37.
       </footnote>
       That same year Chomsky accepts
@@ -1094,8 +1096,8 @@
         Perhaps Grune and Jacobs based their decision on the Lucas' description of his algorithm,
         which talks about his parser's bottom-up element only briefly,
         while describing the top-down element in detail.
-        Also, the Lucas algorithm more resembles modern implementations of recursive descent
-        much more closely than
+        Also, the Lucas algorithm resembles modern implementations of recursive descent
+        much more closely than does
         <bibref>Irons 1961</bibref>.
         <br><br>
         In conversation, Irons described his 1961 parser as a kind of recursive descent.
@@ -1479,9 +1481,6 @@
       Knuth shows that stack-based parsing is
       equivalent to a new class of grammars.
       Knuth calls this new class, LR(k).
-      (Here
-      <tt>k</tt>
-      stands for the amount of lookahead.)
       Knuth also provides a parsing algorithm for the
       LR(k) grammars.
     </p>
@@ -1510,12 +1509,12 @@
         Given the capacity of computer memories in 1965,
         LR(1) was clearly impractical.
         With the huge computer memories of 2018,
-        that could be reconsidered.
+        that could be reconsidered,
         but even today LR(1) is rare in practical use.
 	LR(1) shares 
 	the poor error-handling that
         the LR(k)-based parsers became known for.
-	And, since it
+	And, since
         LR(1) is still somewhat limited in its power,
 	it just does not seem to be worth it.
       </footnote>
@@ -1541,7 +1540,7 @@
       following the rest
       of the parsing literature at this time.
       In other words, Knuth defines a language
-      a "set of strings", without regard it
+      a "set of strings", without regard
       to their meaning.
       The Bloomfieldian definition,
       while severely restrictive,
@@ -1555,7 +1554,7 @@
       I will speak of the "set of strings" that make
       up a language as its
       <b>extension</b>.
-      If you are Bloomfieldian,
+      If you are a Bloomfieldian,
       a language
       <b>is</b>
       its extension.
@@ -1600,7 +1599,7 @@
       It
       <b>is</b>
       easier to do math with an extensional language.
-      And results for its extension sometimes apply
+      And the results for its extension sometimes do apply
       to an intensional language.
       For example, Chomsky, to demonstrate the
       superiority of his model over Markov chains,
@@ -1609,7 +1608,7 @@
       but which are not predicted by Markov chains.
       Obviously, your model of an intensional language is wrong
       if its extension is wrong,
-      and if you can get that result without getting into
+      and if you can discover that without getting into
       the semantics, all the better.
     </p>
     <p>
@@ -1697,7 +1696,8 @@
         The exception are applications which receive their input "on-line";
         can not determine the size of their input in advance;
         and must return a result in a fixed amount of time.
-        For these few applications, adding an end marker to their input,
+        For these few applications,
+	adding an end marker to their input
         is not possible.
       </footnote>,
       If you do this,
@@ -1788,7 +1788,7 @@
     </p>
     <p>
       Of course, "exactly" here means "exactly in terms of extensions".
-      But, again, this is not extremely troubling.
+      But, again, in 1965 this is not extremely troubling.
       Extensions are what is used.
       Nobody understood the limits of extensions as a definition
       of language better than Chomsky,
@@ -1818,7 +1818,7 @@
         it is an open question whether all context-free grammars
         can be parsed in linear time.
         <br><br>
-        He even describes a new superclass of his own:
+        Knuth even describes a new superclass of his own:
         LR(k,t), which is LR(k) with more aggressive lookahead.
         But Knuth introduces LR(k,t) in dismissive terms:
         "Finally, we might mention another generalization of LR(k)"
@@ -1848,7 +1848,7 @@
         reading into Knuth a prediction that
         research into beyond-LR(k)
         parsing would be not be fruitful.
-        And, regardless of what Knuth, believed
+        And, regardless of what Knuth himself believed,
         the consensus of the parsing theorists is not
         in doubt:
         interest in beyond-LR parsing will almost disappear
@@ -1918,7 +1918,8 @@
       binary minus.
       Recursive descent cannot parse
       <a href="#g-knuth-op">KNUTH-OP</a>,
-      but it is LR(1).
+      but <a href="#g-knuth-op">KNUTH-OP</a>
+      is LR(1).
       The means that it is well within Knuth's new
       class of grammars and,
       by implication,
@@ -1997,19 +1998,7 @@
       <a href="#g-knuth-op">KNUTH-OP</a>,
       none is LL(k) for any k.
     </p>
-    <p>
-      Compromises have to be made
-      if we are parsing with recursive descent.
-      As one result of these compromises,
-      truly
-      declarative versions of LL(1) are not used.
-      A pure declarative
-      LL(1) parser generator
-      <em>could</em>
-      be written, but it would not be able to parse arithmetic expressions
-      properly.
-    </p>
-    <p>As mentioned, a common compromise is to have recursive descent parse
+    <p>A common work-around is to have recursive descent parse
       arithmetic expressions as lists,
       and add associativity in post-processing.
       We are now able to look at this in more detail.
@@ -2287,7 +2276,7 @@
         languages in V7 Unix.
       </footnote>.
     </p>
-    <h1>The Operator Issue as of 1979</h1>
+    <h1>The Parsing Problem as of 1979</h1>
     <p>
       Recall
       <a href="#loc-parsing-problem">the criteria</a>
@@ -2340,7 +2329,7 @@
     <h1>1990: Monads</h1>
     <p>
       Wadler starts to introduce monads to the functional programming community.
-      As one example he converts his previous efforts at function parsing
+      As one example he converts his previous efforts at functional parsing
       techniques to monads<footnote>
         <bibref>Wadler 1990</bibref>
       </footnote>.
@@ -2376,7 +2365,7 @@
       the research consensus
       had excluded the possibility that a parser of a superset of the LR(k) languages
       could be practical and linear.
-      Knuth's argument had been highly suggestive.
+      The argument from Knuth had been highly suggestive.
       It was not actually a proof, but by 1991 many effectively take it as one.
     </p>
     <p>Does Leo's algorithm refute the consensus?
@@ -2393,8 +2382,8 @@
       attempts a practical implementation of
       <bibref>Leo 1991</bibref>.
     </p>
-    <h1 id="text-1991-operator-issue">The Operator Issue as of 1991</h1>
-    <p>Earley's is forgotten. So everyone in LALR-land is content,
+    <p>If Earley's is almost forgotten,
+    then everyone in LALR-land is content,
       right? Wrong. In fact, far from it.
     </p>
     <p>
@@ -2466,7 +2455,7 @@
       <q>combined</q>
       to compose other parsers.
       This allows you to have an algebra of parsers.
-      It's an extremely attractive idea.
+      It is an extremely attractive idea.
     </p>
     <p>
       But,
@@ -2706,6 +2695,7 @@
         <bibref>Leo 1991</bibref>, p. 175.),
         just how large a class of grammars
         Marpa is linear for.
+	<br><br>
         But it is known that there are both ambiguous and unambiguous grammars
         for which Marpa is not linear.
         In the general case, Marpa obeys the bounds of Earley's algorithm --
@@ -2737,7 +2727,7 @@
           In the general case, ambiguity is undecidable, but
           in practice it is usually straight-forward for a programmer
           to determine that the grammar he wants is unambiguous.
-          Note the while the general case is undecidable,
+          Note that while the general case is undecidable,
           Marpa will tell the programmer if a parse
           (a grammar with a particular input)
           is ambiguous and, since it parses ambiguous
@@ -2851,15 +2841,12 @@
         The statement shown has the semantic adverbs removed for clarity.
         The original is part of the
         <bibref>Marpa::R2</bibref>
-        test suite
-        and can also be found on
-        <bibref>Marpa::R2 MetaCPAN</bibref>,
-        <mla_title>Synopsis</mla_title>
-        section,
-        <mla_title>Scanless::DSL</mla_title>
-        page,
-        <mla_url>https://metacpan.org/pod/release/JKEGL/Marpa-R2-4.000000/pod/Scanless/DSL.pod
-        </mla_url>.
+        test suite.
+        It can also be found in the "Synopsis"
+	of the "Scanless::DSL" document on
+        <bibref>Marpa::R2 MetaCPAN</bibref>:
+	<mla_url>https://metacpan.org/pod/release/JKEGL/Marpa-R2-4.000000/pod/Scanless/DSL.pod#Synopsis</mla_url>,
+	permalink accessed 4 September 2018.
       </footnote>
     </p>
     <pre><tt>
@@ -3051,7 +3038,7 @@
       <mla_container>Language</mla_container>,
       Vol. 2, No. 3 (Sep., 1926), pp. 153-164.
     </p>
-    <bibid>Bloomfield 1933</bibid><p>:
+    <bibid>Bloomfield 1933</bibid>:
       Bloomfield, Leonard.
       <cite>Language</cite>.
       Holt, Rinehart and Winston, 1933.
