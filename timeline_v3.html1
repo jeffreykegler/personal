@@ -35,7 +35,7 @@
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.0</version>
-    <datestamp>14 June 2018</datestamp>
+    <datestamp>Revision 1, 4 September 2018</datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact and complete description of
@@ -91,8 +91,9 @@
       </footnote>.
       Again, Markov's interest is not in parsing.
       Nonetheless,
-      this is an application of what later will be regarded
-      as a parsing technique to language,
+      this is an application to language
+      of what later will be regarded
+      as a parsing technique,
       and apparently for the first time in the West.
     </p>
     <h1>1929: Bloomfield's "Postulates"</h1>
@@ -178,16 +179,16 @@
       to parsing human languages.
     </p>
     <h1>1949: Rutishauser's compiler</h1>
-    <p>From 1949 to 1951 at the ETH Zurich, Heinz Rutishauser worked on
+    <p>From 1949 to 1951 at the ETH Zurich, Heinz Rutishauser works on
       the design of what we would now call a compiler<footnote>
         <bibref>Knuth and Pardo 1976</bibref>,
         pp. 29-35, 40.
       </footnote>.
       Rutishauser's arithmetic expression parser
-      did not honor precedence but it does allow nested parentheses.
+      does not honor precedence but it does allow nested parentheses.
       It is perhaps the first algorithm which can really be considered a
       parsing method.
-      Rutishauser's compiler was never implemented.</p>
+      Rutishauser's compiler is never implemented.</p>
     <h1>The Operator Issue as of 1949</h1>
     <p>
       In the form of arithmetic expressions, operator expressions
@@ -248,7 +249,7 @@
         associativity and precedence.
       </li>
     </ul>
-    <p>Certainly in the first attempts at parsing in compilers,
+    <p>In the first attempts at parsing in compilers,
       arithmetic expressions are central.
       The first compiled languages are organized line-by-line and,
       except for arithmetic expressions,
@@ -313,7 +314,7 @@
       Boehm's compiler also allows parentheses, but the two cannot
       be mixed -- an expression can either be parsed using precedence
       or have parentheses, but not both.
-      And like Rutishauser's, Boehm's compiler is never
+      Also like Rutishauser's, Boehm's compiler is never
       implemented<footnote>
         <bibref>Knuth and Pardo 1976</bibref>,
         pp 35-42.
@@ -410,22 +411,23 @@
       it was actually implemented and used by someone to translate
       algebraic statements into machine language.
       Glennie's AUTOCODE
-      was very close to the machine -- just above machine language.
-      It did not allow operator expressions.
+      is very close to the machine -- just above machine language.
+      It does not allow operator expressions.
     </p>
     <p>
-      AUTOCODE was hard-to-use,
-      and apparently saw little use by anybody but
+      AUTOCODE is hard-to-use,
+      and apparently sees little use by anybody but
       Glennie himself.
       Because
-      Glennie worked for the British atomic weapons projects his papers
-      were routinely classified,
-      so even the indirect influence of AUTOCODE was
+      Glennie works for the British atomic weapons projects his papers
+      are routinely classified,
+      so even the indirect influence of AUTOCODE is
       slow to spread.
       Nonetheless, many other
       <term>compilers</term>
-      afterward were named AUTOCODE, which probably indicates
-      awareness of Glennie's effort<footnote>
+      afterward will be named AUTOCODE, probably
+      because the authors are
+      aware of Glennie's effort<footnote>
         <bibref>Knuth and Pardo 1976</bibref>,
         pp. 42-49.
       </footnote>.
@@ -523,7 +525,8 @@
       will usually
       mean what we currently understand it to mean.</p>
     <h1>1956: The Chomsky hierarchy</h1>
-    <p>Chomsky publishes the paper which is usually considered the foundation of
+    <p>Chomsky publishes his "Three models" paper,
+      which is usually considered the foundation of
       Western formal language theory<footnote>
         <bibref>Chomsky 1956</bibref>.
       </footnote>.
@@ -661,8 +664,8 @@
       parsing theory
       divides into Chomskyan and
       non-Chomskyan.
-      Chomskyan parsing theory becomes and remains the mainstream
-      but it is far from unchallenged.
+      Chomskyan parsing theory becomes and remains the mainstream.
+      But it is far from unchallenged.
     </p><p>
       Above we defined a
       <term>parser</term>
@@ -700,8 +703,8 @@
       dissatisfaction with the IT compiler,
       FORTRAN honors associativity
       and precedence.</p>
-    <p>The designers of FORTRAN used a strange trick for parsing operator expresssions --
-      they hacked the expressions by adding parentheses around each
+    <p>The designers of FORTRAN use a strange trick for parsing operator expresssions --
+      they hack the expressions by adding parentheses around each
       operator.
       The number of parentheses varied, depending on the operator.
       Surprisingly, this works.
@@ -771,7 +774,7 @@
       </footnote>
       calls "the classic algorithm"
       takes a well-documented form.
-      The Samuelson and Bauer paper was very influential.
+      The Samuelson and Bauer paper will be very influential.
     </p>
     <h1>"Language" as of 1959</h1>
     <p>In 1959, Chomsky reviews a book by B.F. Skinner on linguistics.<footnote>
@@ -955,12 +958,14 @@
       In true BNF, the order of the rules does not matter --
       in Glennie's pseudo-BNF order matters very much.
       This means that, for most practical grammars,
-      Glennie's pseudo-BNF and BNF proper do
-      <b>not</b>
-      describe the same language.
+      a set of rules in BNF form describe one
+      language when interpreted as intended
+      by Backus and Naur,
+      and another when interpreted as
+      intended by Glennie.
     </p>
     <p>
-      Glennie is well aware of what he his doing, and
+      Glennie is aware of what he is doing, and
       is not attempting to deceive anyone --
       he points out that the distinction
       between his procedural pseudo-BNF and declarative BNF,
@@ -977,7 +982,8 @@
     <p>In January, Ned Irons publishes a paper describing his ALGOL
       60 parser.
       It is the first paper to fully describe any parser.
-      The Irons algorithm is pure Chomskyan
+      The Irons algorithm is pure Chomskyan,
+      declarative, general,
       and top-down with a bottom-up
       <term>left
         corner</term>
@@ -993,9 +999,7 @@
         <term>left-corner</term>
         is Knuth (<bibref>Knuth 1971</bibref>, p. 109).
       </footnote>.
-    </p>
-    <p>The Irons parser is declarative and general.
-      And since it is general,
+      Since it is general,
       operator expressions are within the power of
       the Irons parser<footnote>
         Although it seems likely that parsing operator expressions would require
@@ -1004,7 +1008,7 @@
       </footnote>.
     </p>
     <h1>Term: "Top-down"</h1>
-    <p>A top-down parser deduces the consituents of a rule from the rule.
+    <p>A top-down parser deduces the constituents of a rule from the rule.
       That is, it looks at the rule first,
       and then deduces what is on its RHS.
       Thus, it works from the start rule, and works
@@ -1167,7 +1171,7 @@
     </p>
     <p>
       Oettinger's own field is Russian translation.
-      And he hopes that DPDA's
+      He hopes that DPDA's
       will be an adequate basis for
       the study of both computer and
       natural language translation.
