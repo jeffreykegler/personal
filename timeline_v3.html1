@@ -1529,13 +1529,22 @@
       greater than 2.
     </p>
     <h1>"Language" as of 1965</h1>
-    <p>The peculiar Bloomfieldian definition of language --
-      that a language is a "set of strings" --
-      has survived in parsing theory,
-      but has yet to cause any confusion.
-      In fact, in some respects it has been helpful.
+    <p><bibref>Knuth 1965</bibref>
+      uses the Bloomfieldian definition of
+      language,
+      following the rest
+      of the parsing literature at this time.
+      In other words, Knuth defines a language
+      a "set of strings", without regard it
+      to their meaning.
+      The Bloomfieldian definition,
+      while severely restrictive,
+      has yet to cause any recognizable harm.
     </p>
     <p>
+      To keep these things straight,
+      I will borrow two terms from linguistics:
+      "intension" and "extension".
       For this discussion,
       I will speak of the "set of strings" that make
       up a language as its
@@ -1551,20 +1560,19 @@
       that is, the strings must mean something.
       I will call the semantics of a language
       its
-      <b>intension</b>.
-      (The "intension"/"extension" distinction
-      is from linguistics.)
-      For most people, a language is an intension
-      and an extension.<footnote>
+      <b>intension</b>.<footnote>
         In this document
-        I will usually speak of a language intension as it it was
+        I will usually speak of a language intension as if it was
         a BNF grammar.
-        This is a very simplified view of semantics.
-        It not only assumes that the language is pure context-free,
-        and but is not adequate even for most computer
-        applications,
-        which will almost always require at least some kind
-        of post-processing for the parse trees.
+	Admittedly,
+        this is a very simplified view of semantics.
+	Treating semantics as reducible to the tagged trees produced
+	by parsing a BNF grammar
+        not only assumes that the language is pure context-free,
+        it is not even adequate even for most computer
+        applications.
+	Most applications require at least some kind
+        of post-processing.
         <br><br>
         But this is not a formal mathematical presentation.
         and for our purposes,
@@ -1573,67 +1581,37 @@
         And the grammars we consider are almost always
         context-free.
       </footnote>
+      A language is extensional
+      (or Bloomfieldian) if it consists only of an
+      extension.
+      Otherwise, the language is intensional.
+      For most people, the term "language" means
+      an intensional language.
     </p>
     <p>
-      <bibref>Knuth 1965</bibref>
-      followed the rest
-      of the parsing literature of his time
-      by considering a "language" as the same as its
-      extension -- ignoring the semantics.
-      In Knuth's terminology, therefore,
-      there is no possibility
-      that the same language extensions
-      might represent many different languages --
-      language extensions
-      <b>are</b>
-      languages.<footnote>
-        I hope no one will read me as suggesting that
-        Knuth was in any way unclear about
-        the extension/intension distinction.
-        In
-        <bibref>Knuth 1965</bibref>, both
-        string-sets and BNF grammars appear throughout,
-        and Knuth repeatedly shifts back and forth
-        flawlessly.
-        Knuth is never at pains to point these
-        shift out to the reader,
-        perhaps because for him they
-        are unproblematic.
-      </footnote>
-    </p>
-    <p>
-      Using the same word for two different
-      things is dangerous.
-      You have to be very careful
-      or your reasoning goes off the rails.
-    </p>
-    <p>
-      But, up to 1965, the Bloomfieldian definition has
-      not only not caused any recognizable harm,
-      it has arguably been helpful.
+      As of 1965, you can argue that using the Bloomfieldian definition
+      has been helpful.
       It
       <b>is</b>
-      simpler to deal with a language
-      as its extension, and sometimes the results
-      clearly apply to the intension.
+      easier to do math with an extensional language.
+      And results for its extension sometimes apply
+      to an intensional language.
       For example, Chomsky, to demonstrate the
-      superiority of his model over its competitors,
-      shows that the extension of his model contains
-      strings which are clearly in English,
-      but which are not in the extension of
-      other models of language.
-      Obviously, your model of language is wrong
+      superiority of his model over Markov chains,
+      showed that the extension of his model of English
+      contains strings which clearly are English,
+      but which are not predicted by Markov chains.
+      Obviously, your model of an intensional language is wrong
       if its extension is wrong,
-      and if the semantics and the intension
-      are not needed to show that,
-      then they are just getting in the way.
+      and if you can get that result without getting into
+      the semantics, all the better.
     </p>
     <p>
       Knuth needs to establish an equivalence
       between his LR grammars,
       and the mathematical literature on
       stack-based parsing (DPDA's).
-      The trouble is, the DPDA's literature is
+      The trouble is, the DPDA literature is
       entirely non-Chomskyan --
       all of its results are in terms of sets
       of strings.
@@ -1643,12 +1621,9 @@
     <p>
       How do you show that string-sets
       are the equivalent of grammars?
-      What Knuth does is treat them both as string-sets.
+      What Knuth does is treat them both as string-sets -- extensions.
       Knuth compares the language extensions of the LR grammars
       to the sets of strings recognized by the DPDA's.
-      Arguably,
-      given the state of the literature,
-      Knuth does not have much choice.
     </p>
     <p>The result certainly seems encouraging.
       It turns out that the language extension of
@@ -1667,9 +1642,8 @@
       context-free parsers.
       And "deterministic" seemed like a very good approximation
       of practical.
-      Certainly non-deterministic parsing is probably not practical.
-      And the best practical parsers in 1965 were
-      deterministic stack parsers.
+      All practical parsers in 1965 were
+      deterministic parsers.
     </p>
     <p>
       Viewed this way,
@@ -1678,7 +1652,7 @@
       It was a "direct hit",
       or as close to an exact equivalent of practical parsing
       as theory was going to get.
-      And, based on the algorithms of
+      Based on the algorithms of
       <bibref>Knuth 1965</bibref>,
       that meant that the theoretical equivalent of "practical
       parsing" was somewhere between LR(0) and LR(1).
@@ -1727,7 +1701,7 @@
       LR(0)
       language extension.
       In terms of strings-sets,
-      there is no LR hierarchy.
+      there is no LR hierarchy:
     </p><center>
       LR(0) = LR(1) = LR(2) = &nbsp;&nbsp; ... &nbsp;&nbsp; = LR(42) = &nbsp;&nbsp; ...
     </center>
@@ -2180,7 +2154,7 @@
         <bibref>Simms 2014</bibref>.
       </footnote>.
       Public interest in GTDPL fades.</p>
-    <h1>1973: LR-regular</h1>
+    <h1 id="text-1973-LRR">1973: LR-regular</h1>
     <p>An article by &#268;ulik and Cohen
       extends the idea behind LR to
       grammars with infinite lookahead.<footnote>
@@ -2375,7 +2349,9 @@
     <p>Joop Leo discovers a way of speeding up right recursions in
       Earley's algorithm<footnote>
         <bibref>Leo 1991</bibref>.
-      </footnote>. Leo's algorithm is linear for LRR, a superset of LR(k).
+      </footnote>. Leo's algorithm is linear for
+      <a href="#text-1973-LRR">
+      LR-regular, a superset of LR(k)</a>.
       That means it is linear for just about every
       unambiguous grammar of practical interest,
       and many ambiguous ones as well.
@@ -2390,15 +2366,14 @@
       the research consensus
       had excluded the possibility that a parser of a superset of the LR(k) languages
       could be practical and linear.
-      Knuth's argument was highly suggestive,
-      but it was not actually a proof,
-      though many effectively took it as one.
+      Knuth's argument had been highly suggestive.
+      It was not actually a proof, but by 1991 many effectively take it as one.
     </p>
     <p>Does Leo's algorithm refute the consensus?
       While not linear in general,
       Leo's non-deterministic algorithm,
       <b>is</b> linear for a superset of Knuth's LR(k) grammars.
-      But is it practical?
+      But is Leo's algorithm practical?
     </p>
     <p>But in 1991, most researchers see the Parsing Problem as "solved" --
       a closed issue.
