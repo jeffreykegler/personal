@@ -1454,10 +1454,10 @@
       for the grammar of interest to the user.
     </p>
     <h1>1965: Knuth discovers LR</h1>
-    <p>In 1965 Donald Knuth responds<footnote>
+    <p>Donald Knuth answers<footnote>
         <bibref>Knuth 1965.</bibref>.
       </footnote>
-      to the challenge expressed
+      the challenge expressed
       a few years earlier by
       <a href="#text-1961-Oettinger">Oettinger</a>.
       Oettinger had hoped for a theory of stack-based
@@ -1470,8 +1470,6 @@
         Knuth 1965, p. 607, in the abstract.
       </footnote>
       used for efficient parsing up to that time.
-      Knuth is as skilled a mathematician as
-      any of his time.
       In an exhilarating and exhausting 39-page
       paper,
       Knuth shows that stack-based parsing is
@@ -1498,32 +1496,36 @@
       where
       <tt>k</tt>
       is the amount of lookahead used.
-      LR(0) requires no lookahead, but
-      is too weak for practical use.
-      Even
-      LR(1)
-      parsing was impractical in 1965 --
-      in fact, it is rare in practical use today.<footnote>
+      LR(0) requires no lookahead,
+      but it is not practical because it is too weak
+      to parse most grammars of interest.
+      LR(1) is not practical 
+      because of the size of the tables it requires --
+      well beyond what can be done with 1965
+      hardware.<footnote>
         Given the capacity of computer memories in 1965,
         LR(1) was clearly impractical.
         With the huge computer memories of 2018,
         that could be reconsidered.
-        but few have looked at the possibility,
-        because LR(1) is still somewhat restrictive.
-        Worse, as this timeline will show,
-        the LR(k)-based parsers are doomed
-        by their poor error-handling,
-        and LR(1) parsing shares that problem.
+        but even today LR(1) is rare in practical use.
+	LR(1) shares 
+	the poor error-handling that
+        the LR(k)-based parsers became known for.
+	And, since it
+        LR(1) is still somewhat limited in its power,
+	it just does not seem to be worth it.
       </footnote>
-      As the
+      </p>
+      <p>And, as the
       <tt>k</tt>
       in
       LR(k)
-      grows, the size of the tables grows exponentially,
+      grows, things get rapidly worse.
+      The size of the tables grows exponentially,
       while the value of the additional lookahead rapidly diminishes.
       It is not likely that
       LR(2)
-      parsing will ever see much practical use,
+      parsing will ever see much actual use,
       never mind
       LR(k) for any <tt>k</tt>
       greater than 2.
@@ -1750,34 +1752,37 @@
       <li>For LR(k) grammars, practical parsing is bracketed somewhere
         between LR(0) and LR(1).</li>
       <li>In terms of what the parsing literature calls "languages"
-        (that is, in terms of language extensions),
+        (extensional languages),
         LR(k) parsing is the exact equivalent of deterministic stack-based parsing.</li>
-      <li>Determinism is always linear, and linear is always practical.</li>
+      <li>Determinism is always linear and, at least in terms of speed,
+      linear is almost always practical.</li>
       <li>In 1965, every practical parser is deterministic.</li>
       <li>In general, power is a trade-off for speed.</li>
     </ul>
-    <p>That the "languages" used in the reasoning are extensions,
-      while those of interest are intensions,
-      and that
-      <a href="#text-LR-hierarchy-collapse">extensions
-        within the LR hierarchy collapse</a>,
-      are things that are known,
-      but not considered troubling.
+    <p>Extensional languages are used in this reasoning,
+      while the actual interest is in intensional languages.
+      <a href="#text-LR-hierarchy-collapse">And for extensions
+        the LR hierarchy collapses</a>.
+      But these things that are 
+      not considered troubling.
       After all, there is no exact theoretical equivalent
       of "practical" --
       you always have to settle for a rough equivalent.
     </p>
     <p>
-      And this theoretical equivalent for practical
-      parsing looks less rough than many others.
-      The fact that deterministic stack-based parsing is
-      "exactly" LR-parsing,
-      is complemented by the fact
+      In fact, there are aesthetic reasons to
+      think that this theoretical equivalent for practical
+      parsing is not all that rough.
+      Recall that deterministic stack-based parsing is
+      "exactly" LR-parsing.
+      It is also the case
       that non-deterministic stack-based parsing is
       "exactly" context-free parsing.
-      This is very elegant,
-      and suggests that the theoreticians have indeed
-      revealed the fundamental laws behind parsing.
+      This symmetry is very elegant,
+      and suggests that the theoreticians have uncovered
+      the basic laws behind parsing.
+    </p>
+    <p>
       Of course, "exactly" here means "exactly in terms of extensions".
       But, again, this is not extremely troubling.
       Extensions are what is used.
@@ -1786,7 +1791,8 @@
       but Chomsky himself had used extensions
       to produce some of his most
       impressive results.
-    </p><p>
+    </p>
+    <p>
       After 1965, the consensus
       excludes the idea that algorithms which target supersets of LR(k) might be faster than those that take on LR(k)
       directly.<footnote>
