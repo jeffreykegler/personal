@@ -2375,33 +2375,35 @@
     <p>Joop Leo discovers a way of speeding up right recursions in
       Earley's algorithm<footnote>
         <bibref>Leo 1991</bibref>.
-      </footnote>. Leo's algorithm is linear for just about every
-      unambiguous grammar of practical interest, and many ambiguous ones
-      as well. In 1991 hardware is six orders of magnitude faster than
+      </footnote>. Leo's algorithm is linear for LRR, a superset of LR(k).
+      That means it is linear for just about every
+      unambiguous grammar of practical interest,
+      and many ambiguous ones as well.
+      In 1991 hardware is six orders of magnitude faster than
       1968 hardware, so that the issue of bookkeeping overhead had receded
-      in importance. This is a major discovery. When it comes to speed,
+      in importance.
+      When it comes to speed,
       the game has changed in favor of the Earley algorithm.</p>
-    <h1>Knuth's influential misconception revisited</h1>
-    <p>Recall that
-      <bibref>Knuth 1965</bibref>, in suggesting lines of future research,
+    <h1>The Parsing Problem as of 1991</h1>
+    <p>Recall that after
+      <bibref>Knuth 1965</bibref>,
+      the research consensus
       had excluded the possibility that a parser of a superset of the LR(k) languages
       could be practical and linear.
-      Knuth did not conclude this carelessly --
-      he proved a strong relationship between the
-      <term>deterministic languages</term>
-      of previous theory,
-      and the language defined by his new LR(k) model.
       Knuth's argument was highly suggestive,
-      so much so that most took it as a proof.
+      but it was not actually a proof,
+      though many effectively took it as one.
     </p>
-    <p>But it was not a proof --
-      Earley's non-deterministic algorithm,
-      while not linear in general,
-      <b>is</b>
-      linear for a superset of Knuth's LR(k) grammars.
-      Is it practical?
-      At this point, Earley parsing is almost forgotten,
-      and few take notice of Earley's discovery.
+    <p>Does Leo's algorithm refute the consensus?
+      While not linear in general,
+      Leo's non-deterministic algorithm,
+      <b>is</b> linear for a superset of Knuth's LR(k) grammars.
+      But is it practical?
+    </p>
+    <p>But in 1991, most researchers see the Parsing Problem as "solved" --
+      a closed issue.
+      Earley parsing is almost forgotten,
+      and Leo's discovery is ignored.
       Two decades will pass before anyone
       attempts a practical implementation of
       <bibref>Leo 1991</bibref>.
