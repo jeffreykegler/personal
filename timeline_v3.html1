@@ -35,7 +35,7 @@
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.0</version>
-    <datestamp>Revision 1, 4 September 2018</datestamp>
+    <datestamp>Revision 2, 6 October 2018</datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact and complete description of
@@ -1199,6 +1199,50 @@
       quickly becomes identified
       with the search for a theoretical basis for practical parsing.
     </p>
+    <h1>Term: "Stack-driven"</h1>
+    <p>TODO
+    </p>
+    <h1>1961: Sakai discovers table parsing</h1>
+    <p>Sakai publishes<footnote>
+    <bibref>Sakai 1961</bibref>
+    </footnote>
+    the first description of a table-driven<footnote>
+    At this time,
+    the theoretical apparatus is not quite matter enought to define
+    "table-driven" conveniently.  See <a href="#text-term-table-driven">below</a>
+    </footnote>
+    parser.
+    Sakai's algorithm,
+    more often known as the CYK algorithm after some of
+    its rediscoverers<footnote>
+      The credited rediscoveries are <bibid>Hayes 1962</bibid>
+      (attributed to Cocke);
+      <bibid>Younger 1967</bibid>;
+      and <bibid>Kasami and Torii 1969</bibid>.
+    </footnote>.
+    Sakai's algorithm will be rediscovered several times between now and 1969.
+    </p>
+    <p>Sakai's algorithm is non-Chomskyan and bottom-up.
+    but it remains useful in very special circumstances
+    -- cases
+    where only short inputs can be parsed<footnote>
+    It runs in will come to be called cubic time.
+    "Cubic time" will be defined <a href="#text-term-linear">below</a>
+    </footnote>,
+    and where the grammar is described in terms of the frequency of adjacent
+    components -- that is, statistically.
+    Sakai presents his algorithm as part of
+    a hopelessly naive Japanese-to-English translation
+    system.
+    But the parsing part of Sakai's translator is far from naive
+    and will remain important in
+    natural language processing.
+    </p>
+    <p>TODO
+    </p>
+    <h1>Term: "Table-driven"</h1>
+    <p>TODO
+    </p>
     <h1>The Operator Issue as of 1961</h1>
     <p>The results of 1961 transformed the Operator Issue.
       Before ALGOL,
@@ -1351,7 +1395,7 @@
         <bibref>Schorre 1964</bibref>, p. D1.3-1.
       </footnote>.
     </p>
-    <h1>Term: "linear"</h1>
+    <h1 id="text-term-linear">Term: "linear"</h1>
     <p>
       Among
       <a href="#loc-parsing-problem">the goals</a>
@@ -3291,6 +3335,13 @@
       Accessed 24 April 2018.
     </p>
     <p>
+      <bibid>Kasami and Torii 1969</bibid>:
+      Kasami, T. and Torii, K.
+      <mla_title>A syntax-analysis procedure for unambiguous context-free grammars</mla_title>.
+      <mla_container>Journal of the ACM</mla_container>,
+      vol. 16, issue 3, July 1969, pp. 423-431.
+    </p>
+    <p>
       <bibid>Kegler 2010</bibid>:
       Kegler, Jeffrey.
       <mla_title>Marpa is now O(n) for Right Recursions.</mla_title>
@@ -3714,6 +3765,15 @@
       21 April 2018,
       <mla_url>https://en.wikipedia.org/w/index.php?title=Perl&oldid=837585549</mla_url>.
       Accessed 26 April 2018.
+    </p>
+    <p>
+      <bibid>Younger 1967</bibid>:
+      Younger, Daniel M.
+      <mla_title>Recognition and Parsing of Context-Free Languages in Time n<sup>3</sup></mla_title>
+      <mla_container>Information and Control</mla_container> 10, pp 189-208,
+      1967.
+      <mla_url>https://core.ac.uk/download/pdf/82305262.pdf</mla_url>.
+      Accessed 6 October 2018.
     </p>
     <comment>FOOTNOTES HERE</comment>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
