@@ -3233,6 +3233,17 @@
         Accessed online as of 24 April 2018.</a>
     </p>
     <p>
+      <bibid>Hayes 1962</bibid>:
+      Hayes, David G.
+      <mla_title>Automatic language-data processing</mla_title>.
+      Pp. 394-423 in <mla_container>Computer Applications in the Behavioral Sciences</mla_container>,
+      H. Borko, editor,
+      Prentice Hall, 1962.
+      Describes two algorithms, the first of which,
+      attributed to J Cocke,
+      is a CYK parser,
+    </p>
+    <p>
       <bibid>Hilgers and Langville 2006</bibid>:
       Hilgers, Philipp, and Amy N. Langville.
       <mla_title>The five greatest applications of Markov Chains.</mla_title>
@@ -3587,6 +3598,15 @@
       volume 17, no. 3, October 1970, pp. 226-256.
       <mla_url>https://s3.amazonaws.com/academia.edu.documents/43093758/Properties_of_Deterministic_Top-Down_Gra20160226-4294-1dzfmgn.pdf?AWSAccessKeyId=AKIAIWOWYYGZ2Y53UL3A&Expires=1524516488&Signature=EQ9rs7iGKORIoxa%2F1jGEzOI5pOQ%3D&response-content-disposition=inline%3B%20filename%3DProperties_of_deterministic_top_down_gra.pdf</mla_url>.
       Accessed 23 April 2018.
+    </p>
+    <p>
+      <bibid>Sakai 1961</bibid>:
+      Sakai, Itiroo.
+      <mla_title>Syntax in Universal Translation</mla_title>
+      <mla_container>International Conference on Machine Translation of Languages and Applied Language Analysis</mla_container>,
+      National Physical Laboratory, Teddington, UK, 5-8 September 1961.
+      <mla_url>http://www.mt-archive.info/50/NPL-1961-Sakai.pdf</mla_url>.
+      Accessed 6 October 2018.
     </p>
     <p>
       <bibid>Samuelson and Bauer 1959</bibid>:
