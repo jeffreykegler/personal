@@ -1182,8 +1182,6 @@
       for natural language translation.
       But for dealing with computing languages,
       DPDA's will have a much longer life.
-      As of 1961, all algorithms with acceptable speed are using
-      stacks with various modifications.
     </p>
     <p>
       Oettinger challenges the research community to
@@ -1200,48 +1198,90 @@
       with the search for a theoretical basis for practical parsing.
     </p>
     <h1>Term: "Stack-driven"</h1>
-    <p>TODO
+    <p>A "state-driven" parser is one which tracks the parse using
+    a data of a small constant size.
+    Regular expressions are the classic state-driven parsers,
+    and their state usually can be tracked as an integer.
+    Regular expressions have limited power,
+    but a parser just does not get any faster or
+    more compact.
+    A parsing algorithm
     </p>
-    <h1>1961: Sakai discovers table parsing</h1>
+    <p>
+    A "stack-driven" algorithm tracks the parse using
+    data which is not of constant size, but
+    which needs to access only a small fixed amount of it --
+    that is, at any point the parser
+    only needs to look at the "top" of the stack.
+    By 1961, stacks are becoming understood,
+    and the hardware is becoming capable of handling them.
+    As of 1961, all of the more powerful algorithms
+    with acceptable speed are based
+    on stacks in some way.
+    </p>
+    <h1 id="text-1961-sakai">1961: Sakai discovers table parsing</h1>
     <p>Sakai publishes<footnote>
     <bibref>Sakai 1961</bibref>
     </footnote>
-    the first description of a table-driven<footnote>
-    At this time,
-    the theoretical apparatus is not quite matter enought to define
-    "table-driven" conveniently.  See <a href="#text-term-table-driven">below</a>
-    </footnote>
+    publishes a description of a translator,
+    illustrating it with two translations
+    of brief texts from Japanese to English.
+    Sakai's translation scheme is hopelessly underpowered,
+    an example of the linguistic naivety
+    prevalent in the field at the time.
+    But the parser in Sakai's translator is not naive,
+    and will remains in use.
+    </p>
+    <p>
+    Sakai's is 
+    the first description of a <a href=
+    "#text-term-table-driven">table-driven</a>
     parser.
-    Sakai's algorithm,
-    more often known as the CYK algorithm after some of
-    its rediscoverers<footnote>
+    His algorithm will be rediscovered several times between now and 1969.
+    It will more commonly be called the CYK algorithm after the names
+    of some of its rediscoverers.<footnote>
       The credited rediscoveries are <bibid>Hayes 1962</bibid>
       (attributed to Cocke);
       <bibid>Younger 1967</bibid>;
       and <bibid>Kasami and Torii 1969</bibid>.
+    </footnote>
+    </p>
+    <p>Sakai's algorithm is bottom-up --
+    it works by pairing adjacent symbols
+    and selecting pairs according to a table.
+    The table entries can be probabilities,
+    and this is highly useful in some circumstances.
+    If the probabilities other than 0 and 1 are used,
+    Sakai's algorithm is non-Chomskyan.
+    If the probabilities are restricted to 0 and 1,
+    they can be treated as booleans instead,
+    and in this special case Sakai's algorithm is Chomskyan.<footnote>
+    <bibref>Sakai 1961</bibref> does not give a context-free grammar
+    for its example, so it is perhaps best called non-Chomskyan.
+    On the other hand, Sakai's table for adjacent pairs
+     are restricted to booleans.
+    </footnote>
+    </p>
+    <p>
+    Sakai's algorithm is impractically slow for large inputs<footnote>
+    Sakai's algorithm runs in will come to be called
+    <a href="#text-term-linear">cubic time</a>.
     </footnote>.
-    Sakai's algorithm will be rediscovered several times between now and 1969.
+    But Sakai's algorithm will remain useful in very special circumstances.
+    These are cases where no method is capable of parsing long inputs in reasonable
+    time,
+    and where the grammar is conveniently described in terms of the frequency of adjacent
+    components.
+    This will make Sakai's a good fit with some statistically-based approaches
+    to Natural Language Processing.
     </p>
-    <p>Sakai's algorithm is non-Chomskyan and bottom-up.
-    but it remains useful in very special circumstances
-    -- cases
-    where only short inputs can be parsed<footnote>
-    It runs in will come to be called cubic time.
-    "Cubic time" will be defined <a href="#text-term-linear">below</a>
-    </footnote>,
-    and where the grammar is described in terms of the frequency of adjacent
-    components -- that is, statistically.
-    Sakai presents his algorithm as part of
-    a hopelessly naive Japanese-to-English translation
-    system.
-    But the parsing part of Sakai's translator is far from naive
-    and will remain important in
-    natural language processing.
-    </p>
-    <p>TODO
-    </p>
-    <h1>Term: "Table-driven"</h1>
-    <p>TODO
+    <h1 id="text-term-table-driven">Term: "Table-driven"</h1>
+    <p>A parsing algorithm is "table-driven" if tracks the
+    parse using random access to data which varies in size
+    with the parse.
+    Table-driven parsing is a real challenge to 1961 hardware,
+    and its memory and speed demands are almost always seen 
+    as too great.
     </p>
     <h1>The Operator Issue as of 1961</h1>
     <p>The results of 1961 transformed the Operator Issue.
@@ -1402,7 +1442,7 @@
       for the ideal
       ALGOL parser was that it be
       <q>efficient</q>.
-      As of 1965 this notion becomes more precise,
+      By 1965 this notion becomes more precise,
       thanks to a notation that Knuth borrows from
       calculus.
       This
@@ -1504,7 +1544,7 @@
       get out of hand
       for the grammar of interest to the user.
     </p>
-    <h1>1965: Knuth discovers LR</h1>
+    <h1 id="text-1965-knuth">1965: Knuth discovers LR</h1>
     <p>Donald Knuth answers<footnote>
         <bibref>Knuth 1965.</bibref>.
       </footnote>
@@ -1785,7 +1825,14 @@
       The reasons seem overwhelming:
     </p>
     <ul>
-      <li>In 1965, every practical parser is stack-driven.</li>
+      <li>In 1965, every practical parser is stack-driven.<footnote>
+      Table-driven parsers have already been described in the parsing literature,
+      but they will keep being rediscovered until 1969.
+      That the journal referees accept descriptions of table-parsing
+      as new research
+      suggests that table parsers are seeing little or no
+      actual usage.
+      </footnote></li>
       <li>An algorithm that combines state transitions and stack operations is
         already a challenge to existing machines.
         In 1965, any more complicated algorithm is likely to be unuseable
@@ -2095,7 +2142,8 @@
       </footnote>.
       Like the Irons
       algorithm, Earley's algorithm is Chomskyan, declarative and fully
-      general. Unlike the Irons algorithm, it does not backtrack. Earley's
+      general. Unlike the Irons algorithm, it is table-driven
+      and does not backtrack. Earley's
       algorithm is both top-down and bottom-up at once -- it uses dynamic
       programming and keeps track of the parse in tables. Earley's approach
       makes a lot of sense and looks very promising indeed, but
