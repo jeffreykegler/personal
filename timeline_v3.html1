@@ -3050,6 +3050,12 @@
     <p>
       An attempt is made to list the original publication,
       which is not necessarily the one consulted.
+      Departures from format are made to include information
+      of historical interest, for instance the full author
+      list of the ALGOL 1960 report.
+      For similar reasons, the date in the tag may be the
+      date of the source for purposes of historical priority,
+      rather a publication date.
     </p>
     <p>
       <bibid>Aho and Ullman 1972</bibid>:
