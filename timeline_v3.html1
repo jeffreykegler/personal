@@ -820,6 +820,85 @@
       the Bloomfieldian definition will become even more
       firmly entrenched.
     </p>
+    <h1 id="text-1960-Oettinger">April 1960: Oettinger discovers pushdown automata</h1>
+    <p>
+      Mathematical study of stacks as models of computing begins with
+      a paper submitted by
+      Anthony Oettinger to a symposium in 1960.<footnote>
+        <bibref>Oettinger 1960</bibref>
+        American Mathematical Society, 1961.
+      </footnote>
+      Oettinger's paper is full of evidence that stacks
+      are still very new.
+      For a start, he does not call them stacks --
+      he calls them "pushdown stores".
+      And Oettinger does not assume his highly sophisticated audience
+      knows what the "push"
+      and "pop" operations are --
+      he defines them based on
+      another set of operations --
+      one that eventually will form the basis
+      of the APL language.
+    </p>
+    <p>
+      Oettinger's definitions all follow the behavorist model --
+      they are sets of strings.<footnote>
+        <bibref>Oettinger 1960</bibref>, p. 106.
+      </footnote>
+      Oettinger's mathematical model of stacks
+      will come to be called
+      a deterministic pushdown automata (DPDA).
+      DPDA's will become
+      the subject of a substantial literature.
+    </p>
+    <p>
+      Oettinger's own field is Russian translation.
+      He hopes that DPDA's
+      will be an adequate basis for
+      the study of both computer and
+      natural language translation.
+      DPDA's soon prove totally inadequate
+      for natural language translation.
+      But for dealing with computing languages,
+      DPDA's will have a much longer life.
+    </p>
+    <p>
+      Oettinger challenges the research community to
+      develop a systematic method for generating stack-based
+      parsers.<footnote>
+        "The development of a theory of pushdown algorithms should
+        hopefully lead to systematic techniques for generating
+        algorithms satisfying given requirements to replace
+        the ad hoc invention of each new algorithm."
+        (<bibref>Oettinger 1960</bibref>, p. 127.)
+      </footnote>
+      This search
+      quickly becomes identified
+      with the search for a theoretical basis for practical parsing.
+    </p>
+    <h1>Term: "State-driven"</h1>
+    <p>A "state-driven" parser is one which tracks the parse using
+    a data of a small constant size.
+    Regular expressions are the classic state-driven parsers,
+    and their state usually can be tracked as an integer.
+    Regular expressions have limited power,
+    but a parser just does not get any faster or
+    more compact.
+    A parsing algorithm
+    </p>
+    <h1>Term: "Stack-driven"</h1>
+    <p>
+    A "stack-driven" algorithm tracks the parse using
+    data which is not of constant size, but
+    which needs to access only a small fixed amount of it --
+    that is, at any point the parser
+    only needs to look at the "top" of the stack.
+    By 1961, stacks are becoming understood,
+    and the hardware is becoming capable of handling them.
+    As of 1961, all of the more powerful algorithms
+    with acceptable speed are based
+    on stacks in some way.
+    </p>
     <h1>May 1960: The ALGOL report</h1>
     <p>The ALGOL 60 report<footnote>
         <bibref>ALGOL 1960</bibref>.
@@ -1080,147 +1159,6 @@
         will be important for us.
       </footnote>.
     </p>
-    <h1>December 1961: Lucas discovers recursive descent</h1>
-    <p>Peter Lucas publishes his description of a top-down parser<footnote>
-        <bibref>Lucas 1961</bibref>.
-      </footnote>.
-      Either Irons paper or this one can be considered to be
-      the first description of recursive descent<footnote>
-        <bibref>Grune and Jacobs 2008</bibref>
-        call Lucas the discoverer of recursive descent.
-        In fact, both
-        <bibref>Irons 1961</bibref>
-        and
-        <bibref>Lucas 1961</bibref>
-        are recursive descent with a major bottom-up element.
-        Perhaps Grune and Jacobs based their decision on the Lucas' description of his algorithm,
-        which talks about his parser's bottom-up element only briefly,
-        while describing the top-down element in detail.
-        Also, the Lucas algorithm resembles modern implementations of recursive descent
-        much more closely than does
-        <bibref>Irons 1961</bibref>.
-        <br><br>
-        In conversation, Irons described his 1961 parser as a kind of recursive descent.
-        Peter Denning
-        (<bibref>Denning 1983</bibref>)
-        gives priority to Irons and,
-        as a grateful former student of Irons,
-        that is of course my preference on
-        a personal basis.
-      </footnote>.
-      Except to say that he deals properly with them, Lucas does not say
-      how he parses operator expressions.
-      But it is easy to believe Lucas'
-      claim -- by this time the techniques for
-      parsing operator expressions are well understood<footnote>
-        <bibref>Lucas 1961</bibref>
-        cites
-        <bibref>Samuelson and Bauer 1960</bibref>.
-      </footnote>.
-    </p>
-    <h1>November 1961: Dijkstra's shunting yard algorithm</h1>
-    <p>In November 1961, Dijkstra publishes the
-      <q>shunting yard</q>
-      algorithm<footnote>
-        <bibref>Dijkstra 1961</bibref>.
-      </footnote>.
-      In Norvell's useful classification<footnote>
-        <bibref>Norvell 1999</bibref>.
-      </footnote>
-      of operator expression parsers,
-      all
-      earlier parsers have been what he calls
-      <q>the classic
-        algorithm</q>.
-    </p>
-    <p>
-      Dijkstra's approach is new.
-      In the classic approach,
-      the number
-      of levels of precedence is hard-coded into the
-      algorithm.
-      Dijkstra's algorithm can handle any number of levels
-      of precedence without a change in its code,
-      and without any effect on its running speed.
-    </p>
-    <h1 id="text-1960-Oettinger">April 1960: Oettinger discovers pushdown automata</h1>
-    <p>
-      Mathematical study of stacks as models of computing begins with
-      a paper submitted by
-      Anthony Oettinger to a symposium in 1960.<footnote>
-        <bibref>Oettinger 1960</bibref>
-        American Mathematical Society, 1961.
-      </footnote>
-      Oettinger's paper is full of evidence that stacks
-      are still very new.
-      For a start, he does not call them stacks --
-      he calls them "pushdown stores".
-      And Oettinger does not assume his highly sophisticated audience
-      knows what the "push"
-      and "pop" operations are --
-      he defines them based on
-      another set of operations --
-      one that eventually will form the basis
-      of the APL language.
-    </p>
-    <p>
-      Oettinger's definitions all follow the behavorist model --
-      they are sets of strings.<footnote>
-        <bibref>Oettinger 1960</bibref>, p. 106.
-      </footnote>
-      Oettinger's mathematical model of stacks
-      will come to be called
-      a deterministic pushdown automata (DPDA).
-      DPDA's will become
-      the subject of a substantial literature.
-    </p>
-    <p>
-      Oettinger's own field is Russian translation.
-      He hopes that DPDA's
-      will be an adequate basis for
-      the study of both computer and
-      natural language translation.
-      DPDA's soon prove totally inadequate
-      for natural language translation.
-      But for dealing with computing languages,
-      DPDA's will have a much longer life.
-    </p>
-    <p>
-      Oettinger challenges the research community to
-      develop a systematic method for generating stack-based
-      parsers.<footnote>
-        "The development of a theory of pushdown algorithms should
-        hopefully lead to systematic techniques for generating
-        algorithms satisfying given requirements to replace
-        the ad hoc invention of each new algorithm."
-        (<bibref>Oettinger 1960</bibref>, p. 127.)
-      </footnote>
-      This search
-      quickly becomes identified
-      with the search for a theoretical basis for practical parsing.
-    </p>
-    <h1>Term: "Stack-driven"</h1>
-    <p>A "state-driven" parser is one which tracks the parse using
-    a data of a small constant size.
-    Regular expressions are the classic state-driven parsers,
-    and their state usually can be tracked as an integer.
-    Regular expressions have limited power,
-    but a parser just does not get any faster or
-    more compact.
-    A parsing algorithm
-    </p>
-    <p>
-    A "stack-driven" algorithm tracks the parse using
-    data which is not of constant size, but
-    which needs to access only a small fixed amount of it --
-    that is, at any point the parser
-    only needs to look at the "top" of the stack.
-    By 1961, stacks are becoming understood,
-    and the hardware is becoming capable of handling them.
-    As of 1961, all of the more powerful algorithms
-    with acceptable speed are based
-    on stacks in some way.
-    </p>
     <h1 id="text-1961-sakai">September 1961: Sakai discovers table parsing</h1>
     <p>Sakai publishes<footnote>
     <bibref>Sakai 1961</bibref>
@@ -1285,6 +1223,69 @@
     Table-driven parsing is a real challenge to 1961 hardware,
     and its memory and speed demands are almost always seen 
     as too great.
+    </p>
+    <h1>November 1961: Dijkstra's shunting yard algorithm</h1>
+    <p>In November 1961, Dijkstra publishes the
+      <q>shunting yard</q>
+      algorithm<footnote>
+        <bibref>Dijkstra 1961</bibref>.
+      </footnote>.
+      In Norvell's useful classification<footnote>
+        <bibref>Norvell 1999</bibref>.
+      </footnote>
+      of operator expression parsers,
+      all
+      earlier parsers have been what he calls
+      <q>the classic
+        algorithm</q>.
+    </p>
+    <p>
+      Dijkstra's approach is new.
+      In the classic approach,
+      the number
+      of levels of precedence is hard-coded into the
+      algorithm.
+      Dijkstra's algorithm can handle any number of levels
+      of precedence without a change in its code,
+      and without any effect on its running speed.
+    </p>
+    <h1>December 1961: Lucas discovers recursive descent</h1>
+    <p>Peter Lucas publishes his description of a top-down parser<footnote>
+        <bibref>Lucas 1961</bibref>.
+      </footnote>.
+      Either Irons paper or this one can be considered to be
+      the first description of recursive descent<footnote>
+        <bibref>Grune and Jacobs 2008</bibref>
+        call Lucas the discoverer of recursive descent.
+        In fact, both
+        <bibref>Irons 1961</bibref>
+        and
+        <bibref>Lucas 1961</bibref>
+        are recursive descent with a major bottom-up element.
+        Perhaps Grune and Jacobs based their decision on the Lucas' description of his algorithm,
+        which talks about his parser's bottom-up element only briefly,
+        while describing the top-down element in detail.
+        Also, the Lucas algorithm resembles modern implementations of recursive descent
+        much more closely than does
+        <bibref>Irons 1961</bibref>.
+        <br><br>
+        In conversation, Irons described his 1961 parser as a kind of recursive descent.
+        Peter Denning
+        (<bibref>Denning 1983</bibref>)
+        gives priority to Irons and,
+        as a grateful former student of Irons,
+        that is of course my preference on
+        a personal basis.
+      </footnote>.
+      Except to say that he deals properly with them, Lucas does not say
+      how he parses operator expressions.
+      But it is easy to believe Lucas'
+      claim -- by this time the techniques for
+      parsing operator expressions are well understood<footnote>
+        <bibref>Lucas 1961</bibref>
+        cites
+        <bibref>Samuelson and Bauer 1960</bibref>.
+      </footnote>.
     </p>
     <h1>The Operator Issue as of 1961</h1>
     <p>The results of 1961 transformed the Operator Issue.
@@ -2499,6 +2500,7 @@
         <bibref>Wall 2014</bibref>.
       </footnote>.
     </p>
+    <h1>The Operator Issue as of 1991</h1>
     <p>
       On the written record, the discontent with LALR and
       <tt>yacc</tt>
