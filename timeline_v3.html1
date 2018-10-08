@@ -820,7 +820,7 @@
       the Bloomfieldian definition will become even more
       firmly entrenched.
     </p>
-    <h1>1960: The ALGOL report</h1>
+    <h1>May 1960: The ALGOL report</h1>
     <p>The ALGOL 60 report<footnote>
         <bibref>ALGOL 1960</bibref>.
       </footnote>
@@ -936,7 +936,7 @@
         is unproblematic.
       </footnote>.
     </p>
-    <h1>1960: Glennie's compiler-compiler</h1>
+    <h1>July 1960: Glennie's compiler-compiler</h1>
     <p>The first description of a consciously non-Chomskyan compiler
       seems to predate the first description of a Chomskyan parser.
       It is A.E. Glennie's 1960 description of his compiler-compiler<footnote>
@@ -980,8 +980,8 @@
         or pragmatic?
       </comment>
     </p>
-    <h1>1961: The first parsing paper</h1>
-    <p>In January, Ned Irons publishes a paper describing his ALGOL
+    <h1>January 1961: The first parsing paper</h1>
+    <p>Ned Irons publishes a paper describing his ALGOL
       60 parser.
       It is the first paper to fully describe any parser.
       The Irons algorithm is pure Chomskyan,
@@ -1080,7 +1080,7 @@
         will be important for us.
       </footnote>.
     </p>
-    <h1>1961: Lucas discovers recursive descent</h1>
+    <h1>December 1961: Lucas discovers recursive descent</h1>
     <p>Peter Lucas publishes his description of a top-down parser<footnote>
         <bibref>Lucas 1961</bibref>.
       </footnote>.
@@ -1118,7 +1118,7 @@
         <bibref>Samuelson and Bauer 1960</bibref>.
       </footnote>.
     </p>
-    <h1>1961: Dijkstra's shunting yard algorithm</h1>
+    <h1>November 1961: Dijkstra's shunting yard algorithm</h1>
     <p>In November 1961, Dijkstra publishes the
       <q>shunting yard</q>
       algorithm<footnote>
@@ -1143,13 +1143,15 @@
       of precedence without a change in its code,
       and without any effect on its running speed.
     </p>
-    <h1 id="text-1961-Oettinger">1961: Oettinger discovers pushdown automata</h1>
+    <h1 id="text-1960-Oettinger">April 1960: Oettinger discovers pushdown automata</h1>
     <p>
-      Mathematical study of stacks as models of computing begins with Anthony Oettinger's 1961 paper.<footnote>
-        <bibref>Oettinger 1961</bibref>
+      Mathematical study of stacks as models of computing begins with
+      a paper submitted by
+      Anthony Oettinger to a symposium in 1960.<footnote>
+        <bibref>Oettinger 1960</bibref>
         American Mathematical Society, 1961.
       </footnote>
-      Oettinger 1961 is full of evidence that stacks
+      Oettinger's paper is full of evidence that stacks
       are still very new.
       For a start, he does not call them stacks --
       he calls them "pushdown stores".
@@ -1164,7 +1166,7 @@
     <p>
       Oettinger's definitions all follow the behavorist model --
       they are sets of strings.<footnote>
-        <bibref>Oettinger 1961</bibref>, p. 106.
+        <bibref>Oettinger 1960</bibref>, p. 106.
       </footnote>
       Oettinger's mathematical model of stacks
       will come to be called
@@ -1191,7 +1193,7 @@
         hopefully lead to systematic techniques for generating
         algorithms satisfying given requirements to replace
         the ad hoc invention of each new algorithm."
-        (<bibref>Oettinger 1961</bibref>, p. 127.)
+        (<bibref>Oettinger 1960</bibref>, p. 127.)
       </footnote>
       This search
       quickly becomes identified
@@ -1219,7 +1221,7 @@
     with acceptable speed are based
     on stacks in some way.
     </p>
-    <h1 id="text-1961-sakai">1961: Sakai discovers table parsing</h1>
+    <h1 id="text-1961-sakai">September 1961: Sakai discovers table parsing</h1>
     <p>Sakai publishes<footnote>
     <bibref>Sakai 1961</bibref>
     </footnote>
@@ -1551,11 +1553,11 @@
       </footnote>
       the challenge expressed
       a few years earlier by
-      <a href="#text-1961-Oettinger">Oettinger</a>.
+      <a href="#text-1960-Oettinger">Oettinger</a>.
       Oettinger had hoped for a theory of stack-based
       parsing
       to replace "ad hoc invention".<footnote>
-        (<bibref>Oettinger 1961</bibref>, p. 127.)
+        (<bibref>Oettinger 1960</bibref>, p. 127.)
       </footnote>
       Knuth responds with a theory that
       encompasses all the "tricks"<footnote>
@@ -1841,8 +1843,8 @@
           In 1964, advocates of stack-based parsing would not
           have been seen themselves as settling for a "safe"
           or "traditional" solution.
-          <a href="#text-1961-Oettinger">As
-            recently as 1961</a>, readers of technical journals were
+          <a href="#text-1960-Oettinger">As
+            recently as 1960</a>, readers of technical journals were
           not expected to know what a stack was.
         </footnote>
       </li>
@@ -3086,6 +3088,9 @@
       Edited by Peter Naur. Springer, 1969.
       <a href="http://www.algol60.org/reports/algol60_rr.pdf">
         Accessed 23 April 2018</a>.
+	Originally published
+	in <mla_container>Communications of the ACM</mla_container>
+	Volume 3, Issue 5, May 1960, Pages 299-314.
       The report of the ALGOL 60 committee was very important,
       and I have departed from format
       to list all of its authors.
@@ -3297,6 +3302,7 @@
       Carnegie Institute of Technology,
       Computation Center, 1960.
       <mla_url>http://www.chilton-computing.org.uk/acl/literature/reports/p024.htm</mla_url>.
+      The paper is dated 10 July 1960.
       Accessed 24 April 2018.
     </p>
     <p>
@@ -3551,7 +3557,7 @@
         Formel&uuml;bersetzern/analysis of the structure of formula
         translators.</mla_title>
       <mla_container>Electronische Rechenlagen</mla_container>,
-      vol. 3, 11.4, 1961, pp. 159-167.
+      vol. 3, 11.4, December 1961, pp. 159-167.
     </p>
     <p>
       <bibid>Marpa::R2</bibid>:
@@ -3648,11 +3654,13 @@
       Accessed 25 April 2018.
     </p>
     <p>
-      <bibid>Oettinger 1961</bibid>:
+      <bibid>Oettinger 1960</bibid>:
       Oettinger, Anthony.
       <mla_title>Automatic Syntactic Analysis and the Pushdown Store.</mla_title>
       <mla_container>Proceedings of Symposia in Applied Mathematics</mla_container>,
       Volume 12, American Mathematical Society, 1961.
+      From the Proceedings of the Twelfth Symposium in
+      Applied Mathematics held in New York City, April 14-15, 1960.
     </p>
     <p>
       <bibid>Padua 2000</bibid>:
