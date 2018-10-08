@@ -700,10 +700,82 @@
       the Bloomfieldian definition will become even more
       firmly entrenched.
     </p>
+    <h1 id="text-1960-Oettinger">April 1960: Oettinger discovers pushdown automata</h1>
+    <p>
+      Mathematical study of stacks as models of computing begins with
+      a paper submitted by
+      Anthony Oettinger to a symposium in 1960.<a id="footnote-44-ref" href="#footnote-44">[44]</a>
+      Oettinger's paper is full of evidence that stacks
+      are still very new.
+      For a start, he does not call them stacks --
+      he calls them "pushdown stores".
+      And Oettinger does not assume his highly sophisticated audience
+      knows what the "push"
+      and "pop" operations are --
+      he defines them based on
+      another set of operations --
+      one that eventually will form the basis
+      of the APL language.
+    </p>
+    <p>
+      Oettinger's definitions all follow the behavorist model --
+      they are sets of strings.<a id="footnote-45-ref" href="#footnote-45">[45]</a>
+      Oettinger's mathematical model of stacks
+      will come to be called
+      a deterministic pushdown automata (DPDA).
+      DPDA's will become
+      the subject of a substantial literature.
+    </p>
+    <p>
+      Oettinger's own field is Russian translation.
+      He hopes that DPDA's
+      will be an adequate basis for
+      the study of both computer and
+      natural language translation.
+      DPDA's soon prove totally inadequate
+      for natural language translation.
+      But for dealing with computing languages,
+      DPDA's will have a much longer life.
+    </p>
+    <p>
+      Oettinger challenges the research community to
+      develop a systematic method for generating stack-based
+      parsers.<a id="footnote-46-ref" href="#footnote-46">[46]</a>
+      This search
+      quickly becomes identified
+      with the search for a theoretical basis for practical parsing.
+    </p>
+    <h1 id="h1-term_state_driven">
+    Term: "State-driven"
+    </h1>
+    <p>A "state-driven" parser is one which tracks the parse using
+    a data of a small constant size.
+    Regular expressions are the classic state-driven parsers,
+    and their state usually can be tracked as an integer.
+    Regular expressions have limited power,
+    but a parser just does not get any faster or
+    more compact.
+    A parsing algorithm
+    </p>
+    <h1 id="h1-term_stack_driven">
+    Term: "Stack-driven"
+    </h1>
+    <p>
+    A "stack-driven" algorithm tracks the parse using
+    data which is not of constant size, but
+    which needs to access only a small fixed amount of it --
+    that is, at any point the parser
+    only needs to look at the "top" of the stack.
+    By 1961, stacks are becoming understood,
+    and the hardware is becoming capable of handling them.
+    As of 1961, all of the more powerful algorithms
+    with acceptable speed are based
+    on stacks in some way.
+    </p>
     <h1 id="h1-may_1960_the_algol_report">
     May 1960: The ALGOL report
     </h1>
-    <p>The ALGOL 60 report<a id="footnote-44-ref" href="#footnote-44">[44]</a>
+    <p>The ALGOL 60 report<a id="footnote-47-ref" href="#footnote-47">[47]</a>
       specifies, for the first time, a block
       structured language. ALGOL 60 is recursively structured but the
       structure is implicit -- newlines are not semantically significant,
@@ -715,13 +787,13 @@
     </h1>
     <p>With the ALGOL 60 report, a search begins which continues to this day:
       to find a parser that solves the Parsing Problem.
-      Ideally such a parser is<a id="footnote-45-ref" href="#footnote-45">[45]</a>
+      Ideally such a parser is<a id="footnote-48-ref" href="#footnote-48">[48]</a>
     </p>
     <ul id="loc-parsing-problem">
       <li>efficient,</li>
       <li>general,</li>
       <li>declarative, and</li>
-      <li>practical<a id="footnote-46-ref" href="#footnote-46">[46]</a>.</li>
+      <li>practical<a id="footnote-49-ref" href="#footnote-49">[49]</a>.</li>
     </ul>
     <p>
       It is a case of 1960's
@@ -736,7 +808,7 @@
     <h1 id="h1-1960_bnf">
     1960: BNF
     </h1>
-    <p>In the ALGOL 60 report<a id="footnote-47-ref" href="#footnote-47">[47]</a>,
+    <p>In the ALGOL 60 report<a id="footnote-50-ref" href="#footnote-50">[50]</a>,
       Peter Naur improves the Backus notation and uses it to describe
       the language.
       This brings Backus' notation to wide attention.
@@ -765,14 +837,14 @@
     Term: "general"
     </h1>
     <p>A general parser is a parser that will parse
-      any grammar that can be written in BNF<a id="footnote-48-ref" href="#footnote-48">[48]</a>.
+      any grammar that can be written in BNF<a id="footnote-51-ref" href="#footnote-51">[51]</a>.
     </p>
     <h1 id="h1-july_1960_glennie_s_compiler_compiler">
     July 1960: Glennie's compiler-compiler
     </h1>
     <p>The first description of a consciously non-Chomskyan compiler
       seems to predate the first description of a Chomskyan parser.
-      It is A.E. Glennie's 1960 description of his compiler-compiler<a id="footnote-49-ref" href="#footnote-49">[49]</a>.
+      It is A.E. Glennie's 1960 description of his compiler-compiler<a id="footnote-52-ref" href="#footnote-52">[52]</a>.
       Glennie's
       <term>universal compiler</term>
       apparently is useable,
@@ -803,7 +875,7 @@
       he points out that the distinction
       between his procedural pseudo-BNF and declarative BNF,
       and clearly warns his reader that the difference is
-      <q>important</q><a id="footnote-50-ref" href="#footnote-50">[50]</a>.
+      <q>important</q><a id="footnote-53-ref" href="#footnote-53">[53]</a>.
       <comment>
         Is Glennie's non-Chomskyan-ism on theoretical grounds,
         or pragmatic?
@@ -823,10 +895,10 @@
       element -- it is what now would be called a
       <term>left
         corner</term>
-      parser<a id="footnote-51-ref" href="#footnote-51">[51]</a>.
+      parser<a id="footnote-54-ref" href="#footnote-54">[54]</a>.
       Since it is general,
       operator expressions are within the power of
-      the Irons parser<a id="footnote-52-ref" href="#footnote-52">[52]</a>.
+      the Irons parser<a id="footnote-55-ref" href="#footnote-55">[55]</a>.
     </p>
     <h1 id="h1-term_top_down">
     Term: "Top-down"
@@ -896,114 +968,10 @@
       a tree, which is evaluated bottom-up. Each node is evaluated using
       attributes
       <q>synthesized</q>
-      from its child nodes<a id="footnote-53-ref" href="#footnote-53">[53]</a>.
-    </p>
-    <h1 id="h1-december_1961_lucas_discovers_recursive_descent">
-    December 1961: Lucas discovers recursive descent
-    </h1>
-    <p>Peter Lucas publishes his description of a top-down parser<a id="footnote-54-ref" href="#footnote-54">[54]</a>.
-      Either Irons paper or this one can be considered to be
-      the first description of recursive descent<a id="footnote-55-ref" href="#footnote-55">[55]</a>.
-      Except to say that he deals properly with them, Lucas does not say
-      how he parses operator expressions.
-      But it is easy to believe Lucas'
-      claim -- by this time the techniques for
-      parsing operator expressions are well understood<a id="footnote-56-ref" href="#footnote-56">[56]</a>.
-    </p>
-    <h1 id="h1-november_1961_dijkstra_s_shunting_yard_algorithm">
-    November 1961: Dijkstra's shunting yard algorithm
-    </h1>
-    <p>In November 1961, Dijkstra publishes the
-      <q>shunting yard</q>
-      algorithm<a id="footnote-57-ref" href="#footnote-57">[57]</a>.
-      In Norvell's useful classification<a id="footnote-58-ref" href="#footnote-58">[58]</a>
-      of operator expression parsers,
-      all
-      earlier parsers have been what he calls
-      <q>the classic
-        algorithm</q>.
-    </p>
-    <p>
-      Dijkstra's approach is new.
-      In the classic approach,
-      the number
-      of levels of precedence is hard-coded into the
-      algorithm.
-      Dijkstra's algorithm can handle any number of levels
-      of precedence without a change in its code,
-      and without any effect on its running speed.
-    </p>
-    <h1 id="text-1960-Oettinger">April 1960: Oettinger discovers pushdown automata</h1>
-    <p>
-      Mathematical study of stacks as models of computing begins with
-      a paper submitted by
-      Anthony Oettinger to a symposium in 1960.<a id="footnote-59-ref" href="#footnote-59">[59]</a>
-      Oettinger's paper is full of evidence that stacks
-      are still very new.
-      For a start, he does not call them stacks --
-      he calls them "pushdown stores".
-      And Oettinger does not assume his highly sophisticated audience
-      knows what the "push"
-      and "pop" operations are --
-      he defines them based on
-      another set of operations --
-      one that eventually will form the basis
-      of the APL language.
-    </p>
-    <p>
-      Oettinger's definitions all follow the behavorist model --
-      they are sets of strings.<a id="footnote-60-ref" href="#footnote-60">[60]</a>
-      Oettinger's mathematical model of stacks
-      will come to be called
-      a deterministic pushdown automata (DPDA).
-      DPDA's will become
-      the subject of a substantial literature.
-    </p>
-    <p>
-      Oettinger's own field is Russian translation.
-      He hopes that DPDA's
-      will be an adequate basis for
-      the study of both computer and
-      natural language translation.
-      DPDA's soon prove totally inadequate
-      for natural language translation.
-      But for dealing with computing languages,
-      DPDA's will have a much longer life.
-    </p>
-    <p>
-      Oettinger challenges the research community to
-      develop a systematic method for generating stack-based
-      parsers.<a id="footnote-61-ref" href="#footnote-61">[61]</a>
-      This search
-      quickly becomes identified
-      with the search for a theoretical basis for practical parsing.
-    </p>
-    <h1 id="h1-term_stack_driven">
-    Term: "Stack-driven"
-    </h1>
-    <p>A "state-driven" parser is one which tracks the parse using
-    a data of a small constant size.
-    Regular expressions are the classic state-driven parsers,
-    and their state usually can be tracked as an integer.
-    Regular expressions have limited power,
-    but a parser just does not get any faster or
-    more compact.
-    A parsing algorithm
-    </p>
-    <p>
-    A "stack-driven" algorithm tracks the parse using
-    data which is not of constant size, but
-    which needs to access only a small fixed amount of it --
-    that is, at any point the parser
-    only needs to look at the "top" of the stack.
-    By 1961, stacks are becoming understood,
-    and the hardware is becoming capable of handling them.
-    As of 1961, all of the more powerful algorithms
-    with acceptable speed are based
-    on stacks in some way.
+      from its child nodes<a id="footnote-56-ref" href="#footnote-56">[56]</a>.
     </p>
     <h1 id="text-1961-sakai">September 1961: Sakai discovers table parsing</h1>
-    <p>Sakai publishes<a id="footnote-62-ref" href="#footnote-62">[62]</a>
+    <p>Sakai publishes<a id="footnote-57-ref" href="#footnote-57">[57]</a>
     publishes a description of a translator,
     illustrating it with two translations
     of brief texts, one Japanese to English,
@@ -1021,7 +989,7 @@
     parser.
     His algorithm will be rediscovered several times between now and 1969.
     It will more commonly be called the CYK algorithm after the names
-    of some of its rediscoverers.<a id="footnote-63-ref" href="#footnote-63">[63]</a>
+    of some of its rediscoverers.<a id="footnote-58-ref" href="#footnote-58">[58]</a>
     </p>
     <p>Sakai's algorithm is bottom-up --
     it works by pairing adjacent symbols
@@ -1032,10 +1000,10 @@
     Sakai's algorithm is non-Chomskyan.
     If the probabilities are restricted to 0 and 1,
     they can be treated as booleans instead,
-    and in this special case Sakai's algorithm is Chomskyan.<a id="footnote-64-ref" href="#footnote-64">[64]</a>
+    and in this special case Sakai's algorithm is Chomskyan.<a id="footnote-59-ref" href="#footnote-59">[59]</a>
     </p>
     <p>
-    Sakai's algorithm is impractically slow for large inputs<a id="footnote-65-ref" href="#footnote-65">[65]</a>.
+    Sakai's algorithm is impractically slow for large inputs<a id="footnote-60-ref" href="#footnote-60">[60]</a>.
     But Sakai's algorithm will remain useful in very special circumstances.
     These are cases where no method is capable of parsing long inputs in reasonable
     time,
@@ -1051,6 +1019,41 @@
     Table-driven parsing is a real challenge to 1961 hardware,
     and its memory and speed demands are almost always seen 
     as too great.
+    </p>
+    <h1 id="h1-november_1961_dijkstra_s_shunting_yard_algorithm">
+    November 1961: Dijkstra's shunting yard algorithm
+    </h1>
+    <p>In November 1961, Dijkstra publishes the
+      <q>shunting yard</q>
+      algorithm<a id="footnote-61-ref" href="#footnote-61">[61]</a>.
+      In Norvell's useful classification<a id="footnote-62-ref" href="#footnote-62">[62]</a>
+      of operator expression parsers,
+      all
+      earlier parsers have been what he calls
+      <q>the classic
+        algorithm</q>.
+    </p>
+    <p>
+      Dijkstra's approach is new.
+      In the classic approach,
+      the number
+      of levels of precedence is hard-coded into the
+      algorithm.
+      Dijkstra's algorithm can handle any number of levels
+      of precedence without a change in its code,
+      and without any effect on its running speed.
+    </p>
+    <h1 id="h1-december_1961_lucas_discovers_recursive_descent">
+    December 1961: Lucas discovers recursive descent
+    </h1>
+    <p>Peter Lucas publishes his description of a top-down parser<a id="footnote-63-ref" href="#footnote-63">[63]</a>.
+      Either Irons paper or this one can be considered to be
+      the first description of recursive descent<a id="footnote-64-ref" href="#footnote-64">[64]</a>.
+      Except to say that he deals properly with them, Lucas does not say
+      how he parses operator expressions.
+      But it is easy to believe Lucas'
+      claim -- by this time the techniques for
+      parsing operator expressions are well understood<a id="footnote-65-ref" href="#footnote-65">[65]</a>.
     </p>
     <h1 id="h1-the_operator_issue_as_of_1961">
     The Operator Issue as of 1961
@@ -2046,6 +2049,9 @@
       <q>fast
         but stupid</q><a id="footnote-109-ref" href="#footnote-109">[109]</a>.
     </p>
+    <h1 id="h1-the_operator_issue_as_of_1991">
+    The Operator Issue as of 1991
+    </h1>
     <p>
       On the written record, the discontent with LALR and
       <tt>yacc</tt>
@@ -3488,9 +3494,23 @@
         </blockquote>
  <a href="#footnote-43-ref">&#8617;</a></p>
 <p id="footnote-44"><b>44</b>.
-        <a href="#bib-ALGOL_1960">ALGOL 1960</a>.
+        <a href="#bib-Oettinger_1960">Oettinger 1960</a>
+        American Mathematical Society, 1961.
  <a href="#footnote-44-ref">&#8617;</a></p>
 <p id="footnote-45"><b>45</b>.
+        <a href="#bib-Oettinger_1960">Oettinger 1960</a>, p. 106.
+ <a href="#footnote-45-ref">&#8617;</a></p>
+<p id="footnote-46"><b>46</b>.
+        "The development of a theory of pushdown algorithms should
+        hopefully lead to systematic techniques for generating
+        algorithms satisfying given requirements to replace
+        the ad hoc invention of each new algorithm."
+        (<a href="#bib-Oettinger_1960">Oettinger 1960</a>, p. 127.)
+ <a href="#footnote-46-ref">&#8617;</a></p>
+<p id="footnote-47"><b>47</b>.
+        <a href="#bib-ALGOL_1960">ALGOL 1960</a>.
+ <a href="#footnote-47-ref">&#8617;</a></p>
+<p id="footnote-48"><b>48</b>.
         The linguistics literature discuss goals, philosophy and motivations,
         sometimes to the detriment of actual research
         (<a href="#bib-Harris_1993">Harris 1993</a>).
@@ -3526,8 +3546,8 @@
         but this he makes clear (pp. 607-608) that
         is because he sees it as a requirement
         for efficiency.
- <a href="#footnote-45-ref">&#8617;</a></p>
-<p id="footnote-46"><b>46</b>.
+ <a href="#footnote-48-ref">&#8617;</a></p>
+<p id="footnote-49"><b>49</b>.
           <term>Practical</term>
           here is a catch-all term
           for those properties which Parsing Theory
@@ -3539,11 +3559,11 @@
           But I think it can be taken as given that,
           when the discussion was about parsers intended for actual
           use, practicality was a goal.
- <a href="#footnote-46-ref">&#8617;</a></p>
-<p id="footnote-47"><b>47</b>.
+ <a href="#footnote-49-ref">&#8617;</a></p>
+<p id="footnote-50"><b>50</b>.
         <a href="#bib-ALGOL_1960">ALGOL 1960</a>.
- <a href="#footnote-47-ref">&#8617;</a></p>
-<p id="footnote-48"><b>48</b>.
+ <a href="#footnote-50-ref">&#8617;</a></p>
+<p id="footnote-51"><b>51</b>.
         As a pedantic point, a general parser need only parse
         <term>proper</term>
         grammars. A BNF grammar is
@@ -3552,14 +3572,14 @@
         Neither of these
         have any practical use, so that the restriction to proper grammars
         is unproblematic.
- <a href="#footnote-48-ref">&#8617;</a></p>
-<p id="footnote-49"><b>49</b>.
+ <a href="#footnote-51-ref">&#8617;</a></p>
+<p id="footnote-52"><b>52</b>.
         <a href="#bib-Glennie_1960">Glennie 1960</a>.
- <a href="#footnote-49-ref">&#8617;</a></p>
-<p id="footnote-50"><b>50</b>.
+ <a href="#footnote-52-ref">&#8617;</a></p>
+<p id="footnote-53"><b>53</b>.
         <a href="#bib-Glennie_1960">Glennie 1960</a>.
- <a href="#footnote-50-ref">&#8617;</a></p>
-<p id="footnote-51"><b>51</b>.
+ <a href="#footnote-53-ref">&#8617;</a></p>
+<p id="footnote-54"><b>54</b>.
         <a href="#bib-Irons_1961">Irons 1961</a>.
         Among those who state that
         <a href="#bib-Irons_1961">Irons 1961</a>
@@ -3567,24 +3587,49 @@
         is now called
         <term>left-corner</term>
         is Knuth (<a href="#bib-Knuth_1971">Knuth 1971</a>, p. 109).
- <a href="#footnote-51-ref">&#8617;</a></p>
-<p id="footnote-52"><b>52</b>.
+ <a href="#footnote-54-ref">&#8617;</a></p>
+<p id="footnote-55"><b>55</b>.
         Although it seems likely that parsing operator expressions would require
         backtracking,
         and therefore could be inefficient.
- <a href="#footnote-52-ref">&#8617;</a></p>
-<p id="footnote-53"><b>53</b>.
+ <a href="#footnote-55-ref">&#8617;</a></p>
+<p id="footnote-56"><b>56</b>.
         Irons is credited with the discovery of synthesized attributes
         by Knuth (<a href="#bib-Knuth_1990">Knuth 1990</a>).
         Synthesized attributes are a concept in semantics,
         which this timeline usually does not cover.
         But synthesized attributes
         will be important for us.
- <a href="#footnote-53-ref">&#8617;</a></p>
-<p id="footnote-54"><b>54</b>.
+ <a href="#footnote-56-ref">&#8617;</a></p>
+<p id="footnote-57"><b>57</b>.
+    <a href="#bib-Sakai_1961">Sakai 1961</a>
+ <a href="#footnote-57-ref">&#8617;</a></p>
+<p id="footnote-58"><b>58</b>.
+      The credited rediscoveries are <b id="bib-Hayes_1962">Hayes 1962</b>
+      (attributed to Cocke);
+      <b id="bib-Younger_1967">Younger 1967</b>;
+      and <b id="bib-Kasami_and_Torii_1969">Kasami and Torii 1969</b>.
+ <a href="#footnote-58-ref">&#8617;</a></p>
+<p id="footnote-59"><b>59</b>.
+    <a href="#bib-Sakai_1961">Sakai 1961</a> does not give a context-free grammar
+    for its example, so it is perhaps best called non-Chomskyan.
+    On the other hand, Sakai's table for adjacent pairs
+     are restricted to booleans.
+ <a href="#footnote-59-ref">&#8617;</a></p>
+<p id="footnote-60"><b>60</b>.
+    Sakai's algorithm runs in will come to be called
+    <a href="#text-term-linear">cubic time</a>.
+ <a href="#footnote-60-ref">&#8617;</a></p>
+<p id="footnote-61"><b>61</b>.
+        <a href="#bib-Dijkstra_1961">Dijkstra 1961</a>.
+ <a href="#footnote-61-ref">&#8617;</a></p>
+<p id="footnote-62"><b>62</b>.
+        <a href="#bib-Norvell_1999">Norvell 1999</a>.
+ <a href="#footnote-62-ref">&#8617;</a></p>
+<p id="footnote-63"><b>63</b>.
         <a href="#bib-Lucas_1961">Lucas 1961</a>.
- <a href="#footnote-54-ref">&#8617;</a></p>
-<p id="footnote-55"><b>55</b>.
+ <a href="#footnote-63-ref">&#8617;</a></p>
+<p id="footnote-64"><b>64</b>.
         <a href="#bib-Grune_and_Jacobs_2008">Grune and Jacobs 2008</a>
         call Lucas the discoverer of recursive descent.
         In fact, both
@@ -3606,50 +3651,11 @@
         as a grateful former student of Irons,
         that is of course my preference on
         a personal basis.
- <a href="#footnote-55-ref">&#8617;</a></p>
-<p id="footnote-56"><b>56</b>.
+ <a href="#footnote-64-ref">&#8617;</a></p>
+<p id="footnote-65"><b>65</b>.
         <a href="#bib-Lucas_1961">Lucas 1961</a>
         cites
         <a href="#bib-Samuelson_and_Bauer_1960">Samuelson and Bauer 1960</a>.
- <a href="#footnote-56-ref">&#8617;</a></p>
-<p id="footnote-57"><b>57</b>.
-        <a href="#bib-Dijkstra_1961">Dijkstra 1961</a>.
- <a href="#footnote-57-ref">&#8617;</a></p>
-<p id="footnote-58"><b>58</b>.
-        <a href="#bib-Norvell_1999">Norvell 1999</a>.
- <a href="#footnote-58-ref">&#8617;</a></p>
-<p id="footnote-59"><b>59</b>.
-        <a href="#bib-Oettinger_1960">Oettinger 1960</a>
-        American Mathematical Society, 1961.
- <a href="#footnote-59-ref">&#8617;</a></p>
-<p id="footnote-60"><b>60</b>.
-        <a href="#bib-Oettinger_1960">Oettinger 1960</a>, p. 106.
- <a href="#footnote-60-ref">&#8617;</a></p>
-<p id="footnote-61"><b>61</b>.
-        "The development of a theory of pushdown algorithms should
-        hopefully lead to systematic techniques for generating
-        algorithms satisfying given requirements to replace
-        the ad hoc invention of each new algorithm."
-        (<a href="#bib-Oettinger_1960">Oettinger 1960</a>, p. 127.)
- <a href="#footnote-61-ref">&#8617;</a></p>
-<p id="footnote-62"><b>62</b>.
-    <a href="#bib-Sakai_1961">Sakai 1961</a>
- <a href="#footnote-62-ref">&#8617;</a></p>
-<p id="footnote-63"><b>63</b>.
-      The credited rediscoveries are <b id="bib-Hayes_1962">Hayes 1962</b>
-      (attributed to Cocke);
-      <b id="bib-Younger_1967">Younger 1967</b>;
-      and <b id="bib-Kasami_and_Torii_1969">Kasami and Torii 1969</b>.
- <a href="#footnote-63-ref">&#8617;</a></p>
-<p id="footnote-64"><b>64</b>.
-    <a href="#bib-Sakai_1961">Sakai 1961</a> does not give a context-free grammar
-    for its example, so it is perhaps best called non-Chomskyan.
-    On the other hand, Sakai's table for adjacent pairs
-     are restricted to booleans.
- <a href="#footnote-64-ref">&#8617;</a></p>
-<p id="footnote-65"><b>65</b>.
-    Sakai's algorithm runs in will come to be called
-    <a href="#text-term-linear">cubic time</a>.
  <a href="#footnote-65-ref">&#8617;</a></p>
 <p id="footnote-66"><b>66</b>.
         But see the entry for 1973 on Pratt parsing
