@@ -1474,16 +1474,15 @@ __DATA__
       </footnote>.
     </p>
     <h1>The Operator Issue as of 1961</h1>
-    <p>The results of 1961 transformed the Operator Issue.
-      Before ALGOL,
-      parsing operator expressions essentially
-      <em>was</em>
-      parsing.
+    <p>The results of 1961 transform the Operator Issue.
+      Up until ALGOL,
+      parsing has essentially
+      been parsing operator expressions.
       After ALGOL, almost all languages will be block-structured
-      and ad hoc string manipulatons are no longer adequate --
-      the language as a whole requires a serious parsing technique.
-      Parsing operator expressions becomes a side show,
-      or so it seems.
+      and ad hoc string manipulatons will no longer be adequate --
+      the language as a whole will require a serious parsing technique.
+      Parsing operator expressions will be a side show.
+      Or so it seems.
     </p>
     <p>
       Why not use the
@@ -1500,10 +1499,10 @@ __DATA__
         entire languages as operator grammars is revisited.
       </footnote>.
     </p>
-    <p>Also by 1961, we have BNF.
+    <p>Also, as of 1961, we have BNF.
       This gives us a useful notation
       for describing grammars.
-      It allows us to introduce our Basic Operator Grammar (BASIC-OP):
+      BNF allows us to introduce our Basic Operator Grammar (BASIC-OP):
     </p>
     <pre id="g-basic-op"><tt>
       S ::= E
@@ -1516,7 +1515,7 @@ __DATA__
     <p><a href="#g-basic-op">BASIC-OP</a>
       has two operators, three levels of precedence
       and left associativity.
-      This was enough to challenge the primitive parsing techniques in use
+      This is enough to challenge the primitive parsing techniques in use
       before 1961.
       Surprisingly, this simple grammar will continue to bedevil mainstream parsing theory for the
       next half a century.
@@ -1528,7 +1527,7 @@ __DATA__
       And that is not the end of it.
       Making addition and multiplication right-associate
       is unnatural and,
-      as the authors of the IT compiler found out,
+      as the authors of the IT compiler had found out,
       causes users to revolt.
       But suppose we try to use this
       Right-recursive Operator Grammar (RIGHT-OP)
@@ -1578,8 +1577,8 @@ __DATA__
       and it is certainly what many other implementations did afterwards.
       Adding the operator expression subparser makes the implementation
       only quasi-Chomskyan,
-      but this was a price the profession has
-      been willing to pay.
+      but this is a price the profession
+      will be willing to pay.
     </p>
     <p>Alternatively,
       a recursive descent implementation can parse operator expressions
@@ -1588,9 +1587,9 @@ __DATA__
       This pushes some of the more important parsing
       out of the syntactic phase into the semantics
       but, once again,
-      it seemed that
-      Chomskyan purity had to be thrown overboard
-      if the ship was to stay afloat.
+      it seems that
+      Chomskyan purity will have to be thrown overboard
+      if the ship is to stay afloat.
     </p>
     <p>Bottom line: as of 1961 the Operator Issue takes a new form.
       Because of the Operator Issue,
@@ -1652,9 +1651,8 @@ __DATA__
       means that conclusions
       drawn from
       <q>big O</q>
-      results outlast steady improvements
-      in technology,
-      but capture non-linear jumps.
+      results stay relevant in the face of steady improvements
+      in technology.
     </p>
     <p>
       These big O functions take as their input some aspect of the algorithm's
@@ -1864,7 +1862,12 @@ __DATA__
       A language is extensional
       (or Bloomfieldian) if it consists only of an
       extension.
-      Otherwise, the language is intensional.
+      A language is intensional
+      if it consists of both an intension and
+      an extension.
+      (All languages have extensions.<footnote>
+      The empty set counts as an extension.
+      </footnote>)
       For most people, the term "language" means
       an intensional language.
     </p>
@@ -1883,11 +1886,11 @@ __DATA__
       but which are not predicted by Markov chains.
       Obviously, your model of an intensional language is wrong
       if its extension is wrong,
-      and if you can discover that without getting into
-      the semantics, all the better.
+      and if you can discover that without delving into
+      semantics, all the better.
     </p>
     <p>
-      Knuth needs to establish an equivalence
+      Knuth wants to show a relationship
       between his LR grammars,
       and the mathematical literature on
       stack-based parsing (DPDA's).
@@ -1920,24 +1923,29 @@ __DATA__
       the
       LR-parsers are the deterministic subset of the
       context-free parsers.
-      And "deterministic" seemed like a very good approximation
+      And "deterministic" seems like a very good approximation
       of practical.
-      All practical parsers in 1965 were
-      deterministic parsers.
+      All practical parsers in 1965 are
+      deterministic parsers.<footnote>
+      As of 1965,
+      the Irons parser has fallen out of favor
+      and <a href="text-1961-sakai">Sakai parsers</a>
+      are still being forgotten and rediscovered.
+      </footnote>
     </p>
     <p>
       Viewed this way,
-      LR-parsing looked like the equivalent
+      LR-parsing looks like the theoretical equivalent
       of practical parsing.
-      It was a "direct hit",
-      or as close to an exact equivalent of practical parsing
-      as theory was going to get.
+      It is
+      as close to an exact equivalent of practical parsing
+      as theory is
       Based on the algorithms of
       <bibref>Knuth 1965</bibref>,
-      that meant that the theoretical equivalent of "practical
-      parsing" was somewhere between LR(0) and LR(1).
+      that means that the theoretical equivalent of "practical
+      parsing" is somewhere between LR(0) and LR(1).
     </p>
-    <p id="text-LR-hierarchy-collapse">Not all the signs were promising, however.
+    <p id="text-LR-hierarchy-collapse">Not all the signs are promising, however.
       In fact, one of them is ominous.
       LR
       grammars form a hierarchy --
@@ -1949,8 +1957,6 @@ __DATA__
       is
       LR(k+1), but which is not
       LR(k).
-    </p>
-    <p>
       But if you just look at sets of strings,
       this hierarchy pancakes.
       Every
@@ -1963,10 +1969,7 @@ __DATA__
       k&#8805;1.
     </p>
     <p>It gets worse.
-      So far
-      LR(0) has withstood the general collapse of the
-      extensional hierarchy.
-      But in most practical applications,
+      In most practical applications,
       you can add an end-of-input marker to a grammar.<footnote>
         The exception are applications which receive their input "on-line";
         can not determine the size of their input in advance;
@@ -1984,7 +1987,7 @@ __DATA__
       In terms of strings-sets,
       there is no LR hierarchy:
     </p><center>
-      LR(0) = LR(1) = LR(2) = &nbsp;&nbsp; ... &nbsp;&nbsp; = LR(42) = &nbsp;&nbsp; ...
+      LR(0)&nbsp;=&nbsp;LR(1)&nbsp;=&nbsp;LR(2)&nbsp;=&nbsp;&nbsp;&nbsp;...&nbsp;&nbsp;=&nbsp;LR(42)&nbsp;=&nbsp;&nbsp;...
     </center>
     <p>In short,
       as a proxy for LR grammars,
@@ -1996,14 +1999,14 @@ __DATA__
         and one with no implications for practical parsing.
       </footnote>
     </p>
-    <h1>The Parsing Problem as of 1965</h1>
+    <h1 id="text-1965-parsing-problem">The Parsing Problem as of 1965</h1>
     <p>
       While the algorithm of
       <bibref>Knuth 1965</bibref>
-      did not solve the Parsing Problem,
-      it convinced most that stack-based,
+      does not solve the Parsing Problem,
+      it convinces most that stack-based,
       and therefore LR, parsing
-      was the framework for the solution.<footnote>I deal with the implications of
+      is the framework for the solution.<footnote>I deal with the implications of
         <bibref>Knuth 1965</bibref>
         for parsing theory
         at greater length in these blog posts:
@@ -2012,7 +2015,9 @@ __DATA__
         and
         <bibref>Kegler Undershoot 2018</bibref>.
       </footnote>
-      The reasons seem overwhelming:
+      To be sure,
+      there is no proof,
+      but the reasoning is persuasive:
     </p>
     <ul>
       <li>In 1965, every practical parser is stack-driven.<footnote>
@@ -2045,18 +2050,8 @@ __DATA__
       <li>In 1965, every practical parser is deterministic.</li>
       <li>In general, power is a trade-off for speed.</li>
     </ul>
-    <p>Extensional languages are used in this reasoning,
-      while the actual interest is in intensional languages.
-      <a href="#text-LR-hierarchy-collapse">And for extensions
-        the LR hierarchy collapses</a>.
-      But these things that are 
-      not considered troubling.
-      After all, there is no exact theoretical equivalent
-      of "practical" --
-      you always have to settle for a rough equivalent.
-    </p>
     <p>
-      In fact, there are aesthetic reasons to
+      There are also aesthetic reasons to
       think that this theoretical equivalent for practical
       parsing is not all that rough.
       Recall that deterministic stack-based parsing is
@@ -2068,13 +2063,26 @@ __DATA__
       and suggests that the theoreticians have uncovered
       the basic laws behind parsing.
     </p>
+    <p>Extensional languages are used in this reasoning,
+      while the actual interest is in intensional languages.
+      But these things that are 
+      not considered troubling.
+      After all, there is no exact theoretical equivalent
+      of "practical" --
+      you always have to settle for a rough equivalent.
+    </p>
     <p>
       Of course, "exactly" here means "exactly in terms of extensions".
-      But, again, in 1965 this is not extremely troubling.
-      Extensions are what is used.
-      Nobody understood the limits of extensions as a definition
-      of language better than Chomsky,
-      but Chomsky himself had used extensions
+      <a href="#text-LR-hierarchy-collapse">And for extensions
+        the LR hierarchy collapses</a>.
+      But in 1965 this is not considered troubling.
+      Extensions are what have been used,
+      and reasoning in terms of extensions has not bitten anyone yet.
+      After all,
+      when it came to the limits of extensions as a definition
+      of language, Chomsky had literally written the book,
+      but Chomsky had 
+      used extensions
       to produce some of his most
       impressive results.
     </p>
@@ -2255,7 +2263,7 @@ __DATA__
     </p><p>If there is a number in parentheses in this notation for
       parsing algorithms, it usually indicates the number of tokens of
       lookahead.
-      As an example, LL(1) means
+      For example, LL(1) means
       <q>scan from the
         left, using left reductions with one character of lookahead</q>.
       LL(1) will be important in what follows.
@@ -2332,17 +2340,17 @@ __DATA__
       </footnote>.
       Like the Irons
       algorithm, Earley's algorithm is Chomskyan, declarative and fully
-      general. Unlike the Irons algorithm, it is table-driven
-      and does not backtrack. Earley's
+      general. Unlike the Irons algorithm,
+      it does not backtrack. Earley's
       algorithm is both top-down and bottom-up at once -- it uses dynamic
-      programming and keeps track of the parse in tables. Earley's approach
+      programming and is table-driven. Earley's approach
       makes a lot of sense and looks very promising indeed, but
       it has
       three serious issues:</p>
     <ul>
       <li>First, there is a bug in the handling of zero-length rules.</li>
       <li>Second, it is quadratic for right recursions.</li>
-      <li>Third, the bookkeeping required to set up the tables is,
+      <li>Third, table-driven parsing is,
         by the standards of 1968 hardware, daunting.</li>
     </ul>
     <h1>1968: Attribute grammars</h1>
@@ -2412,16 +2420,23 @@ __DATA__
       of
       their two volume textbook
       summarizing the theory of parsing.
-      This book is still important. It
-      is also distressingly up-to-date -- progress in parsing theory
-      slowed dramatically after 1972. Aho and Ullman's version
+      As of <thisyear>,
+        <bibref>Aho and Ullman 1972</bibref>
+	will still be important.
+	It will also be
+      distressingly up-to-date -- progress in parsing theory
+      will slow dramatically after 1972.
+    </p>
+    <p>
+      Aho and Ullman's version
       of Earley's algorithm includes
       a straightforward fix to the zero-length rule bug in Earley's
       original<footnote>
         <bibref>Aho and Ullman 1972</bibref>, p 321.
       </footnote>.
       Unfortunately, this fix involves adding even
-      more bookkeeping to Earley's.</p>
+      more bookkeeping to Earley's.
+    </p>
     <p>Under the names TDPL and GTDPL, Aho and Ullman investigate
       the non-Chomksyan parsers in the Schorre lineage<footnote>
         <bibref>Aho and Ullman 1972</bibref>, pp. 456-485.
@@ -2435,19 +2450,19 @@ __DATA__
       government<footnote>
         <bibref>Simms 2014</bibref>.
       </footnote>.
-      Public interest in GTDPL fades.</p>
-    <h1 id="text-1973-LRR">1973: LR-regular</h1>
+      Whatever the reason, public interest in GTDPL fades.</p>
+    <h1 id="text-1973-LRR">1973: LRR</h1>
     <p>An article by &#268;ulik and Cohen
       extends the idea behind LR to
       grammars with infinite lookahead.<footnote>
         <bibref>&#268;ulik and Cohen 1973</bibref>.
-        &#268;ulik and Cohen give an algorithm for parsing LR-regular,
+        &#268;ulik and Cohen give an algorithm for parsing LRR,
         but the obstacles to implementation are daunting.
         (See
         <bibref>Grune and Jacobs 2008</bibref>,
         pp. 327-333 and Problem 9.28 on p. 341.)
         Their algorithm did not come into practical use,
-        and as of 1991 LR-regular grammars could be
+        and as of 1991 LRR grammars could be
         handled more easily by
         <a href="#text-1991-Leo">Joop Leo's algorithm</a>.</footnote>
       LR-regular (LRR) grammars are LR with lookahead that is
@@ -2505,9 +2520,9 @@ __DATA__
       </footnote>.
     </p>
     <p>As of <thisyear>, the Pratt approach
-      is not popular as an overall strategy.
+      will not be popular as an overall strategy.
       Under the name precedence climbing,
-      it is most often used
+      it will most often be used
       as a subparser within a recursive descent strategy.
       All
       operator expression subparsers break the Chomskyan paradigm so the
@@ -2568,7 +2583,7 @@ __DATA__
       that the parser be
       efficient, general, declarative and practical.
       LALR is linear and runs fast on 1979 hardware.
-      As of 1979 LALR seems practical.
+      LALR seems practical.
       And LALR is declarative.
       True, LALR is very far from general,
       but
@@ -2633,7 +2648,7 @@ __DATA__
         <bibref>Leo 1991</bibref>.
       </footnote>. Leo's algorithm is linear for
       <a href="#text-1973-LRR">
-      LR-regular, a superset of LR(k)</a>.
+      LRR, a superset of LR(k)</a>.
       That means it is linear for just about every
       unambiguous grammar of practical interest,
       and many ambiguous ones as well.
@@ -2972,7 +2987,7 @@ __DATA__
         <bibref>Leo 1991</bibref>
         proves his algorithm,
         and therefore Marpa,
-        is linear for the LR-regular
+        is linear for the LRR
         grammars -- the LR grammars with infinite lookahead, so long as the lookahead
         is a regular expresion.
         It is not known (in fact not decidable, see
