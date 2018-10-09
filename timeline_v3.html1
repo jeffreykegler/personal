@@ -250,7 +250,7 @@
       </li>
     </ul>
     <p>
-      Rutishauser's language,
+      Rutishauser's language
       is structured line-by-line,
       as will be all languages until LISP.
       No language until ALGOL will be truly block-structured.
@@ -267,8 +267,8 @@
     </p><p>
     </p>
     <h1>1950: Boehm's compiler</h1>
-    <p>During 1950, Corrado Boehm, also at the ETH Zurich develops his
-      own compiler.
+    <p>During 1950, Corrado Boehm, also at the ETH Zurich,
+      develops his own compiler.
       Rutishauser and Boehm are working at the same institution at the same
       time, but Boehm is unaware of Rutishauser's work until his own is
       complete.
@@ -351,11 +351,13 @@
       <q>compiles</q>
       them) into
       a single program.
+    </p>
+    <p>
       After Hopper the term
       <term>compiler</term>
       will acquire a different meaning,
-      once specific to the computer field.
-      After 1960, programs like Hoppers will
+      one specific to the computer field.
+      By 1956, programs like Hoppers will
       no longer be called
       <term>compilers</term><footnote>
         I hope nobody will read this terminological clarification as in any sense
@@ -490,14 +492,7 @@
     <p>In the 1956 document describing the IT compiler<footnote>
         <bibref>Chipps et al 1956</bibref>.
       </footnote>,
-      the IT team uses the term "compiler" in its modern sense<footnote>
-      "a comparison of ONR [Office of Naval Research] 1954
-      and ONR 1956
-      proceedings makes it clear that the work 'compiler'
-      had by now [1956]
-      acquired its modern meaning":
-      <bibref>Knuth and Pardo 1976</bibref>, p. 83.
-      <footnote>:
+      the IT team uses the term "compiler" in its modern sense:
       a fully automatic procedure, in other words a program,
       which translates from one language
       (the source language)
@@ -505,8 +500,21 @@
       (the target language).
       Most commonly,
       the ultimate target of a compiler is
-      an executable.
-      </footnote>.
+      an executable.<footnote>
+      According to Knuth,
+      "a comparison of ONR [Office of Naval Research] 1954
+      and ONR 1956
+      proceedings makes it clear that the work 'compiler'
+      had by now [1956]
+      acquired its modern meaning":
+      <bibref>Knuth and Pardo 1976</bibref>, p. 83.
+      <bibref>Chipps et al 1956</bibref> gives a definition
+      of the term "compiler", but its emphasis on flow charts
+      and machine instructions makes it very hard to recognize
+      as the modern one.
+      However, Knuth made a very careful study of the literature
+      and I defer to him.
+      </footnote>
     </p>
       <p>Compilers in the 1956 sense of the term had been
       envisioned even before Hopper used the term.
@@ -974,7 +982,7 @@
       On the other hand, the parser they seek will remain elusive for
       decades.
     </p>
-    <h1>1960: BNF</h1>
+    <h1>May 1960: BNF</h1>
     <p>In the ALGOL 60 report<footnote>
         <bibref>ALGOL 1960</bibref>.
       </footnote>,
@@ -3164,7 +3172,7 @@
     </p>
     <p>
       <bibid>Chipps et al 1956</bibid>:
-      Chipps, J., et al.
+      Chipps, J.; Koschmann, M.; Orgel, S.; Perlis, A.; and Smith, J.
       <mla_title>A mathematical language compiler.</mla_title>
       <mla_container>Proceedings of the 1956 11th ACM national meeting</mla_container>,
       ACM, 1956.
