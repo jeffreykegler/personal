@@ -15,9 +15,15 @@ my $fn_number = 0;
 my @fn_lines = ();
 my @lines = ();
 
+sub do_constants {
+    my ($line) = @_;
+    $line =~ s/<thisyear>/2018/g;
+    return $line;
+}
+
 LINE: while ( my $line = <DATA> ) {
     chomp $line;
-    $line =~ s/<thisyear>/2018/g;
+    $line = do_constants($line);
     if ( $line =~ /<footnote>/ ) {
         do_footnote($line);
 	next LINE;
@@ -107,6 +113,7 @@ sub do_footnote {
     my $post_footnote = '';
   FN_LINE: while ( my $fn_line = <DATA> ) {
         chomp $fn_line;
+	$fn_line = do_constants($fn_line);
         if ( $fn_line =~ m[<\/footnote>] ) {
 	    $post_footnote = $fn_line;
 	    $post_footnote =~ s[^.*<\/footnote>][];
@@ -2497,7 +2504,7 @@ __DATA__
         <bibref>Pratt 1973</bibref>, p. 51.
       </footnote>.
     </p>
-    <p>As of <y></y>, the Pratt approach
+    <p>As of <thisyear>, the Pratt approach
       is not popular as an overall strategy.
       Under the name precedence climbing,
       it is most often used
