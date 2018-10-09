@@ -2606,10 +2606,12 @@ __DATA__
       have not been
       fully met.
       Nonetheless,
-      after two decades of research,
+      even if there is a certain amount of
+      disappointment,
       it seems as if the Parsing Problem
       and the Operator Issue
       can both be declared solved.
+      Two decades of research have paid off.
     </p>
     <h1>1987: Perl 1 is released</h1>
     <p>Larry Wall introduces Perl 1<footnote>
