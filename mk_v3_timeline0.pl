@@ -17,6 +17,7 @@ my @lines = ();
 
 LINE: while ( my $line = <> ) {
     chomp $line;
+    $line =~ s/<thisyear>/2018/g;
     if ( $line =~ /<footnote>/ ) {
         do_footnote($line);
 	next LINE;
