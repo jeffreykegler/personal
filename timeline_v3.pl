@@ -187,7 +187,7 @@ __DATA__
 <html>
   <head>
     <title>
-      Parsing: a timeline -- V3.0
+      Parsing: a timeline -- V3.1
     </title>
     <style type="text/css">
       mytitle { font-size: 300%; text-align: center; display: block }
@@ -217,7 +217,7 @@ __DATA__
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.0</version>
-    <datestamp>Revision 2, 6 October 2018</datestamp>
+    <datestamp>Revision 1, 10 October 2018</datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact and complete description of
