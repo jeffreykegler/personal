@@ -2412,7 +2412,7 @@ __DATA__
       <tt>ed</tt>
       editor
       and its descendants, regular expressions become an everyday
-      part of the working programmers toolkit.</p>
+      part of the working programmer's toolkit.</p>
     <h1>1972: Aho and Ullman is published</h1>
     <p>Alfred Aho and Jeffrey Ullman publish
       the first volume<footnote>
