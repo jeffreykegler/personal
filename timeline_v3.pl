@@ -248,15 +248,19 @@ __DATA__
       independent?<footnote>
         Indirectly, Markov's purpose may have been
         to refute Nekrasov's proof of free will.
-        Nekrasov pointed out that social statistics of all kinds
-        follow the law of large numbers,
-        which (up until then)
-        had assumed events were independent.
-        Since social events were human choices,
-        Nekrasov saw this as a proof of free will.
-        Markov's demonstration that the law of large
+	Nekrasov reasoned as follows:
+	<ul>
+	<li>Events that follow the law of large numbers must be independent.</li>
+	<li>Social statistics follow the law of large numbers.</li>
+	<li>Social statistics are made up of individual human choices.</li>
+	<li>Individual human choices are independent.</li>
+	<li>Since individual human choices are independent of
+	outside influence,
+	human beings have free will.</li>
+	</ul>
+        Markov undercut Nekrasov's proof.
+	by demonstrating that the law of large
         numbers works just as well for dependent events
-        undercut Nekrasov's proof.
         (<bibref>Hayes 2013</bibref>, pp. 92-93).
       </footnote>.
     </p>
@@ -1201,7 +1205,7 @@ __DATA__
         is unproblematic.
       </footnote>.
     </p>
-    <h1>July 1960: Glennie's compiler-compiler</h1>
+    <h1 id="text-1960-glennie">July 1960: Glennie's compiler-compiler</h1>
     <p>The first description of a consciously non-Chomskyan compiler
       seems to predate the first description of a Chomskyan parser.
       It is A.E. Glennie's 1960 description of his compiler-compiler<footnote>
@@ -1339,10 +1343,6 @@ __DATA__
       from its child nodes<footnote>
         Irons is credited with the discovery of synthesized attributes
         by Knuth (<bibref>Knuth 1990</bibref>).
-        Synthesized attributes are a concept in semantics,
-        which this timeline usually does not cover.
-        But synthesized attributes
-        will be important for us.
       </footnote>.
     </p>
     <h1 id="text-1961-sakai">September 1961: Sakai discovers table parsing</h1>
@@ -1367,10 +1367,10 @@ __DATA__
     His algorithm will be rediscovered several times between now and 1969.
     It will more commonly be called the CYK algorithm after the names
     of some of its rediscoverers.<footnote>
-      The credited rediscoveries are <bibid>Hayes 1962</bibid>
+      The credited rediscoveries are <bibref>Hayes 1962</bibref>
       (attributed to Cocke);
-      <bibid>Younger 1967</bibid>;
-      and <bibid>Kasami and Torii 1969</bibid>.
+      <bibref>Younger 1967</bibref>;
+      and <bibref>Kasami and Torii 1969</bibref>.
     </footnote>
     </p>
     <p>Sakai's algorithm is bottom-up --
@@ -1383,9 +1383,10 @@ __DATA__
     If the probabilities are restricted to 0 and 1,
     they can be treated as booleans instead,
     and in this special case Sakai's algorithm is Chomskyan.<footnote>
-    <bibref>Sakai 1961</bibref> does not give a context-free grammar
-    for its example, so it is perhaps best called non-Chomskyan.
-    On the other hand, Sakai's table for adjacent pairs
+    <bibref>Sakai 1961</bibref> does not give context-free grammars
+    for its examples,
+    so it is perhaps best called non-Chomskyan.
+    On the other hand, Sakai's tables for adjacent pairs
      are restricted to booleans.
     </footnote>
     </p>
@@ -1644,8 +1645,8 @@ __DATA__
         avoid digression.
         For interested readers,
         the details of "big O"
-        notation can be worth learning:
-        <bibref>Wiki Big_O</bibref>.
+        notation are worth learning:
+        <bibref>Wiki Big O</bibref>.
       </footnote>.
       <q>Ignoring the constant</q>
       means that conclusions
@@ -1742,7 +1743,7 @@ __DATA__
       Oettinger had hoped for a theory of stack-based
       parsing
       to replace "ad hoc invention".<footnote>
-        (<bibref>Oettinger 1960</bibref>, p. 127.)
+        <bibref>Oettinger 1960</bibref>, p. 127.
       </footnote>
       Knuth responds with a theory that
       encompasses all the "tricks"<footnote>
@@ -1788,7 +1789,8 @@ __DATA__
 	the poor error-handling that
         the LR(k)-based parsers became known for.
 	And, since
-        LR(1) is still somewhat limited in its power,
+        LR(1) is still very limited in its power
+	compared to LRR,
 	it just does not seem to be worth it.
       </footnote>
       </p>
@@ -1929,7 +1931,7 @@ __DATA__
       deterministic parsers.<footnote>
       As of 1965,
       the Irons parser has fallen out of favor
-      and <a href="text-1961-sakai">Sakai parsers</a>
+      and <a href="#text-1961-sakai">Sakai parsers</a>
       are still being forgotten and rediscovered.
       </footnote>
     </p>
@@ -1972,9 +1974,9 @@ __DATA__
       In most practical applications,
       you can add an end-of-input marker to a grammar.<footnote>
         The exception are applications which receive their input "on-line";
-        can not determine the size of their input in advance;
-        and must return a result in a fixed amount of time.
-        For these few applications,
+        which can not determine the size of their input in advance;
+        and which must return a result in a fixed amount of time.
+        For this minority of applications,
 	adding an end marker to their input
         is not possible.
       </footnote>,
@@ -1992,9 +1994,9 @@ __DATA__
     <p>In short,
       as a proxy for LR grammars,
       LR language extensions look like they might be completely worthless.<footnote>
-        None of these problematic signs escape Knuth.
+        None of these problematic signs escaped Knuth.
         He discovers and proves them on pp. 630-636.
-        But Knuth seems to consider the LR hierarchy collapse a
+        But Knuth seemed to consider the LR hierarchy collapse a
         mathematical curiousity,
         and one with no implications for practical parsing.
       </footnote>
@@ -2021,9 +2023,9 @@ __DATA__
     </p>
     <ul>
       <li>In 1965, every practical parser is stack-driven.<footnote>
-      Table-driven parsers have already been described in the parsing literature,
+      Table-driven Sakai parsers have already been described in the parsing literature,
       but they will keep being rediscovered until 1969.
-      That the journal referees accept descriptions of table-parsing
+      That the journal referees keep accepting descriptions of Sakai parsing
       as new research
       suggests that table parsers are seeing little or no
       actual usage.
@@ -2101,7 +2103,7 @@ __DATA__
         also suggests investigation of parsers for superclasses
         of LR(k).
         Indeed,
-        Knuth shows elsewhere (p. 638)
+        Knuth shows (p. 638)
         that he is well aware that some grammars
         beyond LR(k) can be parsed in linear time.
         Knuth also is very much aware (p. 638) that
@@ -2134,16 +2136,16 @@ __DATA__
         Knuth had emphasized that
         proceeding strictly left-to-right
         is necessary for efficiency reasons.
-        So probably subsequent researchers were correct in
+        So subsequent researchers were probably correct in
         reading into Knuth a prediction that
         research into beyond-LR(k)
         parsing would be not be fruitful.
-        And, regardless of what Knuth himself believed,
+        Regardless of what Knuth himself believed,
         the consensus of the parsing theorists is not
         in doubt:
         interest in beyond-LR parsing will almost disappear
         after 1965.
-        Their attention will be focused almost
+        The theorist's attention will be focused almost
         exclusively on Knuth's suggestions for research within the stack-based
         model (p. 637).
         These included grammar rewrites;
@@ -2437,7 +2439,7 @@ __DATA__
       Unfortunately, this fix involves adding even
       more bookkeeping to Earley's.
     </p>
-    <p>Under the names TDPL and GTDPL, Aho and Ullman investigate
+    <p id="text-GTDPL">Under the names TDPL and GTDPL, Aho and Ullman investigate
       the non-Chomksyan parsers in the Schorre lineage<footnote>
         <bibref>Aho and Ullman 1972</bibref>, pp. 456-485.
       </footnote>. They note that
@@ -2636,9 +2638,9 @@ __DATA__
       The parsing technique is pure recursive descent.
       The examples shown for monadic parsing are very simple,
       and do not include operator expressions.
-      In his earlier non-monadic work, Wadler uses a very restricted form of operator expression:
-      His grammar avoided left recursion by using parentheses,
-      and operator precedence was not implemented
+      In his earlier non-monadic work, Wadler had used a very restricted form of operator expression:
+      His grammar had avoided left recursion by using parentheses,
+      and operator precedence had not been implemented
       <footnote>
         <bibref>Wadler 1985</bibref>.
       </footnote>.
@@ -2654,8 +2656,9 @@ __DATA__
       That means it is linear for just about every
       unambiguous grammar of practical interest,
       and many ambiguous ones as well.
-      In 1991 hardware is six orders of magnitude faster than
-      1968 hardware, so that the issue of bookkeeping overhead had receded
+      As of 1991,
+      hardware is six orders of magnitude faster than
+      1968 hardware, so that the issue of bookkeeping overhead has receded
       in importance.
       When it comes to speed,
       the game has changed in favor of the Earley algorithm.</p>
@@ -2665,7 +2668,8 @@ __DATA__
       the research consensus
       had excluded the possibility that a parser of a superset of the LR(k) languages
       could be practical and linear.
-      The argument from Knuth had been highly suggestive.
+      <a href="#text-1965-parsing-problem">The argument from Knuth</a>
+      had been highly suggestive.
       It was not actually a proof, but by 1991 many effectively take it as one.
     </p>
     <p>Does Leo's algorithm refute the consensus?
@@ -2674,7 +2678,8 @@ __DATA__
       <b>is</b> linear for a superset of Knuth's LR(k) grammars.
       But is Leo's algorithm practical?
     </p>
-    <p>But in 1991, most researchers see the Parsing Problem as "solved" --
+    <p>In 1991, almost nobody asks any of those questions.
+    Most researchers see the Parsing Problem as "solved" --
       a closed issue.
       Earley parsing is almost forgotten,
       and Leo's discovery is ignored.
@@ -2697,7 +2702,7 @@ __DATA__
       inputs.
       But almost all they tell the users about incorrect inputs
       is that they are incorrect.
-      In Larry's words, LALR is
+      In Larry Wall's words, LALR is
       <q>fast
         but stupid</q><footnote>
         <bibref>Wall 2014</bibref>.
@@ -2711,17 +2716,16 @@ __DATA__
       What programmer wants to announce to colleagues and
       potential employers that he cannot figure
       how to make the standard state-of-the-art tool work?
-      But, by 1991,
-      a movement away from LALR has already begun.
+      But a movement away from LALR has already begun.
       Parsing practice falls back on
-      recursive descent
-      and the Operator Issue
+      recursive descent.
+      The Operator Issue
       is back in full force.
     </p>
     <h1>1992: Combinator parsing</h1>
     <p>
       Combinator parsing
-      was introduced in two 1992 papers<footnote>
+      is introduced in two papers published this year.<footnote>
         Some sources consider
         <bibref>Wadler 1985</bibref>
         an
@@ -2730,9 +2734,10 @@ __DATA__
         I follow
         <bibref>Grune and Jacobs 2008</bibref>
         (p. 564).
-      </footnote>.
+      </footnote>
       Of more interest
-      to us is the one by Hutton, which focuses on combinator parsing<footnote>
+      to us is <bibref>Hutton 1992</bibref>,
+	which focuses on combinator parsing<footnote>
         The paper which is devoted to parsing is
         <bibref>Hutton 1992</bibref>.
         The other paper, which centers on combinators as a programming
@@ -2740,7 +2745,7 @@ __DATA__
         <bibref>Frost 1992</bibref>.
         Frost only mentions parsing in one paragraph, and
         that focuses on implementation issues.
-        Some of his grammars include operator expressions,
+        Some of Frost's grammars include operator expressions,
         but these avoid left recursion,
         and implement precedence and associativity,
         using parentheses.
@@ -2759,8 +2764,7 @@ __DATA__
       It is an extremely attractive idea.
     </p>
     <p>
-      But,
-      exciting as the new mathematics is,
+      Exciting as the new mathematics is,
       the underlying parsing theory contains
       nothing new --
       it is the decades-old recursive descent,
@@ -2843,7 +2847,7 @@ __DATA__
       addition associates left.
     </p>
     <p>
-      The solution in
+      The approach to parsing taken in
       <bibref>Hutton and Meijer 1996</bibref>
       will
       be familiar by now:
@@ -2906,21 +2910,24 @@ __DATA__
         <bibref>Ford 2002</bibref>.
       </footnote>
       fills this gap by
-      repackaging the nearly-forgotten GTDPL.
+      repackaging the nearly-forgotten
+      <a href="#text=GTDPL">GTDPL</a>.
       Ford's new algorithm,
       PEG,
       is declarative, always linear,
       and has an attractive new syntax.</p>
     <p>
-      But PEG is, in fact, pseudo-declarative --
-      it uses the BNF notation,
+      But PEG, like
+      <a href="#text-1960-glennie">Glennie's 1960 syntax formalism</a>,
+      is pseudo-declarative.
+      PEG uses BNF notation,
       but it does not parse the BNF grammar described by the notation:
       PEG achieves unambiguity by finding only a subset of the parses
       of its BNF grammar.
-      And, as with its predecessor GTDPL,
+      And, like its predecessor GTDPL,
       in practice it is usually impossible to determine what the subset
       is.
-      This means that the best a programmer
+      The best a programmer
       usually can
       do is to create a test suite and fiddle with the PEG description
       until it passes.
@@ -2937,8 +2944,8 @@ __DATA__
       not even the code.
       Under this circumstance, creating reliable software is impossible.
       As it is usually used,
-      PEG is the nitroglycerin of LL(1) parsing --
-      slightly more powerful, but too dangerous to be worth it.
+      PEG is the nitroglycerin of LL parsing --
+      slightly more powerful than LL(1), but too dangerous to be worth it.
     </p>
     <p>
       PEG, in safe use, would essentially be LL(1)<footnote>
@@ -2948,7 +2955,7 @@ __DATA__
         and almost all of the literature offers no cautions
         against unsafe use of PEG.
         Ford's PEG is efficient
-        and does in fact have real, if niche, uses.
+        and does have specialized uses.
         Programmers interested in the safe use of PEG should
         consult
         <bibref>Mascrenhas et al 2014</bibref>.
@@ -2981,26 +2988,25 @@ __DATA__
       practical implementation of Joop Leo's algorithm<footnote>
         <bibref>Kegler 2010</bibref>.
       </footnote>.
-      The new parser, named Marpa, is general, declarative
-      and linear for all the grammars discussed in
-      <bibref>Knuth 1965</bibref>, that is, it is
-      linear for the LR(k) grammars for all finite k<footnote>
+      Named Marpa, the new parser is general, table-driven, declarative,
+      and linear for LRR,
+      which in turn is a superset of the LR grammars discussed in
+      <bibref>Knuth 1965</bibref>.<footnote>
         In fact,
-        <bibref>Leo 1991</bibref>
-        proves his algorithm,
-        and therefore Marpa,
-        is linear for the LRR
-        grammars -- the LR grammars with infinite lookahead, so long as the lookahead
-        is a regular expresion.
-        It is not known (in fact not decidable, see
+        <bibref>Leo 1991</bibref>,
+	and therefore Marpa,
+        is linear for a superset of the LRR
+        grammars.
+        It is not known (in fact it is not decidable, see
         <bibref>Leo 1991</bibref>, p. 175.),
-        just how large a class of grammars
-        Marpa is linear for.
+        just how large the class of grammars
+        that Marpa parses in linear time is.
 	<br><br>
-        But it is known that there are both ambiguous and unambiguous grammars
-        for which Marpa is not linear.
-        In the general case, Marpa obeys the bounds of Earley's algorithm --
-        it is worst-case O(n**2) for unambiguous grammars;
+        It is known that there are both ambiguous and unambiguous grammars
+        for which <bibref>Leo 1991</bibref> is not linear.
+        In the general case, Marpa and <bibref>Leo 1991</bibref>
+	obey the bounds of Earley's algorithm --
+        they are worst-case O(n**2) for unambiguous grammars;
         and worst-case O(n**3) for ambiguous grammars.
         On the other hand, Marpa follows
         <bibref>Leo 1991</bibref>
@@ -3010,8 +3016,9 @@ __DATA__
       This means it is also linear for most of the grammar classes we have discussed in this
       timeline.
     </p><ul>
-      <li>LR(1) grammars.</li>
       <li>LL(k) grammars for all finite k, including LL(1) grammars.</li>
+      <li>LR(k) grammars for all finite k.</li>
+      <li>LALR grammars.</li>
       <li>Operator expression grammars<footnote>
           In the literature operator expression grammars are more often
           call simply
@@ -3020,8 +3027,8 @@ __DATA__
       </li>
     </ul>
     <p>This is a vast class of grammars,
-      and it has the important feature that a programmer
-      can readily determine if their grammar is linear under Marpa.
+      and it has the important feature that it allows a programmer
+      to readily determine if their grammar is linear under Marpa.
       Marpa will parse a grammar in linear time, if
     </p><ul id="loc-linearity-rules">
       <li>It is unambiguous<footnote>
@@ -3031,8 +3038,8 @@ __DATA__
           Note that while the general case is undecidable,
           Marpa will tell the programmer if a parse
           (a grammar with a particular input)
-          is ambiguous and, since it parses ambiguous
-          grammars, produces an error message showing where the ambiguity is.
+          is ambiguous and, since Marpa parses ambiguous grammars,
+	  it produces an error message showing where the ambiguity is.
         </footnote>.
       </li>
       <li>It has no unmarked middle recursions<footnote>A
@@ -3073,7 +3080,7 @@ __DATA__
     <p>The ability to ensure that a grammar can
       be parsed in linear time is highly useful for second-order
       languages --
-      a programmer can easily ensure that all his
+      a programmer can easily ensure that all her
       automatically generated grammars will be practical.
       Marpa's own DSL will make use of second-order programming.
     </p>
@@ -3205,7 +3212,8 @@ __DATA__
     <p>At first glance, no.
       While Marpa is general, it is not linear or quasi-linear for the
       general case,
-      and therefore cannot be considered efficient enough.
+      and in that sense,
+      Marpa might be considered not efficient enough.
       But to be general, a parser has to parse
       <b>every</b>
       context-free grammar, including
@@ -3213,19 +3221,22 @@ __DATA__
       list of possible parses takes exponential time.
       With the experience of the decades,
       linearity for a fully general BNF parser seems to
-      be a superfluous requirement for a practical parser.
+      be an unnecessary requirement for a practical parser.
     </p>
     <p>
-      The LR(k) grammars include every
+      The LRR grammars,
+      which Marpa does parse in linear time,
+      include every
       other grammar class we have discussed --
       LL(k) for all k,
+      LR(k) for all k,
       LALR,
       operator grammars,
       etc.
       If we change our criteria as follows:
     </p>
     <ul>
-      <li>linear for all LR(k) grammars,
+      <li>linear for all LRR grammars,
         and for all grammars parseable in linear time by any
         other parser in practical use;
       </li>
@@ -3241,10 +3252,11 @@ __DATA__
       Alan Perlis was one of them.
       Would he have accepted my claim that I have found the solution to the
       problem he posed?
-      I do not know,
-      but I am certain,
+      I do not know.
+      But I am certain,
       as anyone else who knew him can attest,
-      that he would given me a plain-spoken answer.
+      that he would given me
+      a direct and plain-spoken answer.
       In that spirit, I submit this timeline to the candid reader.
       In any case,
       I hope
@@ -3392,7 +3404,7 @@ __DATA__
     <p>
       <bibid>Chomsky 1959</bibid>:
       Chomsky, Noam.
-      <mla_title>A Review of B. F. Skinner’s Verbal Behavior</mla_title>.
+      <mla_title>A Review of B. F. Skinner's Verbal Behavior</mla_title>.
       <mla_container>Language</mla_container>,
       Volume 35, No. 1, 1959, 26-58.
       <mla_url>https://chomsky.info/1967____/</mla_url>.
@@ -3548,7 +3560,7 @@ __DATA__
       Prentice Hall, 1962.
       Describes two algorithms, the first of which,
       attributed to J Cocke,
-      is a CYK parser,
+      is a CYK parser.
     </p>
     <p>
       <bibid>Hilgers and Langville 2006</bibid>:
@@ -4016,7 +4028,7 @@ __DATA__
       Accessed 25 April 2018.
     </p>
     <p>
-      <bibid>Wiki Big_O</bibid>:
+      <bibid>Wiki Big O</bibid>:
       <mla_title>Big O Notation</mla_title>,
       <mla_container>Wikipedia</mla_container>,
       29 April 2018,
