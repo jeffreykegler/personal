@@ -1938,10 +1938,10 @@ __DATA__
     <p>
       Viewed this way,
       LR-parsing looks like the theoretical equivalent
-      of practical parsing.
-      It is
+      of practical parsing --
+      at least it is
       as close to an exact equivalent of practical parsing
-      as theory is
+      as theory is likely to get.
       Based on the algorithms of
       <bibref>Knuth 1965</bibref>,
       that means that the theoretical equivalent of "practical

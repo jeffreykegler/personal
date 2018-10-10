@@ -829,9 +829,7 @@
     <p>A general parser is a parser that will parse
       any grammar that can be written in BNF<a id="footnote-52-ref" href="#footnote-52">[52]</a>.
     </p>
-    <h1 id="h1-july_1960_glennie_s_compiler_compiler">
-    July 1960: Glennie's compiler-compiler
-    </h1>
+    <h1 id="text-1960-glennie">July 1960: Glennie's compiler-compiler</h1>
     <p>The first description of a consciously non-Chomskyan compiler
       seems to predate the first description of a Chomskyan parser.
       It is A.E. Glennie's 1960 description of his compiler-compiler<a id="footnote-53-ref" href="#footnote-53">[53]</a>.
@@ -1819,7 +1817,7 @@
       Unfortunately, this fix involves adding even
       more bookkeeping to Earley's.
     </p>
-    <p>Under the names TDPL and GTDPL, Aho and Ullman investigate
+    <p id="text-GTDPL">Under the names TDPL and GTDPL, Aho and Ullman investigate
       the non-Chomksyan parsers in the Schorre lineage<a id="footnote-95-ref" href="#footnote-95">[95]</a>. They note that
       <q>it can be quite difficult to determine what language is
         defined by a TDPL parser</q><a id="footnote-96-ref" href="#footnote-96">[96]</a>.
@@ -1984,9 +1982,9 @@
       The parsing technique is pure recursive descent.
       The examples shown for monadic parsing are very simple,
       and do not include operator expressions.
-      In his earlier non-monadic work, Wadler uses a very restricted form of operator expression:
-      His grammar avoided left recursion by using parentheses,
-      and operator precedence was not implemented
+      In his earlier non-monadic work, Wadler had used a very restricted form of operator expression:
+      His grammar had avoided left recursion by using parentheses,
+      and operator precedence had not been implemented
       <a id="footnote-110-ref" href="#footnote-110">[110]</a>.
     </p>
     <h1 id="text-1991-Leo">1991:
@@ -1998,8 +1996,9 @@
       That means it is linear for just about every
       unambiguous grammar of practical interest,
       and many ambiguous ones as well.
-      In 1991 hardware is six orders of magnitude faster than
-      1968 hardware, so that the issue of bookkeeping overhead had receded
+      As of 1991,
+      hardware is six orders of magnitude faster than
+      1968 hardware, so that the issue of bookkeeping overhead has receded
       in importance.
       When it comes to speed,
       the game has changed in favor of the Earley algorithm.</p>
@@ -2011,7 +2010,8 @@
       the research consensus
       had excluded the possibility that a parser of a superset of the LR(k) languages
       could be practical and linear.
-      The argument from Knuth had been highly suggestive.
+      <a href="#text-1965-parsing-problem">The argument from Knuth</a>
+      had been highly suggestive.
       It was not actually a proof, but by 1991 many effectively take it as one.
     </p>
     <p>Does Leo's algorithm refute the consensus?
@@ -2020,7 +2020,8 @@
       <b>is</b> linear for a superset of Knuth's LR(k) grammars.
       But is Leo's algorithm practical?
     </p>
-    <p>But in 1991, most researchers see the Parsing Problem as "solved" --
+    <p>In 1991, almost nobody asks any of those questions.
+    Most researchers see the Parsing Problem as "solved" --
       a closed issue.
       Earley parsing is almost forgotten,
       and Leo's discovery is ignored.
@@ -2043,7 +2044,7 @@
       inputs.
       But almost all they tell the users about incorrect inputs
       is that they are incorrect.
-      In Larry's words, LALR is
+      In Larry Wall's words, LALR is
       <q>fast
         but stupid</q><a id="footnote-112-ref" href="#footnote-112">[112]</a>.
     </p>
@@ -2057,11 +2058,10 @@
       What programmer wants to announce to colleagues and
       potential employers that he cannot figure
       how to make the standard state-of-the-art tool work?
-      But, by 1991,
-      a movement away from LALR has already begun.
+      But a movement away from LALR has already begun.
       Parsing practice falls back on
-      recursive descent
-      and the Operator Issue
+      recursive descent.
+      The Operator Issue
       is back in full force.
     </p>
     <h1 id="h1-1992_combinator_parsing">
@@ -2069,9 +2069,10 @@
     </h1>
     <p>
       Combinator parsing
-      was introduced in two 1992 papers<a id="footnote-113-ref" href="#footnote-113">[113]</a>.
+      is introduced in two papers published this year.<a id="footnote-113-ref" href="#footnote-113">[113]</a>
       Of more interest
-      to us is the one by Hutton, which focuses on combinator parsing<a id="footnote-114-ref" href="#footnote-114">[114]</a>.
+      to us is <a href="#bib-Hutton_1992">Hutton 1992</a>,
+	which focuses on combinator parsing<a id="footnote-114-ref" href="#footnote-114">[114]</a>.
       As Hutton explains<a id="footnote-115-ref" href="#footnote-115">[115]</a>
       a combinator is an attribute grammar
       with one inherited attribute (the input string)
@@ -2084,8 +2085,7 @@
       It is an extremely attractive idea.
     </p>
     <p>
-      But,
-      exciting as the new mathematics is,
+      Exciting as the new mathematics is,
       the underlying parsing theory contains
       nothing new --
       it is the decades-old recursive descent,
@@ -2161,7 +2161,7 @@
       addition associates left.
     </p>
     <p>
-      The solution in
+      The approach to parsing taken in
       <a href="#bib-Hutton_and_Meijer_1996">Hutton and Meijer 1996</a>
       will
       be familiar by now:
@@ -2226,21 +2226,24 @@
       In 2004,
       Bryan Ford<a id="footnote-121-ref" href="#footnote-121">[121]</a>
       fills this gap by
-      repackaging the nearly-forgotten GTDPL.
+      repackaging the nearly-forgotten
+      <a href="#text=GTDPL">GTDPL</a>.
       Ford's new algorithm,
       PEG,
       is declarative, always linear,
       and has an attractive new syntax.</p>
     <p>
-      But PEG is, in fact, pseudo-declarative --
-      it uses the BNF notation,
+      But PEG, like
+      <a href="#text-1960-glennie">Glennie's 1960 syntax formalism</a>,
+      is pseudo-declarative.
+      PEG uses BNF notation,
       but it does not parse the BNF grammar described by the notation:
       PEG achieves unambiguity by finding only a subset of the parses
       of its BNF grammar.
-      And, as with its predecessor GTDPL,
+      And, like its predecessor GTDPL,
       in practice it is usually impossible to determine what the subset
       is.
-      This means that the best a programmer
+      The best a programmer
       usually can
       do is to create a test suite and fiddle with the PEG description
       until it passes.
@@ -2257,8 +2260,8 @@
       not even the code.
       Under this circumstance, creating reliable software is impossible.
       As it is usually used,
-      PEG is the nitroglycerin of LL(1) parsing --
-      slightly more powerful, but too dangerous to be worth it.
+      PEG is the nitroglycerin of LL parsing --
+      slightly more powerful than LL(1), but too dangerous to be worth it.
     </p>
     <p>
       PEG, in safe use, would essentially be LL(1)<a id="footnote-122-ref" href="#footnote-122">[122]</a>.
@@ -2290,21 +2293,22 @@
     </h1>
     <p>Jeffrey Kegler (the author of this timeline) releases the first
       practical implementation of Joop Leo's algorithm<a id="footnote-124-ref" href="#footnote-124">[124]</a>.
-      The new parser, named Marpa, is general, declarative
-      and linear for all the grammars discussed in
-      <a href="#bib-Knuth_1965">Knuth 1965</a>, that is, it is
-      linear for the LR(k) grammars for all finite k<a id="footnote-125-ref" href="#footnote-125">[125]</a>.
+      Named Marpa, the new parser is general, table-driven, declarative,
+      and linear for LRR,
+      which in turn is a superset of the LR grammars discussed in
+      <a href="#bib-Knuth_1965">Knuth 1965</a>.<a id="footnote-125-ref" href="#footnote-125">[125]</a>.
       This means it is also linear for most of the grammar classes we have discussed in this
       timeline.
     </p><ul>
-      <li>LR(1) grammars.</li>
       <li>LL(k) grammars for all finite k, including LL(1) grammars.</li>
+      <li>LR(k) grammars for all finite k.</li>
+      <li>LALR grammars.</li>
       <li>Operator expression grammars<a id="footnote-126-ref" href="#footnote-126">[126]</a>.
       </li>
     </ul>
     <p>This is a vast class of grammars,
-      and it has the important feature that a programmer
-      can readily determine if their grammar is linear under Marpa.
+      and it has the important feature that it allows a programmer
+      to readily determine if their grammar is linear under Marpa.
       Marpa will parse a grammar in linear time, if
     </p><ul id="loc-linearity-rules">
       <li>It is unambiguous<a id="footnote-127-ref" href="#footnote-127">[127]</a>.
@@ -2317,7 +2321,7 @@
     <p>The ability to ensure that a grammar can
       be parsed in linear time is highly useful for second-order
       languages --
-      a programmer can easily ensure that all his
+      a programmer can easily ensure that all her
       automatically generated grammars will be practical.
       Marpa's own DSL will make use of second-order programming.
     </p>
@@ -2423,7 +2427,8 @@
     <p>At first glance, no.
       While Marpa is general, it is not linear or quasi-linear for the
       general case,
-      and therefore cannot be considered efficient enough.
+      and in that sense,
+      Marpa might be considered not efficient enough.
       But to be general, a parser has to parse
       <b>every</b>
       context-free grammar, including
@@ -2431,19 +2436,22 @@
       list of possible parses takes exponential time.
       With the experience of the decades,
       linearity for a fully general BNF parser seems to
-      be a superfluous requirement for a practical parser.
+      be an unnecessary requirement for a practical parser.
     </p>
     <p>
-      The LR(k) grammars include every
+      The LRR grammars,
+      which Marpa does parse in linear time,
+      include every
       other grammar class we have discussed --
       LL(k) for all k,
+      LR(k) for all k,
       LALR,
       operator grammars,
       etc.
       If we change our criteria as follows:
     </p>
     <ul>
-      <li>linear for all LR(k) grammars,
+      <li>linear for all LRR grammars,
         and for all grammars parseable in linear time by any
         other parser in practical use;
       </li>
@@ -2459,10 +2467,11 @@
       Alan Perlis was one of them.
       Would he have accepted my claim that I have found the solution to the
       problem he posed?
-      I do not know,
-      but I am certain,
+      I do not know.
+      But I am certain,
       as anyone else who knew him can attest,
-      that he would given me a plain-spoken answer.
+      that he would given me
+      a direct and plain-spoken answer.
       In that spirit, I submit this timeline to the candid reader.
       In any case,
       I hope
@@ -2612,7 +2621,7 @@
     <p>
       <b id="bib-Chomsky_1959">Chomsky 1959</b>:
       Chomsky, Noam.
-      <mla_title>A Review of B. F. Skinner’s Verbal Behavior</mla_title>.
+      <mla_title>A Review of B. F. Skinner's Verbal Behavior</mla_title>.
       <mla_container>Language</mla_container>,
       Volume 35, No. 1, 1959, 26-58.
       <a href="https://chomsky.info/1967____/">https://chomsky.info/1967____/</a>.
@@ -2768,7 +2777,7 @@
       Prentice Hall, 1962.
       Describes two algorithms, the first of which,
       attributed to J Cocke,
-      is a CYK parser,
+      is a CYK parser.
     </p>
     <p>
       <b id="bib-Hilgers_and_Langville_2006">Hilgers and Langville 2006</b>:
@@ -3236,7 +3245,7 @@
       Accessed 25 April 2018.
     </p>
     <p>
-      <b id="bib-Wiki_Big_O">Wiki Big_O</b>:
+      <b id="bib-Wiki_Big_O">Wiki Big O</b>:
       <mla_title>Big O Notation</mla_title>,
       <mla_container>Wikipedia</mla_container>,
       29 April 2018,
@@ -3267,15 +3276,19 @@
 <p id="footnote-2"><b>2</b>.
         Indirectly, Markov's purpose may have been
         to refute Nekrasov's proof of free will.
-        Nekrasov pointed out that social statistics of all kinds
-        follow the law of large numbers,
-        which (up until then)
-        had assumed events were independent.
-        Since social events were human choices,
-        Nekrasov saw this as a proof of free will.
-        Markov's demonstration that the law of large
+	Nekrasov reasoned as follows:
+	<ul>
+	<li>Events that follow the law of large numbers must be independent.</li>
+	<li>Social statistics follow the law of large numbers.</li>
+	<li>Social statistics are made up of individual human choices.</li>
+	<li>Individual human choices are independent.</li>
+	<li>Since individual human choices are independent of
+	outside influence,
+	human beings have free will.</li>
+	</ul>
+        Markov undercut Nekrasov's proof.
+	by demonstrating that the law of large
         numbers works just as well for dependent events
-        undercut Nekrasov's proof.
         (<a href="#bib-Hayes_2013">Hayes 2013</a>, pp. 92-93).
  <a href="#footnote-2-ref">&#8617;</a></p>
 <p id="footnote-3"><b>3</b>.
@@ -3606,24 +3619,21 @@
 <p id="footnote-57"><b>57</b>.
         Irons is credited with the discovery of synthesized attributes
         by Knuth (<a href="#bib-Knuth_1990">Knuth 1990</a>).
-        Synthesized attributes are a concept in semantics,
-        which this timeline usually does not cover.
-        But synthesized attributes
-        will be important for us.
  <a href="#footnote-57-ref">&#8617;</a></p>
 <p id="footnote-58"><b>58</b>.
     <a href="#bib-Sakai_1961">Sakai 1961</a>
  <a href="#footnote-58-ref">&#8617;</a></p>
 <p id="footnote-59"><b>59</b>.
-      The credited rediscoveries are <b id="bib-Hayes_1962">Hayes 1962</b>
+      The credited rediscoveries are <a href="#bib-Hayes_1962">Hayes 1962</a>
       (attributed to Cocke);
-      <b id="bib-Younger_1967">Younger 1967</b>;
-      and <b id="bib-Kasami_and_Torii_1969">Kasami and Torii 1969</b>.
+      <a href="#bib-Younger_1967">Younger 1967</a>;
+      and <a href="#bib-Kasami_and_Torii_1969">Kasami and Torii 1969</a>.
  <a href="#footnote-59-ref">&#8617;</a></p>
 <p id="footnote-60"><b>60</b>.
-    <a href="#bib-Sakai_1961">Sakai 1961</a> does not give a context-free grammar
-    for its example, so it is perhaps best called non-Chomskyan.
-    On the other hand, Sakai's table for adjacent pairs
+    <a href="#bib-Sakai_1961">Sakai 1961</a> does not give context-free grammars
+    for its examples,
+    so it is perhaps best called non-Chomskyan.
+    On the other hand, Sakai's tables for adjacent pairs
      are restricted to booleans.
  <a href="#footnote-60-ref">&#8617;</a></p>
 <p id="footnote-61"><b>61</b>.
@@ -3682,8 +3692,8 @@
         avoid digression.
         For interested readers,
         the details of "big O"
-        notation can be worth learning:
-        <a href="#bib-Wiki_Big_O">Wiki Big_O</a>.
+        notation are worth learning:
+        <a href="#bib-Wiki_Big_O">Wiki Big O</a>.
  <a href="#footnote-69-ref">&#8617;</a></p>
 <p id="footnote-70"><b>70</b>.
         Because constants are ignored, all reasonable measures of
@@ -3701,7 +3711,7 @@
         <a href="#bib-Knuth_1965_">Knuth 1965.</a>.
  <a href="#footnote-71-ref">&#8617;</a></p>
 <p id="footnote-72"><b>72</b>.
-        (<a href="#bib-Oettinger_1960">Oettinger 1960</a>, p. 127.)
+        <a href="#bib-Oettinger_1960">Oettinger 1960</a>, p. 127.
  <a href="#footnote-72-ref">&#8617;</a></p>
 <p id="footnote-73"><b>73</b>.
         Knuth 1965, p. 607, in the abstract.
@@ -3716,7 +3726,8 @@
 	the poor error-handling that
         the LR(k)-based parsers became known for.
 	And, since
-        LR(1) is still somewhat limited in its power,
+        LR(1) is still very limited in its power
+	compared to LRR,
 	it just does not seem to be worth it.
  <a href="#footnote-74-ref">&#8617;</a></p>
 <p id="footnote-75"><b>75</b>.
@@ -3746,21 +3757,21 @@
 <p id="footnote-77"><b>77</b>.
       As of 1965,
       the Irons parser has fallen out of favor
-      and <a href="text-1961-sakai">Sakai parsers</a>
+      and <a href="#text-1961-sakai">Sakai parsers</a>
       are still being forgotten and rediscovered.
  <a href="#footnote-77-ref">&#8617;</a></p>
 <p id="footnote-78"><b>78</b>.
         The exception are applications which receive their input "on-line";
-        can not determine the size of their input in advance;
-        and must return a result in a fixed amount of time.
-        For these few applications,
+        which can not determine the size of their input in advance;
+        and which must return a result in a fixed amount of time.
+        For this minority of applications,
 	adding an end marker to their input
         is not possible.
  <a href="#footnote-78-ref">&#8617;</a></p>
 <p id="footnote-79"><b>79</b>.
-        None of these problematic signs escape Knuth.
+        None of these problematic signs escaped Knuth.
         He discovers and proves them on pp. 630-636.
-        But Knuth seems to consider the LR hierarchy collapse a
+        But Knuth seemed to consider the LR hierarchy collapse a
         mathematical curiousity,
         and one with no implications for practical parsing.
  <a href="#footnote-79-ref">&#8617;</a></p>
@@ -3775,9 +3786,9 @@ I deal with the implications of
         <a href="#bib-Kegler_Undershoot_2018">Kegler Undershoot 2018</a>.
  <a href="#footnote-80-ref">&#8617;</a></p>
 <p id="footnote-81"><b>81</b>.
-      Table-driven parsers have already been described in the parsing literature,
+      Table-driven Sakai parsers have already been described in the parsing literature,
       but they will keep being rediscovered until 1969.
-      That the journal referees accept descriptions of table-parsing
+      That the journal referees keep accepting descriptions of Sakai parsing
       as new research
       suggests that table parsers are seeing little or no
       actual usage.
@@ -3802,7 +3813,7 @@ I deal with the implications of
         also suggests investigation of parsers for superclasses
         of LR(k).
         Indeed,
-        Knuth shows elsewhere (p. 638)
+        Knuth shows (p. 638)
         that he is well aware that some grammars
         beyond LR(k) can be parsed in linear time.
         Knuth also is very much aware (p. 638) that
@@ -3835,16 +3846,16 @@ I deal with the implications of
         Knuth had emphasized that
         proceeding strictly left-to-right
         is necessary for efficiency reasons.
-        So probably subsequent researchers were correct in
+        So subsequent researchers were probably correct in
         reading into Knuth a prediction that
         research into beyond-LR(k)
         parsing would be not be fruitful.
-        And, regardless of what Knuth himself believed,
+        Regardless of what Knuth himself believed,
         the consensus of the parsing theorists is not
         in doubt:
         interest in beyond-LR parsing will almost disappear
         after 1965.
-        Their attention will be focused almost
+        The theorist's attention will be focused almost
         exclusively on Knuth's suggestions for research within the stack-based
         model (p. 637).
         These included grammar rewrites;
@@ -4004,7 +4015,7 @@ I deal with the implications of
         <a href="#bib-Frost_1992">Frost 1992</a>.
         Frost only mentions parsing in one paragraph, and
         that focuses on implementation issues.
-        Some of his grammars include operator expressions,
+        Some of Frost's grammars include operator expressions,
         but these avoid left recursion,
         and implement precedence and associativity,
         using parentheses.
@@ -4042,7 +4053,7 @@ I deal with the implications of
         and almost all of the literature offers no cautions
         against unsafe use of PEG.
         Ford's PEG is efficient
-        and does in fact have real, if niche, uses.
+        and does have specialized uses.
         Programmers interested in the safe use of PEG should
         consult
         <a href="#bib-Mascrenhas_et_al_2014">Mascrenhas et al 2014</a>.
@@ -4055,21 +4066,20 @@ I deal with the implications of
  <a href="#footnote-124-ref">&#8617;</a></p>
 <p id="footnote-125"><b>125</b>.
         In fact,
-        <a href="#bib-Leo_1991">Leo 1991</a>
-        proves his algorithm,
-        and therefore Marpa,
-        is linear for the LRR
-        grammars -- the LR grammars with infinite lookahead, so long as the lookahead
-        is a regular expresion.
-        It is not known (in fact not decidable, see
+        <a href="#bib-Leo_1991">Leo 1991</a>,
+	and therefore Marpa,
+        is linear for a superset of the LRR
+        grammars.
+        It is not known (in fact it is not decidable, see
         <a href="#bib-Leo_1991">Leo 1991</a>, p. 175.),
-        just how large a class of grammars
-        Marpa is linear for.
+        just how large the class of grammars
+        that Marpa parses in linear time is.
 	<br><br>
-        But it is known that there are both ambiguous and unambiguous grammars
-        for which Marpa is not linear.
-        In the general case, Marpa obeys the bounds of Earley's algorithm --
-        it is worst-case O(n**2) for unambiguous grammars;
+        It is known that there are both ambiguous and unambiguous grammars
+        for which <a href="#bib-Leo_1991">Leo 1991</a> is not linear.
+        In the general case, Marpa and <a href="#bib-Leo_1991">Leo 1991</a>
+	obey the bounds of Earley's algorithm --
+        they are worst-case O(n**2) for unambiguous grammars;
         and worst-case O(n**3) for ambiguous grammars.
         On the other hand, Marpa follows
         <a href="#bib-Leo_1991">Leo 1991</a>
@@ -4088,8 +4098,8 @@ I deal with the implications of
           Note that while the general case is undecidable,
           Marpa will tell the programmer if a parse
           (a grammar with a particular input)
-          is ambiguous and, since it parses ambiguous
-          grammars, produces an error message showing where the ambiguity is.
+          is ambiguous and, since Marpa parses ambiguous grammars,
+	  it produces an error message showing where the ambiguity is.
  <a href="#footnote-127-ref">&#8617;</a></p>
 <p id="footnote-128"><b>128</b>.
 A
