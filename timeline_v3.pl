@@ -2079,7 +2079,7 @@ __DATA__
       of "practical" --
       you always have to settle for a more or less rough equivalent.
       Reasoning in terms of extensions had not bitten anyone yet.
-      After all, while nobody was more authoritative about the limits of
+      And, while nobody had been more authoritative about the limits of
       extensions as a definition of language than Chomsky
       (he had literally written the book),
       Chomsky himself had 
