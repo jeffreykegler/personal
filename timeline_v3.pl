@@ -253,7 +253,7 @@ __DATA__
 	<li>Events that follow the law of large numbers must be independent.</li>
 	<li>Social statistics follow the law of large numbers.</li>
 	<li>Social statistics are made up of individual human choices.</li>
-	<li>Individual human choices are independent.</li>
+	<li>Therefore, individual human choices are independent.</li>
 	<li>Since individual human choices are independent of
 	outside influence,
 	human beings have free will.</li>
@@ -2023,9 +2023,11 @@ __DATA__
     </p>
     <ul>
       <li>In 1965, every practical parser is stack-driven.<footnote>
-      Table-driven Sakai parsers have already been described in the parsing literature,
+      Table-driven
+      <a href="#text-1961-sakai">Sakai parsers</a>
+      have already been described in the parsing literature,
       but they will keep being rediscovered until 1969.
-      That the journal referees keep accepting descriptions of Sakai parsing
+      That journal editors keep accepting descriptions of Sakai parsing
       as new research
       suggests that table parsers are seeing little or no
       actual usage.
@@ -2910,7 +2912,7 @@ __DATA__
       </footnote>
       fills this gap by
       repackaging the nearly-forgotten
-      <a href="#text=GTDPL">GTDPL</a>.
+      <a href="#text-GTDPL">GTDPL</a>.
       Ford's new algorithm,
       PEG,
       is declarative, always linear,
@@ -3037,8 +3039,9 @@ __DATA__
           Note that while the general case is undecidable,
           Marpa will tell the programmer if a parse
           (a grammar with a particular input)
-          is ambiguous and, since Marpa parses ambiguous grammars,
-	  it produces an error message showing where the ambiguity is.
+          is ambiguous.
+	  In fact, since Marpa can parse ambiguous grammars,
+	  the error message that Marpa produces shows where the ambiguity is.
         </footnote>.
       </li>
       <li>It has no unmarked middle recursions<footnote>A
