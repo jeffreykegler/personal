@@ -224,13 +224,15 @@ __DATA__
       the Sanskrit language, including pronunciation. Sanskrit could be
       recreated using nothing but Pannini's grammar.
       Pannini's grammar is
-      probably the first formal system of any kind, predating Euclid. Even
-      today, nothing like it exists for any other natural language of
-      comparable size or corpus. Pannini is the object of serious study
-      today. But in the 1940's and 1950's Pannini is almost unknown in
+      probably the first formal system of any kind, predating Euclid.
+      In the future, nothing like it will exist for any other natural language of
+      significant size or corpus.
+      By <thisyear>,
+      Pannini will be the object of serious study.
+      But in the 1940's and 1950's Pannini will be almost unknown in
       the West.
-      Pannini will have no direct effect on the other events in
-      this timeline.
+      This means that Pannini will have no direct effect
+      on the other events in this timeline.
     </p>
     <h1>1854: Ada discovers computer "language"</h1>
     <p>In her translator's note on an article on Babbage's
@@ -254,11 +256,31 @@ __DATA__
     and being the first person to lay out the foundations
     of aerodynamics.
     </footnote>
-    The connection of software with "language",
-    which will be crucial in the story of parsing theory,
-    also begins with Ada.
-    For Ada, this connection is
-    not of minor significance:
+    Ada is also the first to
+    think of software in linguistic terms --
+    she originates the idea that,
+    in writing software,
+    we communicate with the computer,
+    and that the means that we use to do that is a "language".<footnote>
+    The most important ideas come to permeate the culture,
+    to the detriment of the reputation of those who discover them.
+    As of 2018, the idea that
+    the medium for creating software is
+    a "programming language" seems trivially obvious.
+    <br><br>
+    In 1843,
+    Ada's ideas were shocking in a way that is
+    hard to appreciate today.
+    We experience no crisis of faith when we use our smartphone to
+    calculate a square root.
+    But for those of Ada's day,
+    anyone or anything that had ability to do a calculation of that sophistication
+    also must have a soul.
+    Your cellphone would have been, literally, a "Frankenstein"
+    experience for most people in 1843,
+    and they would wonder whether you could remove its battery
+    without committing murder.
+    </footnote>
     </p>
     <blockquote>
      A new, a vast, and a powerful language is developed for the future
@@ -281,14 +303,16 @@ __DATA__
       states with transitions between them.<footnote>
         <bibref>Markov 1906</bibref>.
       </footnote>
-      One offshoot of Markov's work will be what we now
-      know as regular expressions.
+      One offshoot of Markov's work will be what will
+      come to be known as regular expressions.
       Markov uses his chains,
       not for parsing,
-      but for addressing a problem in probability --
+      but to deal with a problem in probability --
       does the law of large numbers require that events be
-      independent?<footnote>
-        Indirectly, Markov's purpose may have been
+      independent?
+      Indirectly, Markov is addressing the question 
+      of the existence of free will.<footnote>
+        Markov's purpose seems to have been
         to refute Nekrasov's proof of free will.
 	Nekrasov reasoned as follows:
 	<ul>
@@ -332,8 +356,8 @@ __DATA__
         <bibref>Bloomfield 1926</bibref>.
       </footnote>
       Known as structural linguistics,
-      Bloomfield's approach will be very successful,
-      dominating American lingustics for
+      Bloomfield's approach will
+      dominate American lingustics for
       over two decades.
     </p>
     <h1>"Language" as of 1929</h1>
@@ -408,7 +432,7 @@ __DATA__
     </p>
     <h1>1949: Rutishauser's compiler</h1>
     <p>From 1949 to 1951 at the ETH Zurich, Heinz Rutishauser works on
-      the design of what we would now call a compiler<footnote>
+      the design of what we will come to call a compiler<footnote>
         <bibref>Knuth and Pardo 1976</bibref>,
         pp. 29-35, 40.
       </footnote>.
@@ -1320,7 +1344,7 @@ __DATA__
       and top-down with a bottom-up
       <term>left
         corner</term>
-      element -- it is what now would be called a
+      element -- it is what will come to be called a
       <term>left
         corner</term>
       parser<footnote>
@@ -1426,7 +1450,7 @@ __DATA__
     the first description of a <a href=
     "#text-term-table-driven">table-driven</a>
     parser.
-    His algorithm will be rediscovered several times between now and 1969.
+    His algorithm will be rediscovered several times, until as late as 1969.
     It will more commonly be called the CYK algorithm after the names
     of some of its rediscoverers.<footnote>
       The credited rediscoveries are <bibref>Hayes 1962</bibref>
@@ -2421,7 +2445,7 @@ __DATA__
     <h1>1968: Attribute grammars</h1>
     <p>Irons' synthesized attributes had always been inadequate for many
       tasks.
-      Until now, they had been supplemented by side effects or state
+      Until 1968, they had been supplemented by side effects or state
       variables.
       In 1968,
       Knuth publishes a paper on a concept he had been working for the
@@ -3330,13 +3354,13 @@ __DATA__
     <h1>Bibliography</h1>
     <p>
       An attempt is made to list the original publication,
-      which is not necessarily the one consulted.
+      which is not always the one consulted.
       Departures from format are made to include information
       of historical interest, for instance the full author
       list of the ALGOL 1960 report.
-      For similar reasons, the date in the tag may be the
-      date of the source for purposes of historical priority,
-      rather a publication date.
+      For similar reasons, the date in the tag is the
+      date for purposes of historical priority,
+      and is not always the publication date.
     </p>
     <p>
       <bibid>ACM 1954</bibid>
