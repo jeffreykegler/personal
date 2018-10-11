@@ -319,13 +319,13 @@ __DATA__
 	<li>Events that follow the law of large numbers must be independent.</li>
 	<li>Social statistics follow the law of large numbers.</li>
 	<li>Social statistics are made up of individual human choices.</li>
-	<li>Therefore, individual human choices are independent.</li>
-	<li>Since individual human choices are independent of
+	<li>Therefore, individual human choices are independent events.</li>
+	<li>Since individual human choices are events independent of
 	outside influence,
 	human beings have free will.</li>
 	</ul>
         Markov demonstrated that the law of large
-        numbers works just as well for dependent events,
+        numbers also works for dependent events,
 	undercutting Nekrasov's proof
         (<bibref>Hayes 2013</bibref>, pp. 92-93).
       </footnote>.
@@ -589,7 +589,7 @@ __DATA__
       for calling a collection of
       carefully chosen assembler subroutines<footnote>
         In 1952, an interface that guided calls to subroutines
-        is much more helpful than current programmers might
+        was much more helpful than current programmers might
         imagine:
         "Existing programs for similar problems were unreadable
         and hence could not be adapted to new uses."
@@ -687,19 +687,12 @@ __DATA__
     "linking" and "loading", so that the ACM committee's
     redefinition of compiler
     can be seen a broadening of Hopper's use of the term.<footnote>
-        <bibref>Backus 1980</bibref>, pp. 133-134
-	notes that in 1954
-      <term>compiler</term>
-      is still being used
-      in Hopper's earlier, looser sense,
-      instead of its sense as defined by the ACM Committee.
-      The output of one 1954
-      <term>compiler</term>, for example, produces
-      relative addresses, which need to be translated by hand before
-      a machine can execute them.
-      Interestingly, Backus in the recollection does not
-      mention serving on the ACM Committee,
-      or its redefinition.
+	Interestingly, John Backus in
+        <bibref>Backus 1980</bibref>, pp. 133-134,
+	discusses the evolution of the meaning of the term "compiler",
+      but does not
+      mention serving on the ACM committee,
+      or that committee's definition of "compiler".
     </footnote>
       It is not clear if the ACM committee's new definition
       captures a current usage of the term "compiler",
@@ -799,6 +792,7 @@ __DATA__
       acquired its new [ACM committee] meaning":
       <bibref>Knuth and Pardo 1976</bibref>, p. 83.
       Here ONR is the Office of Naval Research.
+      See also <bibref>Backus 1980</bibref>, pp. 133-134.
       </footnote>
     </footnote>
     </p>
@@ -1921,7 +1915,7 @@ __DATA__
       <b>is</b>
       its extension.
     </p>
-    <p>The vast majority of people has always thought that,
+    <p>The vast majority of people have always thought that,
       to be considered a language,
       a set of strings has to have a semantics --
       that is, the strings must mean something.
@@ -1937,7 +1931,7 @@ __DATA__
 	by parsing a BNF grammar
         not only assumes that the language is pure context-free,
         it is not even adequate for most computer
-        applications.
+        applications of context-free grammars.
 	Most applications require at least some kind
         of post-processing.
         <br><br>
@@ -1966,7 +1960,7 @@ __DATA__
       It
       <b>is</b>
       easier to do math with an extensional language.
-      And the results for its extension sometimes do apply
+      And the results in terms of its extension often do apply
       to an intensional language.
       For example, Chomsky, to demonstrate the
       superiority of his model over Markov chains,
@@ -2113,10 +2107,10 @@ __DATA__
       Table-driven
       <a href="#text-1961-sakai">Sakai parsers</a>
       have already been described in the parsing literature,
-      but they will keep being rediscovered until 1969.
-      That journal editors keep accepting descriptions of Sakai parsing
+      but they continued to be rediscovered until 1969.
+      That journal editors kept accepting descriptions of Sakai parsing
       as new research
-      suggests that table parsers are seeing little or no
+      suggests that table parsers were seeing very little or no
       actual usage.
       </footnote></li>
       <li>An algorithm that combines state transitions and stack operations is
@@ -2678,8 +2672,8 @@ __DATA__
       True, LALR is very far from general,
       but
       <a href="g-basic-op">BASIC-OP</a>,
-      <a href="g-right-op">RIGHT-OP</a>
-      <a href="g-right-op">KNUTH-OP</a>
+      <a href="g-right-op">RIGHT-OP</a>,
+      <a href="g-right-op">KNUTH-OP</a>,
       and
       <a href="g-right-op">LIST-OP</a>
       are all LALR,
@@ -2701,7 +2695,7 @@ __DATA__
       it seems as if the Parsing Problem
       and the Operator Issue
       can both be declared solved.
-      Two decades of research have paid off.
+      Two decades of research seem to have paid off.
     </p>
     <h1>1987: Perl 1 is released</h1>
     <p>Larry Wall introduces Perl 1<footnote>
@@ -2740,7 +2734,7 @@ __DATA__
         <bibref>Leo 1991</bibref>.
       </footnote>. Leo's algorithm is linear for
       <a href="#text-1973-LRR">
-      LRR, a superset of LR(k)</a>.
+      LRR</a>, a superset of LR(k).
       That means it is linear for just about every
       unambiguous grammar of practical interest,
       and many ambiguous ones as well.
@@ -2950,27 +2944,26 @@ __DATA__
       the literature introducing monads and combinator
       parsing added nothing to what is already known
       about parsing algorithms.
-      We focus on it for three reasons:
+      We have focused on it for three reasons:
     </p>
     <ul>
       <li>
-        Functional programming has had a profound influence
+        Functional programming will have had a profound influence
         on the way the profession sees parsing.
-        That influence will probably grow.
       </li>
-      <li>The literature shows
+      <li>The literature has shown
         the relative popularity among
         one group of highly skilled programmers
         of LALR and recursive descent.
         LALR is not mentioned once in any of the
-        articles surveyed.
+        articles we have surveyed.
       </li>
       <li>
         The functional programming literature
         shows that the
         Operator Issue,
         once thought solved,
-        is as live an issue in the 1990's
+        is as live an issue in 1996
         as it had been at the end of 1961.
       </li>
     </ul>
@@ -3086,7 +3079,7 @@ __DATA__
         is linear for a superset of the LRR
         grammars.
         It is not known (in fact it is not decidable, see
-        <bibref>Leo 1991</bibref>, p. 175.),
+        <bibref>Leo 1991</bibref>, p. 175.)
         just how large the class of grammars
         that Marpa parses in linear time is.
 	<br><br>
@@ -3102,7 +3095,7 @@ __DATA__
         including those of most practical interest.
       </footnote>.
       This means it is also linear for most of the grammar classes we have discussed in this
-      timeline.
+      timeline:
     </p><ul>
       <li>LL(k) grammars for all finite k, including LL(1) grammars.</li>
       <li>LR(k) grammars for all finite k.</li>
@@ -3115,7 +3108,7 @@ __DATA__
       </li>
     </ul>
     <p>This is a vast class of grammars,
-      and it has the important feature that it allows a programmer
+      and Marpa has the important feature that it allows a programmer
       to readily determine if their grammar is linear under Marpa.
       Marpa will parse a grammar in linear time, if
     </p><ul id="loc-linearity-rules">
@@ -3155,7 +3148,7 @@ __DATA__
           in the process,
           also have found and
           eliminated ambiguous right recursions,
-          since it is far easier to eliminate them than
+          since it is easier to eliminate them than
           to determine if they create a overall ambiguity.
           In fact,
           it is an open question whether there
@@ -3325,7 +3318,7 @@ __DATA__
       If we change our criteria as follows:
     </p>
     <ul>
-      <li>linear for all LRR grammars,
+      <li>efficient for all LRR grammars,
         and for all grammars parseable in linear time by any
         other parser in practical use;
       </li>
@@ -3444,7 +3437,7 @@ __DATA__
       <mla_container>A History of Computing in the twentieth century</mla_container>,
       1980, pp. 125-135.
       <a href="http://www.softwarepreservation.org/projects/FORTRAN/paper/Backus-ProgrammingInAmerica-1976.pdf">
-        Accessed 24 April 2018.
+        Accessed 11 October 2018.
       </a>
     </p>
     <p>
@@ -3465,8 +3458,8 @@ __DATA__
       <mla_title>Oral History of John Backus.</mla_title>
       Computer History Museum,
       5 September 2006.
-      <mla_url>http://archive.computerhistory.org/resources/text/oral_history/backus_john/backus_john_1.oral_history.2006.102657970.pdf</mla_url>
-      Accessed 24 April 2018.
+      <mla_url>http://archive.computerhistory.org/resources/text/Oral_History/Backus_John/Backus_John_1.oral_history.2006.102657970.pdf</mla_url>
+      Accessed 11 October 2018.
     </p>
     <p>
       <bibid>Carpenter and Doran 1977</bibid>:
