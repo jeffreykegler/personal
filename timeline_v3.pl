@@ -678,22 +678,9 @@ __DATA__
       mention serving on the ACM Committee,
       or its redefinition.
     </footnote>
-    </p>
-    <p>
       It is not clear if the ACM committee's new definition
       captures a current usage of the term "compiler",
       or if it is a prescriptive redefinition, intended to change usage.
-      Whatever the case, it marks a turning point:
-      According to Knuth and Pardo, by 1956,
-      the ACM committee's definition has taken over.<footnote>
-      According to Knuth,
-      "a comparison of ONR [Office of Naval Research] 1954
-      and ONR 1956
-      proceedings makes it clear that the work 'compiler'
-      had by now [1956]
-      acquired its modern meaning":
-      <bibref>Knuth and Pardo 1976</bibref>, p. 83.
-      </footnote>
     </p>
     <p>As the computer field develops, the textbook definition
     will expand beyond the ACM Committee's implementation-focused one,
@@ -779,6 +766,19 @@ __DATA__
         <bibref>Padua 2000</bibref>.
       </footnote>
     </blockquote>
+    <h1 id="text-1956-term-compiler">"Compiler" as of 1956</h1>
+    <p>
+    The <a href="text-1956-term-compiler">ACM committee's definition</a>
+    is by now the standard one.<footnote>
+      "[A] comparison of ONR 1954 and ONR 1956
+      proceedings makes it clear that the work 'compiler'
+      had by now [1956]
+      acquired its new [ACM committee] meaning":
+      <bibref>Knuth and Pardo 1976</bibref>, p. 83.
+      Here ONR is the Office of Naval Research.
+      </footnote>
+    </footnote>
+    </p>
     <h1>1956: The Chomsky hierarchy</h1>
     <p>Chomsky publishes his "Three models" paper,
       which is usually considered the foundation of
@@ -3843,15 +3843,16 @@ __DATA__
       vol. 15, issue 3, 1968, pp. 465-488.
     </p>
     <p>
-      <bibid>Lovelace 1842</bibid>:
+      <bibid>Lovelace 1843</bibid>:
       Ada Augusta, Countess of Lovelace.
-      Translator's "Notes" on 
+      "Notes" on her translation of
       <mla_title>Sketch of The Analytical Engine
 	Invented by Charles Babbage</mla_title>
-	Menabrea, L. F. 
-	The "Notes" are dated June 1854.
+	by Menabrea, L. F. 
+	<mla_container>Scientific Memoirs</mla_container>
+	Volume 3, September 1843.
 	<mla_url>https://www.fourmilab.ch/babbage/sketch.html</mla_url>.
-	Accessed 10 October 1854.
+	Accessed 11 October 2018.
     </p>
     <p>
       <bibid>Lucas 1961</bibid>:
