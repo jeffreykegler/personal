@@ -408,7 +408,7 @@ __DATA__
     <p>Alan Turing discovers the stack as part of his design of the
       ACE machine. This will be important in parsing because recursive parsing
       requires stacks. The importance of Turing's discovery is not noticed
-      at the time and stacks will be rediscovered many times over the
+      in 1945 and stacks will be rediscovered many times over the
       next two decades<footnote>
         <bibref>Carpenter and Doran 1977</bibref>
       </footnote>.
@@ -571,8 +571,7 @@ __DATA__
     <h1>"Compiler" as of 1952</h1>
     <p>Hopper uses the term
       <term>compiler</term>
-      in a meaning it
-      has at the time:
+      in one of its traditional senses:
       <q>to compose out of materials from other
         documents</q><footnote>
         The quoted definition is from
@@ -780,7 +779,7 @@ __DATA__
       proves very unpopular: Donald Knuth reports that
     </p>
     <blockquote>
-      The lack of
+      [t]he lack of
       operator priority
       (often called precedence or hierarchy)
       will be the most frequent single cause of errors by the users
@@ -817,7 +816,7 @@ __DATA__
         Markov's chains
         as his
         <b>bottom layer</b>.
-        This becomes the <thisyear> compiler's
+        This will come to be called a compiler's
         <b>lexical phase</b>.</li>
       <li>Chomsky's
         <b>middle layer</b>
@@ -828,18 +827,20 @@ __DATA__
           Chomsky seems
           to have been unaware of Post's work -- he does not cite it.
         </footnote>.
-        This middle layer becomes the
-        <b>syntactic phase</b>
-        of <thisyear>
-        compilers.</li>
+        This middle layer will come to be called a
+	compiler's
+        <b>syntactic phase</b>.
+        </li>
       <li>Chomsky's
         <b>top layer</b>, again his own
         discovery, maps or
         <term>transforms</term>
         the output of the middle
-        layer. Chomsky's top layer is the inspiration for
-        the AST transformation
-        phase of <thisyear> compilers.
+        layer.
+	In years to come,
+	Chomsky's top layer will be the inspiration for
+        the <b>AST transformation phase</b>
+	of compilers.
       </li>
     </ul>
     <h1>Term: "Language" as of 1956</h1>
@@ -864,12 +865,12 @@ __DATA__
     <p>
       This is exactly Bloomfield's definition,
       restated using set theory.
+    </p>
+    <p>
       Nonetheless signs of departure from the behaviorist orthodoxy are
       apparent in "Three Models" --
       Chomsky is quite willing to talk about what sentences mean,
       when it serves his purposes.
-    </p>
-    <p>
       For a utterance with multiple meanings,
       Chomsky's new model produces multiple syntactic derivations.
       Each of these syntactic derivations
@@ -972,7 +973,7 @@ __DATA__
     <h1>1957: FORTRAN released</h1>
     <p>Backus's team makes the first FORTRAN compiler available to IBM
       customers. FORTRAN is the first high-level language that will find
-      widespread implementation. As of this writing, it is the oldest
+      widespread implementation. As of <thisyear>, it is the oldest
       language that survives in practical use.</p>
     <p>FORTRAN I is a line-by-line language.
       Its parsing is non-Chomskyan.
@@ -1160,7 +1161,6 @@ __DATA__
     Regular expressions have limited power,
     but a parser just does not get any faster or
     more compact.
-    A parsing algorithm
     </p>
     <h1>Term: "Stack-driven"</h1>
     <p>
@@ -1274,7 +1274,9 @@ __DATA__
       parsers.
     </p>
     <h1>Term: "procedural"</h1>
-    <p>A parser is
+    <p>A non-declarative parser is also called
+      a "procedural" parser.
+      A parser is
       <term>procedural</term>, if it requires procedural
       logic as part of its syntax phase.
     </p>
@@ -1381,7 +1383,7 @@ __DATA__
       The
       <bibref>Irons 1961</bibref>
       parser,
-      like most <thisyear> top-down parsers,
+      like most later top-down parsers,
       has a sophisticated bottom-up element.
     </p>
     <h1>Term: "Bottom-up"</h1>
@@ -1405,7 +1407,7 @@ __DATA__
       it must
       implement some criteria for preferring some parse trees over
       others.
-      Implicitly, such criteria come "from the top".
+      Implicitly, these criteria come "from the top".
     </p><p>
     </p><p>
       In fact,
@@ -1441,7 +1443,7 @@ __DATA__
     and the other English to Japanese.
     Sakai's translation scheme is hopelessly underpowered,
     an example of the linguistic naivety
-    prevalent in the field at the time.
+    prevalent in the field in 1961.
     But the parser in Sakai's translator is an important discovery,
     and will remain in use.
     </p>
@@ -1482,7 +1484,7 @@ __DATA__
     <a href="#text-term-linear">cubic time</a>.
     </footnote>.
     But Sakai's algorithm will remain useful in very special circumstances.
-    These are cases where no method is capable of parsing long inputs in reasonable
+    These are applications where no method is capable of parsing long inputs in reasonable
     time,
     and where the grammar is conveniently described in terms of the frequency of adjacent
     components.
@@ -1493,9 +1495,10 @@ __DATA__
     <p>A parsing algorithm is "table-driven" if tracks the
     parse using random access to data which varies in size
     with the parse.
-    Table-driven parsing is a real challenge to 1961 hardware,
-    and its memory and speed demands are almost always seen 
-    as too great.
+    The memory and speed demands
+    of table-driven parsing
+    are almost always seen 
+    as too great for hardware as of 1961.
     </p>
     <h1>November 1961: Dijkstra's shunting yard algorithm</h1>
     <p>In November 1961, Dijkstra publishes the
@@ -1550,7 +1553,7 @@ __DATA__
         that is of course my preference on
         a personal basis.
       </footnote>.
-      Except to say that he deals properly with them, Lucas does not say
+      Except to claim that he deals properly with them, Lucas does not say
       how he parses operator expressions.
       But it is easy to believe Lucas'
       claim -- by this time the techniques for
@@ -1640,7 +1643,7 @@ __DATA__
       <a href="#g-rr">RIGHT-OP</a>
       requires too much lookahead.
     </p>
-    <p>But recursive descent does have a huge advantage,
+    <p>Recursive descent does have a huge advantage,
       one which, despite its severe limitations,
       will save it from obsolescence time and again.
       Hand-written recursive descent is essentially calling
@@ -1656,9 +1659,10 @@ __DATA__
       it can
       <em>recognize</em>
       them.
-      This means pure recursive descent may not be able to create
-      the parse subtree for an operator expression itself,
-      but it can recognize the expression and hand control
+      Pure recursive descent may not be able to create
+      the parse subtree for an operator expression itself.
+      But it can recognize the expression,
+      and hand control
       over to a specialized operator expression parser.
       This seems to be what Lucas' 1961 algorithm did,
       and it is certainly what many other implementations did afterwards.
@@ -1696,7 +1700,7 @@ __DATA__
     <h1>1964: The Meta II compiler</h1>
     <p>Schorre publishes a paper on the Meta II
       <q>compiler
-        writing language</q>, summarizing the papers of the 1963
+        writing language</q>, summarizing papers from a 1963
       conference. Schorre cites both Backus and Chomsky as sources for
       Meta II's notation.
       Schorre notes that his parser is
@@ -1880,11 +1884,8 @@ __DATA__
 	it just does not seem to be worth it.
       </footnote>
       </p>
-      <p>And, as the
-      <tt>k</tt>
-      in
-      LR(k)
-      grows, things get rapidly worse.
+      <p>As the <tt>k</tt> in LR(k) grows,
+      LR(k) becomes more impractical rapidly.
       The size of the tables grows exponentially,
       while the value of the additional lookahead rapidly diminishes.
       It is not likely that
@@ -1908,7 +1909,7 @@ __DATA__
       has yet to cause any recognizable harm.
     </p>
     <p>
-      To keep these things straight,
+      To keep things straight,
       I will borrow two terms from linguistics:
       "intension" and "extension".
       For this discussion,
@@ -3328,6 +3329,7 @@ __DATA__
         and for all grammars parseable in linear time by any
         other parser in practical use;
       </li>
+      <li>general;</li>
       <li>declarative; and</li>
       <li>practical.
       </li>
