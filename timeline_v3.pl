@@ -216,7 +216,7 @@ __DATA__
   </head>
   <body>
     <mytitle>Parsing: a timeline</mytitle>
-    <version>Version 3.0</version>
+    <version>Version 3.1</version>
     <datestamp>Revision 1, 10 October 2018</datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
@@ -231,6 +231,48 @@ __DATA__
       the West.
       Pannini will have no direct effect on the other events in
       this timeline.
+    </p>
+    <h1>1854: Ada discovers computer "language"</h1>
+    <p>In her translator's note on an article on Babbage's
+    computer, Ada Lovelace becomes the first person to
+    clearly distinguish programming a computer (software)
+    as a separate field from
+    building the computer itself (hardware).<footnote>
+    The controversy over whether Ada actually wrote the first
+    computer programs is not important for our purposes.
+    For most new machines,
+    the first "programs" are written by the electrical engineers
+    for their "smoke tests",
+    and it is not unlikely that Babbage had
+    written programs for his Calculating Engine before Ada.
+    All of which misses the point of Ada's
+    contribution,
+    which was to be the first to realize what software
+    was.
+    It is the difference between being the first person to build
+    and fly a working airplane,
+    and being the first person to lay out the foundations
+    of aerodynamics.
+    </footnote>
+    The connection of software with "language",
+    which will be crucial in the story of parsing theory,
+    also begins with Ada.
+    For Ada, this connection is
+    not of minor significance:
+    </p>
+    <blockquote>
+     A new, a vast, and a powerful language is developed for the future
+     use of analysis, in which to wield its truths so that these may
+     become of more speedy and accurate practical application for the
+     purposes of mankind than the means hitherto in our possession have
+     rendered possible. Thus not only the mental and the material, but
+     the theoretical and the practical in the mathematical world, are
+     brought into more intimate and effective connexion with each other.<footnote>
+     <bibref>Lovelace 1854</bibref>, "Note A".
+     </footnote>
+    </blockquote>
+    <p>Here "analysis" means the branch of mathematics that studies limits
+    and continuous functions, and which includes calculus.
     </p>
     <h1>1906: Markov's chains</h1>
     <p>Andrey Markov introduces his
@@ -258,9 +300,9 @@ __DATA__
 	outside influence,
 	human beings have free will.</li>
 	</ul>
-        Markov undercut Nekrasov's proof.
-	by demonstrating that the law of large
-        numbers works just as well for dependent events
+        Markov demonstrated that the law of large
+        numbers works just as well for dependent events,
+	undercutting Nekrasov's proof
         (<bibref>Hayes 2013</bibref>, pp. 92-93).
       </footnote>.
     </p>
@@ -598,21 +640,83 @@ __DATA__
     </p>
     <h1>1954: The FORTRAN project begins</h1>
     <p>At IBM, a team under John Backus begins working on the language which will be called FORTRAN.</p>
-    <h1>"Compiler" as of 1954</h1>
-    <p>The term
+    <h1 id="text-1954-term-compiler">"Compiler" as of 1954</h1>
+    <p>In June 1954, an ACM committee including John Backus and Grace Hopper issues
+    a "First Glossary of Programming Terminology",
+    which defines the term "compiler" as
+    <blockquote>
+    a executive routine which,
+    <b>before</b> the desired computation is started,
+    translates a program expressed in pseudo-code into
+    machine code (or into another pseudo-code for
+    further translation by an interpreter)."<footnote>
+    <bibref>ACM 1954</bibref>, p. 17.
+    Emphasis in original.
+    </footnote>
+    </blockquote>
+    The "pseudo-code" of the Committee is what in <thisyear>
+    will be called a "programming langauge".<footnote>
+    <bibref>ACM 1954</bibref>, p. 5.
+    </footnote>
+    The definition goes on to detail the various tasks
+    a "compiler" might perform.
+    These include what in <thisyear> will be called
+    "linking" and "loading", so that the ACM committee's
+    redefinition of compiler
+    can be seen a broadening of Hopper's use of the term.<footnote>
+        <bibref>Backus 1980</bibref>, pp. 133-134
+	notes that in 1954
       <term>compiler</term>
       is still being used
-      in Hopper's looser sense, instead of its modern, specialized,
-      one.
-      In particular, there is no implication that the output of a
-      <term>compiler</term>
-      is ready for execution by a computer.
+      in Hopper's earlier, looser sense,
+      instead of its sense as defined by the ACM Committee.
       The output of one 1954
       <term>compiler</term>, for example, produces
       relative addresses, which need to be translated by hand before
-      a machine can execute them<footnote>
-        <bibref>Backus 1980</bibref>, pp. 133-134.
-      </footnote>.</p>
+      a machine can execute them.
+      Interestingly, Backus in the recollection does not
+      mention serving on the ACM Committee,
+      or its redefinition.
+    </footnote>
+    </p>
+    <p>
+      It is not clear if the ACM committee's new definition
+      captures a current usage of the term "compiler",
+      or if it is a prescriptive redefinition, intended to change usage.
+      Whatever the case, it marks a turning point:
+      According to Knuth and Pardo, by 1956,
+      the ACM committee's definition has taken over.<footnote>
+      According to Knuth,
+      "a comparison of ONR [Office of Naval Research] 1954
+      and ONR 1956
+      proceedings makes it clear that the work 'compiler'
+      had by now [1956]
+      acquired its modern meaning":
+      <bibref>Knuth and Pardo 1976</bibref>, p. 83.
+      </footnote>
+    </p>
+    <p>As the computer field develops, the textbook definition
+    will expand beyond the ACM Committee's implementation-focused one,
+    so that a "compiler" is any translator from one language (the "source language")
+    to another (the "target language").
+    And linkers and loaders will often not be consider a part of the
+    compiler in the more proper sense.
+    But in its essentials,
+    the most common usage of the term "compiler" in <thisyear>
+    will be as it was defined by the ACM committee.
+    </p>
+    <p>Note that, even though they were not called "compilers",
+    compilers in the ACM committee sense of the term had been
+      envisioned even before Hopper first used the term.
+      But nobody had called these programs compilers -- they
+      were called
+      <q>automatic coding</q>,
+      <q>codification automatique</q>
+      or
+      <q>Rechenplanfertigung</q><footnote>
+        <bibref>Knuth and Pardo 1976</bibref>,
+        p. 50.
+	</footnote>
     <h1>1955: Noam Chomsky graduates</h1>
     <p>
       Noam Chomsky earns his PhD at the University of Pennsylvania.
@@ -637,14 +741,15 @@ __DATA__
     </p>
     <h1>1956: The IT compiler is released</h1>
     <p>Perlis and Smith, now at the Carnegie Institute of Technology,
-      finish the IT compiler<footnote>
+      finish the IT compiler.<footnote>
         <bibref>Perlis et al 1958</bibref>.
         <bibref>Knuth and Pardo 1976</bibref>, p. 83,
         state that the IT compiler "was put into use
         in October, 1956."
-      </footnote>.
+	</footnote>
       Don Knuth calls this
-    </p><blockquote>
+    </p>
+    <blockquote>
       the first really
       <em>useful</em>
       compiler. IT and IT's derivatives were used successfully and
@@ -674,49 +779,6 @@ __DATA__
         <bibref>Padua 2000</bibref>.
       </footnote>
     </blockquote>
-    <h1>"Compiler" as of 1956</h1>
-    <p>In the 1956 document describing the IT compiler<footnote>
-        <bibref>Chipps et al 1956</bibref>.
-      </footnote>,
-      the IT team uses the term "compiler" in its modern sense:
-      a fully automatic procedure, in other words a program,
-      which translates from one language
-      (the source language)
-      to another
-      (the target language).
-      Most commonly,
-      the ultimate target of a compiler is
-      an executable.<footnote>
-      According to Knuth,
-      "a comparison of ONR [Office of Naval Research] 1954
-      and ONR 1956
-      proceedings makes it clear that the work 'compiler'
-      had by now [1956]
-      acquired its modern meaning":
-      <bibref>Knuth and Pardo 1976</bibref>, p. 83.
-      <bibref>Chipps et al 1956</bibref> gives a definition
-      of the term "compiler", but its emphasis on flow charts
-      and machine instructions makes it very hard to recognize
-      as the modern one.
-      However, Knuth made a very careful study of the literature
-      and I defer to him.
-      </footnote>
-    </p>
-      <p>Compilers in the 1956 sense of the term had been
-      envisioned even before Hopper used the term.
-      At the time,
-      nobody had called these programs compilers -- compiling in
-      the 1956 sense of term
-      had called
-      <q>automatic coding</q>,
-      <q>codification automatique</q>
-      or
-      <q>Rechenplanfertigung</q><footnote>
-        <bibref>Knuth and Pardo 1976</bibref>,
-        p. 50.
-      </footnote>.
-    </p>
-      </p>
     <h1>1956: The Chomsky hierarchy</h1>
     <p>Chomsky publishes his "Three models" paper,
       which is usually considered the foundation of
@@ -731,7 +793,7 @@ __DATA__
         Markov's chains
         as his
         <b>bottom layer</b>.
-        This becomes the modern compiler's
+        This becomes the <thisyear> compiler's
         <b>lexical phase</b>.</li>
       <li>Chomsky's
         <b>middle layer</b>
@@ -744,7 +806,7 @@ __DATA__
         </footnote>.
         This middle layer becomes the
         <b>syntactic phase</b>
-        of modern
+        of <thisyear>
         compilers.</li>
       <li>Chomsky's
         <b>top layer</b>, again his own
@@ -753,7 +815,7 @@ __DATA__
         the output of the middle
         layer. Chomsky's top layer is the inspiration for
         the AST transformation
-        phase of modern compilers.
+        phase of <thisyear> compilers.
       </li>
     </ul>
     <h1>Term: "Language" as of 1956</h1>
@@ -1295,7 +1357,7 @@ __DATA__
       The
       <bibref>Irons 1961</bibref>
       parser,
-      like most modern top-down parsers,
+      like most <thisyear> top-down parsers,
       has a sophisticated bottom-up element.
     </p>
     <h1>Term: "Bottom-up"</h1>
@@ -1452,7 +1514,7 @@ __DATA__
         Perhaps Grune and Jacobs based their decision on the Lucas' description of his algorithm,
         which talks about his parser's bottom-up element only briefly,
         while describing the top-down element in detail.
-        Also, the Lucas algorithm resembles modern implementations of recursive descent
+        Also, the Lucas algorithm resembles <thisyear> implementations of recursive descent
         much more closely than does
         <bibref>Irons 1961</bibref>.
         <br><br>
@@ -2565,7 +2627,7 @@ __DATA__
       is LALR-powered. Despite its name,
       <tt>yacc</tt>
       is the first
-      compiler-compiler in the modern sense.
+      compiler-compiler in the <thisyear> sense.
       For a few useful languages, the
       process of going from Chomskyan specification to executable
       is now fully automated.
@@ -3277,6 +3339,14 @@ __DATA__
       rather a publication date.
     </p>
     <p>
+      <bibid>ACM 1954</bibid>
+      Committee on Nomenclature of the Association for Computing Machinery.
+      <mla_title>First Glossary of Programming Terminology</mla_title>.
+      June 1954.
+      <mla_url>http://archive.computerhistory.org/resources/text/Knuth_Don_X4100/PDF_index/k-8-pdf/k-8-u2741-2-ACM-Glossary.pdf</mla_url>
+      Accessed 10 October 2018.
+    </p>
+    <p>
       <bibid>Aho and Ullman 1972</bibid>:
       Aho, Alfred V., and Jeffrey D. Ullman.
       <mla_container>The theory of parsing, translation, and compiling</mla_container>.
@@ -3771,6 +3841,17 @@ __DATA__
       <mla_title>Syntax-directed transduction.</mla_title>
       <mla_container>Journal of the ACM</mla_container>,
       vol. 15, issue 3, 1968, pp. 465-488.
+    </p>
+    <p>
+      <bibid>Lovelace 1842</bibid>:
+      Ada Augusta, Countess of Lovelace.
+      Translator's "Notes" on 
+      <mla_title>Sketch of The Analytical Engine
+	Invented by Charles Babbage</mla_title>
+	Menabrea, L. F. 
+	The "Notes" are dated June 1854.
+	<mla_url>https://www.fourmilab.ch/babbage/sketch.html</mla_url>.
+	Accessed 10 October 1854.
     </p>
     <p>
       <bibid>Lucas 1961</bibid>:
