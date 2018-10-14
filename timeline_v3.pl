@@ -349,10 +349,10 @@ __DATA__
       and apparently for the first time in the West.
     </p>
     <h1>1929: Bloomfield's "Postulates"</h1>
-    <p>In 1929 Leonard Bloomfield,
+    <p>Leonard Bloomfield,
       as part of his effort to create a linguistics that
       would be taken seriously as a science,
-      published his "Postulates".<footnote>
+      publishes his "Postulates".<footnote>
         <bibref>Bloomfield 1926</bibref>.
       </footnote>
       Known as structural linguistics,
@@ -426,7 +426,7 @@ __DATA__
         pp. 157-159.
       </footnote>.
       The approach is similar to Markov's but the intent
-      seems to be different --
+      is different --
       Shannon's is a serious attempt at a contribution
       to parsing human languages.
     </p>
@@ -571,7 +571,7 @@ __DATA__
     <h1>"Compiler" as of 1952</h1>
     <p>Hopper uses the term
       <term>compiler</term>
-      in one of its traditional senses:
+      in a meaning very close to one of its traditional sense:
       <q>to compose out of materials from other
         documents</q><footnote>
         The quoted definition is from
@@ -686,7 +686,7 @@ __DATA__
     These include what in <thisyear> will be called
     "linking" and "loading", so that the ACM committee's
     redefinition of compiler
-    can be seen a broadening of Hopper's use of the term.<footnote>
+    can be seen as a broadening of Hopper's use of the term.<footnote>
 	Interestingly, John Backus in
         <bibref>Backus 1980</bibref>, pp. 133-134,
 	discusses the evolution of the meaning of the term "compiler",
@@ -939,7 +939,7 @@ __DATA__
       divides into Chomskyan and
       non-Chomskyan.
       Chomskyan parsing theory becomes and remains the mainstream.
-      But it is far from unchallenged.
+      But it will be far from unchallenged.
     </p><p>
       Above we defined a
       <term>parser</term>
@@ -1158,11 +1158,13 @@ __DATA__
     </p>
     <h1>Term: "Stack-driven"</h1>
     <p>
-    A "stack-driven" algorithm tracks the parse using
-    data which is not of constant size, but
-    which needs to access only a small fixed amount of it --
-    that is, at any point the parser
-    only needs to look at the "top" of the stack.
+    A "stack-driven" algorithm in one
+    whose data is not of constant size,
+    but which only needs to access a constant-size portion,
+    its most recent data,
+    at any one time.
+    This "most recent" data is more often called
+    the "top" of the stack.
     By 1961, stacks are becoming understood,
     and the hardware is becoming capable of handling them.
     As of 1961, all of the more powerful algorithms
@@ -1268,7 +1270,7 @@ __DATA__
       parsers.
     </p>
     <h1>Term: "procedural"</h1>
-    <p>A non-declarative parser is also called
+    <p>A non-declarative parser is more often called
       a "procedural" parser.
       A parser is
       <term>procedural</term>, if it requires procedural
@@ -1702,7 +1704,7 @@ __DATA__
       from that of
       <bibref>Irons 1961</bibref>
       --
-      in fact, it is non-Chomskyan.
+      in fact, Schorre's parser is non-Chomskyan.
       Meta II is a template, rather than something that
       his readers can use, but in principle it can be turned into a fully
       automated compiler-compiler<footnote>
@@ -2001,7 +2003,7 @@ __DATA__
       grammars.
     </p>
     <p>
-      If you take language extensions as the proxy for grammars,
+      If you take language extensions as a proxy for grammars,
       things fall into place very neatly:
       the
       LR-parsers are the deterministic subset of the
@@ -2334,8 +2336,7 @@ __DATA__
         LL and LR have mirror images: RL means
         <q>scan from the right,
           using left reductions</q>
-        and RR acquires its current meaning
-        of
+        and RR means
         <q>scan from the right, using right reductions</q>.
         Practical use of these
         mirror images is rare, but it may have occurred
@@ -2350,7 +2351,7 @@ __DATA__
       For example, LL(1) means
       <q>scan from the
         left, using left reductions with one character of lookahead</q>.
-      LL(1) will be important in what follows.
+      LL(1) will be important.
     </p>
     <h1>The Operator Issue as of 1968</h1>
     <p>
@@ -2567,7 +2568,7 @@ __DATA__
       </footnote>
     </p>
     <h1>1973: Pratt parsing</h1>
-    <p>As we have noted pure LL(1) cannot parse operator expressions,
+    <p>As we have noted, pure LL(1) cannot parse operator expressions,
       and so operator expression parsers are often called into service
       as subparsers.
       What about
@@ -2598,7 +2599,7 @@ __DATA__
       parsing<footnote>
         <bibref>Norvell 1999</bibref>.
       </footnote>.
-      Some have adopted Pratt parsing
+      Some will adopt Pratt parsing
       as the overall solution to their parsing problems<footnote>
         <bibref>Pratt 1973</bibref>, p. 51.
       </footnote>.
@@ -2685,8 +2686,7 @@ __DATA__
       set in
       <a href="#loc-parsing-problem">
         the original statement of
-        the Parsing Problem
-      </a>
+        the Parsing Problem</a>
       have not been
       fully met.
       Nonetheless,
@@ -2733,11 +2733,12 @@ __DATA__
       Earley's algorithm<footnote>
         <bibref>Leo 1991</bibref>.
       </footnote>. Leo's algorithm is linear for
-      <a href="#text-1973-LRR">
-      LRR</a>, a superset of LR(k).
-      That means it is linear for just about every
+      <a href="#text-1973-LRR">LRR</a>,
+      That means it is linear for
+      a superset of LR(k) and therefore
+      just about every
       unambiguous grammar of practical interest,
-      and many ambiguous ones as well.
+      as well as many ambiguous ones.
       As of 1991,
       hardware is six orders of magnitude faster than
       1968 hardware, so that the issue of bookkeeping overhead has receded
@@ -2829,8 +2830,7 @@ __DATA__
         that focuses on implementation issues.
         Some of Frost's grammars include operator expressions,
         but these avoid left recursion,
-        and implement precedence and associativity,
-        using parentheses.
+        and use parentheses to implement precedence and associativity.
       </footnote>.
       As Hutton explains<footnote>
         <bibref>Hutton 1992</bibref>, p. 5.
@@ -2951,16 +2951,17 @@ __DATA__
         Functional programming will have had a profound influence
         on the way the profession sees parsing.
       </li>
-      <li>The literature has shown
-        the relative popularity among
-        one group of highly skilled programmers
-        of LALR and recursive descent.
+      <li>The literature shows
+        the relative popularity in the 1990's
+        of LALR and recursive descent,
+	at least among
+        one group of highly skilled programmers.
         LALR is not mentioned once in any of the
         articles we have surveyed.
       </li>
       <li>
         The functional programming literature
-        shows that the
+        also shows that the
         Operator Issue,
         once thought solved,
         is as live an issue in 1996
@@ -3100,12 +3101,7 @@ __DATA__
       <li>LL(k) grammars for all finite k, including LL(1) grammars.</li>
       <li>LR(k) grammars for all finite k.</li>
       <li>LALR grammars.</li>
-      <li>Operator expression grammars<footnote>
-          In the literature operator expression grammars are more often
-          call simply
-          <q>operator grammars</q>.
-        </footnote>.
-      </li>
+      <li>Operator grammars.</li>
     </ul>
     <p>This is a vast class of grammars,
       and Marpa has the important feature that it allows a programmer

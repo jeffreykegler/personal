@@ -115,10 +115,10 @@
     <h1 id="h1-1929_bloomfield_s_postulates">
     1929: Bloomfield's "Postulates"
     </h1>
-    <p>In 1929 Leonard Bloomfield,
+    <p>Leonard Bloomfield,
       as part of his effort to create a linguistics that
       would be taken seriously as a science,
-      published his "Postulates".<a id="footnote-7-ref" href="#footnote-7">[7]</a>
+      publishes his "Postulates".<a id="footnote-7-ref" href="#footnote-7">[7]</a>
       Known as structural linguistics,
       Bloomfield's approach will
       dominate American lingustics for
@@ -177,7 +177,7 @@
       paper, Shannon models English using Andrey Markov's
       chains<a id="footnote-13-ref" href="#footnote-13">[13]</a>.
       The approach is similar to Markov's but the intent
-      seems to be different --
+      is different --
       Shannon's is a serious attempt at a contribution
       to parsing human languages.
     </p>
@@ -298,7 +298,7 @@
     </h1>
     <p>Hopper uses the term
       <term>compiler</term>
-      in one of its traditional senses:
+      in a meaning very close to one of its traditional sense:
       <q>to compose out of materials from other
         documents</q><a id="footnote-21-ref" href="#footnote-21">[21]</a>.
       Specifically, in 1952,
@@ -386,7 +386,7 @@
     These include what in 2018 will be called
     "linking" and "loading", so that the ACM committee's
     redefinition of compiler
-    can be seen a broadening of Hopper's use of the term.<a id="footnote-29-ref" href="#footnote-29">[29]</a>
+    can be seen as a broadening of Hopper's use of the term.<a id="footnote-29-ref" href="#footnote-29">[29]</a>
       It is not clear if the ACM committee's new definition
       captures a current usage of the term "compiler",
       or if it is a prescriptive redefinition, intended to change usage.
@@ -601,7 +601,7 @@
       divides into Chomskyan and
       non-Chomskyan.
       Chomskyan parsing theory becomes and remains the mainstream.
-      But it is far from unchallenged.
+      But it will be far from unchallenged.
     </p><p>
       Above we defined a
       <term>parser</term>
@@ -790,11 +790,13 @@
     Term: "Stack-driven"
     </h1>
     <p>
-    A "stack-driven" algorithm tracks the parse using
-    data which is not of constant size, but
-    which needs to access only a small fixed amount of it --
-    that is, at any point the parser
-    only needs to look at the "top" of the stack.
+    A "stack-driven" algorithm in one
+    whose data is not of constant size,
+    but which only needs to access a constant-size portion,
+    its most recent data,
+    at any one time.
+    This "most recent" data is more often called
+    the "top" of the stack.
     By 1961, stacks are becoming understood,
     and the hardware is becoming capable of handling them.
     As of 1961, all of the more powerful algorithms
@@ -858,7 +860,7 @@
     <h1 id="h1-term_procedural">
     Term: "procedural"
     </h1>
-    <p>A non-declarative parser is also called
+    <p>A non-declarative parser is more often called
       a "procedural" parser.
       A parser is
       <term>procedural</term>, if it requires procedural
@@ -1229,7 +1231,7 @@
       from that of
       <a href="#bib-Irons_1961">Irons 1961</a>
       --
-      in fact, it is non-Chomskyan.
+      in fact, Schorre's parser is non-Chomskyan.
       Meta II is a template, rather than something that
       his readers can use, but in principle it can be turned into a fully
       automated compiler-compiler<a id="footnote-72-ref" href="#footnote-72">[72]</a>.
@@ -1468,7 +1470,7 @@
       grammars.
     </p>
     <p>
-      If you take language extensions as the proxy for grammars,
+      If you take language extensions as a proxy for grammars,
       things fall into place very neatly:
       the
       LR-parsers are the deterministic subset of the
@@ -1683,7 +1685,7 @@
       For example, LL(1) means
       <q>scan from the
         left, using left reductions with one character of lookahead</q>.
-      LL(1) will be important in what follows.
+      LL(1) will be important.
     </p>
     <h1 id="h1-the_operator_issue_as_of_1968">
     The Operator Issue as of 1968
@@ -1883,7 +1885,7 @@
     <h1 id="h1-1973_pratt_parsing">
     1973: Pratt parsing
     </h1>
-    <p>As we have noted pure LL(1) cannot parse operator expressions,
+    <p>As we have noted, pure LL(1) cannot parse operator expressions,
       and so operator expression parsers are often called into service
       as subparsers.
       What about
@@ -1910,7 +1912,7 @@
       Theodore
       Norvell's taxonomy of approaches to operator expression
       parsing<a id="footnote-105-ref" href="#footnote-105">[105]</a>.
-      Some have adopted Pratt parsing
+      Some will adopt Pratt parsing
       as the overall solution to their parsing problems<a id="footnote-106-ref" href="#footnote-106">[106]</a>.
     </p>
     <p>As of 2018, the Pratt approach
@@ -1989,8 +1991,7 @@
       set in
       <a href="#loc-parsing-problem">
         the original statement of
-        the Parsing Problem
-      </a>
+        the Parsing Problem</a>
       have not been
       fully met.
       Nonetheless,
@@ -2030,11 +2031,12 @@
       Leo's speed-up of Earley's algorithm</h1>
     <p>Joop Leo discovers a way of speeding up right recursions in
       Earley's algorithm<a id="footnote-115-ref" href="#footnote-115">[115]</a>. Leo's algorithm is linear for
-      <a href="#text-1973-LRR">
-      LRR</a>, a superset of LR(k).
-      That means it is linear for just about every
+      <a href="#text-1973-LRR">LRR</a>,
+      That means it is linear for
+      a superset of LR(k) and therefore
+      just about every
       unambiguous grammar of practical interest,
-      and many ambiguous ones as well.
+      as well as many ambiguous ones.
       As of 1991,
       hardware is six orders of magnitude faster than
       1968 hardware, so that the issue of bookkeeping overhead has receded
@@ -2224,16 +2226,17 @@
         Functional programming will have had a profound influence
         on the way the profession sees parsing.
       </li>
-      <li>The literature has shown
-        the relative popularity among
-        one group of highly skilled programmers
-        of LALR and recursive descent.
+      <li>The literature shows
+        the relative popularity in the 1990's
+        of LALR and recursive descent,
+	at least among
+        one group of highly skilled programmers.
         LALR is not mentioned once in any of the
         articles we have surveyed.
       </li>
       <li>
         The functional programming literature
-        shows that the
+        also shows that the
         Operator Issue,
         once thought solved,
         is as live an issue in 1996
@@ -2341,19 +2344,18 @@
       <li>LL(k) grammars for all finite k, including LL(1) grammars.</li>
       <li>LR(k) grammars for all finite k.</li>
       <li>LALR grammars.</li>
-      <li>Operator expression grammars<a id="footnote-130-ref" href="#footnote-130">[130]</a>.
-      </li>
+      <li>Operator grammars.</li>
     </ul>
     <p>This is a vast class of grammars,
       and Marpa has the important feature that it allows a programmer
       to readily determine if their grammar is linear under Marpa.
       Marpa will parse a grammar in linear time, if
     </p><ul id="loc-linearity-rules">
-      <li>It is unambiguous<a id="footnote-131-ref" href="#footnote-131">[131]</a>.
+      <li>It is unambiguous<a id="footnote-130-ref" href="#footnote-130">[130]</a>.
       </li>
-      <li>It has no unmarked middle recursions<a id="footnote-132-ref" href="#footnote-132">[132]</a>.
+      <li>It has no unmarked middle recursions<a id="footnote-131-ref" href="#footnote-131">[131]</a>.
       </li>
-      <li>It has no ambiguous right recursions<a id="footnote-133-ref" href="#footnote-133">[133]</a>.
+      <li>It has no ambiguous right recursions<a id="footnote-132-ref" href="#footnote-132">[132]</a>.
       </li>
     </ul>
     <p>The ability to ensure that a grammar can
@@ -2394,7 +2396,7 @@
     </p>
     <p>
       In 2012, Kegler releases a version of Marpa which allows
-      the user to mix Chomskyan and precedence parsing at will<a id="footnote-134-ref" href="#footnote-134">[134]</a>.
+      the user to mix Chomskyan and precedence parsing at will<a id="footnote-133-ref" href="#footnote-133">[133]</a>.
       Marpa's
       <q>precedenced statements</q>
       describe expressions
@@ -2403,10 +2405,10 @@
       <q>precedenced statements</q>
       are added to a grammar that Marpa parses in linear
       time, then the grammar remains linear as long as the precedenced statements
-      are (after precedence is taken in consideration) unambiguous<a id="footnote-135-ref" href="#footnote-135">[135]</a>.
+      are (after precedence is taken in consideration) unambiguous<a id="footnote-134-ref" href="#footnote-134">[134]</a>.
     </p><p>Here is an example of a Marpa
       <q>precedenced statement</q>:
-      <a id="footnote-136-ref" href="#footnote-136">[136]</a>
+      <a id="footnote-135-ref" href="#footnote-135">[135]</a>
     </p>
     <pre><tt>
               Expression ::=
@@ -2459,7 +2461,7 @@
       Again recall the four criteria from the original
       statement of the Parsing Problem:
       that a parser be efficient, general, declarative and practical.
-      Does Marpa<a id="footnote-137-ref" href="#footnote-137">[137]</a>
+      Does Marpa<a id="footnote-136-ref" href="#footnote-136">[136]</a>
       fulfill them?
     </p>
     <p>At first glance, no.
@@ -3999,8 +4001,7 @@ I deal with the implications of
         LL and LR have mirror images: RL means
         <q>scan from the right,
           using left reductions</q>
-        and RR acquires its current meaning
-        of
+        and RR means
         <q>scan from the right, using right reductions</q>.
         Practical use of these
         mirror images is rare, but it may have occurred
@@ -4121,8 +4122,7 @@ I deal with the implications of
         that focuses on implementation issues.
         Some of Frost's grammars include operator expressions,
         but these avoid left recursion,
-        and implement precedence and associativity,
-        using parentheses.
+        and use parentheses to implement precedence and associativity.
  <a href="#footnote-118-ref">&#8617;</a></p>
 <p id="footnote-119"><b>119</b>.
         <a href="#bib-Hutton_1992">Hutton 1992</a>, p. 5.
@@ -4191,11 +4191,6 @@ I deal with the implications of
         including those of most practical interest.
  <a href="#footnote-129-ref">&#8617;</a></p>
 <p id="footnote-130"><b>130</b>.
-          In the literature operator expression grammars are more often
-          call simply
-          <q>operator grammars</q>.
- <a href="#footnote-130-ref">&#8617;</a></p>
-<p id="footnote-131"><b>131</b>.
           In the general case, ambiguity is undecidable, but
           in practice it is usually straight-forward for a programmer
           to determine that the grammar he wants is unambiguous.
@@ -4205,8 +4200,8 @@ I deal with the implications of
           is ambiguous.
 	  In fact, since Marpa can parse ambiguous grammars,
 	  the error message that Marpa produces shows where the ambiguity is.
- <a href="#footnote-131-ref">&#8617;</a></p>
-<p id="footnote-132"><b>132</b>.
+ <a href="#footnote-130-ref">&#8617;</a></p>
+<p id="footnote-131"><b>131</b>.
 A
           <q>marker</q>, in this sense, is something in the input
           that shows where the middle of a middle recursion is,
@@ -4221,8 +4216,8 @@ A
           ends to find it,
           the grammar is
           <q>marked</q>.
- <a href="#footnote-132-ref">&#8617;</a></p>
-<p id="footnote-133"><b>133</b>.
+ <a href="#footnote-131-ref">&#8617;</a></p>
+<p id="footnote-132"><b>132</b>.
           This is a very pedantic requirement,
           which practical programmers can in fact ignore.
           Any programmer who has found and eliminated
@@ -4238,19 +4233,19 @@ A
           any unambiguous
           grammars with ambiguous right recursions --
           neither Joop Leo or I know of any.
+ <a href="#footnote-132-ref">&#8617;</a></p>
+<p id="footnote-133"><b>133</b>.
+        <a href="#bib-Kegler_2012a">Kegler 2012a</a>.
  <a href="#footnote-133-ref">&#8617;</a></p>
 <p id="footnote-134"><b>134</b>.
-        <a href="#bib-Kegler_2012a">Kegler 2012a</a>.
- <a href="#footnote-134-ref">&#8617;</a></p>
-<p id="footnote-135"><b>135</b>.
         Internally, Marpa rewrites precedenced statements into BNF.
         Marpa's rewrite does not use middle recursions
         and does not introduce any new ambiguities
         so that, following Marpa's
         <a href="#loc-linearity-rules">linearity
           rules</a>, the result must be linear.
- <a href="#footnote-135-ref">&#8617;</a></p>
-<p id="footnote-136"><b>136</b>.
+ <a href="#footnote-134-ref">&#8617;</a></p>
+<p id="footnote-135"><b>135</b>.
         In this, precedence goes from tightest to loosest.
         Single bars (<tt>|</tt>) separate RHS's of equal precedence.
         Double bars (<tt>||</tt>) separate RHS's of different precedence.
@@ -4271,10 +4266,10 @@ A
         <a href="#bib-Marpa__R2_MetaCPAN">Marpa::R2 MetaCPAN</a>:
 	<a href="https://metacpan.org/pod/release/JKEGL/Marpa-R2-4.000000/pod/Scanless/DSL.pod#Synopsis">https://metacpan.org/pod/release/JKEGL/Marpa-R2-4.000000/pod/Scanless/DSL.pod#Synopsis</a>,
 	permalink accessed 4 September 2018.
- <a href="#footnote-136-ref">&#8617;</a></p>
-<p id="footnote-137"><b>137</b>.
+ <a href="#footnote-135-ref">&#8617;</a></p>
+<p id="footnote-136"><b>136</b>.
         <a href="#bib-Marpa__R2">Marpa::R2</a>.
- <a href="#footnote-137-ref">&#8617;</a></p>
+ <a href="#footnote-136-ref">&#8617;</a></p>
     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
