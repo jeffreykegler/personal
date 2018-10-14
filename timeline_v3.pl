@@ -217,7 +217,7 @@ __DATA__
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.1</version>
-    <datestamp>Revision 1, 10 October 2018</datestamp>
+    <datestamp>Revision 1, 13 October 2018</datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact and complete description of
