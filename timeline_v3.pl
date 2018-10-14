@@ -571,7 +571,7 @@ __DATA__
     <h1>"Compiler" as of 1952</h1>
     <p>Hopper uses the term
       <term>compiler</term>
-      in a meaning very close to one of its traditional sense:
+      in a meaning very close to one of its traditional senses:
       <q>to compose out of materials from other
         documents</q><footnote>
         The quoted definition is from
@@ -1148,7 +1148,7 @@ __DATA__
       with the search for a theoretical basis for practical parsing.
     </p>
     <h1>Term: "State-driven"</h1>
-    <p>A "state-driven" parser is one which tracks the parse using
+    <p>A "state-driven" parser is one that tracks the parse using
     a data of a small constant size.
     Regular expressions are the classic state-driven parsers,
     and their state usually can be tracked as an integer.
@@ -1165,7 +1165,7 @@ __DATA__
     at any one time.
     This "most recent" data is more often called
     the "top" of the stack.
-    By 1961, stacks are becoming understood,
+    By 1961, stacks are coming to be understood,
     and the hardware is becoming capable of handling them.
     As of 1961, all of the more powerful algorithms
     with acceptable speed are based
@@ -2733,7 +2733,7 @@ __DATA__
       Earley's algorithm<footnote>
         <bibref>Leo 1991</bibref>.
       </footnote>. Leo's algorithm is linear for
-      <a href="#text-1973-LRR">LRR</a>,
+      <a href="#text-1973-LRR">LRR</a>.
       That means it is linear for
       a superset of LR(k) and therefore
       just about every
