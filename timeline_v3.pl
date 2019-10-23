@@ -217,7 +217,7 @@ __DATA__
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.1</version>
-    <datestamp>Revision 1, 13 October 2018</datestamp>
+    <datestamp>Revision 2, 23 October 2019</datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact and complete description of
@@ -3733,9 +3733,8 @@ __DATA__
       <bibid>Kegler 2012b</bibid>:
       Kegler, Jeffrey.
       <mla_title>Marpa, A Practical General Parser: The Recognizer.</mla_title>
-      <mla_url>http://dinhe.net/~aredridel/.notmine/PDFs/Parsing/KEGLER,%20Jeffrey%20-%20Marpa,%20a%20practical%20general%20parser:%20the%20recognizer.pdf</mla_url>.
-      Accessed 24 April 2018.
-      The link is to the 19 June 2013 revision of the 2012 original.
+      <mla_url>https://arxiv.org/abs/1910.08129</mla_url>.
+      Accessed 23 October 2019.
     </p>
     <p>
       <bibid>Kegler Strings 2018</bibid>:
