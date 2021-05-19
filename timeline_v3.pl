@@ -213,6 +213,15 @@ __DATA__
       term::before { content: open-quote }
       term::after { content: close-quote }
     </style>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GHXKL7Q2J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	    gtag('config', 'G-0GHXKL7Q2J');
+	    </script>
   </head>
   <body>
     <mytitle>Parsing: a timeline</mytitle>
@@ -4151,16 +4160,5 @@ __DATA__
       Accessed 6 October 2018.
     </p>
     <comment>FOOTNOTES HERE</comment>
-    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-    <script type="text/javascript">
-            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
-            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
-          </script>
-    <script type="text/javascript">
-            try {
-              var pageTracker = _gat._getTracker("UA-33430331-1");
-            pageTracker._trackPageview();
-            } catch(err) {}
-          </script>
   </body>
 </html>
