@@ -186,6 +186,15 @@ __DATA__
   -->
 <html>
   <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GHXKL7Q2J"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	    gtag('config', 'G-0GHXKL7Q2J');
+	    </script>
     <title>
       Parsing: a timeline -- V3.1
     </title>
@@ -213,15 +222,6 @@ __DATA__
       term::before { content: open-quote }
       term::after { content: close-quote }
     </style>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0GHXKL7Q2J"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	    gtag('config', 'G-0GHXKL7Q2J');
-	    </script>
   </head>
   <body>
     <mytitle>Parsing: a timeline</mytitle>
