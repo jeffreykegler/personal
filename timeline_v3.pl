@@ -226,7 +226,7 @@ __DATA__
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.1</version>
-    <datestamp>Revision 3, 6 July 2021 </datestamp>
+    <datestamp>Revision 4, 6 July 2021 </datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact and complete description of
@@ -337,19 +337,19 @@ __DATA__
         numbers also works for dependent events,
 	undercutting Nekrasov's proof
         (<bibref>Hayes 2013</bibref>, pp. 92-93).
-      </footnote>.
+      </footnote>
     </p>
     <h1>1913: Markov and Eugene Onegin</h1>
     <p>In 1913, Markov revisits his chains,
       applying them to the sequence of vowels and consonants
       in Pushkin's
-      <cite>Eugene Onegin</cite><footnote>
+      <cite>Eugene Onegin</cite>.<footnote>
         <bibref>Markov 1913</bibref>.
         See
         <bibref>Hayes 2013</bibref>
         and
         <bibref>Hilgers and Langville 2006</bibref>, pp. 155-157.
-      </footnote>.
+      </footnote>
       Again, Markov's interest is not in parsing.
       Nonetheless,
       this is an application to language
