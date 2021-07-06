@@ -548,7 +548,7 @@ __DATA__
         timeline are debatable,
         and the history of operator precedence is especially murky.
         Here I follow
-        <bibref>Samuelson and Bauer 1960</bibref>
+        <bibref>Samelson and Bauer 1960</bibref>
         in giving the priority to Boehm.
       </footnote>.
       In Norvell's taxonomy<footnote>
@@ -1023,12 +1023,12 @@ __DATA__
       The IAL language will soon be renamed ALGOL.
     </p>
     <h1>1959: Operator precedence and stacks</h1>
-    <p>Samuelson and Bauer<footnote>
-        <bibref>Samuelson and Bauer 1960</bibref>.
+    <p>Samelson and Bauer<footnote>
+        <bibref>Samelson and Bauer 1960</bibref>.
       </footnote>
       describe the use of stacks to implement
       operator precedence.
-      Samuelson and Bauer do not use the word
+      Samelson and Bauer do not use the word
       <term>stack</term>
       --
       what we call a
@@ -1043,20 +1043,20 @@ __DATA__
     <p>
       Their algorithm, and its presentation,
       are thoroughly non-Chomskyan.
-      Samuelson and Bauer do not provide
+      Samelson and Bauer do not provide
       a context-free grammar for their grammar,
       just an operator precedence table.
     </p>
     <h1>The Operator Issue as of 1959</h1>
     <p>Since Boehm,
       many people have been refining operator precedence.
-      With Samuelson and Bauer,
+      With Samelson and Bauer,
       what Norvell<footnote>
         <bibref>Norvell 1999</bibref>.
       </footnote>
       calls "the classic algorithm"
       takes a well-documented form.
-      The Samuelson and Bauer paper will be very influential.
+      The Samelson and Bauer paper will be very influential.
     </p>
     <h1>"Language" as of 1959</h1>
     <p>In 1959, Chomsky reviews a book by B.F. Skinner on linguistics.<footnote>
@@ -1565,7 +1565,7 @@ __DATA__
       parsing operator expressions are well understood<footnote>
         <bibref>Lucas 1961</bibref>
         cites
-        <bibref>Samuelson and Bauer 1960</bibref>.
+        <bibref>Samelson and Bauer 1960</bibref>.
       </footnote>.
     </p>
     <h1>The Operator Issue as of 1961</h1>
@@ -1583,7 +1583,7 @@ __DATA__
       Why not use the
       algorithms that parse operator expressions for the whole
       language?
-      <bibref>Samuelson and Bauer 1959</bibref>
+      <bibref>Samelson and Bauer 1959</bibref>
       had suggested
       exactly that.
       But, alas, operator expression parsing is not adequate for
@@ -2582,7 +2582,7 @@ __DATA__
       as subparsers.
       What about
       making the entire grammar an operator grammar?
-      This idea had already occurred to Samuelson and Bauer in 1959.
+      This idea had already occurred to Samelson and Bauer in 1959.
       In 1973, Vaughan Pratt revives it<footnote>
         <bibref>Pratt 1973</bibref>.
       </footnote>.
@@ -3188,7 +3188,7 @@ __DATA__
     <p>
       While the purely
       precedence-driven parsing of
-      <bibref>Samuelson and Bauer 1960</bibref>
+      <bibref>Samelson and Bauer 1960</bibref>
       and
       <bibref>Pratt 1973</bibref>
       never caught on,
@@ -4044,19 +4044,19 @@ __DATA__
       Accessed 6 October 2018.
     </p>
     <p>
-      <bibid>Samuelson and Bauer 1959</bibid>:
+      <bibid>Samelson and Bauer 1959</bibid>:
       Samelson, Klaus, and Friedrich L. Bauer.
       "Sequentielle formel&uuml;bersetzung."
       it-Information Technology 1.1-4 (1959): 176-182.
     </p>
     <p>
-      <bibid>Samuelson and Bauer 1960</bibid>:
+      <bibid>Samelson and Bauer 1960</bibid>:
       Samelson, Klaus, and Friedrich L. Bauer.
       <mla_title>Sequential formula translation.</mla_title>
       <mla_container>Communications of the ACM</mla_container>,
       vol. 3, no. 2, February 1960, pp. 76-83.
       A translation of
-      <bibref>Samuelson and Bauer 1959</bibref>.
+      <bibref>Samelson and Bauer 1959</bibref>.
     </p>
     <p>
       <bibid>Schorre 1964</bibid>:
