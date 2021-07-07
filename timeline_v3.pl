@@ -17,7 +17,7 @@ my @lines = ();
 
 sub do_constants {
     my ($line) = @_;
-    $line =~ s/<thisyear>/2018/g;
+    $line =~ s/<thisyear>/2021/g;
     return $line;
 }
 
@@ -226,14 +226,14 @@ __DATA__
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.1</version>
-    <datestamp>Revision 4, 6 July 2021 </datestamp>
+    <datestamp>Revision 5, 7 July 2021 </datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
-    <p>In India, Pannini creates an exact and complete description of
-      the Sanskrit language, including pronunciation. Sanskrit could be
-      recreated using nothing but Pannini's grammar.
-      Pannini's grammar is
-      probably the first formal system of any kind, predating Euclid.
+    <p>In India, Pannini creates an exact description of
+      the Sanskrit language, including pronunciation. Sanskrit can be
+      completely reconstructed using nothing but Pannini's grammar.
+      Pannini's grammar, which predates Euclid,
+      is probably the first formal system of any kind.
       In the future, nothing like it will exist for any other natural language of
       significant size or corpus.
       By <thisyear>,
@@ -575,8 +575,9 @@ __DATA__
       and calls it a
       <term>compiler</term><footnote>
         <bibref>Knuth and Pardo 1976</bibref>, p. 50.
-      </footnote>. Hopper seems to be the first
-      person to use this term for a computer program.</p>
+      </footnote>.
+      Hopper seems to be the first
+      person to use the term <term>compiler</term> to describe a computer program.</p>
     <h1>"Compiler" as of 1952</h1>
     <p>Hopper uses the term
       <term>compiler</term>
@@ -617,7 +618,7 @@ __DATA__
       <term>compiler</term>
       will acquire a different meaning,
       one specific to the computer field.
-      By 1956, programs like Hoppers will
+      By 1956, programs like Hopper's will
       no longer be called
       <term>compilers</term><footnote>
         I hope nobody will read this terminological clarification as in any sense
