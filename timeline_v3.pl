@@ -246,9 +246,9 @@ __DATA__
     <h1>1854: Ada discovers computer "language"</h1>
     <p>In her translator's note on an article on Babbage's
     computer, Ada Lovelace becomes the first person to
-    clearly distinguish programming a computer (software)
-    as a separate field from
-    building the computer itself (hardware).<footnote>
+    clearly see that <b>programming</b> a computer
+    is a distinct discipline from
+    <b>building</b> the computer itself.<footnote>
     The controversy over whether Ada actually wrote the first
     computer programs is not important for our purposes.
     For most new machines,
@@ -265,6 +265,9 @@ __DATA__
     and being the first person to lay out the foundations
     of aerodynamics.
     </footnote>
+    By <thisyear>, this
+    hardware/software distinction
+    will be well known.
     Ada is also the first to
     think of software in linguistic terms --
     she originates the idea that,
