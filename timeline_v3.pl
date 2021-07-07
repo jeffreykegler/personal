@@ -267,8 +267,8 @@ __DATA__
     </footnote>
     By <thisyear>, this
     hardware/software distinction
-    will be well known.
-    Ada is also the first to
+    will be so well known as to seem obvious.</p>
+    <p>Ada is also the first to
     think of software in linguistic terms --
     she originates the idea that,
     in writing software,
@@ -276,18 +276,25 @@ __DATA__
     and that the means that we use to do that is a "language".<footnote>
     The most important ideas come to permeate the culture,
     to the detriment of the reputation of those who discover them.
-    As of 2018, the idea that
+    As of 2018, small children understand that,
+    in order to play a computer game,
+    they need not just the game platform (hardware),
+    but also the game itself (software).
+    Similarly, the idea that
     the medium for creating software is
     a "programming language" seems trivially obvious.
+    Ada's discoveries are so deeply embedded in <thisyear> culture,
+    that it is hard to realize that there was once a time
+    in which they were, in fact, discoveries.
     <br><br>
-    In 1843,
-    Ada's ideas were shocking in a way that is
-    hard to appreciate today.
+    It is hard to appreciate in <thisyear>
+    how shocking Ada's ideas were in 1843.
     We experience no crisis of faith when we use our smartphone to
     calculate a square root.
-    But for those of Ada's day,
-    anyone or anything that had ability to do a calculation of that sophistication
-    also must have a soul.
+    But for someone in 1843,
+    doing square roots meant thinking complex thoughts,
+    and it seemed obvious that any entity that could think complex
+    thoughts must also have a soul.
     Your cellphone would have been, literally, a "Frankenstein"
     experience for most people in 1843,
     and they would wonder whether you could remove its battery
@@ -322,7 +329,7 @@ __DATA__
       but to deal with a problem in probability --
       does the law of large numbers require that events be
       independent?
-      Indirectly, Markov is addressing the question 
+      Indirectly, Markov is addressing the question
       of the existence of free will.<footnote>
         Markov's purpose seems to have been
         to refute Nekrasov's proof of free will.
@@ -1457,7 +1464,7 @@ __DATA__
     and will remain in use.
     </p>
     <p>
-    Sakai's is 
+    Sakai's is
     the first description of a <a href=
     "#text-term-table-driven">table-driven</a>
     parser.
@@ -1506,7 +1513,7 @@ __DATA__
     with the parse.
     The memory and speed demands
     of table-driven parsing
-    are almost always seen 
+    are almost always seen
     as too great for hardware as of 1961.
     </p>
     <h1>November 1961: Dijkstra's shunting yard algorithm</h1>
@@ -1875,7 +1882,7 @@ __DATA__
       LR(0) requires no lookahead,
       but it is not practical because it is too weak
       to parse most grammars of interest.
-      LR(1) is not practical 
+      LR(1) is not practical
       because of the size of the tables it requires --
       well beyond what can be done with 1965
       hardware.<footnote>
@@ -1884,7 +1891,7 @@ __DATA__
         With the huge computer memories of <thisyear>,
         that could be reconsidered,
         but even today LR(1) is rare in practical use.
-	LR(1) shares 
+	LR(1) shares
 	the poor error-handling that
         the LR(k)-based parsers became known for.
 	And, since
@@ -2169,7 +2176,7 @@ __DATA__
       while the actual interest is in intensions.
       <a href="#text-LR-hierarchy-collapse">And for extensions
         the LR hierarchy collapses</a>.
-      But in 1965 these things that are 
+      But in 1965 these things that are
       not considered troubling.
     </p>
     <p>
@@ -2180,7 +2187,7 @@ __DATA__
       And, while nobody had been more authoritative about the limits of
       extensions as a definition of language than Chomsky
       (he had literally written the book),
-      Chomsky himself had 
+      Chomsky himself had
       used extensions
       to produce some of his most
       impressive results.
@@ -3875,7 +3882,7 @@ __DATA__
       "Notes" on her translation of
       <mla_title>Sketch of The Analytical Engine
 	Invented by Charles Babbage</mla_title>
-	by Menabrea, L. F. 
+	by Menabrea, L. F.
 	<mla_container>Scientific Memoirs</mla_container>
 	Volume 3, September 1843.
 	<mla_url>https://www.fourmilab.ch/babbage/sketch.html</mla_url>.
