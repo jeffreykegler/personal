@@ -226,7 +226,7 @@ __DATA__
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.1</version>
-    <datestamp>Revision 5, 7 July 2021 </datestamp>
+    <datestamp>Revision 6, 16 October 2021 </datestamp>
     <author>Jeffrey Kegler</author>
     <h1>4th BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact description of
@@ -4142,8 +4142,10 @@ __DATA__
       <bibid>Wall 2014</bibid>:
       Wall, Larry.
       <mla_container>IRC log for #perl6</mla_container>, 30 August 2014,
-      <mla_url>https://irclog.perlgeek.de/perl6/2014-08-30#i_9271280</mla_url>.
-      Accessed 25 April 2018.
+      <mla_url>https://logs.liz.nl/perl6/2014-08-30.html#16:10</mla_url>
+      and
+      <mla_url>https://web.archive.org/web/20211015215851/https://logs.liz.nl/perl6/2014-08-30.html#16:09-0004</mla_url>.
+      Accessed 16 October 2021.
     </p>
     <p>
       <bibid>Wiki Big O</bibid>:
