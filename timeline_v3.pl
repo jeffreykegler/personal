@@ -226,9 +226,9 @@ __DATA__
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.1</version>
-    <datestamp>Revision 6, 16 October 2021 </datestamp>
+    <datestamp>Revision 7, 27 August 2022</datestamp>
     <author>Jeffrey Kegler</author>
-    <h1>4th BCE: Pannini's description of Sanskrit</h1>
+    <h1>4th century BCE: Pannini's description of Sanskrit</h1>
     <p>In India, Pannini creates an exact description of
       the Sanskrit language, including pronunciation. Sanskrit can be
       completely reconstructed using nothing but Pannini's grammar.
