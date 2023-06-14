@@ -17,7 +17,7 @@ my @lines = ();
 
 sub do_constants {
     my ($line) = @_;
-    $line =~ s/<thisyear>/2021/g;
+    $line =~ s/<thisyear>/2023/g;
     return $line;
 }
 
@@ -217,22 +217,22 @@ __DATA__
   <body>
     <mytitle>Parsing: a timeline</mytitle>
     <version>Version 3.1</version>
-    <datestamp>Revision 7, 27 August 2022</datestamp>
+    <datestamp>Revision 8, 14 Jun 2023</datestamp>
     <author>Jeffrey Kegler</author>
-    <h1>4th century BCE: Pannini's description of Sanskrit</h1>
-    <p>In India, Pannini creates an exact description of
+    <h1>4th century BCE: Panini's description of Sanskrit</h1>
+    <p>In India, Panini creates an exact description of
       the Sanskrit language, including pronunciation. Sanskrit can be
-      completely reconstructed using nothing but Pannini's grammar.
-      Pannini's grammar, which predates Euclid,
+      completely reconstructed using nothing but Panini's grammar.
+      Panini's grammar, which predates Euclid,
       is probably the first formal system of any kind.
       In the future, nothing like it will exist for any other natural language of
       significant size or corpus.
-      By <thisyear>,
-      Pannini will be the object of serious study.
-      But in the 1940's and 1950's Pannini will be almost unknown in
-      the West.
-      This means that Pannini will have no direct effect
-      on the other events in this timeline.
+    </p>
+    <p>By the 1940's and 1950's,
+      Panini will be well known and much studied in the Western linguistics
+      community,
+      but will be almost unknown to non-linguists outside of India.
+      Panini's effect on the other events in this timeline will be indirect.
     </p>
     <h1>1854: Ada discovers computer "language"</h1>
     <p>In her translator's note on an article on Babbage's
@@ -412,7 +412,7 @@ __DATA__
         <bibref>Post 1943</bibref>.
       </footnote>
       using productions.
-      With this, the process of rediscovering Pannini in the
+      With this, the process of rediscovering Panini in the
       West begins.</p>
     <h1>1945: Turing discovers stacks</h1>
     <p>Alan Turing discovers the stack as part of his design of the
