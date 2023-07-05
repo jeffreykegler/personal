@@ -2092,7 +2092,7 @@ __DATA__
         None of these problematic signs escaped Knuth.
         He discovers and proves them on pp. 630-636.
         But Knuth seemed to consider the LR hierarchy collapse a
-        mathematical curiousity,
+        mathematical curiosity,
         and one with no implications for practical parsing.
       </footnote>
     </p>
@@ -2535,7 +2535,7 @@ __DATA__
       more bookkeeping to Earley's.
     </p>
     <p id="text-GTDPL">Under the names TDPL and GTDPL, Aho and Ullman investigate
-      the non-Chomksyan parsers in the Schorre lineage<footnote>
+      the non-Chomskyan parsers in the Schorre lineage<footnote>
         <bibref>Aho and Ullman 1972</bibref>, pp. 456-485.
       </footnote>. They note that
       <q>it can be quite difficult to determine what language is
@@ -3428,7 +3428,7 @@ __DATA__
       <mla_title>The syntax and semantics of the proposed
         international algebraic language of the Zurich ACM-GAMM
         conference.</mla_title>
-      <mla_container>Proceedings of the International Comference on
+      <mla_container>Proceedings of the International Conference on
         Information Processing</mla_container>, 1959.
       Accessible online
       <a href="http://www.softwarepreservation.org/projects/ALGOL/paper/Backus-Syntax_and_Semantics_of_Proposed_IAL.pdf">
@@ -3658,7 +3658,7 @@ __DATA__
       H. Borko, editor,
       Prentice Hall, 1962.
       Describes two algorithms, the first of which,
-      attributed to J Cocke,
+      attributed to J. Cocke,
       is a CYK parser.
     </p>
     <p>
