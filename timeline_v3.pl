@@ -1068,11 +1068,9 @@ __DATA__
       This review galvanizes the opposition to behaviorism, and
       establishes Chomsky as behavorism's most
       prominent and effective critic.
-      Chomsky makes clear his stand on the role of mental
-      states in language study.
-      Behaviorist claims that they can eliminate
-      "traditional formulations in terms of reference and meaning",
-      Chomsky says,
+      The behaviorists had claimed that they could eliminate
+      "traditional formulations in terms of reference and meaning".
+      These claims, Chomsky says,
       are "simply not true."<footnote>
         <bibref>Chomsky 1959</bibref>, Section VIII.
         In later years,
@@ -1093,7 +1091,10 @@ __DATA__
         </blockquote>
       </footnote>
     </p>
-    <p>Unfortunately, by this time,
+    <p>With this review,
+    Chomsky makes clear his stand on the role of mental
+    states in language study.
+    Unfortunately, by this time,
       Chomsky's original definition
       of language as a "set of strings",
       is established in the computer literature.
@@ -1444,7 +1445,7 @@ __DATA__
     <p>Sakai publishes<footnote>
     <bibref>Sakai 1961</bibref>
     </footnote>
-    publishes a description of a translator,
+    a description of a translator,
     illustrating it with two translations
     of brief texts, one Japanese to English,
     and the other English to Japanese.
@@ -1487,7 +1488,7 @@ __DATA__
     </p>
     <p>
     Sakai's algorithm is impractically slow for large inputs<footnote>
-    Sakai's algorithm runs in will come to be called
+    Sakai's algorithm runs in what will come to be called
     <a href="#text-term-linear">cubic time</a>.
     </footnote>.
     But Sakai's algorithm will remain useful in very special circumstances.
@@ -1499,7 +1500,7 @@ __DATA__
     to Natural Language Processing.
     </p>
     <h1 id="text-term-table-driven">Term: "Table-driven"</h1>
-    <p>A parsing algorithm is "table-driven" if tracks the
+    <p>A parsing algorithm is "table-driven" if it tracks the
     parse using random access to data which varies in size
     with the parse.
     The memory and speed demands
@@ -1620,7 +1621,7 @@ __DATA__
       Recursive descent, it turns out,
       cannot parse
       <a href="#g-basic-op">BASIC-OP</a>
-      because it is left recursive.
+      because BASIC-OP is left recursive.
       And that is not the end of it.
       Making addition and multiplication right-associate
       is unnatural and,
@@ -1644,7 +1645,7 @@ __DATA__
       <a href="#g-right-op">RIGHT-OP</a>.
       As of 1961,
       parsing theory has not developed well enough to
-      state why in a precise terms.
+      state why in precise terms.
       Suffice it to say for now
       that
       <a href="#g-rr">RIGHT-OP</a>
@@ -2167,7 +2168,7 @@ __DATA__
       while the actual interest is in intensions.
       <a href="#text-LR-hierarchy-collapse">And for extensions
         the LR hierarchy collapses</a>.
-      But in 1965 these things that are
+      But in 1965 these things are
       not considered troubling.
     </p>
     <p>
@@ -2402,7 +2403,7 @@ __DATA__
       In the above
       <tt>{Z}*</tt>
       means
-      <q>zero or more occurences of Z</q>.
+      <q>zero or more occurrences of Z</q>.
       Expanded into pure BNF,
       and avoiding empty right hand sides,
       our operator "list" grammar becomes
@@ -2463,7 +2464,7 @@ __DATA__
     <h1>Term: "Inherited attributes"</h1>
     <p>Recall that a node in a parse
       gets its synthesized attributes from
-      its children. Inherited attributes are attibutes
+      its children. Inherited attributes are attributes
       that a node gets from
       its parents.
       Of course, if both inherited and synthesized attributes
