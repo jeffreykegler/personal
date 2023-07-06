@@ -988,7 +988,7 @@ __DATA__
       dissatisfaction with the IT compiler,
       FORTRAN honors associativity
       and precedence.</p>
-    <p>The designers of FORTRAN use a strange trick for parsing operator expresssions --
+    <p>The designers of FORTRAN use a strange trick for parsing operator expressions --
       they hack the expressions by adding parentheses around each
       operator.
       The number of parentheses varied, depending on the operator.
@@ -1222,7 +1222,7 @@ __DATA__
         ones of this type, [...]"
         (p. 607, boldface added.)
         <br><br>
-        Here Knuth explcitly refers to goals of efficiency,
+        Here Knuth explicitly refers to goals of efficiency,
         declarativeness,
         and generality,
         announcing a trade-off of the first two against
@@ -2267,7 +2267,7 @@ __DATA__
     <h1>The Operator Issue as of 1965</h1>
     <p><bibref>Knuth 1965</bibref>
       is a significant milestone
-      in the history of operator expresssion parsing.
+      in the history of operator expression parsing.
       Knuth specifically addresses the parsing of ALGOL
       and he zeroes in on its arithmetic expressions
       as the crucial issue<footnote>
