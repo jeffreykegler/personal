@@ -367,7 +367,7 @@ __DATA__
       </footnote>
       Known as structural linguistics,
       Bloomfield's approach will
-      dominate American lingustics for
+      dominate American linguistics for
       over two decades.
     </p>
     <h1>"Language" as of 1929</h1>
@@ -689,7 +689,7 @@ __DATA__
     </footnote>
     </blockquote>
     The "pseudo-code" of the Committee is what in <thisyear>
-    will be called a "programming langauge".<footnote>
+    will be called a "programming language".<footnote>
     <bibref>ACM 1954</bibref>, p. 5.
     </footnote>
     The definition goes on to detail the various tasks
@@ -1577,7 +1577,7 @@ __DATA__
       parsing has essentially
       been parsing operator expressions.
       After ALGOL, almost all languages will be block-structured
-      and ad hoc string manipulatons will no longer be adequate --
+      and ad hoc string manipulations will no longer be adequate --
       the language as a whole will require a serious parsing technique.
       Parsing operator expressions will be a side show.
       Or so it seems.
@@ -3043,7 +3043,7 @@ __DATA__
     </p>
     <p>
       PEG, in safe use, would essentially be LL(1)<footnote>
-        <bibref>Mascrenhas et al 2014</bibref>.
+        <bibref>Mascarenhas et al 2014</bibref>.
         My account of PEG is negative because almost all
         real-life PEG practice is unsafe,
         and almost all of the literature offers no cautions
@@ -3052,7 +3052,7 @@ __DATA__
         and does have specialized uses.
         Programmers interested in the safe use of PEG should
         consult
-        <bibref>Mascrenhas et al 2014</bibref>.
+        <bibref>Mascarenhas et al 2014</bibref>.
       </footnote>.
       Those adventurous souls who parse operator expressions under
       PEG typically seem to parse the operator expressions as lists,
@@ -3940,7 +3940,7 @@ __DATA__
       Accessed 25 April 2018.
     </p>
     <p>
-      <bibid>Mascrenhas et al 2014</bibid>:
+      <bibid>Mascarenhas et al 2014</bibid>:
       Mascarenhas, Fabio, S&egrave;rgio Medeiros, and Roberto Ierusalimschy.
       <mla_title>On the relation between context-free grammars and parsing expression grammars.</mla_title>
       <mla_container>Science of Computer Programming</mla_container>,
