@@ -491,7 +491,7 @@ __DATA__
           precedences are
           <q>higher</q>
           but traditionally the
-          precendence levels are also numbered and the higher
+          precedence levels are also numbered and the higher
           the number, the lower the precedence.
         </footnote>
         precedence.
@@ -2324,7 +2324,7 @@ __DATA__
       Lewis and Stearns fill that gap by defining the LL(k) grammars<footnote>
         <bibref>Lewis and Stearns 1968</bibref>.
         They are credited in
-        <bibref>Rosencrantz and Stearns 1970</bibref>
+        <bibref>Rosenkrantz and Stearns 1970</bibref>
         and
         <bibref>Aho and Ullman 1972</bibref>, p. 368.
       </footnote>.
@@ -4029,7 +4029,7 @@ __DATA__
       ACM, 1973.
     </p>
     <p>
-      <bibid>Rosencrantz and Stearns 1970</bibid>:
+      <bibid>Rosenkrantz and Stearns 1970</bibid>:
       Rosenkrantz, Daniel J., and Richard Edwin Stearns.
       <mla_title>Properties of deterministic top-down grammars.</mla_title>
       <mla_container>Information and Control</mla_container>,
